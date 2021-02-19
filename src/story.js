@@ -13,7 +13,8 @@ const Story = {
             let storyHTML = '<p>To help you get started please take one of my old pokemon</p>';
             storyHTML += '<p><img src="' + story.helpers.getPokeImg(1) + '" onclick="story.helpers.selectFirstPoke(1)">';
             storyHTML += '<img src="' + story.helpers.getPokeImg(4) + '" onclick="story.helpers.selectFirstPoke(4)">';
-            storyHTML += '<img src="' + story.helpers.getPokeImg(7) + '" onclick="story.helpers.selectFirstPoke(7)"></p>';
+            storyHTML += '<img src="' + story.helpers.getPokeImg(7) + '" onclick="story.helpers.selectFirstPoke(7)">';
+            storyHTML += '<img src="' + story.helpers.getPokeImg(25) + '" onclick="story.helpers.selectFirstPoke(25)"></p>';
             story.displayStory(title, storyHTML, false);
         }
     },
