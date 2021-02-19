@@ -1,0 +1,435 @@
+body {
+    background-color: rgb(0, 0, 0);
+  }
+
+#gameContainer {
+    font-family: 'Lato', sans-serif;
+    color: rgb(0, 0, 0);
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: max-content 330px auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+#gameContainer div {
+    border: 1px solid black;
+}
+
+#gameContainer > div > div {
+    border: none !important;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#listBox {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    max-height: 600px;
+    width: 240px;
+    overflow: auto;
+    float: left;
+    text-align: left;
+    background-color: rgba(255, 244, 89, 0.932);
+}
+
+#listBox ul {
+    padding-left: 15px;
+    font-size: larger;
+}
+
+#pokedexBox select, #routesBox select {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 95%;
+}
+
+.listPoke p {
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.pokeDeleteButton,
+.pokeUpButton,
+.pokeDownButton,
+.pokeFirstButton,
+.toStorageButton,
+.pokeEvolveButton {
+    display: none;
+}
+
+#rosterBox ul li:first-child .pokeUpButton,
+#rosterBox ul li:last-child .pokeDownButton,
+#storageBox ul li:first-child .pokeUpButton,
+#storageBox ul li:last-child .pokeDownButton {
+    display: none;
+}
+
+.manageTeamEnabled .pokeDeleteButton,
+.manageTeamEnabled .pokeUpButton,
+.manageTeamEnabled .pokeDownButton,
+.manageTeamEnabled .pokeFirstButton,
+.manageTeamEnabled .toStorageButton,
+.manageTeamEnabled .canEvolve ~ .pokeEvolveButton {
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.pokeDeleteButton {
+    color: red;
+    text-decoration: none;
+    position: relative;
+    left: -3px;
+}
+.fa-arrow-up:before{content:"\f062"}
+.fa-arrow-down:before{content:"\f063"}
+
+.activeNormal {
+    color: rgb(80, 157, 2);
+}
+.inactiveNormal {
+    color: rgb(66, 116, 10);
+}
+.dead {
+    color: red;
+}
+.pokeDex0 {
+    color: #808080;
+}
+.pokeDex1 {
+    color: #38375a;
+}
+.pokeDex2 {
+    color: #99844b;
+}
+.pokeDex3, .pokeDex5 {
+    color: rgba(42, 55, 190, 0.5);
+}
+.activeShiny, .inactiveShiny {
+    font-weight: bold;
+}
+.activeShiny {
+    color: rgb(192, 160, 0);
+}
+.inactiveShiny, .pokeDex4, .pokeDex7 {
+    color: rgba(192, 160, 0, 0.5);
+}
+.pokeDex3, .pokeDex4 {
+    font-style: italic;
+}
+.pokeDex6, .pokeDex8 {
+    font-weight: bold;
+}
+.pokeDex6 {
+    color: #2a37be;
+}
+.pokeDex8 {
+    color: #c0a000;
+}
+
+#viewSelectBox {
+    grid-column: 2;
+    grid-row: 2;
+    width: fit-content;
+    height: 220px;
+    text-align: center;
+    background-color: rgb(255, 244, 89);
+}
+
+#viewSelectBox p {
+    margin: 0;
+}
+
+#invBox {
+    grid-column: 3;
+    grid-row: 1;
+    padding: 5px;
+    font-size: larger;
+    background-color: rgb(255, 244, 89);
+}
+
+#invBox p {
+    margin: 5px;
+}
+
+#pokeCoinsPic {
+    padding-left: 20px;
+}
+
+#enemyBox {
+    grid-column: 4;
+    width: auto;
+    grid-row: 1;
+    background-color: rgb(255, 244, 89);
+}
+
+#playerBox {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: rgb(255, 244, 89);
+    margin-right: 65px;
+    align-content: center;
+}
+
+#console {
+    grid-column: 2;
+    grid-row: 3 / 4;
+    overflow-y: scroll;
+    height: 250px;
+    max-height: 250px;
+    width: auto;
+    background-color: rgb(255, 244, 89);
+}
+#console-text {
+    padding-left: 9px;
+}
+#townBox {
+    text-align: center;
+}
+#navBox {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 158px;
+    height: 220px;
+    width: max-content;
+    text-align: center;
+    background-color: rgb(255, 244, 89);
+}
+#navBox .button, #viewSelectBox .button, #townBox button {
+    margin-top: 7px;
+    margin-right: 5px;
+    width: 150px;
+    height: 35px;
+    background-color: #000000;
+    color: red;
+}
+.button {
+    text-decoration: none;
+    font: 400 13.3333px Arial;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: #000000;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+#navBox p {
+    margin: 0 0 5px 0;
+}
+
+.pokeBox {
+    position: relative;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    width: 165px;
+    float: center;
+}
+.pokeBox .img.attacked-right{
+    margin-left: 15px;
+}
+.pokeBox .img.attacked-left{
+    margin-right: 15px;
+}
+.pokeBox .img {
+    transition: margin 0.08s ease-out;
+    margin-left: 0;
+    margin-right: 0;
+}
+.pokeBox .name {
+    font-size: 18px;
+    font-weight: 500;
+}
+/* progressbar reset*/
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+{
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /* gets rid of default border in Firefox and Opera. */
+    border: none;
+    /* Needs to be in here for Safari polyfill so background images work as expected. */
+    background-size: auto;
+    /* Dimensions */
+    width: 400px;
+    height: 60px;
+
+}
+/* Polyfill */
+progress[role]:after {
+    background-image: none; /* removes default background from polyfill */
+}
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+    display: none;
+}
+/* progress bg */
+progress,                          /* Firefox  */
+progress[role][aria-valuenow] {    /* Polyfill */
+    background: rgb(6, 64, 65) !important; /* !important is needed by the polyfill */
+}
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: rgb(6, 64, 65);
+}
+/* progress value */
+/* IE10 */
+progress {
+    color: rgb(15, 238, 141);
+}
+/* Firefox */
+progress::-moz-progress-bar {
+    background: rgb(15, 238, 141);
+}
+/* Chrome */
+progress::-webkit-progress-value {
+    background: rgb(15, 238, 141);
+    border-radius: 0 10px 0 0;
+}
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: rgb(15, 238, 141);
+}
+
+progress {
+    width: 70px;
+    height: 5px;
+    position: relative;
+    top: -3px;
+    box-shadow: 0 0 2px black;
+}
+progress.expBar {
+    width: 120px;
+}
+
+#version {
+    position: absolute;
+}
+
+#modalPopup {
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    margin-left: -150px;
+    padding: 15px;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: #66c966;
+    border-radius: 2px;
+    overflow: auto;
+    width: 300px;
+    height: 50px;
+}
+
+#popupText {
+    vertical-align: middle;
+    margin: auto;
+    font-weight: bold;
+}
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.modalDialog {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10vh;
+    bottom: 10vh;
+    left: 10vw;
+    right: 10vw;
+    padding: 15px;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.modalTitle {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0 0 10px;
+}
+
+.modalDialog h4 {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+#settingsDialog > div > p {
+    padding:0;
+    margin:5px 10px;
+}
+
+#forceSave {
+    color:red;
+    display:none;
+}
+
+#copySaveText {
+    float: right;
+    margin-top: 2px;
+}
+
+#saveText {
+    flex: 1 1 auto;
+}
+
+#saveLoadButtons {
+    margin-bottom: 7px;
+}
+
+#statisticsList li, #achievementsList li {
+    padding: 2px 15px;
+}
+#statisticsList li:nth-child(even) {background: #CCC}
+#statisticsList li:nth-child(odd) {background: #FFF}
+#achievementsList li:nth-child(even) {background: #CCC}
+#achievementsList li:nth-child(odd) {background: #FFF}
+#achievementsList li.complete {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+#townBuildings {
+
+}
+.townBuilding {
+    width: 45%;
+    float: left;
+    margin-left: 20px;
+    background-color: rgb(240,240,240);
+}
+.townBuilding h4 { margin-left: 10px; }
+.townBuilding ul {
+    border-top: 1px solid rgb(217, 217, 217);
+    padding: 5px 20px;
+}
+ul#shopItems li {
+    margin-top: 2px;
+}
+.traderList {
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
