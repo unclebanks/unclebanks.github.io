@@ -36,12 +36,23 @@ ul {
     background-color: rgba(255, 244, 89, 0.932);
 }
 
+#routesBox {
+    grid-column: 4;
+    grid-row: 1 / 5;
+    max-height: 600px;
+    width: 240px;
+    overflow: auto;
+    float: left;
+    text-align: left;
+    background-color: rgba(255, 244, 89, 0.932);
+}
+
 #listBox ul {
     padding-left: 15px;
     font-size: larger;
 }
 
-#pokedexBox select, #routesBox select {
+#pokedexBox select {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -147,7 +158,7 @@ ul {
 
 #invBox {
     grid-column: 3;
-    grid-row: 1;
+    grid-row: 2;
     padding: 5px;
     font-size: larger;
     background-color: rgb(255, 244, 89);
@@ -162,7 +173,7 @@ ul {
 }
 
 #enemyBox {
-    grid-column: 4;
+    grid-column: 3;
     width: auto;
     grid-row: 1;
     background-color: rgb(255, 244, 89);
@@ -172,7 +183,6 @@ ul {
     grid-column: 2;
     grid-row: 1;
     background-color: rgb(255, 244, 89);
-    margin-right: 65px;
     align-content: center;
 }
 

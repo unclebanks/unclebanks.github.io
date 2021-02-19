@@ -288,20 +288,15 @@ const Display = {
         })
     },
     renderListBox: function() {
-        const routes = $('#routesBox');
         const roster = $('#rosterBox');
         const pokeDex = $('#pokedexBox');
         const storage = $('#storageBox');
         // hide all by default
-        routes.style.display = 'none';
         roster.style.display = 'none';
         pokeDex.style.display = 'none';
         storage.style.display = 'none';
         // which is showing
-        if (player.settings.listView === 'routes') {
-            routes.style.display = 'block';
-            this.renderRouteList();
-        } else if (player.settings.listView === 'pokeDex') {
+        if (player.settings.listView === 'pokeDex') {
             pokeDex.style.display = 'block';
             this.renderPokeDex();
         } else if (player.settings.listView === 'storage') {
@@ -373,9 +368,6 @@ const Display = {
         });
         $('#autoSort').addEventListener( 'click', () => {
             userInteractions.enablePokeListAutoSort();
-        });
-        $('#viewRoutes').addEventListener( 'click', () => {
-            userInteractions.changeListView('routes');
         });
         $('#viewRoster').addEventListener( 'click', () => {
             userInteractions.changeListView('roster');

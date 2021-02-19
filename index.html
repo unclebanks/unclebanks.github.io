@@ -9,18 +9,6 @@
 <body>
     <div id="gameContainer">
         <div id="listBox">
-            <div id="routesBox">
-                <select id="regionSelect" onchange="userInteractions.changeRegion()" style="display: none;">
-                    <option value="Kanto">Kanto</option>
-                    <option value="Johto">Johto</option>
-                    <option value="Hoenn">Hoenn</option>
-                    <option value="Sinnoh">Sinnoh</option>
-                    <option value="Unova">Unova</option>
-                    <option value="Kalos">Kalos</option>
-                    <option value="Alola">Alola</option>
-                </select>
-                <ul id="routeList"></ul>
-            </div>
             <div id="rosterBox" style="display: none;">
                 <input type="checkbox" id="enableDelete"><label for="enableDelete"><span class="checkDescription">Manage Team</span></label>
                 <ul id="rosterList"></ul>
@@ -46,12 +34,23 @@
                 <ul id="dexList"></ul>
             </div>
         </div>
+        <div id="routesBox">
+            <select id="regionSelect" onchange="userInteractions.changeRegion()">
+                <option value="Kanto">Kanto</option>
+                <option value="Johto">Johto</option>
+                <option value="Hoenn">Hoenn</option>
+                <option value="Sinnoh">Sinnoh</option>
+                <option value="Unova">Unova</option>
+                <option value="Kalos">Kalos</option>
+                <option value="Alola">Alola</option>
+            </select>
+            <ul id="routeList"></ul>
+        </div>
         <div id="viewSelectBox">
             <p><button id="heal" class="button">Heal</button></p>
             <p><button id="viewRoster" class="button">Pokemon</button></p>
             <p><button id="viewStorage" class="button">Storage</button></p>
             <p><button id="viewPokeDex" class="button">PokeDex</button></p>
-            <p><button id="viewRoutes" class="button">Routes</button></p>
         </div>
         <div id="invBox">
             <p>Catch: <label><input type="checkbox" id="enableCatchAll"><span>All</span></label> <label><input type="checkbox" id="enableCatchNew"><span>New</span></label></p>
