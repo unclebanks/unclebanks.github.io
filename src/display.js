@@ -308,6 +308,9 @@ const Display = {
 
         }
     },
+    renderRoutesBox: function() {
+            this.renderRouteList();
+    },
     checkConfirmed: function(id) {
         return $(id).checked
     },

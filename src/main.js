@@ -120,6 +120,7 @@ dom.renderBalls();
 dom.renderPokeCoins();
 
 renderView(dom, enemy, player);
+dom.renderRoutesBox();
 dom.renderListBox();
 dom.renderRegionSelect();
 dom.renderPokeSort();
