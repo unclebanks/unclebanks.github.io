@@ -146,7 +146,7 @@ ul {
 #viewSelectBox {
     grid-column: 2;
     grid-row: 2;
-    width: fit-content;
+    width: 50%;
     height: 220px;
     text-align: center;
     background-color: rgb(255, 244, 89);
@@ -160,7 +160,7 @@ ul {
     grid-column: 3;
     grid-row: 2;
     padding: 5px;
-    font-size: larger;
+    font-size: auto;
     background-color: rgb(255, 244, 89);
 }
 
@@ -188,11 +188,10 @@ ul {
 
 #console {
     grid-column: 2;
-    grid-row: 3 / 4;
+    grid-row: 3;
     overflow-y: scroll;
-    height: 250px;
-    max-height: 250px;
-    width: auto;
+    height: 143px;
+    max-height: 143px;
     background-color: rgb(255, 244, 89);
 }
 #console-text {
@@ -204,15 +203,15 @@ ul {
 #navBox {
     grid-column: 2;
     grid-row: 2;
-    margin-left: 158px;
+    margin-left: 50%;
     height: 220px;
-    width: max-content;
+    width: 50%;
     text-align: center;
     background-color: rgb(255, 244, 89);
 }
 #navBox .button, #viewSelectBox .button, #townBox button {
     margin-top: 7px;
-    margin-right: 5px;
+    align-items: center;
     width: 150px;
     height: 35px;
     background-color: #000000;

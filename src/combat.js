@@ -215,8 +215,10 @@ const Combat = {
                     player.statistics.successfulThrows++;
                     player.statistics[selectedBall+'SuccessfulThrows']++;
                     dom.gameConsoleLog('You caught ' + enemy.activePoke().pokeName() + '!!', 'purple');
-                    player.addPoke(enemy.activePoke());
-                    dom.renderPokeList();
+                    if (!player.hasPokemon(enemy.activePoke().pokeName(), 0)) {
+                        player.addPoke(enemy.activePoke());
+                        dom.renderPokeList();
+                    }
                     player.addPokedex(enemy.activePoke().pokeName(), (enemy.activePoke().shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
                     if (enemy.activePoke().shiny()) {
                         player.statistics.shinyCaught++;
