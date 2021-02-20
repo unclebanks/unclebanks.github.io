@@ -17,7 +17,11 @@ let Player = {
         razzBerry: 0,
         fishing: 0
     },
-    pokeCoins: 0,
+    currencyAmount: {
+        pokecoins: 0,
+        catchcoins: 0,
+        battlecoins: 0
+    },
     settings: {
         currentRegionId: 'Kanto',
         currentRouteId: 'route',
@@ -53,6 +57,8 @@ let Player = {
         'ultraballThrows':0,
         'ultraballSuccessfulThrows':0,
         'totalPokeCoins': 0,
+        'totalCatchCoins': 0,
+        'totalBattleCoins': 0,
         'totalExp': 0
     },
     badges: {},
@@ -238,9 +244,19 @@ let Player = {
         this.ballsAmount[ballName] += amount;
     },
     addPokeCoins: function(amount) {
-        this.pokeCoins += amount;
+        this.currencyAmount.pokecoins += amount;
         this.statistics.totalPokeCoins += amount;
         dom.renderPokeCoins();
+    },
+    addCatchCoins: function(amount) {
+        this.currencyAmount.catchcoins += amount;
+        this.statistics.totalCatchCoins += amount;
+        dom.renderCatchCoins();
+    },
+    addBattleCoins: function(amount) {
+        this.currencyAmount.battlecoins += amount;
+        this.statistics.totalBattleCoins += amount;
+        dom.renderBattleCoins();
     },
     meetsCriteria: function(criteriaObj) {
         for (let group in criteriaObj) {
@@ -303,7 +319,7 @@ let Player = {
             localStorage.setItem(`settings`, JSON.stringify(this.settings));
             localStorage.setItem(`badges`, JSON.stringify(this.badges));
             localStorage.setItem(`unlocked`, JSON.stringify(this.unlocked));
-            localStorage.setItem(`pokeCoins`, JSON.stringify(this.pokeCoins));
+            localStorage.setItem(`currencyAmount`, JSON.stringify(this.currencyAmount));
         }
     },
     saveToString: function() {
@@ -316,7 +332,7 @@ let Player = {
             ballsAmount: this.ballsAmount,
             badges: this.badges,
             unlocked: this.unlocked,
-            pokeCoins: this.pokeCoins,
+            currencyAmount: this.currencyAmount,
         });
         return btoa(this.checksum(saveData) + '|' + saveData)
     },
@@ -373,8 +389,8 @@ let Player = {
             let loadedUnlocked = JSON.parse(localStorage.getItem('unlocked'));
             this.unlocked = Object.assign({}, this.unlocked, loadedUnlocked);
         }
-        if (JSON.parse(localStorage.getItem('pokeCoins'))) {
-            this.pokeCoins = JSON.parse(localStorage.getItem('pokeCoins'));
+        if (JSON.parse(localStorage.getItem('currencyAmount'))) {
+            this.currencyAmount = JSON.parse(localStorage.getItem('currencyAmount'));
         }
     },
     loadFromString: function(saveData) {
@@ -410,6 +426,7 @@ let Player = {
                 this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt));
             });
             this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
+            this.currencyAmount = saveData.currencyAmount;
             this.pokedexData = saveData.pokedexData ? saveData.pokedexData : [];
             let loadedStats = saveData.statistics ? saveData.statistics : {};
             this.statistics = Object.assign({}, this.statistics, loadedStats);
@@ -419,7 +436,6 @@ let Player = {
             this.badges = saveData.badges ? saveData.badges : {};
             let loadedUnlocked = saveData.unlocked ? saveData.unlocked : [];
             this.unlocked = Object.assign({}, this.unlocked, loadedUnlocked);
-            this.pokeCoins = saveData.pokeCoins ? saveData.pokeCoins : 0;
         } else {
             alert('Invalid save data, loading canceled!');
         }
