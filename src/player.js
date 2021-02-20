@@ -314,7 +314,6 @@ let Player = {
             statistics: this.statistics,
             settings: this.settings,
             ballsAmount: this.ballsAmount,
-            ballsAmmount: this.ballsAmount, //preserve backwards compatibility
             badges: this.badges,
             unlocked: this.unlocked,
             pokeCoins: this.pokeCoins,
@@ -410,7 +409,7 @@ let Player = {
                 const caughtAt = loadedPoke[3];
                 this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt));
             });
-            this.ballsAmount = saveData.ballsAmount || saveData.ballsAmmount; // import from old spelling mistake
+            this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
             this.pokedexData = saveData.pokedexData ? saveData.pokedexData : [];
             let loadedStats = saveData.statistics ? saveData.statistics : {};
             this.statistics = Object.assign({}, this.statistics, loadedStats);

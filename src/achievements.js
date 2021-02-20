@@ -37,6 +37,18 @@ const ACHIEVEMENTS = {
                 name: 'Money Bags',
                 value: 1000000
             }
+        ],
+        totalCatchCoins: [
+            {
+                name: 'Catch Coin Bags',
+                value: 100000
+            }
+        ],
+        totalBattleCoins: [
+            {
+                name: 'Battle Coin Bags',
+                value: 100000
+            }
         ]
     },
     dex: {

@@ -338,7 +338,7 @@ const Display = {
     },
     renderBalls: function() {
         Object.keys(player.ballsAmount).forEach(ballType => {
-            $('.ball-ammount.' + ballType).innerHTML = player.ballsAmount[ballType];
+            $('.ball-amount.' + ballType).innerHTML = player.ballsAmount[ballType];
         })
     },
     renderPokeCoins: function() {
