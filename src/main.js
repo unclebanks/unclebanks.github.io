@@ -117,7 +117,7 @@ if (player.settings.spriteChoice === 'front') {
 
 dom.bindEvents();
 dom.renderBalls();
-dom.renderPokeCoins();
+dom.renderCurrency();
 
 renderView(dom, enemy, player);
 dom.renderRoutesBox();

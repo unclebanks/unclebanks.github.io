@@ -341,10 +341,12 @@ const Display = {
             $('.ball-ammount.' + ballType).innerHTML = player.ballsAmount[ballType];
         })
     },
-    renderPokeCoins: function() {
-        const pokeCoinsElement = $('#pokeCoins');
-        pokeCoinsElement.innerHTML = player.pokeCoins;
-        flash(pokeCoinsElement);
+    renderCurrency: function() {
+        const pokeCoinsElement = $('#pokeCoins')
+        const catchCoinsElement = $('#catchCoins')
+        const battleCoinsElement = $('#battleCoins')
+        pokeCoinsElement.innerHTML = player.currencyAmount;
+        flash(pokeCoinsElement && battleCoinsElement && catchCoinsElement);
     },
     refreshCatchOption: function(setCatchOption) {
         $(`#enableCatchNew`).checked = false;

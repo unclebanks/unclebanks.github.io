@@ -17,7 +17,11 @@ let Player = {
         razzBerry: 0,
         fishing: 0
     },
-    pokeCoins: 0,
+    currencyAmount: {
+        pokeCoins: 0,
+        catchCoins: 0,
+        battleCoins: 0,
+    },
     settings: {
         currentRegionId: 'Kanto',
         currentRouteId: 'route',
@@ -237,9 +241,9 @@ let Player = {
     addBalls: function(ballName, amount) {
         this.ballsAmount[ballName] += amount;
     },
-    addPokeCoins: function(amount) {
-        this.pokeCoins += amount;
-        this.statistics.totalPokeCoins += amount;
+    addCurrency: function(currencyName, amount) {
+        this.currencyAmount[currencyName] += amount;
+        this.statistics.total[currencyName] += amount;
         dom.renderPokeCoins();
     },
     meetsCriteria: function(criteriaObj) {
@@ -303,7 +307,7 @@ let Player = {
             localStorage.setItem(`settings`, JSON.stringify(this.settings));
             localStorage.setItem(`badges`, JSON.stringify(this.badges));
             localStorage.setItem(`unlocked`, JSON.stringify(this.unlocked));
-            localStorage.setItem(`pokeCoins`, JSON.stringify(this.pokeCoins));
+            localStorage.setItem(`currencyAmount`, JSON.stringify(this.currencyAmount));
         }
     },
     saveToString: function() {
@@ -317,7 +321,7 @@ let Player = {
             ballsAmmount: this.ballsAmount, //preserve backwards compatibility
             badges: this.badges,
             unlocked: this.unlocked,
-            pokeCoins: this.pokeCoins,
+            currencyAmount: this.currencyAmount,
         });
         return btoa(this.checksum(saveData) + '|' + saveData)
     },
@@ -374,8 +378,8 @@ let Player = {
             let loadedUnlocked = JSON.parse(localStorage.getItem('unlocked'));
             this.unlocked = Object.assign({}, this.unlocked, loadedUnlocked);
         }
-        if (JSON.parse(localStorage.getItem('pokeCoins'))) {
-            this.pokeCoins = JSON.parse(localStorage.getItem('pokeCoins'));
+        if (JSON.parse(localStorage.getItem('currencyAmount'))) {
+            this.currencyAmount = JSON.parse(localStorage.getItem('currencyAmount'));
         }
     },
     loadFromString: function(saveData) {
@@ -420,7 +424,7 @@ let Player = {
             this.badges = saveData.badges ? saveData.badges : {};
             let loadedUnlocked = saveData.unlocked ? saveData.unlocked : [];
             this.unlocked = Object.assign({}, this.unlocked, loadedUnlocked);
-            this.pokeCoins = saveData.pokeCoins ? saveData.pokeCoins : 0;
+            this.currencyAmount = saveData.currencyAmount ? saveData.currencyAmount : 0;
         } else {
             alert('Invalid save data, loading canceled!');
         }
