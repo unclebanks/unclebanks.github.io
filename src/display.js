@@ -344,17 +344,14 @@ const Display = {
     renderPokeCoins: function() {
         const pokeCoinsElement = $('#pokeCoins');
         pokeCoinsElement.innerHTML = player.currencyAmount.pokecoins;
-        flash(pokeCoinsElement);
     },
     renderCatchCoins: function() {
         const catchCoinsElement = $('#catchCoins');
         catchCoinsElement.innerHTML = player.currencyAmount.catchcoins;
-        flash(catchCoinsElement);
     },
     renderBattleCoins: function() {
         const battleCoinsElement = $('#battleCoins');
         battleCoinsElement.innerHTML = player.currencyAmount.battlecoins;
-        flash(battleCoinsElement);
     },
     renderCurrency: function() {
         this.renderBattleCoins();
