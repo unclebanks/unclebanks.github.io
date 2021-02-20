@@ -116,7 +116,8 @@ const Combat = {
         }
         this.attemptCatch();
         this.findPokeballs(enemy.activePoke().level());
-        this.findPokeCoins(enemy.activePoke().level());
+        const foundPokeCoins = Math.floor(this.enemyActivePoke.level() * 4) + 5;
+        player.addPokeCoins(foundPokeCoins);
 
         const beforeExp = player.getPokemon().map((poke) => poke.level());
         const expToGive = (this.enemyActivePoke.baseExp() / 16) + (this.enemyActivePoke.level() * 3);
@@ -209,16 +210,18 @@ const Combat = {
                     dom.gameConsoleLog('But the '+combatLoop.trainer.name+' bats away your ball', 'purple');
                     return false;
                 }
+                const gainCatchCoins = Math.floor(this.enemyActivePoke.level() * 1) + 1;
                 const catchBonus = (player.unlocked.razzBerry) ? 1.25 : 1;
                 const rngHappened = RNG(((enemy.activePoke().catchRate() * player.ballRNG(selectedBall)) / 3) * catchBonus);
                 if (rngHappened) {
                     player.statistics.successfulThrows++;
                     player.statistics[selectedBall+'SuccessfulThrows']++;
-                    dom.gameConsoleLog('You caught ' + enemy.activePoke().pokeName() + '!!', 'purple');
+                    player.addCatchCoins(gainCatchCoins);
+                    dom.gameConsoleLog('You caught ' + enemy.activePoke().pokeName() + 'and gained' + gainCatchCoins + '!!', 'purple');
                     if (!player.hasPokemon(enemy.activePoke().pokeName(), 0)) {
                         player.addPoke(enemy.activePoke());
                         dom.renderPokeList();
-                    }
+                    }                    
                     player.addPokedex(enemy.activePoke().pokeName(), (enemy.activePoke().shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
                     if (enemy.activePoke().shiny()) {
                         player.statistics.shinyCaught++;
@@ -247,13 +250,6 @@ const Combat = {
                 dom.gameConsoleLog('You found ' + ballsAmount + ' ' + ballName + 's!!', 'purple');
                 dom.renderBalls();
             }
-        }
-    },
-    findPokeCoins: function(pokeLevel) {
-        if (RNG(5)) {
-            const foundPokeCoins = Math.floor(Math.random() * pokeLevel * 4) + 1;
-            player.addPokeCoins(foundPokeCoins);
-            dom.gameConsoleLog('You found ' + foundPokeCoins + '!!', 'purple');
         }
     },
     changePlayerPoke: function(newPoke) {
