@@ -17,8 +17,15 @@ const ROUTES = {
                         ['Squirtle', 15]
                     ]
             }
-        }
-        , route: {
+        },
+        route151: {
+            name: 'Kanto Starters',
+            pokes: ['Charmander', 'Squirtle', 'Bulbasaur', 'Pikachu'],
+            minLevel: 5,
+            maxLevel: 5,
+            respawn: 'starter'
+        },
+        route: {
             name: 'Route 1'
             , pokes: ['Pidgey', 'Rattata']
             , minLevel: 2
