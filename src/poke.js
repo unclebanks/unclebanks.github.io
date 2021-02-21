@@ -61,8 +61,8 @@ Poke.prototype.pokeName = function() {
 Poke.prototype.image = function() {
     const imageType = (this.isShiny ? 'shiny' : 'normal');
     return {
-        front: this.poke.images[imageType].front,
-        back: this.poke.images[imageType].back
+        front: 'assets/sprites/' + [imageType] + '/front/' + this.poke.pokemon[0].Pokemon + '.png',
+        back: 'assets/sprites/' + [imageType] + '/back/' + this.poke.pokemon[0].Pokemon + '.png'
     }
 };
 Poke.prototype.shiny = function() {
