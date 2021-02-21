@@ -37,6 +37,7 @@ Poke.prototype.canEvolve = function() {
     // pokemon Has Evolution
     if (EVOLUTIONS[this.poke.pokemon[0].Pokemon] !== undefined) {
         const levelToEvolve = Number(EVOLUTIONS[this.poke.pokemon[0].Pokemon].level);
+        const pokeList = 'roster'
         if (this.currentLevel() >= levelToEvolve) {
             return true;
         }

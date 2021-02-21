@@ -80,11 +80,7 @@ let Player = {
         return (chk & 0xffffffff).toString(16);
     },
     addPoke: function(poke) {
-        if (this.pokemons.length < 6) {
-            this.pokemons.push(poke);
-        } else {
-            this.storage.push(poke);
-        }
+        this.pokemons.push(poke);
     },
     findDexIndex: p => POKEDEX.findIndex(x=>x.pokemon[0].Pokemon == p.name),
     addPokedex: function(pokeName, flag) {

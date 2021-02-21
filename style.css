@@ -64,7 +64,6 @@ ul {
     padding: 0;
 }
 
-.pokeDeleteButton,
 .pokeUpButton,
 .pokeDownButton,
 .pokeFirstButton,
@@ -80,7 +79,6 @@ ul {
     display: none;
 }
 
-.manageTeamEnabled .pokeDeleteButton,
 .manageTeamEnabled .pokeUpButton,
 .manageTeamEnabled .pokeDownButton,
 .manageTeamEnabled .pokeFirstButton,
@@ -89,13 +87,6 @@ ul {
     display: inline;
     padding-left: 3px;
     padding-right: 3px;
-}
-
-.pokeDeleteButton {
-    color: red;
-    text-decoration: none;
-    position: relative;
-    left: -3px;
 }
 .fa-arrow-up:before{content:"\f062"}
 .fa-arrow-down:before{content:"\f063"}
