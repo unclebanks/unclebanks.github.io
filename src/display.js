@@ -177,7 +177,6 @@ const Display = {
                     flash(listItemElement);
                 }
             } else {
-                const deleteButton = `<a href="#" onclick="userInteractions.deletePokemon(event, ${index});return false" class="pokeDeleteButton">X</a>`;
                 const upButton = `<button onclick="userInteractions.pokemonToUp(${index})" class="pokeUpButton"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>`;
                 const downButton = `<button onclick="userInteractions.pokemonToDown(${index})" class="pokeDownButton"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>`;
                 const firstButton = `<button onclick="userInteractions.pokemonToFirst(${index})" class="pokeFirstButton">#1</button>`;
@@ -187,7 +186,6 @@ const Display = {
 
                 listElementsToAdd += `<li id="listPoke${index}" class="listPoke">` +
                     image +
-                    deleteButton +
                     `<a href="#" onclick="userInteractions.changePokemon(${index})" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level()})</a><br>` +
                     upButton +
                     downButton +
@@ -219,14 +217,12 @@ const Display = {
                 listItemNameElement.setAttribute('status', this.pokeStatus(poke));
                 listItemNameElement.className = 'pokeListName ' + this.pokeStatus(poke);
             } else {
-                const deleteButton = `<a href="#" onclick="userInteractions.deletePokemon(event, ${index}, 'storage');return false" class="pokeDeleteButton">X</a>`;
                 const upButton = `<button onclick="userInteractions.pokemonToUp(${index}, 'storage')" class="pokeUpButton"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>`;
                 const downButton = `<button onclick="userInteractions.pokemonToDown(${index}, 'storage')" class="pokeDownButton"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>`;
                 const firstButton = `<button onclick="userInteractions.pokemonToFirst(${index}, 'storage')" class="pokeFirstButton">#1</button>`;
                 const rosterButton = `<button onclick="userInteractions.moveToRoster(${index})" class="toStorageButton">Active</button>`;
 
                 listElementsToAdd += `<li id="storagePoke${index}">` +
-                    deleteButton +
                     `<a href="#" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level()})</a><br>` +
                     upButton +
                     downButton +
