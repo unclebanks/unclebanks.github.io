@@ -5,7 +5,7 @@ const ROUTES = {
             rarePokes: ['Bulbasaur', 'Charmander', 'Squirtle', 'Omanyte', 'Kabuto', 'Aerodactyl', 'Hitmonlee', 'Hitmonchan', 'Lapras', 'Eevee'],
             superRare: ['Mewtwo', 'Mew', 'Articuno', 'Zapdos', 'Moltres', 'Porygon']
         },
-        palletTown: {
+        starter: {
             name: 'Pallet Town',
             town: true,
             trainer: {
@@ -23,14 +23,14 @@ const ROUTES = {
             pokes: ['Charmander', 'Squirtle', 'Bulbasaur', 'Pikachu'],
             minLevel: 5,
             maxLevel: 5,
-            respawn: 'palletTown'
+            respawn: 'starter'
         },
         route: {
             name: 'Route 1'
             , pokes: ['Pidgey', 'Rattata']
             , minLevel: 2
             , maxLevel: 5,
-            respawn: 'palletTown'
+            respawn: 'starter'
         },
         viridianCity: {
             name: 'Viridian City',
