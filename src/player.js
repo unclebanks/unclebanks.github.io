@@ -13,7 +13,6 @@ let Player = {
     },
     unlocked: {
         shinyDex: 0,
-        completeDex: 0,
         razzBerry: 0,
         fishing: 0
     },
