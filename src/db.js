@@ -25,17 +25,7 @@ const POKEDEX = [
             {
                 "base exp": "64"
             }
-        ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/bulbasaur.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/bulbasaur.gif"
-            }
-        }
+        ]
     },
     {
         "pokemon": [
@@ -63,17 +53,7 @@ const POKEDEX = [
             {
                 "base exp": "142"
             }
-        ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/ivysaur.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/ivysaur.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/ivysaur.gif"
-            }
-        }
+        ]
     },
     {
         "pokemon": [
@@ -101,17 +81,7 @@ const POKEDEX = [
             {
                 "base exp": "236"
             }
-        ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/venusaur.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/venusaur.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/venusaur.gif"
-            }
-        }
+        ]
     },
     {
         "pokemon": [
@@ -138,17 +108,7 @@ const POKEDEX = [
             {
                 "base exp": "62"
             }
-        ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/charmander.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/charmander.gif"
-            }
-        }
+        ]
     },
     {
         "pokemon": [
