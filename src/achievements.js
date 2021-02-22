@@ -60,30 +60,6 @@ const ACHIEVEMENTS = {
             {
                 name: 'Johto Collector',
                 value: 240
-            },
-            {
-                name: 'Hoenn Collector',
-                value: 370
-            },
-            {
-                name: 'Sinnoh Collector',
-                value: 480
-            },
-            {
-                name: 'Unova Collector',
-                value: 640
-            },
-            {
-                name: 'Kalos Collector',
-                value: 710
-            },
-            {
-                name: 'Alola Collector',
-                value: 820
-            },
-            {
-                name: 'Ultimate Collector',
-                value: 895
             }
         ],
         caught: [
@@ -98,10 +74,6 @@ const ACHIEVEMENTS = {
             {
                 name: 'Professor Birch',
                 pokes: ['Treecko', 'Mudkip', 'Torchic']
-            },
-            {
-                name: 'Professor Rowan',
-                pokes: ['Turtwig', 'Piplup', 'Chimchar']
             },
             {
                 name: 'Team Rocket',
