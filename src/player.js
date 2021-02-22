@@ -24,7 +24,7 @@ let Player = {
     },
     settings: {
         currentRegionId: 'Kanto',
-        currentRouteId: 'route',
+        currentRouteId: 'palletTown',
         listView: 'roster',
         autoSort: true,
         dexView: 'all',
