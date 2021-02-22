@@ -24,12 +24,14 @@ const Story = {
         },
         selectFirstPoke: function(id) {
             let starterPoke = new Poke(pokeById(id), 5);
+            player.settings.currentRegionId = 'Kanto';
             player.addPoke(starterPoke);
             player.addPokedex(starterPoke.pokeName(), POKEDEXFLAGS.ownNormal);
             dom.gameConsoleLog('You received a ' + player.activePoke().pokeName(), 'purple');
             player.setActive(0);
             combatLoop.unpause();
             renderView(dom, enemy, player);
+            dom.renderRegionSelect();
             dom.renderRoutesBox();
             dom.renderListBox();
             $(`#storyContainer`).style.display = 'none';

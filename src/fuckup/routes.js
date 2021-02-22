@@ -17,8 +17,15 @@ const ROUTES = {
                         ['Squirtle', 15]
                     ]
             }
-        }
-        , route: {
+        },
+        route151: {
+            name: 'Kanto Starters',
+            pokes: ['Charmander', 'Squirtle', 'Bulbasaur', 'Pikachu'],
+            minLevel: 5,
+            maxLevel: 5,
+            respawn: 'starter'
+        },
+        route: {
             name: 'Route 1'
             , pokes: ['Pidgey', 'Rattata']
             , minLevel: 2
@@ -2038,7 +2045,7 @@ const ROUTES = {
     },
     Unova: {
         _unlock: {
-            currency: 10000,
+            pokeCoins: 10000,
             statistics: {
                 beaten: 25000,
                 shinyCaught: 25
@@ -2463,7 +2470,7 @@ const ROUTES = {
     },
     Kalos: {
         _unlock: {
-            currency: 50000,
+            pokeCoins: 50000,
             statistics: {
                 caught: 640,
                 beaten: 75000,
@@ -2572,7 +2579,7 @@ const ROUTES = {
     },
     Alola: {
         _unlock: {
-            currency: 150000,
+            pokeCoins: 150000,
             statistics: {
                 beaten: 250000,
                 shinyCaught: 500

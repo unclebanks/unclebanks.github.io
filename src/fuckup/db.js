@@ -28,12 +28,12 @@ const POKEDEX = [
         ],
         "images": {
             "normal": {
-                "front": 'assets/sprites/normal/front/Bulbasaur.png',
-                "back": 'assets/sprites/normal/back/Bulbasaur.png'
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif"
             },
             "shiny": {
-                "front": 'assets/sprites/shiny/front/Bulbasaur.png',
-                "back": 'assets/sprites/shiny/back/Bulbasaur.png'
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/bulbasaur.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/bulbasaur.gif"
             }
         }
     },
@@ -63,7 +63,17 @@ const POKEDEX = [
             {
                 "base exp": "142"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/ivysaur.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/ivysaur.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/ivysaur.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -91,7 +101,17 @@ const POKEDEX = [
             {
                 "base exp": "236"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/venusaur.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/venusaur.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/venusaur.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -121,12 +141,12 @@ const POKEDEX = [
         ],
         "images": {
             "normal": {
-                "front": 'assets/sprites/normal/front/Charmander.png',
-                "back": 'assets/sprites/normal/back/Charmander.png'
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif"
             },
             "shiny": {
-                "front": 'assets/sprites/shiny/front/Charmander.png',
-                "back": 'assets/sprites/shiny/back/Charmander.png'
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/charmander.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/charmander.gif"
             }
         }
     },
@@ -155,7 +175,17 @@ const POKEDEX = [
             {
                 "base exp": "142"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmeleon.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/charmeleon.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/charmeleon.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -183,7 +213,17 @@ const POKEDEX = [
             {
                 "base exp": "240"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charizard.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/charizard.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/charizard.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -213,12 +253,12 @@ const POKEDEX = [
         ],
         "images": {
             "normal": {
-                "front": 'assets/sprites/normal/front/Squirtle.png',
-                "back": 'assets/sprites/normal/back/Squirtle.png'
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif"
             },
             "shiny": {
-                "front": 'assets/sprites/shiny/front/Squirtle.png',
-                "back": 'assets/sprites/shiny/back/Squirtle.png'
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/squirtle.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/squirtle.gif"
             }
         }
     },
@@ -247,7 +287,17 @@ const POKEDEX = [
             {
                 "base exp": "142"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/wartortle.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/wartortle.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/wartortle.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -274,7 +324,17 @@ const POKEDEX = [
             {
                 "base exp": "239"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/blastoise.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/blastoise.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/blastoise.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -301,7 +361,17 @@ const POKEDEX = [
             {
                 "base exp": "39"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/caterpie.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/caterpie.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/caterpie.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/caterpie.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -328,7 +398,17 @@ const POKEDEX = [
             {
                 "base exp": "72"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/metapod.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/metapod.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/metapod.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/metapod.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -356,7 +436,17 @@ const POKEDEX = [
             {
                 "base exp": "178"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/butterfree.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/butterfree.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/butterfree.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/butterfree.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -384,7 +474,17 @@ const POKEDEX = [
             {
                 "base exp": "39"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/weedle.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/weedle.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/weedle.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/weedle.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -412,7 +512,17 @@ const POKEDEX = [
             {
                 "base exp": "72"
             }
-        ]
+        ],
+        "images": {
+            "normal": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/kakuna.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/kakuna.gif"
+            },
+            "shiny": {
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/kakuna.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/kakuna.gif"
+            }
+        }
     },
     {
         "pokemon": [
@@ -818,12 +928,12 @@ const POKEDEX = [
         ],
         "images": {
             "normal": {
-                "front": 'assets/sprites/normal/front/Pikachu.png',
-                "back": 'assets/sprites/normal/back/Pikachu.png'
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pikachu.gif"
             },
             "shiny": {
-                "front": 'assets/sprites/shiny/front/Pikachu.png',
-                "back": 'assets/sprites/shiny/back/Pikachu.png'
+                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/pikachu.gif",
+                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/pikachu.gif"
             }
         }
     },
