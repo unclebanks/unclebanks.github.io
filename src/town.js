@@ -2,37 +2,37 @@ let Town = {
     shopItems: [
         {
             name: 'Pokeball',
-            cost: 10,
+            cost: 100,
             ball: 'pokeball'
         },
         {
             name: 'Greatball',
-            cost: 100,
+            cost: 1000,
             ball: 'greatball'
         },
         {
             name: 'Ultraball',
-            cost: 1000,
+            cost: 10000,
             ball: 'ultraball'
         },
         {
             name: 'Razz Berry',
-            cost: 250000,
+            cost: 2500000,
             unlockable: 'razzBerry'
         },
         {
             name: 'Old Rod',
-            cost: 1000,
+            cost: 10000,
             fishing: 1
         },
         {
             name: 'Good Rod',
-            cost: 10000,
+            cost: 100000,
             fishing: 2
         },
         {
             name: 'Super Rod',
-            cost: 100000,
+            cost: 1000000,
             fishing: 3
         }
     ],

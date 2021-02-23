@@ -120,7 +120,7 @@ const Combat = {
         player.addPokeCoins(foundPokeCoins);
 
         const beforeExp = player.getPokemon().map((poke) => poke.level());
-        const expToGive = (this.enemyActivePoke.baseExp() * 25) + (this.enemyActivePoke.level() * 3);
+        const expToGive = (this.enemyActivePoke.baseExp() / 16) + (this.enemyActivePoke.level() * 3);
         player.statistics.totalExp += expToGive;
         this.playerActivePoke.giveExp(expToGive);
         dom.gameConsoleLog(this.playerActivePoke.pokeName() + ' won ' + Math.floor(expToGive) + 'xp', 'rgb(153, 166, 11)');
