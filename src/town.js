@@ -1,43 +1,38 @@
 let Town = {
     shopItems: [
         {
-            name: 'Complete Pokedex',
-            cost: 100000,
-            unlockable: 'completeDex'
-        },
-        {
             name: 'Pokeball',
-            cost: 10,
+            cost: 100,
             ball: 'pokeball'
         },
         {
             name: 'Greatball',
-            cost: 100,
+            cost: 1000,
             ball: 'greatball'
         },
         {
             name: 'Ultraball',
-            cost: 1000,
+            cost: 10000,
             ball: 'ultraball'
         },
         {
             name: 'Razz Berry',
-            cost: 250000,
+            cost: 2500000,
             unlockable: 'razzBerry'
         },
         {
             name: 'Old Rod',
-            cost: 1000,
+            cost: 10000,
             fishing: 1
         },
         {
             name: 'Good Rod',
-            cost: 10000,
+            cost: 100000,
             fishing: 2
         },
         {
             name: 'Super Rod',
-            cost: 100000,
+            cost: 1000000,
             fishing: 3
         }
     ],
@@ -46,7 +41,7 @@ let Town = {
         for (let i = 0; i < this.shopItems.length; i++) {
             let canBuy = true;
             let own = false;
-            if (player.currency < this.shopItems[i].cost)
+            if (player.currencyAmount.pokecoins < this.shopItems[i].cost)
                 canBuy = false;
             if (this.shopItems[i].unlockable && player.unlocked[this.shopItems[i].unlockable]) {
                 canBuy = false;
@@ -65,10 +60,10 @@ let Town = {
     },
     buyItem: function(index) {
         const item = this.shopItems[index];
-        if (player.currency < item.cost) {
+        if (player.currencyAmount.pokecoins < item.cost) {
             return false;
         } else {
-            player.currency -= item.cost;
+            player.currencyAmount.pokecoins -= item.cost;
             if (item.ball) {
                 player.ballsAmount[item.ball]++;
                 dom.renderBalls();
@@ -111,7 +106,7 @@ let Town = {
             poke = this.traderPoke[i];
             pokeValue = 100000;
             canBuy = true;
-            if (player.currency < pokeValue)
+            if (player.currencyAmount.pokecoins < pokeValue)
                 canBuy = false;
             const disableButton = (!canBuy) ? ' disabled="true"' : '';
             buttonHTML = ' <button onclick="town.buyPoke(\'' + i + '\')" ' + disableButton + '>Buy</button>';
@@ -130,7 +125,7 @@ let Town = {
     sellPoke: function(index) {
         const poke = player.storage[index];
         const soldValue = this.calculatePokeValue(poke);
-        player.addCurrency(soldValue);
+        player.addPokeCoins(soldValue);
         dom.gameConsoleLog('Sold ' + poke.pokeName() + ' for ¤' + soldValue + '!!', 'purple');
         player.deletePoke(index, 'storage');
         player.statistics.sold++;
@@ -140,12 +135,12 @@ let Town = {
     },
     buyPoke: function(index) {
         const pokeValue = 100000;
-        if (player.currency < pokeValue) {
+        if (player.currencyAmount.pokecoins < pokeValue) {
             return false;
         } else {
             const poke = pokeByName(this.traderPoke[index]);
             const newPoke = new Poke(poke, 30, false, Math.random() < (1 / (1 << 5 << 8)));
-            player.currency -= pokeValue;
+            player.currencyAmount.pokecoins -= pokeValue;
             dom.gameConsoleLog('Bought ' + newPoke.pokeName() + ' for ¤' + pokeValue + '!!', 'purple');
             player.addPoke(newPoke);
             player.addPokedex(newPoke.pokeName(), (newPoke.shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));

@@ -69,10 +69,6 @@ const Display = {
     renderPokeDexSort: function() {
         let sortHTML = '<option value="all">All</option>';
         let showList = false;
-        if (player.unlocked.completeDex) {
-            sortHTML += '<option value="missing"' + (player.settings.dexView === 'missing' ? ' selected="true"' : '') + '>Missing</option>';
-            showList = true;
-        }
         if (player.unlocked.shinyDex) {
             sortHTML += '<option value="shiny"' + (player.settings.dexView === 'shiny' ? ' selected="true")' : '') + '>Shiny</option>';
             showList = true;
