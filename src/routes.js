@@ -18,7 +18,7 @@ const ROUTES = {
                     ]
             }
         }
-        , route: {
+        , route1: {
             name: 'Route 1'
             , pokes: ['Pidgey', 'Rattata']
             , minLevel: 2
@@ -40,21 +40,21 @@ const ROUTES = {
                 ]
             }
         }
-        , route1: {
+        , route2: {
             name: 'Route 2'
             , pokes: ['Pidgey', 'Rattata', 'Caterpie', 'Weedle']
             , minLevel: 3
             , maxLevel: 5,
             respawn: 'viridianCity'
         }
-        , special: {
+        , viridianForest: {
             name: 'Virdian Forest'
             , pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pikachu']
             , minLevel: 3
             , maxLevel: 6,
             respawn: 'viridianCity'
         }
-        , special1: {
+        , pewterCity: {
             name: 'Pewter City',
             town: true,
             trainer: {
@@ -66,7 +66,7 @@ const ROUTES = {
                 ]
             }
         }
-        , route2: {
+        , route3: {
             name: 'Route 3'
             , pokes: ['Pidgey', 'Spearow', 'Jigglypuff']
             , minLevel: 5
@@ -78,7 +78,7 @@ const ROUTES = {
                 }
             }
         }
-        , special2: {
+        , mtMoon: {
             name: 'Mt. Moon'
             , pokes: ['Zubat', 'Clefairy', 'Paras', 'Geodude']
             , minLevel: 6
@@ -90,7 +90,7 @@ const ROUTES = {
                 }
             }
         }
-        , route3: {
+        , route4: {
             name: 'Route 4'
             , pokes: ['Rattata', 'Spearow', 'Ekans', 'Sandshrew']
             , minLevel: 6
@@ -119,7 +119,7 @@ const ROUTES = {
                 }
             }
         }
-        , route4: {
+        , route5: {
             name: 'Route 5'
             , pokes: ['Pidgey', 'Oddish', 'Meowth', 'Mankey', 'Bellsprout']
             , minLevel: 10
@@ -131,7 +131,7 @@ const ROUTES = {
                 }
             }
         },
-        special8: {
+        saffronCity: {
             name: 'Saffron City',
             town: true,
             trainer: {
@@ -150,7 +150,7 @@ const ROUTES = {
                 }
             }
         }
-        , route5: {
+        , route6: {
             name: 'Route 6'
             , pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Meowth', 'Mankey', 'Abra', 'Bellsprout']
             , minLevel: 10
@@ -180,7 +180,7 @@ const ROUTES = {
                 }
             }
         }
-        , route6: {
+        , route7: {
             name: 'Route 7'
             , pokes: ['Pidgey', 'Vulpix', 'Oddish', 'Meowth', 'Mankey', 'Growlithe', 'Bellsprout']
             , minLevel: 18
@@ -192,7 +192,7 @@ const ROUTES = {
                 }
             }
         }
-        , route7: {
+        , route8: {
             name: 'Route 8',
             pokes: ['Pidgey', 'Pidgeotto', 'Vulpix', 'Oddish', 'Meowth', 'Mankey', 'Growlithe', 'Abra', 'Kadabra', 'Bellsprout'],
             minLevel: 15,
@@ -204,7 +204,7 @@ const ROUTES = {
                 }
             }
         }
-        , special3: {
+        , diglettCave: {
             name: 'Diglett Cave'
             , pokes: ['Diglett', 'Dugtrio']
             , minLevel: 15
@@ -216,7 +216,7 @@ const ROUTES = {
                 }
             }
         }
-        , route8: {
+        , route9: {
             name: 'Route 9'
             , pokes: ['Spearow', 'Ekans', 'Sandshrew', 'Drowzee']
             , minLevel: 9
@@ -228,7 +228,7 @@ const ROUTES = {
                 }
             }
         }
-        , route9: {
+        , route10: {
             name: 'Route 10'
             , pokes: ['Spearow', 'Ekans', 'Sandshrew', 'Voltorb']
             , minLevel: 11
@@ -249,7 +249,7 @@ const ROUTES = {
                 }
             }
         }
-        , special4: {
+        , rockTunnel: {
             name: 'Rock Tunnel'
             , pokes: ['Zubat', 'Machop', 'Geodude', 'Onix']
             , minLevel: 11
@@ -261,7 +261,7 @@ const ROUTES = {
                 }
             }
         }
-        , special5: {
+        , powerPlant: {
             name: 'Power Plant'
             , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Voltorb', 'Electrode', 'Electabuzz']
             , minLevel: 25
@@ -273,7 +273,7 @@ const ROUTES = {
                 }
             }
         }
-        , special6: {
+        , pokemonTower: {
             name: 'Pokemon Tower'
             , pokes: ['Gastly', 'Haunter', 'Cubone']
             , minLevel: 13
@@ -285,7 +285,7 @@ const ROUTES = {
                 }
             }
         }
-        , route10: {
+        , route11: {
             name: 'Route 11'
             , pokes: ['Spearow', 'Ekans', 'Sandshrew', 'Drowzee']
             , minLevel: 18
@@ -297,7 +297,7 @@ const ROUTES = {
                 }
             }
         }
-        , special7: {
+        , celadonCity: {
             name: 'Celadon City',
             town: true,
             trainer: {
@@ -315,7 +315,7 @@ const ROUTES = {
                 }
             }
         }
-        , route11: {
+        , route12: {
             name: 'Route 12'
             , pokes: ['Pidgey', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Snorlax']
             , minLevel: 22
@@ -327,7 +327,7 @@ const ROUTES = {
                 }
             }
         }
-        , route12: {
+        , route13: {
             name: 'Route 13'
             , pokes: ['Pidgey', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Ditto']
             , minLevel: 22
@@ -339,7 +339,7 @@ const ROUTES = {
                 }
             }
         }
-        , route13: {
+        , route14: {
             name: 'Route 14'
             , pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Ditto']
             , minLevel: 23
@@ -351,7 +351,7 @@ const ROUTES = {
                 }
             }
         }
-        , route14: {
+        , route15: {
             name: 'Route 15'
             , pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Ditto']
             , minLevel: 22
@@ -363,7 +363,7 @@ const ROUTES = {
                 }
             }
         }
-        , route15: {
+        , route16: {
             name: 'Route 16'
             , pokes: ['Rattata', 'Raticate', 'Spearow', 'Doduo', 'Snorlax']
             , minLevel: 18
@@ -375,7 +375,7 @@ const ROUTES = {
                 }
             }
         }
-        , route16: {
+        , route17: {
             name: 'Route 17'
             , pokes: ['Raticate', 'Spearow', 'Fearow', 'Doduo']
             , minLevel: 20
@@ -387,7 +387,7 @@ const ROUTES = {
                 }
             }
         }
-        , route17: {
+        , route18: {
             name: 'Route 18'
             , pokes: ['Rattata', 'Raticate', 'Spearow', 'Fearow', 'Doduo']
             , minLevel: 20
@@ -418,7 +418,7 @@ const ROUTES = {
                 }
             }
         }
-        , special9: {
+        , safariZone: {
             name: 'Safari Zone',
             pokes: ['Nidoran f', 'Nidorina', 'Nidoran m', 'Nidorino', 'Parasect', 'Venonat', 'Exeggcute', 'Rhyhorn', 'Kangaskhan', 'Scyther', 'Pinsir', 'Tauros'],
             minLevel: 22,
@@ -430,7 +430,7 @@ const ROUTES = {
                 }
             }
         },
-        route18: {
+        route19: {
             name: 'Route 19'
             , pokes: ['Raticate', 'Pidgeotto', 'Oddish', 'Ditto']
             , minLevel: 26
@@ -442,8 +442,8 @@ const ROUTES = {
                 }
             }
         }
-        , special11: {
-            name: 'Seafom Island',
+        , seafoamIsland: {
+            name: 'Seafoam Island',
             town: true,
             _unlock: {
                 badges: {
@@ -451,7 +451,7 @@ const ROUTES = {
                 }
             }
         }
-        , route19: {
+        , route20: {
             name: 'Route 20'
             , pokes: ['Raticate', 'Pidgeotto', 'Weepinbell', 'Kadabra']
             , minLevel: 27
@@ -482,8 +482,8 @@ const ROUTES = {
                 }
             }
         }
-        , special12: {
-            name: 'Pkmn Mansion'
+        , pokemonMansion: {
+            name: 'Pokemon Mansion'
             , pokes: ['Vulpix', 'Growlithe', 'Ponyta', 'Grimer', 'Muk', 'Koffing', 'Weezing', 'Magmar']
             , minLevel: 32
             , maxLevel: 40,
@@ -494,7 +494,7 @@ const ROUTES = {
                 }
             }
         }
-        , route20: {
+        , route21: {
             name: 'Route 21'
             , pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Raticate', 'Tangela']
             , minLevel: 21
@@ -506,7 +506,7 @@ const ROUTES = {
                 }
             }
         }
-        , route21: {
+        , route22: {
             name: 'Route 22'
             , pokes: ['Pidgey', 'Rattata', 'Nidoran f', 'Nidoran m']
             , minLevel: 2
@@ -518,7 +518,7 @@ const ROUTES = {
                 }
             }
         }
-        , route22: {
+        , route23: {
             name: 'Route 23'
             , pokes: ['Spearow', 'Fearow', 'Ekans', 'Arbok', 'Sandshrew', 'Sandslash', 'Ditto']
             , minLevel: 33
@@ -530,7 +530,7 @@ const ROUTES = {
                 }
             }
         }
-        , route23: {
+        , route24: {
             name: 'Route 24'
             , pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Oddish', 'Abra', 'Bellsprout']
             , minLevel: 7
@@ -542,7 +542,7 @@ const ROUTES = {
                 }
             }
         }
-        , route24: {
+        , route25: {
             name: 'Route 25'
             , pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Oddish', 'Abra', 'Bellsprout']
             , minLevel: 7
@@ -554,7 +554,7 @@ const ROUTES = {
                 }
             }
         }
-        , special13: {
+        , victoryRoad: {
             name: 'Victory Road'
             , pokes: ['Zubat', 'Golbat', 'Venomoth', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Marowak']
             , minLevel: 36
@@ -566,7 +566,7 @@ const ROUTES = {
                 }
             }
         }
-        , special14: {
+        , ceruleanCave: {
             name: 'Cerulean Cave',
             pokes: ['Wigglytuff', 'Venomoth', 'Kadabra', 'Dodrio', 'Electrode', 'Marowak', 'Rhydon', 'Chansey', 'Ditto'],
             minLevel: 51,
@@ -589,8 +589,8 @@ const ROUTES = {
             maxLevel: 40,
             fishing: 1
         }
-    },
-    Johto: {
+    }
+    /*Johto: {
         _unlock: {
             dex: {
                 caughtCount: 140
@@ -784,13 +784,13 @@ const ROUTES = {
                 }
             }
         },
-        /*
+        
         , special24: {
             name: 'Daycare House'
             , pokes: ['Pichu', 'Cleffa', 'Igglybuff', 'Tyrogue', 'Smoochum', 'Elekid', 'Magby', 'Togepi'] // TODO: make these hatch from eggs
             , minLevel: 5
             , maxLevel: 5
-        }*/
+        }
         goldenrodCity: {
             name: 'Goldenrod City',
             town: true,
@@ -1186,5 +1186,5 @@ const ROUTES = {
             , maxLevel: 40
             , fishing: 1
         }
-    }
+    }*/
 };
