@@ -38,7 +38,9 @@ Poke.prototype.canEvolve = function() {
     if (EVOLUTIONS[this.poke.pokemon[0].Pokemon] !== undefined) {
         const levelToEvolve = Number(EVOLUTIONS[this.poke.pokemon[0].Pokemon].level);
         if (this.currentLevel() >= levelToEvolve) {
-            return true;
+            if (!player.hasPokemon(EVOLUTIONS[this.poke.pokemon[0].Pokemon].to, 0)) {
+                return true;
+            }
         }
     }
     return false;
