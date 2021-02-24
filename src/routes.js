@@ -476,6 +476,8 @@ const ROUTES = {
         , seafoamIsland: {
             name: 'Seafoam Island',
             pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shelder', 'Krabby', 'Horsea', 'Staryu'],
+            minLevel: 30,
+            maxLevel: 40,
             _unlock: {
                 badges: {
                     'Soul Badge': true
