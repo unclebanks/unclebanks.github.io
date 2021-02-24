@@ -49,7 +49,7 @@ const ROUTES = {
         }
         , route2: {
             name: 'Route 2'
-            , pokes: ['Pidgey', 'Rattata', 'Caterpie', 'Weedle']
+            , pokes: ['Pidgey', 'Rattata', 'Caterpie', 'Weedle', 'Nidoran F', 'Nidoran M']
             , minLevel: 3
             , maxLevel: 5,
             respawn: 'viridianCity'
