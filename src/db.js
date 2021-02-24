@@ -965,17 +965,7 @@ const POKEDEX = [
             {
                 "base exp": "55"
             }
-        ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/nidoran-m.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/nidoran-m.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/nidoran-m.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/nidoran-m.gif"
-            }
-        }
+        ]
     },
     {
         "pokemon": [
@@ -4335,17 +4325,7 @@ const POKEDEX = [
             {
                 "base exp": "161"
             }
-        ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/mr-mime.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/mr-mime.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/mr-mime.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/mr-mime.gif"
-            }
-        }
+        ]
     },
     {
         "pokemon": [

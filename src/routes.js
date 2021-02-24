@@ -48,7 +48,7 @@ const ROUTES = {
             respawn: 'viridianCity'
         }
         , viridianForest: {
-            name: 'Virdian Forest'
+            name: 'Viridian Forest'
             , pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pikachu']
             , minLevel: 3
             , maxLevel: 6,
@@ -420,7 +420,7 @@ const ROUTES = {
         }
         , safariZone: {
             name: 'Safari Zone',
-            pokes: ['Nidoran f', 'Nidorina', 'Nidoran m', 'Nidorino', 'Parasect', 'Venonat', 'Exeggcute', 'Rhyhorn', 'Kangaskhan', 'Scyther', 'Pinsir', 'Tauros'],
+            pokes: ['Nidoran F', 'Nidorina', 'Nidoran M', 'Nidorino', 'Parasect', 'Venonat', 'Exeggcute', 'Rhyhorn', 'Kangaskhan', 'Scyther', 'Pinsir', 'Tauros'],
             minLevel: 22,
             maxLevel: 31,
             respawn: 'fuchsiaCity',
@@ -508,7 +508,7 @@ const ROUTES = {
         }
         , route22: {
             name: 'Route 22'
-            , pokes: ['Pidgey', 'Rattata', 'Nidoran f', 'Nidoran m']
+            , pokes: ['Pidgey', 'Rattata', 'Nidoran F', 'Nidoran M']
             , minLevel: 2
             , maxLevel: 5,
             respawn: 'cinnabarIsland',
