@@ -15,7 +15,12 @@ let Player = {
     unlocked: {
         shinyDex: 0,
         razzBerry: 0,
-        fishing: 0
+        fishing: 0,
+        thunderStone: 0,
+        fireStone: 0,
+        waterStone: 0,
+        leafStone: 0,
+        moonStone: 0
     },
     currencyAmount: {
         pokecoins: 0,

@@ -36,14 +36,39 @@ let Town = {
             name: 'Razz Berry',
             battlecoins: 2500000,
             unlockable: 'razzBerry'
+        },
+        {
+            name: 'Masterball',
+            battlecoins: 1000000,
+            ball: 'masterball'
         }
     ],
     catchcoinShopItems: [
         {
-            name: 'Masterball',
-            catchcoins: 1000000,
-            ball: 'masterball'
-        }
+            name: 'Thunder Stone',
+            catchcoins: 100000,
+            unlockable: 'thunderStone'
+        },
+        {
+            name: 'Fire Stone',
+            catchcoins: 100000,
+            unlockable: 'fireStone'
+        },
+        {
+            name: 'Water Stone',
+            catchcoins: 100000,
+            unlockable: 'waterStone'
+        },
+        {
+            name: 'Leaf Stone',
+            catchcoins: 100000,
+            unlockable: 'leafStone'
+        },
+        {
+            name: 'Moon Stone',
+            catchcoins: 100000,
+            unlockable: 'moonStone'
+        },
     ],
     renderPokeCoinShop: function() {
         let pokecoinShopHTML = '';
@@ -88,10 +113,14 @@ let Town = {
             let own = false;
             if (player.currencyAmount.catchcoins < this.catchcoinShopItems[i].catchcoins)
                 canBuy = false;
+                if (player.unlocked[this.catchcoinShopItems[i].unlockable]) {
+                    canBuy = false;
+                    own = true;
+                }
             const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
             const buttonText = (own) ? 'Own' : 'Buy';
             const buttonHTML = ' <button onclick="town.buyCatchCoinItem(\'' + i + '\')"' + disableButton + '>' + buttonText + '</button>';
-            catchcoinShopHTML += '<li>' + this.catchcoinShopItems[i].name + ': ' + '<img src="assets/images/currency/CatchCoin.png" height="16" width="16"></img>' + this.catchcoinShopItems[i].catchcoins + buttonHTML + '</li>';
+            catchcoinShopHTML += '<li>' + '<img src="assets/images/evoStones/' + this.catchcoinShopItems[i].name + '.png" height="30" width="30"></img>' + ': ' + '<img src="assets/images/currency/CatchCoin.png" height="16" width="16"></img>' + this.catchcoinShopItems[i].catchcoins + buttonHTML + '</li>';
         }
         $('#catchcoinShopItems').innerHTML = catchcoinShopHTML;
     },
@@ -119,6 +148,10 @@ let Town = {
                 player.unlocked[item.unlockable] = 1;
                 dom.renderListBox();
             }
+            if (item.ball) {
+                player.ballsAmount[item.ball]++;
+                dom.renderBalls();
+            }
             this.renderBattleCoinShop(); // force refresh of shop
             dom.renderCurrency();
             return true;
@@ -130,9 +163,9 @@ let Town = {
             return false;
         } else {
             player.currencyAmount.catchcoins -= item.catchcoins;
-            if (item.ball) {
-                player.ballsAmount[item.ball]++;
-                dom.renderBalls();
+            if (item.unlockable) {
+                player.unlocked[item.unlockable] = 1;
+                dom.renderListBox();
             }
             this.renderCatchCoinShop(); // force refresh of shop
             dom.renderCurrency();

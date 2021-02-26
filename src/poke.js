@@ -23,8 +23,16 @@ Poke.prototype.tryEvolve = function(shiny) {
     if (pokemonHasEvolution) {
         const oldPokemon = this.poke.pokemon[0].Pokemon;
         const evolution = EVOLUTIONS[this.poke.pokemon[0].Pokemon].to;
+        const stoneType = EVOLUTIONS[this.poke.pokemon[0].Pokemon].stone;
         const levelToEvolve = Number(EVOLUTIONS[this.poke.pokemon[0].Pokemon].level);
         if (this.currentLevel() >= levelToEvolve) {
+            this.poke = cloneJsonObject(pokeByName(evolution));
+            player.addPokedex(evolution, (shiny ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
+            if (!player.hasPokemon(oldPokemon, shiny)) {
+                player.addPokedex(oldPokemon, (shiny ? POKEDEXFLAGS.ownedShiny : POKEDEXFLAGS.ownedNormal))
+            }
+        }
+        if (player.unlocked[stoneType]) {
             this.poke = cloneJsonObject(pokeByName(evolution));
             player.addPokedex(evolution, (shiny ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
             if (!player.hasPokemon(oldPokemon, shiny)) {
@@ -37,7 +45,13 @@ Poke.prototype.canEvolve = function() {
     // pokemon Has Evolution
     if (EVOLUTIONS[this.poke.pokemon[0].Pokemon] !== undefined) {
         const levelToEvolve = Number(EVOLUTIONS[this.poke.pokemon[0].Pokemon].level);
+        const stoneType = EVOLUTIONS[this.poke.pokemon[0].Pokemon].stone;
         if (this.currentLevel() >= levelToEvolve) {
+            if (!player.hasPokemon(EVOLUTIONS[this.poke.pokemon[0].Pokemon].to, 0)) {
+                return true;
+            }
+        }
+        if (player.unlocked[stoneType]) {
             if (!player.hasPokemon(EVOLUTIONS[this.poke.pokemon[0].Pokemon].to, 0)) {
                 return true;
             }
