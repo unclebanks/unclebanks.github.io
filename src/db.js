@@ -2981,17 +2981,7 @@ const POKEDEX = [
             {
                 "base exp": "65"
             }
-        ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/seel.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/seel.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/seel.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/seel.gif"
-            }
-        }
+        ]
     },
     {
         "pokemon": [
