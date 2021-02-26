@@ -64,7 +64,7 @@ const EVOLUTIONS = {
         "to": "Arbok"
     },
     "Pikachu": {
-        "level": "35",
+        "stone": "thunderStone",
         "to": "Raichu"
     },
     "Sandshrew": {
@@ -76,7 +76,7 @@ const EVOLUTIONS = {
         "to": "Nidorina"
     },
     "Nidorina": {
-        "level": "35",
+        "stone": "moonStone",
         "to": "Nidoqueen"
     },
     "Nidoran M": {
@@ -84,19 +84,19 @@ const EVOLUTIONS = {
         "to": "Nidorino"
     },
     "Nidorino": {
-        "level": "35",
+        "stone": "moonStone",
         "to": "Nidoking"
     },
     "Clefairy": {
-        "level": "35",
+        "stone": "moonStone",
         "to": "Clefable"
     },
     "Vulpix": {
-        "level": "35",
+        "stone": "fireStone",
         "to": "Ninetales"
     },
     "Jigglypuff": {
-        "level": "35",
+        "stone": "moonStone",
         "to": "Wigglytuff"
     },
     "Zubat": {
@@ -112,7 +112,7 @@ const EVOLUTIONS = {
         "to": "Gloom"
     },
     "Gloom": {
-        "level": "35",
+        "stone": "leafStone",
         "to": "Vileplume"
     },
     "Paras": {
@@ -140,7 +140,7 @@ const EVOLUTIONS = {
         "to": "Primeape"
     },
     "Growlithe": {
-        "level": "35",
+        "stone": "fireStone",
         "to": "Arcanine"
     },
     "Poliwag": {
@@ -148,7 +148,7 @@ const EVOLUTIONS = {
         "to": "Poliwhirl"
     },
     "Poliwhirl": {
-        "level": "50",
+        "stone": "waterStone",
         "to": "Poliwrath"
     },
     "Abra": {
@@ -172,7 +172,7 @@ const EVOLUTIONS = {
         "to": "Weepinbell"
     },
     "Weepinbell": {
-        "level": "35",
+        "stone": "leafStone",
         "to": "Victreebel"
     },
     "Tentacool": {
@@ -212,7 +212,7 @@ const EVOLUTIONS = {
         "to": "Muk"
     },
     "Shellder": {
-        "level": "35",
+        "stone": "waterStone",
         "to": "Cloyster"
     },
     "Gastly": {
@@ -236,7 +236,7 @@ const EVOLUTIONS = {
         "to": "Electrode"
     },
     "Exeggcute": {
-        "level": "35",
+        "stone": "leafStone",
         "to": "Exeggutor"
     },
     "Cubone": {
@@ -260,7 +260,7 @@ const EVOLUTIONS = {
         "to": "Seaking"
     },
     "Staryu": {
-        "level": "35",
+        "stone": "waterStone",
         "to": "Starmie"
     },
     "Magikarp": {
@@ -268,20 +268,16 @@ const EVOLUTIONS = {
         "to": "Gyarados"
     },
     "Eevee": {
-        "level": "25",
-        "to": "Vaporeon"
-    },
-    "Vaporeon": {
-        "level": "25",
+        "stone": "fireStone",
         "to": "Flareon"
     },
-    "Flareon": {
-        "level": "25",
-        "to": "Jolteon"
+    "Eevee": {
+        "stone": "waterStone",
+        "to": "Vaporeon"
     },
-    "Jolteon": {
-        "level": "25",
-        "to": "Eevee"
+    "Eevee": {
+        "stone": "thunderStone",
+        "to": "Jolteon"
     },
     "Omanyte": {
         "level": "40",
