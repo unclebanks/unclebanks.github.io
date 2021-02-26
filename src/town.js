@@ -16,6 +16,11 @@ let Town = {
             ball: 'ultraball'
         },
         {
+            name: 'Masterball',
+            cost: 1000000,
+            ball: 'masterball'
+        },
+        {
             name: 'Razz Berry',
             cost: 2500000,
             unlockable: 'razzBerry'

@@ -265,6 +265,8 @@ const UserActions = {
             'greatballSuccessfulThrows':'Caught with Greatball',
             'ultraballThrows':'Ultraball Throws',
             'ultraballSuccessfulThrows':'Caught with Ultraball',
+            'masterballThrows':'Masterball Throws',
+            'masterballSuccessfulThrows':'Caught with Masterball',
             'totalPokeCoins':'Total Coin Obtained',
             'totalExp':'Total Experience Earned'
         };
