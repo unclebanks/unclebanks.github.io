@@ -198,7 +198,7 @@ const Combat = {
         dom.renderPokeList(false);
     },
     attemptCatch: function() {
-        if (this.catchEnabled == 'all' || (this.catchEnabled == 'new' && !player.hasPokemon(enemy.activePoke().pokeName(), 0)) || !combatLoop.trainer) {
+        if (this.catchEnabled == 'all' && !combatLoop.trainer|| (this.catchEnabled == 'new' && !player.hasPokemon(enemy.activePoke().pokeName(), 0)) && !combatLoop.trainer) {
             const selectedBall = (enemy.activePoke().shiny() ? player.bestAvailableBall() : player.selectedBall);
             if (player.consumeBall(selectedBall)) {
                 // add throw to statistics
