@@ -1,107 +1,143 @@
 let Town = {
-    shopItems: [
+    pokecoinShopItems: [
         {
             name: 'Pokeball',
-            cost: 100,
+            pokecoins: 100,
             ball: 'pokeball'
         },
         {
             name: 'Greatball',
-            cost: 1000,
+            pokecoins: 1000,
             ball: 'greatball'
         },
         {
             name: 'Ultraball',
-            cost: 10000,
+            pokecoins: 10000,
             ball: 'ultraball'
         },
         {
-            name: 'Masterball',
-            cost: 1000000,
-            ball: 'masterball'
-        },
-        {
-            name: 'Razz Berry',
-            cost: 2500000,
-            unlockable: 'razzBerry'
-        },
-        {
             name: 'Old Rod',
-            cost: 10000,
+            pokecoins: 10000,
             fishing: 1
         },
         {
             name: 'Good Rod',
-            cost: 100000,
+            pokecoins: 100000,
             fishing: 2
         },
         {
             name: 'Super Rod',
-            cost: 1000000,
+            pokecoins: 1000000,
             fishing: 3
         }
     ],
-    renderShop: function() {
-        let shopHTML = '';
-        for (let i = 0; i < this.shopItems.length; i++) {
+    battlecoinShopItems: [
+        {
+            name: 'Razz Berry',
+            battlecoins: 2500000,
+            unlockable: 'razzBerry'
+        }
+    ],
+    catchcoinShopItems: [
+        {
+            name: 'Masterball',
+            catchcoins: 1000000,
+            ball: 'masterball'
+        }
+    ],
+    renderPokeCoinShop: function() {
+        let pokecoinShopHTML = '';
+        for (let i = 0; i < this.pokecoinShopItems.length; i++) {
             let canBuy = true;
             let own = false;
-            if (player.currencyAmount.pokecoins < this.shopItems[i].cost)
+            if (player.currencyAmount.pokecoins < this.pokecoinShopItems[i].pokecoins)
                 canBuy = false;
-            if (this.shopItems[i].unlockable && player.unlocked[this.shopItems[i].unlockable]) {
-                canBuy = false;
-                own = true;
-            }
-            if (this.shopItems[i].fishing && player.unlocked.fishing >= this.shopItems[i].fishing) {
+            if (this.pokecoinShopItems[i].fishing && player.unlocked.fishing >= this.pokecoinShopItems[i].fishing) {
                 canBuy = false;
                 own = true;
             }
             const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
             const buttonText = (own) ? 'Own' : 'Buy';
-            const buttonHTML = ' <button onclick="town.buyItem(\'' + i + '\')"' + disableButton + '>' + buttonText + '</button>';
-            shopHTML += '<li>' + this.shopItems[i].name + ': ¤' + this.shopItems[i].cost + buttonHTML + '</li>';
+            const buttonHTML = ' <button onclick="town.buyPokeCoinItem(\'' + i + '\')"' + disableButton + '>' + buttonText + '</button>';
+            pokecoinShopHTML += '<li>' + this.pokecoinShopItems[i].name + ': ' + '<img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>' + this.pokecoinShopItems[i].pokecoins + buttonHTML + '</li>';
         }
-        $('#shopItems').innerHTML = shopHTML;
+        $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
     },
-    buyItem: function(index) {
-        const item = this.shopItems[index];
-        if (player.currencyAmount.pokecoins < item.cost) {
+    renderBattleCoinShop: function() {
+        let battlecoinShopHTML = '';
+        for (let i = 0; i < this.battlecoinShopItems.length; i++) {
+            let canBuy = true;
+            let own = false;
+            if (player.currencyAmount.battlecoins < this.battlecoinShopItems[i].battlecoins)
+                canBuy = false;
+            if (this.battlecoinShopItems[i].unlockable && player.unlocked[this.battlecoinShopItems[i].unlockable]) {
+                canBuy = false;
+                own = true;
+            }
+            const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+            const buttonText = (own) ? 'Own' : 'Buy';
+            const buttonHTML = ' <button onclick="town.buyBattleCoinItem(\'' + i + '\')"' + disableButton + '>' + buttonText + '</button>';
+            battlecoinShopHTML += '<li>' + this.battlecoinShopItems[i].name + ': ' + '<img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>' + this.battlecoinShopItems[i].battlecoins + buttonHTML + '</li>';
+        }
+        $('#battlecoinShopItems').innerHTML = battlecoinShopHTML;
+    },
+    renderCatchCoinShop: function() {
+        let catchcoinShopHTML = '';
+        for (let i = 0; i < this.catchcoinShopItems.length; i++) {
+            let canBuy = true;
+            let own = false;
+            if (player.currencyAmount.catchcoins < this.catchcoinShopItems[i].catchcoins)
+                canBuy = false;
+            const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+            const buttonText = (own) ? 'Own' : 'Buy';
+            const buttonHTML = ' <button onclick="town.buyCatchCoinItem(\'' + i + '\')"' + disableButton + '>' + buttonText + '</button>';
+            catchcoinShopHTML += '<li>' + this.catchcoinShopItems[i].name + ': ' + '<img src="assets/images/currency/CatchCoin.png" height="16" width="16"></img>' + this.catchcoinShopItems[i].catchcoins + buttonHTML + '</li>';
+        }
+        $('#catchcoinShopItems').innerHTML = catchcoinShopHTML;
+    },
+    buyPokeCoinItem: function(index) {
+        const item = this.pokecoinShopItems[index];
+        if (player.currencyAmount.pokecoins < item.pokecoins) {
             return false;
         } else {
-            player.currencyAmount.pokecoins -= item.cost;
+            player.currencyAmount.pokecoins -= item.pokecoins;
             if (item.ball) {
                 player.ballsAmount[item.ball]++;
                 dom.renderBalls();
             }
-            if (item.unlockable) {
-                player.unlocked[item.unlockable] = 1;
-                dom.renderListBox();
-            }
-            if (item.fishing && item.fishing > player.unlocked.fishing) {
-                player.unlocked.fishing = item.fishing;
-                dom.renderListBox();
-            }
-            this.renderShop(); // force refresh of shop
+            this.renderPokeCoinShop(); // force refresh of shop
             dom.renderCurrency();
             return true;
         }
     },
-    renderSellTrader: function() {
-        let traderHTML = '';
-        let poke, pokeValue, pokeStatus, classValue, buttonHTML;
-        const storageLength = player.storage.length;
-        for (let i = 0; i < storageLength; i++) {
-            poke = player.storage[i];
-            pokeValue = this.calculatePokeValue(poke);
-            pokeStatus = dom.pokeStatus(poke);
-            classValue = 'pokeListName ' + pokeStatus;
-            buttonHTML = ' <button onclick="town.sellPoke(\'' + i + '\')">Sell</button>';
-            traderHTML += '<li class="' + classValue + '">' + poke.pokeName() + ': ¤' + pokeValue + buttonHTML + '</li>';
+    buyBattleCoinItem: function(index) {
+        const item = this.battlecoinShopItems[index];
+        if (player.currencyAmount.battlecoins < item.battlecoins) {
+            return false;
+        } else {
+            if (item.unlockable) {
+                player.unlocked[item.unlockable] = 1;
+                dom.renderListBox();
+            }
+            this.renderBattleCoinShop(); // force refresh of shop
+            dom.renderCurrency();
+            return true;
         }
-        if (storageLength == 0) {
-            traderHTML += '<li>Nothing to sell, you can only sell pokemon from your storage</li>';
+    },
+    buyCatchCoinItem: function(index) {
+        const item = this.catchcoinShopItems[index];
+        if (player.currencyAmount.catchcoins < item.catchcoins) {
+            return false;
+        } else {
+            player.currencyAmount.catchcoins -= item.catchcoins;
+            if (item.ball) {
+                player.ballsAmount[item.ball]++;
+                dom.renderBalls();
+            }
+            this.renderCatchCoinShop(); // force refresh of shop
+            dom.renderCurrency();
+            return true;
         }
-        $('#traderSellList').innerHTML = traderHTML;
     },
     traderPoke: ['Farfetchd', 'Jynx', 'Lickitung', 'Mr. Mime'],
     renderBuyTrader: function() {
@@ -120,23 +156,11 @@ let Town = {
         $('#traderBuyList').innerHTML = traderHTML;
     },
     renderTrader: function() {
-        this.renderSellTrader();
         this.renderBuyTrader();
     },
     calculatePokeValue: function(poke, demandMult = 1) {
         const shinyMult = (poke.shiny()) ? 1500 : 1;
         return Math.floor((poke.level() / 4) * shinyMult * demandMult);
-    },
-    sellPoke: function(index) {
-        const poke = player.storage[index];
-        const soldValue = this.calculatePokeValue(poke);
-        player.addPokeCoins(soldValue);
-        dom.gameConsoleLog('Sold ' + poke.pokeName() + ' for ¤' + soldValue + '!!', 'purple');
-        player.deletePoke(index, 'storage');
-        player.statistics.sold++;
-        this.renderSellTrader();
-        dom.renderPokeList();
-        return false;
     },
     buyPoke: function(index) {
         const pokeValue = 100000;

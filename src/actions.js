@@ -322,7 +322,7 @@ const UserActions = {
         if (!isEmpty(player.badges)) {
             let badgesHTML = '';
             for (let badge in player.badges) {
-                badgesHTML += '<li>' + badge + '</li>';
+                badgesHTML += '<li>' + '<img src="assets/images/badges/' + [badge] + '.png"></img>' + '</li>';
             }
             document.getElementById('badgeList').innerHTML = badgesHTML;
         }
@@ -331,7 +331,9 @@ const UserActions = {
         document.getElementById('inventoryContainer').style.display = 'block';
     },
     viewTown: function() {
-        town.renderShop();
+        town.renderPokeCoinShop();
+        town.renderBattleCoinShop();
+        town.renderCatchCoinShop();
         town.renderTrader();
         document.getElementById('townContainer').style.display = 'block';
     },
