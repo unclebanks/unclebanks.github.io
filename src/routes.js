@@ -475,7 +475,7 @@ const ROUTES = {
         }
         , seafoamIsland: {
             name: 'Seafoam Island',
-            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shelder', 'Krabby', 'Horsea', 'Staryu'],
+            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shellder', 'Krabby', 'Horsea', 'Staryu'],
             minLevel: 30,
             maxLevel: 40,
             _unlock: {
