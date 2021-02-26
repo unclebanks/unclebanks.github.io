@@ -151,7 +151,7 @@ ul {
     grid-column: 3;
     grid-row: 2;
     padding: 5px;
-    font-size: auto;
+    font-size: medium;
     background-color: rgb(255, 244, 89);
 }
 
