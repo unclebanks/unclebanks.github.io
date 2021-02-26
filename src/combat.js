@@ -198,18 +198,14 @@ const Combat = {
         dom.renderPokeList(false);
     },
     attemptCatch: function() {
-        if (this.catchEnabled == 'all' || (this.catchEnabled == 'new' && !player.hasPokemon(enemy.activePoke().pokeName(), 0)) || enemy.activePoke().shiny()) {
-            dom.gameConsoleLog('Trying to catch ' + enemy.activePoke().pokeName() + '...', 'purple');
+        if (this.catchEnabled == 'all' || (this.catchEnabled == 'new' && !player.hasPokemon(enemy.activePoke().pokeName(), 0)) || !combatLoop.trainer) {
             const selectedBall = (enemy.activePoke().shiny() ? player.bestAvailableBall() : player.selectedBall);
             if (player.consumeBall(selectedBall)) {
                 // add throw to statistics
+                dom.gameConsoleLog('Trying to catch ' + enemy.activePoke().pokeName() + '...', 'purple');
                 player.statistics.totalThrows++;
                 player.statistics[selectedBall+'Throws']++;
                 dom.renderBalls();
-                if (combatLoop.trainer) {
-                    dom.gameConsoleLog('But the '+combatLoop.trainer.name+' bats away your ball', 'purple');
-                    return false;
-                }
                 const gainCatchCoins = Math.floor(this.enemyActivePoke.level() * 1) + 1;
                 const catchBonus = (player.unlocked.razzBerry) ? 1.25 : 1;
                 const rngHappened = RNG(((enemy.activePoke().catchRate() * player.ballRNG(selectedBall)) / 3) * catchBonus);
@@ -219,7 +215,7 @@ const Combat = {
                     player.addCatchCoins(gainCatchCoins);
                     dom.gameConsoleLog('You caught ' + enemy.activePoke().pokeName() + 'and gained' + gainCatchCoins + '!!', 'purple');
                     if (!player.hasPokemon(enemy.activePoke().pokeName(), 0)) {
-                    player.addPoke(enemy.activePoke());
+                    player.addPoke(enemy.activePoke(), 0);
                     dom.renderPokeList();
                     }
                     player.addPokedex(enemy.activePoke().pokeName(), (enemy.activePoke().shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
@@ -239,8 +235,9 @@ const Combat = {
     findPokeballs: function(pokeLevel) {
         const ballsAmount = Math.floor(Math.random() * (pokeLevel/2)) + 1;
         const ballWeights = {
-            'ultraball': 1,
-            'greatball': 10,
+            'masterball': 1,
+            'ultraball': 10,
+            'greatball': 20,
             'pokeball': 100,
         };
         const rng = Math.floor(Math.random() * (2000 - (pokeLevel * 4)));

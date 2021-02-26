@@ -29,7 +29,8 @@ POKEDEXFLAGS['ownShiny'] = 8; // in current rosta
 const BALLRNG = {
     pokeball: 1,
     greatball: 1.5,
-    ultraball: 2
+    ultraball: 2,
+    masterball: 100
 };
 const makeEnemy = (starter) => {
     let active = starter;

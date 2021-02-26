@@ -9,7 +9,8 @@ let Player = {
     ballsAmount: {
         pokeball: 20,
         greatball: 0,
-        ultraball: 0
+        ultraball: 0,
+        masterball: 0
     },
     unlocked: {
         shinyDex: 0,
@@ -55,6 +56,8 @@ let Player = {
         'greatballSuccessfulThrows':0,
         'ultraballThrows':0,
         'ultraballSuccessfulThrows':0,
+        'masterballThrows':0,
+        'masterballSuccessfulThrows':0,
         'totalPokeCoins': 0,
         'totalCatchCoins': 0,
         'totalBattleCoins': 0,
@@ -232,7 +235,7 @@ let Player = {
         return false;
     },
     bestAvailableBall: function() {
-        const ballsFromBestToWorst = ['ultraball', 'greatball', 'pokeball'];
+        const ballsFromBestToWorst = ['masterball', 'ultraball', 'greatball', 'pokeball'];
         for (let i = 0; i < ballsFromBestToWorst.length; i++) {
             if (this.ballsAmount[ballsFromBestToWorst[i]] > 0) {
                 return ballsFromBestToWorst[i];
