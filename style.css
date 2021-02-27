@@ -68,7 +68,8 @@ ul {
 .pokeDownButton,
 .pokeFirstButton,
 .toStorageButton,
-.pokeEvolveButton {
+.pokeEvolveButton,
+.pokePrestigeButton {
     display: none;
 }
 
@@ -83,7 +84,8 @@ ul {
 .manageTeamEnabled .pokeDownButton,
 .manageTeamEnabled .pokeFirstButton,
 .manageTeamEnabled .toStorageButton,
-.manageTeamEnabled .canEvolve ~ .pokeEvolveButton {
+.manageTeamEnabled .canEvolve ~ .pokeEvolveButton,
+.manageTeamEnabled .canPrestige ~ .pokePrestigeButton {
     display: inline;
     padding-left: 3px;
     padding-right: 3px;

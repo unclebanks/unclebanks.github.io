@@ -1,9 +1,10 @@
-let Poke = function(pokeModel, initialLevel, initialExp, shiny, caughtAt) {
+let Poke = function(pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0) {
     this.poke = cloneJsonObject(pokeModel);
     this.expTable = EXP_TABLE[this.poke.stats[0]["growth rate"]];
     this.exp = initialLevel && this.expTable[initialLevel - 1] || initialExp;
     this.isShiny = (shiny === true);
     this.caughtAt = caughtAt || Date.now();
+    this.prestigeLevel = prestigeLevel;
     this.hp = this.setHpValue(this.poke.stats[0].hp) * 3;
 };
 Poke.prototype.currentLevel = function() {
@@ -12,7 +13,7 @@ Poke.prototype.currentLevel = function() {
         .length;
 };
 Poke.prototype.statValue = function(raw) {
-    return Math.floor((((raw + 50) * this.currentLevel()) / 150))
+    return Math.floor((((raw + 50) * this.currentLevel()) / 150) * Math.pow(1.25, this.prestigeLevel))
 };
 Poke.prototype.setHpValue = function(rawHp) {
     return Math.floor(((rawHp * this.currentLevel()) / 40))
@@ -58,6 +59,15 @@ Poke.prototype.canEvolve = function() {
         }
     }
     return false;
+};
+Poke.prototype.tryPrestige = function() {
+  if (this.canPrestige()) {
+    this.exp = this.expTable[4];
+    this.prestigeLevel++;
+  }
+};
+Poke.prototype.canPrestige = function() {
+  return this.level() >= 100;
 };
 
 Poke.prototype.setHp = function(hp) { this.hp = hp; };
@@ -112,6 +122,6 @@ Poke.prototype.takeDamage = function(enemyAttack) {
 };
 Poke.prototype.baseExp = function() { return Number(this.poke.exp[0]['base exp']); };
 Poke.prototype.heal = function() { return this.setHp(this.maxHp()); };
-Poke.prototype.save = function() { return [this.poke.pokemon[0].Pokemon, this.exp, this.isShiny, this.caughtAt]; };
+Poke.prototype.save = function() { return [this.poke.pokemon[0].Pokemon, this.exp, this.isShiny, this.caughtAt, this.prestigeLevel]; };
 
 const makeRandomPoke = (level) => new Poke(randomArrayElement(POKEDEX), level);
