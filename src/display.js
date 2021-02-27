@@ -162,12 +162,13 @@ const Display = {
             const listItemElement = listElement.querySelector('#listPoke' + index);
             if (listItemElement) {
                 const listItemNameElement = listItemElement.querySelector('.pokeListName');
-                let hasChanged = (listItemNameElement.innerHTML !== `${poke.pokeName()} (${poke.level()})`) || (listItemNameElement.getAttribute('status') !== this.pokeStatus(poke));
-                listItemNameElement.innerHTML = `${poke.pokeName()} (${poke.level()})`;
+                let hasChanged = (listItemNameElement.innerHTML !== `${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? ("p" + poke.prestigeLevel) : "")})`) || (listItemNameElement.getAttribute('status') !== this.pokeStatus(poke));
+                listItemNameElement.innerHTML = `${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? ("p" + poke.prestigeLevel) : "")})`;
                 listItemNameElement.setAttribute('status', this.pokeStatus(poke));
                 listItemNameElement.className = 'pokeListName ' + this.pokeStatus(poke)
                     + (poke === player.activePoke() ? ' activePoke' : '')
-                    + (poke.canEvolve() ? ' canEvolve' : '');
+                    + (poke.canEvolve() ? ' canEvolve' : '')
+                    + (poke.canPrestige() ? ' canPrestige' : '');
                 listItemElement.querySelector('img').setAttribute('src', poke.image()['front']);
                 if (!purge && hasChanged) {
                     flash(listItemElement);
@@ -177,16 +178,18 @@ const Display = {
                 const downButton = `<button onclick="userInteractions.pokemonToDown(${index})" class="pokeDownButton"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>`;
                 const firstButton = `<button onclick="userInteractions.pokemonToFirst(${index})" class="pokeFirstButton">#1</button>`;
                 const evolveButton = `<button onclick="userInteractions.evolvePokemon(${index})" class="pokeEvolveButton">Evolve</button>`;
+                const prestigeButton = `<button onclick="userInteractions.prestigePokemon(${index})" class="pokePrestigeButton">Prestige</button>`;
                 const storageButton = `<button onclick="userInteractions.moveToStorage(${index})" class="toStorageButton">PC</button>`;
                 const image = '<p><a href="#" onclick="userInteractions.changePokemon(' + index + ')"><img src="' + poke.image()['front'] + '"></a></p>';
 
                 listElementsToAdd += `<li id="listPoke${index}" class="listPoke">` +
                     image +
-                    `<a href="#" onclick="userInteractions.changePokemon(${index})" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level()})</a><br>` +
+                    `<a href="#" onclick="userInteractions.changePokemon(${index})" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? ("p" + poke.prestigeLevel) : "")})</a><br>` +
                     upButton +
                     downButton +
                     firstButton +
                     evolveButton +
+                    prestigeButton +
                     storageButton +
                     `</li>`
             }

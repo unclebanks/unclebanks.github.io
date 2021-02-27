@@ -167,6 +167,11 @@ const UserActions = {
         dom.renderPokeList();
         renderView(dom, enemy, player);
     },
+    prestigePokemon: function(pokemonIndex) {
+      player.getPokemon()[pokemonIndex].tryPrestige(player.getPokemon()[pokemonIndex].shiny());
+      dom.renderPokeList();
+      renderView(dom, enemy, player);
+    },
     moveToStorage: function(pokemonIndex) {
         // you must keep at least one active pokemon
         if (player.pokemons.length > 1) {
