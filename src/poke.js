@@ -63,6 +63,7 @@ Poke.prototype.canEvolve = function() {
 Poke.prototype.tryPrestige = function() {
   if (this.canPrestige()) {
     this.exp = this.expTable[4];
+    this.setHp(this.maxHp());
     this.prestigeLevel++;
   }
 };
