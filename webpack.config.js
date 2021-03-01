@@ -1,19 +1,34 @@
-import { mode } from 'webpack-nano/argv';
-import { MiniHtmlWebpackPlugin } from 'mini-html-webpack-plugin';
-import { WebpackPluginServe } from 'webpack-plugin-serve'
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+const { mode } = require('webpack-nano/argv');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { WebpackPluginServe } = require('webpack-plugin-serve');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
-export const config = {
-  watch: mode === 'development',
-  entry: ['./src', 'webpack-plugin-serve/client'],
-  mode,
-  plugins: [
-    new MiniHtmlWebpackPlugin(),
-    new WebpackPluginServe({
-      port: process.env.NNPG_PORT || 3000,
-      static: './dist',
-      liveReload: true,
-      waitForBuild: true,
-    })
-  ],
+const path = require('path');
+
+module.exports = {
+    watch: mode === 'development',
+    entry: ['./src', 'webpack-plugin-serve/client'],
+    mode,
+    module: {
+        rules: [
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+        ],
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+        }),
+        new CopyPlugin({
+            patterns: [
+                path.resolve(__dirname, 'src', 'resources'),
+            ],
+        }),
+        new WebpackPluginServe({
+            port: process.env.NNPG_PORT || 3000,
+            static: './dist',
+            liveReload: true,
+            waitForBuild: true,
+        }),
+    ],
 };

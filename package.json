@@ -4,7 +4,8 @@
   "description": "This is a game that is based off of PokeIdle Extended (which in turn is based off of PokeIdle).",
   "main": "index.js",
   "scripts": {
-    "build": "wp --mode production"
+    "build": "wp --mode production",
+    "start": "wp --mode development"
   },
   "repository": {
     "type": "git",

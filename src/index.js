@@ -6,6 +6,9 @@ import Combat from './modules/combat';
 import UserActions from './modules/actions';
 import Story from './modules/story';
 
+// include styles in webpack bundle
+import './index.css';
+
 // load everything we need
 const lastSave = Date.now();
 const player = Player(lastSave);
@@ -25,6 +28,9 @@ enemy.attachCL(combatLoop);
     story,
     town,
 ].forEach((obj) => obj.attachDOM(dom));
+
+// expose as global
+window.userInteractions = userInteractions;
 
 // load old save data
 if (localStorage.getItem('totalPokes') !== null) {
