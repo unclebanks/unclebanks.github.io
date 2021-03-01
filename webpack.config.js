@@ -31,6 +31,7 @@ module.exports = {
             static: outputPath,
             liveReload: true,
             waitForBuild: true,
+            open: true,
         }),
     ],
 };
