@@ -5,7 +5,7 @@ import { renderView } from './display';
 import { POKEDEXFLAGS } from './data';
 
 export default (player, enemy, combatLoop) => {
-    const Poke = mkPoke(player);
+    const { Poke } = mkPoke(player);
     let dom;
 
     const Story = {

@@ -4,7 +4,7 @@ import { POKEDEXFLAGS } from './data';
 
 export default (player) => {
     let dom;
-    const Poke = mkPoke(player);
+    const { Poke } = mkPoke(player);
 
     const Town = {
         pokecoinShopItems: [

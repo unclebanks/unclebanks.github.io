@@ -19,44 +19,44 @@ export default (player, enemy) => {
         enemyTimerId: null,
         catchEnabled: false,
         init: function () {
-            if (!this.paused) {
-                this.playerActivePoke = player.activePoke();
-                this.enemyActivePoke = enemy.activePoke();
-                this.playerTimer();
-                this.enemyTimer();
+            if (!Combat.paused) {
+                Combat.playerActivePoke = player.activePoke();
+                Combat.enemyActivePoke = enemy.activePoke();
+                Combat.playerTimer();
+                Combat.enemyTimer();
             }
         },
         pause: function () {
-            this.paused = true;
-            this.stop();
+            Combat.paused = true;
+            Combat.stop();
             enemy.clear();
-            this.enemyActivePoke = null;
+            Combat.enemyActivePoke = null;
         },
         unpause: function () {
-            this.paused = false;
-            this.stop();
-            this.newEnemy();
-            this.init();
+            Combat.paused = false;
+            Combat.stop();
+            Combat.newEnemy();
+            Combat.init();
         },
         stop: function () {
-            window.clearTimeout(this.playerTimerId);
-            window.clearTimeout(this.enemyTimerId);
+            window.clearTimeout(Combat.playerTimerId);
+            window.clearTimeout(Combat.enemyTimerId);
         },
         refresh: function () {
-            this.stop();
-            this.init();
+            Combat.stop();
+            Combat.init();
         },
         playerTimer: function () {
-            const nextAttack = this.playerActivePoke.attackSpeed();
-            this.playerTimerId = window.setTimeout(
-                () => this.dealDamage(this.playerActivePoke, this.enemyActivePoke, 'player'),
+            const nextAttack = Combat.playerActivePoke.attackSpeed();
+            Combat.playerTimerId = window.setTimeout(
+                () => Combat.dealDamage(Combat.playerActivePoke, Combat.enemyActivePoke, 'player'),
                 nextAttack,
             );
         },
         enemyTimer: function () {
-            const nextAttack = this.enemyActivePoke.attackSpeed();
-            this.enemyTimerId = window.setTimeout(
-                () => this.dealDamage(this.enemyActivePoke, this.playerActivePoke, 'enemy'),
+            const nextAttack = Combat.enemyActivePoke.attackSpeed();
+            Combat.enemyTimerId = window.setTimeout(
+                () => Combat.dealDamage(Combat.enemyActivePoke, Combat.playerActivePoke, 'enemy'),
                 nextAttack,
             );
         },
@@ -78,7 +78,7 @@ export default (player, enemy) => {
                 } else {
                     const critRNG = RNG(5);
                     const critMultiplier = (critRNG) ? 1 + (attacker.level() / 100) : 1;
-                    const damageMultiplier = this.calculateDamageMultiplier(attacker.types(), defender.types()) * critMultiplier;
+                    const damageMultiplier = Combat.calculateDamageMultiplier(attacker.types(), defender.types()) * critMultiplier;
                     const damage = defender.takeDamage(attacker.avgAttack() * damageMultiplier);
                     if (critRNG) {
                         dom.gameConsoleLog('Critical Hit!!', consoleColor);
@@ -96,22 +96,22 @@ export default (player, enemy) => {
                 }
                 if (who === 'player') {
                     dom.attackAnimation('playerImg', 'right');
-                    this.playerTimer();
+                    Combat.playerTimer();
                 } else {
                     dom.attackAnimation('enemyImg', 'left');
-                    this.enemyTimer();
+                    Combat.enemyTimer();
                 }
             }
             if (!attacker.alive() || !defender.alive()) {
             // one is dead
-                window.clearTimeout(this.playerTimerId);
-                window.clearTimeout(this.enemyTimerId);
+                window.clearTimeout(Combat.playerTimerId);
+                window.clearTimeout(Combat.enemyTimerId);
 
                 if ((who === 'enemy') && !attacker.alive()
                 || (who === 'player') && !defender.alive()) {
-                    this.enemyFaint();
+                    Combat.enemyFaint();
                 } else {
-                    this.playerFaint();
+                    Combat.playerFaint();
                 }
                 dom.renderPokeOnContainer('enemy', enemy.activePoke());
             }
@@ -122,17 +122,17 @@ export default (player, enemy) => {
             } else {
                 player.statistics.beaten++;
             }
-            this.attemptCatch();
-            this.findPokeballs(enemy.activePoke().level());
-            const foundPokeCoins = Math.floor(this.enemyActivePoke.level() * 4) + 5;
+            Combat.attemptCatch();
+            Combat.findPokeballs(enemy.activePoke().level());
+            const foundPokeCoins = Math.floor(Combat.enemyActivePoke.level() * 4) + 5;
             player.addPokeCoins(foundPokeCoins);
 
             const beforeExp = player.getPokemon().map((poke) => poke.level());
-            const expToGive = (this.enemyActivePoke.baseExp() / 16) + (this.enemyActivePoke.level() * 3);
+            const expToGive = (Combat.enemyActivePoke.baseExp() / 16) + (Combat.enemyActivePoke.level() * 3);
             player.statistics.totalExp += expToGive;
-            this.playerActivePoke.giveExp(expToGive);
-            dom.gameConsoleLog(`${this.playerActivePoke.pokeName()} won ${Math.floor(expToGive)}xp`, 'rgb(153, 166, 11)');
-            player.getPokemon().forEach((poke) => poke.giveExp((this.enemyActivePoke.baseExp() / 100) + (this.enemyActivePoke.level() / 10)));
+            Combat.playerActivePoke.giveExp(expToGive);
+            dom.gameConsoleLog(`${Combat.playerActivePoke.pokeName()} won ${Math.floor(expToGive)}xp`, 'rgb(153, 166, 11)');
+            player.getPokemon().forEach((poke) => poke.giveExp((Combat.enemyActivePoke.baseExp() / 100) + (Combat.enemyActivePoke.level() / 10)));
             const afterExp = player.getPokemon().map((poke) => poke.level());
 
             // check if a pokemon leveled up
@@ -144,28 +144,28 @@ export default (player, enemy) => {
             }
 
             // was it a trainer poke
-            if (this.trainer) {
+            if (Combat.trainer) {
             // remove the pokemon
-                this.trainerPoke.splice(this.trainerCurrentID, 1);
-                if (this.trainerPoke.length < 1) {
-                    dom.gameConsoleLog(`You have defeated ${this.trainer.name}`, 'blue');
-                    if (this.trainer.badge) {
-                        if (!player.badges[this.trainer.badge]) {
-                            player.badges[this.trainer.badge] = true;
-                            dom.gameConsoleLog(`You have earned the <b>${this.trainer.badge}</b>.`, 'purple');
+                Combat.trainerPoke.splice(Combat.trainerCurrentID, 1);
+                if (Combat.trainerPoke.length < 1) {
+                    dom.gameConsoleLog(`You have defeated ${Combat.trainer.name}`, 'blue');
+                    if (Combat.trainer.badge) {
+                        if (!player.badges[Combat.trainer.badge]) {
+                            player.badges[Combat.trainer.badge] = true;
+                            dom.gameConsoleLog(`You have earned the <b>${Combat.trainer.badge}</b>.`, 'purple');
                             dom.renderRouteList();
                         }
                     }
-                    this.trainer = null;
-                    this.pause();
+                    Combat.trainer = null;
+                    Combat.pause();
                     return false;
                 }
             }
 
             player.savePokes();
-            this.newEnemy();
-            this.enemyTimer();
-            this.playerTimer();
+            Combat.newEnemy();
+            Combat.enemyTimer();
+            Combat.playerTimer();
             dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back');
         },
         newEnemy: function () {
@@ -174,7 +174,7 @@ export default (player, enemy) => {
             } else {
                 enemy.generateNew(player.settings.currentRegionId, player.settings.currentRouteId);
             }
-            this.enemyActivePoke = enemy.activePoke();
+            Combat.enemyActivePoke = enemy.activePoke();
             player.addPokedex(enemy.activePoke().pokeName(), (enemy.activePoke().shiny() ? POKEDEXFLAGS.seenShiny : POKEDEXFLAGS.seenNormal));
             if (enemy.activePoke().shiny()) {
                 player.statistics.shinySeen++;
@@ -183,19 +183,19 @@ export default (player, enemy) => {
             }
         },
         playerFaint: function () {
-            dom.gameConsoleLog(`${this.playerActivePoke.pokeName()} Fainted! `);
+            dom.gameConsoleLog(`${Combat.playerActivePoke.pokeName()} Fainted! `);
             const alivePokeIndexes = player.alivePokeIndexes();
             if (alivePokeIndexes.length > 0) {
                 player.setActive(player.getPokemon().indexOf(alivePokeIndexes[0]));
-                this.playerActivePoke = player.activePoke();
-                dom.gameConsoleLog(`Go ${this.playerActivePoke.pokeName()}!`);
-                this.refresh();
+                Combat.playerActivePoke = player.activePoke();
+                dom.gameConsoleLog(`Go ${Combat.playerActivePoke.pokeName()}!`);
+                Combat.refresh();
             } else {
                 dom.gameConsoleLog('You have no more usable pokemon. You blacked out!', 'red');
-                if (this.trainer) {
+                if (Combat.trainer) {
                     dom.gameConsoleLog('You have been defeated', 'red');
-                    this.trainer = null;
-                    this.pause();
+                    Combat.trainer = null;
+                    Combat.pause();
                 }
                 flash($('#gameContainer'));
                 dom.gameConsoleLog('You reawaken at the nearest pokecenter.', 'blue');
@@ -206,7 +206,7 @@ export default (player, enemy) => {
             dom.renderPokeList(false);
         },
         attemptCatch: function () {
-            if (this.catchEnabled == 'all' && !Combat.trainer || (this.catchEnabled == 'new' && !player.hasPokemon(enemy.activePoke().pokeName(), 0)) && !Combat.trainer) {
+            if (Combat.catchEnabled == 'all' && !Combat.trainer || (Combat.catchEnabled == 'new' && !player.hasPokemon(enemy.activePoke().pokeName(), 0)) && !Combat.trainer) {
                 const selectedBall = (enemy.activePoke().shiny() ? player.bestAvailableBall() : player.selectedBall);
                 if (player.consumeBall(selectedBall)) {
                 // add throw to statistics
@@ -214,7 +214,7 @@ export default (player, enemy) => {
                     player.statistics.totalThrows++;
                     player.statistics[`${selectedBall}Throws`]++;
                     dom.renderBalls();
-                    const gainCatchCoins = Math.floor(this.enemyActivePoke.level() * 1) + 1;
+                    const gainCatchCoins = Math.floor(Combat.enemyActivePoke.level() * 1) + 1;
                     const catchBonus = (player.unlocked.razzBerry) ? 1.25 : 1;
                     const rngHappened = RNG(((enemy.activePoke().catchRate() * player.ballRNG(selectedBall)) / 3) * catchBonus);
                     if (rngHappened) {
@@ -257,14 +257,14 @@ export default (player, enemy) => {
             }
         },
         changePlayerPoke: function (newPoke) {
-            this.playerActivePoke = newPoke;
-            this.refresh();
+            Combat.playerActivePoke = newPoke;
+            Combat.refresh();
         },
         changeEnemyPoke: function (newPoke) {
-            this.enemyActivePoke = newPoke;
-            this.refresh();
+            Combat.enemyActivePoke = newPoke;
+            Combat.refresh();
         },
-        changeCatch: function (shouldCatch) { this.catchEnabled = shouldCatch; },
+        changeCatch: function (shouldCatch) { Combat.catchEnabled = shouldCatch; },
         attachDOM: (_dom) => {
             dom = _dom;
         },

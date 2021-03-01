@@ -1,11 +1,12 @@
 import { POKEDEXFLAGS, BALLRNG } from './data';
 import POKEDEX from './db';
-import Poke from './poke';
+import mkPoke from './poke';
 import ROUTES from './routes';
 import { mergeArray, pokeByName } from './utilities';
 
 export default (lastSave) => {
     let dom;
+    let Poke;
 
     const Player = {
         pokemons: [],
@@ -450,6 +451,9 @@ export default (lastSave) => {
             dom = _dom;
         },
     };
+
+    const p = mkPoke(Player);
+    Poke = p.Poke;
 
     return Player;
 };

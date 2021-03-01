@@ -29,8 +29,11 @@ enemy.attachCL(combatLoop);
     town,
 ].forEach((obj) => obj.attachDOM(dom));
 
-// expose as global
-window.userInteractions = userInteractions;
+// expose globals for use on inline event handlers in html
+Object.assign(window, {
+    userInteractions,
+    story,
+});
 
 // load old save data
 if (localStorage.getItem('totalPokes') !== null) {
