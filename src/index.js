@@ -5,6 +5,7 @@ import Display, { renderView } from './modules/display';
 import Combat from './modules/combat';
 import UserActions from './modules/actions';
 import Story from './modules/story';
+import mkPoke from './modules/poke';
 
 // include styles in webpack bundle
 import './index.css';
@@ -12,10 +13,11 @@ import './index.css';
 // load everything we need
 const lastSave = Date.now();
 const player = Player(lastSave);
-const enemy = makeEnemy(null, player);
+const { Poke, makeRandomPoke } = mkPoke(player);
+const enemy = makeEnemy(null, player, Poke);
 const combatLoop = Combat(player, enemy);
-const town = Town(player);
-const story = Story(player, enemy, combatLoop);
+const town = Town(player, Poke);
+const story = Story(player, enemy, combatLoop, Poke);
 const userInteractions = UserActions(player, combatLoop, enemy, town, story);
 const dom = Display(player, combatLoop, userInteractions);
 

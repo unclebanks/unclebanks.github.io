@@ -1,11 +1,9 @@
 import { $, pokeById } from './utilities';
 import POKEDEX from './db';
-import mkPoke from './poke';
 import { renderView } from './display';
 import { POKEDEXFLAGS } from './data';
 
-export default (player, enemy, combatLoop) => {
-    const { Poke } = mkPoke(player);
+export default (player, enemy, combatLoop, Poke) => {
     let dom;
 
     const Story = {

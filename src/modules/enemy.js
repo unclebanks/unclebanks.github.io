@@ -1,12 +1,9 @@
-import mkPoke from './poke';
 import { mergeArray, pokeByName, randomArrayElement } from './utilities';
 import ROUTES from './routes';
 
-export default (starter, player) => {
+export default (starter, player, Poke) => {
     let active = starter;
     let combatLoop;
-
-    const { Poke } = mkPoke(player);
 
     const generator = (poke, level) => new Poke(
         poke,

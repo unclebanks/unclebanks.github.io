@@ -1,10 +1,8 @@
 import { $, pokeByName } from './utilities';
-import mkPoke from './poke';
 import { POKEDEXFLAGS } from './data';
 
-export default (player) => {
+export default (player, Poke) => {
     let dom;
-    const { Poke } = mkPoke(player);
 
     const Town = {
         pokecoinShopItems: [
