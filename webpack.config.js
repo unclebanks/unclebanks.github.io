@@ -1,14 +1,16 @@
-const { mode } = require('webpack-nano/argv');
+const { mode, folder } = require('webpack-nano/argv');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackPluginServe } = require('webpack-plugin-serve');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-
 const path = require('path');
+
+const outputPath = path.resolve(__dirname, folder || 'dist');
 
 module.exports = {
     watch: mode === 'development',
     entry: ['./src', 'webpack-plugin-serve/client'],
+    output: { clean: true, path: outputPath },
     mode,
     module: {
         rules: [
@@ -26,7 +28,7 @@ module.exports = {
         }),
         new WebpackPluginServe({
             port: process.env.NNPG_PORT || 3000,
-            static: './dist',
+            static: outputPath,
             liveReload: true,
             waitForBuild: true,
         }),

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "wp --mode production",
+    "build:gh-pages": "npm run build -- --folder docs",
     "start": "wp --mode development"
   },
   "repository": {
