@@ -235,7 +235,6 @@ const Combat = {
     findPokeballs: function(pokeLevel) {
         const ballsAmount = Math.floor(Math.random() * (pokeLevel/2)) + 1;
         const ballWeights = {
-            'masterball': 0,
             'ultraball': 10,
             'greatball': 20,
             'pokeball': 100,
