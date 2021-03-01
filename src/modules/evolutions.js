@@ -1,3 +1,5 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable quotes */
 const EVOLUTIONS = {
     "Bulbasaur": {
         "level": "16",
@@ -451,4 +453,6 @@ const EVOLUTIONS = {
         "level": "100",
         "to": "M-Mewtwo X"
     },
-}
+};
+
+export default EVOLUTIONS;
