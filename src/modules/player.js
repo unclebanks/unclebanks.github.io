@@ -206,6 +206,7 @@ export default (lastSave) => {
         healAllPokemons: function () {
             if (this.canHeal() === true) {
                 this.pokemons.forEach((poke) => poke.heal());
+                this.storage.forEach((poke) => poke.heal());
                 this.lastHeal = Date.now();
                 return 'healed';
             }
