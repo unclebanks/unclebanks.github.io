@@ -147,6 +147,8 @@ export default (player, enemy) => {
             if (Combat.trainer) {
             // remove the pokemon
                 Combat.trainerPoke.splice(Combat.trainerCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.trainerPoke.length) + 5;
+                player.addBattleCoins(foundBattleCoins);
                 if (Combat.trainerPoke.length < 1) {
                     dom.gameConsoleLog(`You have defeated ${Combat.trainer.name}`, 'blue');
                     if (Combat.trainer.badge) {
