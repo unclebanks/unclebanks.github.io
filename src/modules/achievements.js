@@ -62,7 +62,6 @@ const ACHIEVEMENTS = {
                 value: 240,
             },
         ],
-        //test
         caught: [
             {
                 name: 'Professor Oak',
