@@ -630,6 +630,13 @@ const ROUTES = {
             respawn: 'cherrygroveCity'
         }
         , route46: {
+            name: 'Route 46'
+            , pokes: ['Rattata', 'Spearow', 'Jigglypuff', 'Geodude', 'Phanpy']
+            , minLevel: 2
+            , maxLevel: 5,
+            respawn: 'NewBarkTown',
+        }
+        , route31: {
             name: 'Route 31'
             , pokes: ['Hoothoot', 'Rattata', 'Ledyba', 'Spinarak', 'Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Zubat', 'Poliwag', 'Hoppip', 'Gastly', 'Bellsprout']
             , minLevel: 3
@@ -842,7 +849,7 @@ const ROUTES = {
         }
         , route37: {
             name: 'Route 37'
-            , pokes: ['Stantler', 'Spinarak', 'Ledyba', 'Hoothoot', 'Ledian', 'Ariados']
+            , pokes: ['Stantler', 'Spinarak', 'Ledyba', 'Hoothoot', 'Ledian', 'Ariados', 'Pidgey', 'Pidgeotto', 'Vulpix', 'Growlithe']
             , minLevel: 13
             , maxLevel: 16,
             respawn: 'goldenrodCity',
@@ -852,10 +859,10 @@ const ROUTES = {
                 }
             }
         }
-        , special27: {
+        , burnedTower: {
             name: 'Burned Tower'
             , pokes: ['Rattata', 'Raticate', 'Zubat', 'Koffing', 'Weezing', 'Magmar']
-            , minLevel: 12
+            , minLevel: 13
             , maxLevel: 16,
             respawn: 'goldenrodCity',
             _unlock: {
@@ -864,7 +871,7 @@ const ROUTES = {
                 }
             }
         }
-        , special28: {
+        , tinTower: {
             name: 'Tin Tower'
             , pokes: ['Rattata', 'Gastly']
             , minLevel: 20
@@ -895,9 +902,9 @@ const ROUTES = {
                 }
             }
         }
-        , route34: {
+        , route38: {
             name: 'Route 38'
-            , pokes: ['Snubbull', 'Miltank', 'Noctowl']
+            , pokes: ['Snubbull', 'Miltank', 'Noctowl', 'Pidgeotto', 'Rattata', 'Meowth', 'Raticate', 'Magnemite', 'Farfetchd', 'Tauros']
             , minLevel: 13
             , maxLevel: 16,
             respawn: 'ecruteakCity',
@@ -907,9 +914,9 @@ const ROUTES = {
                 }
             }
         }
-        , route35: {
+        , route39: {
             name: 'Route 39'
-            , pokes: ['Miltank', 'Noctowl']
+            , pokes: ['Miltank', 'Noctowl', 'Pidgeotto', 'Rattata', 'Raticate', 'Meowth', 'Magnemite', 'Farfetchd', 'Tauros']
             , minLevel: 15
             , maxLevel: 16,
             respawn: 'ecruteakCity',
@@ -937,7 +944,7 @@ const ROUTES = {
                 }
             }
         }
-        , route36: {
+        , route40: {
             name: 'Route 40'
             , pokes: ['Tentacool', 'Tentacruel']
             , minLevel: 15
@@ -966,9 +973,9 @@ const ROUTES = {
                 }
             }
         }
-        , route37: {
+        , route41: {
             name: 'Route 41'
-            , pokes: ['Mantine']
+            , pokes: ['Mantine', 'Tentacool', 'Tentacruel']
             , minLevel: 20
             , maxLevel: 24,
             respawn: 'cianwoodCity',
@@ -978,7 +985,7 @@ const ROUTES = {
                 }
             }
         }
-        , special29: {
+        , whirlIsland: {
             name: 'Whirl Island'
             , pokes: ['Krabby', 'Zubat', 'Seel', 'Golbat']
             , minLevel: 22
@@ -990,36 +997,36 @@ const ROUTES = {
                 }
             }
         }
-        , route38: {
+        , route42: {
             name: 'Route 42'
-            , pokes: ['Mareep', 'Flaaffy', 'Marill']
+            , pokes: ['Mareep', 'Flaaffy', 'Marill', 'Rattata', 'Raticate', 'Spearow', 'Fearow', 'Ekans', 'Arbok', 'Zubat', 'Golbat', 'Mankey']
             , minLevel: 13
             , maxLevel: 17,
-            respawn: 'cianwoodCity',
+            respawn: 'ecruteakCity',
             _unlock: {
                 badges: {
                     'Storm Badge': true
                 }
             }
         }
-        , special31: {
-            name: 'Mt.Mortar'
-            , pokes: ['Zubat', 'Golbat', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Raticate']
+        , mtMortar: {
+            name: 'Mt. Mortar'
+            , pokes: ['Zubat', 'Golbat', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Raticate', 'Marill']
             , minLevel: 15
             , maxLevel: 32,
-            respawn: 'cianwoodCity',
+            respawn: 'ecruteakCity',
             _unlock: {
                 badges: {
                     'Storm Badge': true
                 }
             }
         }
-        , special32: {
+        , rocketHideout: {
             name: 'Rocket Hideout'
-            , pokes: ['Electrode']
+            , pokes: ['Electrode', 'Voltorb', 'Geodude', 'Koffing']
             , minLevel: 23
             , maxLevel: 23,
-            respawn: 'cianwoodCity',
+            respawn: 'ecruteakCity',
             _unlock: {
                 badges: {
                     'Storm Badge': true
@@ -1044,9 +1051,9 @@ const ROUTES = {
                 }
             }
         }
-        , route39: {
+        , route43: {
             name: 'Route 43'
-            , pokes: ['Girafarig', 'Flaaffy', 'Mareep', 'Noctowl', 'Sentret', 'Furret']
+            , pokes: ['Girafarig', 'Flaaffy', 'Mareep', 'Noctowl', 'Sentret', 'Furret', 'Pidgeotto', 'Raticate', 'Venonat', 'Venomoth']
             , minLevel: 15
             , maxLevel: 17,
             respawn: 'mahoganyTown',
@@ -1056,9 +1063,9 @@ const ROUTES = {
                 }
             }
         }
-        , special33: {
+        , lakeofRage: {
             name: 'Lake of Rage'
-            , pokes: ['Gyarados']
+            , pokes: ['Gyarados', 'Magikarp']
             , minLevel: 30
             , maxLevel: 30,
             respawn: 'mahoganyTown',
@@ -1068,7 +1075,7 @@ const ROUTES = {
                 }
             }
         }
-        , route40: {
+        , route44: {
             name: 'Route 44'
             , pokes: ['Lickitung', 'Tangela', 'Bellsprout', 'Weepinbell', 'Poliwag', 'Poliwhirl']
             , minLevel: 22
@@ -1080,9 +1087,9 @@ const ROUTES = {
                 }
             }
         }
-        , special34: {
+        , icePath: {
             name: 'Ice Path'
-            , pokes: ['Swinub', 'Delibird', 'Sneasel']
+            , pokes: ['Swinub', 'Delibird', 'Sneasel', 'Zubat', 'Golbat', 'Jynx']
             , minLevel: 21
             , maxLevel: 24,
             respawn: 'mahoganyTown',
@@ -1092,7 +1099,7 @@ const ROUTES = {
                 }
             }
         }
-        , special35: {
+        , dragonsDen: {
             name: 'Dragons Den'
             , pokes: ['Dratini']
             , minLevel: 10
@@ -1104,7 +1111,7 @@ const ROUTES = {
                 }
             }
         }
-        , route41: {
+        , route45: {
             name: 'Route 45'
             , pokes: ['Teddiursa', 'Gligar', 'Phanpy', 'Skarmory', 'Donphan']
             , minLevel: 20
@@ -1135,22 +1142,70 @@ const ROUTES = {
                 }
             }
         }
-        , route42: {
-            name: 'Route 48'
-            , pokes: ['Ursaring', 'Sneasel', 'Donphan']
+        , route47: {
+            name: 'Route 47'
+            , pokes: ['Raticate', 'Spearow', 'Fearow', 'Gloom', 'Ditto', 'Farfetchd', 'Noctowl', 'Miltank']
             , minLevel: 40
             , maxLevel: 43,
-            respawn: 'blackthornCity',
+            respawn: 'cianwoodCity',
             _unlock: {
                 badges: {
                     'Rising Badge': true
                 }
             }
         }
-        , special36: {
+        , route48: {
+            name: 'Route 48'
+            , pokes: ['Fearow', 'Vulpix', 'Gloom', 'Diglett', 'Growlithe', 'Farfetchd', 'Tauros', 'Hoppip', 'Girafarig']
+            , minLevel: 40
+            , maxLevel: 43,
+            respawn: 'cianwoodCity',
+            _unlock: {
+                badges: {
+                    'Rising Badge': true
+                }
+            }
+        }
+        , route26: {
+            name: 'Route 26'
+            , pokes: ['Raticate', 'Arbok', 'Sandslash', 'Ponyta', 'Doduo', 'Dodrio', 'Noctowl', 'Quagsire']
+            , minLevel: 28
+            , maxLevel: 32,
+            respawn: 'NewBarkTown',
+            _unlock: {
+                badges: {
+                    'Rising Badge': true
+                }
+            }
+        }
+        , route27: {
+            name: 'Route 27'
+            , pokes: ['Raticate', 'Arbok', 'Sandslash', 'Ponyta', 'Doduo', 'Dodrio', 'Noctowl', 'Quagsire']
+            , minLevel: 28
+            , maxLevel: 32,
+            respawn: 'NewBarkTown',
+            _unlock: {
+                badges: {
+                    'Rising Badge': true
+                }
+            }
+        }
+        , route28: {
+            name: 'Route 28'
+            , pokes: ['Ponyta', 'Tangela', 'Ursaring', 'Donphan', 'Rapidash', 'Arbok', 'Doduo', 'Sneasel', 'Poliwhirl', 'Golbat']
+            , minLevel: 39
+            , maxLevel: 42,
+            respawn: 'NewBarkTown',
+            _unlock: {
+                badges: {
+                    'Rising Badge': true
+                }
+            }
+        }
+        , mtSilver: {
             name: 'Mt.Silver'
-            , pokes: ['Ursaring', 'Donphan', 'Misdreavus', 'Larvitar', 'Pupitar']
-            , minLevel: 44
+            , pokes: ['Ursaring', 'Donphan', 'Misdreavus', 'Larvitar', 'Pupitar', 'Arbok', 'Golbat', 'Poliwhirl', 'Dodrio', 'Rapidash', 'Sneasel', 'Onix']
+            , minLevel: 38
             , maxLevel: 48,
             respawn: 'blackthornCity',
             _unlock: {
@@ -1159,7 +1214,7 @@ const ROUTES = {
                 }
             }
         }
-        , special41: {
+        , headbutt: {
             name: 'Headbutt'
             , pokes: ['Aipom', 'Pineco', 'Heracross', 'Spinarak', 'Ledyba', 'Hoothoot', 'Noctowl']
             , minLevel: 10
