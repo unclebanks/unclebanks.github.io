@@ -42,6 +42,7 @@ module.exports = {
 
         // Live reloading of the page on code change
         new WebpackPluginServe({
+            host: 'localhost',
             port: process.env.NNPG_PORT || 3000,
             static: outputPath,
             liveReload: true,
