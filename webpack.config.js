@@ -21,8 +21,15 @@ module.exports = {
     // Custom handling for certain file types
     module: {
         rules: [
-            // Loaders to handle css files
-            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+            // Loaders to handle scss files
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader',
+                ],
+            },
         ],
     },
 
@@ -38,6 +45,10 @@ module.exports = {
             patterns: [
                 path.resolve(__dirname, 'src', 'resources'),
             ],
+        }),
+
+        new MiniCssExtractPlugin({
+            filename: 'css/index.css',
         }),
 
         // Live reloading of the page on code change

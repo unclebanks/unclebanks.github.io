@@ -8,7 +8,7 @@ import Story from './modules/story';
 import mkPoke from './modules/poke';
 
 // include styles in webpack bundle
-import './index.css';
+import './index.scss';
 
 // load everything we need
 const lastSave = Date.now();
