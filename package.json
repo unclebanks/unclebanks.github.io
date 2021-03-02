@@ -1,0 +1,37 @@
+{
+  "name": "no-name-pokemon-game",
+  "version": "1.0.0",
+  "description": "This is a game that is based off of PokeIdle Extended (which in turn is based off of PokeIdle).",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp --mode production",
+    "build:gh-pages": "npm run build -- --folder docs",
+    "start": "wp --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unclebanks/unclebanks.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unclebanks/unclebanks.github.io/issues"
+  },
+  "homepage": "https://github.com/unclebanks/unclebanks.github.io#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.1.1",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.6.0",
+    "html-webpack-plugin": "^5.2.0",
+    "mini-css-extract-plugin": "^1.3.9",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.24.2",
+    "webpack-merge": "^5.7.3",
+    "webpack-nano": "^1.1.1",
+    "webpack-plugin-serve": "^1.3.0"
+  }
+}

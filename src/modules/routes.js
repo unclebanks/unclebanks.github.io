@@ -1,3 +1,5 @@
+/* eslint-disable comma-style */
+/* eslint-disable comma-dangle */
 const ROUTES = {
     Kanto: {
         _global: {
@@ -12,10 +14,10 @@ const ROUTES = {
                 name: 'Prof. Oak',
                 badge: null,
                 poke: [
-                        ['Bulbasaur', 15],
-                        ['Charmander', 15],
-                        ['Squirtle', 15]
-                    ]
+                    ['Bulbasaur', 15],
+                    ['Charmander', 15],
+                    ['Squirtle', 15]
+                ]
             }
         }
         , route1: {
@@ -297,7 +299,7 @@ const ROUTES = {
                 }
             }
         },
-         celadonCity: {
+        celadonCity: {
             name: 'Celadon City',
             town: true,
             trainer: {
@@ -587,7 +589,8 @@ const ROUTES = {
             fishing: 1
         }
     }
-    /*Johto: {
+    /*
+    Johto: {
         _unlock: {
             dex: {
                 caughtCount: 140
@@ -781,7 +784,7 @@ const ROUTES = {
                 }
             }
         },
-        
+
         , special24: {
             name: 'Daycare House'
             , pokes: ['Pichu', 'Cleffa', 'Igglybuff', 'Tyrogue', 'Smoochum', 'Elekid', 'Magby', 'Togepi'] // TODO: make these hatch from eggs
@@ -1183,5 +1186,8 @@ const ROUTES = {
             , maxLevel: 40
             , fishing: 1
         }
-    }*/
+    }
+    */
 };
+
+export default ROUTES;

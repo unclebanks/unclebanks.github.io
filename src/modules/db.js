@@ -1,3 +1,5 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable quotes */
 const POKEDEX = [
     {
         "pokemon": [
@@ -9101,5 +9103,7 @@ const POKEDEX = [
                 "base exp": "270"
             }
         ]
-    }     
+    }
 ];
+
+export default POKEDEX;
