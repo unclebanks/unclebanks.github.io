@@ -13,7 +13,7 @@ export default (starter, player, Poke) => {
     );
 
     const trainerPoke = (pokemonList) => {
-        const selected = Math.floor(Math.random() * pokemonList.length);
+        const selected = 0;
         combatLoop.trainerCurrentID = selected;
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);

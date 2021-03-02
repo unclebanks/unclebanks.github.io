@@ -31,6 +31,7 @@ export default (lastSave) => {
             waterStone: 0,
             leafStone: 0,
             moonStone: 0,
+            timeMachine: 0,
         },
         currencyAmount: {
             pokecoins: 0,
