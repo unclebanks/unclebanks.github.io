@@ -6,9 +6,13 @@ import Combat from './modules/combat';
 import UserActions from './modules/actions';
 import Story from './modules/story';
 import mkPoke from './modules/poke';
-
+import setupModals from './modules/modalEvents';
 // include styles in webpack bundle
 import './index.scss';
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupModals();
+});
 
 // load everything we need
 const lastSave = Date.now();

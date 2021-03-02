@@ -3,6 +3,7 @@ import ROUTES from './routes';
 import { $, camelCaseToString, isEmpty } from './utilities';
 import ACHIEVEMENTS from './achievements';
 import { POKEDEXFLAGS } from './data';
+import { openModal, closeModal } from './modalEvents';
 
 export default (player, combatLoop, enemy, town, story) => {
     let dom;
@@ -210,6 +211,7 @@ export default (player, combatLoop, enemy, town, story) => {
         forceSave: function () {
             player.savePokes();
             $('#forceSave').style.display = 'inline';
+            setTimeout(() => { $('#forceSave').style.display = 'none'; }, 5000);
         },
         exportSaveDialog: function () {
             document.getElementById('saveDialogTitle').innerHTML = 'Export your save';
@@ -219,7 +221,7 @@ export default (player, combatLoop, enemy, town, story) => {
             document.getElementById('saveText').value = player.saveToString();
             document.getElementById('loadButtonContainer').style.display = 'none';
             document.getElementById('saveDialogContainer').style.display = 'block';
-            $('#settingsContainer').style.display = 'none';
+            closeModal($('#settingsContainer'));
         },
         importSaveDialog: function () {
             document.getElementById('saveDialogTitle').innerHTML = 'Import a save';
@@ -227,7 +229,7 @@ export default (player, combatLoop, enemy, town, story) => {
             document.getElementById('saveText').value = '';
             document.getElementById('loadButtonContainer').style.display = 'block';
             document.getElementById('saveDialogContainer').style.display = 'block';
-            $('#settingsContainer').style.display = 'none';
+            closeModal($('#settingsContainer'));
         },
         importSave: function () {
             if (window.confirm('Loading a save will overwrite your current progress, are you sure you wish to continue?')) {
@@ -293,10 +295,6 @@ export default (player, combatLoop, enemy, town, story) => {
             }
             document.getElementById('statisticsList').innerHTML = statList;
             document.getElementById('statisticsContainer').style.display = 'block';
-        },
-        viewSettings: function () {
-            document.getElementById('settingsContainer').style.display = 'block';
-            $('#forceSave').style.display = 'none';
         },
         viewAchievements: function () {
             let achievementHTML = '';

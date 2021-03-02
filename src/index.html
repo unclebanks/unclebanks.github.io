@@ -41,10 +41,10 @@
             <ul id="routeList"></ul>
         </div>
         <div id="viewSelectBox">
-            <p><button id="heal" class="button">Heal</button></p>
-            <p><button id="viewRoster" class="button">Pokemon</button></p>
-            <p><button id="viewStorage" class="button">Storage</button></p>
-            <p><button id="viewPokeDex" class="button">PokeDex</button></p>
+            <p><button id="heal" class="button-old">Heal</button></p>
+            <p><button id="viewRoster" class="button-old">Pokemon</button></p>
+            <p><button id="viewStorage" class="button-old">Storage</button></p>
+            <p><button id="viewPokeDex" class="button-old">PokeDex</button></p>
         </div>
         <div id="invBox">
             <p>Catch: <label><input type="checkbox" id="enableCatchAll"><span>All</span></label> <label><input type="checkbox" id="enableCatchNew"><span>New</span></label></p>
@@ -68,8 +68,8 @@
                 <span class="status"></span>
             </div>
             <div id="townBox" style="display:none;">
-                <button onclick="userInteractions.viewTown()" class="button">Town</button>
-                <button onclick="userInteractions.trainerBattle()" class="button" id="trainerButton">Trainer Battle</button>
+                <button onclick="userInteractions.viewTown()" class="button-old">Town</button>
+                <button onclick="userInteractions.trainerBattle()" class="button-old" id="trainerButton">Trainer Battle</button>
             </div>
         </div>
         <div id="playerBox">
@@ -88,10 +88,10 @@
             <div id="console-text"></div>
         </div>
         <div id="navBox">
-            <button onclick="userInteractions.viewInventory()" class="button">Inventory</button><br>
-            <button onclick="userInteractions.viewAchievements()" class="button">Achievements</button><br>
-            <button onclick="userInteractions.viewStatistics()" class="button">View Stats</button><br>
-            <button onclick="userInteractions.viewSettings()" class="button">Settings</button><br>
+            <button onclick="userInteractions.viewInventory()" class="button-old">Inventory</button><br>
+            <button onclick="userInteractions.viewAchievements()" class="button-old">Achievements</button><br>
+            <button onclick="userInteractions.viewStatistics()" class="button-old">View Stats</button><br>
+            <button class="button-old modal-button" data-target="settingsContainer">Settings</button><br>
         </div>
     </div>
 
@@ -151,32 +151,39 @@
         </div>
     </div>
 
-    <div id="settingsContainer" class="modalContainer" style="display: none">
-        <div id="settingsDialog" class="modalDialog">
-            <div>
-                <h3 id="settingsTitle" class="modalTitle">Settings</h3>
-            </div>
-            <div>
+    <div id="settingsContainer" class="modal">
+        <div class="modal-background"></div>
+        <div id="settingsDialog" class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Settings</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
                 <h4>Visual Settings</h4>
                 <p>Choose which sprite You want to display for your pokemon:</p>
                 <p>
-            <span class="spriteChoice">
-              <input type="radio" id="spriteChoiceBack" name="spriteChoice" onchange="userInteractions.changeSpriteChoice()" /><label for="spriteChoiceBack">Back</label>
-              <input type="radio" id="spriteChoiceFront" name="spriteChoice" onchange="userInteractions.changeSpriteChoice()" /><label for="spriteChoiceFront">Front</label>
-            </span>
+                <span class="spriteChoice">
+                  <input type="radio" id="spriteChoiceBack" name="spriteChoice" onchange="userInteractions.changeSpriteChoice()" /><label for="spriteChoiceBack">Back</label>
+                  <input type="radio" id="spriteChoiceFront" name="spriteChoice" onchange="userInteractions.changeSpriteChoice()" /><label for="spriteChoiceFront">Front</label>
+                </span>
                 </p>
                 <h4>Console Settings</h4>
                 <p><input type="checkbox" checked="true" id="enableConsole"><span>Enable console</span></p>
-                <p><button onclick="userInteractions.clearConsole()">Clear Console</button></p>
+                <button class="button is-warning" onclick="userInteractions.clearConsole()">Clear Console</button>
                 <h4>Import and Export Save</h4>
-                <p><button onclick="userInteractions.forceSave()">Force Save</button> <span id="forceSave" style="color:red">Saved!</span></p>
-                <p><button onclick="userInteractions.exportSaveDialog()">Export</button></p>
-                <p><button onclick="userInteractions.importSaveDialog()">Import</button></p>
+                <div class="buttons">
+                    <button class="button is-primary" onclick="userInteractions.forceSave()">Force Save</button> <span id="forceSave" style="color:red">Saved!</span>
+                    <button class="button is-primary" onclick="userInteractions.exportSaveDialog()">Export</button>
+                    <button class="button is-primary" onclick="userInteractions.importSaveDialog()">Import</button>
+                </div>
                 <h4>Clear Game Data</h4>
                 <p style="color:red;font-weight:bold">Warning! This cannot be undone.</p>
                 <p><input type="checkbox" id="confirmClearData">
-                    <a href="#" style="color: red;" onclick="userInteractions.clearGameData()">Clear game data</a></p>
-            </div>
+                    <button class="button is-danger" onclick="userInteractions.clearGameData()">Clear game data</button></p>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button">Close</button>
+            </footer>
         </div>
     </div>
 

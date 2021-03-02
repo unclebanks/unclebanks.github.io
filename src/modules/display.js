@@ -433,9 +433,6 @@ export default (player, combatLoop, userInteractions) => {
             $('#statisticsContainer').addEventListener('click',
                 (event) => { event.target === $('#statisticsContainer') && ($('#statisticsContainer').style.display = 'none'); });
 
-            $('#settingsContainer').addEventListener('click',
-                (event) => { event.target === $('#settingsContainer') && ($('#settingsContainer').style.display = 'none'); });
-
             $('#achievementsContainer').addEventListener('click',
                 (event) => { event.target === $('#achievementsContainer') && ($('#achievementsContainer').style.display = 'none'); });
 
