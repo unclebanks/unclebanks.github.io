@@ -62,3 +62,9 @@ exports.loadVue = () => ({
 });
 
 exports.generateSourceMap = ({ type }) => ({ devtool: type });
+
+exports.splitChunks = (options) => ({
+    optimization: {
+        splitChunks: options,
+    },
+});

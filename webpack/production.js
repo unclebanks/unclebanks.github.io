@@ -1,6 +1,7 @@
 const { merge } = require('webpack-merge');
-const { generateSourceMap } = require('./parts');
+const { generateSourceMap, splitChunks } = require('./parts');
 
 module.exports = (options) => merge(
     generateSourceMap({ tool: 'source-map' }),
+    splitChunks({ chunks: 'all' }),
 );
