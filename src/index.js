@@ -35,6 +35,7 @@ enemy.attachCL(combatLoop);
 Object.assign(window, {
     userInteractions,
     story,
+    town,
 });
 
 // load old save data
