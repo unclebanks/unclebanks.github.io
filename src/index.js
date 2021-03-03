@@ -10,6 +10,9 @@ import setupModals from './modules/modalEvents';
 // include styles in webpack bundle
 import './index.scss';
 
+// import just the bits of fontawesome we want
+import(/* webpackChunkName: "fontawesome" */ './modules/fontawesome');
+
 document.addEventListener('DOMContentLoaded', () => {
     setupModals();
 });
