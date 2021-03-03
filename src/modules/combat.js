@@ -131,7 +131,7 @@ export default (player, enemy) => {
             const expToGive = (Combat.enemyActivePoke.baseExp() / 16) + (Combat.enemyActivePoke.level() * 3);
             player.statistics.totalExp += expToGive;
             Combat.playerActivePoke.giveExp(expToGive);
-            dom.gameConsoleLog(`${Combat.playerActivePoke.pokeName()} gained ${Math.floor(expToGive)} exp`, 'rgb(153, 166, 11)');
+            dom.gameConsoleLog(`${Combat.playerActivePoke.pokeName()} won ${Math.floor(expToGive)}xp`, 'rgb(153, 166, 11)');
             player.getPokemon().forEach((poke) => poke.giveExp((Combat.enemyActivePoke.baseExp() / 100) + (Combat.enemyActivePoke.level() / 10)));
             const afterExp = player.getPokemon().map((poke) => poke.level());
 
@@ -223,7 +223,7 @@ export default (player, enemy) => {
                         player.statistics.successfulThrows++;
                         player.statistics[`${selectedBall}SuccessfulThrows`]++;
                         player.addCatchCoins(gainCatchCoins);
-                        dom.gameConsoleLog(`You caught ${enemy.activePoke().pokeName()} and gained ${gainCatchCoins} !!`, 'purple');
+                        dom.gameConsoleLog(`You caught ${enemy.activePoke().pokeName()}and gained${gainCatchCoins}!!`, 'purple');
                         if (!player.hasPokemon(enemy.activePoke().pokeName(), 0)) {
                             player.addPoke(enemy.activePoke(), 0);
                             dom.renderPokeList();
