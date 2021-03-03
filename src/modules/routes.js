@@ -3,9 +3,9 @@
 const ROUTES = {
     Kanto: {
         _global: {
-            pokes: ['Bulbasaur', 'Charmander', 'Squirtle'],
-            rarePokes: ['Omanyte', 'Kabuto', 'Aerodactyl', 'Hitmonlee', 'Hitmonchan', 'Lapras', 'Eevee'],
-            superRare: ['Mewtwo', 'Mew', 'Articuno', 'Zapdos', 'Moltres', 'Porygon']
+            pokes: ['Bulbasaur', 'Charmander', 'Squirtle', 'Eevee', 'Porygon'],
+            rarePokes: [],
+            superRare: []
         },
         palletTown: {
             name: 'Pallet Town',
@@ -335,8 +335,20 @@ const ROUTES = {
                     'Rainbow Badge': true
                 }
             }
-        }
-        , route16: {
+        },
+        karateDojo: {
+            name: 'Karate Dojo',
+            pokes: ['Hitmonlee', 'Hitmonchan'],
+            minLevel: 45,
+            maxLevel: 55,
+            respawn: 'saffronCity',
+            _unlock: {
+                badges: {
+                    'Marsh Badge': true
+                }
+            }
+        },
+        route16: {
             name: 'Route 16'
             , pokes: ['Rattata', 'Raticate', 'Spearow', 'Doduo', 'Snorlax']
             , minLevel: 18
@@ -453,7 +465,7 @@ const ROUTES = {
         },
         powerPlant: {
             name: 'Power Plant'
-            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Voltorb', 'Electrode', 'Electabuzz']
+            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Voltorb', 'Electrode', 'Electabuzz', 'Jolteon']
             , minLevel: 25
             , maxLevel: 35,
             respawn: 'lavenderTown',
@@ -477,7 +489,7 @@ const ROUTES = {
         }
         , seafoamIsland: {
             name: 'Seafoam Island',
-            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shellder', 'Krabby', 'Horsea', 'Staryu'],
+            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shellder', 'Krabby', 'Horsea', 'Staryu', 'Vaporeon'],
             minLevel: 30,
             maxLevel: 40,
             _unlock: {
@@ -519,7 +531,19 @@ const ROUTES = {
         }
         , pokemonMansion: {
             name: 'Pokemon Mansion'
-            , pokes: ['Vulpix', 'Growlithe', 'Ponyta', 'Grimer', 'Muk', 'Koffing', 'Weezing', 'Magmar']
+            , pokes: ['Vulpix', 'Growlithe', 'Ponyta', 'Grimer', 'Muk', 'Koffing', 'Weezing', 'Magmar', 'Flareon']
+            , minLevel: 32
+            , maxLevel: 40,
+            respawn: 'cinnabarIsland',
+            _unlock: {
+                badges: {
+                    'Volcano Badge': true
+                }
+            }
+        }
+        , fossilCave: {
+            name: 'Fossil Restorer'
+            , pokes: ['Aerodactyl', 'Omanyte', 'Kabuto', 'Lapras']
             , minLevel: 32
             , maxLevel: 40,
             respawn: 'cinnabarIsland',
@@ -571,6 +595,18 @@ const ROUTES = {
             minLevel: 51,
             maxLevel: 60,
             respawn: 'ceruleanCity',
+            _unlock: {
+                badges: {
+                    'Earth Badge': true
+                }
+            }
+        },
+        legendsIsland: {
+            name: 'Legends Island',
+            pokes: ['Zapdos', 'Moltres', 'Articuno', 'Mew', 'Mewtwo'],
+            minLevel: 70,
+            maxLevel: 90,
+            respawn: 'palletTown',
             _unlock: {
                 badges: {
                     'Earth Badge': true
