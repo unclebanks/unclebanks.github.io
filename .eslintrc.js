@@ -39,5 +39,6 @@ module.exports = {
         'no-else-return': 'off',
         'camelcase': 'off',
         'no-restricted-properties': 'off',
+        'import/no-extraneous-dependencies': 'off',
     },
 };
