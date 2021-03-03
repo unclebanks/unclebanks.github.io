@@ -10,6 +10,10 @@ import setupModals from './modules/modalEvents';
 // include styles in webpack bundle
 import './index.scss';
 
+import initApp from './app';
+
+initApp();
+
 document.addEventListener('DOMContentLoaded', () => {
     setupModals();
 });
@@ -35,12 +39,14 @@ enemy.attachCL(combatLoop);
     town,
 ].forEach((obj) => obj.attachDOM(dom));
 
-// expose globals for use on inline event handlers in html
-Object.assign(window, {
+const globals = {
     userInteractions,
     story,
     town,
-});
+};
+
+// expose globals for use on inline event handlers in html
+Object.assign(window, globals);
 
 // load old save data
 if (localStorage.getItem('totalPokes') !== null) {
