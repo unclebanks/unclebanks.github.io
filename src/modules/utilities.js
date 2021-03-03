@@ -54,3 +54,4 @@ export const pokeById = (id) => POKEDEX[id - 1];
 export const pokeByName = (name) => POKEDEX.filter((el) => el.pokemon[0].Pokemon === name)[0];
 
 export const $ = (cssQuery) => document.querySelector(cssQuery);
+export const $all = (cssQuery) => Array.prototype.slice.call(document.querySelectorAll(cssQuery), 0);

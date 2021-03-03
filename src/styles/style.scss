@@ -1,4 +1,4 @@
-body {
+html, body {
     background-color: rgb(0, 0, 0);
   }
 
@@ -203,7 +203,7 @@ ul {
     text-align: center;
     background-color: rgb(255, 244, 89);
 }
-#navBox .button, #viewSelectBox .button, #townBox button {
+#navBox .button-old, #viewSelectBox .button-old, #townBox button {
     margin-top: 7px;
     align-items: center;
     width: 150px;
@@ -211,7 +211,7 @@ ul {
     background-color: #000000;
     color: red;
 }
-.button {
+.button-old {
     text-decoration: none;
     font: 400 13.3333px Arial;
     align-items: flex-start;
@@ -414,9 +414,6 @@ progress.expBar {
     font-style: italic;
 }
 
-#townBuildings {
-
-}
 .townBuilding {
     width: 45%;
     float: left;
