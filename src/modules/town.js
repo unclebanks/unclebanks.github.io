@@ -30,7 +30,7 @@ export default (player, Poke) => {
             },
             {
                 name: 'Masterball',
-                battlecoins: 1000,
+                battlecoins: 10000,
                 ball: 'masterball',
             },
         ],
