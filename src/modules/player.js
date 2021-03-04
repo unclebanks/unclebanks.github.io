@@ -25,7 +25,9 @@ export default (lastSave) => {
         unlocked: {
             shinyDex: 0,
             razzBerry: 0,
-            fishing: 0,
+            kantoOldRod: 0,
+            kantoGoodRod: 0,
+            kantoSuperRod: 0,
             thunderStone: 0,
             fireStone: 0,
             waterStone: 0,
@@ -296,7 +298,13 @@ export default (lastSave) => {
         },
         routeUnlocked: function (region, route) {
             const routeData = ROUTES[region][route];
-            if (routeData.fishing && Player.unlocked.fishing < routeData.fishing) {
+            if (routeData.kantoOldRod && !Player.unlocked.kantoOldRod) {
+                return false;
+            }
+            if (routeData.kantoGoodRod && !Player.unlocked.kantoGoodRod) {
+                return false;
+            }
+            if (routeData.kantoSuperRod && !Player.unlocked.kantoSuperRod) {
                 return false;
             }
             if (routeData._unlock) {
