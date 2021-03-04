@@ -14,7 +14,7 @@ import PlayerBox from './components/PlayerBox.vue';
 import Console from './components/Console.vue';
 import NavBox from './components/NavBox.vue';
 
-export default (userInteractions) => {
+export default () => {
     const app = createApp(App);
     const settingsModal = createApp(SettingsModal);
 
