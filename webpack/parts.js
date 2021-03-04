@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const TerserPlugin = require('terser-webpack-plugin');
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 exports.loadSCSS = () => ({
     module: {
@@ -88,4 +89,10 @@ exports.nameOutput = ({ path, filename }) => ({
 
 exports.minifyJavaScript = () => ({
     optimization: { minimizer: [new TerserPlugin()] },
+});
+
+exports.compressFiles = (options) => ({
+    plugins: [
+        new CompressionWebpackPlugin(options),
+    ],
 });
