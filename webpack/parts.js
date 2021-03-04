@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { WebpackPluginServe } = require('webpack-plugin-serve');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
@@ -35,6 +36,16 @@ exports.copyFiles = (options) => ({
     ],
 });
 
+exports.serve = (options) => ({
+    // entry point for the live reloading
+    entry: ['webpack-plugin-serve/client'],
+
+    plugins: [
+        // Live reloading of the page on code change
+        new WebpackPluginServe(options),
+    ],
+});
+
 exports.cleanBuild = (outputPath) => ({
     output: { clean: true, path: outputPath },
 });
@@ -49,3 +60,5 @@ exports.loadVue = () => ({
         new VueLoaderPlugin(),
     ],
 });
+
+exports.generateSourceMap = ({ type }) => ({ devtool: type });
