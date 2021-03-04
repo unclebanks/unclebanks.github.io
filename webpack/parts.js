@@ -2,7 +2,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { WebpackPluginServe } = require('webpack-plugin-serve');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
+const TerserPlugin = require('terser-webpack-plugin');
 
 exports.loadSCSS = () => ({
     module: {
@@ -67,4 +69,23 @@ exports.splitChunks = (options) => ({
     optimization: {
         splitChunks: options,
     },
+});
+
+exports.minifyCSS = ({ options }) => ({
+    optimization: {
+        minimizer: [
+            new CssMinimizerPlugin({ minimizerOptions: options }),
+        ],
+    },
+});
+
+exports.nameOutput = ({ path, filename }) => ({
+    output: {
+        path,
+        filename,
+    },
+});
+
+exports.minifyJavaScript = () => ({
+    optimization: { minimizer: [new TerserPlugin()] },
 });
