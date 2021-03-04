@@ -1,4 +1,9 @@
 import { createApp } from 'vue';
+
+// Modals
+import SettingsModal from './components/modals/SettingsModal.vue';
+
+// Main UI
 import App from './components/App.vue';
 import PokemonList from './components/PokemonList.vue';
 import RoutesBox from './components/RoutesBox.vue';
@@ -9,8 +14,9 @@ import PlayerBox from './components/PlayerBox.vue';
 import Console from './components/Console.vue';
 import NavBox from './components/NavBox.vue';
 
-export default () => {
+export default (userInteractions) => {
     const app = createApp(App);
+    const settingsModal = createApp(SettingsModal);
 
     app.component('PokemonList', PokemonList);
     app.component('RoutesBox', RoutesBox);
@@ -21,5 +27,8 @@ export default () => {
     app.component('Console', Console);
     app.component('NavBox', NavBox);
 
-    return app.mount('#app');
+    return {
+        app: app.mount('#app'),
+        settings: settingsModal.mount('#settingsContainer'),
+    };
 };
