@@ -12,6 +12,9 @@ import './index.scss';
 
 import initApp from './app';
 
+// import just the bits of fontawesome we want
+import(/* webpackChunkName: "fontawesome" */ './modules/fontawesome');
+
 initApp();
 
 document.addEventListener('DOMContentLoaded', () => {
