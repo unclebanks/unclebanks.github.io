@@ -864,7 +864,7 @@ const ROUTES = {
         }
         , route35: {
             name: 'Route 35'
-            , pokes: ['Yanma', 'Noctowl', 'Pidgey', 'Nidoran M', 'Nidoran F', 'Jigglypuff', 'Psyduck', 'Growlithe', 'Abra', 'Drowzee', 'Hoothoot', 'Ditto', 'Snubull']
+            , pokes: ['Yanma', 'Noctowl', 'Pidgey', 'Nidoran M', 'Nidoran F', 'Jigglypuff', 'Psyduck', 'Growlithe', 'Abra', 'Drowzee', 'Hoothoot', 'Ditto', 'Snubbull']
             , minLevel: 10
             , maxLevel: 14,
             respawn: 'goldenrodCity',
