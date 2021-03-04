@@ -14,13 +14,13 @@
             id="spriteChoiceBack"
             type="radio"
             name="spriteChoice"
-            onchange="userInteractions.changeSpriteChoice()"
+            @change="ui.changeSpriteChoice()"
           ><label for="spriteChoiceBack">Back</label>
           <input
             id="spriteChoiceFront"
             type="radio"
             name="spriteChoice"
-            onchange="userInteractions.changeSpriteChoice()"
+            @change="ui.changeSpriteChoice()"
           ><label for="spriteChoiceFront">Front</label>
         </span>
       </p>
@@ -32,35 +32,32 @@
           checked="true"
         ><span>Enable console</span>
       </p>
-      <button
-        class="button is-warning"
-        onclick="userInteractions.clearConsole()"
-      >
-        Clear Console
-      </button>
+      <Button
+        text="Clear Console"
+        classes="is-warning"
+        @click="ui.clearConsole()"
+      />
       <h4>Import and Export Save</h4>
       <div class="buttons">
-        <button
-          class="button is-primary"
-          onclick="userInteractions.forceSave()"
-        >
-          Force Save
-        </button> <span
+        <Button
+          text="Force Save"
+          classes="is-primary"
+          @click="ui.forceSave()"
+        />
+        <span
           id="forceSave"
           style="color:red"
         >Saved!</span>
-        <button
-          class="button is-primary"
-          onclick="userInteractions.exportSaveDialog()"
-        >
-          Export
-        </button>
-        <button
-          class="button is-primary"
-          onclick="userInteractions.importSaveDialog()"
-        >
-          Import
-        </button>
+        <Button
+          text="Export"
+          classes="is-primary"
+          @click="ui.exportSaveDialog()"
+        />
+        <Button
+          text="Import"
+          classes="is-primary"
+          @click="ui.importSaveDialog()"
+        />
       </div>
       <h4>Clear Game Data</h4>
       <p style="color:red;font-weight:bold">
@@ -92,10 +89,18 @@ export default {
         Button,
     },
 
+    // Defines what data this component wants
     data() {
         return {
             ui: {
+                // Giving a default functions that do nothing
+                // They will be replaced later when ui is passed to us
                 clearGameData() {},
+                importSaveDialog() {},
+                exportSaveDialog() {},
+                forceSave() {},
+                clearConsole() {},
+                changeSpriteChoice() {},
             },
         };
     },
