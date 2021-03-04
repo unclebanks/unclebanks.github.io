@@ -20,7 +20,7 @@
     </button><br>
     <button
       class="button-old modal-button"
-      data-target="settingsContainer"
+      data-target="settingsModal"
     >
       Settings
     </button><br>

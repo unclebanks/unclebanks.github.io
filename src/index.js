@@ -15,7 +15,7 @@ import initApp from './app';
 // import just the bits of fontawesome we want
 import(/* webpackChunkName: "fontawesome" */ './modules/fontawesome');
 
-initApp();
+const models = initApp();
 
 document.addEventListener('DOMContentLoaded', () => {
     setupModals();
@@ -31,6 +31,9 @@ const town = Town(player, Poke);
 const story = Story(player, enemy, combatLoop, Poke);
 const userInteractions = UserActions(player, combatLoop, enemy, town, story);
 const dom = Display(player, combatLoop, userInteractions);
+
+// Provide data to Vue components
+models.settings.ui = userInteractions;
 
 combatLoop.attachUI(userInteractions);
 enemy.attachCL(combatLoop);
@@ -63,7 +66,6 @@ if (localStorage.getItem('totalPokes') !== null) {
 
 if (player.settings.spriteChoice === 'front') {
     document.getElementById('spriteChoiceFront').checked = true;
-    document.getElementById('player').className += ' frontSprite';
 } else {
     document.getElementById('spriteChoiceBack').checked = true;
 }
