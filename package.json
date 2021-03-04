@@ -1,6 +1,10 @@
 {
   "name": "no-name-pokemon-game",
-  "version": "0.0.1",
+<<<<<<< HEAD
+  "version": "0.0.3",
+=======
+  "version": "0.0.2",
+>>>>>>> origin/master
   "description": "This is a game that is based off of PokeIdle Extended (which in turn is based off of PokeIdle).",
   "main": "index.js",
   "scripts": {
