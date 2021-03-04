@@ -21,21 +21,6 @@ export default (player, Poke) => {
                 pokecoins: 10000,
                 ball: 'ultraball',
             },
-            {
-                name: 'Old Rod',
-                pokecoins: 10000,
-                fishing: 1,
-            },
-            {
-                name: 'Good Rod',
-                pokecoins: 100000,
-                fishing: 2,
-            },
-            {
-                name: 'Super Rod',
-                pokecoins: 1000000,
-                fishing: 3,
-            },
         ],
         battlecoinShopItems: [
             {
@@ -51,28 +36,43 @@ export default (player, Poke) => {
         ],
         catchcoinShopItems: [
             {
+                name: 'Old Rod',
+                catchcoins: 100,
+                unlockable: 'kantoOldRod',
+            },
+            {
+                name: 'Good Rod',
+                catchcoins: 1000,
+                unlockable: 'kantoGoodRod',
+            },
+            {
+                name: 'Super Rod',
+                catchcoins: 10000,
+                unlockable: 'kantoSuperRod',
+            },
+            {
                 name: 'Thunder Stone',
-                catchcoins: 100000,
+                catchcoins: 10000,
                 unlockable: 'thunderStone',
             },
             {
                 name: 'Fire Stone',
-                catchcoins: 100000,
+                catchcoins: 10000,
                 unlockable: 'fireStone',
             },
             {
                 name: 'Water Stone',
-                catchcoins: 100000,
+                catchcoins: 10000,
                 unlockable: 'waterStone',
             },
             {
                 name: 'Leaf Stone',
-                catchcoins: 100000,
+                catchcoins: 10000,
                 unlockable: 'leafStone',
             },
             {
                 name: 'Moon Stone',
-                catchcoins: 100000,
+                catchcoins: 10000,
                 unlockable: 'moonStone',
             },
         ],
@@ -82,10 +82,6 @@ export default (player, Poke) => {
                 let canBuy = true;
                 let own = false;
                 if (player.currencyAmount.pokecoins < this.pokecoinShopItems[i].pokecoins) canBuy = false;
-                if (this.pokecoinShopItems[i].fishing && player.unlocked.fishing >= this.pokecoinShopItems[i].fishing) {
-                    canBuy = false;
-                    own = true;
-                }
                 const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
                 const buttonText = (own) ? 'Own' : 'Buy';
                 const buttonHTML = ` <button onclick="town.buyPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
@@ -173,45 +169,6 @@ export default (player, Poke) => {
                 this.renderCatchCoinShop(); // force refresh of shop
                 dom.renderCurrency();
                 return true;
-            }
-        },
-        traderPoke: ['Farfetchd', 'Jynx', 'Lickitung', 'Mr. Mime'],
-        renderBuyTrader: function () {
-            let traderHTML = '';
-            let poke; let pokeValue; let buttonHTML; let
-                canBuy;
-            for (let i = 0; i < this.traderPoke.length; i++) {
-                poke = this.traderPoke[i];
-                pokeValue = 100000;
-                canBuy = true;
-                if (player.currencyAmount.pokecoins < pokeValue) canBuy = false;
-                const disableButton = (!canBuy) ? ' disabled="true"' : '';
-                buttonHTML = ` <button onclick="town.buyPoke('${i}')" ${disableButton}>Buy</button>`;
-                traderHTML += `<li>${poke}: ¤${pokeValue}${buttonHTML}</li>`;
-            }
-            $('#traderBuyList').innerHTML = traderHTML;
-        },
-        renderTrader: function () {
-            this.renderBuyTrader();
-        },
-        calculatePokeValue: function (poke, demandMult = 1) {
-            const shinyMult = (poke.shiny()) ? 1500 : 1;
-            return Math.floor((poke.level() / 4) * shinyMult * demandMult);
-        },
-        buyPoke: function (index) {
-            const pokeValue = 100000;
-            if (player.currencyAmount.pokecoins < pokeValue) {
-                return false;
-            } else {
-                const poke = pokeByName(this.traderPoke[index]);
-                const newPoke = new Poke(poke, 30, false, Math.random() < (1 / (1 << 5 << 8)));
-                player.currencyAmount.pokecoins -= pokeValue;
-                dom.gameConsoleLog(`Bought ${newPoke.pokeName()} for ¤${pokeValue}!!`, 'purple');
-                player.addPoke(newPoke);
-                player.addPokedex(newPoke.pokeName(), (newPoke.shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
-                dom.renderPokeList();
-                dom.renderCurrency();
-                return false;
             }
         },
         attachDOM: (_dom) => dom = _dom,

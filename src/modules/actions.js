@@ -350,7 +350,6 @@ export default (player, combatLoop, enemy, town, story) => {
             town.renderPokeCoinShop();
             town.renderBattleCoinShop();
             town.renderCatchCoinShop();
-            town.renderTrader();
             document.getElementById('townContainer').style.display = 'block';
         },
         trainerBattle: function () {

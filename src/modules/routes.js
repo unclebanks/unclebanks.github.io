@@ -612,17 +612,30 @@ const ROUTES = {
                     'Earth Badge': true
                 }
             }
-        }
-        , water: {
-            name: 'Fishing',
-            pokes: {
-                1: ['Magikarp'],
-                2: ['Psyduck', 'Poliwag', 'Goldeen', 'Tentacool'],
-                3: ['Shellder', 'Krabby', 'Horsea', 'Staryu', 'Dratini']
-            },
+        },
+        kOldRod: {
+            name: 'Kanto Old Rod',
+            pokes: ['Magikarp'],
             minLevel: 5,
-            maxLevel: 40,
-            fishing: 1
+            maxLevel: 10,
+            respawn: 'palletTown',
+            kantoOldRod: 1
+        }
+        , kGoodRod: {
+            name: 'Kanto Good Rod',
+            pokes: ['Psyduck', 'Goldeen', 'Poliwag', 'Tentacool'],
+            minLevel: 15,
+            maxLevel: 25,
+            respawn: 'palletTown',
+            kantoGoodRod: 1
+        }
+        , kOldRod: {
+            name: 'Kanto Super Rod',
+            pokes: ['Shellder', 'Krabby', 'Horsea', 'Staryu', 'Dratini'],
+            minLevel: 30,
+            maxLevel: 45,
+            respawn: 'palletTown',
+            kantoSuperRod: 1
         }
     }
     , Johto: {
@@ -1263,17 +1276,6 @@ const ROUTES = {
                     'Rising Badge': true
                 }
             }
-        }
-        , water3: {
-            name: 'Fishing'
-            , pokes: {
-                1: ['Remoraid'],
-                2: ['Marill', 'Chinchou', 'Wooper'],
-                3: ['Corsola', 'Qwilfish', 'Lanturn', 'Octillery']
-            }
-            , minLevel: 10
-            , maxLevel: 40
-            , fishing: 1
         }
     }
 };

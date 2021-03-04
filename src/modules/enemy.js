@@ -23,15 +23,7 @@ export default (starter, player, Poke) => {
         const regionData = ROUTES[regionId];
         const routeData = regionData[routeId];
         let pokemonList = [];
-        if (routeData.fishing) {
-            for (let i = player.unlocked.fishing; i > 0; i--) {
-                if (routeData.pokes[i]) {
-                    pokemonList = mergeArray(pokemonList, routeData.pokes[i]);
-                }
-            }
-        } else {
             pokemonList = routeData.pokes;
-        }
         if (regionData._global) {
             if (regionData._global.pokes && Math.random() < (1 / (1 << 8))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.pokes);
