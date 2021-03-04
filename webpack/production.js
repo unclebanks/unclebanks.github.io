@@ -10,6 +10,5 @@ module.exports = (options) => merge(
         threshold: 8192,
     }),
 
-    parts.generateSourceMap({ tool: 'source-map' }),
     parts.splitChunks({ chunks: 'all' }),
 );
