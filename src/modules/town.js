@@ -25,12 +25,12 @@ export default (player, Poke) => {
         battlecoinShopItems: [
             {
                 name: 'Razz Berry',
-                battlecoins: 2500000,
+                battlecoins: 2500,
                 unlockable: 'razzBerry',
             },
             {
                 name: 'Masterball',
-                battlecoins: 1000000,
+                battlecoins: 1000,
                 ball: 'masterball',
             },
         ],
@@ -143,6 +143,7 @@ export default (player, Poke) => {
             if (player.currencyAmount.battlecoins < item.battlecoins) {
                 return false;
             } else {
+                player.currencyAmount.battlecoins -= item.battlecoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
                     dom.renderListBox();
