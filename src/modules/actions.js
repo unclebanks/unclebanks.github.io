@@ -256,10 +256,8 @@ export default (player, combatLoop, enemy, town, story) => {
         changeSpriteChoice: function () {
             if (document.getElementById('spriteChoiceFront').checked) {
                 player.settings.spriteChoice = 'front';
-                document.getElementById('player').className = 'container poke frontSprite';
             } else {
                 player.settings.spriteChoice = 'back';
-                document.getElementById('player').className = 'container poke';
             }
             player.savePokes();
             renderView(dom, enemy, player);
