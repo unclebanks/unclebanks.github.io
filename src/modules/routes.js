@@ -453,7 +453,7 @@ const ROUTES = {
         },
         route12: {
             name: 'Route 12'
-            , pokes: ['Pidgey', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Snorlax']
+            , pokes: ['Pidgey', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Snorlax', 'Mr. Mime']
             , minLevel: 22
             , maxLevel: 30,
             respawn: 'lavenderTown',
@@ -465,7 +465,7 @@ const ROUTES = {
         },
         powerPlant: {
             name: 'Power Plant'
-            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Voltorb', 'Electrode', 'Electabuzz', 'Jolteon']
+            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Voltorb', 'Electrode', 'Electabuzz', 'Jolteon', 'Lickitung']
             , minLevel: 25
             , maxLevel: 35,
             respawn: 'lavenderTown',
@@ -489,7 +489,7 @@ const ROUTES = {
         }
         , seafoamIsland: {
             name: 'Seafoam Island',
-            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shellder', 'Krabby', 'Horsea', 'Staryu', 'Vaporeon'],
+            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shellder', 'Krabby', 'Horsea', 'Staryu', 'Vaporeon', 'Jynx'],
             minLevel: 30,
             maxLevel: 40,
             _unlock: {
@@ -555,7 +555,7 @@ const ROUTES = {
         }
         , route21: {
             name: 'Route 21'
-            , pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Raticate', 'Tangela']
+            , pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Raticate', 'Tangela', 'Farfetchd']
             , minLevel: 21
             , maxLevel: 32,
             respawn: 'cinnabarIsland',
@@ -756,7 +756,7 @@ const ROUTES = {
             , maxLevel: 5,
             respawn: 'violetCity',
             _unlock: {
-                badges: { 
+                badges: {
                     'Zephyr Badge': true
                 }
             }
