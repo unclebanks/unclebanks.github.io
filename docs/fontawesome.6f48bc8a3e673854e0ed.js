@@ -1,0 +1,1 @@
+(self.webpackChunkno_name_pokemon_game=self.webpackChunkno_name_pokemon_game||[]).push([[585],{789:(e,a,n)=>{"use strict";n.r(a);var k=n(947),m=n(436);k.vI.add(m.FPD,m.r5q),k.vz.watch()}}]);
