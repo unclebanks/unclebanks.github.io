@@ -40,36 +40,6 @@ export default (player, combatLoop, enemy, town, story) => {
             combatLoop.changePlayerPoke(player.activePoke());
             renderView(dom, enemy, player);
         },
-        deletePokemon: function (event, index, from = 'roster') {
-            const pokeList = (from === 'roster') ? player.getPokemon() : player.storage;
-            if (event.shiftKey) {
-            // you must keep at least one active pokemon
-                if (from !== 'roster' || pokeList.length > 1) {
-                    const pokemon = pokeList[index];
-                    player.deletePoke(index, from);
-                    const hasPoke = player.hasPokemon(pokemon.pokeName(), pokemon.shiny());
-                    if (!hasPoke) {
-                        player.addPokedex(pokemon.pokeName(), (pokemon.shiny() ? POKEDEXFLAGS.releasedShiny : POKEDEXFLAGS.releasedNormal));
-                    }
-                    if (from === 'roster') {
-                        combatLoop.changePlayerPoke(player.activePoke());
-                        renderView(dom, enemy, player);
-                    } else {
-                        dom.renderStorage();
-                    }
-                    player.savePokes();
-                    if (pokemon.shiny()) {
-                        player.settings.releasedShiny++;
-                    } else {
-                        player.settings.releasedNormal++;
-                    }
-                } else {
-                    dom.showPopup('You must have one active pokemon!');
-                }
-            } else {
-                alert('Hold shift while clicking the X to release a pokemon');
-            }
-        },
         changeRegion: function () {
             const regionSelect = document.getElementById('regionSelect');
             const regionId = regionSelect.options[regionSelect.selectedIndex].value;

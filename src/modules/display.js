@@ -173,26 +173,19 @@ export default (player, combatLoop, userInteractions) => {
                     }${poke === player.activePoke() ? ' activePoke' : ''
                     }${poke.canEvolve() ? ' canEvolve' : ''
                     }${poke.canPrestige() ? ' canPrestige' : ''}`;
-                    listItemElement.querySelector('img').setAttribute('src', poke.image().front);
+                    listItemElement.querySelector('img').setAttribute('src', poke.image().party);
                     if (!purge && hasChanged) {
                         flash(listItemElement);
                     }
                 } else {
-                    const upButton = `<button onclick="userInteractions.pokemonToUp(${index})" class="pokeUpButton"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>`;
-                    const downButton = `<button onclick="userInteractions.pokemonToDown(${index})" class="pokeDownButton"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>`;
-                    const firstButton = `<button onclick="userInteractions.pokemonToFirst(${index})" class="pokeFirstButton">#1</button>`;
                     const evolveButton = `<button onclick="userInteractions.evolvePokemon(${index})" class="pokeEvolveButton">Evolve</button>`;
                     const prestigeButton = `<button onclick="userInteractions.prestigePokemon(${index})" class="pokePrestigeButton">Prestige</button>`;
                     const storageButton = `<button onclick="userInteractions.moveToStorage(${index})" class="toStorageButton">PC</button>`;
-                    const image = `<p><a href="#" onclick="userInteractions.changePokemon(${index})"><img src="${poke.image().front}"></a></p>`;
+                    const image = `<p><a href="#" onclick="userInteractions.changePokemon(${index})"><img src="${poke.image().party}"></a></p>`;
 
                     listElementsToAdd += `<li id="listPoke${index}" class="listPoke">${
                         image
-                    }<a href="#" onclick="userInteractions.changePokemon(${index})" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? (`p${poke.prestigeLevel}`) : '')})</a><br>${
-                        upButton
-                    }${downButton
-                    }${firstButton
-                    }${evolveButton
+                    }<a href="#" onclick="userInteractions.changePokemon(${index})" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? (`p${poke.prestigeLevel}`) : '')})</a><br>${evolveButton
                     }${prestigeButton
                     }${storageButton
                     }</li>`;

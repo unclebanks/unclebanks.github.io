@@ -100,6 +100,7 @@ export default (player) => {
         return {
             front: 'assets/sprites/' + [imageType] + '/front/' + this.poke.pokemon[0].Pokemon + '.png',
             back: 'assets/sprites/' + [imageType] + '/back/' + this.poke.pokemon[0].Pokemon + '.png',
+            party: 'assets/sprites/partySprites/' + [imageType] + '/' + this.poke.pokemon[0].Pokemon + '.png',
         };
     };
     Poke.prototype.shiny = function () {
