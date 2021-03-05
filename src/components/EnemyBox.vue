@@ -24,14 +24,14 @@
     >
       <button
         onclick="userInteractions.viewTown()"
-        class="button-old"
+        class="button"
       >
         Town
       </button>
       <button
         id="trainerButton"
         onclick="userInteractions.trainerBattle()"
-        class="button-old"
+        class="button"
       >
         Trainer Battle
       </button>

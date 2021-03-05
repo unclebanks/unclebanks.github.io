@@ -3,7 +3,7 @@
     <p>
       <button
         id="heal"
-        class="button-old"
+        class="button"
       >
         Heal
       </button>
@@ -11,7 +11,7 @@
     <p>
       <button
         id="viewRoster"
-        class="button-old"
+        class="button"
       >
         Pokemon
       </button>
@@ -19,7 +19,7 @@
     <p>
       <button
         id="viewStorage"
-        class="button-old"
+        class="button"
       >
         Storage
       </button>
@@ -27,7 +27,7 @@
     <p>
       <button
         id="viewPokeDex"
-        class="button-old"
+        class="button"
       >
         PokeDex
       </button>

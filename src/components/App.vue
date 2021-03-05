@@ -8,6 +8,7 @@
     <PlayerBox />
     <Console />
     <NavBox />
+    <RegionBox />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import EnemyBox from './EnemyBox.vue';
 import PlayerBox from './PlayerBox.vue';
 import Console from './Console.vue';
 import NavBox from './NavBox.vue';
+import RegionBox from './RegionBox.vue';
 
 export default {
     components: {
@@ -32,6 +34,7 @@ export default {
         PlayerBox,
         Console,
         NavBox,
+        RegionBox,
     },
 };
 </script>
