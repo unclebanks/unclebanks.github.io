@@ -10,14 +10,6 @@
     </p>
     <p>
       <button
-        id="viewRoster"
-        class="button"
-      >
-        Pokemon
-      </button>
-    </p>
-    <p>
-      <button
         id="viewStorage"
         class="button"
       >

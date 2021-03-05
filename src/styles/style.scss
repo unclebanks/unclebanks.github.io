@@ -6,10 +6,8 @@ html, body {
     font-family: 'Lato', sans-serif;
     color: rgb(0, 0, 0);
     display: grid;
-    width: auto;
-    height: auto;
     grid-template-columns: 18% 30% 30% 22%;
-    grid-template-rows: 50% 40% 12%;
+    grid-template-rows: 25% 20% 20% 30%;
 }
 
 #gameContainer div {
@@ -29,6 +27,15 @@ ul {
     grid-column: 1;
     grid-row: 1 / 3;
     max-height: 600px;
+    overflow: auto;
+    float: left;
+    text-align: left;
+    background-color: skyblue;
+}
+
+#partyBox {
+    grid-column: 1 / 2;
+    grid-row: 3;
     overflow: auto;
     float: left;
     text-align: left;
@@ -153,9 +160,8 @@ ul {
 }
 
 #rosterBox {
-    grid-column: 1 / 2;
-    grid-row: 3;
-    font-size: medium;
+    grid-column: 1;
+    grid-row: 4;
     background-color: skyblue;
 }
 

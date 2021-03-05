@@ -56,8 +56,8 @@ export default (player, combatLoop, enemy, town, story) => {
             return false;
         },
         enablePokeListDelete: function () {
-            player.settings.listView = 'roster';
             dom.renderListBox();
+            dom.renderPokeList();
         },
         enablePokeListAutoSort: function () {
             player.settings.autoSort = $('#autoSort').checked;
@@ -208,6 +208,7 @@ export default (player, combatLoop, enemy, town, story) => {
                 // reload everything
                 renderView(dom, enemy, player);
                 dom.renderListBox();
+                dom.renderPokeList();
                 dom.renderPokeSort();
                 dom.renderBalls();
                 dom.renderPokeCoins();

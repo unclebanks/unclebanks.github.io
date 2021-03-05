@@ -77,6 +77,7 @@ dom.renderCurrency();
 renderView(dom, enemy, player);
 dom.renderRoutesBox();
 dom.renderListBox();
+dom.renderPokeList();
 dom.renderRegionSelect();
 dom.renderPokeSort();
 

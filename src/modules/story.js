@@ -40,6 +40,7 @@ export default (player, enemy, combatLoop, Poke) => {
                 renderView(dom, enemy, player);
                 dom.renderRoutesBox();
                 dom.renderListBox();
+                dom.renderPokeList();
                 $('#storyContainer').style.display = 'none';
             },
         },
