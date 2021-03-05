@@ -243,17 +243,10 @@ export default (player, combatLoop, userInteractions) => {
             }
         },
         renderRegionSelect: function () {
-            let selectHTML = '';
-            let count = 0;
             for (const region in ROUTES) {
                 if (player.regionUnlocked(region)) {
-                    selectHTML += `<option value="${region}"${player.settings.currentRegionId === region ? ' selected="true"' : ''}>${region}</option>`;
-                    count++;
-                }
-            }
-            if (count > 1) {
-                $('#regionSelect').innerHTML = selectHTML;
-                $('#regionSelect').style.display = 'block';
+                    return true;
+                } return false;
             }
         },
         renderRouteList: function () {

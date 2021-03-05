@@ -216,7 +216,7 @@ ul {
     text-align: center;
     background-color: skyblue;
 }
-#navBox .button, #viewSelectBox .button, #townBox button, #regionBox button {
+#navBox .button, #viewSelectBox .button, #townBox button {
     margin-top: 7px;
     align-items: center;
     border-color: black;
@@ -230,9 +230,11 @@ ul {
     align-items: center;
     width: auto;
     height: 35px;
+    border-color: black;
     background-color: transparent;
     color: black;
 }
+
 #navBox p {
     margin: 0 0 5px 0;
 }

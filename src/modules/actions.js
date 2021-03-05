@@ -40,11 +40,9 @@ export default (player, combatLoop, enemy, town, story) => {
             combatLoop.changePlayerPoke(player.activePoke());
             renderView(dom, enemy, player);
         },
-        changeRegion: function () {
-            const regionSelect = document.getElementById('regionSelect');
-            const regionId = regionSelect.options[regionSelect.selectedIndex].value;
-            if (player.regionUnlocked(regionId)) {
-                player.settings.currentRegionId = regionId;
+        goToKanto: function () {
+            if (player.regionUnlocked('Kanto')) {
+                player.settings.currentRegionId = 'Kanto';
                 if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
                 } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
@@ -52,8 +50,23 @@ export default (player, combatLoop, enemy, town, story) => {
                 } else {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
+            } else {
+                prompt('You have not unlocked this region yet');
             }
-            return false;
+        },
+        goToJohto: function () {
+            if (player.regionUnlocked('Johto')) {
+                player.settings.currentRegionId = 'Johto';
+                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
+                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
+                } else {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
+                }
+            } else {
+                prompt('You have not unlocked this region yet');
+            }
         },
         enablePokeListDelete: function () {
             dom.renderListBox();

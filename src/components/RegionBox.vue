@@ -3,14 +3,16 @@
     <div id="regionSelect">
       <span>REGION SELECT</span><br>
       <button
-        onclick="userInteractions.changeRegion()"
+        id="kantoButton"
+        onclick="userInteractions.goToKanto()"
         class="button"
         value="Kanto"
       >
         Kanto
       </button>
       <button
-        onclick="userInteractions.changeRegion()"
+        id="johtoButton"
+        onclick="userInteractions.goToJohto()"
         class="button"
         value="Johto"
       >
