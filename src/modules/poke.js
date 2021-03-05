@@ -19,8 +19,13 @@ export default (player) => {
             .filter((xp_requirement) => xp_requirement <= this.exp)
             .length;
     };
-    Poke.prototype.statValue = function (raw) {
-        return Math.floor((((raw + 50) * this.currentLevel()) / 150) * Math.pow(1.25, this.prestigeLevel));
+    Poke.prototype.statValue = function (statName) {
+        let raw = this.poke.stats[0][statName];
+        let calculated = ((raw + 50) * this.currentLevel()) / 150;
+        if (statName !== 'speed') {
+            calculated *= Math.pow(1.25, this.prestigeLevel);
+        }
+        return Math.floor(calculated);
     };
     Poke.prototype.setHpValue = function (rawHp) {
         return Math.floor(((rawHp * this.currentLevel()) / 40));
@@ -80,11 +85,11 @@ export default (player) => {
     Poke.prototype.setHp = function (hp) { this.hp = hp; };
     Poke.prototype.getHp = function () { return this.hp; };
     Poke.prototype.maxHp = function () { return this.setHpValue(this.poke.stats[0].hp) * 3; };
-    Poke.prototype.attack = function () { return this.statValue(this.poke.stats[0].attack); };
-    Poke.prototype.defense = function () { return this.statValue(this.poke.stats[0].defense); };
-    Poke.prototype.spAttack = function () { return this.statValue(this.poke.stats[0]['sp atk']); };
-    Poke.prototype.spDefense = function () { return this.statValue(this.poke.stats[0]['sp def']); };
-    Poke.prototype.speed = function () { return this.statValue(this.poke.stats[0].speed); };
+    Poke.prototype.attack = function () { return this.statValue('attack'); };
+    Poke.prototype.defense = function () { return this.statValue('defense'); };
+    Poke.prototype.spAttack = function () { return this.statValue('sp atk'); };
+    Poke.prototype.spDefense = function () { return this.statValue('sp def'); };
+    Poke.prototype.speed = function () { return this.statValue('speed'); };
     Poke.prototype.avgDefense = function () { return (this.defense() + this.spDefense()) / 2; };
 
     Poke.prototype.pokeName = function () {
