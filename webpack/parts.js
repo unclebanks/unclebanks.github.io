@@ -6,6 +6,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const { webpack, DefinePlugin } = require('webpack');
 
 exports.loadSCSS = () => ({
     module: {
@@ -94,5 +95,13 @@ exports.minifyJavaScript = () => ({
 exports.compressFiles = (options) => ({
     plugins: [
         new CompressionWebpackPlugin(options),
+    ],
+});
+
+exports.setFreeVariable = (key, value) => ({
+    plugins: [
+        new DefinePlugin({
+            [key]: JSON.stringify(value),
+        }),
     ],
 });
