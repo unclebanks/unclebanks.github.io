@@ -388,7 +388,7 @@ export default (lastSave, appModel) => {
                 this.ballsAmount = JSON.parse(localStorage.getItem('ballsAmount'));
             }
             if (JSON.parse(localStorage.getItem('pokedexData'))) {
-                appModel.$store.state.pokedex.data = JSON.parse(localStorage.getItem('pokedexData'));
+                appModel.$store.commit('pokedex/loadData', JSON.parse(localStorage.getItem('pokedexData')));
             }
             if (JSON.parse(localStorage.getItem('statistics'))) {
                 const loadedStats = JSON.parse(localStorage.getItem('statistics'));
@@ -454,7 +454,7 @@ export default (lastSave, appModel) => {
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
                 this.battleItems = saveData.battleItems;
-                appModel.$store.state.pokedex.data = saveData.pokedexData ? saveData.pokedexData : [];
+                appModel.$store.commit('pokedex/loadData', saveData.pokedexData ? saveData.pokedexData : []);
                 const loadedStats = saveData.statistics ? saveData.statistics : {};
                 this.statistics = { ...this.statistics, ...loadedStats };
                 if (saveData.settings) {

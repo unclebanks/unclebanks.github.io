@@ -3,6 +3,8 @@ import POKEDEX from '../../modules/db';
 
 const MAX_POKEMON = POKEDEX.length;
 
+const getPokemonId = (name) => POKEDEX.findIndex((p) => p.pokemon[0].Pokemon === name) + 1;
+
 export default {
     namespaced: true,
 
@@ -26,9 +28,18 @@ export default {
                     }
                 }
             } else {
-                const id = POKEDEX.findIndex((p) => p.pokemon[0].Pokemon === pokeName) + 1;
+                const id = getPokemonId(pokeName);
                 state.data.push({ id, name: pokeName, flag: flag });
             }
+        },
+
+        loadData(state, list) {
+            const dexEntries = list.map(({ name, flag }) => {
+                const id = getPokemonId(name);
+                return { id, name, flag };
+            });
+
+            state.data = dexEntries;
         },
     },
 
