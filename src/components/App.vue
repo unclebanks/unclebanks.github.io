@@ -14,7 +14,7 @@
 
 <script>
 
-import PokemonList from './PokemonList.vue';
+import PokemonList from './PokemonList/PokemonList.vue';
 import RoutesBox from './RoutesBox.vue';
 import Inventory from './Inventory.vue';
 import EnemyBox from './EnemyBox.vue';
