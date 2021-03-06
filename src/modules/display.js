@@ -97,8 +97,10 @@ export default (player, combatLoop, userInteractions) => {
                 if (highestPoke == 0) {
                     highestPoke = player.getHighestPokeDex();
                 }
-                const highestID = player.findDexIndex(highestPoke);
-                count = highestID + 5;
+                if (highestPoke) {
+                    const highestID = player.findDexIndex(highestPoke);
+                    count = highestID + 5;
+                }
             }
             for (let y = 0; y < count; y++) {
                 let dexEntry = dexData.find(findFlag, POKEDEX[y].pokemon[0].Pokemon);
