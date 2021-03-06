@@ -34,12 +34,12 @@ export default (player, enemy, combatLoop, Poke) => {
                 const starterPoke = new Poke(pokeById(id), 5);
                 player.addPoke(starterPoke);
                 player.addPokedex(starterPoke.pokeName(), POKEDEXFLAGS.ownNormal);
-                dom.gameConsoleLog(`You received a ${player.activePoke().pokeName()}`, 'purple');
                 player.setActive(0);
                 combatLoop.unpause();
                 renderView(dom, enemy, player);
                 dom.renderRoutesBox();
                 dom.renderListBox();
+                dom.renderPokeList();
                 $('#storyContainer').style.display = 'none';
             },
         },

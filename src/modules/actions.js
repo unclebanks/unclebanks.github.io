@@ -12,15 +12,15 @@ export default (player, combatLoop, enemy, town, story) => {
 
         changeRoute: function (newRouteId, force = false) {
             if (!force && player.alivePokeIndexes().length == 0) {
-                dom.gameConsoleLog('It is too dangerous to travel without a pokemon.', 'red');
+                alert('It is too dangerous to travel without a pokemon.');
                 return false;
             }
             if (combatLoop.trainer) {
-                dom.gameConsoleLog('You cannot run away from a trainer battle.', 'red');
+                alert('You cannot run away from a trainer battle.');
                 return false;
             }
             if (!player.routeUnlocked(player.settings.currentRegionId, newRouteId)) {
-                dom.gameConsoleLog('You cannot do that yet.', 'red');
+                alert('You cannot go there yet.');
                 return false;
             }
             player.settings.currentRouteId = newRouteId;
@@ -40,41 +40,9 @@ export default (player, combatLoop, enemy, town, story) => {
             combatLoop.changePlayerPoke(player.activePoke());
             renderView(dom, enemy, player);
         },
-        deletePokemon: function (event, index, from = 'roster') {
-            const pokeList = (from === 'roster') ? player.getPokemon() : player.storage;
-            if (event.shiftKey) {
-            // you must keep at least one active pokemon
-                if (from !== 'roster' || pokeList.length > 1) {
-                    const pokemon = pokeList[index];
-                    player.deletePoke(index, from);
-                    const hasPoke = player.hasPokemon(pokemon.pokeName(), pokemon.shiny());
-                    if (!hasPoke) {
-                        player.addPokedex(pokemon.pokeName(), (pokemon.shiny() ? POKEDEXFLAGS.releasedShiny : POKEDEXFLAGS.releasedNormal));
-                    }
-                    if (from === 'roster') {
-                        combatLoop.changePlayerPoke(player.activePoke());
-                        renderView(dom, enemy, player);
-                    } else {
-                        dom.renderStorage();
-                    }
-                    player.savePokes();
-                    if (pokemon.shiny()) {
-                        player.settings.releasedShiny++;
-                    } else {
-                        player.settings.releasedNormal++;
-                    }
-                } else {
-                    dom.showPopup('You must have one active pokemon!');
-                }
-            } else {
-                alert('Hold shift while clicking the X to release a pokemon');
-            }
-        },
-        changeRegion: function () {
-            const regionSelect = document.getElementById('regionSelect');
-            const regionId = regionSelect.options[regionSelect.selectedIndex].value;
-            if (player.regionUnlocked(regionId)) {
-                player.settings.currentRegionId = regionId;
+        goToKanto: function () {
+            if (player.regionUnlocked('Kanto')) {
+                player.settings.currentRegionId = 'Kanto';
                 if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
                 } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
@@ -82,12 +50,27 @@ export default (player, combatLoop, enemy, town, story) => {
                 } else {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
+            } else {
+                alert('You have not unlocked this region yet');
             }
-            return false;
+        },
+        goToJohto: function () {
+            if (player.regionUnlocked('Johto')) {
+                player.settings.currentRegionId = 'Johto';
+                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
+                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
+                } else {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
+                }
+            } else {
+                alert('You have not unlocked this region yet');
+            }
         },
         enablePokeListDelete: function () {
-            player.settings.listView = 'roster';
             dom.renderListBox();
+            dom.renderPokeList();
         },
         enablePokeListAutoSort: function () {
             player.settings.autoSort = $('#autoSort').checked;
@@ -113,9 +96,6 @@ export default (player, combatLoop, enemy, town, story) => {
                 player.purgeData = true;
                 window.location.reload(true);
             }
-        },
-        clearConsole: function () {
-            dom.gameConsoleClear();
         },
         changeSelectedBall: function (newBall) {
             player.changeSelectedBall(newBall);
@@ -238,6 +218,7 @@ export default (player, combatLoop, enemy, town, story) => {
                 // reload everything
                 renderView(dom, enemy, player);
                 dom.renderListBox();
+                dom.renderPokeList();
                 dom.renderPokeSort();
                 dom.renderBalls();
                 dom.renderPokeCoins();

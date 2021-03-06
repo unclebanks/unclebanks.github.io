@@ -11,7 +11,6 @@ export const renderView = (dom, enemy, player, purge = true) => {
 export default (player, combatLoop, userInteractions) => {
     const Display = {
         healElement: $('#heal'),
-        logElement: $('#console #console-text'),
         setValue: function (domElement, newValue, append) {
             if (append === undefined) { append = false; }
             if (append) {
@@ -173,26 +172,19 @@ export default (player, combatLoop, userInteractions) => {
                     }${poke === player.activePoke() ? ' activePoke' : ''
                     }${poke.canEvolve() ? ' canEvolve' : ''
                     }${poke.canPrestige() ? ' canPrestige' : ''}`;
-                    listItemElement.querySelector('img').setAttribute('src', poke.image().front);
+                    listItemElement.querySelector('img').setAttribute('src', poke.image().party);
                     if (!purge && hasChanged) {
                         flash(listItemElement);
                     }
                 } else {
-                    const upButton = `<button onclick="userInteractions.pokemonToUp(${index})" class="pokeUpButton"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>`;
-                    const downButton = `<button onclick="userInteractions.pokemonToDown(${index})" class="pokeDownButton"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>`;
-                    const firstButton = `<button onclick="userInteractions.pokemonToFirst(${index})" class="pokeFirstButton">#1</button>`;
                     const evolveButton = `<button onclick="userInteractions.evolvePokemon(${index})" class="pokeEvolveButton">Evolve</button>`;
                     const prestigeButton = `<button onclick="userInteractions.prestigePokemon(${index})" class="pokePrestigeButton">Prestige</button>`;
                     const storageButton = `<button onclick="userInteractions.moveToStorage(${index})" class="toStorageButton">PC</button>`;
-                    const image = `<p><a href="#" onclick="userInteractions.changePokemon(${index})"><img src="${poke.image().front}"></a></p>`;
+                    const image = `<p><a href="#" onclick="userInteractions.changePokemon(${index})"><img src="${poke.image().party}"></a></p>`;
 
                     listElementsToAdd += `<li id="listPoke${index}" class="listPoke">${
                         image
-                    }<a href="#" onclick="userInteractions.changePokemon(${index})" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? (`p${poke.prestigeLevel}`) : '')})</a><br>${
-                        upButton
-                    }${downButton
-                    }${firstButton
-                    }${evolveButton
+                    }<a href="#" onclick="userInteractions.changePokemon(${index})" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? (`p${poke.prestigeLevel}`) : '')})</a><br>${evolveButton
                     }${prestigeButton
                     }${storageButton
                     }</li>`;
@@ -250,17 +242,10 @@ export default (player, combatLoop, userInteractions) => {
             }
         },
         renderRegionSelect: function () {
-            let selectHTML = '';
-            let count = 0;
             for (const region in ROUTES) {
                 if (player.regionUnlocked(region)) {
-                    selectHTML += `<option value="${region}"${player.settings.currentRegionId === region ? ' selected="true"' : ''}>${region}</option>`;
-                    count++;
-                }
-            }
-            if (count > 1) {
-                $('#regionSelect').innerHTML = selectHTML;
-                $('#regionSelect').style.display = 'block';
+                    return true;
+                } return false;
             }
         },
         renderRouteList: function () {
@@ -290,23 +275,18 @@ export default (player, combatLoop, userInteractions) => {
             });
         },
         renderListBox: function () {
-            const roster = $('#rosterBox');
             const pokeDex = $('#pokedexBox');
             const storage = $('#storageBox');
             // hide all by default
-            roster.style.display = 'none';
             pokeDex.style.display = 'none';
             storage.style.display = 'none';
             // which is showing
             if (player.settings.listView === 'pokeDex') {
                 pokeDex.style.display = 'block';
                 this.renderPokeDex();
-            } else if (player.settings.listView === 'storage') {
+            } if (player.settings.listView === 'storage') {
                 storage.style.display = 'block';
                 this.renderStorage();
-            } else {
-                roster.style.display = 'block';
-                this.renderPokeList();
             }
         },
         renderRoutesBox: function () {
@@ -319,23 +299,6 @@ export default (player, combatLoop, userInteractions) => {
             const toAnimate = $(`#${id}`);
             toAnimate.classList = `img attacked-${direction}`;
             window.setTimeout(() => toAnimate.classList = 'img', 80);
-        },
-        gameConsoleLog: function (text, color) {
-            if ($('#enableConsole').checked) {
-                if (color) {
-                    this.logElement.innerHTML = `<span style="color:${color};">${text}</span><br>${this.logElement.innerHTML}`;
-                } else {
-                    this.logElement.innerHTML = `${text}<br>${this.logElement.innerHTML}`;
-                }
-            }
-            const logAsArray = this.logElement.innerHTML.split('<br>');
-            if (logAsArray.length >= 100) {
-                logAsArray.splice(logAsArray.length - 1, 1);
-                this.logElement.innerHTML = logAsArray.join('<br>');
-            }
-        },
-        gameConsoleClear: function () {
-            this.logElement.innerHTML = '';
         },
         renderBalls: function () {
             Object.keys(player.ballsAmount).forEach((ballType) => {
@@ -384,9 +347,6 @@ export default (player, combatLoop, userInteractions) => {
             });
             $('#autoSort').addEventListener('click', () => {
                 userInteractions.enablePokeListAutoSort();
-            });
-            $('#viewRoster').addEventListener('click', () => {
-                userInteractions.changeListView('roster');
             });
             $('#viewPokeDex').addEventListener('click', () => {
                 userInteractions.changeListView('pokeDex');

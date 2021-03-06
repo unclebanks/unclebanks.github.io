@@ -43,7 +43,7 @@ export default (lastSave) => {
         settings: {
             currentRegionId: 'Kanto',
             currentRouteId: 'route1',
-            listView: 'roster',
+            listView: 'pokeDex',
             autoSort: true,
             dexView: 'all',
             dexVersion: 194, // check if users dex is out of date

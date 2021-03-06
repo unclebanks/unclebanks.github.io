@@ -26,22 +26,6 @@
         </span>
       </p>
 
-      <h4>Console Settings</h4>
-
-      <p>
-        <input
-          id="enableConsole"
-          type="checkbox"
-          checked="true"
-        ><span>Enable console</span>
-      </p>
-
-      <Button
-        text="Clear Console"
-        classes="is-warning"
-        @click="ui.clearConsole()"
-      />
-
       <h4>Import and Export Save</h4>
 
       <div class="buttons">
@@ -112,7 +96,6 @@ export default {
                 importSaveDialog() {},
                 exportSaveDialog() {},
                 forceSave() {},
-                clearConsole() {},
                 changeSpriteChoice() {},
             },
         };
