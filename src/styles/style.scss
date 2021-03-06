@@ -7,7 +7,7 @@ html, body {
     color: rgb(0, 0, 0);
     display: grid;
     grid-template-columns: 18% 30% 30% 22%;
-    grid-template-rows: 45% 30% 20%;
+    grid-template-rows: 45% 25% 20%;
 }
 
 #gameContainer div {
@@ -42,8 +42,18 @@ ul {
     background-color: skyblue;
 }
 
-#partyBox li {
+#partyBox li, p {
     display: inline-block;
+}
+
+#pokeGear {
+    grid-column: 2;
+    grid-row: 2;
+    height: 50%;
+    margin-top: 25%;
+    margin-bottom: none;
+    background-color: skyblue;
+    text-align: center;
 }
 
 #routesBox {
@@ -189,9 +199,10 @@ ul {
 }
 
 #console {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
     height: 50%;
+    margin-top: 30%;
     max-height: 100px;
     overflow-y: hidden;
     background-color: skyblue;
@@ -211,8 +222,7 @@ ul {
 #navBox {
     grid-column: 2;
     grid-row: 2;
-    margin-left: 50%;
-    width: 50%;
+    height: 50%;
     text-align: center;
     background-color: skyblue;
 }
@@ -220,16 +230,14 @@ ul {
     margin-top: 7px;
     align-items: center;
     border-color: black;
-    width: 150px;
-    height: 35px;
+    width: auto;
+    height: auto;
     background-color: transparent;
     color: black;
 }
-#regionBox button {
-    margin-top: 7px;
-    align-items: center;
+#regionBox .partyButton {
     width: auto;
-    height: 35px;
+    height: fit-content;
     border-color: black;
     background-color: transparent;
     color: black;

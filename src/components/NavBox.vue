@@ -5,24 +5,42 @@
       class="button"
     >
       Inventory
-    </button><br>
+    </button>
     <button
       onclick="userInteractions.viewAchievements()"
       class="button"
     >
       Achievements
-    </button><br>
+    </button>
     <button
       onclick="userInteractions.viewStatistics()"
       class="button"
     >
       View Stats
     </button><br>
-    <button
-      class="button modal-button"
-      data-target="settingsModal"
-    >
-      Settings
-    </button><br>
+    <p>
+      <button
+        id="viewStorage"
+        class="button"
+      >
+        Storage
+      </button>
+    </p>
+    <p>
+      <button
+        id="viewPokeDex"
+        class="button"
+      >
+        PokeDex
+      </button>
+    </p>
+    <p>
+      <button
+        class="button modal-button"
+        data-target="settingsModal"
+      >
+        Settings
+      </button><br>
+    </p>
   </div>
 </template>

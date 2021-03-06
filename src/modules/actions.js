@@ -12,15 +12,15 @@ export default (player, combatLoop, enemy, town, story) => {
 
         changeRoute: function (newRouteId, force = false) {
             if (!force && player.alivePokeIndexes().length == 0) {
-                dom.gameConsoleLog('It is too dangerous to travel without a pokemon.', 'red');
+                alert('It is too dangerous to travel without a pokemon.');
                 return false;
             }
             if (combatLoop.trainer) {
-                dom.gameConsoleLog('You cannot run away from a trainer battle.', 'red');
+                alert('You cannot run away from a trainer battle.');
                 return false;
             }
             if (!player.routeUnlocked(player.settings.currentRegionId, newRouteId)) {
-                dom.gameConsoleLog('You cannot do that yet.', 'red');
+                alert('You cannot go there yet.');
                 return false;
             }
             player.settings.currentRouteId = newRouteId;
@@ -51,7 +51,7 @@ export default (player, combatLoop, enemy, town, story) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                prompt('You have not unlocked this region yet');
+                alert('You have not unlocked this region yet');
             }
         },
         goToJohto: function () {
@@ -65,7 +65,7 @@ export default (player, combatLoop, enemy, town, story) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                prompt('You have not unlocked this region yet');
+                alert('You have not unlocked this region yet');
             }
         },
         enablePokeListDelete: function () {
@@ -96,9 +96,6 @@ export default (player, combatLoop, enemy, town, story) => {
                 player.purgeData = true;
                 window.location.reload(true);
             }
-        },
-        clearConsole: function () {
-            dom.gameConsoleClear();
         },
         changeSelectedBall: function (newBall) {
             player.changeSelectedBall(newBall);

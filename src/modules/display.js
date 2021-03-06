@@ -11,7 +11,6 @@ export const renderView = (dom, enemy, player, purge = true) => {
 export default (player, combatLoop, userInteractions) => {
     const Display = {
         healElement: $('#heal'),
-        logElement: $('#console #console-text'),
         setValue: function (domElement, newValue, append) {
             if (append === undefined) { append = false; }
             if (append) {
@@ -300,23 +299,6 @@ export default (player, combatLoop, userInteractions) => {
             const toAnimate = $(`#${id}`);
             toAnimate.classList = `img attacked-${direction}`;
             window.setTimeout(() => toAnimate.classList = 'img', 80);
-        },
-        gameConsoleLog: function (text, color) {
-            if ($('#enableConsole').checked) {
-                if (color) {
-                    this.logElement.innerHTML = `<span style="color:${color};">${text}</span><br>${this.logElement.innerHTML}`;
-                } else {
-                    this.logElement.innerHTML = `${text}<br>${this.logElement.innerHTML}`;
-                }
-            }
-            const logAsArray = this.logElement.innerHTML.split('<br>');
-            if (logAsArray.length >= 100) {
-                logAsArray.splice(logAsArray.length - 1, 1);
-                this.logElement.innerHTML = logAsArray.join('<br>');
-            }
-        },
-        gameConsoleClear: function () {
-            this.logElement.innerHTML = '';
         },
         renderBalls: function () {
             Object.keys(player.ballsAmount).forEach((ballType) => {
