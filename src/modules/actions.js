@@ -308,7 +308,7 @@ export default (player, combatLoop, enemy, town, story) => {
                 achievementHTML += `<li${complete ? ' class="complete"' : ''}><b>${ACHIEVEMENTS.dex.caught[i].name}</b>: Catch ${string}</li>`;
             }
             document.getElementById('achievementsList').innerHTML = achievementHTML;
-            document.getElementById('achievementsContainer').style.display = 'block';
+            openModal(document.getElementById('achievementsModal'));
         },
         viewInventory: function () {
             if (!isEmpty(player.badges)) {

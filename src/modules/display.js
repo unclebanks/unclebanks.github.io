@@ -354,9 +354,6 @@ export default (player, combatLoop, userInteractions) => {
             $('#inventoryContainer').addEventListener('click',
                 (event) => { event.target === $('#inventoryContainer') && ($('#inventoryContainer').style.display = 'none'); });
 
-            $('#achievementsContainer').addEventListener('click',
-                (event) => { event.target === $('#achievementsContainer') && ($('#achievementsContainer').style.display = 'none'); });
-
             window.addEventListener('beforeunload', () => {
                 if (!player.purgeData) player.savePokes(true);
             });
