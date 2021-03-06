@@ -3,7 +3,7 @@
     :id="modalName"
     class="modal"
   >
-    <div class="modal-background" />
+    <div :class="showClose ? 'modal-background' : 'modal-background-no-close'" />
     <div
       :id="dialogName"
       class="modal-card"
@@ -13,6 +13,7 @@
           {{ title }}
         </p>
         <button
+          v-show="showClose"
           class="delete"
           aria-label="close"
         />
@@ -23,7 +24,10 @@
       </section>
 
       <footer class="modal-card-foot">
-        <button class="button">
+        <button
+          v-show="showClose"
+          class="button"
+        >
           Close
         </button>
       </footer>
@@ -36,6 +40,7 @@ export default {
     props: {
         name: { type: String, default: '', required: true },
         title: { type: String, default: '', required: true },
+        showClose: { type: Boolean, default: true },
     },
 
     computed: {

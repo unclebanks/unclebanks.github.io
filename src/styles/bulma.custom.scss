@@ -13,3 +13,7 @@
 .delete {
     @extend %delete
 }
+
+.modal-background-no-close {
+    @extend .modal-background
+}
