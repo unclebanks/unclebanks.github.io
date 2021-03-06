@@ -11,7 +11,6 @@ export default (lastSave, appModel) => {
     const Player = {
         pokemons: [],
         storage: [],
-        pokedexData: [],
         pokedexHighestID: 0,
         activePokeID: 0,
         lastHeal: Date.now(),
@@ -131,13 +130,11 @@ export default (lastSave, appModel) => {
         },
         findDexIndex: (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.name),
         addPokedex: function (pokeName, flag) {
-        // helper to search dex array for a string
-            // TODO: commit state.pokedex thing
             appModel.$store.commit('pokedex/addData', pokeName, flag);
         },
         hasDexEntry: function (pokeName, flag, exact = false) {
             function findFlag(obj) { return (this == obj.name); }
-            const dexEntry = this.pokedexData.find(findFlag, pokeName);
+            const dexEntry = this.getPokedexData().find(findFlag, pokeName);
             if (typeof dexEntry !== 'undefined') {
                 if ((exact && dexEntry.flag == flag)
                 || (!exact && dexEntry.flag >= flag)) {
@@ -155,8 +152,8 @@ export default (lastSave, appModel) => {
             let counter = 0;
             let i; let
                 pData;
-            for (i in this.pokedexData) {
-                pData = this.pokedexData[i];
+            for (i in appModel.$store.state.pokedex.data) {
+                pData = this.getPokedexData()[i];
                 if (exactMatch && flag == pData.flag) {
                     counter++;
                 } else if (!exactMatch && flag <= pData.flag) {
@@ -174,7 +171,7 @@ export default (lastSave, appModel) => {
         },
         activePoke: function () { return this.pokemons[this.activePokeID]; },
         getPokemon: function () { return this.pokemons; },
-        getPokedexData: function () { return this.pokedexData; },
+        getPokedexData: function () { return appModel.$store.state.pokedex.data; },
         reorderPokes: function (newList, list = 'roster') {
             if (list === 'roster') {
                 this.pokemons = newList;
@@ -327,7 +324,7 @@ export default (lastSave, appModel) => {
                 });
                 localStorage.setItem('ballsAmount', JSON.stringify(this.ballsAmount));
                 localStorage.setItem('battleItems', JSON.stringify(this.battleItems));
-                localStorage.setItem('pokedexData', JSON.stringify(this.pokedexData));
+                localStorage.setItem('pokedexData', JSON.stringify(this.getPokedexData()));
                 localStorage.setItem('statistics', JSON.stringify(this.statistics));
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
@@ -341,7 +338,7 @@ export default (lastSave, appModel) => {
             const saveData = JSON.stringify({
                 pokes: this.pokemons.map((poke) => poke.save()),
                 storage: this.storage.map((poke) => poke.save()),
-                pokedexData: this.pokedexData,
+                pokedexData: this.getPokedexData(),
                 statistics: this.statistics,
                 settings: this.settings,
                 ballsAmount: this.ballsAmount,
@@ -391,9 +388,7 @@ export default (lastSave, appModel) => {
                 this.ballsAmount = JSON.parse(localStorage.getItem('ballsAmount'));
             }
             if (JSON.parse(localStorage.getItem('pokedexData'))) {
-                this.pokedexData = JSON.parse(localStorage.getItem('pokedexData'));
-            } else {
-                this.pokedexData = [];
+                appModel.$store.state.pokedex.data = JSON.parse(localStorage.getItem('pokedexData'));
             }
             if (JSON.parse(localStorage.getItem('statistics'))) {
                 const loadedStats = JSON.parse(localStorage.getItem('statistics'));
@@ -459,7 +454,7 @@ export default (lastSave, appModel) => {
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
                 this.battleItems = saveData.battleItems;
-                this.pokedexData = saveData.pokedexData ? saveData.pokedexData : [];
+                appModel.$store.state.pokedex.data = saveData.pokedexData ? saveData.pokedexData : [];
                 const loadedStats = saveData.statistics ? saveData.statistics : {};
                 this.statistics = { ...this.statistics, ...loadedStats };
                 if (saveData.settings) {
