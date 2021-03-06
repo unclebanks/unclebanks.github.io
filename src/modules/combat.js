@@ -70,26 +70,16 @@ export default (player, enemy) => {
         dealDamage: function (attacker, defender, who) {
             if (!attacker || !defender) return null;
             if (attacker.alive() && defender.alive()) {
-                const consoleColor = (who === 'player') ? 'green' : 'rgb(207, 103, 59)';
                 // calculate damage done
                 const missRNG = RNG(5);
-                if (missRNG) {
-                    dom.gameConsoleLog(`${attacker.pokeName()} missed!`, consoleColor);
-                } else {
+                if (!missRNG) {
                     const critRNG = RNG(5);
                     const critMultiplier = (critRNG) ? 1 + (attacker.level() / 100) : 1;
                     const damageMultiplier = Combat.calculateDamageMultiplier(attacker.types(), defender.types()) * critMultiplier;
                     const damage = defender.takeDamage(attacker.avgAttack() * damageMultiplier);
-                    if (critRNG) {
-                        dom.gameConsoleLog('Critical Hit!!', consoleColor);
-                    }
                     if (who === 'player') {
                     // TODO add some flair
-                        dom.gameConsoleLog(`${attacker.pokeName()} Attacked for ${damage}`, 'green');
                         player.statistics.totalDamage += damage;
-                    } else {
-                    // TODO add some flair
-                        dom.gameConsoleLog(`${attacker.pokeName()} Attacked for ${damage}`, 'rgb(207, 103, 59)');
                     }
                     dom.renderPokeOnContainer('enemy', enemy.activePoke());
                     dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back');
@@ -131,13 +121,11 @@ export default (player, enemy) => {
             const expToGive = (Combat.enemyActivePoke.baseExp() / 16) + (Combat.enemyActivePoke.level() * 3);
             player.statistics.totalExp += expToGive;
             Combat.playerActivePoke.giveExp(expToGive);
-            dom.gameConsoleLog(`${Combat.playerActivePoke.pokeName()} won ${Math.floor(expToGive)}xp`, 'rgb(153, 166, 11)');
             player.getPokemon().forEach((poke) => poke.giveExp((Combat.enemyActivePoke.baseExp() / 100) + (Combat.enemyActivePoke.level() / 10)));
             const afterExp = player.getPokemon().map((poke) => poke.level());
 
             // check if a pokemon leveled up
             if (beforeExp.join('') !== afterExp.join('')) {
-                dom.gameConsoleLog('Your pokemon gained a level', 'rgb(153, 166, 11)');
                 if (player.settings.listView == 'roster') {
                     dom.renderPokeList(false);
                 }
@@ -150,11 +138,9 @@ export default (player, enemy) => {
                 const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.trainerPoke.length) + 5;
                 player.addBattleCoins(foundBattleCoins);
                 if (Combat.trainerPoke.length < 1) {
-                    dom.gameConsoleLog(`You have defeated ${Combat.trainer.name}`, 'blue');
                     if (Combat.trainer.badge) {
                         if (!player.badges[Combat.trainer.badge]) {
                             player.badges[Combat.trainer.badge] = true;
-                            dom.gameConsoleLog(`You have earned the <b>${Combat.trainer.badge}</b>.`, 'purple');
                             dom.renderRouteList();
                         }
                     }
@@ -185,22 +171,17 @@ export default (player, enemy) => {
             }
         },
         playerFaint: function () {
-            dom.gameConsoleLog(`${Combat.playerActivePoke.pokeName()} Fainted! `);
             const alivePokeIndexes = player.alivePokeIndexes();
             if (alivePokeIndexes.length > 0) {
                 player.setActive(player.getPokemon().indexOf(alivePokeIndexes[0]));
                 Combat.playerActivePoke = player.activePoke();
-                dom.gameConsoleLog(`Go ${Combat.playerActivePoke.pokeName()}!`);
                 Combat.refresh();
             } else {
-                dom.gameConsoleLog('You have no more usable pokemon. You blacked out!', 'red');
                 if (Combat.trainer) {
-                    dom.gameConsoleLog('You have been defeated', 'red');
                     Combat.trainer = null;
                     Combat.pause();
                 }
                 flash($('#gameContainer'));
-                dom.gameConsoleLog('You reawaken at the nearest pokecenter.', 'blue');
                 if (ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn) {
                     userInteractions.changeRoute(ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn, true);
                 }
@@ -212,7 +193,6 @@ export default (player, enemy) => {
                 const selectedBall = (enemy.activePoke().shiny() ? player.bestAvailableBall() : player.selectedBall);
                 if (player.consumeBall(selectedBall)) {
                 // add throw to statistics
-                    dom.gameConsoleLog(`Trying to catch ${enemy.activePoke().pokeName()}...`, 'purple');
                     player.statistics.totalThrows++;
                     player.statistics[`${selectedBall}Throws`]++;
                     dom.renderBalls();
@@ -223,7 +203,6 @@ export default (player, enemy) => {
                         player.statistics.successfulThrows++;
                         player.statistics[`${selectedBall}SuccessfulThrows`]++;
                         player.addCatchCoins(gainCatchCoins);
-                        dom.gameConsoleLog(`You caught ${enemy.activePoke().pokeName()}and gained${gainCatchCoins}!!`, 'purple');
                         if (!player.hasPokemon(enemy.activePoke().pokeName(), 0)) {
                             player.addPoke(enemy.activePoke(), 0);
                             dom.renderPokeList();
@@ -236,8 +215,6 @@ export default (player, enemy) => {
                             player.statistics.caught++;
                         }
                         renderView(dom, enemy, player);
-                    } else {
-                        dom.gameConsoleLog(`${enemy.activePoke().pokeName()} escaped!!`, 'purple');
                     }
                 }
             }
@@ -253,7 +230,6 @@ export default (player, enemy) => {
             for (const ballName in ballWeights) {
                 if (rng < ballWeights[ballName]) {
                     player.addBalls(ballName, ballsAmount);
-                    dom.gameConsoleLog(`You found ${ballsAmount} ${ballName}s!!`, 'purple');
                     dom.renderBalls();
                 }
             }

@@ -8,7 +8,7 @@
         id="enableCatchNew"
         type="checkbox"
       ><span>New</span></label>
-    </p>
+    </p><br>
     <input
       id="pokeball"
       type="radio"

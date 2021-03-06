@@ -45,11 +45,29 @@ enemy.attachCL(combatLoop);
     town,
 ].forEach((obj) => obj.attachDOM(dom));
 
-const globals = {
-    userInteractions,
-    story,
-    town,
-};
+let globals;
+if (process.env.NODE_ENV === 'development') {
+    // Expose all of the things in development, for easier debugging
+    globals = {
+        lastSave,
+        player,
+        Poke,
+        enemy,
+        combatLoop,
+        town,
+        story,
+        userInteractions,
+        dom,
+        models,
+    };
+} else {
+    // Otherwise, just the things we need to make the game run
+    globals = {
+        userInteractions,
+        story,
+        town,
+    };
+}
 
 // expose globals for use on inline event handlers in html
 Object.assign(window, globals);
@@ -77,6 +95,7 @@ dom.renderCurrency();
 renderView(dom, enemy, player);
 dom.renderRoutesBox();
 dom.renderListBox();
+dom.renderPokeList();
 dom.renderRegionSelect();
 dom.renderPokeSort();
 

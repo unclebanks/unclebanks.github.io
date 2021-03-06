@@ -1,16 +1,6 @@
 <template>
   <div id="listBox">
     <div
-      id="rosterBox"
-      style="display: none;"
-    >
-      <input
-        id="enableDelete"
-        type="checkbox"
-      ><label for="enableDelete"><span class="checkDescription">Manage Team</span></label>
-      <ul id="rosterList" />
-    </div>
-    <div
       id="storageBox"
       style="display: none;"
     >

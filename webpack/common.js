@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge');
+const { mode } = require('webpack-nano/argv');
 const path = require('path');
 const parts = require('./parts');
 
@@ -27,6 +28,8 @@ const getCommon = ({ outputPath, sourcePath, entries }) => (merge(
 
     // Remove old files before generating more
     parts.cleanBuild(outputPath),
+
+    parts.setFreeVariable('NODE_ENV', mode),
 
     // Where to start looking for things to bundle
     { entry: ['./src'] },
