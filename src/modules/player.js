@@ -133,7 +133,7 @@ export default (lastSave) => {
         addPokedex: function (pokeName, flag) {
         // helper to search dex array for a string
             function findFlag(obj) { return (this == obj.name); }
-            const dexEntry = this.pokedexData.find(findFlag, pokeName);
+            let dexEntry = this.pokedexData.find(findFlag, pokeName);
             let reloadDex = false;
             if (typeof dexEntry === 'object') {
                 if (dexEntry.flag < flag
@@ -148,7 +148,8 @@ export default (lastSave) => {
                 }
             } else {
                 reloadDex = true;
-                this.pokedexData.push({ name: pokeName, flag: flag });
+                dexEntry = { name: pokeName, flag: flag };
+                this.pokedexData.push(dexEntry);
             }
             if (Player.settings.listView == 'pokeDex' && reloadDex) {
             // is it a new highest entry?
