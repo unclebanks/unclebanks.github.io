@@ -52,27 +52,27 @@ export default (player, Poke) => {
             },
             {
                 name: 'Thunder Stone',
-                catchcoins: 10000,
+                catchcoins: 1000,
                 unlockable: 'thunderStone',
             },
             {
                 name: 'Fire Stone',
-                catchcoins: 10000,
+                catchcoins: 1000,
                 unlockable: 'fireStone',
             },
             {
                 name: 'Water Stone',
-                catchcoins: 10000,
+                catchcoins: 1000,
                 unlockable: 'waterStone',
             },
             {
                 name: 'Leaf Stone',
-                catchcoins: 10000,
+                catchcoins: 1000,
                 unlockable: 'leafStone',
             },
             {
                 name: 'Moon Stone',
-                catchcoins: 10000,
+                catchcoins: 1000,
                 unlockable: 'moonStone',
             },
         ],
