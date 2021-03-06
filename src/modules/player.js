@@ -4,14 +4,13 @@ import mkPoke from './poke';
 import ROUTES from './routes';
 import { mergeArray, pokeByName } from './utilities';
 
-export default (lastSave) => {
+export default (lastSave, appModel) => {
     let dom;
     let Poke;
 
     const Player = {
         pokemons: [],
         storage: [],
-        pokedexData: [],
         pokedexHighestID: 0,
         activePokeID: 0,
         lastHeal: Date.now(),
@@ -131,38 +130,11 @@ export default (lastSave) => {
         },
         findDexIndex: (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.name),
         addPokedex: function (pokeName, flag) {
-        // helper to search dex array for a string
-            function findFlag(obj) { return (this == obj.name); }
-            let dexEntry = this.pokedexData.find(findFlag, pokeName);
-            let reloadDex = false;
-            if (typeof dexEntry === 'object') {
-                if (dexEntry.flag < flag
-                || (dexEntry.flag == POKEDEXFLAGS.ownShiny && flag == POKEDEXFLAGS.releasedShiny) // own can be released
-                || (dexEntry.flag == POKEDEXFLAGS.ownNormal && flag == POKEDEXFLAGS.releasedNormal)
-                || (dexEntry.flag == POKEDEXFLAGS.ownShiny && flag == POKEDEXFLAGS.ownedShiny) // own can be come owned
-                || (dexEntry.flag == POKEDEXFLAGS.ownNormal && flag == POKEDEXFLAGS.ownedNormal)) {
-                    if (this.pokedexData[this.pokedexData.indexOf(dexEntry)].flag !== flag) {
-                        reloadDex = true;
-                        this.pokedexData[this.pokedexData.indexOf(dexEntry)].flag = flag;
-                    }
-                }
-            } else {
-                reloadDex = true;
-                dexEntry = { name: pokeName, flag: flag };
-                this.pokedexData.push(dexEntry);
-            }
-            if (Player.settings.listView == 'pokeDex' && reloadDex) {
-            // is it a new highest entry?
-                const dexID = this.findDexIndex(dexEntry);
-                if (this.pokedexHighestID < dexID) {
-                    this.pokedexHighestID = dexID;
-                }
-                dom.renderPokeDex();
-            }
+            appModel.$store.commit('pokedex/addData', { pokeName, flag });
         },
         hasDexEntry: function (pokeName, flag, exact = false) {
             function findFlag(obj) { return (this == obj.name); }
-            const dexEntry = this.pokedexData.find(findFlag, pokeName);
+            const dexEntry = this.getPokedexData().find(findFlag, pokeName);
             if (typeof dexEntry !== 'undefined') {
                 if ((exact && dexEntry.flag == flag)
                 || (!exact && dexEntry.flag >= flag)) {
@@ -180,8 +152,8 @@ export default (lastSave) => {
             let counter = 0;
             let i; let
                 pData;
-            for (i in this.pokedexData) {
-                pData = this.pokedexData[i];
+            for (i in this.getPokedexData()) {
+                pData = this.getPokedexData()[i];
                 if (exactMatch && flag == pData.flag) {
                     counter++;
                 } else if (!exactMatch && flag <= pData.flag) {
@@ -199,7 +171,7 @@ export default (lastSave) => {
         },
         activePoke: function () { return this.pokemons[this.activePokeID]; },
         getPokemon: function () { return this.pokemons; },
-        getPokedexData: function () { return this.pokedexData; },
+        getPokedexData: function () { return appModel.$store.state.pokedex.data; },
         reorderPokes: function (newList, list = 'roster') {
             if (list === 'roster') {
                 this.pokemons = newList;
@@ -352,7 +324,7 @@ export default (lastSave) => {
                 });
                 localStorage.setItem('ballsAmount', JSON.stringify(this.ballsAmount));
                 localStorage.setItem('battleItems', JSON.stringify(this.battleItems));
-                localStorage.setItem('pokedexData', JSON.stringify(this.pokedexData));
+                localStorage.setItem('pokedexData', JSON.stringify(this.getPokedexData()));
                 localStorage.setItem('statistics', JSON.stringify(this.statistics));
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
@@ -366,7 +338,7 @@ export default (lastSave) => {
             const saveData = JSON.stringify({
                 pokes: this.pokemons.map((poke) => poke.save()),
                 storage: this.storage.map((poke) => poke.save()),
-                pokedexData: this.pokedexData,
+                pokedexData: this.getPokedexData(),
                 statistics: this.statistics,
                 settings: this.settings,
                 ballsAmount: this.ballsAmount,
@@ -416,9 +388,7 @@ export default (lastSave) => {
                 this.ballsAmount = JSON.parse(localStorage.getItem('ballsAmount'));
             }
             if (JSON.parse(localStorage.getItem('pokedexData'))) {
-                this.pokedexData = JSON.parse(localStorage.getItem('pokedexData'));
-            } else {
-                this.pokedexData = [];
+                appModel.$store.state.pokedex.data = JSON.parse(localStorage.getItem('pokedexData'));
             }
             if (JSON.parse(localStorage.getItem('statistics'))) {
                 const loadedStats = JSON.parse(localStorage.getItem('statistics'));
@@ -484,7 +454,7 @@ export default (lastSave) => {
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
                 this.battleItems = saveData.battleItems;
-                this.pokedexData = saveData.pokedexData ? saveData.pokedexData : [];
+                appModel.$store.state.pokedex.data = saveData.pokedexData ? saveData.pokedexData : [];
                 const loadedStats = saveData.statistics ? saveData.statistics : {};
                 this.statistics = { ...this.statistics, ...loadedStats };
                 if (saveData.settings) {

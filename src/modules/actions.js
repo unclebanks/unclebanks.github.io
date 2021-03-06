@@ -78,11 +78,6 @@ export default (player, combatLoop, enemy, town, story) => {
             dom.renderPokeSort();
             dom.renderListBox();
         },
-        changeDexView: function () {
-            const regionSelect = document.getElementById('dexView');
-            player.settings.dexView = regionSelect.options[regionSelect.selectedIndex].value;
-            dom.renderPokeDex();
-        },
         changeCatchOption: function (newCatchOption) {
             combatLoop.changeCatch(newCatchOption);
         },
