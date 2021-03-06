@@ -260,7 +260,9 @@ export default (player, combatLoop, enemy, town, story) => {
                 'ultraballSuccessfulThrows': 'Caught with Ultraball',
                 'masterballThrows': 'Masterball Throws',
                 'masterballSuccessfulThrows': 'Caught with Masterball',
-                'totalPokeCoins': 'Total Coin Obtained',
+                'totalPokeCoins': 'Total PokeCoins Obtained',
+                'totalCatchCoins': 'Total CatchCoins Obtained',
+                'totalBattleCoins': 'Total BattleCoins Obtained',
                 'totalExp': 'Total Experience Earned',
             };
             let statList = '';
@@ -268,7 +270,7 @@ export default (player, combatLoop, enemy, town, story) => {
                 statList += `<li>${statisticStrings[statValue]}: ${player.statistics[statValue]}</li>`;
             }
             document.getElementById('statisticsList').innerHTML = statList;
-            document.getElementById('statisticsContainer').style.display = 'block';
+            openModal(document.getElementById('statisticsModal'));
         },
         viewAchievements: function () {
             let achievementHTML = '';
