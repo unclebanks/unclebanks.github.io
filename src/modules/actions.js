@@ -324,7 +324,7 @@ export default (player, combatLoop, enemy, town, story) => {
             town.renderPokeCoinShop();
             town.renderBattleCoinShop();
             town.renderCatchCoinShop();
-            document.getElementById('townContainer').style.display = 'block';
+            openModal(document.getElementById('townModal'));
         },
         trainerBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];

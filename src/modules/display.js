@@ -360,9 +360,6 @@ export default (player, combatLoop, userInteractions) => {
             $('#achievementsContainer').addEventListener('click',
                 (event) => { event.target === $('#achievementsContainer') && ($('#achievementsContainer').style.display = 'none'); });
 
-            $('#townContainer').addEventListener('click',
-                (event) => { event.target === $('#townContainer') && ($('#townContainer').style.display = 'none'); });
-
             window.addEventListener('beforeunload', () => {
                 if (!player.purgeData) player.savePokes(true);
             });
