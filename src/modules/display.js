@@ -86,42 +86,6 @@ export default (player, combatLoop, userInteractions) => {
                 $('#dexView').style.display = 'block';
             }
         },
-        renderPokeDex: function () {
-            /*
-            const dexData = player.getPokedexData();
-            const listElement = $('#dexList');
-            let listValue = '';
-            function findFlag(obj) { return (this == obj.name); }
-            let count = POKEDEX.length;
-            if (player.settings.dexView === 'all') {
-                let highestPoke = player.pokedexHighestID;
-                if (highestPoke == 0) {
-                    highestPoke = player.getHighestPokeDex();
-                }
-                if (highestPoke) {
-                    const highestID = player.findDexIndex(highestPoke);
-                    count = highestID + 5;
-                }
-            }
-            for (let y = 0; y < count; y++) {
-                let dexEntry = dexData.find(findFlag, POKEDEX[y].pokemon[0].Pokemon);
-                if (typeof dexEntry === 'undefined') dexEntry = { name: '', flag: 0 };
-                if (player.settings.dexView == 'all'
-                || (player.settings.dexView == 'own' && (dexEntry.flag == POKEDEXFLAGS.ownNormal || dexEntry.flag == POKEDEXFLAGS.ownShiny))
-                || (player.settings.dexView == 'owned' && (dexEntry.flag >= POKEDEXFLAGS.releasedNormal))
-                || (player.settings.dexView == 'missing' && (dexEntry.flag != POKEDEXFLAGS.ownNormal && dexEntry.flag != POKEDEXFLAGS.ownShiny))
-                || (player.settings.dexView == 'shiny' && (dexEntry.flag == POKEDEXFLAGS.ownShiny))) {
-                    if (player.settings.dexView === 'all' && dexEntry.flag == POKEDEXFLAGS.unseen) {
-                        listValue += `<li class="pokeDex${dexEntry.flag}">${y + 1} ???</li>`;
-                    } else {
-                        listValue += `<li class="pokeDex${dexEntry.flag}">${y + 1} ${POKEDEX[y].pokemon[0].Pokemon}</li>`;
-                    }
-                }
-            }
-            this.setValue(listElement, listValue, false);
-            this.renderPokeDexSort();
-            */
-        },
         renderHeal: function (canHeal, enemy) {
             if (canHeal === true) {
                 this.setValue(this.healElement, 'Heal!');
@@ -287,7 +251,6 @@ export default (player, combatLoop, userInteractions) => {
             // which is showing
             if (player.settings.listView === 'pokeDex') {
                 pokeDex.style.display = 'block';
-                this.renderPokeDex();
             } if (player.settings.listView === 'storage') {
                 storage.style.display = 'block';
                 this.renderStorage();
@@ -358,9 +321,6 @@ export default (player, combatLoop, userInteractions) => {
             $('#viewStorage').addEventListener('click', () => {
                 userInteractions.changeListView('storage');
             });
-
-            $('#dexView').addEventListener('change',
-                () => { userInteractions.changeDexView(); });
 
             $('#enableCatchAll').addEventListener('click',
                 () => {

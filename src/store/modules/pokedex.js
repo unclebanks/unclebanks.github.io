@@ -27,16 +27,6 @@ export default {
                 const id = POKEDEX.findIndex((p) => p.pokemon[0].Pokemon === pokeName) + 1;
                 state.data.push({ id, name: pokeName, flag: flag });
             }
-            /*
-            if (Player.settings.listView == 'pokeDex' && reloadDex) {
-            // is it a new highest entry?
-                const dexID = this.findDexIndex(dexEntry);
-                if (this.pokedexHighestID < dexID) {
-                    this.pokedexHighestID = dexID;
-                }
-                dom.renderPokeDex();
-            }
-            */
         },
     },
 
