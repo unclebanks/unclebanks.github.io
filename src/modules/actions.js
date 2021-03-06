@@ -347,3 +347,9 @@ export default (player, combatLoop, enemy, town, story) => {
 
     return UserActions;
 };
+
+export const dummy = new Proxy({}, {
+    get(target, prop) {
+        return () => {};
+    },
+});

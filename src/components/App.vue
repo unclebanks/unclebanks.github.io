@@ -10,6 +10,8 @@
     <PartyBox />
     <PokeGear />
   </div>
+
+  <Modals :ui="ui" />
 </template>
 
 <script>
@@ -23,6 +25,11 @@ import NavBox from './NavBox.vue';
 import RegionBox from './RegionBox.vue';
 import PartyBox from './PartyBox.vue';
 import PokeGear from './PokeGear.vue';
+import Modals from './Modals.vue';
+
+// Fake userInteractions object that does nothing
+// to be replaced on game start when a real one is created.
+import { dummy } from '../modules/actions';
 
 export default {
     components: {
@@ -35,6 +42,13 @@ export default {
         RegionBox,
         PartyBox,
         PokeGear,
+        Modals,
+    },
+
+    data() {
+        return {
+            ui: dummy,
+        };
     },
 };
 </script>

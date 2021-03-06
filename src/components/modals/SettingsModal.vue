@@ -86,19 +86,8 @@ export default {
         Button,
     },
 
-    // Defines what data this component wants
-    data() {
-        return {
-            ui: {
-                // Giving a default functions that do nothing
-                // They will be replaced later when ui is passed to us
-                clearGameData() {},
-                importSaveDialog() {},
-                exportSaveDialog() {},
-                forceSave() {},
-                changeSpriteChoice() {},
-            },
-        };
+    props: {
+        ui: { type: Object, required: true },
     },
 };
 </script>
