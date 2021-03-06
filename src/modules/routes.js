@@ -612,8 +612,8 @@ const ROUTES = {
                     'Earth Badge': true
                 }
             }
-        },
-        kOldRod: {
+        }
+        , kOldRod: {
             name: 'Kanto Old Rod',
             pokes: ['Magikarp'],
             minLevel: 5,
@@ -629,7 +629,7 @@ const ROUTES = {
             respawn: 'palletTown',
             kantoGoodRod: 1
         }
-        , kOldRod: {
+        , kSuperRod: {
             name: 'Kanto Super Rod',
             pokes: ['Shellder', 'Krabby', 'Horsea', 'Staryu', 'Dratini'],
             minLevel: 30,

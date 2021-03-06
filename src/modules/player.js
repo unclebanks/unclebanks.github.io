@@ -55,6 +55,15 @@ export default (lastSave) => {
             catchcoins: 0,
             battlecoins: 0,
         },
+        battleItems: {
+            xAttack: 0,
+            xDefense: 0,
+            xSpeed: 0,
+            xSpAttack: 0,
+            xSpDefense: 0,
+            expBoost: 0,
+            currencyBoost: 0,
+        },
         settings: {
             currentRegionId: 'Kanto',
             currentRouteId: 'route1',
@@ -313,13 +322,13 @@ export default (lastSave) => {
         },
         routeUnlocked: function (region, route) {
             const routeData = ROUTES[region][route];
-            if (routeData.kantoOldRod && !Player.fishingRods.kantoOldRod) {
+            if (routeData.kantoOldRod && !Player.fishingRods.kantoOldRod === 1) {
                 return false;
             }
-            if (routeData.kantoGoodRod && !Player.fishingRods.kantoGoodRod) {
+            if (routeData.kantoGoodRod && !Player.fishingRods.kantoGoodRod === 1) {
                 return false;
             }
-            if (routeData.kantoSuperRod && !Player.fishingRods.kantoSuperRod) {
+            if (routeData.kantoSuperRod && !Player.fishingRods.kantoSuperRod === 1) {
                 return false;
             }
             if (routeData._unlock) {
@@ -341,6 +350,7 @@ export default (lastSave) => {
                     localStorage.setItem(`storage${index}`, JSON.stringify(poke.save()));
                 });
                 localStorage.setItem('ballsAmount', JSON.stringify(this.ballsAmount));
+                localStorage.setItem('battleItems', JSON.stringify(this.battleItems));
                 localStorage.setItem('pokedexData', JSON.stringify(this.pokedexData));
                 localStorage.setItem('statistics', JSON.stringify(this.statistics));
                 localStorage.setItem('settings', JSON.stringify(this.settings));
@@ -364,6 +374,7 @@ export default (lastSave) => {
                 evoStones: this.evoStones,
                 fishingRods: this.fishingRods,
                 currencyAmount: this.currencyAmount,
+                battleItems: this.battleItems,
             });
             return btoa(`${this.checksum(saveData)}|${saveData}`);
         },
@@ -431,6 +442,9 @@ export default (lastSave) => {
             if (JSON.parse(localStorage.getItem('fishingRods'))) {
                 this.fishingRods = JSON.parse(localStorage.getItem('fishingRods'));
             }
+            if (JSON.parse(localStorage.getItem('battleItems'))) {
+                this.battleItems = JSON.parse(localStorage.getItem('battleItems'));
+            }
         },
         loadFromString: function (_saveData) {
             let saveData = atob(_saveData);
@@ -468,6 +482,7 @@ export default (lastSave) => {
                 });
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
+                this.battleItems = saveData.battleItems;
                 this.pokedexData = saveData.pokedexData ? saveData.pokedexData : [];
                 const loadedStats = saveData.statistics ? saveData.statistics : {};
                 this.statistics = { ...this.statistics, ...loadedStats };
