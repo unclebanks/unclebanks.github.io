@@ -130,7 +130,7 @@ export default (lastSave, appModel) => {
         },
         findDexIndex: (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.name),
         addPokedex: function (pokeName, flag) {
-            appModel.$store.commit('pokedex/addData', pokeName, flag);
+            appModel.$store.commit('pokedex/addData', { pokeName, flag });
         },
         hasDexEntry: function (pokeName, flag, exact = false) {
             function findFlag(obj) { return (this == obj.name); }
@@ -152,7 +152,7 @@ export default (lastSave, appModel) => {
             let counter = 0;
             let i; let
                 pData;
-            for (i in appModel.$store.state.pokedex.data) {
+            for (i in this.getPokedexData()) {
                 pData = this.getPokedexData()[i];
                 if (exactMatch && flag == pData.flag) {
                     counter++;

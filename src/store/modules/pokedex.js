@@ -11,7 +11,7 @@ export default {
     },
 
     mutations: {
-        addData(state, pokeName, flag) {
+        addData(state, { pokeName, flag }) {
             const dexEntry = state.data.find((entry) => entry.name === pokeName);
             if (typeof dexEntry === 'object') {
                 if (dexEntry.flag < flag
