@@ -44,7 +44,7 @@ export default (player) => {
                     player.addPokedex(oldPokemon, (shiny ? POKEDEXFLAGS.ownedShiny : POKEDEXFLAGS.ownedNormal));
                 }
             }
-            if (player.unlocked[stoneType]) {
+            if (player.evoStones[stoneType]) {
                 this.poke = cloneJsonObject(pokeByName(evolution));
                 player.addPokedex(evolution, (shiny ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
                 if (!player.hasPokemon(oldPokemon, shiny)) {
@@ -63,7 +63,7 @@ export default (player) => {
                     return true;
                 }
             }
-            if (player.unlocked[stoneType]) {
+            if (player.evoStones[stoneType]) {
                 if (!player.hasPokemon(EVOLUTIONS[this.poke.pokemon[0].Pokemon].to, 0)) {
                     return true;
                 }

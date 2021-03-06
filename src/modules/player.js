@@ -25,15 +25,30 @@ export default (lastSave) => {
         unlocked: {
             shinyDex: 0,
             razzBerry: 0,
-            kantoOldRod: 0,
-            kantoGoodRod: 0,
-            kantoSuperRod: 0,
+            timeMachine: 0,
+        },
+        evoStones: {
             thunderStone: 0,
             fireStone: 0,
             waterStone: 0,
             leafStone: 0,
             moonStone: 0,
-            timeMachine: 0,
+            sunStone: 0,
+            shinyStone: 0,
+            duskStone: 0,
+            dawnStone: 0,
+            iceStone: 0,
+        },
+        fishingRods: {
+            kantoOldRod: 0,
+            kantoGoodRod: 0,
+            kantoSuperRod: 0,
+            johtoOldRod: 0,
+            johtoGoodRod: 0,
+            johtoSuperRod: 0,
+            hoennOldRod: 0,
+            hoennGoodRod: 0,
+            hoennSuperRod: 0,
         },
         currencyAmount: {
             pokecoins: 0,
@@ -298,13 +313,13 @@ export default (lastSave) => {
         },
         routeUnlocked: function (region, route) {
             const routeData = ROUTES[region][route];
-            if (routeData.kantoOldRod && !Player.unlocked.kantoOldRod) {
+            if (routeData.kantoOldRod && !Player.fishingRods.kantoOldRod) {
                 return false;
             }
-            if (routeData.kantoGoodRod && !Player.unlocked.kantoGoodRod) {
+            if (routeData.kantoGoodRod && !Player.fishingRods.kantoGoodRod) {
                 return false;
             }
-            if (routeData.kantoSuperRod && !Player.unlocked.kantoSuperRod) {
+            if (routeData.kantoSuperRod && !Player.fishingRods.kantoSuperRod) {
                 return false;
             }
             if (routeData._unlock) {
@@ -331,6 +346,8 @@ export default (lastSave) => {
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
                 localStorage.setItem('unlocked', JSON.stringify(this.unlocked));
+                localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
+                localStorage.setItem('fishingRods', JSON.stringify(this.fishingRods));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
             }
         },
@@ -344,6 +361,8 @@ export default (lastSave) => {
                 ballsAmount: this.ballsAmount,
                 badges: this.badges,
                 unlocked: this.unlocked,
+                evoStones: this.evoStones,
+                fishingRods: this.fishingRods,
                 currencyAmount: this.currencyAmount,
             });
             return btoa(`${this.checksum(saveData)}|${saveData}`);
@@ -405,6 +424,12 @@ export default (lastSave) => {
             }
             if (JSON.parse(localStorage.getItem('currencyAmount'))) {
                 this.currencyAmount = JSON.parse(localStorage.getItem('currencyAmount'));
+            }
+            if (JSON.parse(localStorage.getItem('evoStones'))) {
+                this.evoStones = JSON.parse(localStorage.getItem('evoStones'));
+            }
+            if (JSON.parse(localStorage.getItem('fishingRods'))) {
+                this.fishingRods = JSON.parse(localStorage.getItem('fishingRods'));
             }
         },
         loadFromString: function (_saveData) {
