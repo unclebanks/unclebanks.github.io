@@ -1,6 +1,8 @@
 import { POKEDEXFLAGS } from '../../modules/data';
 import POKEDEX from '../../modules/db';
 
+const MAX_POKEMON = POKEDEX.length;
+
 export default {
     namespaced: true,
 
@@ -33,13 +35,21 @@ export default {
     getters: {
         dataWithUnseen(state) {
             const unseen = { name: '???', flag: 0 };
-            return state.data
+
+            const list = state.data
                 .sort((a, b) => a.id - b.id)
                 .reduce((list, entry) => [
+                    // What we have so far
                     ...list,
+                    // Some ??? to fill in between
                     ...Array(entry.id - list.length - 1).fill(unseen),
+                    // The next one to add
                     entry,
                 ], []);
+
+            const extra = Math.max(0, Math.min(5, MAX_POKEMON - list.length));
+
+            return list.concat(Array(extra).fill(unseen));
         },
     },
 };
