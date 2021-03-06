@@ -4,7 +4,7 @@ import mkPoke from './poke';
 import ROUTES from './routes';
 import { mergeArray, pokeByName } from './utilities';
 
-export default (lastSave) => {
+export default (lastSave, appModel) => {
     let dom;
     let Poke;
 
@@ -132,33 +132,8 @@ export default (lastSave) => {
         findDexIndex: (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.name),
         addPokedex: function (pokeName, flag) {
         // helper to search dex array for a string
-            function findFlag(obj) { return (this == obj.name); }
-            let dexEntry = this.pokedexData.find(findFlag, pokeName);
-            let reloadDex = false;
-            if (typeof dexEntry === 'object') {
-                if (dexEntry.flag < flag
-                || (dexEntry.flag == POKEDEXFLAGS.ownShiny && flag == POKEDEXFLAGS.releasedShiny) // own can be released
-                || (dexEntry.flag == POKEDEXFLAGS.ownNormal && flag == POKEDEXFLAGS.releasedNormal)
-                || (dexEntry.flag == POKEDEXFLAGS.ownShiny && flag == POKEDEXFLAGS.ownedShiny) // own can be come owned
-                || (dexEntry.flag == POKEDEXFLAGS.ownNormal && flag == POKEDEXFLAGS.ownedNormal)) {
-                    if (this.pokedexData[this.pokedexData.indexOf(dexEntry)].flag !== flag) {
-                        reloadDex = true;
-                        this.pokedexData[this.pokedexData.indexOf(dexEntry)].flag = flag;
-                    }
-                }
-            } else {
-                reloadDex = true;
-                dexEntry = { name: pokeName, flag: flag };
-                this.pokedexData.push(dexEntry);
-            }
-            if (Player.settings.listView == 'pokeDex' && reloadDex) {
-            // is it a new highest entry?
-                const dexID = this.findDexIndex(dexEntry);
-                if (this.pokedexHighestID < dexID) {
-                    this.pokedexHighestID = dexID;
-                }
-                dom.renderPokeDex();
-            }
+            // TODO: commit state.pokedex thing
+            appModel.$store.commit('pokedex/addData', pokeName, flag);
         },
         hasDexEntry: function (pokeName, flag, exact = false) {
             function findFlag(obj) { return (this == obj.name); }

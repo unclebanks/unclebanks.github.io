@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import store from './store';
 
 // Modals
 import SettingsModal from './components/modals/SettingsModal.vue';
@@ -7,7 +8,7 @@ import SettingsModal from './components/modals/SettingsModal.vue';
 import App from './components/App.vue';
 
 export default () => {
-    const app = createApp(App);
+    const app = createApp(App).use(store);
     const settingsModal = createApp(SettingsModal);
 
     return {

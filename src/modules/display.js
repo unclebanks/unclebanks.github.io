@@ -87,6 +87,7 @@ export default (player, combatLoop, userInteractions) => {
             }
         },
         renderPokeDex: function () {
+            /*
             const dexData = player.getPokedexData();
             const listElement = $('#dexList');
             let listValue = '';
@@ -119,6 +120,7 @@ export default (player, combatLoop, userInteractions) => {
             }
             this.setValue(listElement, listValue, false);
             this.renderPokeDexSort();
+            */
         },
         renderHeal: function (canHeal, enemy) {
             if (canHeal === true) {
