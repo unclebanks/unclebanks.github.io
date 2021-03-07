@@ -189,27 +189,27 @@ export default (player, combatLoop, enemy, town, story) => {
             setTimeout(() => { $('#forceSave').style.display = 'none'; }, 5000);
         },
         exportSaveDialog: function () {
-            document.getElementById('saveDialogTitle').innerHTML = 'Export your save';
+            $('#savetextDialog .modal-card-title').innerHTML = 'Export your save';
             if (document.queryCommandSupported('copy')) {
                 document.getElementById('copySaveText').style.display = 'initial';
             }
             document.getElementById('saveText').value = player.saveToString();
             document.getElementById('loadButtonContainer').style.display = 'none';
-            document.getElementById('saveDialogContainer').style.display = 'block';
-            closeModal($('#settingsContainer'));
+            openModal(document.getElementById('savetextModal'));
+            closeModal($('#settingsModal'));
         },
         importSaveDialog: function () {
-            document.getElementById('saveDialogTitle').innerHTML = 'Import a save';
+            $('#savetextDialog .modal-card-title').innerHTML = 'Import a save';
             document.getElementById('copySaveText').style.display = 'none';
             document.getElementById('saveText').value = '';
             document.getElementById('loadButtonContainer').style.display = 'block';
-            document.getElementById('saveDialogContainer').style.display = 'block';
-            closeModal($('#settingsContainer'));
+            openModal(document.getElementById('savetextModal'));
+            closeModal($('#settingsModal'));
         },
         importSave: function () {
             if (window.confirm('Loading a save will overwrite your current progress, are you sure you wish to continue?')) {
                 player.loadFromString(document.getElementById('saveText').value.trim());
-                document.getElementById('saveDialogContainer').style.display = 'none';
+                closeModal(document.getElementById('savetextModal'));
                 // reload everything
                 renderView(dom, enemy, player);
                 dom.renderListBox();
@@ -260,7 +260,9 @@ export default (player, combatLoop, enemy, town, story) => {
                 'ultraballSuccessfulThrows': 'Caught with Ultraball',
                 'masterballThrows': 'Masterball Throws',
                 'masterballSuccessfulThrows': 'Caught with Masterball',
-                'totalPokeCoins': 'Total Coin Obtained',
+                'totalPokeCoins': 'Total PokeCoins Obtained',
+                'totalCatchCoins': 'Total CatchCoins Obtained',
+                'totalBattleCoins': 'Total BattleCoins Obtained',
                 'totalExp': 'Total Experience Earned',
             };
             let statList = '';
@@ -268,7 +270,7 @@ export default (player, combatLoop, enemy, town, story) => {
                 statList += `<li>${statisticStrings[statValue]}: ${player.statistics[statValue]}</li>`;
             }
             document.getElementById('statisticsList').innerHTML = statList;
-            document.getElementById('statisticsContainer').style.display = 'block';
+            openModal(document.getElementById('statisticsModal'));
         },
         viewAchievements: function () {
             let achievementHTML = '';
@@ -306,7 +308,7 @@ export default (player, combatLoop, enemy, town, story) => {
                 achievementHTML += `<li${complete ? ' class="complete"' : ''}><b>${ACHIEVEMENTS.dex.caught[i].name}</b>: Catch ${string}</li>`;
             }
             document.getElementById('achievementsList').innerHTML = achievementHTML;
-            document.getElementById('achievementsContainer').style.display = 'block';
+            openModal(document.getElementById('achievementsModal'));
         },
         viewInventory: function () {
             if (!isEmpty(player.badges)) {
@@ -318,13 +320,13 @@ export default (player, combatLoop, enemy, town, story) => {
             }
             const inventoryHTML = 'To do';
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
-            document.getElementById('inventoryContainer').style.display = 'block';
+            openModal(document.getElementById('inventoryModal'));
         },
         viewTown: function () {
             town.renderPokeCoinShop();
             town.renderBattleCoinShop();
             town.renderCatchCoinShop();
-            document.getElementById('townContainer').style.display = 'block';
+            openModal(document.getElementById('townModal'));
         },
         trainerBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
@@ -347,3 +349,9 @@ export default (player, combatLoop, enemy, town, story) => {
 
     return UserActions;
 };
+
+export const dummy = new Proxy({}, {
+    get(target, prop) {
+        return () => {};
+    },
+});

@@ -33,7 +33,7 @@ const userInteractions = UserActions(player, combatLoop, enemy, town, story);
 const dom = Display(player, combatLoop, userInteractions);
 
 // Provide data to Vue components
-models.settings.ui = userInteractions;
+models.app.ui = userInteractions;
 
 combatLoop.attachUI(userInteractions);
 enemy.attachCL(combatLoop);

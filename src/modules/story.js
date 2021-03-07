@@ -2,6 +2,7 @@ import { $, pokeById } from './utilities';
 import POKEDEX from './db';
 import { renderView } from './display';
 import { POKEDEXFLAGS } from './data';
+import { openModal, closeModal } from './modalEvents';
 
 export default (player, enemy, combatLoop, Poke) => {
     let dom;
@@ -10,9 +11,8 @@ export default (player, enemy, combatLoop, Poke) => {
         canClose: true,
         displayStory: function (title, content, canClose) {
             this.canClose = canClose;
-            $('#storyContainer').style.display = 'block';
-            $('#storyClose').style.display = canClose ? 'block' : 'none';
-            $('#storyTitle').innerHTML = title;
+            openModal($('#storyModal'));
+            $('#storyDialog .modal-card-title').innerHTML = title;
             $('#storyContent').innerHTML = content;
         },
         stories: {
@@ -40,7 +40,7 @@ export default (player, enemy, combatLoop, Poke) => {
                 dom.renderRoutesBox();
                 dom.renderListBox();
                 dom.renderPokeList();
-                $('#storyContainer').style.display = 'none';
+                closeModal($('#storyModal'));
             },
         },
         attachDOM: (_dom) => dom = _dom,
