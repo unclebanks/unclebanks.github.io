@@ -31,6 +31,8 @@ const getCommon = ({ outputPath, sourcePath, entries }) => (merge(
 
     parts.setFreeVariable('NODE_ENV', mode),
 
+    parts.useWebpackBar(),
+
     // Where to start looking for things to bundle
     { entry: ['./src'] },
 ));
