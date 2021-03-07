@@ -40,10 +40,10 @@ ul {
     float: left;
     text-align: left;
     background-color: rgb(112, 146, 190);
-}
 
-#partyBox li, p {
-    display: inline-block;
+    li, p {
+        display: inline-block;
+    }
 }
 
 #pokeGear {
