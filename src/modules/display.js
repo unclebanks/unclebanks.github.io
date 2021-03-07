@@ -348,21 +348,6 @@ export default (player, combatLoop, userInteractions) => {
                     userInteractions.changeCatchOption(setCatchSetting);
                 });
 
-            $('#saveDialogContainer').addEventListener('click',
-                (event) => { event.target === $('#saveDialogContainer') && ($('#saveDialogContainer').style.display = 'none'); });
-
-            $('#inventoryContainer').addEventListener('click',
-                (event) => { event.target === $('#inventoryContainer') && ($('#inventoryContainer').style.display = 'none'); });
-
-            $('#statisticsContainer').addEventListener('click',
-                (event) => { event.target === $('#statisticsContainer') && ($('#statisticsContainer').style.display = 'none'); });
-
-            $('#achievementsContainer').addEventListener('click',
-                (event) => { event.target === $('#achievementsContainer') && ($('#achievementsContainer').style.display = 'none'); });
-
-            $('#townContainer').addEventListener('click',
-                (event) => { event.target === $('#townContainer') && ($('#townContainer').style.display = 'none'); });
-
             window.addEventListener('beforeunload', () => {
                 if (!player.purgeData) player.savePokes(true);
             });

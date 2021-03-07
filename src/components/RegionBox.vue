@@ -17,6 +17,54 @@
         value="Johto"
       >
         Johto
+      </button>
+      <button
+        id="hoennButton"
+        onclick="userInteractions.goToHoenn()"
+        class="button"
+        value="Hoenn"
+      >
+        Hoenn
+      </button><br>
+      <button
+        id="sinnohButton"
+        onclick="userInteractions.goToNone()"
+        class="button"
+        value="Sinnoh"
+      >
+        Sinnoh
+      </button>
+      <button
+        id="unovaButton"
+        onclick="userInteractions.goToNone()"
+        class="button"
+        value="Unova"
+      >
+        Unova
+      </button>
+      <button
+        id="kalosButton"
+        onclick="userInteractions.goToNone()"
+        class="button"
+        value="Kalos"
+      >
+        Kalos
+      </button><br>
+      <button
+        id="alolaButton"
+        onclick="userInteractions.goToNone()"
+        class="button"
+        value="Alola"
+      >
+        Alola
+      </button>
+      <button
+        id="galarButton"
+        onclick="userInteractions.goToNone()"
+        class="button"
+        value="Galar"
+      >
+        Galar
       </button><br>
     </div>
   </div>

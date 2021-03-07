@@ -4,7 +4,9 @@
     title="Settings"
   >
     <template #body>
-      <h4>Visual Settings</h4>
+      <h3 class="subtitle">
+        Visual Settings
+      </h3>
 
       <p>Choose which sprite You want to display for your pokemon:</p>
 
@@ -26,7 +28,10 @@
         </span>
       </p>
 
-      <h4>Import and Export Save</h4>
+      <hr>
+      <h3 class="subtitle">
+        Import and Export Save
+      </h3>
 
       <div class="buttons">
         <Button
@@ -53,7 +58,10 @@
         />
       </div>
 
-      <h4>Clear Game Data</h4>
+      <hr>
+      <h3 class="subtitle">
+        Clear Game Data
+      </h3>
 
       <p style="color:red;font-weight:bold">
         Warning! This cannot be undone.
@@ -63,8 +71,10 @@
         <input
           id="confirmClearData"
           type="checkbox"
-        >
-
+          class="mr-1"
+        ><label for="confirmClearData">I understand</label>
+      </p>
+      <p>
         <Button
           text="Clear game data"
           classes="is-danger"
@@ -86,19 +96,8 @@ export default {
         Button,
     },
 
-    // Defines what data this component wants
-    data() {
-        return {
-            ui: {
-                // Giving a default functions that do nothing
-                // They will be replaced later when ui is passed to us
-                clearGameData() {},
-                importSaveDialog() {},
-                exportSaveDialog() {},
-                forceSave() {},
-                changeSpriteChoice() {},
-            },
-        };
+    props: {
+        ui: { type: Object, required: true },
     },
 };
 </script>

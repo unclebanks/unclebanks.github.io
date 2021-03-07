@@ -7,6 +7,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const { webpack, DefinePlugin } = require('webpack');
+const WebpackBar = require('webpackbar');
 
 exports.loadSCSS = () => ({
     module: {
@@ -103,5 +104,11 @@ exports.setFreeVariable = (key, value) => ({
         new DefinePlugin({
             [key]: JSON.stringify(value),
         }),
+    ],
+});
+
+exports.useWebpackBar = (options) => ({
+    plugins: [
+        new WebpackBar(options),
     ],
 });

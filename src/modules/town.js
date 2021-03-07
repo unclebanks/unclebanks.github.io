@@ -13,12 +13,12 @@ export default (player, Poke) => {
             },
             {
                 name: 'Greatball',
-                pokecoins: 1000,
+                pokecoins: 500,
                 ball: 'greatball',
             },
             {
                 name: 'Ultraball',
-                pokecoins: 10000,
+                pokecoins: 1000,
                 ball: 'ultraball',
             },
         ],
@@ -166,6 +166,7 @@ export default (player, Poke) => {
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
                     dom.renderListBox();
+                    dom.renderRouteList();
                 }
                 this.renderCatchCoinShop(); // force refresh of shop
                 dom.renderCurrency();

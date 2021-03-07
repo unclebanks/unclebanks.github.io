@@ -25,6 +25,30 @@ export default (lastSave, appModel) => {
             shinyDex: 0,
             razzBerry: 0,
             timeMachine: 0,
+            kantoOldRod: 0,
+            kantoGoodRod: 0,
+            kantoSuperRod: 0,
+            johtoOldRod: 0,
+            johtoGoodRod: 0,
+            johtoSuperRod: 0,
+            hoennOldRod: 0,
+            hoennGoodRod: 0,
+            hoennSuperRod: 0,
+            sinnoholdRod: 0,
+            sinnohGoodRod: 0,
+            sinnohSuperRod: 0,
+            unovaOldRod: 0,
+            unovaGoodRod: 0,
+            unovaSuperRod: 0,
+            kalosOldRod: 0,
+            kalosGoodRod: 0,
+            kalosSuperRod: 0,
+            alolaOldRod: 0,
+            alolaGoodRod: 0,
+            alolaSuperRod: 0,
+            galarOldRod: 0,
+            galarGoodRod: 0,
+            galarSuperRod: 0,
         },
         evoStones: {
             thunderStone: 0,
@@ -37,17 +61,6 @@ export default (lastSave, appModel) => {
             duskStone: 0,
             dawnStone: 0,
             iceStone: 0,
-        },
-        fishingRods: {
-            kantoOldRod: 0,
-            kantoGoodRod: 0,
-            kantoSuperRod: 0,
-            johtoOldRod: 0,
-            johtoGoodRod: 0,
-            johtoSuperRod: 0,
-            hoennOldRod: 0,
-            hoennGoodRod: 0,
-            hoennSuperRod: 0,
         },
         currencyAmount: {
             pokecoins: 0,
@@ -62,6 +75,14 @@ export default (lastSave, appModel) => {
             xSpDefense: 0,
             expBoost: 0,
             currencyBoost: 0,
+        },
+        vitamins: {
+            hpUp: 0,
+            protein: 0,
+            iron: 0,
+            calcium: 0,
+            zinc: 0,
+            carbos: 0,
         },
         settings: {
             currentRegionId: 'Kanto',
@@ -295,13 +316,22 @@ export default (lastSave, appModel) => {
         },
         routeUnlocked: function (region, route) {
             const routeData = ROUTES[region][route];
-            if (routeData.kantoOldRod && !Player.fishingRods.kantoOldRod === 1) {
+            if (routeData.kantoOldRod && Player.unlocked.kantoOldRod < routeData.kantoOldRod) {
                 return false;
             }
-            if (routeData.kantoGoodRod && !Player.fishingRods.kantoGoodRod === 1) {
+            if (routeData.kantoGoodRod && Player.unlocked.kantoGoodRod < routeData.kantoGoodRod) {
                 return false;
             }
-            if (routeData.kantoSuperRod && !Player.fishingRods.kantoSuperRod === 1) {
+            if (routeData.kantoSuperRod && Player.unlocked.kantoSuperRod < routeData.kantoSuperRod) {
+                return false;
+            }
+            if (routeData.johtoOldRod && Player.unlocked.johtoOldRod < routeData.johtoOldRod) {
+                return false;
+            }
+            if (routeData.johtoGoodRod && Player.unlocked.johtoGoodRod < routeData.johtoGoodRod) {
+                return false;
+            }
+            if (routeData.johtoSuperRod && Player.unlocked.johtoSuperRod < routeData.johtoSuperRod) {
                 return false;
             }
             if (routeData._unlock) {
@@ -324,13 +354,13 @@ export default (lastSave, appModel) => {
                 });
                 localStorage.setItem('ballsAmount', JSON.stringify(this.ballsAmount));
                 localStorage.setItem('battleItems', JSON.stringify(this.battleItems));
+                localStorage.setItem('vitamins', JSON.stringify(this.vitamins));
                 localStorage.setItem('pokedexData', JSON.stringify(this.getPokedexData()));
                 localStorage.setItem('statistics', JSON.stringify(this.statistics));
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
                 localStorage.setItem('unlocked', JSON.stringify(this.unlocked));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
-                localStorage.setItem('fishingRods', JSON.stringify(this.fishingRods));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
             }
         },
@@ -345,9 +375,9 @@ export default (lastSave, appModel) => {
                 badges: this.badges,
                 unlocked: this.unlocked,
                 evoStones: this.evoStones,
-                fishingRods: this.fishingRods,
                 currencyAmount: this.currencyAmount,
                 battleItems: this.battleItems,
+                vitamins: this.vitamins,
             });
             return btoa(`${this.checksum(saveData)}|${saveData}`);
         },
@@ -410,11 +440,11 @@ export default (lastSave, appModel) => {
             if (JSON.parse(localStorage.getItem('evoStones'))) {
                 this.evoStones = JSON.parse(localStorage.getItem('evoStones'));
             }
-            if (JSON.parse(localStorage.getItem('fishingRods'))) {
-                this.fishingRods = JSON.parse(localStorage.getItem('fishingRods'));
-            }
             if (JSON.parse(localStorage.getItem('battleItems'))) {
                 this.battleItems = JSON.parse(localStorage.getItem('battleItems'));
+            }
+            if (JSON.parse(localStorage.getItem('vitamins'))) {
+                this.vitamins = JSON.parse(localStorage.getItem('vitamins'));
             }
         },
         loadFromString: function (_saveData) {
@@ -454,6 +484,7 @@ export default (lastSave, appModel) => {
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
                 this.battleItems = saveData.battleItems;
+                this.vitamins = saveData.vitamins;
                 appModel.$store.commit('pokedex/loadData', saveData.pokedexData ? saveData.pokedexData : []);
                 const loadedStats = saveData.statistics ? saveData.statistics : {};
                 this.statistics = { ...this.statistics, ...loadedStats };
