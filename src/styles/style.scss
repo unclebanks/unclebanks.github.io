@@ -397,6 +397,23 @@ progress.expBar {
     margin:5px 10px;
 }
 
+#inventoryDialog {
+  .proteinItem > img {
+    height: auto;
+    width: 16px;
+    margin-right: 5px;
+  }
+  .proteinItem > .itemName {
+    margin-right: 5px;
+  }
+  #inventoryList > li {
+    border: 1px solid black;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
 #forceSave {
     color:red;
     display:none;
