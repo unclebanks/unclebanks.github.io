@@ -395,10 +395,11 @@ export default (lastSave, appModel) => {
                     const shiny = (loadedPoke[2] === true);
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
+                    const appliedVitamins = loadedPoke[5];
                     if (pokeCount < 6) {
-                        this.pokemons.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                        this.pokemons.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     } else {
-                        this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                        this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     }
                     pokeCount++;
                 }
@@ -411,7 +412,8 @@ export default (lastSave, appModel) => {
                     const shiny = (loadedPoke[2] === true);
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
-                    this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                    const appliedVitamins = loadedPoke[5];
+                    this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 }
             });
             if (JSON.parse(localStorage.getItem('ballsAmount'))) {
@@ -466,10 +468,11 @@ export default (lastSave, appModel) => {
                     const shiny = (loadedPoke[2] === true);
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
+                    const appliedVitamins = loadedPoke[5];
                     if (pokeCount < 6) {
-                        this.pokemons.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                        this.pokemons.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     } else {
-                        this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                        this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     }
                     pokeCount++;
                 });
@@ -479,7 +482,8 @@ export default (lastSave, appModel) => {
                     const shiny = (loadedPoke[2] === true);
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
-                    this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                    const appliedVitamins = loadedPoke[5];
+                    this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 });
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;

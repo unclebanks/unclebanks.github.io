@@ -2,7 +2,7 @@ import { renderView } from './display';
 import ROUTES from './routes';
 import { $, camelCaseToString, isEmpty } from './utilities';
 import ACHIEVEMENTS from './achievements';
-import { POKEDEXFLAGS } from './data';
+import { POKEDEXFLAGS, VITAMINS } from './data';
 import { openModal, closeModal } from './modalEvents';
 
 export default (player, combatLoop, enemy, town, story) => {
@@ -405,7 +405,15 @@ export default (player, combatLoop, enemy, town, story) => {
                 }
                 document.getElementById('badgeList').innerHTML = badgesHTML;
             }
-            const inventoryHTML = 'To do';
+            let inventoryHTML = 'To do';
+            let vitamins = Object.keys(VITAMINS);
+            for (let i = 0; i < vitamins.length; i++) {
+              let vitamin = vitamins[i];
+              let vitaminName = VITAMINS[vitamin].display;
+              let count = player.vitamins[vitamin];
+              let image = `assets/images/vitamins/${vitamin}.png`;
+              inventoryHTML += `<li class="proteinItem"><img src="${image}"></img><span class="itemName">${vitaminName}</span><button class="button" onclick="userInteractions.openVitaminModal('${vitamin}')">Use (${count} available)</button></li>`;
+            }
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
         },
@@ -422,6 +430,49 @@ export default (player, combatLoop, enemy, town, story) => {
                 town.renderJohtoCatchCoinShop();
                 openModal(document.getElementById('townModal'));
             }
+        },
+        openVitaminModal: function (vitamin) {
+          if (!VITAMINS[vitamin]) {
+            return alert(`Invalid vitamin '${vitamin}'`);
+          }
+          let data = VITAMINS[vitamin];
+          let name = data.display;
+          let count = player.vitamins[vitamin];
+          if (!count) {
+            return alert(`You don't have any of these.`);
+          }
+          //TODO: PixL - implement
+          let vitaminModal = document.getElementById('vitaminModal');
+          vitaminModal.setAttribute('data-vitamin', vitamin);
+          this.updateVitaminModal();
+          openModal(vitaminModal);
+        },
+        updateVitaminModal: function() {
+          let vitaminModal = document.getElementById('vitaminModal');
+          let vitamin = vitaminModal.getAttribute('data-vitamin');
+          let data = VITAMINS[vitamin];
+          let count = player.vitamins[vitamin];
+          document.getElementById('vitaminName').innerText = data.display;
+          document.getElementById('vitaminCount').innerText = count;
+          let vitaminPokemonHTML = '';
+          let list = player.getPokemon();
+          for (let i = 0; i < list.length; i++) {
+            let poke = list[i];
+            vitaminPokemonHTML += `<li style="border: 1px solid black"><img src="${poke.image().party}"> <button class="button" onclick="userInteractions.useVitamin('${vitamin}', ${i})">${poke.getAppliedVitamins(data.stat)}/${poke.getMaxVitamins(data.stat)}</button></li>`
+          }
+          document.getElementById('vitaminPokemon').innerHTML = vitaminPokemonHTML;
+        },
+        useVitamin: function(vitamin, pokemonIndex) {
+          let vitaminData = VITAMINS[vitamin];
+          let count = player.vitamins[vitamin];
+          let poke = player.pokemons[pokemonIndex]
+          if (count <= 0 || !vitaminData || !poke) {
+            return;
+          }
+          if (poke.tryUsingVitamin(vitaminData.stat)) {
+            player.vitamins[vitamin]--;
+            this.updateVitaminModal();
+          }
         },
         trainerBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];

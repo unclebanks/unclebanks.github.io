@@ -5,13 +5,14 @@ import EVOLUTIONS from './evolutions';
 import POKEDEX from './db';
 
 export default (player) => {
-    const Poke = function (pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0) {
+    const Poke = function (pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0, appliedVitamins = {}) {
         this.poke = cloneJsonObject(pokeModel);
         this.expTable = EXP_TABLE[this.poke.stats[0]['growth rate']];
         this.exp = initialLevel && this.expTable[initialLevel - 1] || initialExp;
         this.isShiny = (shiny === true);
         this.caughtAt = caughtAt || Date.now();
         this.prestigeLevel = prestigeLevel;
+        this.appliedVitamins = appliedVitamins;
         this.hp = this.setHpValue(this.poke.stats[0].hp) * 3;
     };
     Poke.prototype.currentLevel = function () {
@@ -81,6 +82,35 @@ export default (player) => {
     Poke.prototype.canPrestige = function () {
         return this.level() >= 100;
     };
+    Poke.prototype.tryUsingVitamin = function (stat) {
+      if (!this.canUseVitamin(stat)) {
+        return false;
+      }
+      this.appliedVitamins = this.appliedVitamins || {};
+      this.appliedVitamins[stat] = this.getAppliedVitamins(stat) + 1;
+      return true;
+    };
+    Poke.prototype.canUseVitamin = function (stat) {
+      return this.getAppliedVitamins(stat) < this.getMaxVitamins(stat);
+    };
+    Poke.prototype.getMaxVitamins = function (stat) {
+      return 5;
+    }
+    Poke.prototype.getAppliedVitamins = function (stat) {
+      return (this.appliedVitamins || {})[stat] || 0;
+    };
+    Poke.prototype.getAppliedVitaminObject = function () {
+      let object = {};
+      let keys = Object.keys(this.appliedVitamins);
+      for (let i = 0; i < keys.length; i++) {
+        let vitamin = keys[i];
+        let applied = this.getAppliedVitamins(vitamin);
+        if (applied > 0) {
+          object[vitamin] = applied;
+        }
+      }
+      return object;
+    };
 
     Poke.prototype.setHp = function (hp) { this.hp = hp; };
     Poke.prototype.getHp = function () { return this.hp; };
@@ -135,7 +165,7 @@ export default (player) => {
     };
     Poke.prototype.baseExp = function () { return Number(this.poke.exp[0]['base exp']); };
     Poke.prototype.heal = function () { return this.setHp(this.maxHp()); };
-    Poke.prototype.save = function () { return [this.poke.pokemon[0].Pokemon, this.exp, this.isShiny, this.caughtAt, this.prestigeLevel]; };
+    Poke.prototype.save = function () { return [this.poke.pokemon[0].Pokemon, this.exp, this.isShiny, this.caughtAt, this.prestigeLevel, this.getAppliedVitaminObject()]; };
 
     const makeRandomPoke = (level) => new Poke(randomArrayElement(POKEDEX), level);
 
