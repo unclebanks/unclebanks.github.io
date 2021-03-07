@@ -86,7 +86,7 @@ export default (lastSave, appModel) => {
         },
         settings: {
             currentRegionId: 'Kanto',
-            currentRouteId: 'route1',
+            currentRouteId: 'kroute1',
             listView: 'pokeDex',
             autoSort: true,
             dexView: 'all',
