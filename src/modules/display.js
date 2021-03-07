@@ -206,7 +206,7 @@ export default (player, combatLoop, userInteractions) => {
                 i++;
             }
             if (list.length == 0) {
-                this.setValue(listElement, '<li>Your storage is cold and empty</li>');
+                this.setValue(listElement, '<li>There are no Pokemon here</li>');
             }
         },
         renderRegionSelect: function () {
