@@ -68,6 +68,93 @@ export default (player, combatLoop, enemy, town, story) => {
                 alert('You have not unlocked this region yet');
             }
         },
+        goToHoenn: function () {
+            if (player.regionUnlocked('Hoenn')) {
+                player.settings.currentRegionId = 'Hoenn';
+                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
+                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
+                } else {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
+                }
+            } else {
+                alert('You have not unlocked this region yet');
+            }
+        },
+        goToSinnoh: function () {
+            if (player.regionUnlocked('Sinnoh')) {
+                player.settings.currentRegionId = 'Sinnoh';
+                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
+                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
+                } else {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
+                }
+            } else {
+                alert('You have not unlocked this region yet');
+            }
+        },
+        goToUnova: function () {
+            if (player.regionUnlocked('Unova')) {
+                player.settings.currentRegionId = 'Unova';
+                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
+                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
+                } else {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
+                }
+            } else {
+                alert('You have not unlocked this region yet');
+            }
+        },
+        goToKalos: function () {
+            if (player.regionUnlocked('Kalos')) {
+                player.settings.currentRegionId = 'Kalos';
+                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
+                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
+                } else {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
+                }
+            } else {
+                alert('You have not unlocked this region yet');
+            }
+        },
+        goToAlola: function () {
+            if (player.regionUnlocked('Alola')) {
+                player.settings.currentRegionId = 'Alola';
+                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
+                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
+                } else {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
+                }
+            } else {
+                alert('You have not unlocked this region yet');
+            }
+        },
+        goToGalar: function () {
+            if (player.regionUnlocked('Galar')) {
+                player.settings.currentRegionId = 'Galar';
+                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
+                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
+                } else {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
+                }
+            } else {
+                alert('You have not unlocked this region yet');
+            }
+        },
+        goToNone: function () {
+            alert('This region is not implemented yet');
+        },
         enablePokeListDelete: function () {
             dom.renderListBox();
             dom.renderPokeList();
