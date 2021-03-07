@@ -17,7 +17,7 @@ The command `npm run build:gh-pages` can be run to compile all code in productio
 
 ## Source Folder Structure
 The following diagram is ordered by topic rather than alphabetically, to make finding what you want easier.
-```
+```c
 src/
 │
 ├── index.html        // Main html file
@@ -45,3 +45,18 @@ src/
     ├── muttions.js   // Root store mutations
     └── modules/      // Individual store modules
 ```
+
+## Frameworks and Development Tools
+- [Webpack](https://webpack.js.org/) (Build process)
+- [Vue 3](https://v3.vuejs.org/) (HTML templating and update management)
+- [Vuex 4](https://next.vuex.vuejs.org/) (Vue state management)
+- [Eslint](https://eslint.org/) (Enforces consistent code style, catches some errors)
+- [Sass](https://sass-lang.com/documentation) (Styling, compiles to css)
+- [Bulma](https://bulma.io/) (CSS framework, similar to bootstrap)
+- [FontAwesome](https://fontawesome.com/) (Icons)
+
+Planned:
+- [Typescript](https://www.typescriptlang.org/) (Compile-time type-checking for javascript)
+- [Babel](https://babeljs.io/) (Transpiles modern js for older browser support)
+- [Postcss](https://postcss.org/) + [Autoprefix](https://github.com/postcss/autoprefixer) (Adds vendor prefixes to css, for older browser support)
+- [Mocha](https://mochajs.org/) + [Chai](https://www.chaijs.com/) + [Sinon](https://sinonjs.org/) (Javscript testing framework)
