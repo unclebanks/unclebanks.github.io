@@ -42,7 +42,7 @@ src/
 └── store/            // Vuex stores for the game state
     ├── index.js      // Imports all stores into a single store for use in App.vue
     ├── actions.js    // Root store actions
-    ├── muttions.js   // Root store mutations
+    ├── mutations.js   // Root store mutations
     └── modules/      // Individual store modules
 ```
 
