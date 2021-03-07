@@ -320,7 +320,7 @@ export default (player, combatLoop, enemy, town, story) => {
             }
             const inventoryHTML = 'To do';
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
-            document.getElementById('inventoryContainer').style.display = 'block';
+            openModal(document.getElementById('inventoryModal'));
         },
         viewTown: function () {
             town.renderPokeCoinShop();
