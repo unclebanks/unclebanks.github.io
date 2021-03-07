@@ -1050,7 +1050,7 @@ const ROUTES = {
         }
         , route42: {
             name: 'Route 42'
-            , pokes: ['Mareep', 'Flaaffy', 'Marill', 'Rattata', 'Raticate', 'Spearow', 'Fearow', 'Ekans', 'Arbok', 'Zubat', 'Golbat', 'Mankey']
+            , pokes: ['Mareep', 'Flaaffy', 'Rattata', 'Raticate', 'Spearow', 'Fearow', 'Ekans', 'Arbok', 'Zubat', 'Golbat', 'Mankey']
             , minLevel: 13
             , maxLevel: 17,
             respawn: 'ecruteakCity',
@@ -1062,7 +1062,7 @@ const ROUTES = {
         }
         , mtMortar: {
             name: 'Mt. Mortar'
-            , pokes: ['Zubat', 'Golbat', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Raticate', 'Marill']
+            , pokes: ['Zubat', 'Golbat', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Raticate']
             , minLevel: 15
             , maxLevel: 32,
             respawn: 'ecruteakCity',
@@ -1264,6 +1264,30 @@ const ROUTES = {
                     'Rising Badge': true
                 }
             }
+        }
+        , jOldRod: {
+            name: 'Johto Old Rod',
+            pokes: ['Remoraid'],
+            minLevel: 5,
+            maxLevel: 10,
+            respawn: 'NewBarkTown',
+            johtoOldRod: 1
+        }
+        , jGoodRod: {
+            name: 'Johto Good Rod',
+            pokes: ['Marill', 'Chinchou', 'Wooper'],
+            minLevel: 15,
+            maxLevel: 25,
+            respawn: 'NewBarkTown',
+            johtoGoodRod: 1
+        }
+        , jSuperRod: {
+            name: 'Johto Super Rod',
+            pokes: ['Corsola', 'Qwilfish', 'Lanturn', 'Octillery'],
+            minLevel: 30,
+            maxLevel: 45,
+            respawn: 'NewBarkTown',
+            johtoSuperRod: 1
         }
         , headbutt: {
             name: 'Headbutt'

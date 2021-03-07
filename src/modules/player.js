@@ -63,6 +63,14 @@ export default (lastSave, appModel) => {
             expBoost: 0,
             currencyBoost: 0,
         },
+        vitamins: {
+            hpUp: 0,
+            protein: 0,
+            iron: 0,
+            calcium: 0,
+            zinc: 0,
+            carbos: 0,
+        },
         settings: {
             currentRegionId: 'Kanto',
             currentRouteId: 'route1',
@@ -295,13 +303,13 @@ export default (lastSave, appModel) => {
         },
         routeUnlocked: function (region, route) {
             const routeData = ROUTES[region][route];
-            if (routeData.kantoOldRod && !Player.fishingRods.kantoOldRod === 1) {
+            if (routeData.kantoOldRod && Player.fishingRods.kantoOldRod < routeData.kantoOldRod) {
                 return false;
             }
-            if (routeData.kantoGoodRod && !Player.fishingRods.kantoGoodRod === 1) {
+            if (routeData.kantoGoodRod && Player.fishingRods.kantoGoodRod < routeData.kantoGoodRod) {
                 return false;
             }
-            if (routeData.kantoSuperRod && !Player.fishingRods.kantoSuperRod === 1) {
+            if (routeData.kantoSuperRod && Player.fishingRods.kantoSuperRod < routeData.kantoSuperRod) {
                 return false;
             }
             if (routeData._unlock) {
@@ -324,6 +332,7 @@ export default (lastSave, appModel) => {
                 });
                 localStorage.setItem('ballsAmount', JSON.stringify(this.ballsAmount));
                 localStorage.setItem('battleItems', JSON.stringify(this.battleItems));
+                localStorage.setItem('vitamins', JSON.stringify(this.vitamins));
                 localStorage.setItem('pokedexData', JSON.stringify(this.getPokedexData()));
                 localStorage.setItem('statistics', JSON.stringify(this.statistics));
                 localStorage.setItem('settings', JSON.stringify(this.settings));
@@ -348,6 +357,7 @@ export default (lastSave, appModel) => {
                 fishingRods: this.fishingRods,
                 currencyAmount: this.currencyAmount,
                 battleItems: this.battleItems,
+                vitamins: this.vitamins,
             });
             return btoa(`${this.checksum(saveData)}|${saveData}`);
         },
@@ -416,6 +426,9 @@ export default (lastSave, appModel) => {
             if (JSON.parse(localStorage.getItem('battleItems'))) {
                 this.battleItems = JSON.parse(localStorage.getItem('battleItems'));
             }
+            if (JSON.parse(localStorage.getItem('vitamins'))) {
+                this.vitamins = JSON.parse(localStorage.getItem('vitamins'));
+            }
         },
         loadFromString: function (_saveData) {
             let saveData = atob(_saveData);
@@ -454,6 +467,7 @@ export default (lastSave, appModel) => {
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
                 this.battleItems = saveData.battleItems;
+                this.vitamins = saveData.vitamins;
                 appModel.$store.commit('pokedex/loadData', saveData.pokedexData ? saveData.pokedexData : []);
                 const loadedStats = saveData.statistics ? saveData.statistics : {};
                 this.statistics = { ...this.statistics, ...loadedStats };
