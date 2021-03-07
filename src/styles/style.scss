@@ -47,10 +47,8 @@ ul {
 }
 
 #pokeGear {
-    grid-column: 2;
-    grid-row: 2;
-    height: 50%;
-    margin-top: 25%;
+    grid-column: 3;
+    grid-row: 2 / 4;
     margin-bottom: none;
     background-color: rgb(112, 146, 190);
     text-align: center;
@@ -222,8 +220,6 @@ ul {
 #navBox {
     grid-column: 2;
     grid-row: 2;
-    height: 50%;
-    text-align: center;
     background-color: rgb(112, 146, 190);
 }
 #navBox .button, #viewSelectBox .button, #townBox button {

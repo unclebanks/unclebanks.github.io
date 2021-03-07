@@ -410,10 +410,18 @@ export default (player, combatLoop, enemy, town, story) => {
             openModal(document.getElementById('inventoryModal'));
         },
         viewTown: function () {
-            town.renderPokeCoinShop();
-            town.renderBattleCoinShop();
-            town.renderCatchCoinShop();
-            openModal(document.getElementById('townModal'));
+            if (player.settings.currentRegionId === 'Kanto') {
+                town.renderPokeCoinShop();
+                town.renderBattleCoinShop();
+                town.renderCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
+            if (player.settings.currentRegionId === 'Johto') {
+                town.renderJohtoPokeCoinShop();
+                town.renderJohtoBattleCoinShop();
+                town.renderJohtoCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
         },
         trainerBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
