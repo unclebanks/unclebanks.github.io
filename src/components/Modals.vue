@@ -1,4 +1,5 @@
 <template>
+  <SaveTextModal :ui="ui" />
   <InventoryModal />
   <SettingsModal :ui="ui" />
   <AchievementsModal />
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import SaveTextModal from './modals/SaveTextModal.vue';
 import InventoryModal from './modals/InventoryModal.vue';
 import SettingsModal from './modals/SettingsModal.vue';
 import AchievementsModal from './modals/AchievementsModal.vue';
@@ -17,6 +19,7 @@ import TownModal from './modals/TownModal.vue';
 
 export default {
     components: {
+        SaveTextModal,
         InventoryModal,
         SettingsModal,
         AchievementsModal,

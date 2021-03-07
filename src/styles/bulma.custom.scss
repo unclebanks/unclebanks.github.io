@@ -11,6 +11,9 @@
 @import '~bulma/sass/components/card.sass';
 @import '~bulma/sass/components/modal.sass';
 
+@import "~bulma/sass/form/shared.sass";
+@import "~bulma/sass/form/input-textarea.sass";
+
 .delete {
     @extend %delete
 }

@@ -189,27 +189,27 @@ export default (player, combatLoop, enemy, town, story) => {
             setTimeout(() => { $('#forceSave').style.display = 'none'; }, 5000);
         },
         exportSaveDialog: function () {
-            document.getElementById('saveDialogTitle').innerHTML = 'Export your save';
+            $('#savetextDialog .modal-card-title').innerHTML = 'Export your save';
             if (document.queryCommandSupported('copy')) {
                 document.getElementById('copySaveText').style.display = 'initial';
             }
             document.getElementById('saveText').value = player.saveToString();
             document.getElementById('loadButtonContainer').style.display = 'none';
-            document.getElementById('saveDialogContainer').style.display = 'block';
-            closeModal($('#settingsContainer'));
+            openModal(document.getElementById('savetextModal'));
+            closeModal($('#settingsModal'));
         },
         importSaveDialog: function () {
-            document.getElementById('saveDialogTitle').innerHTML = 'Import a save';
+            $('#savetextDialog .modal-card-title').innerHTML = 'Import a save';
             document.getElementById('copySaveText').style.display = 'none';
             document.getElementById('saveText').value = '';
             document.getElementById('loadButtonContainer').style.display = 'block';
-            document.getElementById('saveDialogContainer').style.display = 'block';
-            closeModal($('#settingsContainer'));
+            openModal(document.getElementById('savetextModal'));
+            closeModal($('#settingsModal'));
         },
         importSave: function () {
             if (window.confirm('Loading a save will overwrite your current progress, are you sure you wish to continue?')) {
                 player.loadFromString(document.getElementById('saveText').value.trim());
-                document.getElementById('saveDialogContainer').style.display = 'none';
+                closeModal(document.getElementById('savetextModal'));
                 // reload everything
                 renderView(dom, enemy, player);
                 dom.renderListBox();

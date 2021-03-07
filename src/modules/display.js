@@ -348,9 +348,6 @@ export default (player, combatLoop, userInteractions) => {
                     userInteractions.changeCatchOption(setCatchSetting);
                 });
 
-            $('#saveDialogContainer').addEventListener('click',
-                (event) => { event.target === $('#saveDialogContainer') && ($('#saveDialogContainer').style.display = 'none'); });
-
             window.addEventListener('beforeunload', () => {
                 if (!player.purgeData) player.savePokes(true);
             });
