@@ -17,10 +17,6 @@ const EVOLUTIONS = {
         "level": "36",
         "to": "Charizard"
     },
-    "Charizard": {
-        "level": "100",
-        "to": "M-Charizard X"
-    },
     "Squirtle": {
         "level": "16",
         "to": "Wartortle"
@@ -257,6 +253,10 @@ const EVOLUTIONS = {
         "level": "32",
         "to": "Seadra"
     },
+    "Seadra": {
+        "stone": "dragonScale",
+        "to": "Kingdra"
+    },
     "Goldeen": {
         "level": "33",
         "to": "Seaking"
@@ -370,11 +370,11 @@ const EVOLUTIONS = {
         "to": "Ampharos"
     },
     "Vileplume": {
-        "level": "40",
+        "stone": "sunStone",
         "to": "Bellossom"
     },
     "Poliwrath": {
-        "level": "60",
+        "stone": "kingsRock",
         "to": "Politoad"
     },
     "Marill": {
@@ -385,12 +385,16 @@ const EVOLUTIONS = {
         "level": "18",
         "to": "Skiploom"
     },
+    "Scyther": {
+        "stone": "metalCoat",
+        "to": "Scizor"
+    },
     "Skiploom": {
         "level": "30",
         "to": "Jumpluff"
     },
     "Sunkern": {
-        "level": "25",
+        "stone": "sunStone",
         "to": "Sunflora"
     },
     "Wooper": {
@@ -398,7 +402,7 @@ const EVOLUTIONS = {
         "to": "Quagsire"
     },
     "Slowbro": {
-        "level": "50",
+        "stone": "kingsRock",
         "to": "Slowking"
     },
     "Pineco": {
@@ -406,7 +410,7 @@ const EVOLUTIONS = {
         "to": "Forretress"
     },
     "Onix": {
-        "level": "50",
+        "stone": "metalCoat",
         "to": "Steelix"
     },
     "Snubbull": {
@@ -445,13 +449,253 @@ const EVOLUTIONS = {
         "level": "55",
         "to": "Tyranitar"
     },
-    "M-Mewtwo X": {
-        "level": "100",
-        "to": "M-Mewtwo Y"
+    "Treecko": {
+        "level": "16",
+        "to": "Grovyle"
     },
-    "M-Mewtwo Y": {
-        "level": "100",
-        "to": "M-Mewtwo X"
+    "Grovyle": {
+        "level": "36",
+        "to": "Sceptile"
+    },
+    "Torchic": {
+        "level": "16",
+        "to": "Combusken"
+    },
+    "Combusken": {
+        "level": "36",
+        "to": "Blaziken"
+    },
+    "Mudkip": {
+        "level": "16",
+        "to": "Marshtomp"
+    },
+    "Marshtomp": {
+        "level": "36",
+        "to": "Swampert"
+    },
+    "Poochyena": {
+        "level": "18",
+        "to": "Mightyena"
+    },
+    "Zigzagoon": {
+        "level": "20",
+        "to": "Linoone"
+    },
+    "Wurmple": {
+        "level": "7",
+        "to": "Silcoon"
+    },
+    "Silcoon": {
+        "level": "10",
+        "to": "Beautifly"
+    },
+    "Cascoon": {
+        "level": "10",
+        "to": "Dustox"
+    },
+    "Lotad": {
+        "level": "14",
+        "to": "Lombre"
+    },
+    "Lombre": {
+        "stone": "waterStone",
+        "to": "Ludicolo"
+    },
+    "Seedot": {
+        "level": "14",
+        "to": "Nuzleaf"
+    },
+    "Nuzleaf": {
+        "stone": "leafStone",
+        "to": "Shiftry"
+    },
+    "Taillow": {
+        "level": "22",
+        "to": "Swellow"
+    },
+    "Wingull": {
+        "level": "25",
+        "to": "Pelipper"
+    },
+    "Ralts": {
+        "level": "20",
+        "to": "Kirlia"
+    },
+    "Kirlia": {
+        "level": "30",
+        "to": "Gardevoir"
+    },
+    "Surskit": {
+        "level": "22",
+        "to": "Masquerain"
+    },
+    "Shroomish": {
+        "level": "23",
+        "to": "Breloom"
+    },
+    "Slakoth": {
+        "level": "18",
+        "to": "Vigoroth"
+    },
+    "Vigoroth": {
+        "level": "36",
+        "to": "Slaking"
+    },
+    "Nincada": {
+        "level": "20",
+        "to": "Ninjask"
+    },
+    "Whismur": {
+        "level": "20",
+        "to": "Loudred"
+    },
+    "Loudred": {
+        "level": "40",
+        "to": "Exploud"
+    },
+    "Makuhita": {
+        "level": "24",
+        "to": "Hariyama"
+    },
+    "Nosepass": {
+        "level": "35",
+        "to": "Probopass"
+    },
+    "Skitty": {
+        "stone": "moonStone",
+        "to": "Delcatty"
+    },
+    "Aron": {
+        "level": "32",
+        "to": "Lairon"
+    },
+    "Lairon": {
+        "level": "42",
+        "to": "Aggron"
+    },
+    "Meditite": {
+        "level": "37",
+        "to": "Medicham"
+    },
+    "Electrike": {
+        "level": "37",
+        "to": "Manectric"
+    },
+    "Budew": {
+        "level": "12",
+        "to": "Roselia"
+    },
+    "Roselia": {
+        "level": "27",
+        "to": "Roserade"
+    },
+    "Gulpin": {
+        "level": "26",
+        "to": "Swalot"
+    },
+    "Carvanha": {
+        "level": "30",
+        "to": "Sharpedo"
+    },
+    "Wailmer": {
+        "level": "40",
+        "to": "Wailord"
+    },
+    "Numel": {
+        "level": "33",
+        "to": "Camerupt"
+    },
+    "Spoink": {
+        "level": "32",
+        "to": "Grumpig"
+    },
+    "Trapinch": {
+        "level": "35",
+        "to": "Vibrava"
+    },
+    "Vibrava": {
+        "level": "45",
+        "to": "Flygon"
+    },
+    "Cacnea": {
+        "level": "32",
+        "to": "Cacturne"
+    },
+    "Swablu": {
+        "level": "35",
+        "to": "Altaria"
+    },
+    "Barboach": {
+        "level": "30",
+        "to": "Whiscash"
+    },
+    "Corphish": {
+        "level": "30",
+        "to": "Crawdaunt"
+    },
+    "Baltoy": {
+        "level": "36",
+        "to": "Claydol"
+    },
+    "Lileep": {
+        "level": "40",
+        "to": "Cradily"
+    },
+    "Anorith": {
+        "level": "40",
+        "to": "Armaldo"
+    },
+    "Feebas": {
+        "level": "40",
+        "to": "Milotic"
+    },
+    "Shuppet": {
+        "level": "37",
+        "to": "Banette"
+    },
+    "Duskull": {
+        "level": "37",
+        "to": "Dusclops"
+    },
+    "Dusclops": {
+        "level": "50",
+        "to": "Dusknoir"
+    },
+    "Chingling": {
+        "level": "20",
+        "to": "Chimecho"
+    },
+    "Snorunt": {
+        "level": "42",
+        "to": "Glalie"
+    },
+    "Spheal": {
+        "level": "32",
+        "to": "Sealeo"
+    },
+    "Sealeo": {
+        "level": "44",
+        "to": "Walrein"
+    },
+    "Clamperl": {
+        "level": "30",
+        "to": "Gorebyss"
+    },
+    "Bagon": {
+        "level": "30",
+        "to": "Shelgon"
+    },
+    "Shelgon": {
+        "level": "50",
+        "to": "Salamence"
+    },
+    "Beldum": {
+        "level": "20",
+        "to": "Metang"
+    },
+    "Metang": {
+        "level": "45",
+        "to": "Metagross"
     },
 };
 
