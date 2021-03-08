@@ -45,22 +45,24 @@ export default {
 
     getters: {
         dataWithUnseen(state) {
-            const unseen = { name: '???', flag: 0 };
+            const unseen = (id) => ({ id, name: '???', flag: 0 });
+            const fill = (fromId, toId) => Array(toId - fromId - 1)
+                .fill(fromId).map((i, j) => unseen(i + j + 1));
 
             const list = state.data
                 .sort((a, b) => a.id - b.id)
-                .reduce((list, entry) => [
+                .reduce((list, entry, i) => [
                     // What we have so far
                     ...list,
                     // Some ??? to fill in between
-                    ...Array(entry.id - list.length - 1).fill(unseen),
+                    ...fill(list.length, entry.id),
                     // The next one to add
                     entry,
                 ], []);
 
             const extra = Math.max(0, Math.min(5, MAX_POKEMON - list.length));
 
-            return list.concat(Array(extra).fill(unseen));
+            return list.concat(fill(list.length, list.length + extra + 1));
         },
     },
 };
