@@ -189,7 +189,12 @@ export default (player, enemy) => {
             dom.renderPokeList(false);
         },
         attemptCatch: function () {
-            if (Combat.catchEnabled == 'all' && !Combat.trainer || (Combat.catchEnabled == 'new' && !player.hasPokemon(enemy.activePoke().pokeName(), 0)) && !Combat.trainer) {
+            if (
+                !Combat.trainer && (
+                    (Combat.catchEnabled == 'all')
+                    || (Combat.catchEnabled == 'new' && !player.hasPokemonLike(enemy.activePoke()))
+                )
+            ) {
                 const selectedBall = (enemy.activePoke().shiny() ? player.bestAvailableBall() : player.selectedBall);
                 if (player.consumeBall(selectedBall)) {
                 // add throw to statistics
@@ -203,8 +208,8 @@ export default (player, enemy) => {
                         player.statistics.successfulThrows++;
                         player.statistics[`${selectedBall}SuccessfulThrows`]++;
                         player.addCatchCoins(gainCatchCoins);
-                        if (!player.hasPokemon(enemy.activePoke().pokeName(), 0)) {
-                            player.addPoke(enemy.activePoke(), 0);
+                        if (!player.hasPokemonLike(enemy.activePoke())) {
+                            player.addPoke(enemy.activePoke());
                             dom.renderPokeList();
                         }
                         player.addPokedex(enemy.activePoke().pokeName(), (enemy.activePoke().shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
