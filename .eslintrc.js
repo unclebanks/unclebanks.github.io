@@ -19,7 +19,6 @@ module.exports = {
         'quote-props': 'off',
         'func-names': 'off',
         'object-shorthand': 'off',
-        'no-bitwise': 'off',
         'no-plusplus': 'off',
         'eqeqeq': 'off',
         'max-len': 'off',

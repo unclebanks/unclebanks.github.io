@@ -197,7 +197,7 @@ export default (player, Poke) => {
             let pokecoinShopHTML = '';
             for (let i = 0; i < this.pokecoinShopItems.length; i++) {
                 let canBuy = true;
-                let own = false;
+                const own = false;
                 if (player.currencyAmount.pokecoins < this.pokecoinShopItems[i].pokecoins) canBuy = false;
                 const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
                 const buttonText = (own) ? 'Own' : 'Buy';
@@ -210,7 +210,7 @@ export default (player, Poke) => {
             let pokecoinShopHTML = '';
             for (let i = 0; i < this.johtoPokecoinShopItems.length; i++) {
                 let canBuy = true;
-                let own = false;
+                const own = false;
                 if (player.currencyAmount.pokecoins < this.johtoPokecoinShopItems[i].pokecoins) canBuy = false;
                 const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
                 const buttonText = (own) ? 'Own' : 'Buy';
@@ -223,7 +223,7 @@ export default (player, Poke) => {
             let pokecoinShopHTML = '';
             for (let i = 0; i < this.hoennPokecoinShopItems.length; i++) {
                 let canBuy = true;
-                let own = false;
+                const own = false;
                 if (player.currencyAmount.pokecoins < this.hoennPokecoinShopItems[i].pokecoins) canBuy = false;
                 const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
                 const buttonText = (own) ? 'Own' : 'Buy';
