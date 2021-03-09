@@ -9,7 +9,7 @@ export default (starter, player, Poke) => {
         poke,
         level,
         false,
-        Math.random() < (1 / (1 << 5 << 8)),
+        Math.random() < (1 / (2 ** 13)),
     );
 
     const trainerPoke = (pokemonList) => {
@@ -23,15 +23,15 @@ export default (starter, player, Poke) => {
         const regionData = ROUTES[regionId];
         const routeData = regionData[routeId];
         let pokemonList = [];
-            pokemonList = routeData.pokes;
+        pokemonList = routeData.pokes;
         if (regionData._global) {
-            if (regionData._global.pokes && Math.random() < (1 / (1 << 8))) {
+            if (regionData._global.pokes && Math.random() < (1 / (2 ** 8))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.pokes);
             }
-            if (regionData._global.rarePokes && Math.random() < (1 / (1 << 14))) {
+            if (regionData._global.rarePokes && Math.random() < (1 / (2 ** 14))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.rarePokes);
             }
-            if (regionData._global.superRare && Math.random() < (1 / (1 << 16))) {
+            if (regionData._global.superRare && Math.random() < (1 / (2 ** 16))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.superRare);
             }
         }

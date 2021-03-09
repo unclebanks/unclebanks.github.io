@@ -144,9 +144,17 @@ export default (lastSave, appModel) => {
             for (let i = 0; i < len; i++) {
                 chk += (s.charCodeAt(i) * (i + 1));
             }
+            // eslint-disable-next-line no-bitwise
             return (chk & 0xffffffff).toString(16);
         },
         addPoke: function (poke) {
+            const existing = this.getPokemonByName(poke.pokeName());
+            if (existing) {
+                // if we already have something like this, just update shiny
+                existing.isShiny = existing.shiny() || poke.shiny();
+                return;
+            }
+
             if (this.pokemons.length < 6) {
                 this.pokemons.push(poke);
             } else {
@@ -236,9 +244,18 @@ export default (lastSave, appModel) => {
             }
             return this.canHeal();
         },
+        hasPokemonLike(pokemon) {
+            return this.hasPokemon(pokemon.pokeName(), pokemon.shiny());
+        },
+        // Return true if we have this pokemon in the same shininess or better
         hasPokemon: function (pokemonName, shiny) {
-            const allPokes = mergeArray(this.pokemons, this.storage);
-            return typeof allPokes.find(function (obj) { return (this[0] == obj.pokeName() && this[1] == obj.shiny()); }, [pokemonName, shiny]) !== 'undefined';
+            // match if the name matches and we don't care about shiny, or the pokemon is shiny
+            const match = (p) => p.pokeName() === pokemonName && (!shiny || p.isShiny);
+            // findIndex will return > -1 if there is a match
+            return [...this.pokemons, ...this.storage].findIndex(match) > -1;
+        },
+        getPokemonByName: function (pokemonName) {
+            return [...this.pokemons, ...this.storage].find((p) => p.pokeName() === pokemonName);
         },
         deletePoke: function (index, from = 'roster') {
             if (from == 'roster') {
