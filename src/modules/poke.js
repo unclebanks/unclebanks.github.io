@@ -20,7 +20,7 @@ export default (player) => {
             .length;
     };
     Poke.prototype.statValue = function (statName) {
-        let raw = this.poke.stats[0][statName];
+        const raw = this.poke.stats[0][statName];
         let calculated = ((raw + 50) * this.currentLevel()) / 150;
         if (statName !== 'speed') {
             calculated *= Math.pow(1.25, this.prestigeLevel);

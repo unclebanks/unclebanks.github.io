@@ -144,6 +144,7 @@ export default (lastSave, appModel) => {
             for (let i = 0; i < len; i++) {
                 chk += (s.charCodeAt(i) * (i + 1));
             }
+            // eslint-disable-next-line no-bitwise
             return (chk & 0xffffffff).toString(16);
         },
         addPoke: function (poke) {
