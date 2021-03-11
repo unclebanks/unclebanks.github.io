@@ -430,6 +430,12 @@ export default (player, combatLoop, enemy, town, story) => {
                 town.renderJohtoCatchCoinShop();
                 openModal(document.getElementById('townModal'));
             }
+            if (player.settings.currentRegionId === 'Hoenn') {
+                town.renderHoennPokeCoinShop();
+                town.renderHoennBattleCoinShop();
+                town.renderHoennCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
         },
         openVitaminModal: function (vitamin) {
           if (!VITAMINS[vitamin]) {

@@ -13,11 +13,11 @@
     </select>
     <ul id="dexList">
       <li
-        v-for="(entry, index) in $store.getters['pokedex/dataWithUnseen']"
-        :key="entry.name"
+        v-for="entry in $store.getters['pokedex/dataWithUnseen']"
+        :key="entry.id"
         :class="`pokeDex${entry.flag}`"
       >
-        {{ index + 1 }} {{ entry.name }}
+        {{ entry.id }} {{ entry.name }}
       </li>
     </ul>
   </div>

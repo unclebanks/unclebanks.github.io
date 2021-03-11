@@ -18,7 +18,7 @@
       onclick="userInteractions.changeSelectedBall('pokeball')"
     ><label for="pokeball"><span title="Pokeball"><img
       class="pokeballImg ballIcon"
-      src="assets/images/pokeballs/poke.png"
+      src="assets/images/pokeballs/pokeball.png"
     ></span>Pokeballs: <span class="ball-amount pokeball">10</span></label><br>
     <input
       id="greatball"
@@ -28,7 +28,7 @@
       onclick="userInteractions.changeSelectedBall('greatball')"
     ><label for="greatball"><span title="Greatball"><img
       class="greatballImg ballIcon"
-      src="assets/images/pokeballs/great.png"
+      src="assets/images/pokeballs/greatball.png"
     ></span>Greatballs: <span class="ball-amount greatball">0</span></label><br>
     <input
       id="ultraball"
@@ -38,7 +38,7 @@
       onclick="userInteractions.changeSelectedBall('ultraball')"
     ><label for="ultraball"><span title="Ultraball"><img
       class="UltraballImg ballIcon"
-      src="assets/images/pokeballs/ultra.png"
+      src="assets/images/pokeballs/ultraball.png"
     ></span>Ultraballs: <span class="ball-amount ultraball">0</span></label><br>
     <input
       id="masterball"
@@ -48,7 +48,7 @@
       onclick="userInteractions.changeSelectedBall('masterball')"
     ><label for="masterball"><span title="Masterball"><img
       class="MasterballImg ballIcon"
-      src="assets/images/pokeballs/master.png"
+      src="assets/images/pokeballs/masterball.png"
     ></span>Masterballs: <span class="ball-amount masterball">0</span></label><br>
     <span>Currency:</span><br>
     <span
