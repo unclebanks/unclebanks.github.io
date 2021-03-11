@@ -398,18 +398,31 @@ progress.expBar {
 }
 
 #inventoryDialog {
-  .proteinItem > img {
+  .vitaminItem > img {
     height: auto;
     width: 16px;
     margin-right: 5px;
   }
-  .proteinItem > .itemName {
+  .vitaminItem > .itemName {
     margin-right: 5px;
   }
+  .vitaminItem > .inventoryVitaminAlignmentHelper {
+    height: 100%;
+  }
   #inventoryList > li {
-    border: 1px solid black;
     &:not(:last-child) {
       margin-bottom: 5px;
+    }
+    * {
+      vertical-align: middle;
+    }
+  }
+}
+
+#vitaminDialog {
+  .vitaminModalPokemon {
+    * {
+      vertical-align: bottom;
     }
   }
 }

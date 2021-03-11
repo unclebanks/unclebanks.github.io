@@ -405,14 +405,14 @@ export default (player, combatLoop, enemy, town, story) => {
                 }
                 document.getElementById('badgeList').innerHTML = badgesHTML;
             }
-            let inventoryHTML = 'To do';
+            let inventoryHTML = '';
             let vitamins = Object.keys(VITAMINS);
             for (let i = 0; i < vitamins.length; i++) {
               let vitamin = vitamins[i];
               let vitaminName = VITAMINS[vitamin].display;
               let count = player.vitamins[vitamin];
               let image = `assets/images/vitamins/${vitamin}.png`;
-              inventoryHTML += `<li class="proteinItem"><img src="${image}"></img><span class="itemName">${vitaminName}</span><button class="button" onclick="userInteractions.openVitaminModal('${vitamin}')">Use (${count} available)</button></li>`;
+              inventoryHTML += `<li class="vitaminItem"><div class="inventoryVitaminAlignmentHelper"></div><img src="${image}"></img><span class="itemName">${vitaminName}</span><button class="button" onclick="userInteractions.openVitaminModal('${vitamin}')">Use (${count} available)</button></li>`;
             }
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
@@ -458,7 +458,7 @@ export default (player, combatLoop, enemy, town, story) => {
           let list = player.getPokemon();
           for (let i = 0; i < list.length; i++) {
             let poke = list[i];
-            vitaminPokemonHTML += `<li style="border: 1px solid black"><img src="${poke.image().party}"> <button class="button" onclick="userInteractions.useVitamin('${vitamin}', ${i})">${poke.getAppliedVitamins(data.stat)}/${poke.getMaxVitamins(data.stat)}</button></li>`
+            vitaminPokemonHTML += `<li class="vitaminModalPokemon"><img src="${poke.image().party}"> <button class="button" onclick="userInteractions.useVitamin('${vitamin}', ${i})">${poke.getAppliedVitamins(data.stat)}/${poke.getMaxVitamins(data.stat)}</button></li>`
           }
           document.getElementById('vitaminPokemon').innerHTML = vitaminPokemonHTML;
         },
