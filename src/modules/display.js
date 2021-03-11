@@ -145,6 +145,8 @@ export default (player, combatLoop, userInteractions) => {
                         flash(listItemElement);
                     }
                 } else {
+                    const upButton = `<button onclick="userInteractions.pokemonToUp(${index})" class="pokeUpButton"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>`;
+                    const downButton = `<button onclick="userInteractions.pokemonToDown(${index})" class="pokeDownButton"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>`;
                     const evolveButton = `<button onclick="userInteractions.evolvePokemon(${index})" class="pokeEvolveButton">Evolve</button>`;
                     const prestigeButton = `<button onclick="userInteractions.prestigePokemon(${index})" class="pokePrestigeButton">Prestige</button>`;
                     const storageButton = `<button onclick="userInteractions.moveToStorage(${index})" class="toStorageButton">PC</button>`;
@@ -154,6 +156,8 @@ export default (player, combatLoop, userInteractions) => {
                         image
                     }<a href="#" onclick="userInteractions.changePokemon(${index})" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? (`p${poke.prestigeLevel}`) : '')})</a><br>${evolveButton
                     }${prestigeButton
+                    }${upButton
+                    }${downButton
                     }${storageButton
                     }</li>`;
                 }
