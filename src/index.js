@@ -102,6 +102,6 @@ dom.renderPokeSort();
 combatLoop.init();
 
 requestAnimationFrame(function renderTime() {
-    dom.renderHeal(player.canHeal(), enemy);
+    dom.renderHeal(models.app.$store.getters['pokemon/timeToHeal'], enemy);
     requestAnimationFrame(renderTime);
 });

@@ -3,6 +3,7 @@ import rootActions from './actions';
 import rootMutations from './mutations';
 
 import pokedex from './modules/pokedex';
+import pokemon from './modules/pokemon';
 
 const rootState = () => {};
 
@@ -13,5 +14,6 @@ export default createStore({
 
     modules: {
         pokedex,
+        pokemon,
     },
 });

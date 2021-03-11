@@ -95,16 +95,15 @@ export default (player, combatLoop, userInteractions) => {
                 $('#dexView').style.display = 'block';
             }
         },
-        renderHeal: function (canHeal, enemy) {
-            if (canHeal === true) {
+        renderHeal: function (timeToHeal, enemy) {
+            if (timeToHeal <= 0) {
                 this.setValue(this.healElement, 'Heal!');
                 player.healAllPokemons();
                 combatLoop.refresh();
                 renderView(Display, enemy, player, false);
                 Display.renderPokeList(false);
-            }
-            if (typeof canHeal === 'number') {
-                this.setValue(this.healElement, `Heal: ${Math.floor(((canHeal / 30000) * 100))}%`);
+            } else {
+                this.setValue(this.healElement, `Heal: ${Math.floor(((timeToHeal / 30000) * 100))}%`);
             }
         },
         pokeStatus: function (poke) {
@@ -133,6 +132,7 @@ export default (player, combatLoop, userInteractions) => {
             }
         },
         renderPokeList: function (purge = true) {
+            return;
             const list = player.getPokemon();
             const listElement = $('#rosterList');
             const deleteEnabled = $('#enableDelete').checked;
@@ -183,6 +183,7 @@ export default (player, combatLoop, userInteractions) => {
             }
         },
         renderStorage: function () {
+            return;
             const list = player.storage;
             const listElement = $('#storageList');
             let listElementsToAdd = '';
