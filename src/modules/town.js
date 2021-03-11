@@ -197,12 +197,22 @@ export default (player, Poke) => {
             let pokecoinShopHTML = '';
             for (let i = 0; i < this.pokecoinShopItems.length; i++) {
                 let canBuy = true;
+                let canBuy10 = true;
+                let canBuy100 = true;
                 const own = false;
                 if (player.currencyAmount.pokecoins < this.pokecoinShopItems[i].pokecoins) canBuy = false;
+                if (player.currencyAmount.pokecoins < this.pokecoinShopItems[i].pokecoins * 10) canBuy10 = false;
+                if (player.currencyAmount.pokecoins < this.pokecoinShopItems[i].pokecoins * 100) canBuy100 = false;
                 const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const disableButton10 = (!canBuy10 || own) ? ' disabled="true"' : '';
+                const disableButton100 = (!canBuy100 || own) ? ' disabled="true"' : '';
                 const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonText10 = (own) ? 'Own' : 'Buy 10';
+                const buttonText100 = (own) ? 'Own' : 'Buy 100';
                 const buttonHTML = ` <button onclick="town.buyPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
-                pokecoinShopHTML += `${'<li><img src="assets/images/pokeballs/'}${this.pokecoinShopItems[i].ball}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.pokecoinShopItems[i].pokecoins}${buttonHTML}</li>`;
+                const button10HTML = ` <button onclick="town.buyPokeCoinItem10('${i}')"${disableButton10}>${buttonText10}</button>`;
+                const button100HTML = ` <button onclick="town.buyPokeCoinItem100('${i}')"${disableButton100}>${buttonText100}</button>`;
+                pokecoinShopHTML += `${'<li><img src="assets/images/pokeballs/'}${this.pokecoinShopItems[i].ball}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.pokecoinShopItems[i].pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
             }
             $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
         },
@@ -210,12 +220,22 @@ export default (player, Poke) => {
             let pokecoinShopHTML = '';
             for (let i = 0; i < this.johtoPokecoinShopItems.length; i++) {
                 let canBuy = true;
+                let canBuy10 = true;
+                let canBuy100 = true;
                 const own = false;
                 if (player.currencyAmount.pokecoins < this.johtoPokecoinShopItems[i].pokecoins) canBuy = false;
+                if (player.currencyAmount.pokecoins < this.johtoPokecoinShopItems[i].pokecoins * 10) canBuy10 = false;
+                if (player.currencyAmount.pokecoins < this.johtoPokecoinShopItems[i].pokecoins * 100) canBuy100 = false;
                 const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const disableButton10 = (!canBuy10 || own) ? ' disabled="true"' : '';
+                const disableButton100 = (!canBuy100 || own) ? ' disabled="true"' : '';
                 const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonText10 = (own) ? 'Own' : 'Buy 10';
+                const buttonText100 = (own) ? 'Own' : 'Buy 100';
                 const buttonHTML = ` <button onclick="town.buyJohtoPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
-                pokecoinShopHTML += `<li>${this.johtoPokecoinShopItems[i].name}: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.johtoPokecoinShopItems[i].pokecoins}${buttonHTML}</li>`;
+                const button10HTML = ` <button onclick="town.buyJohtoPokeCoinItem10('${i}')"${disableButton10}>${buttonText10}</button>`;
+                const button100HTML = ` <button onclick="town.buyJohtoPokeCoinItem100('${i}')"${disableButton100}>${buttonText100}</button>`;
+                pokecoinShopHTML += `<li>${this.johtoPokecoinShopItems[i].name}: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.johtoPokecoinShopItems[i].pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
             }
             $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
         },
@@ -245,7 +265,7 @@ export default (player, Poke) => {
                 const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
                 const buttonText = (own) ? 'Own' : 'Buy';
                 const buttonHTML = ` <button onclick="town.buyBattleCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
-                battlecoinShopHTML += `${'<li><img src="assets/images/evoStones/'}${this.battlecoinShopItems[i].name}.png" height="30" width="30"></img>: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.battlecoinShopItems[i].battlecoins}${buttonHTML}</li>`;
+                battlecoinShopHTML += `${'<li><img src="assets/images/battleShop/'}${this.battlecoinShopItems[i].name}.png" height="30" width="30"></img>: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.battlecoinShopItems[i].battlecoins}${buttonHTML}</li>`;
             }
             $('#battlecoinShopItems').innerHTML = battlecoinShopHTML;
         },
@@ -349,6 +369,36 @@ export default (player, Poke) => {
                 return true;
             }
         },
+        buyPokeCoinItem10: function (index) {
+            const item = this.pokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 10)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 10);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 10;
+                    dom.renderBalls();
+                }
+                this.renderPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyPokeCoinItem100: function (index) {
+            const item = this.pokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 100)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 100);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 100;
+                    dom.renderBalls();
+                }
+                this.renderPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
         buyJohtoPokeCoinItem: function (index) {
             const item = this.johtoPokecoinShopItems[index];
             if (player.currencyAmount.pokecoins < item.pokecoins) {
@@ -364,6 +414,36 @@ export default (player, Poke) => {
                 return true;
             }
         },
+        buyJohtoPokeCoinItem10: function (index) {
+            const item = this.johtoPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 10)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 10);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 10;
+                    dom.renderBalls();
+                }
+                this.renderJohtoPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyJohtoPokeCoinItem100: function (index) {
+            const item = this.johtoPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 100)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 100);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 100;
+                    dom.renderBalls();
+                }
+                this.renderJohtoPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
         buyHoennPokeCoinItem: function (index) {
             const item = this.hoennPokecoinShopItems[index];
             if (player.currencyAmount.pokecoins < item.pokecoins) {
@@ -372,6 +452,36 @@ export default (player, Poke) => {
                 player.currencyAmount.pokecoins -= item.pokecoins;
                 if (item.ball) {
                     player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                this.renderHoennPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyHoennPokeCoinItem10: function (index) {
+            const item = this.hoennPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 10)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 10);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 10;
+                    dom.renderBalls();
+                }
+                this.renderHoennPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyHoennPokeCoinItem100: function (index) {
+            const item = this.hoennPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 100)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 100);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 100;
                     dom.renderBalls();
                 }
                 this.renderHoennPokeCoinShop(); // force refresh of shop
