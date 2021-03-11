@@ -101,7 +101,6 @@ export default (player, combatLoop, userInteractions) => {
                 player.healAllPokemons();
                 combatLoop.refresh();
                 renderView(Display, enemy, player, false);
-                Display.renderPokeList(false);
             } else {
                 this.setValue(this.healElement, `Heal: ${Math.floor(((timeToHeal / 30000) * 100))}%`);
             }
@@ -129,57 +128,6 @@ export default (player, combatLoop, userInteractions) => {
             } else {
                 $('#pokeSortOrderSelect').style.display = 'none';
                 $('#pokeSortDirSelect').style.display = 'none';
-            }
-        },
-        renderPokeList: function (purge = true) {
-            return;
-            const list = player.getPokemon();
-            const listElement = $('#rosterList');
-            const deleteEnabled = $('#enableDelete').checked;
-            listElement.className = `list${deleteEnabled ? ' manageTeamEnabled' : ''}`;
-            let listElementsToAdd = '';
-            list.forEach((poke, index) => {
-                const listItemElement = listElement.querySelector(`#listPoke${index}`);
-                if (listItemElement) {
-                    const listItemNameElement = listItemElement.querySelector('.pokeListName');
-                    const hasChanged = (listItemNameElement.innerHTML !== `${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? (`p${poke.prestigeLevel}`) : '')})`) || (listItemNameElement.getAttribute('status') !== this.pokeStatus(poke));
-                    listItemNameElement.innerHTML = `${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? (`p${poke.prestigeLevel}`) : '')})`;
-                    listItemNameElement.setAttribute('status', this.pokeStatus(poke));
-                    listItemNameElement.className = `pokeListName ${this.pokeStatus(poke)
-                    }${poke === player.activePoke() ? ' activePoke' : ''
-                    }${poke.canEvolve() ? ' canEvolve' : ''
-                    }${poke.canPrestige() ? ' canPrestige' : ''}`;
-                    listItemElement.querySelector('img').setAttribute('src', poke.image().party);
-                    if (!purge && hasChanged) {
-                        flash(listItemElement);
-                    }
-                } else {
-                    const upButton = `<button onclick="userInteractions.pokemonToUp(${index})" class="pokeUpButton"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>`;
-                    const downButton = `<button onclick="userInteractions.pokemonToDown(${index})" class="pokeDownButton"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>`;
-                    const evolveButton = `<button onclick="userInteractions.evolvePokemon(${index})" class="pokeEvolveButton">Evolve</button>`;
-                    const prestigeButton = `<button onclick="userInteractions.prestigePokemon(${index})" class="pokePrestigeButton">Prestige</button>`;
-                    const storageButton = `<button onclick="userInteractions.moveToStorage(${index})" class="toStorageButton">PC</button>`;
-                    const image = `<p><a href="#" onclick="userInteractions.changePokemon(${index})"><img src="${poke.image().party}"></a></p>`;
-
-                    listElementsToAdd += `<li id="listPoke${index}" class="listPoke">${
-                        image
-                    }<a href="#" onclick="userInteractions.changePokemon(${index})" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level() + (poke.prestigeLevel ? (`p${poke.prestigeLevel}`) : '')})</a><br>${evolveButton
-                    }${prestigeButton
-                    }${upButton
-                    }${downButton
-                    }${storageButton
-                    }</li>`;
-                }
-            });
-            if (listElementsToAdd.length > 0) {
-                this.setValue(listElement, listElementsToAdd, true);
-            }
-            let i = list.length;
-            let listItemToRemove;
-            // eslint-disable-next-line no-cond-assign
-            while (listItemToRemove = listElement.querySelector(`#listPoke${i}`)) {
-                listElement.removeChild(listItemToRemove);
-                i++;
             }
         },
         renderStorage: function () {
@@ -323,9 +271,6 @@ export default (player, combatLoop, userInteractions) => {
             $('#modalPopup #popupText').innerText = '';
         },
         bindEvents: function () {
-            $('#enableDelete').addEventListener('click', () => {
-                userInteractions.enablePokeListDelete();
-            });
             $('#autoSort').addEventListener('click', () => {
                 userInteractions.enablePokeListAutoSort();
             });

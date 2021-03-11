@@ -528,11 +528,6 @@ export default (player, enemy) => {
             player.getPokemon().forEach((poke) => poke.giveExp((Combat.enemyActivePoke.baseExp() / 100) + (Combat.enemyActivePoke.level() / 10)));
             const afterExp = player.getPokemon().map((poke) => poke.level());
 
-            // check if a pokemon leveled up
-            if (beforeExp.join('') !== afterExp.join('')) {
-                dom.renderPokeList();
-            }
-
             // was it a trainer poke
             if (Combat.trainer) {
             // remove the pokemon
@@ -657,7 +652,6 @@ export default (player, enemy) => {
                     userInteractions.changeRoute(ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn, true);
                 }
             }
-            dom.renderPokeList(false);
         },
         attemptCatch: function () {
             if (
@@ -1079,7 +1073,6 @@ export default (player, enemy) => {
                         }
                         if (!player.hasPokemonLike(enemy.activePoke())) {
                             player.addPoke(enemy.activePoke());
-                            dom.renderPokeList();
                         }
                         player.addPokedex(enemy.activePoke().pokeName(), (enemy.activePoke().shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
                         if (enemy.activePoke().shiny()) {

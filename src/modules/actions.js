@@ -159,10 +159,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         goToNone: function () {
             alert('This region is not implemented yet');
         },
-        enablePokeListDelete: function () {
-            dom.renderListBox();
-            dom.renderPokeList();
-        },
         enablePokeListAutoSort: function () {
             player.settings.autoSort = $('#autoSort').checked;
             // hide or show sort dropdowns
@@ -200,12 +196,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         evolvePokemon: function (pokemonIndex) {
             player.getPokemon()[pokemonIndex].tryEvolve(player.getPokemon()[pokemonIndex].shiny());
-            dom.renderPokeList();
             renderView(dom, enemy, player);
         },
         prestigePokemon: function (pokemonIndex) {
             player.getPokemon()[pokemonIndex].tryPrestige(player.getPokemon()[pokemonIndex].shiny());
-            dom.renderPokeList();
             renderView(dom, enemy, player);
         },
         moveToStorage: function (pokemonIndex) {
@@ -244,7 +238,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 // reload everything
                 renderView(dom, enemy, player);
                 dom.renderListBox();
-                dom.renderPokeList();
                 dom.renderPokeSort();
                 dom.renderBalls();
                 dom.renderPokeCoins();

@@ -7,7 +7,7 @@
     <PlayerBox />
     <NavBox />
     <RegionBox />
-    <PartyBox />
+    <PartyBox :ui="ui" />
     <PokeGear />
   </div>
 

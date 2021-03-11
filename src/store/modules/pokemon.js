@@ -61,7 +61,6 @@ export default {
                 const poke = state.party[partyIndex];
                 state.party.splice(partyIndex, 1);
                 state.storage.push(poke);
-                // dom.renderPokeList();
             } else {
                 // dom.showPopup('You must have at least one active pokemon!');
                 alert('You must have at least one active pokemon!');
@@ -74,14 +73,13 @@ export default {
                 state.storage.splice(storageIndex, 1);
                 state.party.push(poke);
                 // dom.renderStorage();
-                // dom.renderPokeList();
             } else {
                 // dom.showPopup('You can only have six active pokemon!');
                 alert('You can only have six active pokemon!');
             }
         },
 
-        pokemonToFirst(state, { pokemonIndex, from = 'roster' }) {
+        moveToFirst(state, { pokemonIndex, from = 'roster' }) {
             if (from === 'roster') {
                 state.party = moveToFirst(state.party, pokemonIndex);
             } else {
@@ -89,7 +87,7 @@ export default {
             }
         },
 
-        pokemonToDown(state, { pokemonIndex, from = 'roster' }) {
+        moveDown(state, { pokemonIndex, from = 'roster' }) {
             const pokeList = (from === 'roster') ? state.party : state.storage;
 
             if (pokeList.length >= pokemonIndex) {
@@ -103,7 +101,7 @@ export default {
             }
         },
 
-        pokemonToUp(state, { pokemonIndex, from = 'roster' }) {
+        moveUp(state, { pokemonIndex, from = 'roster' }) {
             const pokeList = (from === 'roster') ? state.party : state.storage;
 
             if (pokemonIndex > 0) {
