@@ -265,7 +265,7 @@ export default (player, Poke) => {
                 const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
                 const buttonText = (own) ? 'Own' : 'Buy';
                 const buttonHTML = ` <button onclick="town.buyBattleCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
-                battlecoinShopHTML += `${'<li><img src="assets/images/evoStones/'}${this.battlecoinShopItems[i].name}.png" height="30" width="30"></img>: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.battlecoinShopItems[i].battlecoins}${buttonHTML}</li>`;
+                battlecoinShopHTML += `${'<li><img src="assets/images/battleShop/'}${this.battlecoinShopItems[i].name}.png" height="30" width="30"></img>: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.battlecoinShopItems[i].battlecoins}${buttonHTML}</li>`;
             }
             $('#battlecoinShopItems').innerHTML = battlecoinShopHTML;
         },
