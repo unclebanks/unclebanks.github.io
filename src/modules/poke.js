@@ -13,7 +13,7 @@ export default (player) => {
         this.caughtAt = caughtAt || Date.now();
         this.prestigeLevel = prestigeLevel;
         this.appliedVitamins = appliedVitamins;
-        this.hp = this.setHpValue(this.poke.stats[0].hp) * 3;
+        this.hp = this.maxHp();
     };
     Poke.prototype.currentLevel = function () {
         return this.expTable
@@ -21,15 +21,18 @@ export default (player) => {
             .length;
     };
     Poke.prototype.statValue = function (statName) {
-        let raw = this.poke.stats[0][statName];
-        let calculated = ((raw + 50) * this.currentLevel()) / 150;
-        if (statName !== 'speed') {
+        let raw = Number(this.poke.stats[0][statName]);
+        raw += this.getAppliedVitamins(statName);
+        let calculated = statName !== 'hp'
+            ? ((raw + 50) * this.currentLevel()) / 150
+            : ((raw * this.currentLevel()) / 40);
+        if (statName !== 'speed' && statName !== 'hp') {
             calculated *= Math.pow(1.25, this.prestigeLevel);
         }
+        if (statName === 'hp') {
+            calculated *= 3;
+        }
         return Math.floor(calculated);
-    };
-    Poke.prototype.setHpValue = function (rawHp) {
-        return Math.floor(((rawHp * this.currentLevel()) / 40));
     };
     Poke.prototype.tryEvolve = function (shiny) {
         const pokemonHasEvolution = EVOLUTIONS[this.poke.pokemon[0].Pokemon] !== undefined;
@@ -114,7 +117,7 @@ export default (player) => {
 
     Poke.prototype.setHp = function (hp) { this.hp = hp; };
     Poke.prototype.getHp = function () { return this.hp; };
-    Poke.prototype.maxHp = function () { return this.setHpValue(this.poke.stats[0].hp) * 3; };
+    Poke.prototype.maxHp = function () { return this.statValue('hp'); };
     Poke.prototype.attack = function () { return this.statValue('attack'); };
     Poke.prototype.defense = function () { return this.statValue('defense'); };
     Poke.prototype.spAttack = function () { return this.statValue('sp atk'); };
