@@ -54,7 +54,10 @@ const ROUTES = {
             , pokes: ['Pidgey', 'Rattata', 'Caterpie', 'Weedle', 'Nidoran F', 'Nidoran M']
             , minLevel: 3
             , maxLevel: 5,
-            respawn: 'viridianCity'
+            respawn: 'viridianCity',
+            _special: [
+                { requirement: { type: 'item', item: 'Old Rod' }, pokemon: ['Ho-Oh'] },
+            ],
         }
         , viridianForest: {
             name: 'Virdian Forest'
