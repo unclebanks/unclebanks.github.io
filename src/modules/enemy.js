@@ -43,8 +43,8 @@ export default (starter, player, Poke) => {
             if (regionData._global.superRare && Math.random() < (1 / (2 ** 16))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.superRare);
             }
-            if (regionData._special) {
-                pokemonList = mergeArray(pokemonList, regionData._special.filter(requirementMet).flatMap((s) => s.pokemon));
+            if (routeData._special) {
+                pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
             }
         }
         const poke = pokeByName(randomArrayElement(pokemonList));

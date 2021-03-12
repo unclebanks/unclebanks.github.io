@@ -56,7 +56,7 @@ const ROUTES = {
             , maxLevel: 5,
             respawn: 'viridianCity',
             _special: [
-                { requirement: { type: 'item', item: 'Old Rod' }, pokemon: ['Ho-Oh'] },
+                { requirement: { type: 'item', item: 'kantoOldRod' }, pokemon: ['Ho-Oh'] },
             ],
         }
         , viridianForest: {
