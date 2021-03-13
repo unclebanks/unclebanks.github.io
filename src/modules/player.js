@@ -130,6 +130,7 @@ export default (lastSave, appModel) => {
             totalExp: 0,
         },
         badges: {},
+        wins: {},
         purgeData: false,
         canHeal: function () {
             if ((Date.now() - this.lastHeal) > 30000) {
@@ -159,6 +160,7 @@ export default (lastSave, appModel) => {
                 this.pokemons.push(poke);
             } else {
                 this.storage.push(poke);
+                dom.renderStorage();
             }
         },
         findDexIndex: (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.name),
@@ -380,6 +382,7 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('statistics', JSON.stringify(this.statistics));
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
+                localStorage.setItem('wins', JSON.stringify(this.wins));
                 localStorage.setItem('unlocked', JSON.stringify(this.unlocked));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
@@ -394,6 +397,7 @@ export default (lastSave, appModel) => {
                 settings: this.settings,
                 ballsAmount: this.ballsAmount,
                 badges: this.badges,
+                wins: this.wins,
                 unlocked: this.unlocked,
                 evoStones: this.evoStones,
                 currencyAmount: this.currencyAmount,
@@ -450,6 +454,9 @@ export default (lastSave, appModel) => {
             }
             if (JSON.parse(localStorage.getItem('badges'))) {
                 this.badges = JSON.parse(localStorage.getItem('badges'));
+            }
+            if (JSON.parse(localStorage.getItem('wins'))) {
+                this.wins = JSON.parse(localStorage.getItem('wins'));
             }
             if (JSON.parse(localStorage.getItem('unlocked'))) {
                 const loadedUnlocked = JSON.parse(localStorage.getItem('unlocked'));
@@ -513,6 +520,7 @@ export default (lastSave, appModel) => {
                     this.settings = saveData.settings;
                 }
                 this.badges = saveData.badges ? saveData.badges : {};
+                this.wins = saveData.wins ? saveData.wins : {};
                 const loadedUnlocked = saveData.unlocked ? saveData.unlocked : [];
                 this.unlocked = { ...this.unlocked, ...loadedUnlocked };
             } else {

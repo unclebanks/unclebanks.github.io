@@ -12,6 +12,12 @@ export default (player, enemy) => {
         paused: false,
         trainer: null,
         trainerPoke: {},
+        trainer1: null,
+        trainer1Poke: {},
+        trainer2: null,
+        trainer2Poke: {},
+        trainer3: null,
+        trainer3Poke: {},
         trainerCurrentID: 0,
         playerActivePoke: null,
         enemyActivePoke: null,
@@ -149,6 +155,57 @@ export default (player, enemy) => {
                     return false;
                 }
             }
+            if (Combat.trainer1) {
+            // remove the pokemon
+                Combat.trainer1Poke.splice(Combat.trainerCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.trainer1Poke.length) + 5;
+                player.addBattleCoins(foundBattleCoins);
+                if (Combat.trainer1Poke.length < 1) {
+                    if (Combat.trainer1.win) {
+                        if (!player.wins[Combat.trainer1.win]) {
+                            player.wins[Combat.trainer1.win] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    Combat.trainer1 = null;
+                    Combat.pause();
+                    return false;
+                }
+            }
+            if (Combat.trainer2) {
+            // remove the pokemon
+                Combat.trainer2Poke.splice(Combat.trainerCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.trainer2Poke.length) + 5;
+                player.addBattleCoins(foundBattleCoins);
+                if (Combat.trainer2Poke.length < 1) {
+                    if (Combat.trainer2.win) {
+                        if (!player.wins[Combat.trainer2.win]) {
+                            player.wins[Combat.trainer2.win] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    Combat.trainer2 = null;
+                    Combat.pause();
+                    return false;
+                }
+            }
+            if (Combat.trainer3) {
+            // remove the pokemon
+                Combat.trainer3Poke.splice(Combat.trainerCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.trainer3Poke.length) + 5;
+                player.addBattleCoins(foundBattleCoins);
+                if (Combat.trainer3Poke.length < 1) {
+                    if (Combat.trainer3.win) {
+                        if (!player.wins[Combat.trainer3.win]) {
+                            player.wins[Combat.trainer3.win] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    Combat.trainer3 = null;
+                    Combat.pause();
+                    return false;
+                }
+            }
 
             player.savePokes();
             Combat.newEnemy();
@@ -159,6 +216,12 @@ export default (player, enemy) => {
         newEnemy: function () {
             if (Combat.trainer) {
                 enemy.trainerPoke(Combat.trainerPoke);
+            } else if (Combat.trainer1) {
+                enemy.trainer1Poke(Combat.trainer1Poke);
+            } else if (Combat.trainer2) {
+                enemy.trainer2Poke(Combat.trainer2Poke);
+            } else if (Combat.trainer3) {
+                enemy.trainer3Poke(Combat.trainer3Poke);
             } else {
                 enemy.generateNew(player.settings.currentRegionId, player.settings.currentRouteId);
             }
@@ -181,6 +244,18 @@ export default (player, enemy) => {
                     Combat.trainer = null;
                     Combat.pause();
                 }
+                if (Combat.trainer1) {
+                    Combat.trainer1 = null;
+                    Combat.pause();
+                }
+                if (Combat.trainer2) {
+                    Combat.trainer2 = null;
+                    Combat.pause();
+                }
+                if (Combat.trainer3) {
+                    Combat.trainer3 = null;
+                    Combat.pause();
+                }
                 flash($('#gameContainer'));
                 if (ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn) {
                     userInteractions.changeRoute(ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn, true);
@@ -190,7 +265,7 @@ export default (player, enemy) => {
         },
         attemptCatch: function () {
             if (
-                !Combat.trainer && (
+                !Combat.trainer && !Combat.trainer1 && !Combat.trainer2 && !Combat.trainer3 && (
                     (Combat.catchEnabled == 'all')
                     || (Combat.catchEnabled == 'new' && !player.hasPokemonLike(enemy.activePoke()))
                 )

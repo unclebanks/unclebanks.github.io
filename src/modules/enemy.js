@@ -18,6 +18,24 @@ export default (starter, player, Poke) => {
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);
     };
+    const trainer1Poke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.trainerCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
+    const trainer2Poke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.trainerCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
+    const trainer3Poke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.trainerCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
 
     const requirementMet = (req) => {
         switch (req.requirement.type) {
@@ -56,6 +74,9 @@ export default (starter, player, Poke) => {
         activePoke: () => active,
         clear: () => active = null,
         trainerPoke: (pokemonList) => active = trainerPoke(pokemonList),
+        trainer1Poke: (pokemonList) => active = trainer1Poke(pokemonList),
+        trainer2Poke: (pokemonList) => active = trainer2Poke(pokemonList),
+        trainer3Poke: (pokemonList) => active = trainer3Poke(pokemonList),
         generateNew: (regionId, routeId) => active = generateNew(regionId, routeId),
         attachCL: (_combatLoop) => combatLoop = _combatLoop,
     };

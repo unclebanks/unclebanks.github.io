@@ -26,15 +26,36 @@
         onclick="userInteractions.viewTown()"
         class="button"
       >
-        Town
-      </button>
+        TOWN
+      </button><br>
       <button
         id="trainerButton"
         onclick="userInteractions.trainerBattle()"
         class="button"
       >
-        Trainer Battle
-      </button>
+        GYM LEADER BATTLE
+      </button><br>
+      <button
+        id="trainer1Button"
+        onclick="userInteractions.trainer1Battle()"
+        class="button"
+      >
+        TRAINER BATTLE
+      </button><br>
+      <button
+        id="trainer2Button"
+        onclick="userInteractions.trainer2Battle()"
+        class="button"
+      >
+        TRAINER BATTLE
+      </button><br>
+      <button
+        id="trainer3Button"
+        onclick="userInteractions.trainer3Battle()"
+        class="button"
+      >
+        TRAINER BATTLE
+      </button><br>
     </div>
   </div>
 </template>
