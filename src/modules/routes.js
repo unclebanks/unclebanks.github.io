@@ -4,7 +4,7 @@ const ROUTES = {
     Kanto: {
         _global: {
             pokes: ['Bulbasaur', 'Charmander', 'Squirtle', 'Eevee', 'Porygon'],
-            rarePokes: [],
+            rarePokes: ['Mew'],
             superRare: []
         },
         palletTown: {
@@ -498,7 +498,7 @@ const ROUTES = {
         },
         powerPlant: {
             name: 'Power Plant'
-            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Voltorb', 'Electrode', 'Electabuzz', 'Jolteon', 'Lickitung']
+            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Voltorb', 'Electrode', 'Electabuzz', 'Lickitung']
             , minLevel: 25
             , maxLevel: 35,
             respawn: 'lavenderTown',
@@ -506,7 +506,10 @@ const ROUTES = {
                 badges: {
                     'Soul Badge': true
                 }
-            }
+            },
+            _special: [
+                { requirement: { type: 'pokemonTypeDefeat', statistic: 'electricBeaten', need: 1000 }, pokemon: ['Zapdos'] },
+            ],
         },
         kroute19: {
             name: 'Route 19'
@@ -522,14 +525,17 @@ const ROUTES = {
         }
         , seafoamIsland: {
             name: 'Seafoam Island',
-            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shellder', 'Krabby', 'Horsea', 'Staryu', 'Vaporeon', 'Jynx'],
+            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shellder', 'Krabby', 'Horsea', 'Staryu', 'Jynx'],
             minLevel: 30,
             maxLevel: 40,
             _unlock: {
                 badges: {
                     'Soul Badge': true
                 }
-            }
+            },
+            _special: [
+                { requirement: { type: 'pokemonTypeDefeat', statistic: 'iceBeaten', need: 1000 }, pokemon: ['Articuno'] },
+            ],
         }
         , kroute20: {
             name: 'Route 20'
@@ -564,7 +570,7 @@ const ROUTES = {
         }
         , pokemonMansion: {
             name: 'Pokemon Mansion'
-            , pokes: ['Vulpix', 'Growlithe', 'Ponyta', 'Grimer', 'Muk', 'Koffing', 'Weezing', 'Magmar', 'Flareon']
+            , pokes: ['Vulpix', 'Growlithe', 'Ponyta', 'Grimer', 'Muk', 'Koffing', 'Weezing', 'Magmar']
             , minLevel: 32
             , maxLevel: 40,
             respawn: 'cinnabarIsland',
@@ -575,7 +581,10 @@ const ROUTES = {
                 statistics: {
                     'fireBeaten': 100
                 }
-            }
+            },
+            _special: [
+                { requirement: { type: 'pokemonTypeDefeat', statistic: 'fireBeaten', need: 1000 }, pokemon: ['Moltres'] },
+            ],
         }
         , fossilCave: {
             name: 'Fossil Restorer'
@@ -635,19 +644,10 @@ const ROUTES = {
                 badges: {
                     'Earth Badge': true
                 }
-            }
-        },
-        legendsIsland: {
-            name: 'Legends Island',
-            pokes: ['Zapdos', 'Moltres', 'Articuno', 'Mew', 'Mewtwo'],
-            minLevel: 70,
-            maxLevel: 90,
-            respawn: 'palletTown',
-            _unlock: {
-                badges: {
-                    'Earth Badge': true
-                }
-            }
+            },
+            _special: [
+                { requirement: { type: 'pokemonTypeDefeat', statistic: 'psychicBeaten', need: 10000 }, pokemon: ['Mewtwo'] },
+            ],
         }
         , kOldRod: {
             name: 'Kanto Old Rod',
