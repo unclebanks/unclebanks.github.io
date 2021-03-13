@@ -55,9 +55,6 @@ const ROUTES = {
             , minLevel: 3
             , maxLevel: 5,
             respawn: 'viridianCity',
-            _special: [
-                { requirement: { type: 'item', item: 'kantoOldRod' }, pokemon: ['Ho-Oh'] },
-            ],
         }
         , viridianForest: {
             name: 'Virdian Forest'
@@ -574,6 +571,9 @@ const ROUTES = {
             _unlock: {
                 badges: {
                     'Volcano Badge': true
+                },
+                statistics: {
+                    'fireBeaten': 100
                 }
             }
         }
