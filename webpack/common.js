@@ -33,6 +33,23 @@ const getCommon = ({ outputPath, sourcePath, entries }) => (merge(
 
     parts.useWebpackBar(),
 
+    // documentation at https://www.npmjs.com/package/favicons-webpack-plugin
+    parts.generateFavicon({
+        logo: './src/assets/favicon_base.png',
+        favicons: {
+            icons: {
+                android: false,
+                appleIcon: false,
+                appleStartup: false,
+                coast: false,
+                favicons: true,
+                firefox: false,
+                windows: false,
+                yandex: false,
+            },
+        },
+    }),
+
     // Where to start looking for things to bundle
     { entry: ['./src'] },
 ));
