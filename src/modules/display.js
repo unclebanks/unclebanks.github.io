@@ -34,6 +34,9 @@ export default (player, combatLoop, userInteractions) => {
             const container = $(`#${id}Box`).querySelector('.pokeBox');
             const townBox = $('#townBox');
             const trainerButton = $('#trainerButton');
+            const trainer1Button = $('#trainer1Button');
+            const trainer2Button = $('#trainer2Button');
+            const trainer3Button = $('#trainer3Button');
             if (!poke) {
                 container.style.display = 'none';
                 if (id == 'enemy') {
@@ -41,6 +44,12 @@ export default (player, combatLoop, userInteractions) => {
                     const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
                     trainerButton.style.display = (route.trainer) ? '' : 'none';
                     trainerButton.innerHTML = (route.trainer) ? route.trainer.name : '';
+                    trainer1Button.style.display = (route.trainer1) ? '' : 'none';
+                    trainer1Button.innerHTML = (route.trainer1) ? route.trainer1.name : '';
+                    trainer2Button.style.display = (route.trainer2) ? '' : 'none';
+                    trainer2Button.innerHTML = (route.trainer2) ? route.trainer2.name : '';
+                    trainer3Button.style.display = (route.trainer3) ? '' : 'none';
+                    trainer3Button.innerHTML = (route.trainer3) ? route.trainer3.name : '';
                 }
                 return null;
             }
