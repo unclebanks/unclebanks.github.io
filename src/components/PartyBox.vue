@@ -55,7 +55,7 @@
         <PartyPokemon
           v-for="(poke, index) in $store.state.pokemon.party"
           :id="`listPoke${index}`"
-          :key="index"
+          :key="poke.pokeName()"
           :poke="poke"
           :index="index"
           :ui="ui"

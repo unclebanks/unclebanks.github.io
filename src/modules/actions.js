@@ -41,7 +41,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         changePokemon: function (newActiveIndex) {
             player.setActive(newActiveIndex);
-            combatLoop.changePlayerPoke(player.activePoke());
             renderView(dom, enemy, player);
         },
         goToKanto: function () {
