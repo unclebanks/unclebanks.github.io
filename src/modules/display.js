@@ -102,7 +102,7 @@ export default (player, combatLoop, userInteractions) => {
                 combatLoop.refresh();
                 renderView(Display, enemy, player, false);
             } else {
-                this.setValue(this.healElement, `Heal: ${Math.floor(((timeToHeal / 30000) * 100))}%`);
+                this.setValue(this.healElement, `Heal: ${Math.floor(((1 - timeToHeal / 30000) * 100))}%`);
             }
         },
         pokeStatus: function (poke) {

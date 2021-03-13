@@ -126,7 +126,7 @@ export default {
         // sortedStorage,
         // sortedParty,
         timeToHeal(state) {
-            return Math.max(0, Date.now() - state.lastHeal);
+            return Math.max(0, 30000 - (Date.now() - state.lastHeal));
         },
 
         all(state) {
