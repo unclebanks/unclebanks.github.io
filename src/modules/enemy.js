@@ -19,6 +19,15 @@ export default (starter, player, Poke) => {
         return generator(poke, pokemonList[selected][1]);
     };
 
+    const requirementMet = (req) => {
+        switch (req.requirement.type) {
+        case 'item':
+            return player.unlocked[req.requirement.item];
+        default:
+            return false;
+        }
+    };
+
     const generateNew = (regionId, routeId) => {
         const regionData = ROUTES[regionId];
         const routeData = regionData[routeId];
@@ -33,6 +42,9 @@ export default (starter, player, Poke) => {
             }
             if (regionData._global.superRare && Math.random() < (1 / (2 ** 16))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.superRare);
+            }
+            if (routeData._special) {
+                pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
             }
         }
         const poke = pokeByName(randomArrayElement(pokemonList));
