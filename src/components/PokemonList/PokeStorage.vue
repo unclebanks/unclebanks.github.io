@@ -36,6 +36,7 @@
       </option>
     </select>
     <ul
+      v-if="!$store.state.loading"
       id="storageList"
       class="manageTeamEnabled"
     >

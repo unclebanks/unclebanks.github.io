@@ -231,9 +231,11 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('savetextModal'));
             closeModal($('#settingsModal'));
         },
-        importSave: function () {
+        importSave: async function () {
             if (window.confirm('Loading a save will overwrite your current progress, are you sure you wish to continue?')) {
+                await appModel.$store.dispatch('setLoading', true);
                 player.loadFromString(document.getElementById('saveText').value.trim());
+                await appModel.$store.dispatch('setLoading', false);
                 closeModal(document.getElementById('savetextModal'));
                 // reload everything
                 renderView(dom, enemy, player);

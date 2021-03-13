@@ -5,12 +5,14 @@ import rootMutations from './mutations';
 import pokedex from './modules/pokedex';
 import pokemon from './modules/pokemon';
 
-const rootState = () => {};
+const rootState = () => ({
+    loading: false,
+});
 
 export default createStore({
-    rootState,
-    rootActions,
-    rootMutations,
+    state: rootState(),
+    actions: rootActions,
+    mutations: rootMutations,
 
     modules: {
         pokedex,
