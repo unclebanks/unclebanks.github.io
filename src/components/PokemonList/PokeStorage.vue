@@ -38,6 +38,34 @@
     <ul
       id="storageList"
       class="manageTeamEnabled"
-    />
+    >
+      <StoragePokemon
+        v-for="(poke, index) in $store.state.pokemon.storage"
+        :key="poke.pokeName()"
+        :ui="ui"
+        :index="index"
+        :poke="poke"
+      />
+    </ul>
   </div>
 </template>
+
+<script>
+import StoragePokemon from './StoragePokemon.vue';
+
+export default {
+    components: {
+        StoragePokemon,
+    },
+
+    props: {
+        ui: { type: Object, required: true },
+    },
+
+    data: function () {
+        return {
+            test: false,
+        };
+    },
+};
+</script>

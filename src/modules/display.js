@@ -130,47 +130,6 @@ export default (player, combatLoop, userInteractions) => {
                 $('#pokeSortDirSelect').style.display = 'none';
             }
         },
-        renderStorage: function () {
-            return;
-            const list = player.storage;
-            const listElement = $('#storageList');
-            let listElementsToAdd = '';
-            list.forEach((poke, index) => {
-                const listItemElement = listElement.querySelector(`#storagePoke${index}`);
-                if (listItemElement) {
-                    const listItemNameElement = listItemElement.querySelector('.pokeListName');
-                    listItemNameElement.innerHTML = `${poke.pokeName()} (${poke.level()})`;
-                    listItemNameElement.setAttribute('status', this.pokeStatus(poke));
-                    listItemNameElement.className = `pokeListName ${this.pokeStatus(poke)}`;
-                } else {
-                    const upButton = `<button onclick="userInteractions.pokemonToUp(${index}, 'storage')" class="pokeUpButton"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>`;
-                    const downButton = `<button onclick="userInteractions.pokemonToDown(${index}, 'storage')" class="pokeDownButton"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>`;
-                    const firstButton = `<button onclick="userInteractions.pokemonToFirst(${index}, 'storage')" class="pokeFirstButton">#1</button>`;
-                    const rosterButton = `<button onclick="userInteractions.moveToRoster(${index})" class="toStorageButton">Active</button>`;
-
-                    listElementsToAdd += `${`<li id="storagePoke${index}">`
-                    + `<a href="#" class="pokeListName ${this.pokeStatus(poke)}" status="${this.pokeStatus(poke)}">${poke.pokeName()} (${poke.level()})</a><br>`}${
-                        upButton
-                    }${downButton
-                    }${firstButton
-                    }${rosterButton
-                    }</li>`;
-                }
-            });
-            if (listElementsToAdd.length > 0) {
-                this.setValue(listElement, listElementsToAdd, true);
-            }
-            let i = list.length;
-            let listItemToRemove;
-            // eslint-disable-next-line no-cond-assign
-            while (listItemToRemove = listElement.querySelector(`#storagePoke${i}`)) {
-                listElement.removeChild(listItemToRemove);
-                i++;
-            }
-            if (list.length == 0) {
-                this.setValue(listElement, '<li>There are no Pokemon here</li>');
-            }
-        },
         renderRegionSelect: function () {
             for (const region in ROUTES) {
                 if (player.regionUnlocked(region)) {
@@ -215,7 +174,6 @@ export default (player, combatLoop, userInteractions) => {
                 pokeDex.style.display = 'block';
             } if (player.settings.listView === 'storage') {
                 storage.style.display = 'block';
-                this.renderStorage();
             }
         },
         renderRoutesBox: function () {

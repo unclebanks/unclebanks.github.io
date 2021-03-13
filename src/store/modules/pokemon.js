@@ -72,7 +72,6 @@ export default {
                 const poke = state.storage[storageIndex];
                 state.storage.splice(storageIndex, 1);
                 state.party.push(poke);
-                // dom.renderStorage();
             } else {
                 // dom.showPopup('You can only have six active pokemon!');
                 alert('You can only have six active pokemon!');

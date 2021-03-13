@@ -1,6 +1,6 @@
 <template>
   <div id="gameContainer">
-    <PokemonList />
+    <PokemonList :ui="ui" />
     <RoutesBox />
     <Inventory />
     <EnemyBox />

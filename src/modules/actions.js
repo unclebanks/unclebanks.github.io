@@ -251,7 +251,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         changePokeSortOrder: function () {
             // player.sortPokemon();
             player.savePokes();
-            // dom.renderStorage();
         },
         changeSpriteChoice: function () {
             if (document.getElementById('spriteChoiceFront').checked) {
