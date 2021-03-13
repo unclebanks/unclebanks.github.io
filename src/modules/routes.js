@@ -54,7 +54,7 @@ const ROUTES = {
             , pokes: ['Pidgey', 'Rattata', 'Caterpie', 'Weedle', 'Nidoran F', 'Nidoran M']
             , minLevel: 3
             , maxLevel: 5,
-            respawn: 'viridianCity'
+            respawn: 'viridianCity',
         }
         , viridianForest: {
             name: 'Virdian Forest'
@@ -72,6 +72,14 @@ const ROUTES = {
                 poke: [
                     ['Geodude', 12],
                     ['Onix', 14]
+                ]
+            },
+            trainer1: {
+                name: 'Camper Liam',
+                win: 'Boulder1',
+                poke: [
+                    ['Geodude', 10],
+                    ['Sandshrew', 11]
                 ]
             }
         }
@@ -120,7 +128,32 @@ const ROUTES = {
                 poke: [
                     ['Staryu', 18],
                     ['Starmie', 21]
+                ],
+                _unlock: {
+                    wins: {
+                        'Cascade2': true
+                    }
+                }
+            },
+            trainer1: {
+                name: 'Swimmer Luis',
+                win: 'Cascade1',
+                poke: [
+                    ['Horsea', 16],
+                    ['Shellder', 16]
                 ]
+            },
+            trainer2: {
+                name: 'Picnicker Diana',
+                win: 'Cascade2',
+                poke: [
+                    ['Goldeen', 19]
+                ],
+                _unlock: {
+                    wins: {
+                        'Cascade1': true
+                    }
+                }
             },
             _unlock: {
                 badges: {
@@ -538,6 +571,9 @@ const ROUTES = {
             _unlock: {
                 badges: {
                     'Volcano Badge': true
+                },
+                statistics: {
+                    'fireBeaten': 100
                 }
             }
         }

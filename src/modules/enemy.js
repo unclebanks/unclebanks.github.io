@@ -18,6 +18,33 @@ export default (starter, player, Poke) => {
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);
     };
+    const trainer1Poke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.trainerCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
+    const trainer2Poke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.trainerCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
+    const trainer3Poke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.trainerCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
+
+    const requirementMet = (req) => {
+        switch (req.requirement.type) {
+        case 'item':
+            return player.unlocked[req.requirement.item];
+        default:
+            return false;
+        }
+    };
 
     const generateNew = (regionId, routeId) => {
         const regionData = ROUTES[regionId];
@@ -34,6 +61,9 @@ export default (starter, player, Poke) => {
             if (regionData._global.superRare && Math.random() < (1 / (2 ** 16))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.superRare);
             }
+            if (routeData._special) {
+                pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
+            }
         }
         const poke = pokeByName(randomArrayElement(pokemonList));
         const level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)));
@@ -44,6 +74,9 @@ export default (starter, player, Poke) => {
         activePoke: () => active,
         clear: () => active = null,
         trainerPoke: (pokemonList) => active = trainerPoke(pokemonList),
+        trainer1Poke: (pokemonList) => active = trainer1Poke(pokemonList),
+        trainer2Poke: (pokemonList) => active = trainer2Poke(pokemonList),
+        trainer3Poke: (pokemonList) => active = trainer3Poke(pokemonList),
         generateNew: (regionId, routeId) => active = generateNew(regionId, routeId),
         attachCL: (_combatLoop) => combatLoop = _combatLoop,
     };

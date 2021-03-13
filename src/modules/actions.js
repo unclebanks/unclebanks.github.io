@@ -12,11 +12,15 @@ export default (player, combatLoop, enemy, town, story) => {
 
         changeRoute: function (newRouteId, force = false) {
             if (!force && player.alivePokeIndexes().length == 0) {
-                alert('It is too dangerous to travel without a pokemon.');
+                alert('It is too dangerous to travel without a POKEMON.');
                 return false;
             }
             if (combatLoop.trainer) {
-                alert('You cannot run away from a trainer battle.');
+                alert('You cannot run away from a GYM LEADER battle.');
+                return false;
+            }
+            if (combatLoop.trainer1 || combatLoop.trainer2 || combatLoop.trainer3 || combatLoop.trainer4) {
+                alert('You cannot run away from a TRAINER battle.');
                 return false;
             }
             if (!player.routeUnlocked(player.settings.currentRegionId, newRouteId)) {
@@ -327,6 +331,42 @@ export default (player, combatLoop, enemy, town, story) => {
         },
         viewStatistics: function () {
             const statisticStrings = {
+                'fireBeaten': 'Fire POKEMON Beaten',
+                'waterBeaten': 'Water POKEMON Beaten',
+                'grassBeaten': 'Grass POKEMON Beaten',
+                'electricBeaten': 'Electric POKEMON Beaten',
+                'normalBeaten': 'Normal POKEMON Beaten',
+                'iceBeaten': 'Ice POKEMON Beaten',
+                'fightingBeaten': 'Fighting POKEMON Beaten',
+                'poisonBeaten': 'Poison POKEMON Beaten',
+                'groundBeaten': 'Ground POKEMON Beaten',
+                'flyingBeaten': 'Flying POKEMON Beaten',
+                'psychicBeaten': 'Psychic POKEMON Beaten',
+                'bugBeaten': 'Bug POKEMON Beaten',
+                'rockBeaten': 'Rock POKEMON Beaten',
+                'ghostBeaten': 'Ghost POKEMON Beaten',
+                'darkBeaten': 'Dark POKEMON Beaten',
+                'dragonBeaten': 'Dragon POKEMON Beaten',
+                'steelBeaten': 'Steel POKEMON Beaten',
+                'fairyBeaten': 'Fairy POKEMON Beaten',
+                'fireCaught': 'Fire POKEMON Caught',
+                'waterCaught': 'Water POKEMON Caught',
+                'grassCaught': 'Grass POKEMON Caught',
+                'electricCaught': 'Electric POKEMON Caught',
+                'normalCaught': 'Normal POKEMON Caught',
+                'iceCaught': 'Ice POKEMON Caught',
+                'fightingCaught': 'Fighting POKEMON Caught',
+                'poisonCaught': 'Poison POKEMON Caught',
+                'groundCaught': 'Ground POKEMON Caught',
+                'flyingCaught': 'Flying POKEMON Caught',
+                'psychicCaught': 'Psychic POKEMON Caught',
+                'bugCaught': 'Bug POKEMON Caught',
+                'rockCaught': 'Rock POKEMON Caught',
+                'ghostCaught': 'Ghost POKEMON Caught',
+                'darkCaught': 'Dark POKEMON Caught',
+                'dragonCaught': 'Dragon POKEMON Caught',
+                'steelCaught': 'Steel POKEMON Caught',
+                'fairyCaught': 'Fairy POKEMON Caught',
                 'seen': 'Pokemon Seen',
                 'caught': 'Pokemon Caught',
                 'released': 'Pokemon Released',
@@ -401,7 +441,7 @@ export default (player, combatLoop, enemy, town, story) => {
             if (!isEmpty(player.badges)) {
                 let badgesHTML = '';
                 for (const badge in player.badges) {
-                    badgesHTML += `${'<li><img src="assets/images/badges/'}${[badge]}.png"></img></li>`;
+                    badgesHTML += `${'<img src="assets/images/badges/'}${[badge]}.png"></img>`;
                 }
                 document.getElementById('badgeList').innerHTML = badgesHTML;
             }
@@ -434,6 +474,33 @@ export default (player, combatLoop, enemy, town, story) => {
             if (routeData.trainer && routeData.trainer.poke.length > 0) {
                 combatLoop.trainer = { name: routeData.trainer.name, badge: routeData.trainer.badge };
                 combatLoop.trainerPoke = Object.values({ ...routeData.trainer.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        trainer1Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.trainer1 && routeData.trainer1.poke.length > 0) {
+                combatLoop.trainer1 = { name: routeData.trainer1.name, win: routeData.trainer1.win };
+                combatLoop.trainer1Poke = Object.values({ ...routeData.trainer1.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        trainer2Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.trainer2 && routeData.trainer2.poke.length > 0) {
+                combatLoop.trainer2 = { name: routeData.trainer2.name, win: routeData.trainer2.win };
+                combatLoop.trainer2Poke = Object.values({ ...routeData.trainer2.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        trainer3Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.trainer3 && routeData.trainer3.poke.length > 0) {
+                combatLoop.trainer3 = { name: routeData.trainer3.name, win: routeData.trainer3.win };
+                combatLoop.trainer3Poke = Object.values({ ...routeData.trainer3.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
             }

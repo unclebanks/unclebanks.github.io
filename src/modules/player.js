@@ -104,14 +104,47 @@ export default (lastSave, appModel) => {
             training: 0,
         },
         statistics: {
+            fireBeaten: 0,
+            waterBeaten: 0,
+            grassBeaten: 0,
+            electricBeaten: 0,
+            normalBeaten: 0,
+            iceBeaten: 0,
+            fightingBeaten: 0,
+            poisonBeaten: 0,
+            groundBeaten: 0,
+            flyingBeaten: 0,
+            psychicBeaten: 0,
+            bugBeaten: 0,
+            rockBeaten: 0,
+            ghostBeaten: 0,
+            darkBeaten: 0,
+            dragonBeaten: 0,
+            steelBeaten: 0,
+            fairyBeaten: 0,
+            fireCaught: 0,
+            waterCaught: 0,
+            grassCaught: 0,
+            electricCaught: 0,
+            normalCaught: 0,
+            iceCaught: 0,
+            fightingCaught: 0,
+            poisonCaught: 0,
+            groundCaught: 0,
+            flyingCaught: 0,
+            psychicCaught: 0,
+            bugCaught: 0,
+            rockCaught: 0,
+            ghostCaught: 0,
+            darkCaught: 0,
+            dragonCaught: 0,
+            steelCaught: 0,
+            fairyCaught: 0,
             seen: 0,
             caught: 0,
-            released: 0,
-            sold: 0,
             beaten: 0,
             shinySeen: 0,
             shinyCaught: 0,
-            shinyReleased: 0,
             shinyBeaten: 0,
             totalDamage: 0,
             totalThrows: 0,
@@ -130,6 +163,7 @@ export default (lastSave, appModel) => {
             totalExp: 0,
         },
         badges: {},
+        wins: {},
         purgeData: false,
         canHeal: function () {
             if ((Date.now() - this.lastHeal) > 30000) {
@@ -159,6 +193,7 @@ export default (lastSave, appModel) => {
                 this.pokemons.push(poke);
             } else {
                 this.storage.push(poke);
+                dom.renderStorage();
             }
         },
         findDexIndex: (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.name),
@@ -380,6 +415,7 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('statistics', JSON.stringify(this.statistics));
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
+                localStorage.setItem('wins', JSON.stringify(this.wins));
                 localStorage.setItem('unlocked', JSON.stringify(this.unlocked));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
@@ -394,6 +430,7 @@ export default (lastSave, appModel) => {
                 settings: this.settings,
                 ballsAmount: this.ballsAmount,
                 badges: this.badges,
+                wins: this.wins,
                 unlocked: this.unlocked,
                 evoStones: this.evoStones,
                 currencyAmount: this.currencyAmount,
@@ -450,6 +487,9 @@ export default (lastSave, appModel) => {
             }
             if (JSON.parse(localStorage.getItem('badges'))) {
                 this.badges = JSON.parse(localStorage.getItem('badges'));
+            }
+            if (JSON.parse(localStorage.getItem('wins'))) {
+                this.wins = JSON.parse(localStorage.getItem('wins'));
             }
             if (JSON.parse(localStorage.getItem('unlocked'))) {
                 const loadedUnlocked = JSON.parse(localStorage.getItem('unlocked'));
@@ -513,6 +553,7 @@ export default (lastSave, appModel) => {
                     this.settings = saveData.settings;
                 }
                 this.badges = saveData.badges ? saveData.badges : {};
+                this.wins = saveData.wins ? saveData.wins : {};
                 const loadedUnlocked = saveData.unlocked ? saveData.unlocked : [];
                 this.unlocked = { ...this.unlocked, ...loadedUnlocked };
             } else {
