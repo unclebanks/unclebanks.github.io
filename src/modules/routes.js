@@ -1361,186 +1361,418 @@ const ROUTES = {
                     ['Torchic', 15]
                 ]
             }
-        }
-        , hroute101: {
+        },
+        hroute101: {
             name: 'Route 101'
             , pokes: ['Zigzagoon', 'Wurmple', 'Poochyena']
             , minLevel: 2
             , maxLevel: 3
-        }
-        , hroute103: {
+        },
+        oldaleTown: {
+            name: 'Oldale Town',
+            town: true,
+        },
+        hroute103: {
             name: 'Route 103'
             , pokes: ['Zigzagoon', 'Poochyena', 'Wingull']
             , minLevel: 2
             , maxLevel: 4
-        }
-        , hroute102: {
+        },
+        hroute102: {
             name: 'Route 102'
             , pokes: ['Zigzagoon', 'Poochyena', 'Lotad', 'Wurmple', 'Seedot', 'Ralts', 'Surskit']
             , minLevel: 3
             , maxLevel: 4
-        }
-        , hroute104: {
+        },
+        petalburgCity: {
+            name: 'Petalburg City',
+            town: true,
+            trainer: {
+                name: 'Norman',
+                badge: 'Balance Badge',
+                poke: [
+                    ['Slaking', 57],
+                    ['Blissey', 57],
+                    ['Kangaskhan', 55],
+                    ['Tauros', 57],
+                    ['Spinda', 58],
+                    ['Slaking', 60],
+                ]
+            },
+        },
+        hroute104: {
             name: 'Route 104'
             , pokes: ['Zigzagoon', 'Poochyena', 'Wurmple', 'Wingull', 'Taillow']
             , minLevel: 3
             , maxLevel: 5
-        }
-        , petalburgWoods: {
+        },
+        petalburgWoods: {
             name: 'Petalburg Woods'
             , pokes: ['Zigzagoon', 'Poochyena', 'Wurmple', 'Shroomish', 'Silcoon', 'Cascoon', 'Taillow', 'Slakoth']
             , minLevel: 5
             , maxLevel: 6
-        }
-        , hroute116: {
+        },
+        rustboroCity: {
+            name: 'Rustboro City',
+            town: true,
+            trainer: {
+                name: 'Roxanne',
+                badge: 'Stone Badge',
+                poke: [
+                    ['Aerodactyl', 47],
+                    ['Golem', 47],
+                    ['Omastar', 47],
+                    ['Kabutops', 50],
+                    ['Steelix', 50],
+                    ['Nosepass', 52],
+                ]
+            },
+        },
+        hroute116: {
             name: 'Route 116'
             , pokes: ['Zigzagoon', 'Poochyena', 'Whismur', 'Taillow', 'Nincada', 'Skitty']
             , minLevel: 6
-            , maxLevel: 8
+            , maxLevel: 8,
+            _unlock: {
+                badges: {
+                    'Stone Badge': true
+                }
+            }
         }
         , rusturfTunnel: {
             name: 'Rusturf Tunnel'
             , pokes: ['Whismur']
             , minLevel: 5
-            , maxLevel: 8
+            , maxLevel: 8,
+            _unlock: {
+                badges: {
+                    'Stone Badge': true
+                }
+            }
         }
         , hroute105: {
             name: 'Route 105'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
-        }
-        , hroute106: {
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Stone Badge': true
+                }
+            }
+        },
+        hroute106: {
             name: 'Route 106'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
-        }
-        , graniteCave: {
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Stone Badge': true
+                }
+            }
+        },
+        dewfordTown: {
+            name: 'Dewford Town',
+            town: true,
+            trainer: {
+                name: 'Brawly',
+                badge: 'Knuckle Badge',
+                poke: [
+                    ['Himonlee', 47],
+                    ['Hitmonchan', 47],
+                    ['Machamp', 47],
+                    ['Medicham', 50],
+                    ['Hitmontop', 50],
+                    ['Hariyama', 52],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Stone Badge': true
+                }
+            }
+        },
+        graniteCave: {
             name: 'Granite Cave'
             , pokes: ['Makuhita', 'Aron', 'Mawile', 'Sableye', 'Nosepass']
             , minLevel: 6
-            , maxLevel: 12
+            , maxLevel: 12,
+            _unlock: {
+                badges: {
+                    'Knuckle Badge': true
+                }
+            }
         }
         , hroute107: {
             name: 'Route 107'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Knuckle Badge': true
+                }
+            }
         }
         , hroute108: {
             name: 'Route 108'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Knuckle Badge': true
+                }
+            }
         }
         , hroute109: {
             name: 'Route 109'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
-        }
-        , hroute110: {
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Knuckle Badge': true
+                }
+            }
+        },
+        slateportCity: {
+            name: 'Slateport City',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Knuckle Badge': true
+                }
+            }
+        },
+        hroute110: {
             name: 'Route 110'
             , pokes: ['Zigzagoon', 'Poochyena', 'Electrike', 'Gulpin', 'Minun', 'Wingull', 'Plusle']
             , minLevel: 12
-            , maxLevel: 13
-        }
-        , newMauville: {
+            , maxLevel: 13,
+            _unlock: {
+                badges: {
+                    'Knuckle Badge': true
+                }
+            }
+        },
+        mauvilleCity: {
+            name: 'Mauville City',
+            town: true,
+            trainer: {
+                name: 'Wattson',
+                badge: 'Dynamo Badge',
+                poke: [
+                    ['Electabuzz', 50],
+                    ['Raichu', 51],
+                    ['Ampharos', 53],
+                    ['Electrode', 53],
+                    ['Magneton', 53],
+                    ['Manectric', 55],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Knuckle Badge': true
+                }
+            }
+        },
+        newMauville: {
             name: 'New Mauville'
             , pokes: ['Magnemite', 'Magneton', 'Voltorb', 'Electrode']
             , minLevel: 22
-            , maxLevel: 26
+            , maxLevel: 26,
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
         }
         , hroute117: {
             name: 'Route 117'
             , pokes: ['Poochyena', 'Zigzagoon', 'Roselia', 'Illumise', 'Volbeat', 'Seedot', 'Surskit']
             , minLevel: 13
-            , maxLevel: 14
+            , maxLevel: 14,
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
         }
         , hroute111: {
             name: 'Route 111'
             , pokes: ['Trapinch', 'Baltoy', 'Cacnea']
             , minLevel: 19
-            , maxLevel: 22
-        }
-        , mirageTower: {
-            name: 'Mirage Tower'
-            , pokes: ['Anorith', 'Lileep']
-            , minLevel: 20
-            , maxLevel: 20
-        }
-        , hroute112: {
-            name: 'Route 112'
-            , pokes: ['Numel']
-            , minLevel: 14
-            , maxLevel: 16
+            , maxLevel: 22,
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
         }
         , fieryPath: {
             name: 'Fiery Path'
             , pokes: ['Numel', 'Torkoal']
             , minLevel: 14
-            , maxLevel: 16
+            , maxLevel: 16,
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
         }
         , jaggedPass: {
             name: 'Jagged Pass'
             , pokes: ['Numel', 'Spoink']
             , minLevel: 20
-            , maxLevel: 22
+            , maxLevel: 22,
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
         }
         , hroute113: {
             name: 'Route 113'
             , pokes: ['Spinda']
             , minLevel: 14
-            , maxLevel: 16
-        }
-        , hroute114: {
+            , maxLevel: 16,
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
+        },
+        hroute114: {
             name: 'Route 114'
             , pokes: ['Swablu', 'Seedot', 'Zangoose', 'Nuzleaf', 'Surskit', 'Lotad', 'Seviper', 'Lombre']
             , minLevel: 15
-            , maxLevel: 18
-        }
-        , meteorFalls: {
+            , maxLevel: 18,
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
+        },
+        meteorFalls: {
             name: 'Meteor Falls'
             , pokes: ['Solrock', 'Lunatone', 'Bagon']
             , minLevel: 14
-            , maxLevel: 35
-        }
-        , hroute115: {
+            , maxLevel: 35,
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
+        },
+        hroute115: {
             name: 'Route 115'
             , pokes: ['Taillow', 'Swablu', 'Swellow', 'Wingull']
             , minLevel: 23
-            , maxLevel: 26
-        }
-        , hroute118: {
+            , maxLevel: 26,
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
+        },
+        lavaridgeTown: {
+            name: 'Lavaridge Town',
+            town: true,
+            trainer: {
+                name: 'Flannery',
+                badge: 'Heat Badge',
+                poke: [
+                    ['Arcanine', 55],
+                    ['Magcargo', 51],
+                    ['Houndoom', 53],
+                    ['Rapidash', 53],
+                    ['Camerupt', 53],
+                    ['Torkoal', 55],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
+        },
+        hroute118: {
             name: 'Route 118'
             , pokes: ['Zigzagoon', 'Electrike', 'Wingull', 'Linoone', 'Manectric', 'Kecleon']
             , minLevel: 24
-            , maxLevel: 27
+            , maxLevel: 27,
+            _unlock: {
+                badges: {
+                    'Heat Badge': true
+                }
+            }
         }
         , hroute119: {
             name: 'Route 119'
             , pokes: ['Zigzagoon', 'Linoone', 'Tropius', 'Kecleon']
             , minLevel: 25
-            , maxLevel: 27
+            , maxLevel: 27,
+            _unlock: {
+                badges: {
+                    'Heat Badge': true
+                }
+            }
         }
         , weatherInstitute: {
             name: 'Weather Institute'
             , pokes: ['Castform']
             , minLevel: 25
-            , maxLevel: 25
-        }
-        , hroute120: {
+            , maxLevel: 25,
+            _unlock: {
+                badges: {
+                    'Heat Badge': true
+                }
+            }
+        },
+        fortreeCity: {
+            name: 'Fortree City',
+            town: true,
+            trainer: {
+                name: 'Winona',
+                badge: 'Feather Badge',
+                poke: [
+                    ['Noctowl', 53],
+                    ['Tropius', 55],
+                    ['Pelipper', 55],
+                    ['Dragonite', 58],
+                    ['Skarmory', 57],
+                    ['Altaria', 60],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Heat Badge': true
+                }
+            }
+        },
+        hroute120: {
             name: 'Route 120'
             , pokes: ['Linoone', 'Mightyena', 'Zigzagoon', 'Poochyena', 'Seedot', 'Surskit', 'Absol']
             , minLevel: 25
-            , maxLevel: 27
+            , maxLevel: 27,
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
         }
         , hroute121: {
             name: 'Route 121'
             , pokes: ['Duskull', 'Zigzagoon', 'Linoone', 'Wingull', 'Kecleon']
             , minLevel: 25
-            , maxLevel: 28
+            , maxLevel: 28,
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
         }
         , hoennSafarZone1: {
             name: 'Hoenn Safari Zone (R/S)'
@@ -1549,151 +1781,305 @@ const ROUTES = {
             ,
             minLevel: 25
             ,
-            maxLevel: 31
+            maxLevel: 31,
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
         }
         , hoennSafarZone2: {
-            name: 'Hoenn Safari Zone (E)'
-            ,
-            pokes: ['Aipom', 'Teddiursa', 'Ledyba', 'Sunkern', 'Hoothoot', 'Pineco', 'Houndour', 'Miltank', 'Mareep', 'Spinarak', 'Gligar', 'Snubbull', 'Stantler']
-            ,
-            minLevel: 33
-            ,
-            maxLevel: 40
+            name: 'Hoenn Safari Zone (E)',
+            pokes: ['Aipom', 'Teddiursa', 'Ledyba', 'Sunkern', 'Hoothoot', 'Pineco', 'Houndour', 'Miltank', 'Mareep', 'Spinarak', 'Gligar', 'Snubbull', 'Stantler'],
+            minLevel: 33,
+            maxLevel: 40,
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
         }
         , hroute122: {
             name: 'Route 122'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
         }
         , myPyre: {
             name: 'Mt. Pyre'
             , pokes: ['Duskull', 'Shuppet', 'Meditite', 'Chimecho', 'Wingull']
             , minLevel: 22
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
         }
         , hroute123: {
             name: 'Route 123'
             , pokes: ['Shuppet', 'Duskull', 'Poochyena', 'Mightyena', 'Zigzagoon', 'Wingull', 'Linoone', 'Kecleon']
             , minLevel: 25
-            , maxLevel: 28
-        }
-        , hroute124: {
+            , maxLevel: 28,
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
+        },
+        lilycoveCity: {
+            name: 'Lilycove City',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
+        },
+        hroute124: {
             name: 'Route 124'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
-        }
-        , mossdeepCity: {
-            name: 'Mossdeep City'
-            , pokes: ['Beldum']
-            , minLevel: 5
-            , maxLevel: 5
-        }
-        , hroute125: {
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
+        },
+        mossdeepCity: {
+            name: 'Mossdeep City',
+            town: true,
+            trainer: {
+                name: 'Liza & Tate',
+                badge: 'Mind Badge',
+                poke: [
+                    ['Hypno', 64],
+                    ['Claydol', 66],
+                    ['Slowking', 66],
+                    ['Xatu', 68],
+                    ['Lunatone', 70],
+                    ['Solrock', 70],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Feather Badge': true
+                }
+            }
+        },
+        hroute125: {
             name: 'Route 125'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Mind Badge': true
+                }
+            }
         }
         , shoalCave: {
             name: 'Shoal Cave'
             , pokes: ['Spheal', 'Snorunt']
             , minLevel: 26
-            , maxLevel: 32
+            , maxLevel: 32,
+            _unlock: {
+                badges: {
+                    'Mind Badge': true
+                }
+            }
         }
         , hroute126: {
             name: 'Route 126'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Mind Badge': true
+                }
+            }
         }
         , hroute127: {
             name: 'Route 127'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Mind Badge': true
+                }
+            }
         }
         , hroute128: {
             name: 'Route 128'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
-        }
-        , hVictoryRoad: {
-            name: 'Victory Road'
-            ,
-            pokes: ['Lairon', 'Hariyama', 'Medicham', 'Loudred', 'Makuhita', 'Lairon', 'Whismur', 'Aron', 'Sableye', 'Mawile']
-            ,
-            minLevel: 36
-            ,
-            maxLevel: 42
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Mind Badge': true
+                }
+            }
+        },
+        sootopolisCity: {
+            name: 'Sootopolis City',
+            town: true,
+            trainer: {
+                name: 'Juan',
+                badge: 'Rain Badge',
+                poke: [
+                    ['Lapras', 75],
+                    ['Whiscash', 75],
+                    ['Politoed', 78],
+                    ['Walrein', 78],
+                    ['Crawdaunt', 79],
+                    ['Kingdra', 80],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Mind Badge': true
+                }
+            }
+        },
+        hVictoryRoad: {
+            name: 'Victory Road',
+            pokes: ['Lairon', 'Hariyama', 'Medicham', 'Loudred', 'Makuhita', 'Lairon', 'Whismur', 'Aron', 'Sableye', 'Mawile'],
+            minLevel: 36,
+            maxLevel: 42,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , hroute129: {
             name: 'Route 129'
             , pokes: ['Wingull', 'Pelipper', 'Wailord']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , hroute130: {
             name: 'Route 130'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , mirageIsland: {
             name: 'Mirage Island'
             , pokes: ['Wynaut']
             , minLevel: 5
-            , maxLevel: 50
+            , maxLevel: 50,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , hroute131: {
             name: 'Route 131'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , skyPillar: {
             name: 'Sky Pillar'
             , pokes: ['Mawile', 'Claydol', 'Dusclops', 'Sableye', 'Banette', 'Altaria']
             , minLevel: 34
-            , maxLevel: 60
+            , maxLevel: 60,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , hroute132: {
             name: 'Route 132'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , hroute133: {
             name: 'Route 133'
             , pokes: ['Wingull', 'Pelipper']
             , minLevel: 10
-            , maxLevel: 30
+            , maxLevel: 30,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , regiRuins: {
             name: 'Ruins of Regi'
             , pokes: ['Regice', 'Regirock', 'Registeel']
             , minLevel: 40
-            , maxLevel: 40
+            , maxLevel: 40,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , southernIsland: {
             name: 'Southern Island'
             , pokes: ['Latios', 'Latias']
             , minLevel: 50
-            , maxLevel: 50
+            , maxLevel: 50,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , caveOfOrigin: {
             name: 'Cave of Origin'
             , pokes: ['Kyogre', 'Groudon']
             , minLevel: 45
-            , maxLevel: 45
+            , maxLevel: 45,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , underwater: {
             name: 'Underwater'
             , pokes: ['Clamperl', 'Relicanth']
             , minLevel: 20
-            , maxLevel: 35
+            , maxLevel: 35,
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
         }
         , hOldRod: {
             name: 'Hoenn Old Rod',

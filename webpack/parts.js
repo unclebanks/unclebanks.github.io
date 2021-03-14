@@ -8,6 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const { webpack, DefinePlugin } = require('webpack');
 const WebpackBar = require('webpackbar');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 exports.loadSCSS = () => ({
     module: {
@@ -110,5 +111,11 @@ exports.setFreeVariable = (key, value) => ({
 exports.useWebpackBar = (options) => ({
     plugins: [
         new WebpackBar(options),
+    ],
+});
+
+exports.generateFavicon = (options) => ({
+    plugins: [
+        new FaviconsWebpackPlugin(options),
     ],
 });
