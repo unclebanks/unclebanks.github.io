@@ -121,6 +121,16 @@ const POKEDEX = [
                 "base exp": "62"
             }
         ],
+        "images": {
+            "normal": {
+                "front": 'assets/sprites/normal/front/Charmander.png',
+                "back": 'assets/sprites/normal/back/Charmander.png'
+            },
+            "shiny": {
+                "front": 'assets/sprites/shiny/front/Charmander.png',
+                "back": 'assets/sprites/shiny/back/Charmander.png'
+            }
+        }
     },
     {
         "pokemon": [
@@ -203,6 +213,16 @@ const POKEDEX = [
                 "base exp": "63"
             }
         ],
+        "images": {
+            "normal": {
+                "front": 'assets/sprites/normal/front/Squirtle.png',
+                "back": 'assets/sprites/normal/back/Squirtle.png'
+            },
+            "shiny": {
+                "front": 'assets/sprites/shiny/front/Squirtle.png',
+                "back": 'assets/sprites/shiny/back/Squirtle.png'
+            }
+        }
     },
     {
         "pokemon": [
@@ -698,6 +718,16 @@ const POKEDEX = [
                 "base exp": "112"
             }
         ],
+        "images": {
+            "normal": {
+                "front": 'assets/sprites/normal/front/Pikachu.png',
+                "back": 'assets/sprites/normal/back/Pikachu.png'
+            },
+            "shiny": {
+                "front": 'assets/sprites/shiny/front/Pikachu.png',
+                "back": 'assets/sprites/shiny/back/Pikachu.png'
+            }
+        }
     },
     {
         "pokemon": [
@@ -3659,6 +3689,16 @@ const POKEDEX = [
                 "base exp": "65"
             }
         ],
+        "images": {
+            "normal": {
+                "front": 'assets/sprites/normal/front/Eevee.png',
+                "back": 'assets/sprites/normal/back/Eevee.png'
+            },
+            "shiny": {
+                "front": 'assets/sprites/shiny/front/Eevee.png',
+                "back": 'assets/sprites/shiny/back/Eevee.png'
+            }
+        }
     },
     {
         "pokemon": [
