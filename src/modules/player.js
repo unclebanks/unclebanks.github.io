@@ -79,6 +79,8 @@ export default (lastSave, appModel) => {
             xSpDefense: 0,
             expBoost: 0,
             currencyBoost: 0,
+            revive: 0,
+            maxRevive: 0,
         },
         vitamins: {
             hpUp: 0,
