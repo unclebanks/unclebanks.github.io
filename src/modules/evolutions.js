@@ -110,7 +110,7 @@ const EVOLUTIONS = {
     ],
     'Poliwhirl': [
         { 'to': 'Poliwrath', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
-        { 'to': 'Politoad', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
+        { 'to': 'Politoed', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
     ],
     'Abra': [
         { 'to': 'Kadabra', 'requires': { 'type': 'level', 'level': '16' } },

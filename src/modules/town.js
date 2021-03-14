@@ -21,6 +21,16 @@ export default (player, Poke) => {
                 pokecoins: 1000,
                 ball: 'ultraball',
             },
+            {
+                name: 'Revive',
+                pokecoins: 1000,
+                battleItem: 'revive',
+            },
+            {
+                name: 'Max Revive',
+                pokecoins: 1000,
+                battleItem: 'maxRevive',
+            },
         ],
         johtoPokecoinShopItems: [
             {
@@ -212,7 +222,12 @@ export default (player, Poke) => {
                 const buttonHTML = ` <button onclick="town.buyPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
                 const button10HTML = ` <button onclick="town.buyPokeCoinItem10('${i}')"${disableButton10}>${buttonText10}</button>`;
                 const button100HTML = ` <button onclick="town.buyPokeCoinItem100('${i}')"${disableButton100}>${buttonText100}</button>`;
-                pokecoinShopHTML += `${'<li><img src="assets/images/pokeballs/'}${this.pokecoinShopItems[i].ball}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.pokecoinShopItems[i].pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
+                if (this.pokecoinShopItems[i].ball) {
+                    pokecoinShopHTML += `${'<li><img src="assets/images/pokeballs/'}${this.pokecoinShopItems[i].ball}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.pokecoinShopItems[i].pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
+                }
+                if (this.pokecoinShopItems[i].battleItem) {
+                    pokecoinShopHTML += `${'<li><img src="assets/images/battleItems/'}${this.pokecoinShopItems[i].battleItem}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.pokecoinShopItems[i].pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
+                }
             }
             $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
         },
@@ -362,6 +377,10 @@ export default (player, Poke) => {
                 player.currencyAmount.pokecoins -= item.pokecoins;
                 if (item.ball) {
                     player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                if (item.battleItem) {
+                    player.battleItem[item.battleItem]++;
                     dom.renderBalls();
                 }
                 this.renderPokeCoinShop(); // force refresh of shop
