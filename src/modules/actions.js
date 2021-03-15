@@ -274,6 +274,9 @@ export default (player, combatLoop, enemy, town, story) => {
                 dom.showPopup('You can only have six active pokemon!');
             }
         },
+        openPokeDex: function () {
+            openModal($('#pokedexModal'));
+        },
         forceSave: function () {
             player.savePokes();
             $('#forceSave').style.display = 'inline';
