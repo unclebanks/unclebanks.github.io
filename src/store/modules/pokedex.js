@@ -45,7 +45,7 @@ export default {
 
     getters: {
         dataWithUnseen(state) {
-            const unseen = (id) => ({ id, name: '???', flag: 0 });
+            const unseen = (id) => ({ id, name: POKEDEX[id].pokemon[0].Pokemon, flag: 0 });
             const fill = (fromId, toId) => Array(toId - fromId - 1)
                 .fill(fromId).map((i, j) => unseen(i + j + 1));
 

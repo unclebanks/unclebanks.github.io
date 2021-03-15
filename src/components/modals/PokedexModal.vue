@@ -29,7 +29,7 @@
                 :src="`assets/sprites/normal/front/${entry.name}.png`"
               >
             </figure>
-            <p>{{ entry.id }} {{ entry.name }}</p>
+            <p>{{ entry.id }} {{ entry.flag > 0 ? entry.name : '???' }}</p>
           </div>
         </div>
       </div>
