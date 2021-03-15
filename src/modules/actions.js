@@ -469,10 +469,25 @@ export default (player, combatLoop, enemy, town, story) => {
                 openModal(document.getElementById('townModal'));
             }
         },
+        checkBattle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (!player.wins[routeData.trainer.win]) {
+                this.trainerBattle();
+            }
+            if (player.wins[routeData.trainer.win] && !player.wins[routeData.trainer1.win]) {
+                this.trainer1Battle();
+            }
+            if (player.wins[routeData.trainer.win] && player.wins[routeData.trainer1.win] && !player.wins[routeData.trainer2.win]) {
+                this.trainer2Battle();
+            }
+            if (player.wins[routeData.trainer.win] && player.wins[routeData.trainer1.win] && player.wins[routeData.trainer2.win] && !player.wins[routeData.trainer3.win]) {
+                this.trainer3Battle();
+            }
+        },
         trainerBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (routeData.trainer && routeData.trainer.poke.length > 0) {
-                combatLoop.trainer = { name: routeData.trainer.name, badge: routeData.trainer.badge };
+                combatLoop.trainer = { name: routeData.trainer.name, badge: routeData.trainer.badge, win: routeData.trainer.win };
                 combatLoop.trainerPoke = Object.values({ ...routeData.trainer.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
