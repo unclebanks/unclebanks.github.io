@@ -30,31 +30,10 @@
       </button><br>
       <button
         id="trainerButton"
-        onclick="userInteractions.trainerBattle()"
+        onclick="userInteractions.checkBattle()"
         class="button"
       >
         GYM LEADER BATTLE
-      </button><br>
-      <button
-        id="trainer1Button"
-        onclick="userInteractions.trainer1Battle()"
-        class="button"
-      >
-        TRAINER BATTLE
-      </button><br>
-      <button
-        id="trainer2Button"
-        onclick="userInteractions.trainer2Battle()"
-        class="button"
-      >
-        TRAINER BATTLE
-      </button><br>
-      <button
-        id="trainer3Button"
-        onclick="userInteractions.trainer3Battle()"
-        class="button"
-      >
-        TRAINER BATTLE
       </button><br>
     </div>
   </div>

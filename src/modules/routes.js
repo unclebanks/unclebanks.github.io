@@ -12,11 +12,38 @@ const ROUTES = {
             town: true,
             trainer: {
                 name: 'Prof. Oak',
-                badge: null,
+                win: 'oak1',
                 poke: [
                     ['Bulbasaur', 15],
                     ['Charmander', 15],
                     ['Squirtle', 15]
+                ]
+            },
+            trainer1: {
+                name: 'Prof. Oak',
+                win: 'oak2',
+                poke: [
+                    ['Ivysaur', 30],
+                    ['Charmeleon', 30],
+                    ['Wartortle', 30]
+                ]
+            },
+            trainer2: {
+                name: 'Prof. Oak',
+                win: 'oak3',
+                poke: [
+                    ['Venusaur', 60],
+                    ['Charizard', 60],
+                    ['Blastoise', 60]
+                ]
+            },
+            trainer3: {
+                name: 'Prof. Oak',
+                win: 'oak4',
+                poke: [
+                    ['Venusaur', 100],
+                    ['Charizard', 100],
+                    ['Blastoise', 100]
                 ]
             }
         }
@@ -69,17 +96,41 @@ const ROUTES = {
             trainer: {
                 name: 'Brock',
                 badge: 'Boulder Badge',
+                win: 'boulder1',
                 poke: [
                     ['Geodude', 12],
                     ['Onix', 14]
                 ]
             },
             trainer1: {
-                name: 'Camper Liam',
-                win: 'Boulder1',
+                name: 'Brock',
+                win: 'Boulder2',
                 poke: [
-                    ['Geodude', 10],
-                    ['Sandshrew', 11]
+                    ['Geodude', 30],
+                    ['Onix', 30],
+                    ['Aerodactyl', 30]
+                ]
+            },
+            trainer2: {
+                name: 'Brock',
+                win: 'Boulder3',
+                poke: [
+                    ['Golem', 50],
+                    ['Onix', 50],
+                    ['Aerodactyl', 50],
+                    ['Kabutops', 50],
+                    ['Omastar', 50]
+                ]
+            },
+            trainer3: {
+                name: 'Brock',
+                win: 'Boulder4',
+                poke: [
+                    ['Golem', 75],
+                    ['Onix', 75],
+                    ['Aerodactyl', 75],
+                    ['Kabutops', 75],
+                    ['Omastar', 75]
                 ]
             }
         }
@@ -125,35 +176,42 @@ const ROUTES = {
             trainer: {
                 name: 'Misty',
                 badge: 'Cascade Badge',
+                win: 'cascade1',
                 poke: [
                     ['Staryu', 18],
                     ['Starmie', 21]
                 ],
-                _unlock: {
-                    wins: {
-                        'Cascade2': true
-                    }
-                }
             },
             trainer1: {
-                name: 'Swimmer Luis',
-                win: 'Cascade1',
+                name: 'Misty',
+                win: 'cascade2',
                 poke: [
-                    ['Horsea', 16],
-                    ['Shellder', 16]
+                    ['Horsea', 40],
+                    ['Psyduck', 40],
+                    ['Starmie', 40],
+                    ['Goldeen', 40]
                 ]
             },
             trainer2: {
-                name: 'Picnicker Diana',
-                win: 'Cascade2',
+                name: 'Misty',
+                win: 'cascade3',
                 poke: [
-                    ['Goldeen', 19]
-                ],
-                _unlock: {
-                    wins: {
-                        'Cascade1': true
-                    }
-                }
+                    ['Seaking', 70],
+                    ['Seaking', 70],
+                    ['Golduck', 70],
+                    ['Starmie', 70]
+                ]
+            },
+            trainer3: {
+                name: 'Misty',
+                win: 'cascade4',
+                poke: [
+                    ['Seaking', 100],
+                    ['Seadra', 100],
+                    ['Golduck', 100],
+                    ['Starmie', 100],
+                    ['Gyarados', 100]
+                ]
             },
             _unlock: {
                 badges: {
@@ -215,10 +273,42 @@ const ROUTES = {
             trainer: {
                 name: 'Lt. Surge',
                 badge: 'Thunder Badge',
+                win: 'thunder1',
                 poke: [
                     ['Voltorb', 21],
                     ['Pikachu', 18],
                     ['Raichu', 24]
+                ]
+            },
+            trainer1: {
+                name: 'Lt. Surge',
+                win: 'thunder2',
+                poke: [
+                    ['Electrode', 40],
+                    ['Pikachu', 40],
+                    ['Magnemite', 40],
+                    ['Raichu', 40]
+                ]
+            },
+            trainer2: {
+                name: 'Lt. Surge',
+                win: 'thunder3',
+                poke: [
+                    ['Electrode', 70],
+                    ['Electabuzz', 70],
+                    ['Magneton', 70],
+                    ['Raichu', 70],
+                ]
+            },
+            trainer3: {
+                name: 'Lt. Surge',
+                win: 'thunder4',
+                poke: [
+                    ['Electrode', 100],
+                    ['Electabuzz', 100],
+                    ['Magneton', 100],
+                    ['Raichu', 100],
+                    ['Jolteon', 100]
                 ]
             },
             _unlock: {
@@ -338,10 +428,44 @@ const ROUTES = {
             trainer: {
                 name: 'Erika',
                 badge: 'Rainbow Badge',
+                win: 'rainbow1',
                 poke: [
                     ['Victreebel', 29],
                     ['Tangela', 24],
                     ['Vileplume', 29]
+                ]
+            },
+            trainer1: {
+                name: 'Erika',
+                win: 'rainbow2',
+                poke: [
+                    ['Victreebel', 50],
+                    ['Tangela', 50],
+                    ['Gloom', 50],
+                    ['Vileplume', 50]
+                ]
+            },
+            trainer2: {
+                name: 'Erika',
+                win: 'rainbow3',
+                poke: [
+                    ['Victreebel', 75],
+                    ['Tangela', 75],
+                    ['Parasect', 75],
+                    ['Exeggutor', 75],
+                    ['Vileplume', 75]
+                ]
+            },
+            trainer3: {
+                name: 'Erika',
+                win: 'rainbow4',
+                poke: [
+                    ['Victreebel', 100],
+                    ['Tangela', 100],
+                    ['Parasect', 100],
+                    ['Exeggutor', 100],
+                    ['Venusaur', 100],
+                    ['Vileplume', 100]
                 ]
             },
             _unlock: {
@@ -356,6 +480,37 @@ const ROUTES = {
             trainer: {
                 name: 'Sabrina',
                 badge: 'Marsh Badge',
+                win: 'marsh1',
+                poke: [
+                    ['Kadabra', 38],
+                    ['Mr. Mime', 37],
+                    ['Venomoth', 38],
+                    ['Alakazam', 43]
+                ]
+            },
+            trainer1: {
+                name: 'Sabrina',
+                win: 'marsh2',
+                poke: [
+                    ['Kadabra', 38],
+                    ['Mr. Mime', 37],
+                    ['Venomoth', 38],
+                    ['Alakazam', 43]
+                ]
+            },
+            trainer2: {
+                name: 'Sabrina',
+                win: 'marsh3',
+                poke: [
+                    ['Kadabra', 38],
+                    ['Mr. Mime', 37],
+                    ['Venomoth', 38],
+                    ['Alakazam', 43]
+                ]
+            },
+            trainer3: {
+                name: 'Sabrina',
+                win: 'marsh4',
                 poke: [
                     ['Kadabra', 38],
                     ['Mr. Mime', 37],
@@ -1479,7 +1634,7 @@ const ROUTES = {
                 name: 'Brawly',
                 badge: 'Knuckle Badge',
                 poke: [
-                    ['Himonlee', 47],
+                    ['Hitmonlee', 47],
                     ['Hitmonchan', 47],
                     ['Machamp', 47],
                     ['Medicham', 50],
