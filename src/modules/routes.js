@@ -12,11 +12,29 @@ const ROUTES = {
             town: true,
             trainer: {
                 name: 'Prof. Oak',
-                badge: null,
+                win: 'oak1',
                 poke: [
-                    ['Bulbasaur', 15],
-                    ['Charmander', 15],
-                    ['Squirtle', 15]
+                    ['Bulbasaur', 1],
+                    ['Charmander', 1],
+                    ['Squirtle', 1]
+                ]
+            },
+            trainer1: {
+                name: 'Prof. Oak 2',
+                win: 'oak2',
+                poke: [
+                    ['Bulbasaur', 30],
+                    ['Charmander', 30],
+                    ['Squirtle', 30]
+                ]
+            },
+            trainer2: {
+                name: 'Prof. Oak 3',
+                win: 'oak3',
+                poke: [
+                    ['Bulbasaur', 60],
+                    ['Charmander', 60],
+                    ['Squirtle', 60]
                 ]
             }
         }
@@ -1479,7 +1497,7 @@ const ROUTES = {
                 name: 'Brawly',
                 badge: 'Knuckle Badge',
                 poke: [
-                    ['Himonlee', 47],
+                    ['Hitmonlee', 47],
                     ['Hitmonchan', 47],
                     ['Machamp', 47],
                     ['Medicham', 50],
