@@ -1,7 +1,6 @@
 <template>
   <div
     id="storageBox"
-    style="display: none;"
   >
     <input
       id="autoSort"

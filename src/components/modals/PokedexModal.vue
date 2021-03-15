@@ -5,7 +5,7 @@
   >
     <template #body>
       <div
-        id="pokedexBox"
+        id="pokedexBox2"
       >
         <select
           id="dexView"
@@ -14,14 +14,23 @@
             All
           </option>
         </select>
-        <div id="dexList">
-          <li
+        <div
+          id="dexList2"
+          class="columns is-multiline"
+        >
+          <div
             v-for="entry in $store.getters['pokedex/dataWithUnseen']"
             :key="entry.id"
+            class="column is-4 has-text-centered"
             :class="`pokeDex${entry.flag}`"
           >
-            {{ entry.id }} {{ entry.name }}
-          </li>
+            <figure class="image is-96x96">
+              <img
+                :src="`assets/sprites/normal/front/${entry.name}.png`"
+              >
+            </figure>
+            <p>{{ entry.id }} {{ entry.name }}</p>
+          </div>
         </div>
       </div>
     </template>

@@ -24,13 +24,6 @@
     </div>
     <div class="buttons is-centered">
       <button
-        id="viewStorage"
-        class="button"
-      >
-        Storage
-      </button>
-
-      <button
         id="viewPokeDex"
         class="button"
       >
