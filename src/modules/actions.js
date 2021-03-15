@@ -213,6 +213,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         moveToRoster: function (pokemonIndex) {
             appModel.$store.commit('pokemon/withdraw', pokemonIndex);
         },
+        openPokeDex: function () {
+            openModal($('#pokedexModal'));
+        },
         forceSave: function () {
             player.savePokes();
             $('#forceSave').style.display = 'inline';

@@ -236,7 +236,7 @@ export default (player, combatLoop, userInteractions) => {
                 userInteractions.enablePokeListAutoSort();
             });
             $('#viewPokeDex').addEventListener('click', () => {
-                userInteractions.changeListView('pokeDex');
+                userInteractions.openPokeDex();
             });
             $('#viewStorage').addEventListener('click', () => {
                 userInteractions.changeListView('storage');
