@@ -31,13 +31,21 @@
                 <p class="card-header-title py-1">
                   # {{ entry.id }}
                 </p>
+                <div class="card-header-icon">
+                  <span class="icon is-svg">
+                    <i
+                      class="pokeball"
+                      :class="caughtIndicationClass(entry)"
+                    />
+                  </span>
+                </div>
               </header>
 
               <div class="card-image">
                 <figure class="image is-96x96">
                   <span
                     v-if="entry.flag > 0"
-                    class="icon type-icon"
+                    class="icon is-svg type-icon"
                   >
                     <i :class="type1(entry)" />
                   </span>
@@ -48,7 +56,7 @@
 
                   <span
                     v-if="entry.flag > 0 && isDualType(entry)"
-                    class="icon type-icon"
+                    class="icon is-svg type-icon"
                   >
                     <i :class="type2(entry)" />
                   </span>
@@ -91,6 +99,15 @@ export default {
 
         isDualType(entry) {
             return POKEDEX[entry.id - 1].stats[0].types.length === 2;
+        },
+
+        caughtIndicationClass(entry) {
+            switch (entry.flag) {
+            case 5: case 7: return 'prev-caught';
+            case 6: return 'caught';
+            case 8: return 'caught-shiny';
+            default: return '';
+            }
         },
     },
 };
