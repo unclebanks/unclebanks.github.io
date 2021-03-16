@@ -1,5 +1,12 @@
 @import './variables.scss';
 
+// temporary style to keep word colors in the card
+.dexEntry .card {
+    color: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
 .pokeDex0 {
     color: #808080;
 
@@ -39,9 +46,14 @@
     --type-2-color: gray;
 }
 
-.dexEntry figure {
-    background: linear-gradient(90deg, var(--type-1-color) 50%, var(--type-2-color) 50%);
-    border-radius: 10px;
+.dexEntry {
+    figure {
+        background: linear-gradient(90deg, var(--type-1-color) 50%, var(--type-2-color) 50%);
+    }
+
+    .card {
+        border-radius: 10px;
+    }
 }
 
 @each $type, $color in $type-colors {

@@ -26,12 +26,27 @@
             :data-type1="type1(entry)"
             :data-type2="type2(entry)"
           >
-            <figure class="image is-96x96">
-              <img
-                :src="`assets/sprites/normal/front/${entry.name}.png`"
-              >
-            </figure>
-            <p>{{ entry.id }} {{ entry.flag > 0 ? entry.name : '???' }}</p>
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title py-1">
+                  # {{ entry.id }}
+                </p>
+              </header>
+
+              <div class="card-image">
+                <figure class="image is-96x96">
+                  <img
+                    :src="`assets/sprites/normal/front/${entry.name}.png`"
+                  >
+                </figure>
+              </div>
+
+              <div class="card-footer">
+                <p class="card-footer-item py-1">
+                  {{ entry.flag > 0 ? entry.name : '???' }}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
