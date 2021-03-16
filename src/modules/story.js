@@ -39,7 +39,7 @@ export default (player, enemy, combatLoop, Poke) => {
                 renderView(dom, enemy, player);
                 dom.renderRoutesBox();
                 dom.renderListBox();
-                dom.renderPokeList();
+                player.unlocked.saveKill += 1;
                 closeModal($('#storyModal'));
             },
         },

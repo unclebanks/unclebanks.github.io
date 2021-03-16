@@ -5,7 +5,7 @@ import ACHIEVEMENTS from './achievements';
 import { POKEDEXFLAGS } from './data';
 import { openModal, closeModal } from './modalEvents';
 
-export default (player, combatLoop, enemy, town, story) => {
+export default (player, combatLoop, enemy, town, story, appModel) => {
     let dom;
 
     const UserActions = {
@@ -41,7 +41,6 @@ export default (player, combatLoop, enemy, town, story) => {
         },
         changePokemon: function (newActiveIndex) {
             player.setActive(newActiveIndex);
-            combatLoop.changePlayerPoke(player.activePoke());
             renderView(dom, enemy, player);
         },
         goToKanto: function () {
@@ -159,10 +158,6 @@ export default (player, combatLoop, enemy, town, story) => {
         goToNone: function () {
             alert('This region is not implemented yet');
         },
-        enablePokeListDelete: function () {
-            dom.renderListBox();
-            dom.renderPokeList();
-        },
         enablePokeListAutoSort: function () {
             player.settings.autoSort = $('#autoSort').checked;
             // hide or show sort dropdowns
@@ -187,92 +182,36 @@ export default (player, combatLoop, enemy, town, story) => {
             player.changeSelectedBall(newBall);
         },
         pokemonToFirst: function (pokemonIndex, from = 'roster') {
-            const pokeList = (from === 'roster') ? player.getPokemon() : player.storage;
-            const moveToFirst = (index, arr) => {
-                arr.splice(0, 0, arr.splice(index, 1)[0]);
-            };
-
-            moveToFirst(pokemonIndex, pokeList);
+            appModel.$store.commit('pokemon/moveToFirst', { pokemonIndex, from });
             player.savePokes();
-            if (from === 'roster') {
-                combatLoop.changePlayerPoke(player.activePoke());
-                dom.renderPokeList();
-            } else {
-                dom.renderStorage();
-            }
         },
         pokemonToDown: function (pokemonIndex, from = 'roster') {
-            const pokeList = (from === 'roster') ? player.getPokemon() : player.storage;
-            const moveToDown = (index) => (arr) => [
-                ...arr.slice(0, parseInt(index)),
-                arr[parseInt(index) + 1],
-                arr[parseInt(index)],
-                ...arr.slice(parseInt(index) + 2),
-            ];
-            if (pokeList[pokemonIndex + 1]) {
-                const newPokemonList = moveToDown(pokemonIndex)(pokeList);
-                player.reorderPokes(newPokemonList, from);
-                if (from === 'roster') {
-                    combatLoop.changePlayerPoke(player.activePoke());
-                    dom.renderPokeList();
-                } else {
-                    dom.renderStorage();
-                }
-                player.savePokes();
-            }
+            appModel.$store.commit('pokemon/moveDown', { pokemonIndex, from });
+            player.savePokes();
         },
         pokemonToUp: function (pokemonIndex, from = 'roster') {
-            const pokeList = (from === 'roster') ? player.getPokemon() : player.storage;
-            const moveToUp = (index) => (arr) => [
-                ...arr.slice(0, parseInt(index) - 1),
-                arr[parseInt(index)],
-                arr[parseInt(index) - 1],
-                ...arr.slice(parseInt(index) + 1),
-            ];
-            if (pokeList[pokemonIndex - 1]) {
-                const newPokemonList = moveToUp(pokemonIndex)(pokeList);
-                player.reorderPokes(newPokemonList, from);
-                if (from === 'roster') {
-                    combatLoop.changePlayerPoke(player.activePoke());
-                    dom.renderPokeList();
-                } else {
-                    dom.renderStorage();
-                }
-                player.savePokes();
-            }
+            appModel.$store.commit('pokemon/moveUp', { pokemonIndex, from });
+            player.savePokes();
         },
         evolvePokemon: function (pokemonIndex) {
             player.getPokemon()[pokemonIndex].tryEvolve(player.getPokemon()[pokemonIndex].shiny());
-            dom.renderPokeList();
             renderView(dom, enemy, player);
         },
         prestigePokemon: function (pokemonIndex) {
-            player.getPokemon()[pokemonIndex].tryPrestige(player.getPokemon()[pokemonIndex].shiny());
-            dom.renderPokeList();
-            renderView(dom, enemy, player);
+            if (player.unlocked.saveKill < 1) {
+                localStorage.clear();
+                player.purgeData = true;
+                window.location.reload(true);
+            } else {
+                player.getPokemon()[pokemonIndex].tryPrestige(player.getPokemon()[pokemonIndex].shiny());
+                renderView(dom, enemy, player);
+            }
         },
         moveToStorage: function (pokemonIndex) {
-        // you must keep at least one active pokemon
-            if (player.pokemons.length > 1) {
-                const poke = player.getPokemon()[pokemonIndex];
-                player.pokemons.splice(pokemonIndex, 1);
-                player.storage.push(poke);
-                dom.renderPokeList();
-            } else {
-                dom.showPopup('You must have at least one active pokemon!');
-            }
+            appModel.$store.commit('pokemon/deposit', pokemonIndex);
         },
         moveToRoster: function (pokemonIndex) {
-        // check you have space
-            if (player.pokemons.length < 6) {
-                const poke = player.storage[pokemonIndex];
-                player.storage.splice(pokemonIndex, 1);
-                player.pokemons.push(poke);
-                dom.renderStorage();
-                dom.renderPokeList();
-            } else {
-                dom.showPopup('You can only have six active pokemon!');
-            }
+            appModel.$store.commit('pokemon/withdraw', pokemonIndex);
         },
         forceSave: function () {
             player.savePokes();
@@ -297,14 +236,15 @@ export default (player, combatLoop, enemy, town, story) => {
             openModal(document.getElementById('savetextModal'));
             closeModal($('#settingsModal'));
         },
-        importSave: function () {
+        importSave: async function () {
             if (window.confirm('Loading a save will overwrite your current progress, are you sure you wish to continue?')) {
+                await appModel.$store.dispatch('setLoading', true);
                 player.loadFromString(document.getElementById('saveText').value.trim());
+                await appModel.$store.dispatch('setLoading', false);
                 closeModal(document.getElementById('savetextModal'));
                 // reload everything
                 renderView(dom, enemy, player);
                 dom.renderListBox();
-                dom.renderPokeList();
                 dom.renderPokeSort();
                 dom.renderBalls();
                 dom.renderPokeCoins();
@@ -316,9 +256,8 @@ export default (player, combatLoop, enemy, town, story) => {
             window.getSelection().removeAllRanges();
         },
         changePokeSortOrder: function () {
-            player.sortPokemon();
+            // player.sortPokemon();
             player.savePokes();
-            dom.renderStorage();
         },
         changeSpriteChoice: function () {
             if (document.getElementById('spriteChoiceFront').checked) {

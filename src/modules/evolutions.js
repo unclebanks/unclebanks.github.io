@@ -280,7 +280,7 @@ const EVOLUTIONS = {
         { 'to': 'Skiploom', 'requires': { 'type': 'level', 'level': '18' } },
     ],
     'Skiploom': [
-        { 'to': 'Jumpluff', 'requires': { 'type': 'level', 'level': '30' } },
+        { 'to': 'Jumpluff', 'requires': { 'type': 'level', 'level': '27' } },
     ],
     'Scyther': [
         { 'to': 'Scizor', 'requires': { 'type': 'stone', 'stone': 'metalCoat' } },
