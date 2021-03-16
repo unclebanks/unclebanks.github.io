@@ -51,7 +51,7 @@
                   </span>
 
                   <img
-                    :src="`assets/sprites/normal/front/${entry.name}.png`"
+                    :src="pokeImage(entry)"
                   >
 
                   <span
@@ -108,6 +108,11 @@ export default {
             case 8: return 'caught-shiny';
             default: return '';
             }
+        },
+
+        pokeImage(entry) {
+            const shinyOrNormal = entry.flag === 8 ? 'shiny' : 'normal';
+            return `assets/sprites/${shinyOrNormal}/front/${entry.name}.png`;
         },
     },
 };
