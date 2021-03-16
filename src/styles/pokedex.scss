@@ -33,3 +33,25 @@
 .pokeDex6, .pokeDex8 {
     font-weight: bold;
 }
+
+#dexList2 {
+    --type-1-color: gray;
+    --type-2-color: gray;
+}
+
+.dexEntry figure {
+    background: linear-gradient(90deg, var(--type-1-color) 50%, var(--type-2-color) 50%);
+    border-radius: 10px;
+}
+
+@each $type, $color in $type-colors {
+    .dexEntry {
+        &[data-type1=#{$type}] {
+            --type-1-color: #{$color};
+        }
+
+        &[data-type2=#{$type}] {
+            --type-2-color: #{$color};
+        }
+    }
+}

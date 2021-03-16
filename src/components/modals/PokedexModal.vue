@@ -21,8 +21,10 @@
           <div
             v-for="entry in $store.getters['pokedex/dataWithUnseen']"
             :key="entry.id"
-            class="column is-4 has-text-centered"
+            class="dexEntry column is-4 has-text-centered"
             :class="`pokeDex${entry.flag}`"
+            :data-type1="type1(entry)"
+            :data-type2="type2(entry)"
           >
             <figure class="image is-96x96">
               <img
@@ -39,10 +41,24 @@
 
 <script>
 import CardModal from '../common/CardModal.vue';
+import POKEDEX from '../../modules/db';
 
 export default {
     components: {
         CardModal,
+    },
+
+    methods: {
+        type1(entry) {
+            if (entry.flag === 0) { return ''; }
+            return POKEDEX[entry.id - 1].stats[0].types[0].toLowerCase();
+        },
+
+        type2(entry) {
+            if (entry.flag === 0) { return ''; }
+            const types = POKEDEX[entry.id - 1].stats[0].types;
+            return types[types.length - 1].toLowerCase();
+        },
     },
 };
 </script>
