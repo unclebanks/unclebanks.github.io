@@ -492,30 +492,30 @@ const ROUTES = {
                 name: 'Sabrina',
                 win: 'marsh2',
                 poke: [
-                    ['Kadabra', 38],
-                    ['Mr. Mime', 37],
-                    ['Venomoth', 38],
-                    ['Alakazam', 43]
+                    ['Kadabra', 50],
+                    ['Mr. Mime', 50],
+                    ['Venomoth', 50],
+                    ['Alakazam', 50]
                 ]
             },
             trainer2: {
                 name: 'Sabrina',
                 win: 'marsh3',
                 poke: [
-                    ['Kadabra', 38],
-                    ['Mr. Mime', 37],
-                    ['Venomoth', 38],
-                    ['Alakazam', 43]
+                    ['Kadabra', 70],
+                    ['Mr. Mime', 70],
+                    ['Venomoth', 70],
+                    ['Alakazam', 70]
                 ]
             },
             trainer3: {
                 name: 'Sabrina',
                 win: 'marsh4',
                 poke: [
-                    ['Kadabra', 38],
-                    ['Mr. Mime', 37],
-                    ['Venomoth', 38],
-                    ['Alakazam', 43]
+                    ['Kadabra', 100],
+                    ['Mr. Mime', 100],
+                    ['Venomoth', 100],
+                    ['Alakazam', 100]
                 ]
             },
             _unlock: {
