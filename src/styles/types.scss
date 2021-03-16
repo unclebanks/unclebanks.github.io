@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+.type-icon {
+    background-color: white;
+    border-radius: 50%;
+
+    > * {
+        mask-size: cover;
+        mask-position: center;
+        height: 80%;
+        width: 80%;
+    }
+
+    @each $type, $color in $type-colors {
+        .#{$type} {
+            mask-image: url('/assets/icons/types/#{$type}.svg');
+            background-color: #{$color};
+        }
+    }
+}
+

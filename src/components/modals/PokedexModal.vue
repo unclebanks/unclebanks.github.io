@@ -35,9 +35,23 @@
 
               <div class="card-image">
                 <figure class="image is-96x96">
+                  <span
+                    v-if="entry.flag > 0"
+                    class="icon type-icon"
+                  >
+                    <i :class="type1(entry)" />
+                  </span>
+
                   <img
                     :src="`assets/sprites/normal/front/${entry.name}.png`"
                   >
+
+                  <span
+                    v-if="entry.flag > 0 && isDualType(entry)"
+                    class="icon type-icon"
+                  >
+                    <i :class="type2(entry)" />
+                  </span>
                 </figure>
               </div>
 
@@ -73,6 +87,10 @@ export default {
             if (entry.flag === 0) { return ''; }
             const types = POKEDEX[entry.id - 1].stats[0].types;
             return types[types.length - 1].toLowerCase();
+        },
+
+        isDualType(entry) {
+            return POKEDEX[entry.id - 1].stats[0].types.length === 2;
         },
     },
 };
