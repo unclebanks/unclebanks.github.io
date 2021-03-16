@@ -9,7 +9,7 @@ export default (starter, player, Poke) => {
         poke,
         level,
         false,
-        Math.random() < (1 / (2)),
+        Math.random() < (1 / (2 ** 13)),
     );
 
     const trainerPoke = (pokemonList) => {
