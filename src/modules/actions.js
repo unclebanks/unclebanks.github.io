@@ -162,14 +162,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             player.settings.autoSort = $('#autoSort').checked;
             // hide or show sort dropdowns
             dom.renderPokeSort();
-            dom.renderListBox();
         },
         changeCatchOption: function (newCatchOption) {
             combatLoop.changeCatch(newCatchOption);
         },
         changeListView: function (view) {
             player.settings.listView = view;
-            dom.renderListBox();
         },
         clearGameData: function () {
             if (dom.checkConfirmed('#confirmClearData')) {
@@ -213,6 +211,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         moveToRoster: function (pokemonIndex) {
             appModel.$store.commit('pokemon/withdraw', pokemonIndex);
         },
+        openPokeDex: function () {
+            openModal($('#pokedexModal'));
+        },
         forceSave: function () {
             player.savePokes();
             $('#forceSave').style.display = 'inline';
@@ -244,7 +245,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 closeModal(document.getElementById('savetextModal'));
                 // reload everything
                 renderView(dom, enemy, player);
-                dom.renderListBox();
                 dom.renderPokeSort();
                 dom.renderBalls();
                 dom.renderPokeCoins();

@@ -516,7 +516,6 @@ export default (player, Poke) => {
                 player.currencyAmount.battlecoins -= item.battlecoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                 }
                 if (item.ball) {
                     player.ballsAmount[item.ball]++;
@@ -535,7 +534,6 @@ export default (player, Poke) => {
                 player.currencyAmount.battlecoins -= item.battlecoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                 }
                 if (item.ball) {
                     player.ballsAmount[item.ball]++;
@@ -554,7 +552,6 @@ export default (player, Poke) => {
                 player.currencyAmount.battlecoins -= item.battlecoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                 }
                 if (item.ball) {
                     player.ballsAmount[item.ball]++;
@@ -573,7 +570,6 @@ export default (player, Poke) => {
                 player.currencyAmount.catchcoins -= item.catchcoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                     dom.renderRouteList();
                 }
                 this.renderCatchCoinShop(); // force refresh of shop
@@ -589,7 +585,6 @@ export default (player, Poke) => {
                 player.currencyAmount.catchcoins -= item.catchcoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                     dom.renderRouteList();
                 }
                 this.renderJohtoCatchCoinShop(); // force refresh of shop
@@ -605,7 +600,6 @@ export default (player, Poke) => {
                 player.currencyAmount.catchcoins -= item.catchcoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                     dom.renderRouteList();
                 }
                 this.renderHoennCatchCoinShop(); // force refresh of shop

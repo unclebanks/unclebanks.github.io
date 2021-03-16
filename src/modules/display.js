@@ -154,19 +154,6 @@ export default (player, combatLoop, userInteractions) => {
                 }
             });
         },
-        renderListBox: function () {
-            const pokeDex = $('#pokedexBox');
-            const storage = $('#storageBox');
-            // hide all by default
-            pokeDex.style.display = 'none';
-            storage.style.display = 'none';
-            // which is showing
-            if (player.settings.listView === 'pokeDex') {
-                pokeDex.style.display = 'block';
-            } if (player.settings.listView === 'storage') {
-                storage.style.display = 'block';
-            }
-        },
         renderRoutesBox: function () {
             this.renderRouteList();
         },
@@ -236,10 +223,7 @@ export default (player, combatLoop, userInteractions) => {
                 userInteractions.enablePokeListAutoSort();
             });
             $('#viewPokeDex').addEventListener('click', () => {
-                userInteractions.changeListView('pokeDex');
-            });
-            $('#viewStorage').addEventListener('click', () => {
-                userInteractions.changeListView('storage');
+                userInteractions.openPokeDex();
             });
 
             $('#enableCatchAll').addEventListener('click',
