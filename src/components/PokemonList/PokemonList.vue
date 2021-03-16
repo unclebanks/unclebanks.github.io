@@ -1,6 +1,6 @@
 <template>
   <div id="listBox">
-    <PokeStorage :ui="ui" />
+    <PokeStorage />
   </div>
 </template>
 
@@ -10,10 +10,6 @@ import PokeStorage from './PokeStorage.vue';
 export default {
     components: {
         PokeStorage,
-    },
-
-    props: {
-        ui: { type: Object, required: true },
     },
 };
 </script>
