@@ -60,6 +60,10 @@
                   >
                     <i :class="type2(entry)" />
                   </span>
+                  <span
+                    v-else-if="entry.flag > 0"
+                    class="icon"
+                  />
                 </figure>
               </div>
 
