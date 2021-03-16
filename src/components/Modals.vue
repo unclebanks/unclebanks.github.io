@@ -6,7 +6,6 @@
   <StatisticsModal />
   <TownModal />
   <StoryModal :ui="ui" />
-  <PokedexModal />
 </template>
 
 <script>
@@ -17,7 +16,6 @@ import AchievementsModal from './modals/AchievementsModal.vue';
 import StatisticsModal from './modals/StatisticsModal.vue';
 import StoryModal from './modals/StoryModal.vue';
 import TownModal from './modals/TownModal.vue';
-import PokedexModal from './modals/PokedexModal.vue';
 
 export default {
     components: {
@@ -28,7 +26,6 @@ export default {
         StatisticsModal,
         TownModal,
         StoryModal,
-        PokedexModal,
     },
 
     props: {
