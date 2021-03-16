@@ -71,7 +71,7 @@ const ROUTES = {
         }
         , kroute22: {
             name: 'Route 22'
-            , pokes: ['Pidgey', 'Rattata', 'Nidoran F', 'Nidoran M']
+            , pokes: ['Pidgey', 'Rattata', 'Nidoran F', 'Nidoran M', 'Mankey', 'Spearow']
             , minLevel: 2
             , maxLevel: 5,
             respawn: 'viridianCity'
@@ -136,7 +136,7 @@ const ROUTES = {
         }
         , kroute3: {
             name: 'Route 3'
-            , pokes: ['Pidgey', 'Spearow', 'Jigglypuff']
+            , pokes: ['Pidgey', 'Spearow', 'Jigglypuff', 'Sandshrew']
             , minLevel: 5
             , maxLevel: 12,
             respawn: 'pewterCity',
@@ -629,7 +629,7 @@ const ROUTES = {
         }
         , kroute13: {
             name: 'Route 13'
-            , pokes: ['Pidgey', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Ditto']
+            , pokes: ['Pidgey', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Ditto', 'Farfetchd']
             , minLevel: 22
             , maxLevel: 30,
             respawn: 'fuchsiaCity',
@@ -641,7 +641,7 @@ const ROUTES = {
         },
         kroute12: {
             name: 'Route 12'
-            , pokes: ['Pidgey', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Snorlax', 'Mr. Mime']
+            , pokes: ['Pidgey', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Snorlax', 'Mr. Mime', 'Farfetchd']
             , minLevel: 22
             , maxLevel: 30,
             respawn: 'lavenderTown',
@@ -653,7 +653,7 @@ const ROUTES = {
         },
         powerPlant: {
             name: 'Power Plant'
-            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Voltorb', 'Electrode', 'Electabuzz', 'Lickitung']
+            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Voltorb', 'Electrode', 'Electabuzz', 'Lickitung', 'Zapdos']
             , minLevel: 25
             , maxLevel: 35,
             respawn: 'lavenderTown',
@@ -661,10 +661,7 @@ const ROUTES = {
                 badges: {
                     'Soul Badge': true
                 }
-            },
-            _special: [
-                { requirement: { type: 'pokemonTypeDefeat', statistic: 'electricBeaten', need: 1000 }, pokemon: ['Zapdos'] },
-            ],
+            }
         },
         kroute19: {
             name: 'Route 19'
@@ -680,17 +677,14 @@ const ROUTES = {
         }
         , seafoamIsland: {
             name: 'Seafoam Island',
-            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shellder', 'Krabby', 'Horsea', 'Staryu', 'Jynx'],
+            pokes: ['Psyduck', 'Slowpoke', 'Seel', 'Shellder', 'Krabby', 'Horsea', 'Staryu', 'Jynx', 'Articuno'],
             minLevel: 30,
             maxLevel: 40,
             _unlock: {
                 badges: {
                     'Soul Badge': true
                 }
-            },
-            _special: [
-                { requirement: { type: 'pokemonTypeDefeat', statistic: 'iceBeaten', need: 1000 }, pokemon: ['Articuno'] },
-            ],
+            }
         }
         , kroute20: {
             name: 'Route 20'
@@ -732,14 +726,8 @@ const ROUTES = {
             _unlock: {
                 badges: {
                     'Volcano Badge': true
-                },
-                statistics: {
-                    'fireBeaten': 100
                 }
             },
-            _special: [
-                { requirement: { type: 'pokemonTypeDefeat', statistic: 'fireBeaten', need: 1000 }, pokemon: ['Moltres'] },
-            ],
         }
         , fossilCave: {
             name: 'Fossil Restorer'
@@ -755,7 +743,7 @@ const ROUTES = {
         }
         , kroute21: {
             name: 'Route 21'
-            , pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Raticate', 'Tangela', 'Farfetchd']
+            , pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Raticate', 'Tangela']
             , minLevel: 21
             , maxLevel: 32,
             respawn: 'cinnabarIsland',
@@ -779,7 +767,7 @@ const ROUTES = {
         }
         , victoryRoad: {
             name: 'Victory Road'
-            , pokes: ['Zubat', 'Golbat', 'Venomoth', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Marowak']
+            , pokes: ['Zubat', 'Golbat', 'Venomoth', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Marowak', 'Moltres']
             , minLevel: 36
             , maxLevel: 45,
             respawn: 'viridianCity',
@@ -791,7 +779,7 @@ const ROUTES = {
         }
         , ceruleanCave: {
             name: 'Cerulean Cave',
-            pokes: ['Wigglytuff', 'Venomoth', 'Kadabra', 'Dodrio', 'Electrode', 'Marowak', 'Rhydon', 'Chansey', 'Ditto'],
+            pokes: ['Wigglytuff', 'Venomoth', 'Kadabra', 'Dodrio', 'Electrode', 'Marowak', 'Rhydon', 'Chansey', 'Ditto', 'Mewtwo'],
             minLevel: 51,
             maxLevel: 60,
             respawn: 'ceruleanCity',
@@ -799,10 +787,7 @@ const ROUTES = {
                 badges: {
                     'Earth Badge': true
                 }
-            },
-            _special: [
-                { requirement: { type: 'pokemonTypeDefeat', statistic: 'psychicBeaten', need: 10000 }, pokemon: ['Mewtwo'] },
-            ],
+            }
         }
         , kOldRod: {
             name: 'Kanto Old Rod',
@@ -1768,7 +1753,7 @@ const ROUTES = {
         }
         , fieryPath: {
             name: 'Fiery Path'
-            , pokes: ['Numel', 'Torkoal']
+            , pokes: ['Numel', 'Torkoal', 'Slugma']
             , minLevel: 14
             , maxLevel: 16,
             _unlock: {
