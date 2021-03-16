@@ -1,6 +1,6 @@
 <template>
   <div id="listBox">
-    <PokeStorage />
+    <PokeStorage :ui="ui" />
     <Pokedex />
   </div>
 </template>
@@ -13,6 +13,10 @@ export default {
     components: {
         Pokedex,
         PokeStorage,
+    },
+
+    props: {
+        ui: { type: Object, required: true },
     },
 };
 </script>

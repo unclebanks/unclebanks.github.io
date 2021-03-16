@@ -29,7 +29,7 @@ const enemy = makeEnemy(null, player, Poke);
 const combatLoop = Combat(player, enemy);
 const town = Town(player, Poke);
 const story = Story(player, enemy, combatLoop, Poke);
-const userInteractions = UserActions(player, combatLoop, enemy, town, story);
+const userInteractions = UserActions(player, combatLoop, enemy, town, story, models.app);
 const dom = Display(player, combatLoop, userInteractions);
 
 // Provide data to Vue components
@@ -95,13 +95,12 @@ dom.renderCurrency();
 renderView(dom, enemy, player);
 dom.renderRoutesBox();
 dom.renderListBox();
-dom.renderPokeList();
 dom.renderRegionSelect();
 dom.renderPokeSort();
 
 combatLoop.init();
 
 requestAnimationFrame(function renderTime() {
-    dom.renderHeal(player.canHeal(), enemy);
+    dom.renderHeal(models.app.$store.getters['pokemon/timeToHeal'], enemy);
     requestAnimationFrame(renderTime);
 });

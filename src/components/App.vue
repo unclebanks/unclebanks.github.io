@@ -1,13 +1,13 @@
 <template>
   <div id="gameContainer">
-    <PokemonList />
+    <PokemonList :ui="ui" />
     <RoutesBox />
     <Inventory />
     <EnemyBox />
     <PlayerBox />
     <NavBox />
     <RegionBox />
-    <PartyBox />
+    <PartyBox :ui="ui" />
     <PokeGear />
   </div>
 

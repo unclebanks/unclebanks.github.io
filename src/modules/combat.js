@@ -19,14 +19,12 @@ export default (player, enemy) => {
         trainer3: null,
         trainer3Poke: {},
         trainerCurrentID: 0,
-        playerActivePoke: null,
         enemyActivePoke: null,
         playerTimerId: null,
         enemyTimerId: null,
         catchEnabled: false,
         init: function () {
             if (!Combat.paused) {
-                Combat.playerActivePoke = player.activePoke();
                 Combat.enemyActivePoke = enemy.activePoke();
                 Combat.playerTimer();
                 Combat.enemyTimer();
@@ -53,16 +51,16 @@ export default (player, enemy) => {
             Combat.init();
         },
         playerTimer: function () {
-            const nextAttack = Combat.playerActivePoke.attackSpeed();
+            const nextAttack = player.activePoke().attackSpeed();
             Combat.playerTimerId = window.setTimeout(
-                () => Combat.dealDamage(Combat.playerActivePoke, Combat.enemyActivePoke, 'player'),
+                () => Combat.dealDamage(player.activePoke(), Combat.enemyActivePoke, 'player'),
                 nextAttack,
             );
         },
         enemyTimer: function () {
             const nextAttack = Combat.enemyActivePoke.attackSpeed();
             Combat.enemyTimerId = window.setTimeout(
-                () => Combat.dealDamage(Combat.enemyActivePoke, Combat.playerActivePoke, 'enemy'),
+                () => Combat.dealDamage(Combat.enemyActivePoke, player.activePoke(), 'enemy'),
                 nextAttack,
             );
         },
@@ -124,14 +122,9 @@ export default (player, enemy) => {
             const beforeExp = player.getPokemon().map((poke) => poke.level());
             const expToGive = (Combat.enemyActivePoke.baseExp() * 16) * (Combat.enemyActivePoke.level() * 3);
             player.statistics.totalExp += expToGive;
-            Combat.playerActivePoke.giveExp(expToGive);
+            player.activePoke().giveExp(expToGive);
             player.getPokemon().forEach((poke) => poke.giveExp((Combat.enemyActivePoke.baseExp() / 100) + (Combat.enemyActivePoke.level() / 10)));
             const afterExp = player.getPokemon().map((poke) => poke.level());
-
-            // check if a pokemon leveled up
-            if (beforeExp.join('') !== afterExp.join('')) {
-                dom.renderPokeList();
-            }
 
             // was it a trainer poke
             if (Combat.trainer) {
@@ -239,7 +232,6 @@ export default (player, enemy) => {
             const alivePokeIndexes = player.alivePokeIndexes();
             if (alivePokeIndexes.length > 0) {
                 player.setActive(player.getPokemon().indexOf(alivePokeIndexes[0]));
-                Combat.playerActivePoke = player.activePoke();
                 Combat.refresh();
             } else {
                 if (Combat.trainer) {
@@ -263,7 +255,6 @@ export default (player, enemy) => {
                     userInteractions.changeRoute(ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn, true);
                 }
             }
-            dom.renderPokeList(false);
         },
         attemptCatch: function () {
             if (
@@ -287,7 +278,6 @@ export default (player, enemy) => {
                         player.addCatchCoins(gainCatchCoins);
                         if (!player.hasPokemonLike(enemy.activePoke())) {
                             player.addPoke(enemy.activePoke());
-                            dom.renderPokeList();
                         }
                         player.addPokedex(enemy.activePoke().pokeName(), (enemy.activePoke().shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
                         if (enemy.activePoke().shiny()) {
@@ -315,10 +305,6 @@ export default (player, enemy) => {
                     dom.renderBalls();
                 }
             }
-        },
-        changePlayerPoke: function (newPoke) {
-            Combat.playerActivePoke = newPoke;
-            Combat.refresh();
         },
         changeEnemyPoke: function (newPoke) {
             Combat.enemyActivePoke = newPoke;
