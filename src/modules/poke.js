@@ -5,14 +5,15 @@ import EVOLUTIONS from './evolutions';
 import POKEDEX from './db';
 
 export default (player) => {
-    const Poke = function (pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0) {
+    const Poke = function (pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0, appliedVitamins = {}) {
         this.poke = cloneJsonObject(pokeModel);
         this.expTable = EXP_TABLE[this.poke.stats['growth rate']];
         this.exp = initialLevel && this.expTable[initialLevel - 1] || initialExp;
         this.isShiny = (shiny === true);
         this.caughtAt = caughtAt || Date.now();
         this.prestigeLevel = prestigeLevel;
-        this.hp = this.setHpValue(this.poke.stats.hp) * 3;
+        this.appliedVitamins = appliedVitamins;
+        this.hp = this.maxHp();
     };
     Poke.prototype.currentLevel = function () {
         return this.expTable
@@ -20,15 +21,18 @@ export default (player) => {
             .length;
     };
     Poke.prototype.statValue = function (statName) {
-        const raw = this.poke.stats[statName];
-        let calculated = ((raw + 50) * this.currentLevel()) / 150;
-        if (statName !== 'speed') {
+        let raw = Number(this.poke.stats[statName]);
+        raw += this.getAppliedVitamins(statName);
+        let calculated = statName !== 'hp'
+            ? ((raw + 50) * this.currentLevel()) / 150
+            : ((raw * this.currentLevel()) / 40);
+        if (statName !== 'speed' && statName !== 'hp') {
             calculated *= Math.pow(1.25, this.prestigeLevel);
         }
+        if (statName === 'hp') {
+            calculated *= 3;
+        }
         return Math.floor(calculated);
-    };
-    Poke.prototype.setHpValue = function (rawHp) {
-        return Math.floor(((rawHp * this.currentLevel()) / 40));
     };
 
     const evoRequirementMet = (poke) => (evo) => {
@@ -80,10 +84,39 @@ export default (player) => {
     Poke.prototype.canPrestige = function () {
         return this.level() >= 100;
     };
+    Poke.prototype.tryUsingVitamin = function (stat) {
+      if (!this.canUseVitamin(stat)) {
+        return false;
+      }
+      this.appliedVitamins = this.appliedVitamins || {};
+      this.appliedVitamins[stat] = this.getAppliedVitamins(stat) + 1;
+      return true;
+    };
+    Poke.prototype.canUseVitamin = function (stat) {
+      return this.getAppliedVitamins(stat) < this.getMaxVitamins(stat);
+    };
+    Poke.prototype.getMaxVitamins = function (stat) {
+      return 5;
+    }
+    Poke.prototype.getAppliedVitamins = function (stat) {
+      return (this.appliedVitamins || {})[stat] || 0;
+    };
+    Poke.prototype.getAppliedVitaminObject = function () {
+      let object = {};
+      let keys = Object.keys(this.appliedVitamins);
+      for (let i = 0; i < keys.length; i++) {
+        let vitamin = keys[i];
+        let applied = this.getAppliedVitamins(vitamin);
+        if (applied > 0) {
+          object[vitamin] = applied;
+        }
+      }
+      return object;
+    };
 
     Poke.prototype.setHp = function (hp) { this.hp = hp; };
     Poke.prototype.getHp = function () { return this.hp; };
-    Poke.prototype.maxHp = function () { return this.setHpValue(this.poke.stats.hp) * 3; };
+    Poke.prototype.maxHp = function () { return this.statValue('hp'); };
     Poke.prototype.attack = function () { return this.statValue('attack'); };
     Poke.prototype.defense = function () { return this.statValue('defense'); };
     Poke.prototype.spAttack = function () { return this.statValue('sp atk'); };
@@ -134,7 +167,7 @@ export default (player) => {
     };
     Poke.prototype.baseExp = function () { return Number(this.poke.exp); };
     Poke.prototype.heal = function () { return this.setHp(this.maxHp()); };
-    Poke.prototype.save = function () { return [this.pokeName(), this.exp, this.isShiny, this.caughtAt, this.prestigeLevel]; };
+    Poke.prototype.save = function () { return [this.pokeName(), this.exp, this.isShiny, this.caughtAt, this.prestigeLevel, this.getAppliedVitaminObject()]; };
 
     const makeRandomPoke = (level) => new Poke(randomArrayElement(POKEDEX), level);
 
