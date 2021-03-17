@@ -237,29 +237,6 @@ export default (lastSave, appModel) => {
         //         this.storage = newList;
         //     }
         // },
-        cmpFunctions: {
-            lvl: (lhs, rhs) => lhs.level() - rhs.level(),
-            dex: (lhs, rhs) => {
-                const index = (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.pokeName());
-                return index(lhs) - index(rhs);
-            },
-            vlv: (lhs, rhs) => lhs.level() - rhs.level() || lhs.avgAttack() - rhs.avgAttack(),
-            time: (lhs, rhs) => lhs.caughtAt - rhs.caughtAt,
-        },
-        inverseCmp: function (cmpFunc) {
-            return (lhs, rhs) => -cmpFunc(lhs, rhs);
-        },
-        sortPokemon: function () {
-            const dirSelect = document.getElementById('pokeSortDirSelect');
-            const direction = dirSelect.options[dirSelect.selectedIndex].value;
-            const orderSelect = document.getElementById('pokeSortOrderSelect');
-            const sortOrder = orderSelect.options[orderSelect.selectedIndex].value;
-            let cmpFunc = this.cmpFunctions[sortOrder];
-            if (direction === 'desc') {
-                cmpFunc = this.inverseCmp(cmpFunc);
-            }
-            // Player.reorderPokes(Player.storage.sort(cmpFunc), 'storage');
-        },
         healAllPokemons: function () {
             const timeToHeal = appModel.$store.getters['pokemon/timeToHeal'];
 
