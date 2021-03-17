@@ -16,6 +16,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 1,
     },
     {
         'name': 'Ivysaur',
@@ -34,6 +35,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 2,
     },
     {
         'name': 'Venusaur',
@@ -52,6 +54,7 @@ const POKEDEX = [
             ],
         },
         'exp': 236,
+        'id': 3,
     },
     {
         'name': 'M-Venusaur',
@@ -70,6 +73,7 @@ const POKEDEX = [
             ],
         },
         'exp': 281,
+        'id': '3-M',
     },
     {
         'name': 'Charmander',
@@ -87,6 +91,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 4,
     },
     {
         'name': 'Charmeleon',
@@ -104,6 +109,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 5,
     },
     {
         'name': 'Charizard',
@@ -122,6 +128,7 @@ const POKEDEX = [
             ],
         },
         'exp': 240,
+        'id': 6,
     },
     {
         'name': 'M-Charizard X',
@@ -140,6 +147,7 @@ const POKEDEX = [
             ],
         },
         'exp': 285,
+        'id': '6-M-X',
     },
     {
         'name': 'M-Charizard Y',
@@ -158,6 +166,7 @@ const POKEDEX = [
             ],
         },
         'exp': 285,
+        'id': '6-M-Y',
     },
     {
         'name': 'Squirtle',
@@ -175,6 +184,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 7,
     },
     {
         'name': 'Wartortle',
@@ -192,6 +202,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 8,
     },
     {
         'name': 'Blastoise',
@@ -209,6 +220,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 9,
     },
     {
         'name': 'M-Blastoise',
@@ -226,6 +238,7 @@ const POKEDEX = [
             ],
         },
         'exp': 284,
+        'id': '9-M',
     },
     {
         'name': 'Caterpie',
@@ -243,6 +256,7 @@ const POKEDEX = [
             ],
         },
         'exp': 39,
+        'id': 10,
     },
     {
         'name': 'Metapod',
@@ -260,6 +274,7 @@ const POKEDEX = [
             ],
         },
         'exp': 72,
+        'id': 11,
     },
     {
         'name': 'Butterfree',
@@ -278,6 +293,7 @@ const POKEDEX = [
             ],
         },
         'exp': 178,
+        'id': 12,
     },
     {
         'name': 'Weedle',
@@ -296,6 +312,7 @@ const POKEDEX = [
             ],
         },
         'exp': 39,
+        'id': 13,
     },
     {
         'name': 'Kakuna',
@@ -314,6 +331,7 @@ const POKEDEX = [
             ],
         },
         'exp': 72,
+        'id': 14,
     },
     {
         'name': 'Beedrill',
@@ -332,6 +350,7 @@ const POKEDEX = [
             ],
         },
         'exp': 178,
+        'id': 15,
     },
     {
         'name': 'M-Beedrill',
@@ -350,6 +369,7 @@ const POKEDEX = [
             ],
         },
         'exp': 223,
+        'id': '15-M',
     },
     {
         'name': 'Pidgey',
@@ -368,6 +388,7 @@ const POKEDEX = [
             ],
         },
         'exp': 50,
+        'id': 16,
     },
     {
         'name': 'Pidgeotto',
@@ -386,6 +407,7 @@ const POKEDEX = [
             ],
         },
         'exp': 122,
+        'id': 17,
     },
     {
         'name': 'Pidgeot',
@@ -404,6 +426,7 @@ const POKEDEX = [
             ],
         },
         'exp': 216,
+        'id': 18,
     },
     {
         'name': 'M-Pidgeot',
@@ -422,6 +445,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': '18-M',
     },
     {
         'name': 'Rattata',
@@ -439,6 +463,7 @@ const POKEDEX = [
             ],
         },
         'exp': 51,
+        'id': 19,
     },
     {
         'name': 'Raticate',
@@ -456,6 +481,7 @@ const POKEDEX = [
             ],
         },
         'exp': 145,
+        'id': 20,
     },
     {
         'name': 'Alolan Rattata',
@@ -474,6 +500,7 @@ const POKEDEX = [
             ],
         },
         'exp': 51,
+        'id': '19-Alolan',
     },
     {
         'name': 'Alolan Raticate',
@@ -492,6 +519,7 @@ const POKEDEX = [
             ],
         },
         'exp': 145,
+        'id': '20-Alolan',
     },
     {
         'name': 'Spearow',
@@ -510,6 +538,7 @@ const POKEDEX = [
             ],
         },
         'exp': 52,
+        'id': 21,
     },
     {
         'name': 'Fearow',
@@ -528,6 +557,7 @@ const POKEDEX = [
             ],
         },
         'exp': 155,
+        'id': 22,
     },
     {
         'name': 'Ekans',
@@ -545,6 +575,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 23,
     },
     {
         'name': 'Arbok',
@@ -562,6 +593,7 @@ const POKEDEX = [
             ],
         },
         'exp': 153,
+        'id': 24,
     },
     {
         'name': 'Pikachu',
@@ -579,6 +611,7 @@ const POKEDEX = [
             ],
         },
         'exp': 112,
+        'id': 25,
     },
     {
         'name': 'Raichu',
@@ -596,6 +629,7 @@ const POKEDEX = [
             ],
         },
         'exp': 218,
+        'id': 26,
     },
     {
         'name': 'Alolan Raichu',
@@ -614,6 +648,7 @@ const POKEDEX = [
             ],
         },
         'exp': 218,
+        'id': '26-Alolan',
     },
     {
         'name': 'Sandshrew',
@@ -631,6 +666,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 27,
     },
     {
         'name': 'Sandslash',
@@ -648,6 +684,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
+        'id': 28,
     },
     {
         'name': 'Alolan Sandshrew',
@@ -666,6 +703,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': '27-Alolan',
     },
     {
         'name': 'Alolan Sandslash',
@@ -684,6 +722,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
+        'id': '28-Alolan',
     },
     {
         'name': 'Nidoran F',
@@ -701,6 +740,7 @@ const POKEDEX = [
             ],
         },
         'exp': 55,
+        'id': 29,
     },
     {
         'name': 'Nidorina',
@@ -718,6 +758,7 @@ const POKEDEX = [
             ],
         },
         'exp': 128,
+        'id': 30,
     },
     {
         'name': 'Nidoqueen',
@@ -736,6 +777,7 @@ const POKEDEX = [
             ],
         },
         'exp': 227,
+        'id': 31,
     },
     {
         'name': 'Nidoran M',
@@ -753,6 +795,7 @@ const POKEDEX = [
             ],
         },
         'exp': 55,
+        'id': 32,
     },
     {
         'name': 'Nidorino',
@@ -770,6 +813,7 @@ const POKEDEX = [
             ],
         },
         'exp': 128,
+        'id': 33,
     },
     {
         'name': 'Nidoking',
@@ -788,6 +832,7 @@ const POKEDEX = [
             ],
         },
         'exp': 227,
+        'id': 34,
     },
     {
         'name': 'Clefairy',
@@ -805,6 +850,7 @@ const POKEDEX = [
             ],
         },
         'exp': 113,
+        'id': 35,
     },
     {
         'name': 'Clefable',
@@ -822,6 +868,7 @@ const POKEDEX = [
             ],
         },
         'exp': 217,
+        'id': 36,
     },
     {
         'name': 'Vulpix',
@@ -839,6 +886,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 37,
     },
     {
         'name': 'Ninetales',
@@ -856,6 +904,7 @@ const POKEDEX = [
             ],
         },
         'exp': 177,
+        'id': 38,
     },
     {
         'name': 'Alolan Vulpix',
@@ -873,6 +922,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': '37-Alolan',
     },
     {
         'name': 'Alolan Ninetales',
@@ -890,6 +940,7 @@ const POKEDEX = [
             ],
         },
         'exp': 177,
+        'id': '38-Alolan',
     },
     {
         'name': 'Jigglypuff',
@@ -908,6 +959,7 @@ const POKEDEX = [
             ],
         },
         'exp': 95,
+        'id': 39,
     },
     {
         'name': 'Wigglytuff',
@@ -926,6 +978,7 @@ const POKEDEX = [
             ],
         },
         'exp': 196,
+        'id': 40,
     },
     {
         'name': 'Zubat',
@@ -944,6 +997,7 @@ const POKEDEX = [
             ],
         },
         'exp': 49,
+        'id': 41,
     },
     {
         'name': 'Golbat',
@@ -962,6 +1016,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 42,
     },
     {
         'name': 'Oddish',
@@ -980,6 +1035,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 43,
     },
     {
         'name': 'Gloom',
@@ -998,6 +1054,7 @@ const POKEDEX = [
             ],
         },
         'exp': 138,
+        'id': 44,
     },
     {
         'name': 'Vileplume',
@@ -1016,6 +1073,7 @@ const POKEDEX = [
             ],
         },
         'exp': 221,
+        'id': 45,
     },
     {
         'name': 'Paras',
@@ -1034,6 +1092,7 @@ const POKEDEX = [
             ],
         },
         'exp': 57,
+        'id': 46,
     },
     {
         'name': 'Parasect',
@@ -1052,6 +1111,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 47,
     },
     {
         'name': 'Venonat',
@@ -1070,6 +1130,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 48,
     },
     {
         'name': 'Venomoth',
@@ -1088,6 +1149,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
+        'id': 49,
     },
     {
         'name': 'Diglett',
@@ -1105,6 +1167,7 @@ const POKEDEX = [
             ],
         },
         'exp': 53,
+        'id': 50,
     },
     {
         'name': 'Dugtrio',
@@ -1122,6 +1185,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 51,
     },
     {
         'name': 'Alolan Diglett',
@@ -1140,6 +1204,7 @@ const POKEDEX = [
             ],
         },
         'exp': 53,
+        'id': '50-Alolan',
     },
     {
         'name': 'Alolan Dugtrio',
@@ -1158,6 +1223,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': '51-Alolan',
     },
     {
         'name': 'Meowth',
@@ -1175,6 +1241,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 52,
     },
     {
         'name': 'Persian',
@@ -1192,6 +1259,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 53,
     },
     {
         'name': 'Alolan Meowth',
@@ -1209,6 +1277,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': '52-Alolan',
     },
     {
         'name': 'Alolan Persian',
@@ -1226,6 +1295,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': '53-Alolan',
     },
     {
         'name': 'Psyduck',
@@ -1243,6 +1313,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 54,
     },
     {
         'name': 'Golduck',
@@ -1260,6 +1331,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 55,
     },
     {
         'name': 'Mankey',
@@ -1277,6 +1349,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 56,
     },
     {
         'name': 'Primeape',
@@ -1294,6 +1367,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 57,
     },
     {
         'name': 'Growlithe',
@@ -1311,6 +1385,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 58,
     },
     {
         'name': 'Arcanine',
@@ -1328,6 +1403,7 @@ const POKEDEX = [
             ],
         },
         'exp': 194,
+        'id': 59,
     },
     {
         'name': 'Poliwag',
@@ -1345,6 +1421,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 60,
     },
     {
         'name': 'Poliwhirl',
@@ -1362,6 +1439,7 @@ const POKEDEX = [
             ],
         },
         'exp': 135,
+        'id': 61,
     },
     {
         'name': 'Poliwrath',
@@ -1380,6 +1458,7 @@ const POKEDEX = [
             ],
         },
         'exp': 230,
+        'id': 62,
     },
     {
         'name': 'Abra',
@@ -1397,6 +1476,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 63,
     },
     {
         'name': 'Kadabra',
@@ -1414,6 +1494,7 @@ const POKEDEX = [
             ],
         },
         'exp': 140,
+        'id': 64,
     },
     {
         'name': 'Alakazam',
@@ -1431,6 +1512,7 @@ const POKEDEX = [
             ],
         },
         'exp': 225,
+        'id': 65,
     },
     {
         'name': 'M-Alakazam',
@@ -1448,6 +1530,7 @@ const POKEDEX = [
             ],
         },
         'exp': 266,
+        'id': '65-M',
     },
     {
         'name': 'Machop',
@@ -1465,6 +1548,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 66,
     },
     {
         'name': 'Machoke',
@@ -1482,6 +1566,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 67,
     },
     {
         'name': 'Machamp',
@@ -1499,6 +1584,7 @@ const POKEDEX = [
             ],
         },
         'exp': 227,
+        'id': 68,
     },
     {
         'name': 'Bellsprout',
@@ -1517,6 +1603,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 69,
     },
     {
         'name': 'Weepinbell',
@@ -1535,6 +1622,7 @@ const POKEDEX = [
             ],
         },
         'exp': 137,
+        'id': 70,
     },
     {
         'name': 'Victreebel',
@@ -1553,6 +1641,7 @@ const POKEDEX = [
             ],
         },
         'exp': 221,
+        'id': 71,
     },
     {
         'name': 'Tentacool',
@@ -1571,6 +1660,7 @@ const POKEDEX = [
             ],
         },
         'exp': 67,
+        'id': 72,
     },
     {
         'name': 'Tentacruel',
@@ -1589,6 +1679,7 @@ const POKEDEX = [
             ],
         },
         'exp': 180,
+        'id': 73,
     },
     {
         'name': 'Geodude',
@@ -1607,6 +1698,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 74,
     },
     {
         'name': 'Graveler',
@@ -1625,6 +1717,7 @@ const POKEDEX = [
             ],
         },
         'exp': 137,
+        'id': 75,
     },
     {
         'name': 'Golem',
@@ -1643,6 +1736,7 @@ const POKEDEX = [
             ],
         },
         'exp': 223,
+        'id': 76,
     },
     {
         'name': 'Alolan Geodude',
@@ -1661,6 +1755,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': '74-Alolan',
     },
     {
         'name': 'Alolan Graveler',
@@ -1679,6 +1774,7 @@ const POKEDEX = [
             ],
         },
         'exp': 137,
+        'id': '75-Alolan',
     },
     {
         'name': 'Alolan Golem',
@@ -1697,6 +1793,7 @@ const POKEDEX = [
             ],
         },
         'exp': 223,
+        'id': '76-Alolan',
     },
     {
         'name': 'Ponyta',
@@ -1714,6 +1811,7 @@ const POKEDEX = [
             ],
         },
         'exp': 82,
+        'id': 77,
     },
     {
         'name': 'Rapidash',
@@ -1731,6 +1829,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 78,
     },
     {
         'name': 'Slowpoke',
@@ -1749,6 +1848,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 79,
     },
     {
         'name': 'Slowbro',
@@ -1767,6 +1867,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 80,
     },
     {
         'name': 'M-Slowbro',
@@ -1785,6 +1886,7 @@ const POKEDEX = [
             ],
         },
         'exp': 207,
+        'id': '80-M',
     },
     {
         'name': 'Magnemite',
@@ -1803,6 +1905,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': 81,
     },
     {
         'name': 'Magneton',
@@ -1821,6 +1924,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 82,
     },
     {
         'name': 'Farfetchd',
@@ -1839,6 +1943,7 @@ const POKEDEX = [
             ],
         },
         'exp': 123,
+        'id': 83,
     },
     {
         'name': 'Doduo',
@@ -1857,6 +1962,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 84,
     },
     {
         'name': 'Dodrio',
@@ -1875,6 +1981,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 85,
     },
     {
         'name': 'Seel',
@@ -1892,6 +1999,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': 86,
     },
     {
         'name': 'Dewgong',
@@ -1910,6 +2018,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 87,
     },
     {
         'name': 'Grimer',
@@ -1927,6 +2036,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': 88,
     },
     {
         'name': 'Muk',
@@ -1944,6 +2054,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 89,
     },
     {
         'name': 'Alolan Grimer',
@@ -1962,6 +2073,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': '88-Alolan',
     },
     {
         'name': 'Alolan Muk',
@@ -1980,6 +2092,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': '89-Alolan',
     },
     {
         'name': 'Shellder',
@@ -1997,6 +2110,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 90,
     },
     {
         'name': 'Cloyster',
@@ -2015,6 +2129,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 91,
     },
     {
         'name': 'Gastly',
@@ -2033,6 +2148,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 92,
     },
     {
         'name': 'Haunter',
@@ -2051,6 +2167,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 93,
     },
     {
         'name': 'Gengar',
@@ -2069,6 +2186,7 @@ const POKEDEX = [
             ],
         },
         'exp': 225,
+        'id': 94,
     },
     {
         'name': 'M-Gengar',
@@ -2087,6 +2205,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': '94-M',
     },
     {
         'name': 'Onix',
@@ -2105,6 +2224,7 @@ const POKEDEX = [
             ],
         },
         'exp': 77,
+        'id': 95,
     },
     {
         'name': 'Drowzee',
@@ -2122,6 +2242,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 96,
     },
     {
         'name': 'Hypno',
@@ -2139,6 +2260,7 @@ const POKEDEX = [
             ],
         },
         'exp': 169,
+        'id': 97,
     },
     {
         'name': 'Krabby',
@@ -2156,6 +2278,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': 98,
     },
     {
         'name': 'Kingler',
@@ -2173,6 +2296,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 99,
     },
     {
         'name': 'Voltorb',
@@ -2190,6 +2314,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 100,
     },
     {
         'name': 'Electrode',
@@ -2207,6 +2332,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 101,
     },
     {
         'name': 'Exeggcute',
@@ -2225,6 +2351,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': 102,
     },
     {
         'name': 'Exeggutor',
@@ -2243,6 +2370,7 @@ const POKEDEX = [
             ],
         },
         'exp': 182,
+        'id': 103,
     },
     {
         'name': 'Alolan Exeggutor',
@@ -2261,6 +2389,7 @@ const POKEDEX = [
             ],
         },
         'exp': 182,
+        'id': '103-Alolan',
     },
     {
         'name': 'Cubone',
@@ -2278,6 +2407,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 104,
     },
     {
         'name': 'Marowak',
@@ -2295,6 +2425,7 @@ const POKEDEX = [
             ],
         },
         'exp': 149,
+        'id': 105,
     },
     {
         'name': 'Alolan Marowak',
@@ -2313,6 +2444,7 @@ const POKEDEX = [
             ],
         },
         'exp': 149,
+        'id': '105-Alolan',
     },
     {
         'name': 'Hitmonlee',
@@ -2330,6 +2462,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 106,
     },
     {
         'name': 'Hitmonchan',
@@ -2347,6 +2480,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 107,
     },
     {
         'name': 'Lickitung',
@@ -2364,6 +2498,7 @@ const POKEDEX = [
             ],
         },
         'exp': 77,
+        'id': 108,
     },
     {
         'name': 'Koffing',
@@ -2381,6 +2516,7 @@ const POKEDEX = [
             ],
         },
         'exp': 68,
+        'id': 109,
     },
     {
         'name': 'Weezing',
@@ -2398,6 +2534,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 110,
     },
     {
         'name': 'Rhyhorn',
@@ -2416,6 +2553,7 @@ const POKEDEX = [
             ],
         },
         'exp': 69,
+        'id': 111,
     },
     {
         'name': 'Rhydon',
@@ -2434,6 +2572,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 112,
     },
     {
         'name': 'Chansey',
@@ -2451,6 +2590,7 @@ const POKEDEX = [
             ],
         },
         'exp': 395,
+        'id': 113,
     },
     {
         'name': 'Tangela',
@@ -2468,6 +2608,7 @@ const POKEDEX = [
             ],
         },
         'exp': 87,
+        'id': 114,
     },
     {
         'name': 'Kangaskhan',
@@ -2485,6 +2626,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 115,
     },
     {
         'name': 'M-Kangaskhan',
@@ -2502,6 +2644,7 @@ const POKEDEX = [
             ],
         },
         'exp': 207,
+        'id': '115-M',
     },
     {
         'name': 'Horsea',
@@ -2519,6 +2662,7 @@ const POKEDEX = [
             ],
         },
         'exp': 59,
+        'id': 116,
     },
     {
         'name': 'Seadra',
@@ -2536,6 +2680,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 117,
     },
     {
         'name': 'Goldeen',
@@ -2553,6 +2698,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 118,
     },
     {
         'name': 'Seaking',
@@ -2570,6 +2716,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
+        'id': 119,
     },
     {
         'name': 'Staryu',
@@ -2587,6 +2734,7 @@ const POKEDEX = [
             ],
         },
         'exp': 68,
+        'id': 120,
     },
     {
         'name': 'Starmie',
@@ -2605,6 +2753,7 @@ const POKEDEX = [
             ],
         },
         'exp': 182,
+        'id': 121,
     },
     {
         'name': 'Mr. Mime',
@@ -2623,6 +2772,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 122,
     },
     {
         'name': 'Scyther',
@@ -2641,6 +2791,7 @@ const POKEDEX = [
             ],
         },
         'exp': 100,
+        'id': 123,
     },
     {
         'name': 'Jynx',
@@ -2659,6 +2810,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 124,
     },
     {
         'name': 'Electabuzz',
@@ -2676,6 +2828,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 125,
     },
     {
         'name': 'Magmar',
@@ -2693,6 +2846,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 126,
     },
     {
         'name': 'Pinsir',
@@ -2710,6 +2864,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 127,
     },
     {
         'name': 'M-Pinsir',
@@ -2728,6 +2883,7 @@ const POKEDEX = [
             ],
         },
         'exp': 210,
+        'id': '127-M',
     },
     {
         'name': 'Tauros',
@@ -2745,6 +2901,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 128,
     },
     {
         'name': 'Magikarp',
@@ -2762,6 +2919,7 @@ const POKEDEX = [
             ],
         },
         'exp': 40,
+        'id': 129,
     },
     {
         'name': 'Gyarados',
@@ -2780,6 +2938,7 @@ const POKEDEX = [
             ],
         },
         'exp': 189,
+        'id': 130,
     },
     {
         'name': 'M-Gyarados',
@@ -2798,6 +2957,7 @@ const POKEDEX = [
             ],
         },
         'exp': 224,
+        'id': '130-M',
     },
     {
         'name': 'Lapras',
@@ -2816,6 +2976,7 @@ const POKEDEX = [
             ],
         },
         'exp': 187,
+        'id': 131,
     },
     {
         'name': 'Ditto',
@@ -2833,6 +2994,7 @@ const POKEDEX = [
             ],
         },
         'exp': 101,
+        'id': 132,
     },
     {
         'name': 'Eevee',
@@ -2850,6 +3012,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': 133,
     },
     {
         'name': 'Vaporeon',
@@ -2867,6 +3030,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 134,
     },
     {
         'name': 'Jolteon',
@@ -2884,6 +3048,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 135,
     },
     {
         'name': 'Flareon',
@@ -2901,6 +3066,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 136,
     },
     {
         'name': 'Porygon',
@@ -2918,6 +3084,7 @@ const POKEDEX = [
             ],
         },
         'exp': 79,
+        'id': 137,
     },
     {
         'name': 'Omanyte',
@@ -2936,6 +3103,7 @@ const POKEDEX = [
             ],
         },
         'exp': 71,
+        'id': 138,
     },
     {
         'name': 'Omastar',
@@ -2954,6 +3122,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 139,
     },
     {
         'name': 'Kabuto',
@@ -2972,6 +3141,7 @@ const POKEDEX = [
             ],
         },
         'exp': 71,
+        'id': 140,
     },
     {
         'name': 'Kabutops',
@@ -2990,6 +3160,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 141,
     },
     {
         'name': 'Aerodactyl',
@@ -3008,6 +3179,7 @@ const POKEDEX = [
             ],
         },
         'exp': 180,
+        'id': 142,
     },
     {
         'name': 'M-Aerodactyl',
@@ -3026,6 +3198,7 @@ const POKEDEX = [
             ],
         },
         'exp': 215,
+        'id': '142-M',
     },
     {
         'name': 'Snorlax',
@@ -3043,6 +3216,7 @@ const POKEDEX = [
             ],
         },
         'exp': 189,
+        'id': 143,
     },
     {
         'name': 'Articuno',
@@ -3061,6 +3235,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 144,
     },
     {
         'name': 'Zapdos',
@@ -3079,6 +3254,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 145,
     },
     {
         'name': 'Moltres',
@@ -3097,6 +3273,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 146,
     },
     {
         'name': 'Dratini',
@@ -3114,6 +3291,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 147,
     },
     {
         'name': 'Dragonair',
@@ -3131,6 +3309,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 148,
     },
     {
         'name': 'Dragonite',
@@ -3149,6 +3328,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 149,
     },
     {
         'name': 'Mewtwo',
@@ -3166,6 +3346,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 150,
     },
     {
         'name': 'M-Mewtwo X',
@@ -3184,6 +3365,7 @@ const POKEDEX = [
             ],
         },
         'exp': 351,
+        'id': '150-M-X',
     },
     {
         'name': 'M-Mewtwo Y',
@@ -3201,6 +3383,7 @@ const POKEDEX = [
             ],
         },
         'exp': 351,
+        'id': '150-M-Y',
     },
     {
         'name': 'Mew',
@@ -3218,6 +3401,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 151,
     },
     {
         'name': 'Chikorita',
@@ -3235,6 +3419,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 152,
     },
     {
         'name': 'Bayleef',
@@ -3252,6 +3437,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 153,
     },
     {
         'name': 'Meganium',
@@ -3269,6 +3455,7 @@ const POKEDEX = [
             ],
         },
         'exp': 236,
+        'id': 154,
     },
     {
         'name': 'Cyndaquil',
@@ -3286,6 +3473,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 155,
     },
     {
         'name': 'Quilava',
@@ -3303,6 +3491,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 156,
     },
     {
         'name': 'Typhlosion',
@@ -3320,6 +3509,7 @@ const POKEDEX = [
             ],
         },
         'exp': 240,
+        'id': 157,
     },
     {
         'name': 'Totodile',
@@ -3337,6 +3527,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 158,
     },
     {
         'name': 'Croconaw',
@@ -3354,6 +3545,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 159,
     },
     {
         'name': 'Feraligatr',
@@ -3371,6 +3563,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 160,
     },
     {
         'name': 'Sentret',
@@ -3388,6 +3581,7 @@ const POKEDEX = [
             ],
         },
         'exp': 43,
+        'id': 161,
     },
     {
         'name': 'Furret',
@@ -3405,6 +3599,7 @@ const POKEDEX = [
             ],
         },
         'exp': 145,
+        'id': 162,
     },
     {
         'name': 'Hoothoot',
@@ -3423,6 +3618,7 @@ const POKEDEX = [
             ],
         },
         'exp': 52,
+        'id': 163,
     },
     {
         'name': 'Noctowl',
@@ -3441,6 +3637,7 @@ const POKEDEX = [
             ],
         },
         'exp': 155,
+        'id': 164,
     },
     {
         'name': 'Ledyba',
@@ -3459,6 +3656,7 @@ const POKEDEX = [
             ],
         },
         'exp': 53,
+        'id': 165,
     },
     {
         'name': 'Ledian',
@@ -3477,6 +3675,7 @@ const POKEDEX = [
             ],
         },
         'exp': 137,
+        'id': 166,
     },
     {
         'name': 'Spinarak',
@@ -3495,6 +3694,7 @@ const POKEDEX = [
             ],
         },
         'exp': 50,
+        'id': 167,
     },
     {
         'name': 'Ariados',
@@ -3513,6 +3713,7 @@ const POKEDEX = [
             ],
         },
         'exp': 137,
+        'id': 168,
     },
     {
         'name': 'Crobat',
@@ -3531,6 +3732,7 @@ const POKEDEX = [
             ],
         },
         'exp': 241,
+        'id': 169,
     },
     {
         'name': 'Chinchou',
@@ -3549,6 +3751,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 170,
     },
     {
         'name': 'Lanturn',
@@ -3567,6 +3770,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 171,
     },
     {
         'name': 'Pichu',
@@ -3584,6 +3788,7 @@ const POKEDEX = [
             ],
         },
         'exp': 41,
+        'id': 172,
     },
     {
         'name': 'Cleffa',
@@ -3601,6 +3806,7 @@ const POKEDEX = [
             ],
         },
         'exp': 44,
+        'id': 173,
     },
     {
         'name': 'Igglybuff',
@@ -3619,6 +3825,7 @@ const POKEDEX = [
             ],
         },
         'exp': 42,
+        'id': 174,
     },
     {
         'name': 'Togepi',
@@ -3636,6 +3843,7 @@ const POKEDEX = [
             ],
         },
         'exp': 49,
+        'id': 175,
     },
     {
         'name': 'Togetic',
@@ -3654,6 +3862,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 176,
     },
     {
         'name': 'Natu',
@@ -3672,6 +3881,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 177,
     },
     {
         'name': 'Xatu',
@@ -3690,6 +3900,7 @@ const POKEDEX = [
             ],
         },
         'exp': 165,
+        'id': 178,
     },
     {
         'name': 'Mareep',
@@ -3707,6 +3918,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 179,
     },
     {
         'name': 'Flaaffy',
@@ -3724,6 +3936,7 @@ const POKEDEX = [
             ],
         },
         'exp': 128,
+        'id': 180,
     },
     {
         'name': 'Ampharos',
@@ -3741,6 +3954,7 @@ const POKEDEX = [
             ],
         },
         'exp': 230,
+        'id': 181,
     },
     {
         'name': 'Bellossom',
@@ -3758,6 +3972,7 @@ const POKEDEX = [
             ],
         },
         'exp': 221,
+        'id': 182,
     },
     {
         'name': 'Marill',
@@ -3776,6 +3991,7 @@ const POKEDEX = [
             ],
         },
         'exp': 88,
+        'id': 183,
     },
     {
         'name': 'Azumarill',
@@ -3794,6 +4010,7 @@ const POKEDEX = [
             ],
         },
         'exp': 189,
+        'id': 184,
     },
     {
         'name': 'Sudowoodo',
@@ -3811,6 +4028,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 185,
     },
     {
         'name': 'Politoed',
@@ -3828,6 +4046,7 @@ const POKEDEX = [
             ],
         },
         'exp': 225,
+        'id': 186,
     },
     {
         'name': 'Hoppip',
@@ -3846,6 +4065,7 @@ const POKEDEX = [
             ],
         },
         'exp': 50,
+        'id': 187,
     },
     {
         'name': 'Skiploom',
@@ -3864,6 +4084,7 @@ const POKEDEX = [
             ],
         },
         'exp': 119,
+        'id': 188,
     },
     {
         'name': 'Jumpluff',
@@ -3882,6 +4103,7 @@ const POKEDEX = [
             ],
         },
         'exp': 207,
+        'id': 189,
     },
     {
         'name': 'Aipom',
@@ -3899,6 +4121,7 @@ const POKEDEX = [
             ],
         },
         'exp': 72,
+        'id': 190,
     },
     {
         'name': 'Sunkern',
@@ -3916,6 +4139,7 @@ const POKEDEX = [
             ],
         },
         'exp': 36,
+        'id': 191,
     },
     {
         'name': 'Sunflora',
@@ -3933,6 +4157,7 @@ const POKEDEX = [
             ],
         },
         'exp': 149,
+        'id': 192,
     },
     {
         'name': 'Yanma',
@@ -3951,6 +4176,7 @@ const POKEDEX = [
             ],
         },
         'exp': 78,
+        'id': 193,
     },
     {
         'name': 'Wooper',
@@ -3969,6 +4195,7 @@ const POKEDEX = [
             ],
         },
         'exp': 42,
+        'id': 194,
     },
     {
         'name': 'Quagsire',
@@ -3987,6 +4214,7 @@ const POKEDEX = [
             ],
         },
         'exp': 151,
+        'id': 195,
     },
     {
         'name': 'Espeon',
@@ -4004,6 +4232,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 196,
     },
     {
         'name': 'Umbreon',
@@ -4021,6 +4250,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 197,
     },
     {
         'name': 'Murkrow',
@@ -4039,6 +4269,7 @@ const POKEDEX = [
             ],
         },
         'exp': 81,
+        'id': 198,
     },
     {
         'name': 'Slowking',
@@ -4057,6 +4288,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 199,
     },
     {
         'name': 'Misdreavus',
@@ -4074,6 +4306,7 @@ const POKEDEX = [
             ],
         },
         'exp': 87,
+        'id': 200,
     },
     {
         'name': 'Unown',
@@ -4091,6 +4324,7 @@ const POKEDEX = [
             ],
         },
         'exp': 118,
+        'id': 201,
     },
     {
         'name': 'Wobbuffet',
@@ -4108,6 +4342,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 202,
     },
     {
         'name': 'Girafarig',
@@ -4126,6 +4361,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 203,
     },
     {
         'name': 'Pineco',
@@ -4143,6 +4379,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 204,
     },
     {
         'name': 'Forretress',
@@ -4161,6 +4398,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 205,
     },
     {
         'name': 'Dunsparce',
@@ -4178,6 +4416,7 @@ const POKEDEX = [
             ],
         },
         'exp': 145,
+        'id': 206,
     },
     {
         'name': 'Gligar',
@@ -4196,6 +4435,7 @@ const POKEDEX = [
             ],
         },
         'exp': 86,
+        'id': 207,
     },
     {
         'name': 'Steelix',
@@ -4214,6 +4454,7 @@ const POKEDEX = [
             ],
         },
         'exp': 179,
+        'id': 208,
     },
     {
         'name': 'Snubbull',
@@ -4231,6 +4472,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 209,
     },
     {
         'name': 'Granbull',
@@ -4248,6 +4490,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
+        'id': 210,
     },
     {
         'name': 'Qwilfish',
@@ -4266,6 +4509,7 @@ const POKEDEX = [
             ],
         },
         'exp': 86,
+        'id': 211,
     },
     {
         'name': 'Scizor',
@@ -4284,6 +4528,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 212,
     },
     {
         'name': 'Shuckle',
@@ -4302,6 +4547,7 @@ const POKEDEX = [
             ],
         },
         'exp': 177,
+        'id': 213,
     },
     {
         'name': 'Heracross',
@@ -4320,6 +4566,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 214,
     },
     {
         'name': 'Sneasel',
@@ -4338,6 +4585,7 @@ const POKEDEX = [
             ],
         },
         'exp': 86,
+        'id': 215,
     },
     {
         'name': 'Teddiursa',
@@ -4355,6 +4603,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 216,
     },
     {
         'name': 'Ursaring',
@@ -4372,6 +4621,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 217,
     },
     {
         'name': 'Slugma',
@@ -4389,6 +4639,7 @@ const POKEDEX = [
             ],
         },
         'exp': 50,
+        'id': 218,
     },
     {
         'name': 'Magcargo',
@@ -4407,6 +4658,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 219,
     },
     {
         'name': 'Swinub',
@@ -4425,6 +4677,7 @@ const POKEDEX = [
             ],
         },
         'exp': 50,
+        'id': 220,
     },
     {
         'name': 'Piloswine',
@@ -4443,6 +4696,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
+        'id': 221,
     },
     {
         'name': 'Corsola',
@@ -4461,6 +4715,7 @@ const POKEDEX = [
             ],
         },
         'exp': 133,
+        'id': 222,
     },
     {
         'name': 'Remoraid',
@@ -4478,6 +4733,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 223,
     },
     {
         'name': 'Octillery',
@@ -4495,6 +4751,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 224,
     },
     {
         'name': 'Delibird',
@@ -4513,6 +4770,7 @@ const POKEDEX = [
             ],
         },
         'exp': 116,
+        'id': 225,
     },
     {
         'name': 'Mantine',
@@ -4531,6 +4789,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 226,
     },
     {
         'name': 'Skarmory',
@@ -4549,6 +4808,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 227,
     },
     {
         'name': 'Houndour',
@@ -4567,6 +4827,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 228,
     },
     {
         'name': 'Houndoom',
@@ -4585,6 +4846,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 229,
     },
     {
         'name': 'Kingdra',
@@ -4603,6 +4865,7 @@ const POKEDEX = [
             ],
         },
         'exp': 243,
+        'id': 230,
     },
     {
         'name': 'Phanpy',
@@ -4620,6 +4883,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 231,
     },
     {
         'name': 'Donphan',
@@ -4637,6 +4901,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 232,
     },
     {
         'name': 'Porygon2',
@@ -4654,6 +4919,7 @@ const POKEDEX = [
             ],
         },
         'exp': 180,
+        'id': 233,
     },
     {
         'name': 'Stantler',
@@ -4671,6 +4937,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 234,
     },
     {
         'name': 'Smeargle',
@@ -4688,6 +4955,7 @@ const POKEDEX = [
             ],
         },
         'exp': 88,
+        'id': 235,
     },
     {
         'name': 'Tyrogue',
@@ -4705,6 +4973,7 @@ const POKEDEX = [
             ],
         },
         'exp': 42,
+        'id': 236,
     },
     {
         'name': 'Hitmontop',
@@ -4722,6 +4991,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 237,
     },
     {
         'name': 'Smoochum',
@@ -4740,6 +5010,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 238,
     },
     {
         'name': 'Elekid',
@@ -4757,6 +5028,7 @@ const POKEDEX = [
             ],
         },
         'exp': 72,
+        'id': 239,
     },
     {
         'name': 'Magby',
@@ -4774,6 +5046,7 @@ const POKEDEX = [
             ],
         },
         'exp': 73,
+        'id': 240,
     },
     {
         'name': 'Miltank',
@@ -4791,6 +5064,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 241,
     },
     {
         'name': 'Blissey',
@@ -4808,6 +5082,7 @@ const POKEDEX = [
             ],
         },
         'exp': 608,
+        'id': 242,
     },
     {
         'name': 'Raikou',
@@ -4825,6 +5100,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 243,
     },
     {
         'name': 'Entei',
@@ -4842,6 +5118,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 244,
     },
     {
         'name': 'Suicune',
@@ -4859,6 +5136,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 245,
     },
     {
         'name': 'Larvitar',
@@ -4877,6 +5155,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 246,
     },
     {
         'name': 'Pupitar',
@@ -4895,6 +5174,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 247,
     },
     {
         'name': 'Tyranitar',
@@ -4913,6 +5193,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 248,
     },
     {
         'name': 'Lugia',
@@ -4931,6 +5212,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 249,
     },
     {
         'name': 'Ho-Oh',
@@ -4949,6 +5231,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 250,
     },
     {
         'name': 'Celebi',
@@ -4967,6 +5250,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 251,
     },
     {
         'name': 'Treecko',
@@ -4984,6 +5268,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 252,
     },
     {
         'name': 'Grovyle',
@@ -5001,6 +5286,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 253,
     },
     {
         'name': 'Sceptile',
@@ -5018,6 +5304,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 254,
     },
     {
         'name': 'Torchic',
@@ -5035,6 +5322,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 255,
     },
     {
         'name': 'Combusken',
@@ -5053,6 +5341,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 256,
     },
     {
         'name': 'Blaziken',
@@ -5071,6 +5360,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 257,
     },
     {
         'name': 'Mudkip',
@@ -5088,6 +5378,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 258,
     },
     {
         'name': 'Marshtomp',
@@ -5106,6 +5397,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 259,
     },
     {
         'name': 'Swampert',
@@ -5124,6 +5416,7 @@ const POKEDEX = [
             ],
         },
         'exp': 241,
+        'id': 260,
     },
     {
         'name': 'Poochyena',
@@ -5141,6 +5434,7 @@ const POKEDEX = [
             ],
         },
         'exp': 44,
+        'id': 261,
     },
     {
         'name': 'Mightyena',
@@ -5158,6 +5452,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 262,
     },
     {
         'name': 'Zigzagoon',
@@ -5175,6 +5470,7 @@ const POKEDEX = [
             ],
         },
         'exp': 48,
+        'id': 263,
     },
     {
         'name': 'Linoone',
@@ -5192,6 +5488,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 264,
     },
     {
         'name': 'Wurmple',
@@ -5209,6 +5506,7 @@ const POKEDEX = [
             ],
         },
         'exp': 39,
+        'id': 265,
     },
     {
         'name': 'Silcoon',
@@ -5226,6 +5524,7 @@ const POKEDEX = [
             ],
         },
         'exp': 72,
+        'id': 266,
     },
     {
         'name': 'Beautifly',
@@ -5244,6 +5543,7 @@ const POKEDEX = [
             ],
         },
         'exp': 178,
+        'id': 267,
     },
     {
         'name': 'Cascoon',
@@ -5261,6 +5561,7 @@ const POKEDEX = [
             ],
         },
         'exp': 41,
+        'id': 268,
     },
     {
         'name': 'Dustox',
@@ -5279,6 +5580,7 @@ const POKEDEX = [
             ],
         },
         'exp': 135,
+        'id': 269,
     },
     {
         'name': 'Lotad',
@@ -5297,6 +5599,7 @@ const POKEDEX = [
             ],
         },
         'exp': 44,
+        'id': 270,
     },
     {
         'name': 'Lombre',
@@ -5315,6 +5618,7 @@ const POKEDEX = [
             ],
         },
         'exp': 119,
+        'id': 271,
     },
     {
         'name': 'Ludicolo',
@@ -5333,6 +5637,7 @@ const POKEDEX = [
             ],
         },
         'exp': 216,
+        'id': 272,
     },
     {
         'name': 'Seedot',
@@ -5350,6 +5655,7 @@ const POKEDEX = [
             ],
         },
         'exp': 44,
+        'id': 273,
     },
     {
         'name': 'Nuzleaf',
@@ -5368,6 +5674,7 @@ const POKEDEX = [
             ],
         },
         'exp': 119,
+        'id': 274,
     },
     {
         'name': 'Shiftry',
@@ -5386,6 +5693,7 @@ const POKEDEX = [
             ],
         },
         'exp': 216,
+        'id': 275,
     },
     {
         'name': 'Taillow',
@@ -5404,6 +5712,7 @@ const POKEDEX = [
             ],
         },
         'exp': 54,
+        'id': 276,
     },
     {
         'name': 'Swellow',
@@ -5422,6 +5731,7 @@ const POKEDEX = [
             ],
         },
         'exp': 151,
+        'id': 277,
     },
     {
         'name': 'Wingull',
@@ -5440,6 +5750,7 @@ const POKEDEX = [
             ],
         },
         'exp': 54,
+        'id': 278,
     },
     {
         'name': 'Pelipper',
@@ -5458,6 +5769,7 @@ const POKEDEX = [
             ],
         },
         'exp': 151,
+        'id': 279,
     },
     {
         'name': 'Ralts',
@@ -5476,6 +5788,7 @@ const POKEDEX = [
             ],
         },
         'exp': 40,
+        'id': 280,
     },
     {
         'name': 'Kirlia',
@@ -5494,6 +5807,7 @@ const POKEDEX = [
             ],
         },
         'exp': 97,
+        'id': 281,
     },
     {
         'name': 'Gardevoir',
@@ -5512,6 +5826,7 @@ const POKEDEX = [
             ],
         },
         'exp': 233,
+        'id': 282,
     },
     {
         'name': 'Surskit',
@@ -5530,6 +5845,7 @@ const POKEDEX = [
             ],
         },
         'exp': 54,
+        'id': 283,
     },
     {
         'name': 'Masquerain',
@@ -5548,6 +5864,7 @@ const POKEDEX = [
             ],
         },
         'exp': 145,
+        'id': 284,
     },
     {
         'name': 'Shroomish',
@@ -5565,6 +5882,7 @@ const POKEDEX = [
             ],
         },
         'exp': 59,
+        'id': 285,
     },
     {
         'name': 'Breloom',
@@ -5583,6 +5901,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 286,
     },
     {
         'name': 'Slakoth',
@@ -5600,6 +5919,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 287,
     },
     {
         'name': 'Vigoroth',
@@ -5617,6 +5937,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 288,
     },
     {
         'name': 'Slaking',
@@ -5634,6 +5955,7 @@ const POKEDEX = [
             ],
         },
         'exp': 252,
+        'id': 289,
     },
     {
         'name': 'Nincada',
@@ -5652,6 +5974,7 @@ const POKEDEX = [
             ],
         },
         'exp': 53,
+        'id': 290,
     },
     {
         'name': 'Ninjask',
@@ -5670,6 +5993,7 @@ const POKEDEX = [
             ],
         },
         'exp': 160,
+        'id': 291,
     },
     {
         'name': 'Shedinja',
@@ -5688,6 +6012,7 @@ const POKEDEX = [
             ],
         },
         'exp': 83,
+        'id': 292,
     },
     {
         'name': 'Whismur',
@@ -5705,6 +6030,7 @@ const POKEDEX = [
             ],
         },
         'exp': 48,
+        'id': 293,
     },
     {
         'name': 'Loudred',
@@ -5722,6 +6048,7 @@ const POKEDEX = [
             ],
         },
         'exp': 126,
+        'id': 294,
     },
     {
         'name': 'Exploud',
@@ -5739,6 +6066,7 @@ const POKEDEX = [
             ],
         },
         'exp': 221,
+        'id': 295,
     },
     {
         'name': 'Makuhita',
@@ -5756,6 +6084,7 @@ const POKEDEX = [
             ],
         },
         'exp': 47,
+        'id': 296,
     },
     {
         'name': 'Hariyama',
@@ -5773,6 +6102,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 297,
     },
     {
         'name': 'Azurill',
@@ -5791,6 +6121,7 @@ const POKEDEX = [
             ],
         },
         'exp': 38,
+        'id': 298,
     },
     {
         'name': 'Nosepass',
@@ -5808,6 +6139,7 @@ const POKEDEX = [
             ],
         },
         'exp': 75,
+        'id': 299,
     },
     {
         'name': 'Skitty',
@@ -5825,6 +6157,7 @@ const POKEDEX = [
             ],
         },
         'exp': 52,
+        'id': 300,
     },
     {
         'name': 'Delcatty',
@@ -5842,6 +6175,7 @@ const POKEDEX = [
             ],
         },
         'exp': 133,
+        'id': 301,
     },
     {
         'name': 'Sableye',
@@ -5860,6 +6194,7 @@ const POKEDEX = [
             ],
         },
         'exp': 133,
+        'id': 302,
     },
     {
         'name': 'Mawile',
@@ -5878,6 +6213,7 @@ const POKEDEX = [
             ],
         },
         'exp': 133,
+        'id': 303,
     },
     {
         'name': 'Aron',
@@ -5896,6 +6232,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 304,
     },
     {
         'name': 'Lairon',
@@ -5914,6 +6251,7 @@ const POKEDEX = [
             ],
         },
         'exp': 151,
+        'id': 305,
     },
     {
         'name': 'Aggron',
@@ -5932,6 +6270,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 306,
     },
     {
         'name': 'Meditite',
@@ -5950,6 +6289,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 307,
     },
     {
         'name': 'Medicham',
@@ -5968,6 +6308,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 308,
     },
     {
         'name': 'Electrike',
@@ -5985,6 +6326,7 @@ const POKEDEX = [
             ],
         },
         'exp': 59,
+        'id': 309,
     },
     {
         'name': 'Manectric',
@@ -6002,6 +6344,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 310,
     },
     {
         'name': 'Plusle',
@@ -6019,6 +6362,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 311,
     },
     {
         'name': 'Minun',
@@ -6036,6 +6380,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 312,
     },
     {
         'name': 'Volbeat',
@@ -6053,6 +6398,7 @@ const POKEDEX = [
             ],
         },
         'exp': 140,
+        'id': 313,
     },
     {
         'name': 'Illumise',
@@ -6070,6 +6416,7 @@ const POKEDEX = [
             ],
         },
         'exp': 140,
+        'id': 314,
     },
     {
         'name': 'Roselia',
@@ -6088,6 +6435,7 @@ const POKEDEX = [
             ],
         },
         'exp': 140,
+        'id': 315,
     },
     {
         'name': 'Gulpin',
@@ -6105,6 +6453,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 316,
     },
     {
         'name': 'Swalot',
@@ -6122,6 +6471,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 317,
     },
     {
         'name': 'Carvanha',
@@ -6140,6 +6490,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 318,
     },
     {
         'name': 'Sharpedo',
@@ -6158,6 +6509,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 319,
     },
     {
         'name': 'Wailmer',
@@ -6175,6 +6527,7 @@ const POKEDEX = [
             ],
         },
         'exp': 80,
+        'id': 320,
     },
     {
         'name': 'Wailord',
@@ -6192,6 +6545,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 321,
     },
     {
         'name': 'Numel',
@@ -6210,6 +6564,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 322,
     },
     {
         'name': 'Camerupt',
@@ -6228,6 +6583,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 323,
     },
     {
         'name': 'Torkoal',
@@ -6245,6 +6601,7 @@ const POKEDEX = [
             ],
         },
         'exp': 165,
+        'id': 324,
     },
     {
         'name': 'Spoink',
@@ -6262,6 +6619,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 325,
     },
     {
         'name': 'Grumpig',
@@ -6279,6 +6637,7 @@ const POKEDEX = [
             ],
         },
         'exp': 165,
+        'id': 326,
     },
     {
         'name': 'Spinda',
@@ -6296,6 +6655,7 @@ const POKEDEX = [
             ],
         },
         'exp': 126,
+        'id': 327,
     },
     {
         'name': 'Trapinch',
@@ -6313,6 +6673,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 328,
     },
     {
         'name': 'Vibrava',
@@ -6331,6 +6692,7 @@ const POKEDEX = [
             ],
         },
         'exp': 119,
+        'id': 329,
     },
     {
         'name': 'Flygon',
@@ -6349,6 +6711,7 @@ const POKEDEX = [
             ],
         },
         'exp': 234,
+        'id': 330,
     },
     {
         'name': 'Cacnea',
@@ -6366,6 +6729,7 @@ const POKEDEX = [
             ],
         },
         'exp': 67,
+        'id': 331,
     },
     {
         'name': 'Cacturne',
@@ -6384,6 +6748,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 332,
     },
     {
         'name': 'Swablu',
@@ -6402,6 +6767,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 333,
     },
     {
         'name': 'Altaria',
@@ -6420,6 +6786,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 334,
     },
     {
         'name': 'Zangoose',
@@ -6437,6 +6804,7 @@ const POKEDEX = [
             ],
         },
         'exp': 160,
+        'id': 335,
     },
     {
         'name': 'Seviper',
@@ -6454,6 +6822,7 @@ const POKEDEX = [
             ],
         },
         'exp': 160,
+        'id': 336,
     },
     {
         'name': 'Lunatone',
@@ -6472,6 +6841,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 337,
     },
     {
         'name': 'Solrock',
@@ -6490,6 +6860,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 338,
     },
     {
         'name': 'Barboach',
@@ -6508,6 +6879,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 339,
     },
     {
         'name': 'Whiscash',
@@ -6526,6 +6898,7 @@ const POKEDEX = [
             ],
         },
         'exp': 164,
+        'id': 340,
     },
     {
         'name': 'Corphish',
@@ -6543,6 +6916,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 341,
     },
     {
         'name': 'Crawdaunt',
@@ -6561,6 +6935,7 @@ const POKEDEX = [
             ],
         },
         'exp': 164,
+        'id': 342,
     },
     {
         'name': 'Baltoy',
@@ -6579,6 +6954,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 343,
     },
     {
         'name': 'Claydol',
@@ -6597,6 +6973,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 344,
     },
     {
         'name': 'Lileep',
@@ -6615,6 +6992,7 @@ const POKEDEX = [
             ],
         },
         'exp': 71,
+        'id': 345,
     },
     {
         'name': 'Cradily',
@@ -6633,6 +7011,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 346,
     },
     {
         'name': 'Anorith',
@@ -6651,6 +7030,7 @@ const POKEDEX = [
             ],
         },
         'exp': 71,
+        'id': 347,
     },
     {
         'name': 'Armaldo',
@@ -6669,6 +7049,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 348,
     },
     {
         'name': 'Feebas',
@@ -6686,6 +7067,7 @@ const POKEDEX = [
             ],
         },
         'exp': 40,
+        'id': 349,
     },
     {
         'name': 'Milotic',
@@ -6703,6 +7085,7 @@ const POKEDEX = [
             ],
         },
         'exp': 189,
+        'id': 350,
     },
     {
         'name': 'Castform',
@@ -6720,6 +7103,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 351,
     },
     {
         'name': 'Kecleon',
@@ -6737,6 +7121,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 352,
     },
     {
         'name': 'Shuppet',
@@ -6754,6 +7139,7 @@ const POKEDEX = [
             ],
         },
         'exp': 59,
+        'id': 353,
     },
     {
         'name': 'Banette',
@@ -6771,6 +7157,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 354,
     },
     {
         'name': 'Duskull',
@@ -6788,6 +7175,7 @@ const POKEDEX = [
             ],
         },
         'exp': 59,
+        'id': 355,
     },
     {
         'name': 'Dusclops',
@@ -6805,6 +7193,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 356,
     },
     {
         'name': 'Tropius',
@@ -6823,6 +7212,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 357,
     },
     {
         'name': 'Chimecho',
@@ -6840,6 +7230,7 @@ const POKEDEX = [
             ],
         },
         'exp': 149,
+        'id': 358,
     },
     {
         'name': 'Absol',
@@ -6857,6 +7248,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 359,
     },
     {
         'name': 'Wynaut',
@@ -6874,6 +7266,7 @@ const POKEDEX = [
             ],
         },
         'exp': 52,
+        'id': 360,
     },
     {
         'name': 'Snorunt',
@@ -6891,6 +7284,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 361,
     },
     {
         'name': 'Glalie',
@@ -6908,6 +7302,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 362,
     },
     {
         'name': 'Spheal',
@@ -6926,6 +7321,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 363,
     },
     {
         'name': 'Sealeo',
@@ -6944,6 +7340,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 364,
     },
     {
         'name': 'Walrein',
@@ -6962,6 +7359,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 365,
     },
     {
         'name': 'Clamperl',
@@ -6979,6 +7377,7 @@ const POKEDEX = [
             ],
         },
         'exp': 69,
+        'id': 366,
     },
     {
         'name': 'Huntail',
@@ -6996,6 +7395,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 367,
     },
     {
         'name': 'Gorebyss',
@@ -7013,6 +7413,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 368,
     },
     {
         'name': 'Relicanth',
@@ -7031,6 +7432,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 369,
     },
     {
         'name': 'Luvdisc',
@@ -7048,6 +7450,7 @@ const POKEDEX = [
             ],
         },
         'exp': 116,
+        'id': 370,
     },
     {
         'name': 'Bagon',
@@ -7065,6 +7468,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 371,
     },
     {
         'name': 'Shelgon',
@@ -7082,6 +7486,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 372,
     },
     {
         'name': 'Salamence',
@@ -7100,6 +7505,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 373,
     },
     {
         'name': 'Beldum',
@@ -7118,6 +7524,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 374,
     },
     {
         'name': 'Metang',
@@ -7136,6 +7543,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 375,
     },
     {
         'name': 'Metagross',
@@ -7154,6 +7562,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 376,
     },
     {
         'name': 'Regirock',
@@ -7171,6 +7580,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 377,
     },
     {
         'name': 'Regice',
@@ -7188,6 +7598,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 378,
     },
     {
         'name': 'Registeel',
@@ -7205,6 +7616,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 379,
     },
     {
         'name': 'Latias',
@@ -7223,6 +7635,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 380,
     },
     {
         'name': 'Latios',
@@ -7241,6 +7654,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 381,
     },
     {
         'name': 'Kyogre',
@@ -7258,6 +7672,7 @@ const POKEDEX = [
             ],
         },
         'exp': 302,
+        'id': 382,
     },
     {
         'name': 'Groudon',
@@ -7275,6 +7690,7 @@ const POKEDEX = [
             ],
         },
         'exp': 302,
+        'id': 383,
     },
     {
         'name': 'Rayquaza',
@@ -7293,6 +7709,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 384,
     },
     {
         'name': 'Jirachi',
@@ -7311,6 +7728,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 385,
     },
     {
         'name': 'Deoxys',
@@ -7328,6 +7746,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 386,
     },
     {
         'name': 'Turtwig',
@@ -7345,6 +7764,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 387,
     },
     {
         'name': 'Grotle',
@@ -7362,6 +7782,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 388,
     },
     {
         'name': 'Torterra',
@@ -7380,6 +7801,7 @@ const POKEDEX = [
             ],
         },
         'exp': 236,
+        'id': 389,
     },
     {
         'name': 'Chimchar',
@@ -7397,6 +7819,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 390,
     },
     {
         'name': 'Monferno',
@@ -7415,6 +7838,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 391,
     },
     {
         'name': 'Infernape',
@@ -7433,6 +7857,7 @@ const POKEDEX = [
             ],
         },
         'exp': 240,
+        'id': 392,
     },
     {
         'name': 'Piplup',
@@ -7450,6 +7875,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 393,
     },
     {
         'name': 'Prinplup',
@@ -7467,6 +7893,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 394,
     },
     {
         'name': 'Empoleon',
@@ -7485,6 +7912,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 395,
     },
     {
         'name': 'Starly',
@@ -7503,6 +7931,7 @@ const POKEDEX = [
             ],
         },
         'exp': 49,
+        'id': 396,
     },
     {
         'name': 'Staravia',
@@ -7521,6 +7950,7 @@ const POKEDEX = [
             ],
         },
         'exp': 119,
+        'id': 397,
     },
     {
         'name': 'Staraptor',
@@ -7539,6 +7969,7 @@ const POKEDEX = [
             ],
         },
         'exp': 218,
+        'id': 398,
     },
     {
         'name': 'Bidoof',
@@ -7556,6 +7987,7 @@ const POKEDEX = [
             ],
         },
         'exp': 50,
+        'id': 399,
     },
     {
         'name': 'Bibarel',
@@ -7574,6 +8006,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 400,
     },
     {
         'name': 'Kricketot',
@@ -7591,6 +8024,7 @@ const POKEDEX = [
             ],
         },
         'exp': 39,
+        'id': 401,
     },
     {
         'name': 'Kricketune',
@@ -7608,6 +8042,7 @@ const POKEDEX = [
             ],
         },
         'exp': 134,
+        'id': 402,
     },
     {
         'name': 'Shinx',
@@ -7625,6 +8060,7 @@ const POKEDEX = [
             ],
         },
         'exp': 53,
+        'id': 403,
     },
     {
         'name': 'Luxio',
@@ -7642,6 +8078,7 @@ const POKEDEX = [
             ],
         },
         'exp': 127,
+        'id': 404,
     },
     {
         'name': 'Luxray',
@@ -7659,6 +8096,7 @@ const POKEDEX = [
             ],
         },
         'exp': 235,
+        'id': 405,
     },
     {
         'name': 'Budew',
@@ -7677,6 +8115,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 406,
     },
     {
         'name': 'Roserade',
@@ -7695,6 +8134,7 @@ const POKEDEX = [
             ],
         },
         'exp': 232,
+        'id': 407,
     },
     {
         'name': 'Cranidos',
@@ -7712,6 +8152,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 408,
     },
     {
         'name': 'Rampardos',
@@ -7729,6 +8170,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 409,
     },
     {
         'name': 'Shieldon',
@@ -7747,6 +8189,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 410,
     },
     {
         'name': 'Bastiodon',
@@ -7765,6 +8208,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 411,
     },
     {
         'name': 'Burmy',
@@ -7782,6 +8226,7 @@ const POKEDEX = [
             ],
         },
         'exp': 45,
+        'id': 412,
     },
     {
         'name': 'Wormadam',
@@ -7800,6 +8245,7 @@ const POKEDEX = [
             ],
         },
         'exp': 148,
+        'id': 413,
     },
     {
         'name': 'Mothim',
@@ -7818,6 +8264,7 @@ const POKEDEX = [
             ],
         },
         'exp': 148,
+        'id': 414,
     },
     {
         'name': 'Combee',
@@ -7836,6 +8283,7 @@ const POKEDEX = [
             ],
         },
         'exp': 49,
+        'id': 415,
     },
     {
         'name': 'Vespiquen',
@@ -7854,6 +8302,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 416,
     },
     {
         'name': 'Pachirisu',
@@ -7871,6 +8320,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 417,
     },
     {
         'name': 'Buizel',
@@ -7888,6 +8338,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 418,
     },
     {
         'name': 'Floatzel',
@@ -7905,6 +8356,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 419,
     },
     {
         'name': 'Cherubi',
@@ -7922,6 +8374,7 @@ const POKEDEX = [
             ],
         },
         'exp': 55,
+        'id': 420,
     },
     {
         'name': 'Cherrim',
@@ -7939,6 +8392,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
+        'id': 421,
     },
     {
         'name': 'Shellos',
@@ -7956,6 +8410,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': 422,
     },
     {
         'name': 'Gastrodon',
@@ -7974,6 +8429,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 423,
     },
     {
         'name': 'Ambipom',
@@ -7991,6 +8447,7 @@ const POKEDEX = [
             ],
         },
         'exp': 169,
+        'id': 424,
     },
     {
         'name': 'Drifloon',
@@ -8009,6 +8466,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 425,
     },
     {
         'name': 'Drifblim',
@@ -8027,6 +8485,7 @@ const POKEDEX = [
             ],
         },
         'exp': 174,
+        'id': 426,
     },
     {
         'name': 'Buneary',
@@ -8044,6 +8503,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 427,
     },
     {
         'name': 'Lopunny',
@@ -8061,6 +8521,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 428,
     },
     {
         'name': 'Mismagius',
@@ -8078,6 +8539,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 429,
     },
     {
         'name': 'Honchkrow',
@@ -8096,6 +8558,7 @@ const POKEDEX = [
             ],
         },
         'exp': 177,
+        'id': 430,
     },
     {
         'name': 'Glameow',
@@ -8113,6 +8576,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 431,
     },
     {
         'name': 'Purugly',
@@ -8130,6 +8594,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
+        'id': 432,
     },
     {
         'name': 'Chingling',
@@ -8147,6 +8612,7 @@ const POKEDEX = [
             ],
         },
         'exp': 57,
+        'id': 433,
     },
     {
         'name': 'Stunky',
@@ -8165,6 +8631,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 434,
     },
     {
         'name': 'Skuntank',
@@ -8183,6 +8650,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 435,
     },
     {
         'name': 'Bronzor',
@@ -8201,6 +8669,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 436,
     },
     {
         'name': 'Bronzong',
@@ -8219,6 +8688,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 437,
     },
     {
         'name': 'Bonsly',
@@ -8236,6 +8706,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 438,
     },
     {
         'name': 'Mime Jr.',
@@ -8254,6 +8725,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 439,
     },
     {
         'name': 'Happiny',
@@ -8271,6 +8743,7 @@ const POKEDEX = [
             ],
         },
         'exp': 110,
+        'id': 440,
     },
     {
         'name': 'Chatot',
@@ -8289,6 +8762,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 441,
     },
     {
         'name': 'Spiritomb',
@@ -8307,6 +8781,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 442,
     },
     {
         'name': 'Gible',
@@ -8325,6 +8800,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 443,
     },
     {
         'name': 'Gabite',
@@ -8343,6 +8819,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 444,
     },
     {
         'name': 'Garchomp',
@@ -8361,6 +8838,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 445,
     },
     {
         'name': 'Munchlax',
@@ -8378,6 +8856,7 @@ const POKEDEX = [
             ],
         },
         'exp': 78,
+        'id': 446,
     },
     {
         'name': 'Riolu',
@@ -8395,6 +8874,7 @@ const POKEDEX = [
             ],
         },
         'exp': 57,
+        'id': 447,
     },
     {
         'name': 'Lucario',
@@ -8413,6 +8893,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 448,
     },
     {
         'name': 'Hippopotas',
@@ -8430,6 +8911,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 449,
     },
     {
         'name': 'Hippowdon',
@@ -8447,6 +8929,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 450,
     },
     {
         'name': 'Skorupi',
@@ -8465,6 +8948,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 451,
     },
     {
         'name': 'Drapion',
@@ -8483,6 +8967,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 452,
     },
     {
         'name': 'Croagunk',
@@ -8501,6 +8986,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 453,
     },
     {
         'name': 'Toxicroak',
@@ -8519,6 +9005,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 454,
     },
     {
         'name': 'Carnivine',
@@ -8536,6 +9023,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 455,
     },
     {
         'name': 'Finneon',
@@ -8553,6 +9041,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 456,
     },
     {
         'name': 'Lumineon',
@@ -8570,6 +9059,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 457,
     },
     {
         'name': 'Mantyke',
@@ -8588,6 +9078,7 @@ const POKEDEX = [
             ],
         },
         'exp': 69,
+        'id': 458,
     },
     {
         'name': 'Snover',
@@ -8606,6 +9097,7 @@ const POKEDEX = [
             ],
         },
         'exp': 67,
+        'id': 459,
     },
     {
         'name': 'Abomasnow',
@@ -8624,6 +9116,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 460,
     },
     {
         'name': 'Weavile',
@@ -8642,6 +9135,7 @@ const POKEDEX = [
             ],
         },
         'exp': 179,
+        'id': 461,
     },
     {
         'name': 'Magnezone',
@@ -8660,6 +9154,7 @@ const POKEDEX = [
             ],
         },
         'exp': 241,
+        'id': 462,
     },
     {
         'name': 'Lickilicky',
@@ -8677,6 +9172,7 @@ const POKEDEX = [
             ],
         },
         'exp': 180,
+        'id': 463,
     },
     {
         'name': 'Rhyperior',
@@ -8695,6 +9191,7 @@ const POKEDEX = [
             ],
         },
         'exp': 241,
+        'id': 464,
     },
     {
         'name': 'Tangrowth',
@@ -8712,6 +9209,7 @@ const POKEDEX = [
             ],
         },
         'exp': 187,
+        'id': 465,
     },
     {
         'name': 'Electivire',
@@ -8729,6 +9227,7 @@ const POKEDEX = [
             ],
         },
         'exp': 243,
+        'id': 466,
     },
     {
         'name': 'Magmortar',
@@ -8746,6 +9245,7 @@ const POKEDEX = [
             ],
         },
         'exp': 243,
+        'id': 467,
     },
     {
         'name': 'Togekiss',
@@ -8764,6 +9264,7 @@ const POKEDEX = [
             ],
         },
         'exp': 245,
+        'id': 468,
     },
     {
         'name': 'Yanmega',
@@ -8782,6 +9283,7 @@ const POKEDEX = [
             ],
         },
         'exp': 180,
+        'id': 469,
     },
     {
         'name': 'Leafeon',
@@ -8799,6 +9301,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 470,
     },
     {
         'name': 'Glaceon',
@@ -8816,6 +9319,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 471,
     },
     {
         'name': 'Gliscor',
@@ -8834,6 +9338,7 @@ const POKEDEX = [
             ],
         },
         'exp': 179,
+        'id': 472,
     },
     {
         'name': 'Mamoswine',
@@ -8852,6 +9357,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 473,
     },
     {
         'name': 'Porygon-Z',
@@ -8869,6 +9375,7 @@ const POKEDEX = [
             ],
         },
         'exp': 241,
+        'id': 474,
     },
     {
         'name': 'Gallade',
@@ -8887,6 +9394,7 @@ const POKEDEX = [
             ],
         },
         'exp': 233,
+        'id': 475,
     },
     {
         'name': 'Probopass',
@@ -8905,6 +9413,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 476,
     },
     {
         'name': 'Dusknoir',
@@ -8922,6 +9431,7 @@ const POKEDEX = [
             ],
         },
         'exp': 236,
+        'id': 477,
     },
     {
         'name': 'Froslass',
@@ -8940,6 +9450,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 478,
     },
     {
         'name': 'Rotom',
@@ -8958,6 +9469,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 479,
     },
     {
         'name': 'Uxie',
@@ -8975,6 +9487,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 480,
     },
     {
         'name': 'Mesprit',
@@ -8992,6 +9505,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 481,
     },
     {
         'name': 'Azelf',
@@ -9009,6 +9523,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 482,
     },
     {
         'name': 'Dialga',
@@ -9027,6 +9542,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 483,
     },
     {
         'name': 'Palkia',
@@ -9045,6 +9561,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 484,
     },
     {
         'name': 'Heatran',
@@ -9063,6 +9580,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 485,
     },
     {
         'name': 'Regigigas',
@@ -9080,6 +9598,7 @@ const POKEDEX = [
             ],
         },
         'exp': 302,
+        'id': 486,
     },
     {
         'name': 'Giratina',
@@ -9098,6 +9617,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 487,
     },
     {
         'name': 'Cresselia',
@@ -9115,6 +9635,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 488,
     },
     {
         'name': 'Phione',
@@ -9132,6 +9653,7 @@ const POKEDEX = [
             ],
         },
         'exp': 216,
+        'id': 489,
     },
     {
         'name': 'Manaphy',
@@ -9149,6 +9671,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 490,
     },
     {
         'name': 'Darkrai',
@@ -9166,6 +9689,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 491,
     },
     {
         'name': 'Shaymin',
@@ -9183,6 +9707,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 492,
     },
     {
         'name': 'Arceus',
@@ -9200,6 +9725,7 @@ const POKEDEX = [
             ],
         },
         'exp': 324,
+        'id': 493,
     },
     {
         'name': 'Victini',
@@ -9218,6 +9744,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 494,
     },
     {
         'name': 'Snivy',
@@ -9235,6 +9762,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 495,
     },
     {
         'name': 'Servine',
@@ -9252,6 +9780,7 @@ const POKEDEX = [
             ],
         },
         'exp': 145,
+        'id': 496,
     },
     {
         'name': 'Serperior',
@@ -9269,6 +9798,7 @@ const POKEDEX = [
             ],
         },
         'exp': 238,
+        'id': 497,
     },
     {
         'name': 'Tepig',
@@ -9286,6 +9816,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 498,
     },
     {
         'name': 'Pignite',
@@ -9304,6 +9835,7 @@ const POKEDEX = [
             ],
         },
         'exp': 146,
+        'id': 499,
     },
     {
         'name': 'Emboar',
@@ -9322,6 +9854,7 @@ const POKEDEX = [
             ],
         },
         'exp': 238,
+        'id': 500,
     },
     {
         'name': 'Oshawott',
@@ -9339,6 +9872,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 501,
     },
     {
         'name': 'Dewott',
@@ -9356,6 +9890,7 @@ const POKEDEX = [
             ],
         },
         'exp': 145,
+        'id': 502,
     },
     {
         'name': 'Samurott',
@@ -9373,6 +9908,7 @@ const POKEDEX = [
             ],
         },
         'exp': 238,
+        'id': 503,
     },
     {
         'name': 'Patrat',
@@ -9390,6 +9926,7 @@ const POKEDEX = [
             ],
         },
         'exp': 51,
+        'id': 504,
     },
     {
         'name': 'Watchog',
@@ -9407,6 +9944,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 505,
     },
     {
         'name': 'Lillipup',
@@ -9424,6 +9962,7 @@ const POKEDEX = [
             ],
         },
         'exp': 55,
+        'id': 506,
     },
     {
         'name': 'Herdier',
@@ -9441,6 +9980,7 @@ const POKEDEX = [
             ],
         },
         'exp': 130,
+        'id': 507,
     },
     {
         'name': 'Stoutland',
@@ -9458,6 +9998,7 @@ const POKEDEX = [
             ],
         },
         'exp': 225,
+        'id': 508,
     },
     {
         'name': 'Purrloin',
@@ -9475,6 +10016,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 509,
     },
     {
         'name': 'Liepard',
@@ -9492,6 +10034,7 @@ const POKEDEX = [
             ],
         },
         'exp': 156,
+        'id': 510,
     },
     {
         'name': 'Pansage',
@@ -9509,6 +10052,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 511,
     },
     {
         'name': 'Simisage',
@@ -9526,6 +10070,7 @@ const POKEDEX = [
             ],
         },
         'exp': 174,
+        'id': 512,
     },
     {
         'name': 'Pansear',
@@ -9543,6 +10088,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 513,
     },
     {
         'name': 'Simisear',
@@ -9560,6 +10106,7 @@ const POKEDEX = [
             ],
         },
         'exp': 174,
+        'id': 514,
     },
     {
         'name': 'Panpour',
@@ -9577,6 +10124,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 515,
     },
     {
         'name': 'Simipour',
@@ -9594,6 +10142,7 @@ const POKEDEX = [
             ],
         },
         'exp': 174,
+        'id': 516,
     },
     {
         'name': 'Munna',
@@ -9611,6 +10160,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 517,
     },
     {
         'name': 'Musharna',
@@ -9628,6 +10178,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 518,
     },
     {
         'name': 'Pidove',
@@ -9646,6 +10197,7 @@ const POKEDEX = [
             ],
         },
         'exp': 53,
+        'id': 519,
     },
     {
         'name': 'Tranquill',
@@ -9664,6 +10216,7 @@ const POKEDEX = [
             ],
         },
         'exp': 125,
+        'id': 520,
     },
     {
         'name': 'Unfezant',
@@ -9682,6 +10235,7 @@ const POKEDEX = [
             ],
         },
         'exp': 220,
+        'id': 521,
     },
     {
         'name': 'Blitzle',
@@ -9699,6 +10253,7 @@ const POKEDEX = [
             ],
         },
         'exp': 59,
+        'id': 522,
     },
     {
         'name': 'Zebstrika',
@@ -9716,6 +10271,7 @@ const POKEDEX = [
             ],
         },
         'exp': 174,
+        'id': 523,
     },
     {
         'name': 'Roggenrola',
@@ -9733,6 +10289,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 524,
     },
     {
         'name': 'Boldore',
@@ -9750,6 +10307,7 @@ const POKEDEX = [
             ],
         },
         'exp': 137,
+        'id': 525,
     },
     {
         'name': 'Gigalith',
@@ -9767,6 +10325,7 @@ const POKEDEX = [
             ],
         },
         'exp': 232,
+        'id': 526,
     },
     {
         'name': 'Woobat',
@@ -9785,6 +10344,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 527,
     },
     {
         'name': 'Swoobat',
@@ -9803,6 +10363,7 @@ const POKEDEX = [
             ],
         },
         'exp': 149,
+        'id': 528,
     },
     {
         'name': 'Drilbur',
@@ -9820,6 +10381,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 529,
     },
     {
         'name': 'Excadrill',
@@ -9838,6 +10400,7 @@ const POKEDEX = [
             ],
         },
         'exp': 178,
+        'id': 530,
     },
     {
         'name': 'Audino',
@@ -9855,6 +10418,7 @@ const POKEDEX = [
             ],
         },
         'exp': 390,
+        'id': 531,
     },
     {
         'name': 'Timburr',
@@ -9872,6 +10436,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 532,
     },
     {
         'name': 'Gurdurr',
@@ -9889,6 +10454,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 533,
     },
     {
         'name': 'Conkeldurr',
@@ -9906,6 +10472,7 @@ const POKEDEX = [
             ],
         },
         'exp': 227,
+        'id': 534,
     },
     {
         'name': 'Tympole',
@@ -9923,6 +10490,7 @@ const POKEDEX = [
             ],
         },
         'exp': 59,
+        'id': 535,
     },
     {
         'name': 'Palpitoad',
@@ -9941,6 +10509,7 @@ const POKEDEX = [
             ],
         },
         'exp': 134,
+        'id': 536,
     },
     {
         'name': 'Seismitoad',
@@ -9959,6 +10528,7 @@ const POKEDEX = [
             ],
         },
         'exp': 229,
+        'id': 537,
     },
     {
         'name': 'Throh',
@@ -9976,6 +10546,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 538,
     },
     {
         'name': 'Sawk',
@@ -9993,6 +10564,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 539,
     },
     {
         'name': 'Sewaddle',
@@ -10011,6 +10583,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 540,
     },
     {
         'name': 'Swadloon',
@@ -10029,6 +10602,7 @@ const POKEDEX = [
             ],
         },
         'exp': 133,
+        'id': 541,
     },
     {
         'name': 'Leavanny',
@@ -10047,6 +10621,7 @@ const POKEDEX = [
             ],
         },
         'exp': 225,
+        'id': 542,
     },
     {
         'name': 'Venipede',
@@ -10065,6 +10640,7 @@ const POKEDEX = [
             ],
         },
         'exp': 52,
+        'id': 543,
     },
     {
         'name': 'Whirlipede',
@@ -10083,6 +10659,7 @@ const POKEDEX = [
             ],
         },
         'exp': 126,
+        'id': 544,
     },
     {
         'name': 'Scolipede',
@@ -10101,6 +10678,7 @@ const POKEDEX = [
             ],
         },
         'exp': 218,
+        'id': 545,
     },
     {
         'name': 'Cottonee',
@@ -10119,6 +10697,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 546,
     },
     {
         'name': 'Whimsicott',
@@ -10137,6 +10716,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 547,
     },
     {
         'name': 'Petilil',
@@ -10154,6 +10734,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 548,
     },
     {
         'name': 'Lilligant',
@@ -10171,6 +10752,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 549,
     },
     {
         'name': 'Basculin',
@@ -10188,6 +10770,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 550,
     },
     {
         'name': 'Sandile',
@@ -10206,6 +10789,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 551,
     },
     {
         'name': 'Krokorok',
@@ -10224,6 +10808,7 @@ const POKEDEX = [
             ],
         },
         'exp': 123,
+        'id': 552,
     },
     {
         'name': 'Krookodile',
@@ -10242,6 +10827,7 @@ const POKEDEX = [
             ],
         },
         'exp': 234,
+        'id': 553,
     },
     {
         'name': 'Darumaka',
@@ -10259,6 +10845,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 554,
     },
     {
         'name': 'Darmanitan',
@@ -10276,6 +10863,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 555,
     },
     {
         'name': 'Maractus',
@@ -10293,6 +10881,7 @@ const POKEDEX = [
             ],
         },
         'exp': 161,
+        'id': 556,
     },
     {
         'name': 'Dwebble',
@@ -10311,6 +10900,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': 557,
     },
     {
         'name': 'Crustle',
@@ -10329,6 +10919,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 558,
     },
     {
         'name': 'Scraggy',
@@ -10347,6 +10938,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 559,
     },
     {
         'name': 'Scrafty',
@@ -10365,6 +10957,7 @@ const POKEDEX = [
             ],
         },
         'exp': 171,
+        'id': 560,
     },
     {
         'name': 'Sigilyph',
@@ -10383,6 +10976,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 561,
     },
     {
         'name': 'Yamask',
@@ -10400,6 +10994,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 562,
     },
     {
         'name': 'Cofagrigus',
@@ -10417,6 +11012,7 @@ const POKEDEX = [
             ],
         },
         'exp': 169,
+        'id': 563,
     },
     {
         'name': 'Tirtouga',
@@ -10435,6 +11031,7 @@ const POKEDEX = [
             ],
         },
         'exp': 71,
+        'id': 564,
     },
     {
         'name': 'Carracosta',
@@ -10453,6 +11050,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 565,
     },
     {
         'name': 'Archen',
@@ -10471,6 +11069,7 @@ const POKEDEX = [
             ],
         },
         'exp': 71,
+        'id': 566,
     },
     {
         'name': 'Archeops',
@@ -10489,6 +11088,7 @@ const POKEDEX = [
             ],
         },
         'exp': 177,
+        'id': 567,
     },
     {
         'name': 'Trubbish',
@@ -10506,6 +11106,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 568,
     },
     {
         'name': 'Garbodor',
@@ -10523,6 +11124,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 569,
     },
     {
         'name': 'Zorua',
@@ -10540,6 +11142,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 570,
     },
     {
         'name': 'Zoroark',
@@ -10557,6 +11160,7 @@ const POKEDEX = [
             ],
         },
         'exp': 179,
+        'id': 571,
     },
     {
         'name': 'Minccino',
@@ -10574,6 +11178,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 572,
     },
     {
         'name': 'Cinccino',
@@ -10591,6 +11196,7 @@ const POKEDEX = [
             ],
         },
         'exp': 165,
+        'id': 573,
     },
     {
         'name': 'Gothita',
@@ -10608,6 +11214,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 574,
     },
     {
         'name': 'Gothorita',
@@ -10625,6 +11232,7 @@ const POKEDEX = [
             ],
         },
         'exp': 137,
+        'id': 575,
     },
     {
         'name': 'Gothitelle',
@@ -10642,6 +11250,7 @@ const POKEDEX = [
             ],
         },
         'exp': 221,
+        'id': 576,
     },
     {
         'name': 'Solosis',
@@ -10659,6 +11268,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 577,
     },
     {
         'name': 'Duosion',
@@ -10676,6 +11286,7 @@ const POKEDEX = [
             ],
         },
         'exp': 130,
+        'id': 578,
     },
     {
         'name': 'Reuniclus',
@@ -10693,6 +11304,7 @@ const POKEDEX = [
             ],
         },
         'exp': 221,
+        'id': 579,
     },
     {
         'name': 'Ducklett',
@@ -10711,6 +11323,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 580,
     },
     {
         'name': 'Swanna',
@@ -10729,6 +11342,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 581,
     },
     {
         'name': 'Vanillite',
@@ -10746,6 +11360,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 582,
     },
     {
         'name': 'Vanillish',
@@ -10763,6 +11378,7 @@ const POKEDEX = [
             ],
         },
         'exp': 138,
+        'id': 583,
     },
     {
         'name': 'Vanilluxe',
@@ -10780,6 +11396,7 @@ const POKEDEX = [
             ],
         },
         'exp': 241,
+        'id': 584,
     },
     {
         'name': 'Deerling',
@@ -10798,6 +11415,7 @@ const POKEDEX = [
             ],
         },
         'exp': 67,
+        'id': 585,
     },
     {
         'name': 'Sawsbuck',
@@ -10816,6 +11434,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 586,
     },
     {
         'name': 'Emolga',
@@ -10834,6 +11453,7 @@ const POKEDEX = [
             ],
         },
         'exp': 150,
+        'id': 587,
     },
     {
         'name': 'Karrablast',
@@ -10851,6 +11471,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 588,
     },
     {
         'name': 'Escavalier',
@@ -10869,6 +11490,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 589,
     },
     {
         'name': 'Foongus',
@@ -10887,6 +11509,7 @@ const POKEDEX = [
             ],
         },
         'exp': 59,
+        'id': 590,
     },
     {
         'name': 'Amoonguss',
@@ -10905,6 +11528,7 @@ const POKEDEX = [
             ],
         },
         'exp': 162,
+        'id': 591,
     },
     {
         'name': 'Frillish',
@@ -10923,6 +11547,7 @@ const POKEDEX = [
             ],
         },
         'exp': 67,
+        'id': 592,
     },
     {
         'name': 'Jellicent',
@@ -10941,6 +11566,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 593,
     },
     {
         'name': 'Alomomola',
@@ -10958,6 +11584,7 @@ const POKEDEX = [
             ],
         },
         'exp': 165,
+        'id': 594,
     },
     {
         'name': 'Joltik',
@@ -10976,6 +11603,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 595,
     },
     {
         'name': 'Galvantula',
@@ -10994,6 +11622,7 @@ const POKEDEX = [
             ],
         },
         'exp': 165,
+        'id': 596,
     },
     {
         'name': 'Ferroseed',
@@ -11012,6 +11641,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 597,
     },
     {
         'name': 'Ferrothorn',
@@ -11030,6 +11660,7 @@ const POKEDEX = [
             ],
         },
         'exp': 171,
+        'id': 598,
     },
     {
         'name': 'Klink',
@@ -11047,6 +11678,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 599,
     },
     {
         'name': 'Klang',
@@ -11064,6 +11696,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 600,
     },
     {
         'name': 'Klinklang',
@@ -11081,6 +11714,7 @@ const POKEDEX = [
             ],
         },
         'exp': 234,
+        'id': 601,
     },
     {
         'name': 'Tynamo',
@@ -11098,6 +11732,7 @@ const POKEDEX = [
             ],
         },
         'exp': 55,
+        'id': 602,
     },
     {
         'name': 'Eelektrik',
@@ -11115,6 +11750,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 603,
     },
     {
         'name': 'Eelektross',
@@ -11132,6 +11768,7 @@ const POKEDEX = [
             ],
         },
         'exp': 232,
+        'id': 604,
     },
     {
         'name': 'Elgyem',
@@ -11149,6 +11786,7 @@ const POKEDEX = [
             ],
         },
         'exp': 67,
+        'id': 605,
     },
     {
         'name': 'Beheeyem',
@@ -11166,6 +11804,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 606,
     },
     {
         'name': 'Litwick',
@@ -11184,6 +11823,7 @@ const POKEDEX = [
             ],
         },
         'exp': 55,
+        'id': 607,
     },
     {
         'name': 'Lampent',
@@ -11202,6 +11842,7 @@ const POKEDEX = [
             ],
         },
         'exp': 130,
+        'id': 608,
     },
     {
         'name': 'Chandelure',
@@ -11220,6 +11861,7 @@ const POKEDEX = [
             ],
         },
         'exp': 234,
+        'id': 609,
     },
     {
         'name': 'Axew',
@@ -11237,6 +11879,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 610,
     },
     {
         'name': 'Fraxure',
@@ -11254,6 +11897,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 611,
     },
     {
         'name': 'Haxorus',
@@ -11271,6 +11915,7 @@ const POKEDEX = [
             ],
         },
         'exp': 243,
+        'id': 612,
     },
     {
         'name': 'Cubchoo',
@@ -11288,6 +11933,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 613,
     },
     {
         'name': 'Beartic',
@@ -11305,6 +11951,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 614,
     },
     {
         'name': 'Cryogonal',
@@ -11322,6 +11969,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 615,
     },
     {
         'name': 'Shelmet',
@@ -11339,6 +11987,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 616,
     },
     {
         'name': 'Accelgor',
@@ -11356,6 +12005,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 617,
     },
     {
         'name': 'Stunfisk',
@@ -11374,6 +12024,7 @@ const POKEDEX = [
             ],
         },
         'exp': 165,
+        'id': 618,
     },
     {
         'name': 'Mienfoo',
@@ -11391,6 +12042,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 619,
     },
     {
         'name': 'Mienshao',
@@ -11408,6 +12060,7 @@ const POKEDEX = [
             ],
         },
         'exp': 179,
+        'id': 620,
     },
     {
         'name': 'Druddigon',
@@ -11425,6 +12078,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 621,
     },
     {
         'name': 'Golett',
@@ -11443,6 +12097,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 622,
     },
     {
         'name': 'Golurk',
@@ -11461,6 +12116,7 @@ const POKEDEX = [
             ],
         },
         'exp': 169,
+        'id': 623,
     },
     {
         'name': 'Pawniard',
@@ -11479,6 +12135,7 @@ const POKEDEX = [
             ],
         },
         'exp': 68,
+        'id': 624,
     },
     {
         'name': 'Bisharp',
@@ -11497,6 +12154,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 625,
     },
     {
         'name': 'Bouffalant',
@@ -11514,6 +12172,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 626,
     },
     {
         'name': 'Rufflet',
@@ -11532,6 +12191,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 627,
     },
     {
         'name': 'Braviary',
@@ -11550,6 +12210,7 @@ const POKEDEX = [
             ],
         },
         'exp': 179,
+        'id': 628,
     },
     {
         'name': 'Vullaby',
@@ -11568,6 +12229,7 @@ const POKEDEX = [
             ],
         },
         'exp': 74,
+        'id': 629,
     },
     {
         'name': 'Mandibuzz',
@@ -11586,6 +12248,7 @@ const POKEDEX = [
             ],
         },
         'exp': 179,
+        'id': 630,
     },
     {
         'name': 'Heatmor',
@@ -11603,6 +12266,7 @@ const POKEDEX = [
             ],
         },
         'exp': 169,
+        'id': 631,
     },
     {
         'name': 'Durant',
@@ -11621,6 +12285,7 @@ const POKEDEX = [
             ],
         },
         'exp': 169,
+        'id': 632,
     },
     {
         'name': 'Deino',
@@ -11639,6 +12304,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 633,
     },
     {
         'name': 'Zweilous',
@@ -11657,6 +12323,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 634,
     },
     {
         'name': 'Hydreigon',
@@ -11675,6 +12342,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 635,
     },
     {
         'name': 'Larvesta',
@@ -11693,6 +12361,7 @@ const POKEDEX = [
             ],
         },
         'exp': 72,
+        'id': 636,
     },
     {
         'name': 'Volcarona',
@@ -11711,6 +12380,7 @@ const POKEDEX = [
             ],
         },
         'exp': 248,
+        'id': 637,
     },
     {
         'name': 'Cobalion',
@@ -11729,6 +12399,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 638,
     },
     {
         'name': 'Terrakion',
@@ -11747,6 +12418,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 639,
     },
     {
         'name': 'Virizion',
@@ -11765,6 +12437,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 640,
     },
     {
         'name': 'Tornadus',
@@ -11782,6 +12455,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 641,
     },
     {
         'name': 'Thundurus',
@@ -11800,6 +12474,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 642,
     },
     {
         'name': 'Reshiram',
@@ -11818,6 +12493,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 643,
     },
     {
         'name': 'Zekrom',
@@ -11836,6 +12512,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 644,
     },
     {
         'name': 'Landorus',
@@ -11854,6 +12531,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 645,
     },
     {
         'name': 'Kyurem',
@@ -11872,6 +12550,7 @@ const POKEDEX = [
             ],
         },
         'exp': 297,
+        'id': 646,
     },
     {
         'name': 'Keldeo',
@@ -11890,6 +12569,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 647,
     },
     {
         'name': 'Meloetta',
@@ -11908,6 +12588,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 648,
     },
     {
         'name': 'Genesect',
@@ -11926,6 +12607,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 649,
     },
     {
         'name': 'Chespin',
@@ -11943,6 +12625,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 650,
     },
     {
         'name': 'Quilladin',
@@ -11960,6 +12643,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 651,
     },
     {
         'name': 'Chesnaught',
@@ -11978,6 +12662,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 652,
     },
     {
         'name': 'Fennekin',
@@ -11995,6 +12680,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 653,
     },
     {
         'name': 'Braixen',
@@ -12012,6 +12698,7 @@ const POKEDEX = [
             ],
         },
         'exp': 143,
+        'id': 654,
     },
     {
         'name': 'Delphox',
@@ -12030,6 +12717,7 @@ const POKEDEX = [
             ],
         },
         'exp': 240,
+        'id': 655,
     },
     {
         'name': 'Froakie',
@@ -12047,6 +12735,7 @@ const POKEDEX = [
             ],
         },
         'exp': 63,
+        'id': 656,
     },
     {
         'name': 'Frogadier',
@@ -12064,6 +12753,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 657,
     },
     {
         'name': 'Greninja',
@@ -12082,6 +12772,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 658,
     },
     {
         'name': 'Bunnelby',
@@ -12099,6 +12790,7 @@ const POKEDEX = [
             ],
         },
         'exp': 47,
+        'id': 659,
     },
     {
         'name': 'Diggersby',
@@ -12117,6 +12809,7 @@ const POKEDEX = [
             ],
         },
         'exp': 148,
+        'id': 660,
     },
     {
         'name': 'Fletchling',
@@ -12135,6 +12828,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 661,
     },
     {
         'name': 'Fletchinder',
@@ -12153,6 +12847,7 @@ const POKEDEX = [
             ],
         },
         'exp': 134,
+        'id': 662,
     },
     {
         'name': 'Talonflame',
@@ -12171,6 +12866,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 663,
     },
     {
         'name': 'Scatterbug',
@@ -12188,6 +12884,7 @@ const POKEDEX = [
             ],
         },
         'exp': 40,
+        'id': 664,
     },
     {
         'name': 'Spewpa',
@@ -12205,6 +12902,7 @@ const POKEDEX = [
             ],
         },
         'exp': 75,
+        'id': 665,
     },
     {
         'name': 'Vivillon',
@@ -12223,6 +12921,7 @@ const POKEDEX = [
             ],
         },
         'exp': 185,
+        'id': 666,
     },
     {
         'name': 'Litleo',
@@ -12241,6 +12940,7 @@ const POKEDEX = [
             ],
         },
         'exp': 74,
+        'id': 667,
     },
     {
         'name': 'Pyroar',
@@ -12259,6 +12959,7 @@ const POKEDEX = [
             ],
         },
         'exp': 177,
+        'id': 668,
     },
     {
         'name': 'Flabebe',
@@ -12276,6 +12977,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 669,
     },
     {
         'name': 'Floette',
@@ -12293,6 +12995,7 @@ const POKEDEX = [
             ],
         },
         'exp': 130,
+        'id': 670,
     },
     {
         'name': 'Florges',
@@ -12310,6 +13013,7 @@ const POKEDEX = [
             ],
         },
         'exp': 248,
+        'id': 671,
     },
     {
         'name': 'Skiddo',
@@ -12327,6 +13031,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 672,
     },
     {
         'name': 'Gogoat',
@@ -12344,6 +13049,7 @@ const POKEDEX = [
             ],
         },
         'exp': 186,
+        'id': 673,
     },
     {
         'name': 'Pancham',
@@ -12361,6 +13067,7 @@ const POKEDEX = [
             ],
         },
         'exp': 70,
+        'id': 674,
     },
     {
         'name': 'Pangoro',
@@ -12379,6 +13086,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 675,
     },
     {
         'name': 'Furfrou',
@@ -12396,6 +13104,7 @@ const POKEDEX = [
             ],
         },
         'exp': 165,
+        'id': 676,
     },
     {
         'name': 'Espurr',
@@ -12413,6 +13122,7 @@ const POKEDEX = [
             ],
         },
         'exp': 71,
+        'id': 677,
     },
     {
         'name': 'Meowstic',
@@ -12430,6 +13140,7 @@ const POKEDEX = [
             ],
         },
         'exp': 163,
+        'id': 678,
     },
     {
         'name': 'Honedge',
@@ -12448,6 +13159,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
+        'id': 679,
     },
     {
         'name': 'Doublade',
@@ -12466,6 +13178,7 @@ const POKEDEX = [
             ],
         },
         'exp': 157,
+        'id': 680,
     },
     {
         'name': 'Aegislash',
@@ -12484,6 +13197,7 @@ const POKEDEX = [
             ],
         },
         'exp': 234,
+        'id': 681,
     },
     {
         'name': 'Spritzee',
@@ -12501,6 +13215,7 @@ const POKEDEX = [
             ],
         },
         'exp': 68,
+        'id': 682,
     },
     {
         'name': 'Aromatisse',
@@ -12518,6 +13233,7 @@ const POKEDEX = [
             ],
         },
         'exp': 162,
+        'id': 683,
     },
     {
         'name': 'Swirlix',
@@ -12535,6 +13251,7 @@ const POKEDEX = [
             ],
         },
         'exp': 68,
+        'id': 684,
     },
     {
         'name': 'Slurpuff',
@@ -12552,6 +13269,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 685,
     },
     {
         'name': 'Inkay',
@@ -12570,6 +13288,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 686,
     },
     {
         'name': 'Malamar',
@@ -12588,6 +13307,7 @@ const POKEDEX = [
             ],
         },
         'exp': 169,
+        'id': 687,
     },
     {
         'name': 'Binacle',
@@ -12606,6 +13326,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 688,
     },
     {
         'name': 'Barbaracle',
@@ -12624,6 +13345,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 689,
     },
     {
         'name': 'Skrelp',
@@ -12642,6 +13364,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 690,
     },
     {
         'name': 'Dragalge',
@@ -12660,6 +13383,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 691,
     },
     {
         'name': 'Clauncher',
@@ -12677,6 +13401,7 @@ const POKEDEX = [
             ],
         },
         'exp': 66,
+        'id': 692,
     },
     {
         'name': 'Clawitzer',
@@ -12694,6 +13419,7 @@ const POKEDEX = [
             ],
         },
         'exp': 100,
+        'id': 693,
     },
     {
         'name': 'Helioptile',
@@ -12712,6 +13438,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
+        'id': 694,
     },
     {
         'name': 'Heliolisk',
@@ -12730,6 +13457,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 695,
     },
     {
         'name': 'Tyrunt',
@@ -12748,6 +13476,7 @@ const POKEDEX = [
             ],
         },
         'exp': 72,
+        'id': 696,
     },
     {
         'name': 'Tyrantrum',
@@ -12766,6 +13495,7 @@ const POKEDEX = [
             ],
         },
         'exp': 182,
+        'id': 697,
     },
     {
         'name': 'Amaura',
@@ -12784,6 +13514,7 @@ const POKEDEX = [
             ],
         },
         'exp': 72,
+        'id': 698,
     },
     {
         'name': 'Aurorus',
@@ -12802,6 +13533,7 @@ const POKEDEX = [
             ],
         },
         'exp': 104,
+        'id': 699,
     },
     {
         'name': 'Sylveon',
@@ -12819,6 +13551,7 @@ const POKEDEX = [
             ],
         },
         'exp': 184,
+        'id': 700,
     },
     {
         'name': 'Hawlucha',
@@ -12837,6 +13570,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 701,
     },
     {
         'name': 'Dedenne',
@@ -12855,6 +13589,7 @@ const POKEDEX = [
             ],
         },
         'exp': 151,
+        'id': 702,
     },
     {
         'name': 'Carbink',
@@ -12873,6 +13608,7 @@ const POKEDEX = [
             ],
         },
         'exp': 100,
+        'id': 703,
     },
     {
         'name': 'Goomy',
@@ -12890,6 +13626,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 704,
     },
     {
         'name': 'Sliggoo',
@@ -12907,6 +13644,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
+        'id': 705,
     },
     {
         'name': 'Goodra',
@@ -12924,6 +13662,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 706,
     },
     {
         'name': 'Klefki',
@@ -12942,6 +13681,7 @@ const POKEDEX = [
             ],
         },
         'exp': 165,
+        'id': 707,
     },
     {
         'name': 'Phantump',
@@ -12960,6 +13700,7 @@ const POKEDEX = [
             ],
         },
         'exp': 62,
+        'id': 708,
     },
     {
         'name': 'Trevenant',
@@ -12978,6 +13719,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 709,
     },
     {
         'name': 'Pumpkaboo',
@@ -12996,6 +13738,7 @@ const POKEDEX = [
             ],
         },
         'exp': 67,
+        'id': 710,
     },
     {
         'name': 'Gourgeist',
@@ -13014,6 +13757,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 711,
     },
     {
         'name': 'Bergmite',
@@ -13031,6 +13775,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 712,
     },
     {
         'name': 'Avalugg',
@@ -13048,6 +13793,7 @@ const POKEDEX = [
             ],
         },
         'exp': 180,
+        'id': 713,
     },
     {
         'name': 'Noibat',
@@ -13066,6 +13812,7 @@ const POKEDEX = [
             ],
         },
         'exp': 49,
+        'id': 714,
     },
     {
         'name': 'Noivern',
@@ -13084,6 +13831,7 @@ const POKEDEX = [
             ],
         },
         'exp': 187,
+        'id': 715,
     },
     {
         'name': 'Xerneas',
@@ -13101,6 +13849,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 716,
     },
     {
         'name': 'Yveltal',
@@ -13119,6 +13868,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 717,
     },
     {
         'name': 'Zygarde',
@@ -13137,6 +13887,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 718,
     },
     {
         'name': 'Diancie',
@@ -13155,6 +13906,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 719,
     },
     {
         'name': 'Hoopa',
@@ -13173,6 +13925,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 720,
     },
     {
         'name': 'Volcanion',
@@ -13191,6 +13944,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 721,
     },
     {
         'name': 'Rowlet',
@@ -13209,6 +13963,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 722,
     },
     {
         'name': 'Dartrix',
@@ -13227,6 +13982,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 723,
     },
     {
         'name': 'Decidueye',
@@ -13245,6 +14001,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 724,
     },
     {
         'name': 'Litten',
@@ -13262,6 +14019,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 725,
     },
     {
         'name': 'Torracat',
@@ -13279,6 +14037,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 726,
     },
     {
         'name': 'Incineroar',
@@ -13297,6 +14056,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 727,
     },
     {
         'name': 'Popplio',
@@ -13314,6 +14074,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 728,
     },
     {
         'name': 'Brionne',
@@ -13331,6 +14092,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 729,
     },
     {
         'name': 'Primarina',
@@ -13349,6 +14111,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 730,
     },
     {
         'name': 'Pikipek',
@@ -13367,6 +14130,7 @@ const POKEDEX = [
             ],
         },
         'exp': 53,
+        'id': 731,
     },
     {
         'name': 'Trumbeak',
@@ -13385,6 +14149,7 @@ const POKEDEX = [
             ],
         },
         'exp': 124,
+        'id': 732,
     },
     {
         'name': 'Toucannon',
@@ -13403,6 +14168,7 @@ const POKEDEX = [
             ],
         },
         'exp': 218,
+        'id': 733,
     },
     {
         'name': 'Yungoos',
@@ -13420,6 +14186,7 @@ const POKEDEX = [
             ],
         },
         'exp': 51,
+        'id': 734,
     },
     {
         'name': 'Gumshoos',
@@ -13437,6 +14204,7 @@ const POKEDEX = [
             ],
         },
         'exp': 146,
+        'id': 735,
     },
     {
         'name': 'Grubbin',
@@ -13454,6 +14222,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 736,
     },
     {
         'name': 'Charjabug',
@@ -13472,6 +14241,7 @@ const POKEDEX = [
             ],
         },
         'exp': 140,
+        'id': 737,
     },
     {
         'name': 'Vikavolt',
@@ -13490,6 +14260,7 @@ const POKEDEX = [
             ],
         },
         'exp': 225,
+        'id': 738,
     },
     {
         'name': 'Crabrawler',
@@ -13507,6 +14278,7 @@ const POKEDEX = [
             ],
         },
         'exp': 68,
+        'id': 739,
     },
     {
         'name': 'Crabominable',
@@ -13525,6 +14297,7 @@ const POKEDEX = [
             ],
         },
         'exp': 167,
+        'id': 740,
     },
     {
         'name': 'Oricorio',
@@ -13543,6 +14316,7 @@ const POKEDEX = [
             ],
         },
         'exp': 167,
+        'id': 741,
     },
     {
         'name': 'Cutiefly',
@@ -13561,6 +14335,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 742,
     },
     {
         'name': 'Ribombee',
@@ -13579,6 +14354,7 @@ const POKEDEX = [
             ],
         },
         'exp': 162,
+        'id': 743,
     },
     {
         'name': 'Rockruff',
@@ -13596,6 +14372,7 @@ const POKEDEX = [
             ],
         },
         'exp': 56,
+        'id': 744,
     },
     {
         'name': 'Lycanroc',
@@ -13613,6 +14390,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 745,
     },
     {
         'name': 'Wishiwashi',
@@ -13630,6 +14408,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 746,
     },
     {
         'name': 'Mareanie',
@@ -13648,6 +14427,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 747,
     },
     {
         'name': 'Toxapex',
@@ -13666,6 +14446,7 @@ const POKEDEX = [
             ],
         },
         'exp': 173,
+        'id': 748,
     },
     {
         'name': 'Mudbray',
@@ -13683,6 +14464,7 @@ const POKEDEX = [
             ],
         },
         'exp': 77,
+        'id': 749,
     },
     {
         'name': 'Mudsdale',
@@ -13700,6 +14482,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 750,
     },
     {
         'name': 'Dewpider',
@@ -13718,6 +14501,7 @@ const POKEDEX = [
             ],
         },
         'exp': 54,
+        'id': 751,
     },
     {
         'name': 'Araquanid',
@@ -13736,6 +14520,7 @@ const POKEDEX = [
             ],
         },
         'exp': 159,
+        'id': 752,
     },
     {
         'name': 'Fomantis',
@@ -13753,6 +14538,7 @@ const POKEDEX = [
             ],
         },
         'exp': 50,
+        'id': 753,
     },
     {
         'name': 'Lurantis',
@@ -13770,6 +14556,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 754,
     },
     {
         'name': 'Morelull',
@@ -13788,6 +14575,7 @@ const POKEDEX = [
             ],
         },
         'exp': 57,
+        'id': 755,
     },
     {
         'name': 'Shiinotic',
@@ -13806,6 +14594,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
+        'id': 756,
     },
     {
         'name': 'Salandit',
@@ -13824,6 +14613,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 757,
     },
     {
         'name': 'Salazzle',
@@ -13842,6 +14632,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 758,
     },
     {
         'name': 'Stufful',
@@ -13860,6 +14651,7 @@ const POKEDEX = [
             ],
         },
         'exp': 68,
+        'id': 759,
     },
     {
         'name': 'Bewear',
@@ -13878,6 +14670,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
+        'id': 760,
     },
     {
         'name': 'Bounsweet',
@@ -13895,6 +14688,7 @@ const POKEDEX = [
             ],
         },
         'exp': 42,
+        'id': 761,
     },
     {
         'name': 'Steenee',
@@ -13912,6 +14706,7 @@ const POKEDEX = [
             ],
         },
         'exp': 102,
+        'id': 762,
     },
     {
         'name': 'Tsareena',
@@ -13929,6 +14724,7 @@ const POKEDEX = [
             ],
         },
         'exp': 230,
+        'id': 763,
     },
     {
         'name': 'Comfey',
@@ -13946,6 +14742,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 764,
     },
     {
         'name': 'Oranguru',
@@ -13964,6 +14761,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 765,
     },
     {
         'name': 'Passimian',
@@ -13981,6 +14779,7 @@ const POKEDEX = [
             ],
         },
         'exp': 172,
+        'id': 766,
     },
     {
         'name': 'Wimpod',
@@ -13999,6 +14798,7 @@ const POKEDEX = [
             ],
         },
         'exp': 46,
+        'id': 767,
     },
     {
         'name': 'Golisopod',
@@ -14017,6 +14817,7 @@ const POKEDEX = [
             ],
         },
         'exp': 186,
+        'id': 768,
     },
     {
         'name': 'Sandygast',
@@ -14035,6 +14836,7 @@ const POKEDEX = [
             ],
         },
         'exp': 64,
+        'id': 769,
     },
     {
         'name': 'Palossand',
@@ -14053,6 +14855,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 770,
     },
     {
         'name': 'Pyukumuku',
@@ -14070,6 +14873,7 @@ const POKEDEX = [
             ],
         },
         'exp': 144,
+        'id': 771,
     },
     {
         'name': 'Type: Null',
@@ -14087,6 +14891,7 @@ const POKEDEX = [
             ],
         },
         'exp': 107,
+        'id': 772,
     },
     {
         'name': 'Silvally',
@@ -14104,6 +14909,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 773,
     },
     {
         'name': 'Minior',
@@ -14122,6 +14928,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 774,
     },
     {
         'name': 'Komala',
@@ -14139,6 +14946,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 775,
     },
     {
         'name': 'Turtonator',
@@ -14157,6 +14965,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 776,
     },
     {
         'name': 'Togedemaru',
@@ -14175,6 +14984,7 @@ const POKEDEX = [
             ],
         },
         'exp': 152,
+        'id': 777,
     },
     {
         'name': 'Mimikyu',
@@ -14193,6 +15003,7 @@ const POKEDEX = [
             ],
         },
         'exp': 167,
+        'id': 778,
     },
     {
         'name': 'Bruxish',
@@ -14211,6 +15022,7 @@ const POKEDEX = [
             ],
         },
         'exp': 166,
+        'id': 779,
     },
     {
         'name': 'Drampa',
@@ -14229,6 +15041,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 780,
     },
     {
         'name': 'Dhelmise',
@@ -14247,6 +15060,7 @@ const POKEDEX = [
             ],
         },
         'exp': 181,
+        'id': 781,
     },
     {
         'name': 'Jangmo-o',
@@ -14264,6 +15078,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
+        'id': 782,
     },
     {
         'name': 'Hakamo-o',
@@ -14282,6 +15097,7 @@ const POKEDEX = [
             ],
         },
         'exp': 147,
+        'id': 783,
     },
     {
         'name': 'Kommo-o',
@@ -14300,6 +15116,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 784,
     },
     {
         'name': 'Tapu Koko',
@@ -14318,6 +15135,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 785,
     },
     {
         'name': 'Tapu Lele',
@@ -14336,6 +15154,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 786,
     },
     {
         'name': 'Tapu Bulu',
@@ -14354,6 +15173,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 787,
     },
     {
         'name': 'Tapu Fini',
@@ -14372,6 +15192,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 788,
     },
     {
         'name': 'Cosmog',
@@ -14389,6 +15210,7 @@ const POKEDEX = [
             ],
         },
         'exp': 40,
+        'id': 789,
     },
     {
         'name': 'Cosmoem',
@@ -14406,6 +15228,7 @@ const POKEDEX = [
             ],
         },
         'exp': 80,
+        'id': 790,
     },
     {
         'name': 'Solgaleo',
@@ -14424,6 +15247,7 @@ const POKEDEX = [
             ],
         },
         'exp': 136,
+        'id': 791,
     },
     {
         'name': 'Lunala',
@@ -14442,6 +15266,7 @@ const POKEDEX = [
             ],
         },
         'exp': 136,
+        'id': 792,
     },
     {
         'name': 'Nihilego',
@@ -14460,6 +15285,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 793,
     },
     {
         'name': 'Buzzwole',
@@ -14478,6 +15304,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 794,
     },
     {
         'name': 'Pheromosa',
@@ -14496,6 +15323,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 795,
     },
     {
         'name': 'Xurkitree',
@@ -14513,6 +15341,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 796,
     },
     {
         'name': 'Celesteela',
@@ -14531,6 +15360,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 797,
     },
     {
         'name': 'Kartana',
@@ -14549,6 +15379,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 798,
     },
     {
         'name': 'Guzzlord',
@@ -14567,6 +15398,7 @@ const POKEDEX = [
             ],
         },
         'exp': 114,
+        'id': 799,
     },
     {
         'name': 'Necrozma',
@@ -14584,6 +15416,7 @@ const POKEDEX = [
             ],
         },
         'exp': 120,
+        'id': 800,
     },
     {
         'name': 'Magearna',
@@ -14602,6 +15435,7 @@ const POKEDEX = [
             ],
         },
         'exp': 120,
+        'id': 801,
     },
     {
         'name': 'Marshadow',
@@ -14620,6 +15454,7 @@ const POKEDEX = [
             ],
         },
         'exp': 120,
+        'id': 802,
     },
     {
         'name': 'M-Ampharos',
@@ -14638,6 +15473,7 @@ const POKEDEX = [
             ],
         },
         'exp': 275,
+        'id': '181-M',
     },
     {
         'name': 'M-Steelix',
@@ -14656,6 +15492,7 @@ const POKEDEX = [
             ],
         },
         'exp': 214,
+        'id': '208-M',
     },
     {
         'name': 'M-Scizor',
@@ -14674,6 +15511,7 @@ const POKEDEX = [
             ],
         },
         'exp': 210,
+        'id': '212-M',
     },
     {
         'name': 'M-Heracross',
@@ -14692,6 +15530,7 @@ const POKEDEX = [
             ],
         },
         'exp': 210,
+        'id': '214-M',
     },
     {
         'name': 'M-Houndoom',
@@ -14710,6 +15549,7 @@ const POKEDEX = [
             ],
         },
         'exp': 210,
+        'id': '229-M',
     },
     {
         'name': 'M-Tyranitar',
@@ -14728,6 +15568,7 @@ const POKEDEX = [
             ],
         },
         'exp': 315,
+        'id': '248-M',
     },
     {
         'name': 'M-Sceptile',
@@ -14746,6 +15587,7 @@ const POKEDEX = [
             ],
         },
         'exp': 284,
+        'id': '254-M',
     },
     {
         'name': 'M-Blaziken',
@@ -14764,6 +15606,7 @@ const POKEDEX = [
             ],
         },
         'exp': 284,
+        'id': '257-M',
     },
     {
         'name': 'M-Swampert',
@@ -14782,6 +15625,7 @@ const POKEDEX = [
             ],
         },
         'exp': 286,
+        'id': '260-M',
     },
     {
         'name': 'M-Gardevoir',
@@ -14800,6 +15644,7 @@ const POKEDEX = [
             ],
         },
         'exp': 278,
+        'id': '282-M',
     },
     {
         'name': 'M-Sableye',
@@ -14818,6 +15663,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': '302-M',
     },
     {
         'name': 'M-Mawile',
@@ -14836,6 +15682,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': '303-M',
     },
     {
         'name': 'M-Aggron',
@@ -14853,6 +15700,7 @@ const POKEDEX = [
             ],
         },
         'exp': 284,
+        'id': '306-M',
     },
     {
         'name': 'M-Medicham',
@@ -14871,6 +15719,7 @@ const POKEDEX = [
             ],
         },
         'exp': 179,
+        'id': '308-M',
     },
     {
         'name': 'M-Manectric',
@@ -14888,6 +15737,7 @@ const POKEDEX = [
             ],
         },
         'exp': 201,
+        'id': '310-M',
     },
     {
         'name': 'M-Sharpedo',
@@ -14906,6 +15756,7 @@ const POKEDEX = [
             ],
         },
         'exp': 196,
+        'id': '319-M',
     },
     {
         'name': 'M-Camerupt',
@@ -14924,6 +15775,7 @@ const POKEDEX = [
             ],
         },
         'exp': 196,
+        'id': '323-M',
     },
     {
         'name': 'M-Altaria',
@@ -14942,6 +15794,7 @@ const POKEDEX = [
             ],
         },
         'exp': 207,
+        'id': '334-M',
     },
     {
         'name': 'M-Banette',
@@ -14959,6 +15812,7 @@ const POKEDEX = [
             ],
         },
         'exp': 194,
+        'id': '354-M',
     },
     {
         'name': 'M-Absol',
@@ -14976,6 +15830,7 @@ const POKEDEX = [
             ],
         },
         'exp': 198,
+        'id': '359-M',
     },
     {
         'name': 'M-Glalie',
@@ -14993,6 +15848,7 @@ const POKEDEX = [
             ],
         },
         'exp': 203,
+        'id': '362-M',
     },
     {
         'name': 'M-Salamence',
@@ -15011,6 +15867,7 @@ const POKEDEX = [
             ],
         },
         'exp': 315,
+        'id': '373-M',
     },
     {
         'name': 'M-Metagross',
@@ -15029,6 +15886,7 @@ const POKEDEX = [
             ],
         },
         'exp': 315,
+        'id': '376-M',
     },
     {
         'name': 'M-Latias',
@@ -15047,6 +15905,7 @@ const POKEDEX = [
             ],
         },
         'exp': 315,
+        'id': '380-M',
     },
     {
         'name': 'M-Latios',
@@ -15065,6 +15924,7 @@ const POKEDEX = [
             ],
         },
         'exp': 315,
+        'id': '381-M',
     },
     {
         'name': 'P-Kyogre',
@@ -15082,6 +15942,7 @@ const POKEDEX = [
             ],
         },
         'exp': 302,
+        'id': 803,
     },
     {
         'name': 'P-Groudon',
@@ -15100,6 +15961,7 @@ const POKEDEX = [
             ],
         },
         'exp': 302,
+        'id': 804,
     },
     {
         'name': 'M-Rayquaza',
@@ -15118,6 +15980,7 @@ const POKEDEX = [
             ],
         },
         'exp': 351,
+        'id': '384-M',
     },
     {
         'name': 'Deoxys-A',
@@ -15135,6 +15998,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 805,
     },
     {
         'name': 'Deoxys-D',
@@ -15152,6 +16016,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 806,
     },
     {
         'name': 'Deoxys-S',
@@ -15169,6 +16034,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 807,
     },
     {
         'name': 'M-Garchomp',
@@ -15187,6 +16053,7 @@ const POKEDEX = [
             ],
         },
         'exp': 315,
+        'id': '445-M',
     },
     {
         'name': 'M-Lopunny',
@@ -15205,6 +16072,7 @@ const POKEDEX = [
             ],
         },
         'exp': 203,
+        'id': '428-M',
     },
     {
         'name': 'M-Lucario',
@@ -15223,6 +16091,7 @@ const POKEDEX = [
             ],
         },
         'exp': 219,
+        'id': '448-M',
     },
     {
         'name': 'M-Abomasnow',
@@ -15241,6 +16110,7 @@ const POKEDEX = [
             ],
         },
         'exp': 208,
+        'id': '460-M',
     },
     {
         'name': 'M-Gallade',
@@ -15259,6 +16129,7 @@ const POKEDEX = [
             ],
         },
         'exp': 278,
+        'id': '475-M',
     },
     {
         'name': 'H-Rotom',
@@ -15277,6 +16148,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 808,
     },
     {
         'name': 'W-Rotom',
@@ -15295,6 +16167,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 809,
     },
     {
         'name': 'F-Rotom',
@@ -15313,6 +16186,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 810,
     },
     {
         'name': 'Fan-Rotom',
@@ -15331,6 +16205,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': 811,
     },
     {
         'name': 'M-Rotom',
@@ -15349,6 +16224,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
+        'id': '479-M',
     },
     {
         'name': 'Giratina-O',
@@ -15367,6 +16243,7 @@ const POKEDEX = [
             ],
         },
         'exp': 306,
+        'id': 812,
     },
     {
         'name': 'Shaymin-S',
@@ -15385,6 +16262,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 813,
     },
     {
         'name': 'M-Audino',
@@ -15403,6 +16281,7 @@ const POKEDEX = [
             ],
         },
         'exp': 425,
+        'id': '531-M',
     },
     {
         'name': 'Darmanitan-Z',
@@ -15421,6 +16300,7 @@ const POKEDEX = [
             ],
         },
         'exp': 168,
+        'id': 814,
     },
     {
         'name': 'Tornadus-T',
@@ -15438,6 +16318,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 815,
     },
     {
         'name': 'Thundurus-T',
@@ -15456,6 +16337,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 816,
     },
     {
         'name': 'Landorus-T',
@@ -15474,6 +16356,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 817,
     },
     {
         'name': 'B-Kyurem',
@@ -15492,6 +16375,7 @@ const POKEDEX = [
             ],
         },
         'exp': 297,
+        'id': 818,
     },
     {
         'name': 'W-Kyurem',
@@ -15510,6 +16394,7 @@ const POKEDEX = [
             ],
         },
         'exp': 297,
+        'id': 819,
     },
     {
         'name': 'Keldeo-R',
@@ -15528,6 +16413,7 @@ const POKEDEX = [
             ],
         },
         'exp': 261,
+        'id': 820,
     },
     {
         'name': 'Meloetta-P',
@@ -15546,6 +16432,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 821,
     },
     {
         'name': 'Ash-Greninja',
@@ -15564,6 +16451,7 @@ const POKEDEX = [
             ],
         },
         'exp': 239,
+        'id': 822,
     },
     {
         'name': 'Aegislash-B',
@@ -15582,6 +16470,7 @@ const POKEDEX = [
             ],
         },
         'exp': 234,
+        'id': 823,
     },
     {
         'name': 'Zygarde-10',
@@ -15600,6 +16489,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 824,
     },
     {
         'name': 'Zygarde-C',
@@ -15618,6 +16508,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 825,
     },
     {
         'name': 'M-Diancie',
@@ -15636,6 +16527,7 @@ const POKEDEX = [
             ],
         },
         'exp': 315,
+        'id': '719-M',
     },
     {
         'name': 'Hoopa-U',
@@ -15654,6 +16546,7 @@ const POKEDEX = [
             ],
         },
         'exp': 270,
+        'id': 826,
     },
     {
         'name': 'Lycanroc-M',
@@ -15671,6 +16564,7 @@ const POKEDEX = [
             ],
         },
         'exp': 170,
+        'id': 827,
     },
     {
         'name': 'Wishiwashi-S',
@@ -15688,6 +16582,7 @@ const POKEDEX = [
             ],
         },
         'exp': 61,
+        'id': 828,
     },
 ];
 
