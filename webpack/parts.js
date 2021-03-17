@@ -10,6 +10,17 @@ const { webpack, DefinePlugin } = require('webpack');
 const WebpackBar = require('webpackbar');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
+const postcssLoader = (options) => ({
+    loader: 'postcss-loader',
+});
+
+const cssLoader = () => ({
+    loader: 'css-loader',
+    options: {
+        url: false,
+    },
+});
+
 exports.loadSCSS = () => ({
     module: {
         rules: [
@@ -17,12 +28,8 @@ exports.loadSCSS = () => ({
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            url: false,
-                        },
-                    },
+                    cssLoader(),
+                    postcssLoader(),
                     'sass-loader',
                 ],
             },

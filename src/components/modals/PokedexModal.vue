@@ -29,7 +29,7 @@
             <div class="card">
               <header class="card-header">
                 <p class="card-header-title py-1">
-                  # {{ entry.id }}
+                  # {{ pokedexId(entry) }}
                 </p>
                 <div class="card-header-icon">
                   <span class="icon is-svg">
@@ -92,17 +92,17 @@ export default {
     methods: {
         type1(entry) {
             if (entry.flag === 0) { return ''; }
-            return POKEDEX[entry.id - 1].stats[0].types[0].toLowerCase();
+            return POKEDEX[entry.id - 1].stats.types[0].toLowerCase();
         },
 
         type2(entry) {
             if (entry.flag === 0) { return ''; }
-            const types = POKEDEX[entry.id - 1].stats[0].types;
+            const types = POKEDEX[entry.id - 1].stats.types;
             return types[types.length - 1].toLowerCase();
         },
 
         isDualType(entry) {
-            return POKEDEX[entry.id - 1].stats[0].types.length === 2;
+            return POKEDEX[entry.id - 1].stats.types.length === 2;
         },
 
         caughtIndicationClass(entry) {
@@ -117,6 +117,10 @@ export default {
         pokeImage(entry) {
             const shinyOrNormal = entry.flag === 8 ? 'shiny' : 'normal';
             return `assets/sprites/${shinyOrNormal}/front/${entry.name}.png`;
+        },
+
+        pokedexId(entry) {
+            return POKEDEX[entry.id - 1].id;
         },
     },
 };

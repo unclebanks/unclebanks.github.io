@@ -28,7 +28,7 @@ export default (player, enemy, combatLoop, Poke) => {
         },
         helpers: {
             getPokeImg: function (id) {
-                return POKEDEX[id - 1].images.normal.front;
+                return `assets/sprites/normal/front/${POKEDEX[id - 1].name}.png`;
             },
             selectFirstPoke: function (id) {
                 const starterPoke = new Poke(pokeById(id), 5);

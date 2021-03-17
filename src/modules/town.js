@@ -1,5 +1,4 @@
-import { $, pokeByName } from './utilities';
-import { POKEDEXFLAGS } from './data';
+import { $ } from './utilities';
 
 export default (player, Poke) => {
     let dom;

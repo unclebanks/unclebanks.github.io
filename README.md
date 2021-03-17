@@ -7,7 +7,14 @@ Run `npm ci` to install the project dependencies
 
 Run `npm start` to compile the sources in watch mode - any code changes will trigger a recompile and update the browser.
 
-The local server will run on port 3000 by default, but should be configurable be setting the environment variable `NNPG_PORT` on your system (You won't need to do this unless you have something else running on port 3000)
+The local server will run on `localhost:3000` by default, but should be configurable by passing a `host` or `port` value to the npm command, eg
+```
+npm start -- --host "0.0.0.0"
+npm start -- --port 12345
+npm start -- --host "::" --port 7777
+```
+
+You should be able to access the local server from other devices on your network (eg, a mobile connected to the same wifi) by hosting on "0.0.0.0"
 
 
 ## Releasing

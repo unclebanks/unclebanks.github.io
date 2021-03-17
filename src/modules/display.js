@@ -1,7 +1,6 @@
 import { $, flash } from './utilities';
 import ROUTES from './routes';
-import POKEDEX from './db';
-import { POKEDEXFLAGS, COLORS } from './data';
+import { COLORS } from './data';
 
 export const renderView = (dom, enemy, player, purge = true) => {
     dom.renderPokeOnContainer('enemy', enemy.activePoke());

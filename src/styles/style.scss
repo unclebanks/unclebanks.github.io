@@ -252,8 +252,6 @@ progress[role]     /* polyfill */
 {
     /* Turns off styling - not usually needed, but good to know. */
     appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     /* gets rid of default border in Firefox and Opera. */
     border: none;
     /* Needs to be in here for Safari polyfill so background images work as expected. */
