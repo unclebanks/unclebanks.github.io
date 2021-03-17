@@ -9,8 +9,6 @@ export default (lastSave, appModel) => {
     let Poke;
 
     const Player = {
-        pokemons: [],
-        storage: [],
         pokedexHighestID: 0,
         activePokeID: 0,
         lastHeal: Date.now(),
@@ -25,6 +23,7 @@ export default (lastSave, appModel) => {
             shinyDex: 0,
             razzBerry: 0,
             timeMachine: 0,
+            megaBracelet: 0,
             kantoOldRod: 0,
             kantoGoodRod: 0,
             kantoSuperRod: 0,
@@ -34,7 +33,7 @@ export default (lastSave, appModel) => {
             hoennOldRod: 0,
             hoennGoodRod: 0,
             hoennSuperRod: 0,
-            sinnoholdRod: 0,
+            sinnohOldRod: 0,
             sinnohGoodRod: 0,
             sinnohSuperRod: 0,
             unovaOldRod: 0,
@@ -49,6 +48,56 @@ export default (lastSave, appModel) => {
             galarOldRod: 0,
             galarGoodRod: 0,
             galarSuperRod: 0,
+            saveKill: 0,
+        },
+        megaStones: {
+            abomasite: 0,
+            absolite: 0,
+            aerodactylite: 0,
+            aggronite: 0,
+            alakazite: 0,
+            altarianite: 0,
+            ampharosite: 0,
+            audinite: 0,
+            banettite: 0,
+            beedrillite: 0,
+            blastoisinite: 0,
+            blazikenite: 0,
+            cameruptite: 0,
+            charizarditeX: 0,
+            charizarditeY: 0,
+            diancite: 0,
+            galladite: 0,
+            garchompite: 0,
+            gardevoirite: 0,
+            gengarite: 0,
+            glalitite: 0,
+            gyaradosite: 0,
+            heracronite: 0,
+            houndoominite: 0,
+            kangaskhanite: 0,
+            latiasite: 0,
+            latiosite: 0,
+            lopunnite: 0,
+            lucarionite: 0,
+            manectite: 0,
+            mawilite: 0,
+            medichamite: 0,
+            metagrossite: 0,
+            mewtwoniteX: 0,
+            mewtwoniteY: 0,
+            pidgeotite: 0,
+            pinsirite: 0,
+            sablenite: 0,
+            salamencite: 0,
+            sceptilite: 0,
+            scizorite: 0,
+            sharpedonite: 0,
+            slowbronite: 0,
+            steelixite: 0,
+            swampertite: 0,
+            tyranitarite: 0,
+            venusaurite: 0,
         },
         evoStones: {
             thunderStone: 0,
@@ -79,6 +128,8 @@ export default (lastSave, appModel) => {
             xSpDefense: 0,
             expBoost: 0,
             currencyBoost: 0,
+            revive: 0,
+            maxRevive: 0,
         },
         vitamins: {
             hpUp: 0,
@@ -104,14 +155,47 @@ export default (lastSave, appModel) => {
             training: 0,
         },
         statistics: {
+            fireBeaten: 0,
+            waterBeaten: 0,
+            grassBeaten: 0,
+            electricBeaten: 0,
+            normalBeaten: 0,
+            iceBeaten: 0,
+            fightingBeaten: 0,
+            poisonBeaten: 0,
+            groundBeaten: 0,
+            flyingBeaten: 0,
+            psychicBeaten: 0,
+            bugBeaten: 0,
+            rockBeaten: 0,
+            ghostBeaten: 0,
+            darkBeaten: 0,
+            dragonBeaten: 0,
+            steelBeaten: 0,
+            fairyBeaten: 0,
+            fireCaught: 0,
+            waterCaught: 0,
+            grassCaught: 0,
+            electricCaught: 0,
+            normalCaught: 0,
+            iceCaught: 0,
+            fightingCaught: 0,
+            poisonCaught: 0,
+            groundCaught: 0,
+            flyingCaught: 0,
+            psychicCaught: 0,
+            bugCaught: 0,
+            rockCaught: 0,
+            ghostCaught: 0,
+            darkCaught: 0,
+            dragonCaught: 0,
+            steelCaught: 0,
+            fairyCaught: 0,
             seen: 0,
             caught: 0,
-            released: 0,
-            sold: 0,
             beaten: 0,
             shinySeen: 0,
             shinyCaught: 0,
-            shinyReleased: 0,
             shinyBeaten: 0,
             totalDamage: 0,
             totalThrows: 0,
@@ -130,14 +214,9 @@ export default (lastSave, appModel) => {
             totalExp: 0,
         },
         badges: {},
+        wins: {},
         purgeData: false,
-        canHeal: function () {
-            if ((Date.now() - this.lastHeal) > 30000) {
-                return true;
-            }
 
-            return Date.now() - this.lastHeal;
-        },
         checksum: function (s) {
             let chk = 0x12345678;
             const len = s.length;
@@ -155,11 +234,7 @@ export default (lastSave, appModel) => {
                 return;
             }
 
-            if (this.pokemons.length < 6) {
-                this.pokemons.push(poke);
-            } else {
-                this.storage.push(poke);
-            }
+            appModel.$store.commit('pokemon/add', poke);
         },
         findDexIndex: (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.name),
         addPokedex: function (pokeName, flag) {
@@ -196,53 +271,31 @@ export default (lastSave, appModel) => {
             return counter;
         },
         setActive: function (index) {
-            this.activePokeID = index;
+            appModel.$store.state.pokemon.activePokeID = index;
         },
         alivePokeIndexes: function () {
             const alive = this.getPokemon().filter((poke) => poke.alive());
             return alive;
         },
-        activePoke: function () { return this.pokemons[this.activePokeID]; },
-        getPokemon: function () { return this.pokemons; },
+        activePoke: function () { return appModel.$store.getters['pokemon/active']; },
+        getPokemon: function () { return appModel.$store.state.pokemon.party; },
         getPokedexData: function () { return appModel.$store.state.pokedex.data; },
-        reorderPokes: function (newList, list = 'roster') {
-            if (list === 'roster') {
-                this.pokemons = newList;
-            } else {
-                this.storage = newList;
-            }
-        },
-        cmpFunctions: {
-            lvl: (lhs, rhs) => lhs.level() - rhs.level(),
-            dex: (lhs, rhs) => {
-                const index = (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.pokeName());
-                return index(lhs) - index(rhs);
-            },
-            vlv: (lhs, rhs) => lhs.level() - rhs.level() || lhs.avgAttack() - rhs.avgAttack(),
-            time: (lhs, rhs) => lhs.caughtAt - rhs.caughtAt,
-        },
-        inverseCmp: function (cmpFunc) {
-            return (lhs, rhs) => -cmpFunc(lhs, rhs);
-        },
-        sortPokemon: function () {
-            const dirSelect = document.getElementById('pokeSortDirSelect');
-            const direction = dirSelect.options[dirSelect.selectedIndex].value;
-            const orderSelect = document.getElementById('pokeSortOrderSelect');
-            const sortOrder = orderSelect.options[orderSelect.selectedIndex].value;
-            let cmpFunc = this.cmpFunctions[sortOrder];
-            if (direction === 'desc') {
-                cmpFunc = this.inverseCmp(cmpFunc);
-            }
-            Player.reorderPokes(Player.storage.sort(cmpFunc), 'storage');
-        },
+        // reorderPokes: function (newList, list = 'roster') {
+        //     if (list === 'roster') {
+        //         this.pokemons = newList;
+        //     } else {
+        //         this.storage = newList;
+        //     }
+        // },
         healAllPokemons: function () {
-            if (this.canHeal() === true) {
-                this.pokemons.forEach((poke) => poke.heal());
-                this.storage.forEach((poke) => poke.heal());
-                this.lastHeal = Date.now();
+            const timeToHeal = appModel.$store.getters['pokemon/timeToHeal'];
+
+            if (timeToHeal <= 0) {
+                appModel.$store.commit('pokemon/healAll');
                 return 'healed';
             }
-            return this.canHeal();
+
+            return timeToHeal;
         },
         hasPokemonLike(pokemon) {
             return this.hasPokemon(pokemon.pokeName(), pokemon.shiny());
@@ -252,22 +305,13 @@ export default (lastSave, appModel) => {
             // match if the name matches and we don't care about shiny, or the pokemon is shiny
             const match = (p) => p.pokeName() === pokemonName && (!shiny || p.isShiny);
             // findIndex will return > -1 if there is a match
-            return [...this.pokemons, ...this.storage].findIndex(match) > -1;
+            return appModel.$store.getters['pokemon/all'].findIndex(match) > -1;
         },
         getPokemonByName: function (pokemonName) {
-            return [...this.pokemons, ...this.storage].find((p) => p.pokeName() === pokemonName);
+            return appModel.$store.getters['pokemon/all'].find((p) => p.pokeName() === pokemonName);
         },
         deletePoke: function (index, from = 'roster') {
-            if (from == 'roster') {
-                if (index !== this.activePokeID) {
-                    this.pokemons.splice(index, 1);
-                    if (index < this.activePokeID) {
-                        this.activePokeID -= 1;
-                    }
-                }
-            } else {
-                this.storage.splice(index, 1);
-            }
+            appModel.$store.commit('pokemon/remove', { index, from });
         },
         ballRNG: function (ballName) {
             return BALLRNG[ballName];
@@ -355,6 +399,51 @@ export default (lastSave, appModel) => {
             if (routeData.johtoSuperRod && Player.unlocked.johtoSuperRod < routeData.johtoSuperRod) {
                 return false;
             }
+            if (routeData.hoennOldRod && Player.unlocked.hoennOldRod < routeData.hoennOldRod) {
+                return false;
+            }
+            if (routeData.hoennGoodRod && Player.unlocked.hoennGoodRod < routeData.hoennGoodRod) {
+                return false;
+            }
+            if (routeData.hoennSuperRod && Player.unlocked.hoennSuperRod < routeData.hoennSuperRod) {
+                return false;
+            }
+            if (routeData.sinnohOldRod && Player.unlocked.sinnohOldRod < routeData.sinnohOldRod) {
+                return false;
+            }
+            if (routeData.sinnohGoodRod && Player.unlocked.sinnohGoodRod < routeData.sinnohGoodRod) {
+                return false;
+            }
+            if (routeData.sinnohSuperRod && Player.unlocked.sinnohSuperRod < routeData.sinnohSuperRod) {
+                return false;
+            }
+            if (routeData.unovaOldRod && Player.unlocked.unovaOldRod < routeData.unovaOldRod) {
+                return false;
+            }
+            if (routeData.unovaGoodRod && Player.unlocked.unovaGoodRod < routeData.unovaGoodRod) {
+                return false;
+            }
+            if (routeData.unovaSuperRod && Player.unlocked.unovaSuperRod < routeData.unovaSuperRod) {
+                return false;
+            }
+            if (routeData.kalosOldRod && Player.unlocked.kalosOldRod < routeData.kalosOldRod) {
+                return false;
+            }
+            if (routeData.kalosGoodRod && Player.unlocked.kalosGoodRod < routeData.kalosGoodRod) {
+                return false;
+            }
+            if (routeData.kalosSuperRod && Player.unlocked.kalosSuperRod < routeData.kalosSuperRod) {
+                return false;
+            }
+            if (routeData.alolaOldRod && Player.unlocked.alolaOldRod < routeData.alolaOldRod) {
+                return false;
+            }
+            if (routeData.alolaGoodRod && Player.unlocked.alolaGoodRod < routeData.alolaGoodRod) {
+                return false;
+            }
+            if (routeData.alolaSuperRod && Player.unlocked.alolaSuperRod < routeData.alolaSuperRod) {
+                return false;
+            }
             if (routeData._unlock) {
                 return this.meetsCriteria(routeData._unlock);
             }
@@ -365,12 +454,12 @@ export default (lastSave, appModel) => {
         // Don't save more then every 60 seconds
             if (force || (lastSave + (1000 * 60) < Date.now())) {
                 lastSave = Date.now();
-                localStorage.setItem('totalPokes', this.pokemons.length);
-                this.pokemons.forEach((poke, index) => {
+                localStorage.setItem('totalPokes', appModel.$store.state.pokemon.party.length);
+                appModel.$store.state.pokemon.party.forEach((poke, index) => {
                     localStorage.setItem(`poke${index}`, JSON.stringify(poke.save()));
                 });
-                localStorage.setItem('totalStorage', this.storage.length);
-                this.storage.forEach((poke, index) => {
+                localStorage.setItem('totalStorage', appModel.$store.state.pokemon.storage.length);
+                appModel.$store.state.pokemon.storage.forEach((poke, index) => {
                     localStorage.setItem(`storage${index}`, JSON.stringify(poke.save()));
                 });
                 localStorage.setItem('ballsAmount', JSON.stringify(this.ballsAmount));
@@ -380,21 +469,25 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('statistics', JSON.stringify(this.statistics));
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
+                localStorage.setItem('wins', JSON.stringify(this.wins));
                 localStorage.setItem('unlocked', JSON.stringify(this.unlocked));
+                localStorage.setItem('megaStones', JSON.stringify(this.megaStones));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
             }
         },
         saveToString: function () {
             const saveData = JSON.stringify({
-                pokes: this.pokemons.map((poke) => poke.save()),
-                storage: this.storage.map((poke) => poke.save()),
+                pokes: appModel.$store.state.pokemon.party.map((poke) => poke.save()),
+                storage: appModel.$store.state.pokemon.storage.map((poke) => poke.save()),
                 pokedexData: this.getPokedexData(),
                 statistics: this.statistics,
                 settings: this.settings,
                 ballsAmount: this.ballsAmount,
                 badges: this.badges,
+                wins: this.wins,
                 unlocked: this.unlocked,
+                megaStones: this.megaStones,
                 evoStones: this.evoStones,
                 currencyAmount: this.currencyAmount,
                 battleItems: this.battleItems,
@@ -404,10 +497,10 @@ export default (lastSave, appModel) => {
         },
         loadPokes: function () {
         // reset pokemon array
-            this.pokemons = [];
+            const party = [];
             let pokeCount = 0;
             // reset storage array
-            this.storage = [];
+            const storage = [];
             Array(Number(localStorage.getItem('totalPokes'))).fill(0).forEach((el, index) => {
                 const loadedPoke = JSON.parse(localStorage.getItem(`poke${index}`));
                 if (loadedPoke) {
@@ -418,9 +511,9 @@ export default (lastSave, appModel) => {
                     const prestigeLevel = loadedPoke[4] || 0;
                     const appliedVitamins = loadedPoke[5];
                     if (pokeCount < 6) {
-                        this.pokemons.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
+                        party.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     } else {
-                        this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
+                        storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     }
                     pokeCount++;
                 }
@@ -434,9 +527,12 @@ export default (lastSave, appModel) => {
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
                     const appliedVitamins = loadedPoke[5];
-                    this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
+                    storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 }
             });
+
+            appModel.$store.commit('pokemon/load', { party, storage });
+
             if (JSON.parse(localStorage.getItem('ballsAmount'))) {
                 this.ballsAmount = JSON.parse(localStorage.getItem('ballsAmount'));
             }
@@ -453,12 +549,18 @@ export default (lastSave, appModel) => {
             if (JSON.parse(localStorage.getItem('badges'))) {
                 this.badges = JSON.parse(localStorage.getItem('badges'));
             }
+            if (JSON.parse(localStorage.getItem('wins'))) {
+                this.wins = JSON.parse(localStorage.getItem('wins'));
+            }
             if (JSON.parse(localStorage.getItem('unlocked'))) {
                 const loadedUnlocked = JSON.parse(localStorage.getItem('unlocked'));
                 this.unlocked = { ...this.unlocked, ...loadedUnlocked };
             }
             if (JSON.parse(localStorage.getItem('currencyAmount'))) {
                 this.currencyAmount = JSON.parse(localStorage.getItem('currencyAmount'));
+            }
+            if (JSON.parse(localStorage.getItem('megaStones'))) {
+                this.megaStones = JSON.parse(localStorage.getItem('megaStones'));
             }
             if (JSON.parse(localStorage.getItem('evoStones'))) {
                 this.evoStones = JSON.parse(localStorage.getItem('evoStones'));
@@ -480,9 +582,9 @@ export default (lastSave, appModel) => {
                     alert('Failed to parse save data, loading canceled!');
                     return;
                 }
-                this.pokemons = [];
+                const party = [];
                 let pokeCount = 0;
-                this.storage = [];
+                const storage = [];
                 saveData.pokes.forEach((loadedPoke) => {
                     const pokeName = loadedPoke[0];
                     const exp = loadedPoke[1];
@@ -491,9 +593,9 @@ export default (lastSave, appModel) => {
                     const prestigeLevel = loadedPoke[4] || 0;
                     const appliedVitamins = loadedPoke[5];
                     if (pokeCount < 6) {
-                        this.pokemons.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
+                        party.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     } else {
-                        this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
+                        storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     }
                     pokeCount++;
                 });
@@ -504,8 +606,11 @@ export default (lastSave, appModel) => {
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
                     const appliedVitamins = loadedPoke[5];
-                    this.storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
+                    storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 });
+
+                appModel.$store.commit('pokemon/load', { party, storage });
+
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
                 this.battleItems = saveData.battleItems;
@@ -517,6 +622,7 @@ export default (lastSave, appModel) => {
                     this.settings = saveData.settings;
                 }
                 this.badges = saveData.badges ? saveData.badges : {};
+                this.wins = saveData.wins ? saveData.wins : {};
                 const loadedUnlocked = saveData.unlocked ? saveData.unlocked : [];
                 this.unlocked = { ...this.unlocked, ...loadedUnlocked };
             } else {

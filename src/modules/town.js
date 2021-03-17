@@ -21,6 +21,16 @@ export default (player, Poke) => {
                 pokecoins: 1000,
                 ball: 'ultraball',
             },
+            {
+                name: 'Revive',
+                pokecoins: 1000,
+                battleItem: 'revive',
+            },
+            {
+                name: 'Max Revive',
+                pokecoins: 1000,
+                battleItem: 'maxRevive',
+            },
         ],
         johtoPokecoinShopItems: [
             {
@@ -40,6 +50,74 @@ export default (player, Poke) => {
             },
         ],
         hoennPokecoinShopItems: [
+            {
+                name: 'Pokeball',
+                pokecoins: 100,
+                ball: 'pokeball',
+            },
+            {
+                name: 'Greatball',
+                pokecoins: 500,
+                ball: 'greatball',
+            },
+            {
+                name: 'Ultraball',
+                pokecoins: 1000,
+                ball: 'ultraball',
+            },
+        ],
+        sinnohPokecoinShopItems: [
+            {
+                name: 'Pokeball',
+                pokecoins: 100,
+                ball: 'pokeball',
+            },
+            {
+                name: 'Greatball',
+                pokecoins: 500,
+                ball: 'greatball',
+            },
+            {
+                name: 'Ultraball',
+                pokecoins: 1000,
+                ball: 'ultraball',
+            },
+        ],
+        unovaPokecoinShopItems: [
+            {
+                name: 'Pokeball',
+                pokecoins: 100,
+                ball: 'pokeball',
+            },
+            {
+                name: 'Greatball',
+                pokecoins: 500,
+                ball: 'greatball',
+            },
+            {
+                name: 'Ultraball',
+                pokecoins: 1000,
+                ball: 'ultraball',
+            },
+        ],
+        kalosPokecoinShopItems: [
+            {
+                name: 'Pokeball',
+                pokecoins: 100,
+                ball: 'pokeball',
+            },
+            {
+                name: 'Greatball',
+                pokecoins: 500,
+                ball: 'greatball',
+            },
+            {
+                name: 'Ultraball',
+                pokecoins: 1000,
+                ball: 'ultraball',
+            },
+        ],
+        alolaPokecoinShopItems: [
             {
                 name: 'Pokeball',
                 pokecoins: 100,
@@ -81,6 +159,54 @@ export default (player, Poke) => {
             },
         ],
         hoennBattlecoinShopItems: [
+            {
+                name: 'Razz Berry',
+                battlecoins: 250,
+                unlockable: 'razzBerry',
+            },
+            {
+                name: 'Masterball',
+                battlecoins: 1000,
+                ball: 'masterball',
+            },
+        ],
+        sinnohBattlecoinShopItems: [
+            {
+                name: 'Razz Berry',
+                battlecoins: 250,
+                unlockable: 'razzBerry',
+            },
+            {
+                name: 'Masterball',
+                battlecoins: 1000,
+                ball: 'masterball',
+            },
+        ],
+        unovaBattlecoinShopItems: [
+            {
+                name: 'Razz Berry',
+                battlecoins: 250,
+                unlockable: 'razzBerry',
+            },
+            {
+                name: 'Masterball',
+                battlecoins: 1000,
+                ball: 'masterball',
+            },
+        ],
+        kalosBattlecoinShopItems: [
+            {
+                name: 'Razz Berry',
+                battlecoins: 250,
+                unlockable: 'razzBerry',
+            },
+            {
+                name: 'Masterball',
+                battlecoins: 1000,
+                ball: 'masterball',
+            },
+        ],
+        alolaBattlecoinShopItems: [
             {
                 name: 'Razz Berry',
                 battlecoins: 250,
@@ -193,6 +319,74 @@ export default (player, Poke) => {
                 unlockable: 'hoennSuperRod',
             },
         ],
+        sinnohCatchcoinShopItems: [
+            {
+                name: 'Old Rod',
+                catchcoins: 100,
+                unlockable: 'sinnohOldRod',
+            },
+            {
+                name: 'Good Rod',
+                catchcoins: 1000,
+                unlockable: 'sinnohGoodRod',
+            },
+            {
+                name: 'Super Rod',
+                catchcoins: 10000,
+                unlockable: 'sinnohSuperRod',
+            },
+        ],
+        unovaCatchcoinShopItems: [
+            {
+                name: 'Old Rod',
+                catchcoins: 100,
+                unlockable: 'unovaOldRod',
+            },
+            {
+                name: 'Good Rod',
+                catchcoins: 1000,
+                unlockable: 'unovaGoodRod',
+            },
+            {
+                name: 'Super Rod',
+                catchcoins: 10000,
+                unlockable: 'unovaSuperRod',
+            },
+        ],
+        kalosCatchcoinShopItems: [
+            {
+                name: 'Old Rod',
+                catchcoins: 100,
+                unlockable: 'kalosOldRod',
+            },
+            {
+                name: 'Good Rod',
+                catchcoins: 1000,
+                unlockable: 'kalosGoodRod',
+            },
+            {
+                name: 'Super Rod',
+                catchcoins: 10000,
+                unlockable: 'kalosSuperRod',
+            },
+        ],
+        alolaCatchcoinShopItems: [
+            {
+                name: 'Old Rod',
+                catchcoins: 100,
+                unlockable: 'alolaOldRod',
+            },
+            {
+                name: 'Good Rod',
+                catchcoins: 1000,
+                unlockable: 'alolaGoodRod',
+            },
+            {
+                name: 'Super Rod',
+                catchcoins: 10000,
+                unlockable: 'alolaSuperRod',
+            },
+        ],
         renderPokeCoinShop: function () {
             let pokecoinShopHTML = '';
             for (let i = 0; i < this.pokecoinShopItems.length; i++) {
@@ -212,7 +406,12 @@ export default (player, Poke) => {
                 const buttonHTML = ` <button onclick="town.buyPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
                 const button10HTML = ` <button onclick="town.buyPokeCoinItem10('${i}')"${disableButton10}>${buttonText10}</button>`;
                 const button100HTML = ` <button onclick="town.buyPokeCoinItem100('${i}')"${disableButton100}>${buttonText100}</button>`;
-                pokecoinShopHTML += `${'<li><img src="assets/images/pokeballs/'}${this.pokecoinShopItems[i].ball}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.pokecoinShopItems[i].pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
+                if (this.pokecoinShopItems[i].ball) {
+                    pokecoinShopHTML += `${'<li><img src="assets/images/pokeballs/'}${this.pokecoinShopItems[i].ball}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.pokecoinShopItems[i].pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
+                }
+                if (this.pokecoinShopItems[i].battleItem) {
+                    pokecoinShopHTML += `${'<li><img src="assets/images/battleItems/'}${this.pokecoinShopItems[i].battleItem}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.pokecoinShopItems[i].pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
+                }
             }
             $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
         },
@@ -249,6 +448,58 @@ export default (player, Poke) => {
                 const buttonText = (own) ? 'Own' : 'Buy';
                 const buttonHTML = ` <button onclick="town.buyHoennPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
                 pokecoinShopHTML += `<li>${this.hoennPokecoinShopItems[i].name}: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.hoennPokecoinShopItems[i].pokecoins}${buttonHTML}</li>`;
+            }
+            $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
+        },
+        renderSinnohPokeCoinShop: function () {
+            let pokecoinShopHTML = '';
+            for (let i = 0; i < this.sinnohPokecoinShopItems.length; i++) {
+                let canBuy = true;
+                const own = false;
+                if (player.currencyAmount.pokecoins < this.sinnohPokecoinShopItems[i].pokecoins) canBuy = false;
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buySinnohPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                pokecoinShopHTML += `<li>${this.sinnohPokecoinShopItems[i].name}: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.sinnohPokecoinShopItems[i].pokecoins}${buttonHTML}</li>`;
+            }
+            $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
+        },
+        renderUnovaPokeCoinShop: function () {
+            let pokecoinShopHTML = '';
+            for (let i = 0; i < this.unovaPokecoinShopItems.length; i++) {
+                let canBuy = true;
+                const own = false;
+                if (player.currencyAmount.pokecoins < this.unovaPokecoinShopItems[i].pokecoins) canBuy = false;
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buyUnovaPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                pokecoinShopHTML += `<li>${this.unovaPokecoinShopItems[i].name}: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.unovaPokecoinShopItems[i].pokecoins}${buttonHTML}</li>`;
+            }
+            $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
+        },
+        renderKalosPokeCoinShop: function () {
+            let pokecoinShopHTML = '';
+            for (let i = 0; i < this.kalosPokecoinShopItems.length; i++) {
+                let canBuy = true;
+                const own = false;
+                if (player.currencyAmount.pokecoins < this.kalosPokecoinShopItems[i].pokecoins) canBuy = false;
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buyKalosPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                pokecoinShopHTML += `<li>${this.kalosPokecoinShopItems[i].name}: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.kalosPokecoinShopItems[i].pokecoins}${buttonHTML}</li>`;
+            }
+            $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
+        },
+        renderAlolaPokeCoinShop: function () {
+            let pokecoinShopHTML = '';
+            for (let i = 0; i < this.alolaPokecoinShopItems.length; i++) {
+                let canBuy = true;
+                const own = false;
+                if (player.currencyAmount.pokecoins < this.alolaPokecoinShopItems[i].pokecoins) canBuy = false;
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buyAlolaPokeCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                pokecoinShopHTML += `<li>${this.alolaPokecoinShopItems[i].name}: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${this.alolaPokecoinShopItems[i].pokecoins}${buttonHTML}</li>`;
             }
             $('#pokecoinShopItems').innerHTML = pokecoinShopHTML;
         },
@@ -303,6 +554,74 @@ export default (player, Poke) => {
             }
             $('#battlecoinShopItems').innerHTML = battlecoinShopHTML;
         },
+        renderSinnohBattleCoinShop: function () {
+            let battlecoinShopHTML = '';
+            for (let i = 0; i < this.sinnohBattlecoinShopItems.length; i++) {
+                let canBuy = true;
+                let own = false;
+                if (player.currencyAmount.battlecoins < this.sinnohBattlecoinShopItems[i].battlecoins) canBuy = false;
+                if (this.sinnohBattlecoinShopItems[i].unlockable && player.unlocked[this.sinnohBattlecoinShopItems[i].unlockable]) {
+                    canBuy = false;
+                    own = true;
+                }
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buySinnohBattleCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                battlecoinShopHTML += `<li>${this.sinnohBattlecoinShopItems[i].name}: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.sinnohBattlecoinShopItems[i].battlecoins}${buttonHTML}</li>`;
+            }
+            $('#battlecoinShopItems').innerHTML = battlecoinShopHTML;
+        },
+        renderUnovaBattleCoinShop: function () {
+            let battlecoinShopHTML = '';
+            for (let i = 0; i < this.unovaBattlecoinShopItems.length; i++) {
+                let canBuy = true;
+                let own = false;
+                if (player.currencyAmount.battlecoins < this.unovaBattlecoinShopItems[i].battlecoins) canBuy = false;
+                if (this.unovaBattlecoinShopItems[i].unlockable && player.unlocked[this.unovaBattlecoinShopItems[i].unlockable]) {
+                    canBuy = false;
+                    own = true;
+                }
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buyUnovaBattleCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                battlecoinShopHTML += `<li>${this.unovaBattlecoinShopItems[i].name}: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.unovaBattlecoinShopItems[i].battlecoins}${buttonHTML}</li>`;
+            }
+            $('#battlecoinShopItems').innerHTML = battlecoinShopHTML;
+        },
+        renderKalosBattleCoinShop: function () {
+            let battlecoinShopHTML = '';
+            for (let i = 0; i < this.kalosBattlecoinShopItems.length; i++) {
+                let canBuy = true;
+                let own = false;
+                if (player.currencyAmount.battlecoins < this.kalosBattlecoinShopItems[i].battlecoins) canBuy = false;
+                if (this.kalosBattlecoinShopItems[i].unlockable && player.unlocked[this.kalosBattlecoinShopItems[i].unlockable]) {
+                    canBuy = false;
+                    own = true;
+                }
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buyKalosBattleCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                battlecoinShopHTML += `<li>${this.kalosBattlecoinShopItems[i].name}: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.kalosBattlecoinShopItems[i].battlecoins}${buttonHTML}</li>`;
+            }
+            $('#battlecoinShopItems').innerHTML = battlecoinShopHTML;
+        },
+        renderAlolaBattleCoinShop: function () {
+            let battlecoinShopHTML = '';
+            for (let i = 0; i < this.alolaBattlecoinShopItems.length; i++) {
+                let canBuy = true;
+                let own = false;
+                if (player.currencyAmount.battlecoins < this.alolaBattlecoinShopItems[i].battlecoins) canBuy = false;
+                if (this.alolaBattlecoinShopItems[i].unlockable && player.unlocked[this.alolaBattlecoinShopItems[i].unlockable]) {
+                    canBuy = false;
+                    own = true;
+                }
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buyAlolaBattleCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                battlecoinShopHTML += `<li>${this.alolaBattlecoinShopItems[i].name}: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.alolaBattlecoinShopItems[i].battlecoins}${buttonHTML}</li>`;
+            }
+            $('#battlecoinShopItems').innerHTML = battlecoinShopHTML;
+        },
         renderCatchCoinShop: function () {
             let catchcoinShopHTML = '';
             for (let i = 0; i < this.catchcoinShopItems.length; i++) {
@@ -354,6 +673,74 @@ export default (player, Poke) => {
             }
             $('#catchcoinShopItems').innerHTML = catchcoinShopHTML;
         },
+        renderSinnohCatchCoinShop: function () {
+            let catchcoinShopHTML = '';
+            for (let i = 0; i < this.sinnohCatchcoinShopItems.length; i++) {
+                let canBuy = true;
+                let own = false;
+                if (player.currencyAmount.catchcoins < this.sinnohCatchcoinShopItems[i].catchcoins) canBuy = false;
+                if (player.unlocked[this.sinnohCatchcoinShopItems[i].unlockable]) {
+                    canBuy = false;
+                    own = true;
+                }
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buySinnohCatchCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                catchcoinShopHTML += `${'<li><img src="assets/images/evoStones/'}${this.sinnohCatchcoinShopItems[i].name}.png" height="30" width="30"></img>: <img src="assets/images/currency/CatchCoin.png" height="16" width="16"></img>${this.sinnohCatchcoinShopItems[i].catchcoins}${buttonHTML}</li>`;
+            }
+            $('#catchcoinShopItems').innerHTML = catchcoinShopHTML;
+        },
+        renderUnovaCatchCoinShop: function () {
+            let catchcoinShopHTML = '';
+            for (let i = 0; i < this.unovaCatchcoinShopItems.length; i++) {
+                let canBuy = true;
+                let own = false;
+                if (player.currencyAmount.catchcoins < this.unovaCatchcoinShopItems[i].catchcoins) canBuy = false;
+                if (player.unlocked[this.unovaCatchcoinShopItems[i].unlockable]) {
+                    canBuy = false;
+                    own = true;
+                }
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buyUnovaCatchCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                catchcoinShopHTML += `${'<li><img src="assets/images/evoStones/'}${this.unovaCatchcoinShopItems[i].name}.png" height="30" width="30"></img>: <img src="assets/images/currency/CatchCoin.png" height="16" width="16"></img>${this.unovaCatchcoinShopItems[i].catchcoins}${buttonHTML}</li>`;
+            }
+            $('#catchcoinShopItems').innerHTML = catchcoinShopHTML;
+        },
+        renderKalosCatchCoinShop: function () {
+            let catchcoinShopHTML = '';
+            for (let i = 0; i < this.kalosCatchcoinShopItems.length; i++) {
+                let canBuy = true;
+                let own = false;
+                if (player.currencyAmount.catchcoins < this.kalosCatchcoinShopItems[i].catchcoins) canBuy = false;
+                if (player.unlocked[this.kalosCatchcoinShopItems[i].unlockable]) {
+                    canBuy = false;
+                    own = true;
+                }
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buyKalosCatchCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                catchcoinShopHTML += `${'<li><img src="assets/images/evoStones/'}${this.kalosCatchcoinShopItems[i].name}.png" height="30" width="30"></img>: <img src="assets/images/currency/CatchCoin.png" height="16" width="16"></img>${this.kalosCatchcoinShopItems[i].catchcoins}${buttonHTML}</li>`;
+            }
+            $('#catchcoinShopItems').innerHTML = catchcoinShopHTML;
+        },
+        renderAlolaCatchCoinShop: function () {
+            let catchcoinShopHTML = '';
+            for (let i = 0; i < this.alolaCatchcoinShopItems.length; i++) {
+                let canBuy = true;
+                let own = false;
+                if (player.currencyAmount.catchcoins < this.alolaCatchcoinShopItems[i].catchcoins) canBuy = false;
+                if (player.unlocked[this.alolaCatchcoinShopItems[i].unlockable]) {
+                    canBuy = false;
+                    own = true;
+                }
+                const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
+                const buttonText = (own) ? 'Own' : 'Buy';
+                const buttonHTML = ` <button onclick="town.buyAlolaCatchCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
+                catchcoinShopHTML += `${'<li><img src="assets/images/evoStones/'}${this.alolaCatchcoinShopItems[i].name}.png" height="30" width="30"></img>: <img src="assets/images/currency/CatchCoin.png" height="16" width="16"></img>${this.alolaCatchcoinShopItems[i].catchcoins}${buttonHTML}</li>`;
+            }
+            $('#catchcoinShopItems').innerHTML = catchcoinShopHTML;
+        },
         buyPokeCoinItem: function (index) {
             const item = this.pokecoinShopItems[index];
             if (player.currencyAmount.pokecoins < item.pokecoins) {
@@ -362,6 +749,10 @@ export default (player, Poke) => {
                 player.currencyAmount.pokecoins -= item.pokecoins;
                 if (item.ball) {
                     player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                if (item.battleItem) {
+                    player.battleItem[item.battleItem]++;
                     dom.renderBalls();
                 }
                 this.renderPokeCoinShop(); // force refresh of shop
@@ -489,6 +880,126 @@ export default (player, Poke) => {
                 return true;
             }
         },
+        buySinnohPokeCoinItem: function (index) {
+            const item = this.sinnohPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < item.pokecoins) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= item.pokecoins;
+                if (item.ball) {
+                    player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                this.renderSinnohPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyUnovaPokeCoinItem: function (index) {
+            const item = this.unovaPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < item.pokecoins) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= item.pokecoins;
+                if (item.ball) {
+                    player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                this.renderUnovaPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyKalosPokeCoinItem: function (index) {
+            const item = this.kalosPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < item.pokecoins) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= item.pokecoins;
+                if (item.ball) {
+                    player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                this.renderKalosPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyAlolaPokeCoinItem: function (index) {
+            const item = this.alolaPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < item.pokecoins) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= item.pokecoins;
+                if (item.ball) {
+                    player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                this.renderAlolaPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buySinnohPokeCoinItem10: function (index) {
+            const item = this.sinnohPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 10)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 10);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 10;
+                    dom.renderBalls();
+                }
+                this.renderSinnohPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyUnovaPokeCoinItem10: function (index) {
+            const item = this.unovaPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 10)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 10);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 10;
+                    dom.renderBalls();
+                }
+                this.renderUnovaPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyKalosPokeCoinItem10: function (index) {
+            const item = this.kalosPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 10)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 10);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 10;
+                    dom.renderBalls();
+                }
+                this.renderKalosPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyAlolaPokeCoinItem10: function (index) {
+            const item = this.alolaPokecoinShopItems[index];
+            if (player.currencyAmount.pokecoins < (item.pokecoins * 10)) {
+                return false;
+            } else {
+                player.currencyAmount.pokecoins -= (item.pokecoins * 10);
+                if (item.ball) {
+                    player.ballsAmount[item.ball] += 10;
+                    dom.renderBalls();
+                }
+                this.renderAlolaPokeCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
         buyBattleCoinItem: function (index) {
             const item = this.battlecoinShopItems[index];
             if (player.currencyAmount.battlecoins < item.battlecoins) {
@@ -497,7 +1008,6 @@ export default (player, Poke) => {
                 player.currencyAmount.battlecoins -= item.battlecoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                 }
                 if (item.ball) {
                     player.ballsAmount[item.ball]++;
@@ -516,7 +1026,6 @@ export default (player, Poke) => {
                 player.currencyAmount.battlecoins -= item.battlecoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                 }
                 if (item.ball) {
                     player.ballsAmount[item.ball]++;
@@ -535,13 +1044,84 @@ export default (player, Poke) => {
                 player.currencyAmount.battlecoins -= item.battlecoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                 }
                 if (item.ball) {
                     player.ballsAmount[item.ball]++;
                     dom.renderBalls();
                 }
                 this.renderHoennBattleCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buySinnohBattleCoinItem: function (index) {
+            const item = this.sinnohBattlecoinShopItems[index];
+            if (player.currencyAmount.battlecoins < item.battlecoins) {
+                return false;
+            } else {
+                player.currencyAmount.battlecoins -= item.battlecoins;
+                if (item.unlockable) {
+                    player.unlocked[item.unlockable] = 1;
+                }
+                if (item.ball) {
+                    player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                this.renderSinnohBattleCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyUnovaBattleCoinItem: function (index) {
+            const item = this.unovaBattlecoinShopItems[index];
+            if (player.currencyAmount.battlecoins < item.battlecoins) {
+                return false;
+            } else {
+                player.currencyAmount.battlecoins -= item.battlecoins;
+                if (item.unlockable) {
+                    player.unlocked[item.unlockable] = 1;
+                }
+                if (item.ball) {
+                    player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                this.renderUnovaBattleCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyKalosBattleCoinItem: function (index) {
+            const item = this.kalosBattlecoinShopItems[index];
+            if (player.currencyAmount.battlecoins < item.battlecoins) {
+                return false;
+            } else {
+                player.currencyAmount.battlecoins -= item.battlecoins;
+                if (item.unlockable) {
+                    player.unlocked[item.unlockable] = 1;
+                }
+                if (item.ball) {
+                    player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                this.renderKalosBattleCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyAlolaBattleCoinItem: function (index) {
+            const item = this.alolaBattlecoinShopItems[index];
+            if (player.currencyAmount.battlecoins < item.battlecoins) {
+                return false;
+            } else {
+                player.currencyAmount.battlecoins -= item.battlecoins;
+                if (item.unlockable) {
+                    player.unlocked[item.unlockable] = 1;
+                }
+                if (item.ball) {
+                    player.ballsAmount[item.ball]++;
+                    dom.renderBalls();
+                }
+                this.renderAlolaBattleCoinShop(); // force refresh of shop
                 dom.renderCurrency();
                 return true;
             }
@@ -554,7 +1134,6 @@ export default (player, Poke) => {
                 player.currencyAmount.catchcoins -= item.catchcoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                     dom.renderRouteList();
                 }
                 this.renderCatchCoinShop(); // force refresh of shop
@@ -570,7 +1149,6 @@ export default (player, Poke) => {
                 player.currencyAmount.catchcoins -= item.catchcoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                     dom.renderRouteList();
                 }
                 this.renderJohtoCatchCoinShop(); // force refresh of shop
@@ -586,10 +1164,69 @@ export default (player, Poke) => {
                 player.currencyAmount.catchcoins -= item.catchcoins;
                 if (item.unlockable) {
                     player.unlocked[item.unlockable] = 1;
-                    dom.renderListBox();
                     dom.renderRouteList();
                 }
                 this.renderHoennCatchCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buySinnohCatchCoinItem: function (index) {
+            const item = this.sinnohCatchcoinShopItems[index];
+            if (player.currencyAmount.catchcoins < item.catchcoins) {
+                return false;
+            } else {
+                player.currencyAmount.catchcoins -= item.catchcoins;
+                if (item.unlockable) {
+                    player.unlocked[item.unlockable] = 1;
+                    dom.renderRouteList();
+                }
+                this.renderSinnohCatchCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyUnovaCatchCoinItem: function (index) {
+            const item = this.unovaCatchcoinShopItems[index];
+            if (player.currencyAmount.catchcoins < item.catchcoins) {
+                return false;
+            } else {
+                player.currencyAmount.catchcoins -= item.catchcoins;
+                if (item.unlockable) {
+                    player.unlocked[item.unlockable] = 1;
+                    dom.renderRouteList();
+                }
+                this.renderUnovaCatchCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyKalosCatchCoinItem: function (index) {
+            const item = this.kalosCatchcoinShopItems[index];
+            if (player.currencyAmount.catchcoins < item.catchcoins) {
+                return false;
+            } else {
+                player.currencyAmount.catchcoins -= item.catchcoins;
+                if (item.unlockable) {
+                    player.unlocked[item.unlockable] = 1;
+                    dom.renderRouteList();
+                }
+                this.renderKalosCatchCoinShop(); // force refresh of shop
+                dom.renderCurrency();
+                return true;
+            }
+        },
+        buyAlolaCatchCoinItem: function (index) {
+            const item = this.alolaCatchcoinShopItems[index];
+            if (player.currencyAmount.catchcoins < item.catchcoins) {
+                return false;
+            } else {
+                player.currencyAmount.catchcoins -= item.catchcoins;
+                if (item.unlockable) {
+                    player.unlocked[item.unlockable] = 1;
+                    dom.renderRouteList();
+                }
+                this.renderAlolaCatchCoinShop(); // force refresh of shop
                 dom.renderCurrency();
                 return true;
             }

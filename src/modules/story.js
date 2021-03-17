@@ -20,9 +20,9 @@ export default (player, enemy, combatLoop, Poke) => {
                 const title = 'Welcome to the world of pokemon';
                 let storyHTML = '<p>To help you get started please take one of my old pokemon</p>';
                 storyHTML += `<p><img src="${Story.helpers.getPokeImg(1)}" onclick="story.helpers.selectFirstPoke(1)">`;
-                storyHTML += `<img src="${Story.helpers.getPokeImg(4)}" onclick="story.helpers.selectFirstPoke(4)">`;
-                storyHTML += `<img src="${Story.helpers.getPokeImg(7)}" onclick="story.helpers.selectFirstPoke(7)">`;
-                storyHTML += `<img src="${Story.helpers.getPokeImg(25)}" onclick="story.helpers.selectFirstPoke(25)"></p>`;
+                storyHTML += `<img src="${Story.helpers.getPokeImg(5)}" onclick="story.helpers.selectFirstPoke(5)">`;
+                storyHTML += `<img src="${Story.helpers.getPokeImg(10)}" onclick="story.helpers.selectFirstPoke(10)">`;
+                storyHTML += `<img src="${Story.helpers.getPokeImg(33)}" onclick="story.helpers.selectFirstPoke(33)"></p>`;
                 Story.displayStory(title, storyHTML, false);
             },
         },
@@ -38,8 +38,7 @@ export default (player, enemy, combatLoop, Poke) => {
                 combatLoop.unpause();
                 renderView(dom, enemy, player);
                 dom.renderRoutesBox();
-                dom.renderListBox();
-                dom.renderPokeList();
+                player.unlocked.saveKill += 1;
                 closeModal($('#storyModal'));
             },
         },

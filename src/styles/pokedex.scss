@@ -1,0 +1,69 @@
+@import './variables.scss';
+
+// temporary style to keep word colors in the card
+.dexEntry .card {
+    color: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+.pokeDex0 {
+    color: #808080;
+
+    img {
+        -webkit-filter: brightness(0%); /* Safari 6.0 - 9.0 */
+        filter: brightness(0%);
+        opacity: 0.6;
+    }
+}
+.pokeDex1 {
+    color: #38375a;
+}
+.pokeDex2 {
+    color: #99844b;
+}
+.pokeDex3, .pokeDex5 {
+    color: rgba(42, 55, 190, 0.5);
+}
+.pokeDex6 {
+    color: #2a37be;
+}
+.pokeDex8 {
+    color: $active-shiny;
+}
+.pokeDex4, .pokeDex7 {
+    color: $inactive-shiny;
+}
+.pokeDex3, .pokeDex4 {
+    font-style: italic;
+}
+.pokeDex6, .pokeDex8 {
+    font-weight: bold;
+}
+
+#dexList2 {
+    --type-1-color: gray;
+    --type-2-color: gray;
+}
+
+.dexEntry {
+    figure {
+        background: linear-gradient(90deg, var(--type-1-color) 50%, var(--type-2-color) 50%);
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+}
+
+@each $type, $color in $type-colors {
+    .dexEntry {
+        &[data-type1=#{$type}] {
+            --type-1-color: #{$color};
+        }
+
+        &[data-type2=#{$type}] {
+            --type-2-color: #{$color};
+        }
+    }
+}

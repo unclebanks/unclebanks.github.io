@@ -28,7 +28,7 @@
       </button><br>
       <button
         id="sinnohButton"
-        onclick="userInteractions.goToNone()"
+        onclick="userInteractions.goToSinnoh()"
         class="button"
         value="Sinnoh"
       >
@@ -36,7 +36,7 @@
       </button>
       <button
         id="unovaButton"
-        onclick="userInteractions.goToNone()"
+        onclick="userInteractions.goToUnova()"
         class="button"
         value="Unova"
       >
@@ -44,7 +44,7 @@
       </button>
       <button
         id="kalosButton"
-        onclick="userInteractions.goToNone()"
+        onclick="userInteractions.goToKalos()"
         class="button"
         value="Kalos"
       >
@@ -52,7 +52,7 @@
       </button><br>
       <button
         id="alolaButton"
-        onclick="userInteractions.goToNone()"
+        onclick="userInteractions.goToAlola()"
         class="button"
         value="Alola"
       >

@@ -1,7 +1,6 @@
 <template>
   <div
     id="storageBox"
-    style="display: none;"
   >
     <input
       id="autoSort"
@@ -9,7 +8,7 @@
     ><label for="autoSort"><span class="checkDescription">Auto sort</span></label><br>
     <select
       id="pokeSortOrderSelect"
-      onchange="userInteractions.changePokeSortOrder()"
+      v-model="$store.state.pokemon.storageSortMethod"
     >
       <option value="lvl">
         Level
@@ -26,7 +25,7 @@
     </select>
     <select
       id="pokeSortDirSelect"
-      onchange="userInteractions.changePokeSortOrder()"
+      v-model="$store.state.pokemon.storageSortDirection"
     >
       <option value="asc">
         Asc
@@ -36,8 +35,37 @@
       </option>
     </select>
     <ul
+      v-if="!$store.state.loading"
       id="storageList"
       class="manageTeamEnabled"
-    />
+    >
+      <StoragePokemon
+        v-for="(poke, index) in $store.getters['pokemon/sortedStorage']"
+        :key="poke.pokeName()"
+        :ui="ui"
+        :index="index"
+        :poke="poke"
+      />
+    </ul>
   </div>
 </template>
+
+<script>
+import StoragePokemon from './StoragePokemon.vue';
+
+export default {
+    components: {
+        StoragePokemon,
+    },
+
+    props: {
+        ui: { type: Object, required: true },
+    },
+
+    data: function () {
+        return {
+            test: false,
+        };
+    },
+};
+</script>

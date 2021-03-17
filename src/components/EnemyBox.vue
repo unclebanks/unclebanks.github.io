@@ -26,15 +26,15 @@
         onclick="userInteractions.viewTown()"
         class="button"
       >
-        Town
-      </button>
+        TOWN
+      </button><br>
       <button
         id="trainerButton"
-        onclick="userInteractions.trainerBattle()"
+        onclick="userInteractions.checkBattle()"
         class="button"
       >
-        Trainer Battle
-      </button>
+        GYM LEADER BATTLE
+      </button><br>
     </div>
   </div>
 </template>

@@ -1,0 +1,24 @@
+.icon {
+    &.is-svg > * {
+        mask-size: cover;
+        mask-position: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .pokeball {
+        mask-image: url('/assets/icons/pokeball.svg');
+
+        &.caught {
+            background-color: #f00;
+        }
+
+        &.caught-shiny {
+            background-color: #ca0;
+        }
+
+        &.prev-caught {
+            background-color: #aaa;
+        }
+    }
+}
