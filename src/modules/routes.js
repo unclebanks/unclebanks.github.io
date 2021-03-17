@@ -2246,18 +2246,8 @@ const ROUTES = {
             hoennSuperRod: 1
         }
     }
-    /*
     ,
     Sinnoh: {
-        _unlock: {
-            statistics: {
-                beaten: 5000,
-                shinyCaught: 1
-            },
-            dex: {
-                caughtCount: 370
-            }
-        },
         _global: {
             pokes: [],
             rarePokes: [],
@@ -2708,16 +2698,6 @@ const ROUTES = {
         }
     },
     Unova: {
-        _unlock: {
-            currency: 10000,
-            statistics: {
-                beaten: 25000,
-                shinyCaught: 25
-            },
-            dex: {
-                caughtCount: 480
-            }
-        },
         _global: {
             pokes: [],
             rarePokes: [],
@@ -3133,17 +3113,6 @@ const ROUTES = {
         }
     },
     Kalos: {
-        _unlock: {
-            currency: 50000,
-            statistics: {
-                caught: 640,
-                beaten: 75000,
-                shinyCaught: 100
-            },
-            dex: {
-                caughtCount: 640
-            }
-        },
         _global: {
             pokes: [],
             rarePokes: [],
@@ -3242,16 +3211,6 @@ const ROUTES = {
         }
     },
     Alola: {
-        _unlock: {
-            currency: 150000,
-            statistics: {
-                beaten: 250000,
-                shinyCaught: 500
-            },
-            dex: {
-                caughtCount: 710
-            }
-        },
         _global: {
             pokes: [],
             rarePokes: [],
@@ -3366,7 +3325,7 @@ const ROUTES = {
             , maxLevel: 30
             , fishing: true
         }
-    } */
+    }
 };
 
 export default ROUTES;
