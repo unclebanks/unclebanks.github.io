@@ -772,7 +772,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanRattata"
+                "Pokemon": "alolan Rattata"
             }
         ],
         "stats": [
@@ -800,7 +800,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanRaticate"
+                "Pokemon": "alolan Raticate"
             }
         ],
         "stats": [
@@ -1002,7 +1002,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanRaichu"
+                "Pokemon": "alolan Raichu"
             }
         ],
         "stats": [
@@ -1084,7 +1084,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanSandshrew"
+                "Pokemon": "alolan Sandshrew"
             }
         ],
         "stats": [
@@ -1112,7 +1112,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanSandslash"
+                "Pokemon": "alolan Sandslash"
             }
         ],
         "stats": [
@@ -1412,7 +1412,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanVulpix"
+                "Pokemon": "alolan Vulpix"
             }
         ],
         "stats": [
@@ -1439,7 +1439,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanNinetales"
+                "Pokemon": "alolan Ninetales"
             }
         ],
         "stats": [
@@ -1828,7 +1828,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanDiglett"
+                "Pokemon": "alolan Diglett"
             }
         ],
         "stats": [
@@ -1856,7 +1856,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanDugtrio"
+                "Pokemon": "alolan Dugtrio"
             }
         ],
         "stats": [
@@ -1938,7 +1938,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanMeowth"
+                "Pokemon": "alolan Meowth"
             }
         ],
         "stats": [
@@ -1965,7 +1965,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanPersian"
+                "Pokemon": "alolan Persian"
             }
         ],
         "stats": [
@@ -2649,7 +2649,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanGeodude"
+                "Pokemon": "alolan Geodude"
             }
         ],
         "stats": [
@@ -2677,7 +2677,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanGraveler"
+                "Pokemon": "alolan Graveler"
             }
         ],
         "stats": [
@@ -2705,7 +2705,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanGolem"
+                "Pokemon": "alolan Golem"
             }
         ],
         "stats": [
@@ -3120,7 +3120,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanGrimer"
+                "Pokemon": "alolan Grimer"
             }
         ],
         "stats": [
@@ -3148,7 +3148,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanMuk"
+                "Pokemon": "alolan Muk"
             }
         ],
         "stats": [
@@ -3589,7 +3589,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanExeggutor"
+                "Pokemon": "alolan Exeggutor"
             }
         ],
         "stats": [
@@ -3671,7 +3671,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "AlolanMarowak"
+                "Pokemon": "alolan Marowak"
             }
         ],
         "stats": [
