@@ -98,6 +98,34 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "M-Venusaur"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Medium Slow",
+                "hp": "80",
+                "attack": "100",
+                "defense": "123",
+                "sp atk": "122",
+                "sp def": "120",
+                "speed": "80",
+                "types": [
+                    "Grass",
+                    "Poison"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "281"
+            }
+        ]
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Charmander"
             }
         ],
@@ -190,6 +218,82 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "M-Charizard X"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Medium Slow",
+                "hp": "78",
+                "attack": "130",
+                "defense": "111",
+                "sp atk": "130",
+                "sp def": "85",
+                "speed": "100",
+                "types": [
+                    "Fire",
+                    "Dragon"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "285"
+            }
+        ],
+        "images": {
+            "normal": {
+                "front": "assets/sprites/006mx.png",
+                "back": "assets/sprites/back/006mx.png"
+            },
+            "shiny": {
+                "front": "assets/sprites/s006mx.png",
+                "back": "assets/sprites/back/s006mx.png"
+            }
+        }
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "M-Charizard Y"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Medium Slow",
+                "hp": "78",
+                "attack": "104",
+                "defense": "78",
+                "sp atk": "159",
+                "sp def": "115",
+                "speed": "100",
+                "types": [
+                    "Fire",
+                    "Flying"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "285"
+            }
+        ],
+        "images": {
+            "normal": {
+                "front": "assets/sprites/006my.png",
+                "back": "assets/sprites/back/006my.png"
+            },
+            "shiny": {
+                "front": "assets/sprites/s006my.png",
+                "back": "assets/sprites/back/s006my.png"
+            }
+        }
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Squirtle"
             }
         ],
@@ -275,6 +379,33 @@ const POKEDEX = [
         "exp": [
             {
                 "base exp": "239"
+            }
+        ]
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "M-Blastoise"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Medium Slow",
+                "hp": "79",
+                "attack": "103",
+                "defense": "120",
+                "sp atk": "135",
+                "sp def": "115",
+                "speed": "78",
+                "types": [
+                    "Water"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "284"
             }
         ]
     },
@@ -447,6 +578,34 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "M-Beedrill"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Medium Fast",
+                "hp": "65",
+                "attack": "150",
+                "defense": "40",
+                "sp atk": "15",
+                "sp def": "80",
+                "speed": "145",
+                "types": [
+                    "Bug",
+                    "Poison"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "223"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Pidgey"
             }
         ],
@@ -531,6 +690,34 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "M-Pidgeot"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Medium Slow",
+                "hp": "83",
+                "attack": "80",
+                "defense": "80",
+                "sp atk": "135",
+                "sp def": "80",
+                "speed": "121",
+                "types": [
+                    "Normal",
+                    "Flying"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "261"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Rattata"
             }
         ],
@@ -581,6 +768,62 @@ const POKEDEX = [
                 "base exp": "145"
             }
         ]
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Rattata"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "255",
+                "growth rate": "Medium Fast",
+                "hp": "30",
+                "attack": "56",
+                "defense": "35",
+                "sp atk": "25",
+                "sp def": "35",
+                "speed": "72",
+                "types": [
+                    "Normal",
+                    "Dark"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "51"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Raticate"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "127",
+                "growth rate": "Medium Fast",
+                "hp": "75",
+                "attack": "71",
+                "defense": "70",
+                "sp atk": "40",
+                "sp def": "80",
+                "speed": "77",
+                "types": [
+                    "Normal",
+                    "Dark"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "145"
+            }
+        ],
     },
     {
         "pokemon": [
@@ -759,6 +1002,34 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "alolan Raichu"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "75",
+                "growth rate": "Medium Fast",
+                "hp": "60",
+                "attack": "85",
+                "defense": "50",
+                "sp atk": "95",
+                "sp def": "85",
+                "speed": "110",
+                "types": [
+                    "Electric",
+                    "Psychic"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "218"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Sandshrew"
             }
         ],
@@ -801,6 +1072,62 @@ const POKEDEX = [
                 "speed": "65",
                 "types": [
                     "Ground"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "158"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Sandshrew"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "255",
+                "growth rate": "Medium Fast",
+                "hp": "50",
+                "attack": "75",
+                "defense": "90",
+                "sp atk": "10",
+                "sp def": "35",
+                "speed": "40",
+                "types": [
+                    "Ice",
+                    "Steel"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "60"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Sandslash"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "90",
+                "growth rate": "Medium Fast",
+                "hp": "75",
+                "attack": "100",
+                "defense": "120",
+                "sp atk": "25",
+                "sp def": "65",
+                "speed": "65",
+                "types": [
+                    "Ice",
+                    "Steel"
                 ]
             }
         ],
@@ -1073,6 +1400,60 @@ const POKEDEX = [
                 "speed": "100",
                 "types": [
                     "Fire"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "177"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Vulpix"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "190",
+                "growth rate": "Medium Fast",
+                "hp": "38",
+                "attack": "41",
+                "defense": "40",
+                "sp atk": "50",
+                "sp def": "65",
+                "speed": "65",
+                "types": [
+                    "Ice"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "60"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Ninetales"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "75",
+                "growth rate": "Medium Fast",
+                "hp": "73",
+                "attack": "67",
+                "defense": "75",
+                "sp atk": "81",
+                "sp def": "100",
+                "speed": "109",
+                "types": [
+                    "Ice"
                 ]
             }
         ],
@@ -1447,6 +1828,62 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "alolan Diglett"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "255",
+                "growth rate": "Medium Fast",
+                "hp": "10",
+                "attack": "55",
+                "defense": "30",
+                "sp atk": "35",
+                "sp def": "45",
+                "speed": "90",
+                "types": [
+                    "Ground",
+                    "Steel"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "53"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Dugtrio"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "50",
+                "growth rate": "Medium Fast",
+                "hp": "35",
+                "attack": "80",
+                "defense": "60",
+                "sp atk": "50",
+                "sp def": "70",
+                "speed": "110",
+                "types": [
+                    "Ground",
+                    "Steel"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "142"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Meowth"
             }
         ],
@@ -1489,6 +1926,60 @@ const POKEDEX = [
                 "speed": "115",
                 "types": [
                     "Normal"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "154"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Meowth"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "255",
+                "growth rate": "Medium Fast",
+                "hp": "40",
+                "attack": "35",
+                "defense": "35",
+                "sp atk": "50",
+                "sp def": "40",
+                "speed": "90",
+                "types": [
+                    "Dark"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "58"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Persian"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "90",
+                "growth rate": "Medium Fast",
+                "hp": "65",
+                "attack": "60",
+                "defense": "60",
+                "sp atk": "75",
+                "sp def": "65",
+                "speed": "115",
+                "types": [
+                    "Dark"
                 ]
             }
         ],
@@ -1826,6 +2317,33 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "M-Alakazam"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "50",
+                "growth rate": "Medium Slow",
+                "hp": "55",
+                "attack": "50",
+                "defense": "65",
+                "sp atk": "175",
+                "sp def": "95",
+                "speed": "150",
+                "types": [
+                    "Psychic"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "266"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Machop"
             }
         ],
@@ -2131,6 +2649,90 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "alolan Geodude"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "255",
+                "growth rate": "Medium Slow",
+                "hp": "40",
+                "attack": "80",
+                "defense": "100",
+                "sp atk": "30",
+                "sp def": "30",
+                "speed": "20",
+                "types": [
+                    "Rock",
+                    "Electric"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "60"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Graveler"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "120",
+                "growth rate": "Medium Slow",
+                "hp": "55",
+                "attack": "95",
+                "defense": "115",
+                "sp atk": "45",
+                "sp def": "45",
+                "speed": "35",
+                "types": [
+                    "Rock",
+                    "Electric"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "137"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Golem"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Medium Slow",
+                "hp": "80",
+                "attack": "120",
+                "defense": "130",
+                "sp atk": "55",
+                "sp def": "65",
+                "speed": "45",
+                "types": [
+                    "Rock",
+                    "Electric"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "223"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Ponyta"
             }
         ],
@@ -2235,6 +2837,34 @@ const POKEDEX = [
         "exp": [
             {
                 "base exp": "172"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "M-Slowbro"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "75",
+                "growth rate": "Medium Fast",
+                "hp": "95",
+                "attack": "75",
+                "defense": "180",
+                "sp atk": "130",
+                "sp def": "80",
+                "speed": "30",
+                "types": [
+                    "Water",
+                    "Psychic"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "207"
             }
         ],
     },
@@ -2490,6 +3120,62 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "alolan Grimer"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "190",
+                "growth rate": "Medium Fast",
+                "hp": "80",
+                "attack": "80",
+                "defense": "50",
+                "sp atk": "40",
+                "sp def": "50",
+                "speed": "25",
+                "types": [
+                    "Poison",
+                    "Dark"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "65"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Muk"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "75",
+                "growth rate": "Medium Fast",
+                "hp": "105",
+                "attack": "105",
+                "defense": "75",
+                "sp atk": "65",
+                "sp def": "100",
+                "speed": "50",
+                "types": [
+                    "Poison",
+                    "Dark"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "175"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Shellder"
             }
         ],
@@ -2623,6 +3309,34 @@ const POKEDEX = [
         "exp": [
             {
                 "base exp": "225"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "M-Gengar"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Medium Slow",
+                "hp": "60",
+                "attack": "65",
+                "defense": "80",
+                "sp atk": "170",
+                "sp def": "95",
+                "speed": "130",
+                "types": [
+                    "Ghost",
+                    "Poison"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "270"
             }
         ],
     },
@@ -2875,6 +3589,34 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "alolan Exeggutor"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Slow",
+                "hp": "95",
+                "attack": "105",
+                "defense": "85",
+                "sp atk": "125",
+                "sp def": "65",
+                "speed": "45",
+                "types": [
+                    "Grass",
+                    "Dragon"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "182"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Cubone"
             }
         ],
@@ -2917,6 +3659,34 @@ const POKEDEX = [
                 "speed": "45",
                 "types": [
                     "Ground"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "149"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "alolan Marowak"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "75",
+                "growth rate": "Medium Fast",
+                "hp": "60",
+                "attack": "80",
+                "defense": "110",
+                "sp atk": "50",
+                "sp def": "80",
+                "speed": "45",
+                "types": [
+                    "Fire",
+                    "Ghost"
                 ]
             }
         ],
@@ -3195,6 +3965,33 @@ const POKEDEX = [
         "exp": [
             {
                 "base exp": "172"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "M-Kangaskhan"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Medium Fast",
+                "hp": "105",
+                "attack": "125",
+                "defense": "100",
+                "sp atk": "60",
+                "sp def": "100",
+                "speed": "100",
+                "types": [
+                    "Normal"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "207"
             }
         ],
     },
@@ -3529,6 +4326,34 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "M-Pinsir"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Slow",
+                "hp": "65",
+                "attack": "155",
+                "defense": "120",
+                "sp atk": "65",
+                "sp def": "90",
+                "speed": "105",
+                "types": [
+                    "Bug",
+                    "Flying"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "210"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Tauros"
             }
         ],
@@ -3605,6 +4430,34 @@ const POKEDEX = [
         "exp": [
             {
                 "base exp": "189"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "M-Gyarados"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Slow",
+                "hp": "95",
+                "attack": "155",
+                "defense": "109",
+                "sp atk": "70",
+                "sp def": "130",
+                "speed": "81",
+                "types": [
+                    "Water",
+                    "Dark"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "224"
             }
         ],
     },
@@ -3951,6 +4804,34 @@ const POKEDEX = [
     {
         "pokemon": [
             {
+                "Pokemon": "M-Aerodactyl"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "45",
+                "growth rate": "Slow",
+                "hp": "80",
+                "attack": "135",
+                "defense": "85",
+                "sp atk": "70",
+                "sp def": "95",
+                "speed": "150",
+                "types": [
+                    "Rock",
+                    "Flying"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "215"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
                 "Pokemon": "Snorlax"
             }
         ],
@@ -4165,6 +5046,61 @@ const POKEDEX = [
         "exp": [
             {
                 "base exp": "306"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "M-Mewtwo X"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "3",
+                "growth rate": "Slow",
+                "hp": "106",
+                "attack": "190",
+                "defense": "100",
+                "sp atk": "154",
+                "sp def": "100",
+                "speed": "130",
+                "types": [
+                    "Psychic",
+                    "Fighting"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "351"
+            }
+        ],
+    },
+    {
+        "pokemon": [
+            {
+                "Pokemon": "M-Mewtwo Y"
+            }
+        ],
+        "stats": [
+            {
+                "catch rate": "3",
+                "growth rate": "Slow",
+                "hp": "106",
+                "attack": "150",
+                "defense": "70",
+                "sp atk": "194",
+                "sp def": "120",
+                "speed": "140",
+                "types": [
+                    "Psychic"
+                ]
+            }
+        ],
+        "exp": [
+            {
+                "base exp": "351"
             }
         ],
     },
@@ -13616,16 +14552,6 @@ const POKEDEX = [
                 "base exp": "148"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/wormadam-plant.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/wormadam-plant.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/wormadam-plant.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/wormadam-plant.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -13654,16 +14580,6 @@ const POKEDEX = [
                 "base exp": "148"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/mothim.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/mothim.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/mothim.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/mothim.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -13692,16 +14608,6 @@ const POKEDEX = [
                 "base exp": "49"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/combee.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/combee.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/combee.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/combee.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -13730,16 +14636,6 @@ const POKEDEX = [
                 "base exp": "166"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/vespiquen.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/vespiquen.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/vespiquen.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/vespiquen.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -13767,16 +14663,6 @@ const POKEDEX = [
                 "base exp": "142"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/pachirisu.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pachirisu.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/pachirisu.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/pachirisu.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -13804,16 +14690,6 @@ const POKEDEX = [
                 "base exp": "66"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/buizel.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/buizel.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/buizel.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/buizel.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -13841,16 +14717,6 @@ const POKEDEX = [
                 "base exp": "173"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/floatzel.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/floatzel.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/floatzel.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/floatzel.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -13878,16 +14744,6 @@ const POKEDEX = [
                 "base exp": "55"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/cherubi.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/cherubi.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/cherubi.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/cherubi.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -13915,16 +14771,6 @@ const POKEDEX = [
                 "base exp": "158"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/cherrim.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/cherrim.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/cherrim.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/cherrim.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -16394,16 +17240,6 @@ const POKEDEX = [
                 "base exp": "306"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/giratina-altered.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/giratina-altered.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/giratina-altered.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/giratina-altered.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -28200,1252 +29036,6 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "M-Venusaur"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Medium Slow",
-                "hp": "80",
-                "attack": "100",
-                "defense": "123",
-                "sp atk": "122",
-                "sp def": "120",
-                "speed": "80",
-                "types": [
-                    "Grass",
-                    "Poison"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "281"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/003m.png",
-                "back": "assets/sprites/back/003m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s003m.png",
-                "back": "assets/sprites/back/s003m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Charizard X"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Medium Slow",
-                "hp": "78",
-                "attack": "130",
-                "defense": "111",
-                "sp atk": "130",
-                "sp def": "85",
-                "speed": "100",
-                "types": [
-                    "Fire",
-                    "Dragon"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "285"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/006mx.png",
-                "back": "assets/sprites/back/006mx.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s006mx.png",
-                "back": "assets/sprites/back/s006mx.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Charizard Y"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Medium Slow",
-                "hp": "78",
-                "attack": "104",
-                "defense": "78",
-                "sp atk": "159",
-                "sp def": "115",
-                "speed": "100",
-                "types": [
-                    "Fire",
-                    "Flying"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "285"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/006my.png",
-                "back": "assets/sprites/back/006my.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s006my.png",
-                "back": "assets/sprites/back/s006my.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Blastoise"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Medium Slow",
-                "hp": "79",
-                "attack": "103",
-                "defense": "120",
-                "sp atk": "135",
-                "sp def": "115",
-                "speed": "78",
-                "types": [
-                    "Water"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "284"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/009m.png",
-                "back": "assets/sprites/back/009m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s009m.png",
-                "back": "assets/sprites/back/s009m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Beedrill"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Medium Fast",
-                "hp": "65",
-                "attack": "150",
-                "defense": "40",
-                "sp atk": "15",
-                "sp def": "80",
-                "speed": "145",
-                "types": [
-                    "Bug",
-                    "Poison"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "223"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/015m.png",
-                "back": "assets/sprites/back/015m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s015m.png",
-                "back": "assets/sprites/back/s015m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Pidgeot"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Medium Slow",
-                "hp": "83",
-                "attack": "80",
-                "defense": "80",
-                "sp atk": "135",
-                "sp def": "80",
-                "speed": "121",
-                "types": [
-                    "Normal",
-                    "Flying"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "261"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/018m.png",
-                "back": "assets/sprites/back/018m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s018m.png",
-                "back": "assets/sprites/back/s018m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Rattata"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "255",
-                "growth rate": "Medium Fast",
-                "hp": "30",
-                "attack": "56",
-                "defense": "35",
-                "sp atk": "25",
-                "sp def": "35",
-                "speed": "72",
-                "types": [
-                    "Normal",
-                    "Dark"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "51"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/019a.png",
-                "back": "assets/sprites/back/019a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s019a.png",
-                "back": "assets/sprites/back/s019a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Raticate"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "127",
-                "growth rate": "Medium Fast",
-                "hp": "75",
-                "attack": "71",
-                "defense": "70",
-                "sp atk": "40",
-                "sp def": "80",
-                "speed": "77",
-                "types": [
-                    "Normal",
-                    "Dark"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "145"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/020a.png",
-                "back": "assets/sprites/back/020a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s020a.png",
-                "back": "assets/sprites/back/s020a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Raichu"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "75",
-                "growth rate": "Medium Fast",
-                "hp": "60",
-                "attack": "85",
-                "defense": "50",
-                "sp atk": "95",
-                "sp def": "85",
-                "speed": "110",
-                "types": [
-                    "Electric",
-                    "Psychic"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "218"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/026a.png",
-                "back": "assets/sprites/back/026a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s026a.png",
-                "back": "assets/sprites/back/s026a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Sandshrew"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "255",
-                "growth rate": "Medium Fast",
-                "hp": "50",
-                "attack": "75",
-                "defense": "90",
-                "sp atk": "10",
-                "sp def": "35",
-                "speed": "40",
-                "types": [
-                    "Ice",
-                    "Steel"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "60"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/027a.png",
-                "back": "assets/sprites/back/027a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s027a.png",
-                "back": "assets/sprites/back/s027a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Sandslash"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "90",
-                "growth rate": "Medium Fast",
-                "hp": "75",
-                "attack": "100",
-                "defense": "120",
-                "sp atk": "25",
-                "sp def": "65",
-                "speed": "65",
-                "types": [
-                    "Ice",
-                    "Steel"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "158"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/028a.png",
-                "back": "assets/sprites/back/028a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s028a.png",
-                "back": "assets/sprites/back/s028a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Vulpix"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "190",
-                "growth rate": "Medium Fast",
-                "hp": "38",
-                "attack": "41",
-                "defense": "40",
-                "sp atk": "50",
-                "sp def": "65",
-                "speed": "65",
-                "types": [
-                    "Ice"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "60"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/037a.png",
-                "back": "assets/sprites/back/037a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s037a.png",
-                "back": "assets/sprites/back/s037a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Ninetales"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "75",
-                "growth rate": "Medium Fast",
-                "hp": "73",
-                "attack": "67",
-                "defense": "75",
-                "sp atk": "81",
-                "sp def": "100",
-                "speed": "109",
-                "types": [
-                    "Ice"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "177"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/038a.png",
-                "back": "assets/sprites/back/038a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s038a.png",
-                "back": "assets/sprites/back/s038a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Diglett"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "255",
-                "growth rate": "Medium Fast",
-                "hp": "10",
-                "attack": "55",
-                "defense": "30",
-                "sp atk": "35",
-                "sp def": "45",
-                "speed": "90",
-                "types": [
-                    "Ground",
-                    "Steel"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "53"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/050a.png",
-                "back": "assets/sprites/back/050a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s050a.png",
-                "back": "assets/sprites/back/s050a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Dugtrio"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "50",
-                "growth rate": "Medium Fast",
-                "hp": "35",
-                "attack": "80",
-                "defense": "60",
-                "sp atk": "50",
-                "sp def": "70",
-                "speed": "110",
-                "types": [
-                    "Ground",
-                    "Steel"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "142"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/051a.png",
-                "back": "assets/sprites/back/051a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s051a.png",
-                "back": "assets/sprites/back/s051a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Meowth"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "255",
-                "growth rate": "Medium Fast",
-                "hp": "40",
-                "attack": "35",
-                "defense": "35",
-                "sp atk": "50",
-                "sp def": "40",
-                "speed": "90",
-                "types": [
-                    "Dark"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "58"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/052a.png",
-                "back": "assets/sprites/back/052a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s052a.png",
-                "back": "assets/sprites/back/s052a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Persian"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "90",
-                "growth rate": "Medium Fast",
-                "hp": "65",
-                "attack": "60",
-                "defense": "60",
-                "sp atk": "75",
-                "sp def": "65",
-                "speed": "115",
-                "types": [
-                    "Dark"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "154"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/053a.png",
-                "back": "assets/sprites/back/053a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s053a.png",
-                "back": "assets/sprites/back/s053a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Alakazam"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "50",
-                "growth rate": "Medium Slow",
-                "hp": "55",
-                "attack": "50",
-                "defense": "65",
-                "sp atk": "175",
-                "sp def": "95",
-                "speed": "150",
-                "types": [
-                    "Psychic"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "266"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/065m.png",
-                "back": "assets/sprites/back/065m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s065m.png",
-                "back": "assets/sprites/back/s065m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Geodude"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "255",
-                "growth rate": "Medium Slow",
-                "hp": "40",
-                "attack": "80",
-                "defense": "100",
-                "sp atk": "30",
-                "sp def": "30",
-                "speed": "20",
-                "types": [
-                    "Rock",
-                    "Electric"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "60"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/074a.png",
-                "back": "assets/sprites/back/074a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s074a.png",
-                "back": "assets/sprites/back/s074a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Graveler"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "120",
-                "growth rate": "Medium Slow",
-                "hp": "55",
-                "attack": "95",
-                "defense": "115",
-                "sp atk": "45",
-                "sp def": "45",
-                "speed": "35",
-                "types": [
-                    "Rock",
-                    "Electric"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "137"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/075a.png",
-                "back": "assets/sprites/back/075a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s075a.png",
-                "back": "assets/sprites/back/s075a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Golem"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Medium Slow",
-                "hp": "80",
-                "attack": "120",
-                "defense": "130",
-                "sp atk": "55",
-                "sp def": "65",
-                "speed": "45",
-                "types": [
-                    "Rock",
-                    "Electric"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "223"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/076a.png",
-                "back": "assets/sprites/back/076a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s076a.png",
-                "back": "assets/sprites/back/s076a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Slowbro"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "75",
-                "growth rate": "Medium Fast",
-                "hp": "95",
-                "attack": "75",
-                "defense": "180",
-                "sp atk": "130",
-                "sp def": "80",
-                "speed": "30",
-                "types": [
-                    "Water",
-                    "Psychic"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "207"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/080m.png",
-                "back": "assets/sprites/back/080m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s080m.png",
-                "back": "assets/sprites/back/s080m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Grimer"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "190",
-                "growth rate": "Medium Fast",
-                "hp": "80",
-                "attack": "80",
-                "defense": "50",
-                "sp atk": "40",
-                "sp def": "50",
-                "speed": "25",
-                "types": [
-                    "Poison",
-                    "Dark"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "65"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/088a.png",
-                "back": "assets/sprites/back/088a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s088a.png",
-                "back": "assets/sprites/back/s088a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Muk"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "75",
-                "growth rate": "Medium Fast",
-                "hp": "105",
-                "attack": "105",
-                "defense": "75",
-                "sp atk": "65",
-                "sp def": "100",
-                "speed": "50",
-                "types": [
-                    "Poison",
-                    "Dark"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "175"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/089a.png",
-                "back": "assets/sprites/back/089a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s089a.png",
-                "back": "assets/sprites/back/s089a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Gengar"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Medium Slow",
-                "hp": "60",
-                "attack": "65",
-                "defense": "80",
-                "sp atk": "170",
-                "sp def": "95",
-                "speed": "130",
-                "types": [
-                    "Ghost",
-                    "Poison"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "270"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/094m.png",
-                "back": "assets/sprites/back/094m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s094m.png",
-                "back": "assets/sprites/back/s094m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Exeggutor"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Slow",
-                "hp": "95",
-                "attack": "105",
-                "defense": "85",
-                "sp atk": "125",
-                "sp def": "65",
-                "speed": "45",
-                "types": [
-                    "Grass",
-                    "Dragon"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "182"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/103a.png",
-                "back": "assets/sprites/back/103a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s103a.png",
-                "back": "assets/sprites/back/s103a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "A-Marowak"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "75",
-                "growth rate": "Medium Fast",
-                "hp": "60",
-                "attack": "80",
-                "defense": "110",
-                "sp atk": "50",
-                "sp def": "80",
-                "speed": "45",
-                "types": [
-                    "Fire",
-                    "Ghost"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "149"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/105a.png",
-                "back": "assets/sprites/back/105a.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s105a.png",
-                "back": "assets/sprites/back/s105a.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Kangaskhan"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Medium Fast",
-                "hp": "105",
-                "attack": "125",
-                "defense": "100",
-                "sp atk": "60",
-                "sp def": "100",
-                "speed": "100",
-                "types": [
-                    "Normal"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "207"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/115m.png",
-                "back": "assets/sprites/back/115m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s115m.png",
-                "back": "assets/sprites/back/s115m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Pinsir"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Slow",
-                "hp": "65",
-                "attack": "155",
-                "defense": "120",
-                "sp atk": "65",
-                "sp def": "90",
-                "speed": "105",
-                "types": [
-                    "Bug",
-                    "Flying"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "210"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/127m.png",
-                "back": "assets/sprites/back/127m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s127m.png",
-                "back": "assets/sprites/back/s127m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Gyarados"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Slow",
-                "hp": "95",
-                "attack": "155",
-                "defense": "109",
-                "sp atk": "70",
-                "sp def": "130",
-                "speed": "81",
-                "types": [
-                    "Water",
-                    "Dark"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "224"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/130m.png",
-                "back": "assets/sprites/back/130m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s130m.png",
-                "back": "assets/sprites/back/s130m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Aerodactyl"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "45",
-                "growth rate": "Slow",
-                "hp": "80",
-                "attack": "135",
-                "defense": "85",
-                "sp atk": "70",
-                "sp def": "95",
-                "speed": "150",
-                "types": [
-                    "Rock",
-                    "Flying"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "215"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/142m.png",
-                "back": "assets/sprites/back/142m.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s142m.png",
-                "back": "assets/sprites/back/s142m.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Mewtwo X"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "3",
-                "growth rate": "Slow",
-                "hp": "106",
-                "attack": "190",
-                "defense": "100",
-                "sp atk": "154",
-                "sp def": "100",
-                "speed": "130",
-                "types": [
-                    "Psychic",
-                    "Fighting"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "351"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/150mx.png",
-                "back": "assets/sprites/back/150mx.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s150mx.png",
-                "back": "assets/sprites/back/s150mx.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
-                "Pokemon": "M-Mewtwo Y"
-            }
-        ],
-        "stats": [
-            {
-                "catch rate": "3",
-                "growth rate": "Slow",
-                "hp": "106",
-                "attack": "150",
-                "defense": "70",
-                "sp atk": "194",
-                "sp def": "120",
-                "speed": "140",
-                "types": [
-                    "Psychic"
-                ]
-            }
-        ],
-        "exp": [
-            {
-                "base exp": "351"
-            }
-        ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/150my.png",
-                "back": "assets/sprites/back/150my.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s150my.png",
-                "back": "assets/sprites/back/s150my.png"
-            }
-        }
-    },
-    {
-        "pokemon": [
-            {
                 "Pokemon": "M-Ampharos"
             }
         ],
@@ -31019,16 +30609,6 @@ const POKEDEX = [
                 "base exp": "306"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/giratina-origin.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/giratina-origin.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/giratina-origin.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/giratina-origin.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -31398,16 +30978,6 @@ const POKEDEX = [
                 "base exp": "270"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/meloetta-pirouette.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/meloetta-pirouette.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/meloetta-pirouette.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/meloetta-pirouette.gif"
-            }
-        }
     },
     {
         "pokemon": [
