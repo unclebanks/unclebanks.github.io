@@ -23,6 +23,7 @@ export default (lastSave, appModel) => {
             shinyDex: 0,
             razzBerry: 0,
             timeMachine: 0,
+            megaBracelet: 0,
             kantoOldRod: 0,
             kantoGoodRod: 0,
             kantoSuperRod: 0,
@@ -32,7 +33,7 @@ export default (lastSave, appModel) => {
             hoennOldRod: 0,
             hoennGoodRod: 0,
             hoennSuperRod: 0,
-            sinnoholdRod: 0,
+            sinnohOldRod: 0,
             sinnohGoodRod: 0,
             sinnohSuperRod: 0,
             unovaOldRod: 0,
@@ -48,6 +49,55 @@ export default (lastSave, appModel) => {
             galarGoodRod: 0,
             galarSuperRod: 0,
             saveKill: 0,
+        },
+        megaStones: {
+            abomasite: 0,
+            absolite: 0,
+            aerodactylite: 0,
+            aggronite: 0,
+            alakazite: 0,
+            altarianite: 0,
+            ampharosite: 0,
+            audinite: 0,
+            banettite: 0,
+            beedrillite: 0,
+            blastoisinite: 0,
+            blazikenite: 0,
+            cameruptite: 0,
+            charizarditeX: 0,
+            charizarditeY: 0,
+            diancite: 0,
+            galladite: 0,
+            garchompite: 0,
+            gardevoirite: 0,
+            gengarite: 0,
+            glalitite: 0,
+            gyaradosite: 0,
+            heracronite: 0,
+            houndoominite: 0,
+            kangaskhanite: 0,
+            latiasite: 0,
+            latiosite: 0,
+            lopunnite: 0,
+            lucarionite: 0,
+            manectite: 0,
+            mawilite: 0,
+            medichamite: 0,
+            metagrossite: 0,
+            mewtwoniteX: 0,
+            mewtwoniteY: 0,
+            pidgeotite: 0,
+            pinsirite: 0,
+            sablenite: 0,
+            salamencite: 0,
+            sceptilite: 0,
+            scizorite: 0,
+            sharpedonite: 0,
+            slowbronite: 0,
+            steelixite: 0,
+            swampertite: 0,
+            tyranitarite: 0,
+            venusaurite: 0,
         },
         evoStones: {
             thunderStone: 0,
@@ -349,6 +399,51 @@ export default (lastSave, appModel) => {
             if (routeData.johtoSuperRod && Player.unlocked.johtoSuperRod < routeData.johtoSuperRod) {
                 return false;
             }
+            if (routeData.hoennOldRod && Player.unlocked.hoennOldRod < routeData.hoennOldRod) {
+                return false;
+            }
+            if (routeData.hoennGoodRod && Player.unlocked.hoennGoodRod < routeData.hoennGoodRod) {
+                return false;
+            }
+            if (routeData.hoennSuperRod && Player.unlocked.hoennSuperRod < routeData.hoennSuperRod) {
+                return false;
+            }
+            if (routeData.sinnohOldRod && Player.unlocked.sinnohOldRod < routeData.sinnohOldRod) {
+                return false;
+            }
+            if (routeData.sinnohGoodRod && Player.unlocked.sinnohGoodRod < routeData.sinnohGoodRod) {
+                return false;
+            }
+            if (routeData.sinnohSuperRod && Player.unlocked.sinnohSuperRod < routeData.sinnohSuperRod) {
+                return false;
+            }
+            if (routeData.unovaOldRod && Player.unlocked.unovaOldRod < routeData.unovaOldRod) {
+                return false;
+            }
+            if (routeData.unovaGoodRod && Player.unlocked.unovaGoodRod < routeData.unovaGoodRod) {
+                return false;
+            }
+            if (routeData.unovaSuperRod && Player.unlocked.unovaSuperRod < routeData.unovaSuperRod) {
+                return false;
+            }
+            if (routeData.kalosOldRod && Player.unlocked.kalosOldRod < routeData.kalosOldRod) {
+                return false;
+            }
+            if (routeData.kalosGoodRod && Player.unlocked.kalosGoodRod < routeData.kalosGoodRod) {
+                return false;
+            }
+            if (routeData.kalosSuperRod && Player.unlocked.kalosSuperRod < routeData.kalosSuperRod) {
+                return false;
+            }
+            if (routeData.alolaOldRod && Player.unlocked.alolaOldRod < routeData.alolaOldRod) {
+                return false;
+            }
+            if (routeData.alolaGoodRod && Player.unlocked.alolaGoodRod < routeData.alolaGoodRod) {
+                return false;
+            }
+            if (routeData.alolaSuperRod && Player.unlocked.alolaSuperRod < routeData.alolaSuperRod) {
+                return false;
+            }
             if (routeData._unlock) {
                 return this.meetsCriteria(routeData._unlock);
             }
@@ -376,6 +471,7 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('badges', JSON.stringify(this.badges));
                 localStorage.setItem('wins', JSON.stringify(this.wins));
                 localStorage.setItem('unlocked', JSON.stringify(this.unlocked));
+                localStorage.setItem('megaStones', JSON.stringify(this.megaStones));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
             }
@@ -391,6 +487,7 @@ export default (lastSave, appModel) => {
                 badges: this.badges,
                 wins: this.wins,
                 unlocked: this.unlocked,
+                megaStones: this.megaStones,
                 evoStones: this.evoStones,
                 currencyAmount: this.currencyAmount,
                 battleItems: this.battleItems,
@@ -459,6 +556,9 @@ export default (lastSave, appModel) => {
             }
             if (JSON.parse(localStorage.getItem('currencyAmount'))) {
                 this.currencyAmount = JSON.parse(localStorage.getItem('currencyAmount'));
+            }
+            if (JSON.parse(localStorage.getItem('megaStones'))) {
+                this.megaStones = JSON.parse(localStorage.getItem('megaStones'));
             }
             if (JSON.parse(localStorage.getItem('evoStones'))) {
                 this.evoStones = JSON.parse(localStorage.getItem('evoStones'));
