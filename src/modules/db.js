@@ -500,7 +500,7 @@ const POKEDEX = [
             ],
         },
         'exp': 51,
-        'id': '19-Alolan',
+        'id': '19-A',
     },
     {
         'name': 'Alolan Raticate',
@@ -519,7 +519,7 @@ const POKEDEX = [
             ],
         },
         'exp': 145,
-        'id': '20-Alolan',
+        'id': '20-A',
     },
     {
         'name': 'Spearow',
@@ -648,7 +648,7 @@ const POKEDEX = [
             ],
         },
         'exp': 218,
-        'id': '26-Alolan',
+        'id': '26-A',
     },
     {
         'name': 'Sandshrew',
@@ -703,7 +703,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
-        'id': '27-Alolan',
+        'id': '27-A',
     },
     {
         'name': 'Alolan Sandslash',
@@ -722,7 +722,7 @@ const POKEDEX = [
             ],
         },
         'exp': 158,
-        'id': '28-Alolan',
+        'id': '28-A',
     },
     {
         'name': 'Nidoran F',
@@ -922,7 +922,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
-        'id': '37-Alolan',
+        'id': '37-A',
     },
     {
         'name': 'Alolan Ninetales',
@@ -940,7 +940,7 @@ const POKEDEX = [
             ],
         },
         'exp': 177,
-        'id': '38-Alolan',
+        'id': '38-A',
     },
     {
         'name': 'Jigglypuff',
@@ -1204,7 +1204,7 @@ const POKEDEX = [
             ],
         },
         'exp': 53,
-        'id': '50-Alolan',
+        'id': '50-A',
     },
     {
         'name': 'Alolan Dugtrio',
@@ -1223,7 +1223,7 @@ const POKEDEX = [
             ],
         },
         'exp': 142,
-        'id': '51-Alolan',
+        'id': '51-A',
     },
     {
         'name': 'Meowth',
@@ -1277,7 +1277,7 @@ const POKEDEX = [
             ],
         },
         'exp': 58,
-        'id': '52-Alolan',
+        'id': '52-A',
     },
     {
         'name': 'Alolan Persian',
@@ -1295,7 +1295,7 @@ const POKEDEX = [
             ],
         },
         'exp': 154,
-        'id': '53-Alolan',
+        'id': '53-A',
     },
     {
         'name': 'Psyduck',
@@ -1755,7 +1755,7 @@ const POKEDEX = [
             ],
         },
         'exp': 60,
-        'id': '74-Alolan',
+        'id': '74-A',
     },
     {
         'name': 'Alolan Graveler',
@@ -1774,7 +1774,7 @@ const POKEDEX = [
             ],
         },
         'exp': 137,
-        'id': '75-Alolan',
+        'id': '75-A',
     },
     {
         'name': 'Alolan Golem',
@@ -1793,7 +1793,7 @@ const POKEDEX = [
             ],
         },
         'exp': 223,
-        'id': '76-Alolan',
+        'id': '76-A',
     },
     {
         'name': 'Ponyta',
@@ -2073,7 +2073,7 @@ const POKEDEX = [
             ],
         },
         'exp': 65,
-        'id': '88-Alolan',
+        'id': '88-A',
     },
     {
         'name': 'Alolan Muk',
@@ -2092,7 +2092,7 @@ const POKEDEX = [
             ],
         },
         'exp': 175,
-        'id': '89-Alolan',
+        'id': '89-A',
     },
     {
         'name': 'Shellder',
@@ -2389,7 +2389,7 @@ const POKEDEX = [
             ],
         },
         'exp': 182,
-        'id': '103-Alolan',
+        'id': '103-A',
     },
     {
         'name': 'Cubone',
@@ -2444,7 +2444,7 @@ const POKEDEX = [
             ],
         },
         'exp': 149,
-        'id': '105-Alolan',
+        'id': '105-A',
     },
     {
         'name': 'Hitmonlee',
