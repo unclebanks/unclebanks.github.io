@@ -242,16 +242,6 @@ const POKEDEX = [
                 "base exp": "285"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/006mx.png",
-                "back": "assets/sprites/back/006mx.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s006mx.png",
-                "back": "assets/sprites/back/s006mx.png"
-            }
-        }
     },
     {
         "pokemon": [
@@ -280,16 +270,6 @@ const POKEDEX = [
                 "base exp": "285"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "assets/sprites/006my.png",
-                "back": "assets/sprites/back/006my.png"
-            },
-            "shiny": {
-                "front": "assets/sprites/s006my.png",
-                "back": "assets/sprites/back/s006my.png"
-            }
-        }
     },
     {
         "pokemon": [
@@ -772,7 +752,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Rattata"
+                "Pokemon": "Alolan Rattata"
             }
         ],
         "stats": [
@@ -800,7 +780,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Raticate"
+                "Pokemon": "Alolan Raticate"
             }
         ],
         "stats": [
@@ -1002,7 +982,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Raichu"
+                "Pokemon": "Alolan Raichu"
             }
         ],
         "stats": [
@@ -1084,7 +1064,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Sandshrew"
+                "Pokemon": "Alolan Sandshrew"
             }
         ],
         "stats": [
@@ -1112,7 +1092,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Sandslash"
+                "Pokemon": "Alolan Sandslash"
             }
         ],
         "stats": [
@@ -1412,7 +1392,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Vulpix"
+                "Pokemon": "Alolan Vulpix"
             }
         ],
         "stats": [
@@ -1439,7 +1419,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Ninetales"
+                "Pokemon": "Alolan Ninetales"
             }
         ],
         "stats": [
@@ -1828,7 +1808,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Diglett"
+                "Pokemon": "Alolan Diglett"
             }
         ],
         "stats": [
@@ -1856,7 +1836,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Dugtrio"
+                "Pokemon": "Alolan Dugtrio"
             }
         ],
         "stats": [
@@ -1938,7 +1918,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Meowth"
+                "Pokemon": "Alolan Meowth"
             }
         ],
         "stats": [
@@ -1965,7 +1945,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Persian"
+                "Pokemon": "Alolan Persian"
             }
         ],
         "stats": [
@@ -2649,7 +2629,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Geodude"
+                "Pokemon": "Alolan Geodude"
             }
         ],
         "stats": [
@@ -2677,7 +2657,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Graveler"
+                "Pokemon": "Alolan Graveler"
             }
         ],
         "stats": [
@@ -2705,7 +2685,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Golem"
+                "Pokemon": "Alolan Golem"
             }
         ],
         "stats": [
@@ -3120,7 +3100,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Grimer"
+                "Pokemon": "Alolan Grimer"
             }
         ],
         "stats": [
@@ -3148,7 +3128,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Muk"
+                "Pokemon": "Alolan Muk"
             }
         ],
         "stats": [
@@ -3589,7 +3569,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Exeggutor"
+                "Pokemon": "Alolan Exeggutor"
             }
         ],
         "stats": [
@@ -3671,7 +3651,7 @@ const POKEDEX = [
     {
         "pokemon": [
             {
-                "Pokemon": "alolan Marowak"
+                "Pokemon": "Alolan Marowak"
             }
         ],
         "stats": [
@@ -16526,16 +16506,6 @@ const POKEDEX = [
                 "base exp": "245"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/togekiss.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/togekiss.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/togekiss.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/togekiss.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -16564,16 +16534,6 @@ const POKEDEX = [
                 "base exp": "180"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/yanmega.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/yanmega.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/yanmega.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/yanmega.gif"
-            }
-        }
     },
     {
         "pokemon": [
@@ -16601,16 +16561,6 @@ const POKEDEX = [
                 "base exp": "184"
             }
         ],
-        "images": {
-            "normal": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/normal/leafeon.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-normal/leafeon.gif"
-            },
-            "shiny": {
-                "front": "https://img.pokemondb.net/sprites/black-white/anim/shiny/leafeon.gif",
-                "back": "https://img.pokemondb.net/sprites/black-white/anim/back-shiny/leafeon.gif"
-            }
-        }
     },
     {
         "pokemon": [
