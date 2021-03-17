@@ -29,7 +29,7 @@
             <div class="card">
               <header class="card-header">
                 <p class="card-header-title py-1">
-                  # {{ entry.id }}
+                  # {{ pokedexId(entry) }}
                 </p>
                 <div class="card-header-icon">
                   <span class="icon is-svg">
@@ -117,6 +117,10 @@ export default {
         pokeImage(entry) {
             const shinyOrNormal = entry.flag === 8 ? 'shiny' : 'normal';
             return `assets/sprites/${shinyOrNormal}/front/${entry.name}.png`;
+        },
+
+        pokedexId(entry) {
+            return POKEDEX[entry.id - 1].id;
         },
     },
 };
