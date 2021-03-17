@@ -2,7 +2,7 @@ import { POKEDEXFLAGS, BALLRNG } from './data';
 import POKEDEX from './db';
 import mkPoke from './poke';
 import ROUTES from './routes';
-import { mergeArray, pokeByName } from './utilities';
+import { pokeByName } from './utilities';
 
 export default (lastSave, appModel) => {
     let dom;
@@ -236,7 +236,7 @@ export default (lastSave, appModel) => {
 
             appModel.$store.commit('pokemon/add', poke);
         },
-        findDexIndex: (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.name),
+        findDexIndex: (p) => POKEDEX.findIndex((x) => x.name == p.name),
         addPokedex: function (pokeName, flag) {
             appModel.$store.commit('pokedex/addData', { pokeName, flag });
         },

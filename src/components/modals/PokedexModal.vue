@@ -92,17 +92,17 @@ export default {
     methods: {
         type1(entry) {
             if (entry.flag === 0) { return ''; }
-            return POKEDEX[entry.id - 1].stats[0].types[0].toLowerCase();
+            return POKEDEX[entry.id - 1].stats.types[0].toLowerCase();
         },
 
         type2(entry) {
             if (entry.flag === 0) { return ''; }
-            const types = POKEDEX[entry.id - 1].stats[0].types;
+            const types = POKEDEX[entry.id - 1].stats.types;
             return types[types.length - 1].toLowerCase();
         },
 
         isDualType(entry) {
-            return POKEDEX[entry.id - 1].stats[0].types.length === 2;
+            return POKEDEX[entry.id - 1].stats.types.length === 2;
         },
 
         caughtIndicationClass(entry) {
