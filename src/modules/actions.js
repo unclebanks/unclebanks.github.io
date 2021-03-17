@@ -422,7 +422,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (!count) {
                 return alert(`You don't have any of these.`);
             }
-            //TODO: PixL - implement
             let vitaminModal = document.getElementById('vitaminModal');
             vitaminModal.setAttribute('data-vitamin', vitamin);
             this.updateVitaminModal();
