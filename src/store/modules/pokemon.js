@@ -1,3 +1,5 @@
+import POKEDEX from '../../modules/db';
+
 const moveToFirst = (list, index) => [
     list[index],
     ...list.slice(0, index),
@@ -18,12 +20,27 @@ const moveUp = (list, index) => [
     ...list.slice(parseInt(index) + 1),
 ];
 
+const cmpFunctions = {
+    lvl: (lhs, rhs) => lhs.level() - rhs.level(),
+    dex: (lhs, rhs) => {
+        const index = (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.pokeName());
+        return index(lhs) - index(rhs);
+    },
+    vlv: (lhs, rhs) => lhs.level() - rhs.level() || lhs.avgAttack() - rhs.avgAttack(),
+    time: (lhs, rhs) => lhs.caughtAt - rhs.caughtAt,
+};
+
+const inverseCmp = (cmpFunc) => (lhs, rhs) => -cmpFunc(lhs, rhs);
+
 export default {
     namespaced: true,
 
     state: {
         party: [],
+        //
         storage: [],
+        storageSortDirection: 'asc',
+        storageSortMethod: 'dex',
         //
         activePokeID: 0,
         lastHeal: Date.now(),
@@ -122,7 +139,14 @@ export default {
     },
 
     getters: {
-        // sortedStorage,
+        sortedStorage(state) {
+            let cmpFunc = cmpFunctions[state.storageSortMethod];
+            if (state.storageSortDirection === 'desc') {
+                cmpFunc = inverseCmp(cmpFunc);
+            }
+
+            return state.storage.sort(cmpFunc);
+        },
         // sortedParty,
         timeToHeal(state) {
             return Math.max(0, 30000 - (Date.now() - state.lastHeal));

@@ -11,11 +11,18 @@ const EVOLUTIONS = {
     'Charmeleon': [
         { 'to': 'Charizard', 'requires': { 'type': 'level', 'level': '36' } },
     ],
+    'Charizard': [
+        { 'to': 'M-Charizard X', 'requires': { 'type': 'megaStone', 'megaStone': 'CharizarditeX' } },
+        { 'to': 'M-Charizard Y', 'requires': { 'type': 'megaStone', 'megaStone': 'CharizarditeY' } },
+    ],
     'Squirtle': [
         { 'to': 'Wartortle', 'requires': { 'type': 'level', 'level': '16' } },
     ],
     'Wartortle': [
         { 'to': 'Blastoise', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Blastoise': [
+        { 'to': 'M-Blastoise', 'requires': { 'type': 'megaStone', 'megaStone': 'Blastoisinite' } },
     ],
     'Caterpie': [
         { 'to': 'Metapod', 'requires': { 'type': 'level', 'level': '7' } },
@@ -29,14 +36,23 @@ const EVOLUTIONS = {
     'Kakuna': [
         { 'to': 'Beedrill', 'requires': { 'type': 'level', 'level': '10' } },
     ],
+    'Beedrill': [
+        { 'to': 'M-Beedrill', 'requires': { 'type': 'megaStone', 'megaStone': 'Beedrillite' } },
+    ],
     'Pidgey': [
         { 'to': 'Pidgeotto', 'requires': { 'type': 'level', 'level': '18' } },
     ],
     'Pidgeotto': [
         { 'to': 'Pidgeot', 'requires': { 'type': 'level', 'level': '36' } },
     ],
+    'Pidgeot': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Rattata': [
         { 'to': 'Raticate', 'requires': { 'type': 'level', 'level': '20' } },
+    ],
+    'Alolan Rattata': [
+        { 'to': 'Alolan Raticate', 'requires': { 'type': 'level', 'level': '20' } },
     ],
     'Spearow': [
         { 'to': 'Fearow', 'requires': { 'type': 'level', 'level': '20' } },
@@ -46,9 +62,13 @@ const EVOLUTIONS = {
     ],
     'Pikachu': [
         { 'to': 'Raichu', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
+        { 'to': 'Alolan Raichu', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
     ],
     'Sandshrew': [
         { 'to': 'Sandslash', 'requires': { 'type': 'level', 'level': '22' } },
+    ],
+    'Alolan Sandshrew': [
+        { 'to': 'Alolan Sandslash', 'requires': { 'type': 'level', 'level': '22' } },
     ],
     'Nidoran F': [
         { 'to': 'Nidorina', 'requires': { 'type': 'level', 'level': '16' } },
@@ -67,6 +87,9 @@ const EVOLUTIONS = {
     ],
     'Vulpix': [
         { 'to': 'Ninetales', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
+    ],
+    'Alolan Vulpix': [
+        { 'to': 'Alolan Ninetales', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
     ],
     'Jigglypuff': [
         { 'to': 'Wigglytuff', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
@@ -93,8 +116,14 @@ const EVOLUTIONS = {
     'Diglett': [
         { 'to': 'Dugtrio', 'requires': { 'type': 'level', 'level': '26' } },
     ],
+    'Alolan Diglett': [
+        { 'to': 'Alolan Dugtrio', 'requires': { 'type': 'level', 'level': '26' } },
+    ],
     'Meowth': [
         { 'to': 'Persian', 'requires': { 'type': 'level', 'level': '28' } },
+    ],
+    'Alolan Meowth': [
+        { 'to': 'Alolan Persian', 'requires': { 'type': 'level', 'level': '28' } },
     ],
     'Psyduck': [
         { 'to': 'Golduck', 'requires': { 'type': 'level', 'level': '33' } },
@@ -118,6 +147,15 @@ const EVOLUTIONS = {
     'Kadabra': [
         { 'to': 'Alakazam', 'requires': { 'type': 'level', 'level': '40' } },
     ],
+    'Alakazam': [
+        { 'to': 'M-Alakazam', 'requires': { 'type': 'megaStone', 'megaStone': 'Alakazite' } },
+    ],
+    'Kangaskhan': [
+        { 'to': 'M-Kangaskhan', 'requires': { 'type': 'megaStone', 'megaStone': 'Kangaskhanite' } },
+    ],
+    'Pinsir': [
+        { 'to': 'M-Pinsir', 'requires': { 'type': 'megaStone', 'megaStone': 'Pinsirite' } },
+    ],
     'Machop': [
         { 'to': 'Machoke', 'requires': { 'type': 'level', 'level': '28' } },
     ],
@@ -139,11 +177,20 @@ const EVOLUTIONS = {
     'Graveler': [
         { 'to': 'Golem', 'requires': { 'type': 'level', 'level': '40' } },
     ],
+    'Alolan Geodude': [
+        { 'to': 'Alolan Graveler', 'requires': { 'type': 'level', 'level': '25' } },
+    ],
+    'Alolan Graveler': [
+        { 'to': 'Alolan Golem', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
     'Ponyta': [
         { 'to': 'Rapidash', 'requires': { 'type': 'level', 'level': '40' } },
     ],
     'Slowpoke': [
         { 'to': 'Slowbro', 'requires': { 'type': 'level', 'level': '37' } },
+    ],
+    'Slowbro': [
+        { 'to': 'M-Slowbro', 'requires': { 'type': 'megaStone', 'megaStone': 'Slowbronite' } },
     ],
     'Magnemite': [
         { 'to': 'Magneton', 'requires': { 'type': 'level', 'level': '30' } },
@@ -157,6 +204,9 @@ const EVOLUTIONS = {
     'Grimer': [
         { 'to': 'Muk', 'requires': { 'type': 'level', 'level': '38' } },
     ],
+    'Alolan Grimer': [
+        { 'to': 'Alolan Muk', 'requires': { 'type': 'level', 'level': '38' } },
+    ],
     'Shellder': [
         { 'to': 'Cloyster', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
     ],
@@ -165,6 +215,9 @@ const EVOLUTIONS = {
     ],
     'Haunter': [
         { 'to': 'Gengar', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Gengar': [
+        { 'to': 'M-Gengar', 'requires': { 'type': 'megaStone', 'megaStone': 'Gengarite' } },
     ],
     'Drowzee': [
         { 'to': 'Hypno', 'requires': { 'type': 'level', 'level': '26' } },
@@ -177,9 +230,11 @@ const EVOLUTIONS = {
     ],
     'Exeggcute': [
         { 'to': 'Exeggutor', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
+        { 'to': 'Alola Exeggutor', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
     ],
     'Cubone': [
         { 'to': 'Marowak', 'requires': { 'type': 'level', 'level': '28' } },
+        { 'to': 'Alolan Marowak', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
     ],
     'Koffing': [
         { 'to': 'Weezing', 'requires': { 'type': 'level', 'level': '35' } },
@@ -202,6 +257,12 @@ const EVOLUTIONS = {
     'Magikarp': [
         { 'to': 'Gyarados', 'requires': { 'type': 'level', 'level': '20' } },
     ],
+    'Gyarados': [
+        { 'to': 'M-Gyarados', 'requires': { 'type': 'megaStone', 'megaStone': 'Gyaradosite' } },
+    ],
+    'Aerodactyl': [
+        { 'to': 'M-Aerodactyl', 'requires': { 'type': 'megaStone', 'megaStone': 'Aerodactylite' } },
+    ],
     'Eevee': [
         { 'to': 'Flareon', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
         { 'to': 'Jolteon', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
@@ -218,6 +279,9 @@ const EVOLUTIONS = {
     ],
     'Dragonair': [
         { 'to': 'Dragonite', 'requires': { 'type': 'level', 'level': '55' } },
+    ],
+    'Mewtwo': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
     'Chikorita': [
         { 'to': 'Bayleef', 'requires': { 'type': 'level', 'level': '16' } },
@@ -273,6 +337,9 @@ const EVOLUTIONS = {
     'Flaaffy': [
         { 'to': 'Ampharos', 'requires': { 'type': 'level', 'level': '30' } },
     ],
+    'Ampharos': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Marill': [
         { 'to': 'Azumarill', 'requires': { 'type': 'level', 'level': '18' } },
     ],
@@ -284,6 +351,12 @@ const EVOLUTIONS = {
     ],
     'Scyther': [
         { 'to': 'Scizor', 'requires': { 'type': 'stone', 'stone': 'metalCoat' } },
+    ],
+    'Heracross': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Scizor': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
     'Sunkern': [
         { 'to': 'Sunflora', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
@@ -299,6 +372,9 @@ const EVOLUTIONS = {
     ],
     'Onix': [
         { 'to': 'Steelix', 'requires': { 'type': 'stone', 'stone': 'metalCoat' } },
+    ],
+    'Steelix': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
     'Snubbull': [
         { 'to': 'Granbull', 'requires': { 'type': 'level', 'level': '23' } },
@@ -318,6 +394,9 @@ const EVOLUTIONS = {
     'Houndour': [
         { 'to': 'Houndoom', 'requires': { 'type': 'level', 'level': '24' } },
     ],
+    'Houndoom': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Phanpy': [
         { 'to': 'Donphan', 'requires': { 'type': 'level', 'level': '25' } },
     ],
@@ -327,11 +406,17 @@ const EVOLUTIONS = {
     'Pupitar': [
         { 'to': 'Tyranitar', 'requires': { 'type': 'level', 'level': '55' } },
     ],
+    'Tyranitar': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Treecko': [
         { 'to': 'Grovyle', 'requires': { 'type': 'level', 'level': '16' } },
     ],
     'Grovyle': [
         { 'to': 'Sceptile', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Sceptile': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
     'Torchic': [
         { 'to': 'Combusken', 'requires': { 'type': 'level', 'level': '16' } },
@@ -339,11 +424,17 @@ const EVOLUTIONS = {
     'Combusken': [
         { 'to': 'Blaziken', 'requires': { 'type': 'level', 'level': '36' } },
     ],
+    'Blaziken': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Mudkip': [
         { 'to': 'Marshtomp', 'requires': { 'type': 'level', 'level': '16' } },
     ],
     'Marshtomp': [
         { 'to': 'Swampert', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Swampert': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
     'Poochyena': [
         { 'to': 'Mightyena', 'requires': { 'type': 'level', 'level': '18' } },
@@ -381,6 +472,15 @@ const EVOLUTIONS = {
     'Kirlia': [
         { 'to': 'Gardevoir', 'requires': { 'type': 'level', 'level': '30' } },
     ],
+    'Gardevoir': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Sableye': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Mawile': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Surskit': [
         { 'to': 'Masquerain', 'requires': { 'type': 'level', 'level': '22' } },
     ],
@@ -417,11 +517,20 @@ const EVOLUTIONS = {
     'Lairon': [
         { 'to': 'Aggron', 'requires': { 'type': 'level', 'level': '42' } },
     ],
+    'Aggron': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Meditite': [
         { 'to': 'Medicham', 'requires': { 'type': 'level', 'level': '37' } },
     ],
+    'Medicham': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Electrike': [
         { 'to': 'Manectric', 'requires': { 'type': 'level', 'level': '37' } },
+    ],
+    'Manectric': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
     'Budew': [
         { 'to': 'Roselia', 'requires': { 'type': 'level', 'level': '12' } },
@@ -435,11 +544,17 @@ const EVOLUTIONS = {
     'Carvanha': [
         { 'to': 'Sharpedo', 'requires': { 'type': 'level', 'level': '30' } },
     ],
+    'Sharpedo': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Wailmer': [
         { 'to': 'Wailord', 'requires': { 'type': 'level', 'level': '40' } },
     ],
     'Numel': [
         { 'to': 'Camerupt', 'requires': { 'type': 'level', 'level': '33' } },
+    ],
+    'Camerupt': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
     'Spoink': [
         { 'to': 'Grumpig', 'requires': { 'type': 'level', 'level': '32' } },
@@ -455,6 +570,9 @@ const EVOLUTIONS = {
     ],
     'Swablu': [
         { 'to': 'Altaria', 'requires': { 'type': 'level', 'level': '35' } },
+    ],
+    'Altaria': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
     'Barboach': [
         { 'to': 'Whiscash', 'requires': { 'type': 'level', 'level': '30' } },
@@ -477,6 +595,12 @@ const EVOLUTIONS = {
     'Shuppet': [
         { 'to': 'Banette', 'requires': { 'type': 'level', 'level': '37' } },
     ],
+    'Banette': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Absol': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Duskull': [
         { 'to': 'Dusclops', 'requires': { 'type': 'level', 'level': '37' } },
     ],
@@ -488,6 +612,9 @@ const EVOLUTIONS = {
     ],
     'Snorunt': [
         { 'to': 'Glalie', 'requires': { 'type': 'level', 'level': '42' } },
+    ],
+    'Glalie': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
     'Spheal': [
         { 'to': 'Sealeo', 'requires': { 'type': 'level', 'level': '32' } },
@@ -504,11 +631,47 @@ const EVOLUTIONS = {
     'Shelgon': [
         { 'to': 'Salamence', 'requires': { 'type': 'level', 'level': '50' } },
     ],
+    'Salamence': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
     'Beldum': [
         { 'to': 'Metang', 'requires': { 'type': 'level', 'level': '20' } },
     ],
     'Metang': [
         { 'to': 'Metagross', 'requires': { 'type': 'level', 'level': '45' } },
+    ],
+    'Metagross': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Latias': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Latios': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Rayquaza': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Lopunny': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Garchomp': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Lucario': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Gallade': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Abomasnow': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Audino': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
+    ],
+    'Diancie': [
+        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'Pidgeotite' } },
     ],
 };
 
