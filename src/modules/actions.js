@@ -255,10 +255,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             document.execCommand('copy');
             window.getSelection().removeAllRanges();
         },
-        changePokeSortOrder: function () {
-            // player.sortPokemon();
-            player.savePokes();
-        },
         changeSpriteChoice: function () {
             if (document.getElementById('spriteChoiceFront').checked) {
                 player.settings.spriteChoice = 'front';

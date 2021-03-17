@@ -8,7 +8,7 @@
     ><label for="autoSort"><span class="checkDescription">Auto sort</span></label><br>
     <select
       id="pokeSortOrderSelect"
-      onchange="userInteractions.changePokeSortOrder()"
+      v-model="$store.state.pokemon.storageSortMethod"
     >
       <option value="lvl">
         Level
@@ -25,7 +25,7 @@
     </select>
     <select
       id="pokeSortDirSelect"
-      onchange="userInteractions.changePokeSortOrder()"
+      v-model="$store.state.pokemon.storageSortDirection"
     >
       <option value="asc">
         Asc
@@ -40,7 +40,7 @@
       class="manageTeamEnabled"
     >
       <StoragePokemon
-        v-for="(poke, index) in $store.state.pokemon.storage"
+        v-for="(poke, index) in $store.getters['pokemon/sortedStorage']"
         :key="poke.pokeName()"
         :ui="ui"
         :index="index"
