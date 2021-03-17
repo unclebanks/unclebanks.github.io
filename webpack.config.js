@@ -1,6 +1,8 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
-const { mode, folder } = require('webpack-nano/argv');
+const {
+    mode, folder, host, port,
+} = require('webpack-nano/argv');
 const { getCommon } = require('./webpack/common');
 
 const outputPath = path.resolve(__dirname, folder || 'dist');
@@ -8,6 +10,8 @@ const sourcePath = path.resolve(__dirname, 'src');
 const options = {
     outputPath,
     sourcePath,
+    host,
+    port,
 };
 const getModeConfig = mode === 'development'
     ? require('./webpack/development')
