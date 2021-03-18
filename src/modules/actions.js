@@ -411,6 +411,30 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 town.renderHoennCatchCoinShop();
                 openModal(document.getElementById('townModal'));
             }
+            if (player.settings.currentRegionId === 'Sinnoh') {
+                town.renderSinnohPokeCoinShop();
+                town.renderSinnohBattleCoinShop();
+                town.renderSinnohCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
+            if (player.settings.currentRegionId === 'Unova') {
+                town.renderUnovaPokeCoinShop();
+                town.renderUnovaBattleCoinShop();
+                town.renderUnovaCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
+            if (player.settings.currentRegionId === 'Kalos') {
+                town.renderKalosPokeCoinShop();
+                town.renderKalosBattleCoinShop();
+                town.renderKalosCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
+            if (player.settings.currentRegionId === 'Alola') {
+                town.renderAlolaPokeCoinShop();
+                town.renderAlolaBattleCoinShop();
+                town.renderAlolaCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
         },
         openVitaminModal: function (vitamin) {
             if (!VITAMINS[vitamin]) {
@@ -468,6 +492,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (player.wins[routeData.trainer.win] && player.wins[routeData.trainer1.win] && player.wins[routeData.trainer2.win] && !player.wins[routeData.trainer3.win]) {
                 this.trainer3Battle();
             }
+            if (player.wins[routeData.trainer.win] && player.wins[routeData.trainer1.win] && player.wins[routeData.trainer2.win] && player.wins[routeData.trainer3.win]) {
+                this.trainer3ABattle();
+            }
         },
         trainerBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
@@ -500,6 +527,17 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (routeData.trainer3 && routeData.trainer3.poke.length > 0) {
                 combatLoop.trainer3 = { name: routeData.trainer3.name, win: routeData.trainer3.win };
+                combatLoop.trainer3Poke = Object.values({ ...routeData.trainer3.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        trainer3ABattle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.trainer3 && routeData.trainer3.poke.length > 0) {
+                combatLoop.trainer3 = {
+                    name: routeData.trainer3.name, win: routeData.trainer3.win, reward: routeData.trainer3.reward, megaStone: routeData.trainer3.megaStone
+                };
                 combatLoop.trainer3Poke = Object.values({ ...routeData.trainer3.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();

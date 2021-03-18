@@ -45,6 +45,9 @@ export default (player) => {
         case 'stone':
             typeReq = player.unlocked[evo.requires.stone];
             break;
+        case 'megaStone':
+            typeReq = player.megaStones[evo.requires.megaStone];
+            break;
         default:
             typeReq = false;
         }

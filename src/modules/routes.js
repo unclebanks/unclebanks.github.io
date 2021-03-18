@@ -44,7 +44,8 @@ const ROUTES = {
                     ['Venusaur', 100],
                     ['Charizard', 100],
                     ['Blastoise', 100]
-                ]
+                ],
+                reward: 'megaBracelet'
             }
         }
         , kroute1: {
@@ -205,6 +206,7 @@ const ROUTES = {
             trainer3: {
                 name: 'Misty',
                 win: 'cascade4',
+                megaStone: 'blastoisinite',
                 poke: [
                     ['Seaking', 100],
                     ['Seadra', 100],
@@ -319,7 +321,7 @@ const ROUTES = {
         }
         , diglettCave: {
             name: 'Diglett Cave'
-            , pokes: ['Diglett', 'Dugtrio']
+            , pokes: ['Diglett', 'Dugtrio', 'Bulbasaur', 'Squirtle']
             , minLevel: 15
             , maxLevel: 31,
             respawn: 'vermilionCity',
@@ -459,6 +461,7 @@ const ROUTES = {
             trainer3: {
                 name: 'Erika',
                 win: 'rainbow4',
+                megaStone: 'venusaurite',
                 poke: [
                     ['Victreebel', 100],
                     ['Tangela', 100],
@@ -704,6 +707,7 @@ const ROUTES = {
             trainer: {
                 name: 'Blaine',
                 badge: 'Volcano Badge',
+                win: 'volcano1',
                 poke: [
                     ['Growlithe', 42],
                     ['Ponyta', 40],
@@ -715,7 +719,38 @@ const ROUTES = {
                 badges: {
                     'Soul Badge': true
                 }
-            }
+            },
+            trainer1: {
+                name: 'Blaine',
+                win: 'volcano2',
+                poke: [
+                    ['Growlithe', 60],
+                    ['Ponyta', 60],
+                    ['Rapidash', 60],
+                    ['Arcanine', 60]
+                ]
+            },
+            trainer2: {
+                name: 'Blaine',
+                win: 'volcano3',
+                poke: [
+                    ['Growlithe', 80],
+                    ['Ponyta', 80],
+                    ['Rapidash', 80],
+                    ['Arcanine', 80]
+                ]
+            },
+            trainer3: {
+                name: 'Blaine',
+                win: 'volcano4',
+                poke: [
+                    ['Growlithe', 100],
+                    ['Ponyta', 100],
+                    ['Rapidash', 100],
+                    ['Arcanine', 100]
+                ],
+                megaStone: 'charizarditeX',
+            },
         }
         , pokemonMansion: {
             name: 'Pokemon Mansion'
@@ -2779,7 +2814,7 @@ const ROUTES = {
             name: 'Aspertia City',
             town: true,
             trainer: {
-                name: 'Prof. Rowan',
+                name: 'Prof. Juniper',
                 badge: null,
                 poke: [
                     ['Snivy', 15],
@@ -3200,7 +3235,7 @@ const ROUTES = {
             name: 'Aquacorde Town',
             town: true,
             trainer: {
-                name: 'Prof. Elm',
+                name: 'Prof. Sycamore',
                 badge: null,
                 poke: [
                     ['Chespin', 15],
