@@ -47,16 +47,13 @@ exports.loadTypescript = () => ({
         rules: [
             {
                 test: /\.(j|t)sx?$/,
-                loader: 'ts-loader',
+                loader: 'babel-loader',
                 exclude: /node_modules/,
-                options: {
-                    appendTsSuffixTo: [/\.vue$/],
-                },
             },
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.vue', '.json'],
+        extensions: ['.ts', '.js', '.vue'],
     },
 });
 

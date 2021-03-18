@@ -34,7 +34,7 @@ const userInteractions = UserActions(player, combatLoop, enemy, town, story, mod
 const dom = Display(player, combatLoop, userInteractions);
 
 // Provide data to Vue components
-// @ts-expect-error
+// @ts-expect-error  -- not sure what to do about this yet, so ignore error
 models.app.ui = userInteractions;
 
 combatLoop.attachUI(userInteractions);
