@@ -3761,7 +3761,7 @@ const ROUTES = {
     },
     Kalos: {
         _global: {
-            pokes: [],
+            pokes: ['Froakie'],
             rarePokes: [],
             superRare: []
         },
