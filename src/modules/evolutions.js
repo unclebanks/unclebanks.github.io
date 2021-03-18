@@ -685,6 +685,12 @@ const EVOLUTIONS = {
     'Diancie': [
         { 'to': 'M-Diancie', 'requires': { 'type': 'megaStone', 'megaStone': 'diancite' } },
     ],
+    'Froakie': [
+        { 'to': 'Frogadier', 'requires': { 'type': 'level', 'level': '16' } },
+    ],
+    'Frogadier': [
+        { 'to': 'Greninja', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
 };
 
 export default EVOLUTIONS;
