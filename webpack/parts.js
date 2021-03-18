@@ -9,6 +9,7 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const { webpack, DefinePlugin } = require('webpack');
 const WebpackBar = require('webpackbar');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const postcssLoader = (options) => ({
     loader: 'postcss-loader',
@@ -55,6 +56,12 @@ exports.loadTypescript = () => ({
     resolve: {
         extensions: ['.ts', '.js', '.vue'],
     },
+});
+
+exports.typecheck = (options) => ({
+    plugins: [
+        new ForkTsCheckerWebpackPlugin(options),
+    ],
 });
 
 exports.loadHTML = (options) => ({
