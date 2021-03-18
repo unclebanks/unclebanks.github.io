@@ -1,12 +1,12 @@
 const { merge } = require('webpack-merge');
 const { serve, generateSourceMap } = require('./parts');
 
-module.exports = ({ outputPath }) => merge(
+module.exports = ({ outputPath, host = 'localhost', port = 3000 }) => merge(
     generateSourceMap({ tool: 'inline-module-source-map' }),
 
     serve({
-        host: 'localhost',
-        port: process.env.NNPG_PORT || 3000,
+        host,
+        port,
         static: outputPath,
         liveReload: true,
         waitForBuild: true,

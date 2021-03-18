@@ -2,7 +2,7 @@ import { renderView } from './display';
 import ROUTES from './routes';
 import { $, camelCaseToString, isEmpty } from './utilities';
 import ACHIEVEMENTS from './achievements';
-import { POKEDEXFLAGS } from './data';
+import { POKEDEXFLAGS, VITAMINS } from './data';
 import { openModal, closeModal } from './modalEvents';
 
 export default (player, combatLoop, enemy, town, story, appModel) => {
@@ -380,7 +380,15 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 }
                 document.getElementById('badgeList').innerHTML = badgesHTML;
             }
-            const inventoryHTML = 'To do';
+            let inventoryHTML = '';
+            let vitamins = Object.keys(VITAMINS);
+            for (let i = 0; i < vitamins.length; i++) {
+              let vitamin = vitamins[i];
+              let vitaminName = VITAMINS[vitamin].display;
+              let count = player.vitamins[vitamin];
+              let image = `assets/images/vitamins/${vitamin}.png`;
+              inventoryHTML += `<li class="vitaminItem"><div class="inventoryVitaminAlignmentHelper"></div><img src="${image}"></img><span class="itemName">${vitaminName}</span><button class="button" onclick="userInteractions.openVitaminModal('${vitamin}')">Use (${count} available)</button></li>`;
+            }
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
         },
@@ -403,6 +411,72 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 town.renderHoennCatchCoinShop();
                 openModal(document.getElementById('townModal'));
             }
+            if (player.settings.currentRegionId === 'Sinnoh') {
+                town.renderSinnohPokeCoinShop();
+                town.renderSinnohBattleCoinShop();
+                town.renderSinnohCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
+            if (player.settings.currentRegionId === 'Unova') {
+                town.renderUnovaPokeCoinShop();
+                town.renderUnovaBattleCoinShop();
+                town.renderUnovaCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
+            if (player.settings.currentRegionId === 'Kalos') {
+                town.renderKalosPokeCoinShop();
+                town.renderKalosBattleCoinShop();
+                town.renderKalosCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
+            if (player.settings.currentRegionId === 'Alola') {
+                town.renderAlolaPokeCoinShop();
+                town.renderAlolaBattleCoinShop();
+                town.renderAlolaCatchCoinShop();
+                openModal(document.getElementById('townModal'));
+            }
+        },
+        openVitaminModal: function (vitamin) {
+            if (!VITAMINS[vitamin]) {
+                return alert(`Invalid vitamin '${vitamin}'`);
+            }
+            let data = VITAMINS[vitamin];
+            let name = data.display;
+            let count = player.vitamins[vitamin];
+            if (!count) {
+                return alert(`You don't have any of these.`);
+            }
+            let vitaminModal = document.getElementById('vitaminModal');
+            vitaminModal.setAttribute('data-vitamin', vitamin);
+            this.updateVitaminModal();
+            openModal(vitaminModal);
+        },
+        updateVitaminModal: function() {
+            let vitaminModal = document.getElementById('vitaminModal');
+            let vitamin = vitaminModal.getAttribute('data-vitamin');
+            let data = VITAMINS[vitamin];
+            let count = player.vitamins[vitamin];
+            document.getElementById('vitaminName').innerText = data.display;
+            document.getElementById('vitaminCount').innerText = count;
+            let vitaminPokemonHTML = '';
+            let list = player.getPokemon();
+            for (let i = 0; i < list.length; i++) {
+                let poke = list[i];
+                vitaminPokemonHTML += `<li class="vitaminModalPokemon"><img src="${poke.image().party}"> <button class="button" onclick="userInteractions.useVitamin('${vitamin}', ${i})">${poke.getAppliedVitamins(data.stat)}/${poke.getMaxVitamins(data.stat)}</button></li>`
+            }
+            document.getElementById('vitaminPokemon').innerHTML = vitaminPokemonHTML;
+        },
+        useVitamin: function(vitamin, pokemonIndex) {
+            let vitaminData = VITAMINS[vitamin];
+            let count = player.vitamins[vitamin];
+            let poke = player.pokemons[pokemonIndex]
+            if (count <= 0 || !vitaminData || !poke) {
+                return;
+            }
+            if (poke.tryUsingVitamin(vitaminData.stat)) {
+                player.vitamins[vitamin]--;
+                this.updateVitaminModal();
+            }
         },
         checkBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
@@ -417,6 +491,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
             if (player.wins[routeData.trainer.win] && player.wins[routeData.trainer1.win] && player.wins[routeData.trainer2.win] && !player.wins[routeData.trainer3.win]) {
                 this.trainer3Battle();
+            }
+            if (player.wins[routeData.trainer.win] && player.wins[routeData.trainer1.win] && player.wins[routeData.trainer2.win] && player.wins[routeData.trainer3.win]) {
+                this.trainer3ABattle();
             }
         },
         trainerBattle: function () {
@@ -450,6 +527,17 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (routeData.trainer3 && routeData.trainer3.poke.length > 0) {
                 combatLoop.trainer3 = { name: routeData.trainer3.name, win: routeData.trainer3.win };
+                combatLoop.trainer3Poke = Object.values({ ...routeData.trainer3.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        trainer3ABattle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.trainer3 && routeData.trainer3.poke.length > 0) {
+                combatLoop.trainer3 = {
+                    name: routeData.trainer3.name, win: routeData.trainer3.win, reward: routeData.trainer3.reward, megaStone: routeData.trainer3.megaStone
+                };
                 combatLoop.trainer3Poke = Object.values({ ...routeData.trainer3.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();

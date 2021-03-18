@@ -196,6 +196,18 @@ export default (player, enemy) => {
                             dom.renderRouteList();
                         }
                     }
+                    if (Combat.trainer3.reward) {
+                        if (!player.unlocked[Combat.trainer3.reward]) {
+                            player.unlocked[Combat.trainer3.reward] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    if (Combat.trainer3.megaStone && player.unlocked.megaBracelet === true) {
+                        if (player.megaStones[Combat.trainer3.megaStone] === 0) {
+                            player.megaStones[Combat.trainer3.megaStone] += 1;
+                            dom.renderRouteList();
+                        }
+                    }
                     Combat.trainer3 = null;
                     Combat.pause();
                     return false;

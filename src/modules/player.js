@@ -2,7 +2,7 @@ import { POKEDEXFLAGS, BALLRNG } from './data';
 import POKEDEX from './db';
 import mkPoke from './poke';
 import ROUTES from './routes';
-import { mergeArray, pokeByName } from './utilities';
+import { pokeByName } from './utilities';
 
 export default (lastSave, appModel) => {
     let dom;
@@ -236,7 +236,7 @@ export default (lastSave, appModel) => {
 
             appModel.$store.commit('pokemon/add', poke);
         },
-        findDexIndex: (p) => POKEDEX.findIndex((x) => x.pokemon[0].Pokemon == p.name),
+        findDexIndex: (p) => POKEDEX.findIndex((x) => x.name == p.name),
         addPokedex: function (pokeName, flag) {
             appModel.$store.commit('pokedex/addData', { pokeName, flag });
         },
@@ -509,10 +509,11 @@ export default (lastSave, appModel) => {
                     const shiny = (loadedPoke[2] === true);
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
+                    const appliedVitamins = loadedPoke[5];
                     if (pokeCount < 6) {
-                        party.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                        party.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     } else {
-                        storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                        storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     }
                     pokeCount++;
                 }
@@ -525,7 +526,8 @@ export default (lastSave, appModel) => {
                     const shiny = (loadedPoke[2] === true);
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
-                    storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                    const appliedVitamins = loadedPoke[5];
+                    storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 }
             });
 
@@ -589,10 +591,11 @@ export default (lastSave, appModel) => {
                     const shiny = (loadedPoke[2] === true);
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
+                    const appliedVitamins = loadedPoke[5];
                     if (pokeCount < 6) {
-                        party.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                        party.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     } else {
-                        storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                        storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                     }
                     pokeCount++;
                 });
@@ -602,7 +605,8 @@ export default (lastSave, appModel) => {
                     const shiny = (loadedPoke[2] === true);
                     const caughtAt = loadedPoke[3];
                     const prestigeLevel = loadedPoke[4] || 0;
-                    storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel));
+                    const appliedVitamins = loadedPoke[5];
+                    storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 });
 
                 appModel.$store.commit('pokemon/load', { party, storage });

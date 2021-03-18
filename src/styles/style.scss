@@ -252,8 +252,6 @@ progress[role]     /* polyfill */
 {
     /* Turns off styling - not usually needed, but good to know. */
     appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     /* gets rid of default border in Firefox and Opera. */
     border: none;
     /* Needs to be in here for Safari polyfill so background images work as expected. */
@@ -375,6 +373,36 @@ progress.expBar {
 #settingsDialog > div > p {
     padding:0;
     margin:5px 10px;
+}
+
+#inventoryDialog {
+  .vitaminItem > img {
+    height: auto;
+    width: 16px;
+    margin-right: 5px;
+  }
+  .vitaminItem > .itemName {
+    margin-right: 5px;
+  }
+  .vitaminItem > .inventoryVitaminAlignmentHelper {
+    height: 100%;
+  }
+  #inventoryList > li {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    * {
+      vertical-align: middle;
+    }
+  }
+}
+
+#vitaminDialog {
+  .vitaminModalPokemon {
+    * {
+      vertical-align: bottom;
+    }
+  }
 }
 
 #forceSave {
