@@ -2458,14 +2458,14 @@ const ROUTES = {
             name: 'Oreburgh Mine'
             , pokes: ['Geodude', 'Zubat', 'Onix']
             , minLevel: 5
-            , maxLevel: 10
+            , maxLevel: 10,
             respawn: 'oreburghCity',
         }
         , sroute204: {
             name: 'Route 204'
             , pokes: ['Zubat', 'Wurmple', 'Starly', 'Bidoof', 'Kricketot', 'Shinx', 'Budew']
             , minLevel: 3
-            , maxLevel: 6
+            , maxLevel: 6,
             respawn: 'jubilifeCity',
             _unlock: {
                 badges: {
@@ -2679,7 +2679,7 @@ const ROUTES = {
             name: 'Route 209'
             , pokes: ['Zubat', 'Gastley', 'Chansey', 'Ralts', 'Roselia', 'Duskull', 'Starly', 'Staravia', 'Bibarel', 'Bonsly', 'Mime Jr.']
             , minLevel: 16
-            , maxLevel: 19},
+            , maxLevel: 19,
             respawn: 'hearthomeCity',
             _unlock: {
                 badges: {
@@ -2691,7 +2691,7 @@ const ROUTES = {
             name: 'Hallowed Tower'
             , pokes: ['Spiritomb']
             , minLevel: 25
-            , maxLevel: 25},
+            , maxLevel: 25,
             respawn: 'hearthomeCity',
             _unlock: {
                 badges: {
@@ -2731,7 +2731,6 @@ const ROUTES = {
                     'Relic Badge': true
                 }
             }
-        }
         }
         , sroute210: {
             name: 'Route 210'
