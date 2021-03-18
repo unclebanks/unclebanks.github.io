@@ -1316,7 +1316,7 @@ const ROUTES = {
         }
         , icePath: {
             name: 'Ice Path'
-            , pokes: ['Zubat', 'Golbat', 'Jynx', 'Sneasel', 'Swinub', 'Delibird', 'Jynx']
+            , pokes: ['Zubat', 'Golbat', 'Jynx', 'Sneasel', 'Swinub', 'Delibird']
             , minLevel: 21
             , maxLevel: 24,
             respawn: 'mahoganyTown',
