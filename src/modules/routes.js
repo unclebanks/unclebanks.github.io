@@ -2398,432 +2398,921 @@ const ROUTES = {
                 ]
             }
         },
-        route76: {
+        sroute201: {
             name: 'Route 201'
             , pokes: ['Starly', 'Bidoof', 'Kricketot']
             , minLevel: 2
             , maxLevel: 3,
             respawn: 'twinleafTown',
         }
-        , special66: {
+        , lakeVerity: {
             name: 'Lake Verity'
             , pokes: ['Starly', 'Bidoof']
             , minLevel: 2
-            , maxLevel: 4
+            , maxLevel: 4,
+            respawn: 'twinleafTown',
         }
-        , route77: {
+        , sandgemTown: {
+            name: 'Sandgem Town',
+            town: true,
+        }
+        , sroute202: {
             name: 'Route 202'
-            , pokes: ['Starly', 'Bidoof', 'Shinx', 'Kricketot']
+            , pokes: ['Starly', 'Bidoof', 'Kricketot', 'Shinx']
             , minLevel: 2
-            , maxLevel: 4
+            , maxLevel: 4,
+            respawn: 'sandgemTown',
         }
-        , route78: {
+        , jubilifeCity: {
+            name: 'Jubilife City',
+            town: true,
+        }
+        , sroute203: {
             name: 'Route 203'
-            , pokes: ['Starly', 'Bidoof', 'Shinx', 'Kricketot']
+            , pokes: ['Zubat', 'Abra', 'Starly', 'Bidoof', 'Kricketot', 'Shinx']
             , minLevel: 4
-            , maxLevel: 6
+            , maxLevel: 7,
+            respawn: 'jubilifeCity',
         }
-        , special67: {
+        , oreburghGate: {
             name: 'Oreburgh Gate'
             , pokes: ['Zubat', 'Psyduck', 'Geodude']
             , minLevel: 5
-            , maxLevel: 8
+            , maxLevel: 10,
+            respawn: 'jubilifeCity',
         }
-        , special67a: {
-            name: 'Oreburgh City'
-            , pokes: ['Cranidos', 'Shieldon']
-            , minLevel: 20
-            , maxLevel: 20
+        , oreburghCity: {
+            name: 'Oreburgh City',
+            town: true,
+            trainer: {
+                name: 'Roark',
+                badge: 'Coal Badge',
+                poke: [
+                    ['Geodude', 12],
+                    ['Onix', 12],
+                    ['Cranidos', 14],
+                ]
+            },
         }
-        , special68: {
+        , oreburghMine: {
             name: 'Oreburgh Mine'
             , pokes: ['Geodude', 'Zubat', 'Onix']
             , minLevel: 5
             , maxLevel: 10
+            respawn: 'oreburghCity',
         }
-        , route79: {
+        , sroute204: {
             name: 'Route 204'
-            , pokes: ['Starly', 'Bidoof', 'Shinx', 'Budew', 'Kricketot']
+            , pokes: ['Zubat', 'Wurmple', 'Starly', 'Bidoof', 'Kricketot', 'Shinx', 'Budew']
             , minLevel: 3
             , maxLevel: 6
+            respawn: 'jubilifeCity',
+            _unlock: {
+                badges: {
+                    'Coal Badge': true
+                }
+            }
         }
-        , special69: {
-            name: 'Floaroma Town'
+        , floaromaTown: {
+            name: 'Floaroma Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Coal Badge': true
+                }
+            }
+        }
+        , floaromaMeadow: {
+            name: 'Floaroma Meadow'
             , pokes: ['Combee', 'Burmy', 'Cherubi', 'Munchlax']
             , minLevel: 5
-            , maxLevel: 15
+            , maxLevel: 15,
+            respawn: 'floaromaTown',
+            _unlock: {
+                badges: {
+                    'Coal Badge': true
+                }
+            }
         }
-        , route80: {
+        , sroute205: {
             name: 'Route 205'
-            , pokes: ['Shellos', 'Buizel', 'Bidoof', 'Pachirisu']
+            , pokes: ['Hoothoot', 'Wurmple', 'Silcoon', 'Beautifly', 'Cascoon', 'Dustox', 'Bidoof', 'Kricketot', 'Budew', 'Pachirisu', 'Buizel', 'Shellos']
             , minLevel: 8
-            , maxLevel: 12
+            , maxLevel: 12,
+            respawn: 'floaromaTown',
+            _unlock: {
+                badges: {
+                    'Coal Badge': true
+                }
+            }
         }
-        , special70: {
+        , valleyWindworks: {
             name: 'Valley Windworks'
-            , pokes: ['Shellos', 'Buizel', 'Shinx', 'Pachirisu', 'Bidoof']
+            , pokes: ['Bidoof', 'Shinx', 'Pachirisu', 'Buizel', 'Shellos', 'Drifloon']
             , minLevel: 7
-            , maxLevel: 12
+            , maxLevel: 15,
+            respawn: 'floaromaTown',
+            _unlock: {
+                badges: {
+                    'Coal Badge': true
+                }
+            }
         }
-        , special71: {
-            name: '99 Luftballons'
-            , pokes: ['Drifloon']
-            , minLevel: 20
-            , maxLevel: 20
-        }
-        , special72: {
+        , fuegoIronworks: {
             name: 'Fuego Ironworks'
-            , pokes: ['Floatzel', 'Shellos', 'Gastrodon', 'Shinx', 'Luxio', 'Pachirisu']
+            , pokes: ['Magnemite', 'Magmar', 'Wingull', 'Shinx', 'Luxio', 'Pachirisu', 'Floatzel', 'Shellos', 'Gastrodon']
             , minLevel: 28
-            , maxLevel: 30
+            , maxLevel: 30,
+            respawn: 'floaromaTown',
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
         }
-        , special73: {
+        , eternaForest: {
             name: 'Eterna Forest'
-            , pokes: ['Budew', 'Buneary', 'Bidoof', 'Kricketot']
+            , pokes: ['Gastly', 'Hoothoot', 'Murkrow', 'Misdreavus', 'Wurmple', 'Silcoon', 'Beautifly', 'Cascoon', 'Dustox', 'Bidoof', 'Kricketot', 'Budew', 'Buneary']
             , minLevel: 10
-            , maxLevel: 14
+            , maxLevel: 14,
+            respawn: 'floaromaTown',
+            _unlock: {
+                badges: {
+                    'Coal Badge': true
+                }
+            }
         }
-        , special74: {
+        , oldChateau: {
             name: 'Old Chateau'
-            , pokes: ['Gastly', 'Haunter']
+            , pokes: ['Gastly', 'Haunter', 'Gengar']
             , minLevel: 12
-            , maxLevel: 16
+            , maxLevel: 17,
+            respawn: 'floaromaTown',
+            _unlock: {
+                badges: {
+                    'Forest Badge': true
+                }
+            }
         }
-        , special75: {
+        , strangeTV: {
             name: 'Strange TV'
             , pokes: ['Rotom']
             , minLevel: 15
-            , maxLevel: 15
+            , maxLevel: 15,
+            respawn: 'floaromaTown',
+            _unlock: {
+                badges: {
+                    'Forest Badge': true
+                }
+            }
         }
-        , route81: {
+        , eternaCity: {
+            name: 'Eterna City',
+            town: true,
+            trainer: {
+                name: 'Gardenia',
+                badge: 'Forest Badge',
+                poke: [
+                    ['Cherubi', 19],
+                    ['Turtwig', 19],
+                    ['Roserade', 22],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Coal Badge': true
+                }
+            }
+        }
+        , sroute206: {
             name: 'Route 206'
-            , pokes: ['Kricketune', 'Bronzor', 'Kricketot', 'Stunky']
+            , pokes: ['Zubat', 'Machop', 'Geodude', 'Ponyta', 'Gligar', 'Kricketot', 'Kricketune', 'Stunky', 'Bronzor']
             , minLevel: 14
-            , maxLevel: 19
+            , maxLevel: 19,
+            respawn: 'eternaCity',
+            _unlock: {
+                badges: {
+                    'Forest Badge': true
+                }
+            }
         }
-        , special76: {
+        , waywardCave: {
             name: 'Wayward Cave'
-            , pokes: ['Bronzor', 'Gible']
+            , pokes: ['Zubat', 'Geodude', 'Onix', 'Bronzor', 'Gible']
             , minLevel: 14
-            , maxLevel: 20
+            , maxLevel: 20,
+            respawn: 'eternaCity',
+            _unlock: {
+                badges: {
+                    'Forest Badge': true
+                }
+            }
         }
-        , route82: {
+        , sroute207: {
             name: 'Route 207'
-            , pokes: ['Machop', 'Geodude', 'Ponyta']
+            , pokes: ['Zubat', 'Machop', 'Geodude', 'Ponyta', 'Kricketot']
             , minLevel: 5
-            , maxLevel: 7
+            , maxLevel: 8,
+            respawn: 'eternaCity',
+            _unlock: {
+                badges: {
+                    'Forest Badge': true
+                }
+            }
         }
-        , special77: {
+        , mtCoronet: {
             name: 'Mt. Coronet'
-            , pokes: ['Chingling', 'Bronzor', 'Bronzong', 'Snover', 'Abomasnow']
+            , pokes: ['Clefairy', 'Zubat', 'Golbat', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Noctowl', 'Cleffa', 'Nosepass', 'Meditite', 'Medicham', 'Absol', 'Chimecho', 'Chingling', 'Bronzor', 'Bronzong', 'Snover', 'Abomasnow']
             , minLevel: 12
-            , maxLevel: 40
+            , maxLevel: 40,
+            respawn: 'eternaCity',
+            _unlock: {
+                badges: {
+                    'Forest Badge': true
+                }
+            }
         }
-        , route83: {
+        , sroute208: {
             name: 'Route 208'
-            , pokes: ['Bidoof', 'Bibarel']
+            , pokes: ['Zubat', 'Psyduck', 'Machop', 'Ralts', 'Meditite', 'Roselia', 'Bidoof', 'Bibarel', 'Budew']
             , minLevel: 16
-            , maxLevel: 18
+            , maxLevel: 20,
+            respawn: 'eternaCity',
+            _unlock: {
+                badges: {
+                    'Forest Badge': true
+                }
+            }
         }
-        , special78: {
-            name: 'Hearthome City'
+        , hearthomeCity: {
+            name: 'Hearthome City',
+            town: true,
+            trainer: {
+                name: 'Fantina',
+                badge: 'Relic Badge',
+                poke: [
+                    ['Duskull', 24],
+                    ['Haunter', 24],
+                    ['Mismagius', 26],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Forest Badge': true
+                }
+            }
+        }
+        , amitySquare: {
+            name: 'Amity Square'
             , pokes: ['Happiny']
             , minLevel: 1
-            , maxLevel: 1
+            , maxLevel: 1,
+            respawn: 'hearthomeCity',
+            _unlock: {
+                badges: {
+                    'Forest Badge': true
+                }
+            }
+            
         }
-        , route84: {
+        , sroute209: {
             name: 'Route 209'
-            , pokes: ['Bibarel', 'Mime Jr.', 'Starly', 'Staravia', 'Bonsly']
+            , pokes: ['Zubat', 'Gastley', 'Chansey', 'Ralts', 'Roselia', 'Duskull', 'Starly', 'Staravia', 'Bibarel', 'Bonsly', 'Mime Jr.']
             , minLevel: 16
-            , maxLevel: 18
+            , maxLevel: 19},
+            respawn: 'hearthomeCity',
+            _unlock: {
+                badges: {
+                    'Relic Badge': true
+                }
+            }
         }
-        , special79: {
+        , hallowedTower: {
             name: 'Hallowed Tower'
             , pokes: ['Spiritomb']
             , minLevel: 25
-            , maxLevel: 25
+            , maxLevel: 25},
+            respawn: 'hearthomeCity',
+            _unlock: {
+                badges: {
+                    'Relic Badge': true
+                }
+            }
         }
-        , special80: {
+        , lostTower: {
             name: 'Lost Tower'
             , pokes: ['Zubat', 'Gastly', 'Murkrow', 'Misdreavus', 'Duskull', 'Golbat']
             , minLevel: 16
-            , maxLevel: 19
+            , maxLevel: 23,
+            respawn: 'hearthomeCity',
+            _unlock: {
+                badges: {
+                    'Relic Badge': true
+                }
+            }
         }
-        , special81: {
+        , solaceonTown: {
+            name: 'Solaceon Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Relic Badge': true
+                }
+            }
+        }
+        , solaceonRuins: {
             name: 'Solaceon Ruins'
             , pokes: ['Unown']
             , minLevel: 14
-            , maxLevel: 30
+            , maxLevel: 30,
+            respawn: 'solaceonTown',
+            _unlock: {
+                badges: {
+                    'Relic Badge': true
+                }
+            }
         }
-        , route85: {
+        }
+        , sroute210: {
             name: 'Route 210'
-            , pokes: ['Mime Jr.', 'Kricketune', 'Bonsly', 'Staravia']
+            , pokes: ['Psyduck', 'Machop', 'Machoke', 'Geodude', 'Ponyta', 'Chansey', 'Scyther', 'Hoothoot', 'Noctowl', 'Meditite', 'Roselia', 'Swablu', 'Staravia', 'Bibarel', 'Kricketune', 'Bonsly', 'Mime Jr.']
+            , minLevel: 18
+            , maxLevel: 30,
+            respawn: 'solaceonTown',
+            _unlock: {
+                badges: {
+                    'Relic Badge': true
+                }
+            }
+        }
+        , sroute215: {
+            name: 'Route 215'
+            , pokes: ['Abra', 'Kadabra', 'Geodude', 'Ponyta', 'Lickitung', 'Scyther', 'Marill', 'Staravia', 'Kricketune']
             , minLevel: 19
-            , maxLevel: 21
+            , maxLevel: 22,
+            respawn: 'solaceonTown',
+            _unlock: {
+                badges: {
+                    'Relic Badge': true
+                }
+            }
         }
-        , route86: {
-            name: 'Route 211'
-            , pokes: ['Chingling', 'Bronzor']
-            , minLevel: 27
-            , maxLevel: 30
+        , veilstoneCity: {
+            name: 'Veilstone City',
+            town: true,
+            trainer: {
+                name: 'Maylene',
+                badge: 'Cobble Badge',
+                poke: [
+                    ['Meditite', 24],
+                    ['Machoke', 24],
+                    ['Lucario', 26],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Relic Badge': true
+                }
+            }
         }
-        , route87: {
-            name: 'Route 212'
-            , pokes: ['Budew', 'Starly', 'Kricketune', 'Staravia']
-            , minLevel: 16
-            , maxLevel: 24
-        }
-        , special82: {
-            name: 'Trophy Garden'
-            ,
-            pokes: ['Clefairy', 'Jigglypuff', 'Meowth', 'Chansey', 'Ditto', 'Eevee', 'Cleffa', 'Igglybuff', 'Marill', 'Azurill', 'Plusle', 'Minun', 'Castform']
-            ,
-            minLevel: 16
-            ,
-            maxLevel: 18
-        }
-        , special83: {
-            name: 'Great Marsh'
-            ,
-            pokes: ['Bibarel', 'Starly', 'Budew', 'Bidoof', 'Staravia', 'Skorupi', 'Drapion', 'Croagunk', 'Toxicroak', 'Carnivine']
-            ,
-            minLevel: 20
-            ,
-            maxLevel: 30
-        }
-        , route88: {
-            name: 'Route 213'
-            , pokes: ['Shellos', 'Buizel', 'Chatot', 'Floatzel']
-            , minLevel: 20
-            , maxLevel: 26
-        }
-        , special84: {
-            name: 'Valor Lakefront'
-            , pokes: ['Staravia', 'Bibarel', 'Kricketune']
-            , minLevel: 21
-            , maxLevel: 27
-        }
-        , route89: {
+        , sroute214: {
             name: 'Route 214'
-            , pokes: ['Stunky', 'Kricketune']
+            , pokes: ['Zubat', 'Geodude', 'Graveler', 'Ponyta', 'Rhyhorn', 'Sudowoodo', 'Girafarig', 'Houndour', 'Kricketune', 'Stunky']
             , minLevel: 21
-            , maxLevel: 24
+            , maxLevel: 24,
+            respawn: 'veilstoneCity',
+            _unlock: {
+                badges: {
+                    'Cobble Badge': true
+                }
+            }
         }
-        , special93: {
+         , ruinManiacCave: {
             name: 'Ruin Maniac Cave'
             , pokes: ['Hippopotas']
             , minLevel: 22
-            , maxLevel: 23
+            , maxLevel: 23,
+            respawn: 'veilstoneCity',
+            _unlock: {
+                badges: {
+                    'Cobble Badge': true
+                }
+            }
         }
-        , special85: {
+        , valorLakefront: {
+            name: 'Valor Lakefront'
+            , pokes: ['Geodude', 'Graveler', 'Girafarig', 'Houndour', 'Staravia', 'Bibarel', 'Kricketune']
+            , minLevel: 20
+            , maxLevel: 27,
+            respawn: 'veilstoneCity',
+            _unlock: {
+                badges: {
+                    'Cobble Badge': true
+                }
+            }
+        }
+        , sroute213: {
+            name: 'Route 213'
+            , pokes: ['Wingull', 'Buizel', 'Floatzel', 'Shellos', 'Chatot']
+            , minLevel: 20
+            , maxLevel: 26,
+            respawn: 'veilstoneCity',
+            _unlock: {
+                badges: {
+                    'Cobble Badge': true
+                }
+            }
+        }
+        , sendoffSpring: {
             name: 'Sendoff Spring'
             , pokes: ['Bibarel', 'Staravia', 'Chingling']
             , minLevel: 37
-            , maxLevel: 54
+            , maxLevel: 54,
+            respawn: 'veilstoneCity',
+            _unlock: {
+                badges: {
+                    'Icicle Badge': true
+                }
+            }
         }
-        , special86: {
+        , turnbackCave: {
             name: 'Turnback Cave'
             , pokes: ['Bronzong', 'Bronzor', 'Chingling']
             , minLevel: 45
-            , maxLevel: 65
+            , maxLevel: 65,
+            respawn: 'veilstoneCity',
+            _unlock: {
+                badges: {
+                    'Icicle Badge': true
+                }
+            }
         }
-        , route90: {
-            name: 'Route 215'
-            , pokes: ['Kricketune', 'Staravia']
-            , minLevel: 19
-            , maxLevel: 22
+        , pastoriaCity: {
+            name: 'Pastoria City',
+            town: true,
+            trainer: {
+                name: 'Crasher Wake',
+                badge: 'Fen Badge',
+                poke: [
+                    ['Gyarados', 24],
+                    ['Quagsire', 24],
+                    ['Floatzel', 26],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Cobble Badge': true
+                }
+            }
         }
-        , route91: {
-            name: 'Route 216'
-            , pokes: ['Snover']
-            , minLevel: 32
-            , maxLevel: 35
+        , greatMarsh: {
+            name: 'Great Marsh'
+            ,pokes: ['Paras', 'Psyduck', 'Golduck', 'Exeggcute', 'Tangela', 'Kangaskhan', 'Hoothoot', 'Noctowl', 'Marill', 'Yanma', 'Wooper', 'Quagsire', 'Shroomish', 'Azurill', 'Gulpin', 'Roselia', 'Kecleon', 'Tropius', 'Starly', 'Staravia', 'Bidoof', 'Bibarel', 'Budew', 'Skorupi', 'Drapion', 'Croagunk', 'Toxicroak', 'Carnivine']
+            ,minLevel: 20
+            ,maxLevel: 30,
+            respawn: 'pastoriaCity',
+            _unlock: {
+                badges: {
+                    'Cobble Badge': true
+                }
+            }
         }
-        , route217: {
-            name: 'Route 217'
-            , pokes: ['Sneasel', 'Machoke', 'Medicham', 'Meditite', 'Swinub', 'Snorunt']
-            , minLevel: 32
-            , maxLevel: 35
+        , sroute212: {
+            name: 'Route 212'
+            , pokes: ['Marill', 'Wooper', 'Quagsire', 'Ralts', 'Kirlia', 'Roselia', 'Starly', 'Staravia', 'Bibarel', 'Kricketune', 'Budew', 'Buizel', 'Shellos', 'Croagunk']
+            , minLevel: 16
+            , maxLevel: 24,
+            respawn: 'pastoriaCity',
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
         }
-        , special87: {
-            name: 'Lake Acuity'
-            , pokes: ['Bibarel', 'Chingling', 'Snover']
-            , minLevel: 34
-            , maxLevel: 41
+        , trophyGarden: {
+            name: 'Trophy Garden'
+            ,pokes: ['Pikachu', 'Clefairy', 'Jigglypuff', 'Meowth', 'Chansey', 'Ditto', 'Eevee', 'Porygon', 'Pichu', 'Cleffa', 'Igglybuff', 'Marill', 'Azurill', 'Plusle', 'Minun', 'Roselia', 'Castform', 'Staravia', 'Kricketune', 'Bonsly', 'Mime Jr.', 'Happiny']
+            ,minLevel: 16
+            ,maxLevel: 18,
+            respawn: 'pastoriaCity',
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
         }
-        , special88: {
-            name: 'Snowpoint Temple'
-            , pokes: ['Golbat', 'Sneasel', 'Onix', 'Graveler', 'Steelix', 'Smoochum', 'Jynx', 'Sneasel']
-            , minLevel: 47
-            , maxLevel: 56
+        , celesticTown: {
+            name: 'Celestic Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
         }
-        , route92: {
+        , sroute211: {
+            name: 'Route 211'
+            , pokes: ['Zubat', 'Machop', 'Geodude', 'Ponyta', 'Hoothoot', 'Meditite', 'Bidoof', 'Chingling', 'Bronzor']
+            , minLevel: 27
+            , maxLevel: 30,
+            respawn: 'eternaCity',
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
+        }
+        , sroute218: {
             name: 'Route 218'
-            , pokes: ['Floatzel', 'Shellos', 'Gastrodon', 'Glameow', 'Chatot']
+            , pokes: ['Mr. Mime', 'Wingull', 'Floatzel', 'Shellos', 'Gastrodon', 'Glameow', 'Chatot']
             , minLevel: 28
-            , maxLevel: 31
+            , maxLevel: 31,
+            respawn: 'jubilifeCity',
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
         }
-        , special89: {
-            name: 'Iron Island'
-            , pokes: ['Riolu']
-            , minLevel: 1
-            , maxLevel: 1
-        }
-        , route93: {
+        , sroute219: {
             name: 'Route 219'
-            , pokes: ['Tentacool', 'Wingull', 'Tentacruel', 'Pelipper']
+            , pokes: ['Tentacool', 'Tentacruel', 'Wingull', 'Pelipper']
             , minLevel: 20
-            , maxLevel: 40
+            , maxLevel: 40,
+            respawn: 'sandgemTown',
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
         }
-        , route94: {
+        , sroute220: {
             name: 'Route 220'
-            , pokes: ['Tentacool', 'Wingull', 'Tentacruel', 'Pelipper']
+            , pokes: ['Tentacool', 'Tentacruel', 'Wingull', 'Pelipper']
             , minLevel: 20
-            , maxLevel: 40
+            , maxLevel: 40,
+            respawn: 'sandgemTown',
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
         }
-        , route95: {
+        , sroute221: {
             name: 'Route 221'
-            , pokes: ['Floatzel', 'Stunky', 'Skuntank', 'Shellos', 'Gastrodon']
+            , pokes: ['Sudowoodo', 'Girafarig', 'Wingull', 'Roselia', 'Floatzel', 'Shellos', 'Gastrodon', 'Stunky', 'Skuntank']
             , minLevel: 28
-            , maxLevel: 31
+            , maxLevel: 31,
+            respawn: 'sandgemTown',
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
         }
-        , route96: {
+        , canalaveCity: {
+            name: 'Canalave City',
+            town: true,
+            trainer: {
+                name: 'Byron',
+                badge: 'Mine Badge',
+                poke: [
+                    ['Magneton', 24],
+                    ['Steelix', 24],
+                    ['Bastiodon', 26],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
+        }
+        , ironIsland: {
+            name: 'Iron Island'
+            , pokes: ['Zubat', 'Golbat', 'Geodude', 'Graveler', 'Onix', 'Steelix', 'Riolu']
+            , minLevel: 1
+            , maxLevel: 1,
+            respawn: 'canalaveCity',
+            _unlock: {
+                badges: {
+                    'Fen Badge': true
+                }
+            }
+        }
+        , sroute216: {
+            name: 'Route 216'
+            , pokes: ['Zubat', 'Machoke', 'Graveler', 'Noctowl', 'Sneasel', 'Meditite', 'Snorunt', 'Snover']
+            , minLevel: 32
+            , maxLevel: 35,
+            respawn: 'eternaCity',
+            _unlock: {
+                badges: {
+                    'Mine Badge': true
+                }
+            }
+        }
+        , sroute217: {
+            name: 'Route 217'
+            , pokes: ['Zubat', 'Machoke', 'Noctowl', 'Sneasel', 'Swinub', 'Meditite', 'Medicham', 'Snorunt', 'Snover']
+            , minLevel: 32
+            , maxLevel: 35,
+            respawn: 'eternaCity',
+            _unlock: {
+                badges: {
+                    'Mine Badge': true
+                }
+            }
+        }
+        , lakeAcuity: {
+            name: 'Lake Acuity'
+            , pokes: ['Psyduck', 'Golduck', 'Noctowl', 'Sneasel', 'Snorunt', 'Bibarel', 'Chingling', 'Snover']
+            , minLevel: 34
+            , maxLevel: 41,
+            respawn: 'eternaCity',
+            _unlock: {
+                badges: {
+                    'Mine Badge': true
+                }
+            }
+        }
+        , snowpointCity: {
+            name: 'Snowpoint City',
+            town: true,
+            trainer: {
+                name: 'Candice',
+                badge: 'Icicle Badge',
+                poke: [
+                    ['Sneasel', 24],
+                    ['Piloswine', 24],
+                    ['Abomasnow', 26],
+                    ['Froslass', 26],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Mine Badge': true
+                }
+            }
+        }
+        , snowpointTemple: {
+            name: 'Snowpoint Temple'
+            , pokes: ['Golbat', 'Graveler', 'Onix', 'Jynx', 'Steelix', 'Sneasel', 'Smoochum', 'Regigigas']
+            , minLevel: 47
+            , maxLevel: 56,
+            respawn: 'snowpointCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
+        }
+        , sroute222: {
             name: 'Route 222'
-            , pokes: ['Gastrodon', 'Floatzel', 'Chatot', 'Glameow', 'Luxio', 'Purugly']
+            , pokes: ['Magnemite', 'Magneton', 'Mr. Mime', 'Electabuzz', 'Wingull', 'Pelipper', 'Luxio', 'Floatzel', 'Gastrodon', 'Glameow', 'Purugly', 'Chatot']
             , minLevel: 38
-            , maxLevel: 42
+            , maxLevel: 42,
+            respawn: 'pastoriaCity',
+            _unlock: {
+                badges: {
+                    'Icicle Badge': true
+                }
+            }
         }
-        , route97: {
+        , sunyshoreCity: {
+            name: 'Sunyshore City',
+            town: true,
+            trainer: {
+                name: 'Volkner',
+                badge: 'Beacon Badge',
+                poke: [
+                    ['Jolteon', 24],
+                    ['Raichu', 24],
+                    ['Luxray', 26],
+                    ['Electivire', 26],
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Icicle Badge': true
+                }
+            }
+        }
+        , sroute223: {
             name: 'Route 223'
-            , pokes: ['Mantyke']
+            , pokes: ['Tentacruel', 'Pelipper', 'Mantyke']
             , minLevel: 30
-            , maxLevel: 45
+            , maxLevel: 50,
+            respawn: 'sunyshoreCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , special90: {
+        , sVictoryRoad: {
             name: 'Victory Road'
-            , pokes: ['Machoke', 'Golbat', 'Graveler', 'Medicham', 'Onix', 'Steelix', 'Rhyhorn', 'Rhydon']
+            , pokes: ['Golbat', 'Kadabra', 'Machoke', 'Graveler', 'Magneton', 'Dewgong', 'Onix', 'Rhyhorn', 'Azumarill', 'Steelix', 'Medicham', 'Floatzel', 'Gabite']
             , minLevel: 40
-            , maxLevel: 46
+            , maxLevel: 46,
+            respawn: 'sunyshoreCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , route98: {
+        , sroute224: {
             name: 'Route 224'
-            , pokes: ['Roselia', 'Gloom', 'Weepinbell', 'Beautifly', 'Dustox', 'Bellsprout', 'Pelipper', 'Oddish']
+            , pokes: ['Oddish', 'Gloom', 'Bellsprout', 'Weepinbell', 'Beautifly', 'Pelipper', 'Roselia', 'Buizel', 'Floatzel', 'Shellos', 'Gastrodon', 'Chatot']
             , minLevel: 49
-            , maxLevel: 52
+            , maxLevel: 52,
+            respawn: 'sunyshoreCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , special91: {
+        , fightArea: {
             name: 'Fight Area'
             , pokes: ['Gallade', 'Froslass']
             , minLevel: 30
-            , maxLevel: 30
+            , maxLevel: 30,
+            respawn: 'snowpointCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , route99: {
+        , sroute225: {
             name: 'Route 225'
             , pokes: ['Fearow', 'Raticate', 'Banette', 'Roselia', 'Rattata', 'Spearow', 'Machoke', 'Graveler']
             , minLevel: 47
-            , maxLevel: 51
+            , maxLevel: 51,
+            respawn: 'snowpointCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , route100: {
+        , sroute226: {
             name: 'Route 226'
-            ,
-            pokes: ['Fearow', 'Raticate', 'Golduck', 'Machoke', 'Rattata', 'Spearow', 'Graveler', 'Wingull', 'Banette']
-            ,
-            minLevel: 47
-            ,
-            maxLevel: 53
+            ,pokes: ['Fearow', 'Raticate', 'Golduck', 'Machoke', 'Rattata', 'Spearow', 'Graveler', 'Wingull', 'Banette']
+            ,minLevel: 47
+            ,maxLevel: 53,
+            respawn: 'snowpointCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , route101: {
+        , sroute227: {
             name: 'Route 227'
-            ,
-            pokes: ['Rhydon', 'Camerupt', 'Fearow', 'Weezing', 'Golbat', 'Banette', 'Graveler', 'Rhyhorn', 'Skarmory', 'Numel']
-            ,
-            minLevel: 24
-            ,
-            maxLevel: 56
+            ,pokes: ['Rhydon', 'Camerupt', 'Fearow', 'Weezing', 'Golbat', 'Banette', 'Graveler', 'Rhyhorn', 'Skarmory', 'Numel']
+            ,minLevel: 24
+            ,maxLevel: 56,
+            respawn: 'snowpointCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , special92: {
+        , starkMountain: {
             name: 'Stark Mountain'
-            , pokes: ['Magcargo', 'Graveler', 'Golbat', 'Machoke', 'Weezing', 'Geodude', 'Onix', 'Slugma', 'Camerupt']
+            , pokes: ['Magcargo', 'Graveler', 'Golbat', 'Machoke', 'Weezing', 'Geodude', 'Onix', 'Slugma', 'Camerupt', 'Heatran']
             , minLevel: 27
-            , maxLevel: 58
+            , maxLevel: 58,
+            respawn: 'snowpointCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , route102: {
+        , sroute228: {
             name: 'Route 228'
             , pokes: ['Cacturne', 'Dugtrio', 'Rhydon', 'Diglett', 'Cacnea']
             , minLevel: 23
-            , maxLevel: 54
+            , maxLevel: 54,
+            respawn: 'snowpointCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , route103: {
+        , sroute229: {
             name: 'Route 229'
-            ,
-            pokes: ['Gloom', 'Weepinbell', 'Ledian', 'Illumise', 'Roselia', 'Oddish', 'Bellsprout', 'Scyther', 'Volbeat', 'Pinsir', 'Pidgey', 'Beautifly', 'Dustox']
-            ,
-            minLevel: 20
-            ,
-            maxLevel: 52
+            ,pokes: ['Gloom', 'Weepinbell', 'Ledian', 'Illumise', 'Roselia', 'Oddish', 'Bellsprout', 'Scyther', 'Volbeat', 'Pinsir', 'Pidgey', 'Beautifly', 'Dustox']
+            ,minLevel: 20
+            ,maxLevel: 52,
+            respawn: 'snowpointCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , route104: {
+        , sroute230: {
             name: 'Route 230'
-            ,
-            pokes: ['Gloom', 'Weepinbell', 'Floatzel', 'Oddish', 'Bellsprout', 'Golduck', 'Beautifly', 'Gastrodon', 'Dustox', 'Wingull']
-            ,
-            minLevel: 18
-            ,
-            maxLevel: 51
+            ,pokes: ['Gloom', 'Weepinbell', 'Floatzel', 'Oddish', 'Bellsprout', 'Golduck', 'Beautifly', 'Gastrodon', 'Dustox', 'Wingull']
+            ,minLevel: 18
+            ,maxLevel: 51,
+            respawn: 'snowpointCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , special94: {
+        , lakes: {
             name: 'Lakes'
             , pokes: ['Uxie', 'Azelf', 'Mesprit']
             , minLevel: 50
-            , maxLevel: 50
+            , maxLevel: 50,
+            respawn: 'twinleafTown',
+            _unlock: {
+                badges: {
+                    'Icicle Badge': true
+                }
+            }
         }
-        , special95: {
+        , spearPillar: {
             name: 'Spear Pillar'
             , pokes: ['Dialga', 'Palkia']
             , minLevel: 47
-            , maxLevel: 47
+            , maxLevel: 47,
+            respawn: 'celesticTown',
+            _unlock: {
+                badges: {
+                    'Icicle Badge': true
+                }
+            }
         }
-        , special96: {
+        , distortionWorld: {
             name: 'Distortion World'
             , pokes: ['Giratina']
             , minLevel: 47
-            , maxLevel: 47
+            , maxLevel: 47,
+            respawn: 'veilstoneCity',
+            _unlock: {
+                badges: {
+                    'Icicle Badge': true
+                }
+            }
         }
-        , special97: {
-            name: 'Slow Down'
-            , pokes: ['Regigigas']
-            , minLevel: 70
-            , maxLevel: 70
-        }
-        , special98: {
-            name: 'Volcano'
-            , pokes: ['Heatran']
-            , minLevel: 70
-            , maxLevel: 70
-        }
-        , special99: {
+        , mysteriousSea: {
             name: 'Mysterious Sea'
             , pokes: ['Phione', 'Manaphy']
             , minLevel: 1
-            , maxLevel: 1
+            , maxLevel: 1,
+            respawn: 'sunyshoreCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , special100: {
+        , moonIsland: {
             name: 'Moon Island'
             , pokes: ['Cresselia', 'Darkrai']
             , minLevel: 50
-            , maxLevel: 50
+            , maxLevel: 50,
+            respawn: 'canalaveCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , special101: {
+        , flowerParadise: {
             name: 'Flower Paradise'
             , pokes: ['Shaymin']
             , minLevel: 30
-            , maxLevel: 30
+            , maxLevel: 30,
+            respawn: 'sunyshoreCity',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
-        , special102: {
+        , hallofOrigin: {
             name: 'Hall of Origin'
             , pokes: ['Arceus']
             , minLevel: 80
-            , maxLevel: 80
+            , maxLevel: 80,
+            respawn: 'celesticTown',
+            _unlock: {
+                badges: {
+                    'Beacon Badge': true
+                }
+            }
         }
         , sOldRod: {
             name: 'Sinnoh Old Rod',
