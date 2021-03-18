@@ -1539,7 +1539,7 @@ const ROUTES = {
         },
         hroute101: {
             name: 'Route 101'
-            , pokes: ['Zigzagoon', 'Wurmple', 'Poochyena']
+            , pokes: ['Poochyena', 'Zigzagoon', 'Wurmple']
             , minLevel: 2
             , maxLevel: 3,
             respawn: 'littlerootTown',
@@ -1550,14 +1550,14 @@ const ROUTES = {
         },
         hroute103: {
             name: 'Route 103'
-            , pokes: ['Zigzagoon', 'Poochyena', 'Wingull']
+            , pokes: ['Poochyena', 'Zigzagoon', 'Wingull']
             , minLevel: 2
             , maxLevel: 4,
             respawn: 'oldaleTown',
         },
         hroute102: {
             name: 'Route 102'
-            , pokes: ['Zigzagoon', 'Poochyena', 'Lotad', 'Wurmple', 'Seedot', 'Ralts', 'Surskit']
+            , pokes: ['Poochyena', 'Zigzagoon', 'Wurmple', 'Lotad', 'Seedot', 'Ralts', 'Surskit']
             , minLevel: 3
             , maxLevel: 4,
             respawn: 'oldaleTown',
@@ -1580,14 +1580,14 @@ const ROUTES = {
         },
         hroute104: {
             name: 'Route 104'
-            , pokes: ['Zigzagoon', 'Poochyena', 'Wurmple', 'Wingull', 'Taillow']
+            , pokes: ['Marill', 'Poochyena', 'Zigzagoon', 'Wurmple', 'Taillow', 'Wingull']
             , minLevel: 3
             , maxLevel: 5,
             respawn: 'petalburgCity',
         },
         petalburgWoods: {
             name: 'Petalburg Woods'
-            , pokes: ['Zigzagoon', 'Poochyena', 'Wurmple', 'Shroomish', 'Silcoon', 'Cascoon', 'Taillow', 'Slakoth']
+            , pokes: ['Poochyena', 'Zigzagoon', 'Wurmple', 'Silcoon', 'Cascoon', 'Taillow', 'Shroomish', 'Slakoth']
             , minLevel: 5
             , maxLevel: 6,
             respawn: 'petalburgCity',
@@ -1610,15 +1610,10 @@ const ROUTES = {
         },
         hroute116: {
             name: 'Route 116'
-            , pokes: ['Zigzagoon', 'Poochyena', 'Whismur', 'Taillow', 'Nincada', 'Skitty']
+            , pokes: ['Abra', 'Poochyena', 'Zigzagoon', 'Taillow', 'Nincada', 'Whismur', 'Skitty']
             , minLevel: 6
             , maxLevel: 8,
             respawn: 'rustboroCity',
-            _unlock: {
-                badges: {
-                    'Stone Badge': true
-                }
-            }
         }
         , rusturfTunnel: {
             name: 'Rusturf Tunnel'
@@ -1634,10 +1629,10 @@ const ROUTES = {
         }
         , hroute105: {
             name: 'Route 105'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'petalburgCity',
             _unlock: {
                 badges: {
                     'Stone Badge': true
@@ -1646,10 +1641,10 @@ const ROUTES = {
         },
         hroute106: {
             name: 'Route 106'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'petalburgCity',
             _unlock: {
                 badges: {
                     'Stone Badge': true
@@ -1679,10 +1674,10 @@ const ROUTES = {
         },
         graniteCave: {
             name: 'Granite Cave'
-            , pokes: ['Makuhita', 'Aron', 'Mawile', 'Sableye', 'Nosepass']
+            , pokes: ['Zubat', 'Abra', 'Geodude', 'Makuhita', 'Sableye', 'Mawile', 'Aron', 'Nosepass']
             , minLevel: 6
             , maxLevel: 12,
-            respawn: 'rustboroCity',
+            respawn: 'dewfordTown',
             _unlock: {
                 badges: {
                     'Knuckle Badge': true
@@ -1691,10 +1686,10 @@ const ROUTES = {
         }
         , hroute107: {
             name: 'Route 107'
-            , pokes: ['Wingull', 'Pelipper']
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
             , minLevel: 10
             , maxLevel: 30,
-            respawn: 'rustboroCity',
+            respawn: 'dewfordTown',
             _unlock: {
                 badges: {
                     'Knuckle Badge': true
@@ -1703,22 +1698,34 @@ const ROUTES = {
         }
         , hroute108: {
             name: 'Route 108'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'dewfordTown',
             _unlock: {
                 badges: {
                     'Knuckle Badge': true
                 }
             }
         }
+        abandonedShip: {
+            name: 'Abandoned Ship'
+            , pokes: ['Tentacool', 'Tentacruel']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'dewfordTown',
+            _unlock: {
+                badges: {
+                    'Balance Badge': true
+                }
+            }
+        }
         , hroute109: {
             name: 'Route 109'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'dewfordTown',
             _unlock: {
                 badges: {
                     'Knuckle Badge': true
@@ -1736,10 +1743,10 @@ const ROUTES = {
         },
         hroute110: {
             name: 'Route 110'
-            , pokes: ['Zigzagoon', 'Poochyena', 'Electrike', 'Gulpin', 'Minun', 'Wingull', 'Plusle']
+            , pokes: ['Oddish', 'Zigzagoon', 'Poochyena', 'Wingull', 'Electrike', 'Plusle', 'Minun', 'Gulpin']
             , minLevel: 12
             , maxLevel: 13,
-            respawn: 'rustboroCity',
+            respawn: 'slateportCity',
             _unlock: {
                 badges: {
                     'Knuckle Badge': true
@@ -1772,31 +1779,43 @@ const ROUTES = {
             , pokes: ['Magnemite', 'Magneton', 'Voltorb', 'Electrode']
             , minLevel: 22
             , maxLevel: 26,
-            respawn: 'rustboroCity',
+            respawn: 'slateportCity',
             _unlock: {
                 badges: {
-                    'Dynamo Badge': true
+                    'Balance Badge': true
                 }
             }
         }
         , hroute117: {
             name: 'Route 117'
-            , pokes: ['Poochyena', 'Zigzagoon', 'Roselia', 'Illumise', 'Volbeat', 'Seedot', 'Surskit']
+            , pokes: ['Oddish', 'Marill', 'Poochyena', 'Zigzagoon', 'Seedot', 'Surskit', 'Volbeat', 'Illumise', 'Roselia']
             , minLevel: 13
             , maxLevel: 14,
-            respawn: 'rustboroCity',
+            respawn: 'mauvilleCity',
+            _unlock: {
+                badges: {
+                    'Knuckle Badge': true
+                }
+            }
+        }
+        , hroute111: {
+            name: 'Route 111'
+            , pokes: ['Sandshrew', 'Trapinch', 'Cacnea', 'Baltoy']
+            , minLevel: 19
+            , maxLevel: 22,
+            respawn: 'mauvilleCity',
             _unlock: {
                 badges: {
                     'Dynamo Badge': true
                 }
             }
         }
-        , hroute111: {
-            name: 'Route 111'
-            , pokes: ['Trapinch', 'Baltoy', 'Cacnea']
-            , minLevel: 19
-            , maxLevel: 22,
-            respawn: 'rustboroCity',
+         , hroute111: {
+            name: 'Route 112'
+            , pokes: ['Machop', 'Marill', 'Numel']
+            , minLevel: 14
+            , maxLevel: 16,
+            respawn: 'mauvilleCity',
             _unlock: {
                 badges: {
                     'Dynamo Badge': true
@@ -1805,22 +1824,10 @@ const ROUTES = {
         }
         , fieryPath: {
             name: 'Fiery Path'
-            , pokes: ['Numel', 'Torkoal', 'Slugma']
+            , pokes: ['Machop', 'Grimer', 'Koffing', 'Slugma', 'Numel', 'Torkoal']
             , minLevel: 14
             , maxLevel: 16,
-            respawn: 'rustboroCity',
-            _unlock: {
-                badges: {
-                    'Dynamo Badge': true
-                }
-            }
-        }
-        , jaggedPass: {
-            name: 'Jagged Pass'
-            , pokes: ['Numel', 'Spoink']
-            , minLevel: 20
-            , maxLevel: 22,
-            respawn: 'rustboroCity',
+            respawn: 'mauvilleCity',
             _unlock: {
                 badges: {
                     'Dynamo Badge': true
@@ -1829,10 +1836,19 @@ const ROUTES = {
         }
         , hroute113: {
             name: 'Route 113'
-            , pokes: ['Spinda']
+            , pokes: ['Sandshrew', 'Slugma', 'Skarmory', 'Spinda']
             , minLevel: 14
             , maxLevel: 16,
-            respawn: 'rustboroCity',
+            respawn: 'mauvilleCity',
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
+        },
+        fallarborTown: {
+            name: 'Fallarbor Town',
+            town: true,
             _unlock: {
                 badges: {
                     'Dynamo Badge': true
@@ -1841,10 +1857,10 @@ const ROUTES = {
         },
         hroute114: {
             name: 'Route 114'
-            , pokes: ['Swablu', 'Seedot', 'Zangoose', 'Nuzleaf', 'Surskit', 'Lotad', 'Seviper', 'Lombre']
+            , pokes: ['Lotad', 'Lombre', 'Seedot', 'Nuzleaf', 'Surskit', 'Swablu', 'Zangoose', 'Seviper']
             , minLevel: 15
             , maxLevel: 18,
-            respawn: 'rustboroCity',
+            respawn: 'fallarborTown',
             _unlock: {
                 badges: {
                     'Dynamo Badge': true
@@ -1853,10 +1869,10 @@ const ROUTES = {
         },
         meteorFalls: {
             name: 'Meteor Falls'
-            , pokes: ['Solrock', 'Lunatone', 'Bagon']
+            , pokes: ['Zubat', 'Golbat', 'Lunatone', 'Solrock', 'Bagon']
             , minLevel: 14
-            , maxLevel: 35,
-            respawn: 'rustboroCity',
+            , maxLevel: 40,
+            respawn: 'fallarborTown',
             _unlock: {
                 badges: {
                     'Dynamo Badge': true
@@ -1865,10 +1881,22 @@ const ROUTES = {
         },
         hroute115: {
             name: 'Route 115'
-            , pokes: ['Taillow', 'Swablu', 'Swellow', 'Wingull']
+            , pokes: ['Jigglypuff', 'Taillow', 'Swellow', 'Wingull', 'Swablu']
             , minLevel: 23
             , maxLevel: 26,
-            respawn: 'rustboroCity',
+            respawn: 'fallarborTown',
+            _unlock: {
+                badges: {
+                    'Dynamo Badge': true
+                }
+            }
+        },
+        jaggedPass: {
+            name: 'Jagged Pass'
+            , pokes: ['Machop', 'Numel', 'Spoink']
+            , minLevel: 18
+            , maxLevel: 22,
+            respawn: 'mauvilleCity',
             _unlock: {
                 badges: {
                     'Dynamo Badge': true
@@ -1898,25 +1926,25 @@ const ROUTES = {
         },
         hroute118: {
             name: 'Route 118'
-            , pokes: ['Zigzagoon', 'Electrike', 'Wingull', 'Linoone', 'Manectric', 'Kecleon']
+            , pokes: ['Zigzagoon', 'Linoone', 'Wingull', 'Electrike', 'Manectric', 'Kecleon']
             , minLevel: 24
             , maxLevel: 27,
-            respawn: 'rustboroCity',
+            respawn: 'mauvilleCity',
             _unlock: {
                 badges: {
-                    'Heat Badge': true
+                    'Balance Badge': true
                 }
             }
         }
         , hroute119: {
             name: 'Route 119'
-            , pokes: ['Zigzagoon', 'Linoone', 'Tropius', 'Kecleon']
-            , minLevel: 25
+            , pokes: ['Oddish', 'Zigzagoon', 'Linoone', 'Kecleon', 'Tropius']
+            , minLevel: 24
             , maxLevel: 27,
             respawn: 'rustboroCity',
             _unlock: {
                 badges: {
-                    'Heat Badge': true
+                    'Balance Badge': true
                 }
             }
         }
@@ -1928,7 +1956,7 @@ const ROUTES = {
             respawn: 'rustboroCity',
             _unlock: {
                 badges: {
-                    'Heat Badge': true
+                    'Balance Badge': true
                 }
             }
         },
@@ -1949,16 +1977,16 @@ const ROUTES = {
             },
             _unlock: {
                 badges: {
-                    'Heat Badge': true
+                    'Balance Badge': true
                 }
             }
         },
         hroute120: {
             name: 'Route 120'
-            , pokes: ['Linoone', 'Mightyena', 'Zigzagoon', 'Poochyena', 'Seedot', 'Surskit', 'Absol']
+            , pokes: ['Oddish', 'Marill', 'Poochyena', 'Zigzagoon', 'Linoone', 'Seedot', 'Surskit', 'Kecleon', 'Absol']
             , minLevel: 25
             , maxLevel: 27,
-            respawn: 'rustboroCity',
+            respawn: 'fortreeCity',
             _unlock: {
                 badges: {
                     'Feather Badge': true
@@ -1967,37 +1995,22 @@ const ROUTES = {
         }
         , hroute121: {
             name: 'Route 121'
-            , pokes: ['Duskull', 'Zigzagoon', 'Linoone', 'Wingull', 'Kecleon']
+            , pokes: ['Oddish', 'Gloom', 'Poochyena', 'Mightyena', 'Zigzagoon', 'Linoone', 'Wingull', 'Kecleon', 'Shuppet', 'Duskull']
             , minLevel: 25
             , maxLevel: 28,
-            respawn: 'rustboroCity',
+            respawn: 'fortreeCity',
             _unlock: {
                 badges: {
                     'Feather Badge': true
                 }
             }
         }
-        , hoennSafarZone1: {
-            name: 'Hoenn Safari Zone (R/S)'
-            ,
-            pokes: ['Oddish', 'Girafarig', 'Doduo', 'Natu', 'Wobbuffet', 'Pikachu', 'Gloom', 'Rhyhorn', 'Phanpy', 'Dodrio', 'Xatu', 'Heracross', 'Pinsir']
-            ,
-            minLevel: 25
-            ,
-            maxLevel: 31,
-            respawn: 'rustboroCity',
-            _unlock: {
-                badges: {
-                    'Feather Badge': true
-                }
-            }
-        }
-        , hoennSafarZone2: {
-            name: 'Hoenn Safari Zone (E)',
-            pokes: ['Aipom', 'Teddiursa', 'Ledyba', 'Sunkern', 'Hoothoot', 'Pineco', 'Houndour', 'Miltank', 'Mareep', 'Spinarak', 'Gligar', 'Snubbull', 'Stantler'],
-            minLevel: 33,
+        , hoennSafarZone: {
+            name: 'Hoenn Safari Zone',
+            pokes: ['Pikachu', 'Oddish', 'Gloom', 'Doduo', 'Dodrio', 'Rhyhorn', 'Pinsir', 'Hoothoot', 'Spinarak', 'Natu', 'Xatu', 'Mareep', 'Aipom', 'Sunkern', 'Girafarig', 'Wobbuffet', 'Pineco', 'Gligar', 'Snubbull', 'Heracross', 'Teddiursa', 'Houndour', 'Phanpy', 'Stantler', 'Miltank'],
+            minLevel: 25,
             maxLevel: 40,
-            respawn: 'rustboroCity',
+            respawn: 'fortreeCity',
             _unlock: {
                 badges: {
                     'Feather Badge': true
@@ -2006,10 +2019,10 @@ const ROUTES = {
         }
         , hroute122: {
             name: 'Route 122'
-            , pokes: ['Wingull', 'Pelipper']
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
             , minLevel: 10
             , maxLevel: 30,
-            respawn: 'rustboroCity',
+            respawn: 'fortreeCity',
             _unlock: {
                 badges: {
                     'Feather Badge': true
@@ -2018,10 +2031,10 @@ const ROUTES = {
         }
         , myPyre: {
             name: 'Mt. Pyre'
-            , pokes: ['Duskull', 'Shuppet', 'Meditite', 'Chimecho', 'Wingull']
+            , pokes: ['Vulpix', 'Wingull', 'Meditite', 'Duskull', 'Shuppet', 'Chimecho']
             , minLevel: 22
             , maxLevel: 30,
-            respawn: 'rustboroCity',
+            respawn: 'fortreeCity',
             _unlock: {
                 badges: {
                     'Feather Badge': true
@@ -2030,10 +2043,10 @@ const ROUTES = {
         }
         , hroute123: {
             name: 'Route 123'
-            , pokes: ['Shuppet', 'Duskull', 'Poochyena', 'Mightyena', 'Zigzagoon', 'Wingull', 'Linoone', 'Kecleon']
+            , pokes: ['Oddish', 'Gloom', 'Poochyena', 'Mightyena', 'Zigzagoon', 'Linoone', 'Wingull', 'Kecleon', 'Shuppet', 'Duskull']
             , minLevel: 25
             , maxLevel: 28,
-            respawn: 'rustboroCity',
+            respawn: 'fortreeCity',
             _unlock: {
                 badges: {
                     'Feather Badge': true
@@ -2051,10 +2064,10 @@ const ROUTES = {
         },
         hroute124: {
             name: 'Route 124'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'lilycoveCity',
             _unlock: {
                 badges: {
                     'Feather Badge': true
@@ -2084,10 +2097,10 @@ const ROUTES = {
         },
         hroute125: {
             name: 'Route 125'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'mossdeepCity',
             _unlock: {
                 badges: {
                     'Mind Badge': true
@@ -2096,7 +2109,7 @@ const ROUTES = {
         }
         , shoalCave: {
             name: 'Shoal Cave'
-            , pokes: ['Spheal', 'Snorunt']
+            , pokes: ['Zubat', 'Golbat', 'Snorunt', 'Spheal']
             , minLevel: 26
             , maxLevel: 32,
             respawn: 'rustboroCity',
@@ -2108,10 +2121,10 @@ const ROUTES = {
         }
         , hroute126: {
             name: 'Route 126'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'mossdeepCity',
             _unlock: {
                 badges: {
                     'Mind Badge': true
@@ -2120,10 +2133,10 @@ const ROUTES = {
         }
         , hroute127: {
             name: 'Route 127'
-            , pokes: ['Wingull', 'Pelipper']
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
             , minLevel: 10
             , maxLevel: 30,
-            respawn: 'rustboroCity',
+            respawn: 'mossdeepCity',
             _unlock: {
                 badges: {
                     'Mind Badge': true
@@ -2132,10 +2145,10 @@ const ROUTES = {
         }
         , hroute128: {
             name: 'Route 128'
-            , pokes: ['Wingull', 'Pelipper']
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
             , minLevel: 10
             , maxLevel: 30,
-            respawn: 'rustboroCity',
+            respawn: 'mossdeepCity',
             _unlock: {
                 badges: {
                     'Mind Badge': true
@@ -2165,10 +2178,10 @@ const ROUTES = {
         },
         hVictoryRoad: {
             name: 'Victory Road',
-            pokes: ['Lairon', 'Hariyama', 'Medicham', 'Loudred', 'Makuhita', 'Lairon', 'Whismur', 'Aron', 'Sableye', 'Mawile'],
+            pokes: ['Zubat', 'Golbat', 'Whiscash', 'Loudred', 'Makuhita', 'Hariyama', 'Sableye', 'Mawile', 'Aron', 'Lairon', 'Meditite', 'Medicham'],
             minLevel: 36,
             maxLevel: 42,
-            respawn: 'rustboroCity',
+            respawn: 'sootopolisCity',
             _unlock: {
                 badges: {
                     'Rain Badge': true
@@ -2177,10 +2190,10 @@ const ROUTES = {
         }
         , hroute129: {
             name: 'Route 129'
-            , pokes: ['Wingull', 'Pelipper', 'Wailord']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper', 'Wailord']
+            , minLevel: 5
+            , maxLevel: 40,
+            respawn: 'sootopolisCity',
             _unlock: {
                 badges: {
                     'Rain Badge': true
@@ -2189,10 +2202,10 @@ const ROUTES = {
         }
         , hroute130: {
             name: 'Route 130'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'sootopolisCity',
             _unlock: {
                 badges: {
                     'Rain Badge': true
@@ -2204,7 +2217,7 @@ const ROUTES = {
             , pokes: ['Wynaut']
             , minLevel: 5
             , maxLevel: 50,
-            respawn: 'rustboroCity',
+            respawn: 'sootopolisCity',
             _unlock: {
                 badges: {
                     'Rain Badge': true
@@ -2213,10 +2226,10 @@ const ROUTES = {
         }
         , hroute131: {
             name: 'Route 131'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'sootopolisCity',
             _unlock: {
                 badges: {
                     'Rain Badge': true
@@ -2225,10 +2238,31 @@ const ROUTES = {
         }
         , skyPillar: {
             name: 'Sky Pillar'
-            , pokes: ['Mawile', 'Claydol', 'Dusclops', 'Sableye', 'Banette', 'Altaria']
+            , pokes: ['Golbat', 'Sableye', 'Mawile', 'Altaria', 'Claydoll', 'Banette', 'Dusclops']
             , minLevel: 34
             , maxLevel: 60,
-            respawn: 'rustboroCity',
+            respawn: 'sootopolisCity',
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
+        }
+        , skyPillarRoof: {
+            name: 'Sky Pillar Roof'
+            , pokes: ['Rayquaza']
+            , minLevel: 70
+            , maxLevel: 70,
+            respawn: 'sootopolisCity',
+            _unlock: {
+                badges: {
+                    'Rain Badge': true
+                }
+            }
+        },
+        pacifidlogTown: {
+            name: 'Pacifidlog Town',
+            town: true,
             _unlock: {
                 badges: {
                     'Rain Badge': true
@@ -2237,10 +2271,10 @@ const ROUTES = {
         }
         , hroute132: {
             name: 'Route 132'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'pacifidlogTown',
             _unlock: {
                 badges: {
                     'Rain Badge': true
@@ -2249,25 +2283,37 @@ const ROUTES = {
         }
         , hroute133: {
             name: 'Route 133'
-            , pokes: ['Wingull', 'Pelipper']
-            , minLevel: 10
-            , maxLevel: 30,
-            respawn: 'rustboroCity',
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'pacifidlogTown',
             _unlock: {
                 badges: {
                     'Rain Badge': true
                 }
             }
         }
-        , regiRuins: {
-            name: 'Ruins of Regi'
-            , pokes: ['Regice', 'Regirock', 'Registeel']
-            , minLevel: 40
-            , maxLevel: 40,
-            respawn: 'rustboroCity',
+        , hroute134: {
+            name: 'Route 134'
+            , pokes: ['Tentacool', 'Wingull', 'Pelipper']
+            , minLevel: 5
+            , maxLevel: 35,
+            respawn: 'pacifidlogTown',
             _unlock: {
                 badges: {
                     'Rain Badge': true
+                }
+            }
+        }
+        , sealdedChamber: {
+            name: 'Sealed Chamber'
+            , pokes: ['Regice', 'Regirock', 'Registeel']
+            , minLevel: 40
+            , maxLevel: 40,
+            respawn: 'pacifidlogTown',
+            _unlock: {
+                badges: {
+                    'Mind Badge': true
                 }
             }
         }
@@ -2276,7 +2322,7 @@ const ROUTES = {
             , pokes: ['Latios', 'Latias']
             , minLevel: 50
             , maxLevel: 50,
-            respawn: 'rustboroCity',
+            respawn: 'lilycoveCity',
             _unlock: {
                 badges: {
                     'Rain Badge': true
@@ -2288,28 +2334,28 @@ const ROUTES = {
             , pokes: ['Kyogre', 'Groudon']
             , minLevel: 45
             , maxLevel: 45,
-            respawn: 'rustboroCity',
+            respawn: 'sootopolisCity',
             _unlock: {
                 badges: {
-                    'Rain Badge': true
+                    'Mind Badge': true
                 }
             }
         }
         , underwater: {
             name: 'Underwater'
-            , pokes: ['Clamperl', 'Relicanth']
+            , pokes: ['Chinchou', 'Clamperl', 'Relicanth']
             , minLevel: 20
             , maxLevel: 35,
-            respawn: 'rustboroCity',
+            respawn: 'sootopolisCity',
             _unlock: {
                 badges: {
-                    'Rain Badge': true
+                    'Mind Badge': true
                 }
             }
         }
         , hOldRod: {
             name: 'Hoenn Old Rod',
-            pokes: ['Feebas', 'Azurill'],
+            pokes: ['Tentacool', 'Goldeen', 'Magikarp', 'Azurill', 'Feebas'],
             minLevel: 5,
             maxLevel: 10,
             respawn: 'littlerootTown',
@@ -2317,16 +2363,16 @@ const ROUTES = {
         }
         , hGoodRod: {
             name: 'Hoenn Good Rod',
-            pokes: ['Luvdisc', 'Barboach', 'Corphish'],
-            minLevel: 15,
-            maxLevel: 25,
+            pokes: ['Tentacool', 'Goldeen', 'Magikarp', 'Carvanha', 'Wailmer', 'Barboach', 'Corphish', 'Feebas', 'Luvdisc'],
+            minLevel: 10,
+            maxLevel: 30,
             respawn: 'littlerootTown',
             hoennGoodRod: 1
         }
         , hSuperRod: {
             name: 'Hoenn Super Rod',
-            pokes: ['Wailmer', 'Carvanha'],
-            minLevel: 30,
+            pokes: ['Horsea', 'Staryu', 'Magikarp', 'Corsola', 'Carvanha', 'Sharpedo', 'Wailmer', 'Barboach', 'Whiscash', 'Corphish', 'Feebas', 'Luvdisc'],
+            minLevel: 25,
             maxLevel: 45,
             respawn: 'littlerootTown',
             hoennSuperRod: 1
