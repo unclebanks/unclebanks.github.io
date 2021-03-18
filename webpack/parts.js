@@ -42,6 +42,24 @@ exports.loadSCSS = () => ({
     ],
 });
 
+exports.loadTypescript = () => ({
+    module: {
+        rules: [
+            {
+                test: /\.(j|t)sx?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+                options: {
+                    appendTsSuffixTo: [/\.vue$/],
+                },
+            },
+        ],
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js', '.vue', '.json'],
+    },
+});
+
 exports.loadHTML = (options) => ({
     plugins: [
         new HtmlWebpackPlugin(options),

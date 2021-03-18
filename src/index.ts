@@ -34,6 +34,7 @@ const userInteractions = UserActions(player, combatLoop, enemy, town, story, mod
 const dom = Display(player, combatLoop, userInteractions);
 
 // Provide data to Vue components
+// @ts-expect-error
 models.app.ui = userInteractions;
 
 combatLoop.attachUI(userInteractions);
@@ -85,9 +86,9 @@ if (localStorage.getItem('totalPokes') !== null) {
 }
 
 if (player.settings.spriteChoice === 'front') {
-    document.getElementById('spriteChoiceFront').checked = true;
+    (document.getElementById('spriteChoiceFront') as HTMLInputElement).checked = true;
 } else {
-    document.getElementById('spriteChoiceBack').checked = true;
+    (document.getElementById('spriteChoiceBack') as HTMLInputElement).checked = true;
 }
 
 dom.bindEvents();
