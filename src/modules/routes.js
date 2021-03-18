@@ -137,7 +137,7 @@ const ROUTES = {
         }
         , kroute3: {
             name: 'Route 3'
-            , pokes: ['Pidgey', 'Rattata', 'Spearow', 'Jigglypuff', 'Sandshrew' ,'Mankey']
+            , pokes: ['Pidgey', 'Rattata', 'Spearow', 'Jigglypuff', 'Sandshrew', 'Mankey']
             , minLevel: 5
             , maxLevel: 12,
             respawn: 'pewterCity',
@@ -680,7 +680,7 @@ const ROUTES = {
         }
         , seafoamIsland: {
             name: 'Seafoam Island',
-            pokes: ['Zubat', 'Golbat', 'Psyduck', 'Golduck', 'Slowpoke', 'Slowbro',  'Seel', 'Dewgong', 'Shellder', 'Krabby', 'Kingler', 'Horsea', 'Seadra', 'Staryu', 'Jynx', 'Articuno'],
+            pokes: ['Zubat', 'Golbat', 'Psyduck', 'Golduck', 'Slowpoke', 'Slowbro', 'Seel', 'Dewgong', 'Shellder', 'Krabby', 'Kingler', 'Horsea', 'Seadra', 'Staryu', 'Jynx', 'Articuno'],
             minLevel: 30,
             maxLevel: 40,
             _unlock: {
@@ -1708,7 +1708,7 @@ const ROUTES = {
                 }
             }
         }
-        abandonedShip: {
+        , abandonedShip: {
             name: 'Abandoned Ship'
             , pokes: ['Tentacool', 'Tentacruel']
             , minLevel: 5
@@ -1810,7 +1810,7 @@ const ROUTES = {
                 }
             }
         }
-         , hroute111: {
+        , hroute112: {
             name: 'Route 112'
             , pokes: ['Machop', 'Marill', 'Numel']
             , minLevel: 14
