@@ -24,7 +24,7 @@ export default (player) => {
         let raw = Number(this.poke.stats[statName]);
         raw += this.getAppliedVitamins(statName);
         let calculated = statName !== 'hp'
-            ? ((raw + 50) * this.currentLevel()) / 150
+            ? ((raw * 100 + 50) * this.currentLevel()) / 150
             : ((raw * this.currentLevel()) / 40);
         if (statName !== 'speed' && statName !== 'hp') {
             calculated *= Math.pow(1.25, this.prestigeLevel);
