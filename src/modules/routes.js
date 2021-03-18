@@ -875,7 +875,7 @@ const ROUTES = {
         }
         , jroute29: {
             name: 'Route 29'
-            , pokes: ['Sentret', 'Hoothoot', 'Hoppip', 'Pidgey', 'Rattata']
+            , pokes: ['Pidgey', 'Rattata', 'Sentret', 'Hoothoot', 'Hoppip']
             , minLevel: 2
             , maxLevel: 5,
             respawn: 'starter2'
@@ -886,7 +886,7 @@ const ROUTES = {
         }
         , jroute30: {
             name: 'Route 30'
-            , pokes: ['Ledyba', 'Hoppip', 'Spinarak', 'Hoothoot', 'Caterpie', 'Weedle', 'Kakuna', 'Pidgey', 'Zubat', 'Poliwag', 'Rattata', 'Metapod']
+            , pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Rattata', 'Zubat', 'Poliwag', 'Hoothoot', 'Ledyba', 'Spinarak', 'Hoppip']
             , minLevel: 2
             , maxLevel: 5,
             respawn: 'cherrygroveCity'
@@ -900,14 +900,14 @@ const ROUTES = {
         }
         , jroute31: {
             name: 'Route 31'
-            , pokes: ['Hoothoot', 'Rattata', 'Ledyba', 'Spinarak', 'Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Zubat', 'Poliwag', 'Hoppip', 'Gastly', 'Bellsprout']
+            , pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Rattata', 'Zubat', 'Poliwag', 'Bellsprout', 'Gastly', 'Hoothoot', 'Ledyba', 'Spinarak', 'Hoppip']
             , minLevel: 3
             , maxLevel: 6,
             respawn: 'cherrygroveCity'
         }
         , darkCave: {
             name: 'Dark Cave'
-            , pokes: ['Teddiursa', 'Dunsparce', 'Ursaring', 'Wobbuffet', 'Shuckle', 'Krabby', 'Geodude', 'Zubat', 'Goldeen', 'Magikarp']
+            , pokes: ['Zubat', 'Geodude', 'Graveler', 'Wobbuffet', 'Dunsparce', 'Teddiursa', 'Ursaring']
             , minLevel: 2
             , maxLevel: 30,
             respawn: 'cherrygroveCity'
@@ -938,7 +938,7 @@ const ROUTES = {
         }
         , jroute32: {
             name: 'Route 32'
-            , pokes: ['Mareep', 'Hoppip', 'Wooper', 'Hoothoot', 'Gastly', 'Ekans', 'Zubat', 'Rattata', 'Bellsprout', 'Pidgey']
+            , pokes: ['Pidgey', 'Rattata', 'Ekans', 'Zubat', 'Bellsprout', 'Gastly', 'Hoothoot', 'Mareep', 'Hoppip', 'Wooper']
             , minLevel: 4
             , maxLevel: 8,
             respawn: 'violetCity',
@@ -974,7 +974,7 @@ const ROUTES = {
         }
         , unionCave: {
             name: 'Union Cave'
-            , pokes: ['Zubat', 'Geodude', 'Onix', 'Rattata', 'Golbat', 'Raticate', 'Lapras', 'Sandshrew', 'Wooper', 'Quagsire']
+            , pokes: ['Rattata', 'Raticate', 'Sandshrew', 'Zubat', 'Golbat', 'Geodude', 'Onix', 'Wooper', 'Quagsire', 'Lapras']
             , minLevel: 6
             , maxLevel: 24,
             respawn: 'violetCity',
@@ -986,7 +986,7 @@ const ROUTES = {
         }
         , jroute33: {
             name: 'Route 33'
-            , pokes: ['Rattata', 'Spearow', 'Ekans', 'Geodude', 'Zubat', 'Hoppip']
+            , pokes: ['Rattata', 'Spearow', 'Ekans', 'Zubat', 'Geodude', 'Hoppip']
             , minLevel: 6
             , maxLevel: 8,
             respawn: 'violetCity',
@@ -998,7 +998,7 @@ const ROUTES = {
         }
         , slowpokeWell: {
             name: 'Slowpoke Well'
-            , pokes: ['Zubat', 'Slowpoke', 'Slowbro', 'Golbat', 'Slowking']
+            , pokes: ['Zubat', 'Golbat', 'Slowpoke', 'Slowking']
             , minLevel: 5
             , maxLevel: 25,
             respawn: 'violetCity',
@@ -1028,7 +1028,7 @@ const ROUTES = {
         }
         , ilexForest: {
             name: 'Ilex Forest'
-            , pokes: ['Caterpie', 'Weedle', 'Metapod', 'Kakuna', 'Paras', 'Pidgey', 'Venonat', 'Zubat', 'Oddish', 'Psyduck']
+            , pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Zubat', 'Oddish', 'Paras', 'Venonat', 'Psyduck', 'Hoothoot']
             , minLevel: 5
             , maxLevel: 7,
             respawn: 'violetCity',
@@ -1040,7 +1040,7 @@ const ROUTES = {
         }
         , jroute34: {
             name: 'Route 34'
-            , pokes: ['Snubbull', 'Ditto', 'Hoothoot', 'Abra', 'Jigglypuff', 'Drowzee', 'Rattata', 'Pidgey']
+            , pokes: ['Pidgey', 'Rattata', 'Jigglypuff', 'Abra', 'Drowzee', 'Ditto', 'Hoothoot', 'Snubbull']
             , minLevel: 10
             , maxLevel: 12,
             respawn: 'azaleaTown',
@@ -1075,7 +1075,7 @@ const ROUTES = {
         }
         , jroute35: {
             name: 'Route 35'
-            , pokes: ['Yanma', 'Noctowl', 'Pidgey', 'Nidoran M', 'Nidoran F', 'Jigglypuff', 'Psyduck', 'Growlithe', 'Abra', 'Drowzee', 'Hoothoot', 'Ditto', 'Snubbull']
+            , pokes: ['Pidgey', 'Nidoran F', 'Nidoran M', 'Jigglypuff', 'Psyduck', 'Growlithe', 'Abra', 'Drowzee', 'Ditto', 'Hoothoot', 'Yanma', 'Snubbull']
             , minLevel: 10
             , maxLevel: 14,
             respawn: 'goldenrodCity',
@@ -1087,7 +1087,7 @@ const ROUTES = {
         }
         , nationalPark: {
             name: 'National Park'
-            , pokes: ['Sunkern', 'Ledyba', 'Spinarak', 'Hoothoot', 'Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Nidoran M', 'Nidoran F', 'Venonat', 'Psyduck']
+            , pokes: ['Caterpie', 'Metapod', 'Butterfree', 'Weedle', 'Kakuna', 'Beedrill', 'Pidgey', 'Nidoran F', 'Nidoran M', 'Paras', 'Venonat', 'Psyduck', 'Scyther', 'Pinsir', 'Hoothoot', 'Ledyba', 'Spinarak', 'Sunkern']
             , minLevel: 10
             , maxLevel: 15,
             respawn: 'goldenrodCity',
@@ -1099,7 +1099,7 @@ const ROUTES = {
         }
         , jroute36: {
             name: 'Route 36'
-            , pokes: ['Stantler', 'Sudowoodo', 'Ledyba', 'Spinarak', 'Hoothoot', 'Pidgey', 'Nidoran M', 'Nidoran F', 'Vulpix', 'Growlithe', 'Bellsprout', 'Gastly']
+            , pokes: ['Pidgey', 'Nidoran F', 'Nidoran M', 'Vulpix', 'Growlithe', 'Bellsprout', 'Ghastly', 'Hoothoot', 'Ledyba', 'Spinarak', 'Stantler', 'Sudowoodo']
             , minLevel: 13
             , maxLevel: 20,
             respawn: 'goldenrodCity',
@@ -1111,7 +1111,7 @@ const ROUTES = {
         }
         , jroute37: {
             name: 'Route 37'
-            , pokes: ['Stantler', 'Spinarak', 'Ledyba', 'Hoothoot', 'Ledian', 'Ariados', 'Pidgey', 'Pidgeotto', 'Vulpix', 'Growlithe']
+            , pokes: ['Pidgey', 'Pidgeotto', 'Vulpix', 'Growlithe', 'Hoothoot', 'Noctowl', 'Ledyba', 'Ledian', 'Spinarak', 'Ariados', 'Stantler']
             , minLevel: 13
             , maxLevel: 16,
             respawn: 'goldenrodCity',
@@ -1166,7 +1166,7 @@ const ROUTES = {
         }
         , jroute38: {
             name: 'Route 38'
-            , pokes: ['Snubbull', 'Miltank', 'Noctowl', 'Pidgeotto', 'Rattata', 'Meowth', 'Raticate', 'Magnemite', 'Farfetchd', 'Tauros']
+            , pokes: ['Pidgeotto', 'Rattata', 'Raticate', 'Meowth', 'Magnemite', 'Farfetchd', 'Tauros', 'Noctowl', 'Snubbull', 'Miltank']
             , minLevel: 13
             , maxLevel: 16,
             respawn: 'ecruteakCity',
@@ -1178,7 +1178,7 @@ const ROUTES = {
         }
         , jroute39: {
             name: 'Route 39'
-            , pokes: ['Miltank', 'Noctowl', 'Pidgeotto', 'Rattata', 'Raticate', 'Meowth', 'Magnemite', 'Farfetchd', 'Tauros']
+            , pokes: ['Pidgeotto', 'Rattata', 'Raticate', 'Meowth', 'Magnemite', 'Farfetchd', 'Tauros', 'Noctowl', 'Miltank']
             , minLevel: 15
             , maxLevel: 16,
             respawn: 'ecruteakCity',
@@ -1249,7 +1249,7 @@ const ROUTES = {
         }
         , whirlIsland: {
             name: 'Whirl Island'
-            , pokes: ['Krabby', 'Zubat', 'Seel', 'Golbat']
+            , pokes: ['Zubat', 'Golbat', 'Seel', 'Krabby']
             , minLevel: 22
             , maxLevel: 26,
             respawn: 'cianwoodCity',
@@ -1261,7 +1261,7 @@ const ROUTES = {
         }
         , jroute42: {
             name: 'Route 42'
-            , pokes: ['Mareep', 'Flaaffy', 'Rattata', 'Raticate', 'Spearow', 'Fearow', 'Ekans', 'Arbok', 'Zubat', 'Golbat', 'Mankey']
+            , pokes: ['Rattata', 'Raticate', 'Spearow', 'Fearow', 'Ekans', 'Arbok', 'Zubat', 'Golbat', 'Mankey', 'Mareep', 'Flaaffy', 'Marill']
             , minLevel: 13
             , maxLevel: 17,
             respawn: 'ecruteakCity',
@@ -1273,7 +1273,7 @@ const ROUTES = {
         }
         , mtMortar: {
             name: 'Mt. Mortar'
-            , pokes: ['Zubat', 'Golbat', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Raticate']
+            , pokes: ['Rattata', 'Raticate', 'Zubat', 'Golbat', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Marill']
             , minLevel: 15
             , maxLevel: 32,
             respawn: 'ecruteakCity',
@@ -1285,7 +1285,7 @@ const ROUTES = {
         }
         , rocketHideout: {
             name: 'Rocket Hideout'
-            , pokes: ['Electrode', 'Voltorb', 'Geodude', 'Koffing']
+            , pokes: ['Geodude', 'Voltorb', 'Electrode', 'Koffing']
             , minLevel: 23
             , maxLevel: 23,
             respawn: 'ecruteakCity',
@@ -1315,7 +1315,7 @@ const ROUTES = {
         }
         , jroute43: {
             name: 'Route 43'
-            , pokes: ['Girafarig', 'Flaaffy', 'Mareep', 'Noctowl', 'Sentret', 'Furret', 'Pidgeotto', 'Raticate', 'Venonat', 'Venomoth']
+            , pokes: ['Pidgeotto', 'Raticate', 'Venonat', 'Venomoth', 'Farfetchd', 'Sentret', 'Furret', 'Noctowl', 'Mareep', 'Flaaffy', 'Girafarig']
             , minLevel: 15
             , maxLevel: 17,
             respawn: 'mahoganyTown',
@@ -1339,7 +1339,7 @@ const ROUTES = {
         }
         , jroute44: {
             name: 'Route 44'
-            , pokes: ['Lickitung', 'Tangela', 'Bellsprout', 'Weepinbell', 'Poliwag', 'Poliwhirl']
+            , pokes: ['Poliwag', 'Poliwhirl', 'Bellsprout', 'Weepinbell', 'Lickitung', 'Tangela']
             , minLevel: 22
             , maxLevel: 26,
             respawn: 'mahoganyTown',
@@ -1351,7 +1351,7 @@ const ROUTES = {
         }
         , icePath: {
             name: 'Ice Path'
-            , pokes: ['Swinub', 'Delibird', 'Sneasel', 'Zubat', 'Golbat', 'Jynx']
+            , pokes: ['Zubat', 'Golbat', 'Jynx', 'Sneasel', 'Swinub', 'Delibird']
             , minLevel: 21
             , maxLevel: 24,
             respawn: 'mahoganyTown',
@@ -1363,7 +1363,7 @@ const ROUTES = {
         }
         , dragonsDen: {
             name: 'Dragons Den'
-            , pokes: ['Dratini']
+            , pokes: ['Magikarp', 'Dratini']
             , minLevel: 10
             , maxLevel: 14,
             respawn: 'mahoganyTown',
@@ -1375,7 +1375,7 @@ const ROUTES = {
         }
         , jroute45: {
             name: 'Route 45'
-            , pokes: ['Teddiursa', 'Gligar', 'Phanpy', 'Skarmory', 'Donphan']
+            , pokes: ['Geodude', 'Graveler', 'Gligar', 'Teddiursa', 'Skarmory', 'Phanpy', 'Donphan']
             , minLevel: 20
             , maxLevel: 27,
             respawn: 'mahoganyTown',
@@ -1406,7 +1406,7 @@ const ROUTES = {
         }
         , jroute47: {
             name: 'Route 47'
-            , pokes: ['Raticate', 'Spearow', 'Fearow', 'Gloom', 'Ditto', 'Farfetchd', 'Noctowl', 'Miltank']
+            , pokes: ['Raticate', 'Spearow', 'Fearow', 'Gloom', 'Farfetchd', 'Ditto', 'Noctowl', 'Miltank']
             , minLevel: 40
             , maxLevel: 43,
             respawn: 'cianwoodCity',
@@ -1429,7 +1429,7 @@ const ROUTES = {
             }
         }
         , jroute26: {
-            name: 'Route 26'
+            name: 'Route 27'
             , pokes: ['Raticate', 'Arbok', 'Sandslash', 'Ponyta', 'Doduo', 'Dodrio', 'Noctowl', 'Quagsire']
             , minLevel: 28
             , maxLevel: 32,
@@ -1441,7 +1441,7 @@ const ROUTES = {
             }
         }
         , jroute27: {
-            name: 'Route 27'
+            name: 'Route 26'
             , pokes: ['Raticate', 'Arbok', 'Sandslash', 'Ponyta', 'Doduo', 'Dodrio', 'Noctowl', 'Quagsire']
             , minLevel: 28
             , maxLevel: 32,
@@ -1454,7 +1454,7 @@ const ROUTES = {
         }
         , jroute28: {
             name: 'Route 28'
-            , pokes: ['Ponyta', 'Tangela', 'Ursaring', 'Donphan', 'Rapidash', 'Arbok', 'Doduo', 'Sneasel', 'Poliwhirl', 'Golbat']
+            , pokes: ['Ponyta', 'Tangela', 'Ursaring', 'Donphan', 'Rapidash', 'Arbok', 'Doduo', 'Dodrio', 'Sneasel', 'Poliwhirl', 'Golbat']
             , minLevel: 39
             , maxLevel: 42,
             respawn: 'NewBarkTown',
@@ -1466,7 +1466,7 @@ const ROUTES = {
         }
         , mtSilver: {
             name: 'Mt.Silver'
-            , pokes: ['Ursaring', 'Donphan', 'Misdreavus', 'Larvitar', 'Pupitar', 'Arbok', 'Golbat', 'Poliwhirl', 'Dodrio', 'Rapidash', 'Sneasel', 'Onix']
+            , pokes: ['Arbok', 'Golbat', 'Parasect', 'Golduck', 'Poliwhirl', 'Machoke', 'Graveler', 'Doduo', 'Dodrio', 'Ponyta', 'Rapidash', 'Onix', 'Tangela', 'Magmar', 'Quagsire', 'Misdreavus', 'Sneasel', 'Ursaring', 'Donphan', 'Larvitar']
             , minLevel: 38
             , maxLevel: 48,
             respawn: 'blackthornCity',
