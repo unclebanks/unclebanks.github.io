@@ -1,3 +1,7 @@
+type GrowthRate = 'Erratic' | 'Fast' | 'Medium Fast' | 'Medium Slow' | 'Slow' | 'Fluctuating';
+
+type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
+
 interface PokedexData {
     name: string;
     stats: {
@@ -14,10 +18,6 @@ interface PokedexData {
     exp: number;
     id: number | string;
 }
-
-type GrowthRate = 'Erratic' | 'Fast' | 'Medium Fast' | 'Medium Slow' | 'Slow' | 'Fluctuating';
-
-type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
 
 const POKEDEX: PokedexData[] = [
     {

@@ -17,6 +17,13 @@ module.exports = {
     plugins: [
         'vue',
     ],
+    settings: {
+        'import/resolver': {
+            'node': {
+                'extensions': ['.js', '.jsx', '.ts', '.tsx', '.vue'],
+            },
+        },
+    },
     rules: {
         indent: ['error', 4],
         'quote-props': 'off',
@@ -44,5 +51,6 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         '@typescript-eslint/no-empty-function': ['off'],
         '@typescript-eslint/no-var-requires': ['off'],
+        'import/extensions': 'off',
     },
 };
