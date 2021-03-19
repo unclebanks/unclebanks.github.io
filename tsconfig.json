@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		/* Basic Options */
+		"target": "esnext", // we would be compiling with babel, so we can target esnext
+		"module": "esnext", // for import() and es5 import/export
+		"lib": ["esnext", "dom"], // include all libraries you need
+		"jsx": "preserve", // because babel will transform it
+    "allowJs": true,
+    "noEmit": true,
+
+		/* Strict Type-Checking Options */
+		// "strict": true, // suggested
+
+		/* Module Resolution Options */
+		"moduleResolution": "node", // because of webpack
+		"allowSyntheticDefaultImports": true, // to make it compatible with babel
+		"esModuleInterop": true, // to make it compatible with babel
+		"isolatedModules": true, // to limit implementation
+	},
+  "include": ["src/**/*"],
+}
