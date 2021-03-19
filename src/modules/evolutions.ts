@@ -1,4 +1,29 @@
-const EVOLUTIONS = {
+//TODO: implement PokemonNameType
+type PokemonNameType = string;
+
+interface Evolution {
+    to: PokemonNameType;
+    requires: EvolutionType;
+}
+
+type EvolutionType = LevelEvolution | MegaEvolution | StoneEvolution;
+
+interface LevelEvolution {
+    type: 'level';
+    level: number | string;
+}
+
+interface MegaEvolution {
+    type: 'megaStone';
+    megaStone: string;
+}
+
+interface StoneEvolution {
+    type: 'stone';
+    stone: string;
+}
+
+const EVOLUTIONS: Record<PokemonNameType, Evolution[]> = {
     'Bulbasaur': [
         { 'to': 'Ivysaur', 'requires': { 'type': 'level', 'level': '16' } },
     ],
