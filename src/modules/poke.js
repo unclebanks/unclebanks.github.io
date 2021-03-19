@@ -1,7 +1,7 @@
 /* eslint-disable prefer-template */
 import { cloneJsonObject, pokeByName, randomArrayElement } from './utilities';
 import { EXP_TABLE, POKEDEXFLAGS } from './data';
-import EVOLUTIONS from './evolutions';
+import EVOLUTIONS from './evolutions.ts';
 import POKEDEX from './db';
 
 export default (player) => {
