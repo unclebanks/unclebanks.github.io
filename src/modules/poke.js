@@ -2,7 +2,7 @@
 import { cloneJsonObject, pokeByName, randomArrayElement } from './utilities';
 import { EXP_TABLE, POKEDEXFLAGS } from './data';
 import EVOLUTIONS from './evolutions';
-import POKEDEX from './db';
+import POKEDEX from './db.ts';
 
 export default (player) => {
     const Poke = function (pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0, appliedVitamins = {}) {

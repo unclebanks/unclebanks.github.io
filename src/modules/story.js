@@ -1,5 +1,5 @@
 import { $, pokeById } from './utilities';
-import POKEDEX from './db';
+import POKEDEX from './db.ts';
 import { renderView } from './display';
 import { POKEDEXFLAGS } from './data';
 import { openModal, closeModal } from './modalEvents';

@@ -1,5 +1,5 @@
 import { POKEDEXFLAGS, BALLRNG } from './data';
-import POKEDEX from './db';
+import POKEDEX from './db.ts';
 import mkPoke from './poke';
 import ROUTES from './routes';
 import { pokeByName } from './utilities';
