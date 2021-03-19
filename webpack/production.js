@@ -5,6 +5,7 @@ module.exports = (options) => merge(
     parts.typecheck({
         async: true,
     }),
+    parts.lint(),
     parts.minifyJavaScript(),
     parts.minifyCSS({ options: { preset: ['default'] } }),
     parts.compressFiles({

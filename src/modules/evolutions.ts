@@ -1,12 +1,5 @@
-//TODO: implement PokemonNameType
+// TODO: implement PokemonNameType
 type PokemonNameType = string;
-
-interface Evolution {
-    to: PokemonNameType;
-    requires: EvolutionType;
-}
-
-type EvolutionType = LevelEvolution | MegaEvolution | StoneEvolution;
 
 interface LevelEvolution {
     type: 'level';
@@ -21,6 +14,13 @@ interface MegaEvolution {
 interface StoneEvolution {
     type: 'stone';
     stone: string;
+}
+
+type EvolutionType = LevelEvolution | MegaEvolution | StoneEvolution;
+
+interface Evolution {
+    to: PokemonNameType;
+    requires: EvolutionType;
 }
 
 const EVOLUTIONS: Record<PokemonNameType, Evolution[]> = {

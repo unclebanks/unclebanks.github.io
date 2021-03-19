@@ -258,10 +258,9 @@ export default (lastSave, appModel) => {
         },
         countPokedex: function (flag, exactMatch = false) {
             let counter = 0;
-            let i; let
-                pData;
+            let i;
             for (i in this.getPokedexData()) {
-                pData = this.getPokedexData()[i];
+                const pData = this.getPokedexData()[i];
                 if (exactMatch && flag == pData.flag) {
                     counter++;
                 } else if (!exactMatch && flag <= pData.flag) {
