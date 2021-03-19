@@ -3366,14 +3366,6 @@ const ROUTES = {
                     ['Oshawott', 15]
                 ]
             }
-            , trainer: {
-                name: 'Cheren',
-                badge: 'Basic Badge',
-                poke: [
-                    ['Patrat', 11],
-                    ['Lillipup', 13],
-                ]
-            }
         },
         route105: {
             name: 'Route 19'
