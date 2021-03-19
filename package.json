@@ -6,7 +6,9 @@
   "scripts": {
     "build": "wp --mode production",
     "build:gh-pages": "npm run build -- --folder docs",
-    "start": "wp --mode development"
+    "start": "wp --mode development",
+    "lint": "npx eslint --ext .js,.ts,.vue ./src",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
