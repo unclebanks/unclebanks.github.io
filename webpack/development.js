@@ -1,14 +1,19 @@
 const { merge } = require('webpack-merge');
 const parts = require('./parts');
 
-module.exports = ({ outputPath, host = 'localhost', port = 3000 }) => merge(
+module.exports = ({
+    outputPath, nodeCachePath, host = 'localhost', port = 3000,
+}) => merge(
     parts.generateSourceMap({ tool: 'inline-module-source-map' }),
 
     parts.typecheck({
         async: true,
         logger: { infrastructure: 'console' },
     }),
-    parts.lint({ lintDirtyModulesOnly: true }),
+    parts.lint(merge(
+        { lintDirtyModulesOnly: true },
+        parts.lintCache(nodeCachePath),
+    )),
 
     parts.serve({
         host,
