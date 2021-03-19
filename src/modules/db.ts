@@ -1,4 +1,25 @@
-const POKEDEX = [
+interface PokedexData {
+    name: string;
+    stats: {
+        'catch rate': string | number;
+        'growth rate': GrowthRate;
+        'hp': string | number;
+        'attack': string | number;
+        'defense': string | number;
+        'sp atk': string | number;
+        'sp def': string | number;
+        'speed': string | number;
+        'types': PokemonType[];
+    };
+    exp: number;
+    id: number | string;
+}
+
+type GrowthRate = 'Erratic' | 'Fast' | 'Medium Fast' | 'Medium Slow' | 'Slow' | 'Fluctuating';
+
+type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
+
+const POKEDEX: PokedexData[] = [
     {
         'name': 'Bulbasaur',
         'stats': {
