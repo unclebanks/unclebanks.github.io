@@ -7,9 +7,13 @@ const { getCommon } = require('./webpack/common');
 
 const outputPath = path.resolve(__dirname, folder || 'dist');
 const sourcePath = path.resolve(__dirname, 'src');
+const nodeModulesPath = path.resolve(__dirname, 'node_modules');
+const nodeCachePath = path.resolve(nodeModulesPath, '.cache');
 const options = {
     outputPath,
     sourcePath,
+    nodeModulesPath,
+    nodeCachePath,
     host,
     port,
 };
