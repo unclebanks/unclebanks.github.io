@@ -1,8 +1,8 @@
 /* eslint-disable prefer-template */
 import { cloneJsonObject, pokeByName, randomArrayElement } from './utilities';
 import { EXP_TABLE, POKEDEXFLAGS } from './data';
-import EVOLUTIONS from './evolutions';
-import POKEDEX from './db';
+import EVOLUTIONS from './evolutions.ts';
+import POKEDEX from './db.ts';
 
 export default (player) => {
     const Poke = function (pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0, appliedVitamins = {}) {
@@ -88,33 +88,33 @@ export default (player) => {
         return this.level() >= 100;
     };
     Poke.prototype.tryUsingVitamin = function (stat) {
-      if (!this.canUseVitamin(stat)) {
-        return false;
-      }
-      this.appliedVitamins = this.appliedVitamins || {};
-      this.appliedVitamins[stat] = this.getAppliedVitamins(stat) + 1;
-      return true;
+        if (!this.canUseVitamin(stat)) {
+            return false;
+        }
+        this.appliedVitamins = this.appliedVitamins || {};
+        this.appliedVitamins[stat] = this.getAppliedVitamins(stat) + 1;
+        return true;
     };
     Poke.prototype.canUseVitamin = function (stat) {
-      return this.getAppliedVitamins(stat) < this.getMaxVitamins(stat);
+        return this.getAppliedVitamins(stat) < this.getMaxVitamins(stat);
     };
     Poke.prototype.getMaxVitamins = function (stat) {
-      return 5;
-    }
+        return 5;
+    };
     Poke.prototype.getAppliedVitamins = function (stat) {
-      return (this.appliedVitamins || {})[stat] || 0;
+        return (this.appliedVitamins || {})[stat] || 0;
     };
     Poke.prototype.getAppliedVitaminObject = function () {
-      let object = {};
-      let keys = Object.keys(this.appliedVitamins);
-      for (let i = 0; i < keys.length; i++) {
-        let vitamin = keys[i];
-        let applied = this.getAppliedVitamins(vitamin);
-        if (applied > 0) {
-          object[vitamin] = applied;
+        const object = {};
+        const keys = Object.keys(this.appliedVitamins);
+        for (let i = 0; i < keys.length; i++) {
+            const vitamin = keys[i];
+            const applied = this.getAppliedVitamins(vitamin);
+            if (applied > 0) {
+                object[vitamin] = applied;
+            }
         }
-      }
-      return object;
+        return object;
     };
 
     Poke.prototype.setHp = function (hp) { this.hp = hp; };

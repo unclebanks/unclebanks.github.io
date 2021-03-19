@@ -9,6 +9,9 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const { webpack, DefinePlugin } = require('webpack');
 const WebpackBar = require('webpackbar');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+const { merge } = require('webpack-merge');
 
 const postcssLoader = (options) => ({
     loader: 'postcss-loader',
@@ -39,6 +42,27 @@ exports.loadSCSS = () => ({
         new MiniCssExtractPlugin({
             filename: 'css/index.css',
         }),
+    ],
+});
+
+exports.loadTypescript = () => ({
+    module: {
+        rules: [
+            {
+                test: /\.(j|t)sx?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    resolve: {
+        extensions: ['.ts', '.js', '.vue'],
+    },
+});
+
+exports.typecheck = (options) => ({
+    plugins: [
+        new ForkTsCheckerWebpackPlugin(options),
     ],
 });
 
@@ -129,5 +153,14 @@ exports.useWebpackBar = (options) => ({
 exports.generateFavicon = (options) => ({
     plugins: [
         new FaviconsWebpackPlugin(options),
+    ],
+});
+
+exports.lint = (options = {}) => ({
+    plugins: [
+        new ESLintPlugin(merge(
+            { extensions: ['js', 'ts', 'vue'] },
+            options,
+        )),
     ],
 });

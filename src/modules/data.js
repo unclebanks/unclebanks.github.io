@@ -31,28 +31,28 @@ export const BALLRNG = {
 };
 
 export const VITAMINS = {
-  hpUp: {
-    display: 'HP Up',
-    stat: 'hp'
-  },
-  protein: {
-    display: 'Protein',
-    stat: 'attack'
-  },
-  iron: {
-    display: 'Iron',
-    stat: 'defense'
-  },
-  calcium: {
-    display: 'Calcium',
-    stat: 'sp atk'
-  },
-  zinc: {
-    display: 'Zinc',
-    stat: 'sp def'
-  },
-  carbos: {
-    display: 'Carbos',
-    stat: 'speed'
-  }
+    hpUp: {
+        display: 'HP Up',
+        stat: 'hp',
+    },
+    protein: {
+        display: 'Protein',
+        stat: 'attack',
+    },
+    iron: {
+        display: 'Iron',
+        stat: 'defense',
+    },
+    calcium: {
+        display: 'Calcium',
+        stat: 'sp atk',
+    },
+    zinc: {
+        display: 'Zinc',
+        stat: 'sp def',
+    },
+    carbos: {
+        display: 'Carbos',
+        stat: 'speed',
+    },
 };

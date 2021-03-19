@@ -13,6 +13,8 @@ const getCommon = ({ outputPath, sourcePath, entries }) => (merge(
     // Use some html we have written
     parts.loadHTML({ template: './src/index.html' }),
 
+    parts.loadTypescript(),
+
     // Tell webpack how to load vue files
     parts.loadVue(),
 

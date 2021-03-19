@@ -1,5 +1,5 @@
 import { POKEDEXFLAGS, BALLRNG } from './data';
-import POKEDEX from './db';
+import POKEDEX from './db.ts';
 import mkPoke from './poke';
 import ROUTES from './routes';
 import { pokeByName } from './utilities';
@@ -114,6 +114,8 @@ export default (lastSave, appModel) => {
             duskStone: 0,
             dawnStone: 0,
             iceStone: 0,
+            whippedDream: 0,
+            sachet: 0,
         },
         currencyAmount: {
             pokecoins: 0,
@@ -258,10 +260,9 @@ export default (lastSave, appModel) => {
         },
         countPokedex: function (flag, exactMatch = false) {
             let counter = 0;
-            let i; let
-                pData;
+            let i;
             for (i in this.getPokedexData()) {
-                pData = this.getPokedexData()[i];
+                const pData = this.getPokedexData()[i];
                 if (exactMatch && flag == pData.flag) {
                     counter++;
                 } else if (!exactMatch && flag <= pData.flag) {

@@ -2673,7 +2673,7 @@ const ROUTES = {
                     'Forest Badge': true
                 }
             }
-            
+
         }
         , sroute209: {
             name: 'Route 209'
@@ -2786,7 +2786,7 @@ const ROUTES = {
                 }
             }
         }
-         , ruinManiacCave: {
+        , ruinManiacCave: {
             name: 'Ruin Maniac Cave'
             , pokes: ['Hippopotas']
             , minLevel: 22
@@ -2866,9 +2866,9 @@ const ROUTES = {
         }
         , greatMarsh: {
             name: 'Great Marsh'
-            ,pokes: ['Paras', 'Psyduck', 'Golduck', 'Exeggcute', 'Tangela', 'Kangaskhan', 'Hoothoot', 'Noctowl', 'Marill', 'Yanma', 'Wooper', 'Quagsire', 'Shroomish', 'Azurill', 'Gulpin', 'Roselia', 'Kecleon', 'Tropius', 'Starly', 'Staravia', 'Bidoof', 'Bibarel', 'Budew', 'Skorupi', 'Drapion', 'Croagunk', 'Toxicroak', 'Carnivine']
-            ,minLevel: 20
-            ,maxLevel: 30,
+            , pokes: ['Paras', 'Psyduck', 'Golduck', 'Exeggcute', 'Tangela', 'Kangaskhan', 'Hoothoot', 'Noctowl', 'Marill', 'Yanma', 'Wooper', 'Quagsire', 'Shroomish', 'Azurill', 'Gulpin', 'Roselia', 'Kecleon', 'Tropius', 'Starly', 'Staravia', 'Bidoof', 'Bibarel', 'Budew', 'Skorupi', 'Drapion', 'Croagunk', 'Toxicroak', 'Carnivine']
+            , minLevel: 20
+            , maxLevel: 30,
             respawn: 'pastoriaCity',
             _unlock: {
                 badges: {
@@ -2890,9 +2890,9 @@ const ROUTES = {
         }
         , trophyGarden: {
             name: 'Trophy Garden'
-            ,pokes: ['Pikachu', 'Clefairy', 'Jigglypuff', 'Meowth', 'Chansey', 'Ditto', 'Eevee', 'Porygon', 'Pichu', 'Cleffa', 'Igglybuff', 'Marill', 'Azurill', 'Plusle', 'Minun', 'Roselia', 'Castform', 'Staravia', 'Kricketune', 'Bonsly', 'Mime Jr.', 'Happiny']
-            ,minLevel: 16
-            ,maxLevel: 18,
+            , pokes: ['Pikachu', 'Clefairy', 'Jigglypuff', 'Meowth', 'Chansey', 'Ditto', 'Eevee', 'Porygon', 'Pichu', 'Cleffa', 'Igglybuff', 'Marill', 'Azurill', 'Plusle', 'Minun', 'Roselia', 'Castform', 'Staravia', 'Kricketune', 'Bonsly', 'Mime Jr.', 'Happiny']
+            , minLevel: 16
+            , maxLevel: 18,
             respawn: 'pastoriaCity',
             _unlock: {
                 badges: {
@@ -3159,9 +3159,9 @@ const ROUTES = {
         }
         , sroute226: {
             name: 'Route 226'
-            ,pokes: ['Fearow', 'Raticate', 'Golduck', 'Machoke', 'Rattata', 'Spearow', 'Graveler', 'Wingull', 'Banette']
-            ,minLevel: 47
-            ,maxLevel: 53,
+            , pokes: ['Fearow', 'Raticate', 'Golduck', 'Machoke', 'Rattata', 'Spearow', 'Graveler', 'Wingull', 'Banette']
+            , minLevel: 47
+            , maxLevel: 53,
             respawn: 'snowpointCity',
             _unlock: {
                 badges: {
@@ -3171,9 +3171,9 @@ const ROUTES = {
         }
         , sroute227: {
             name: 'Route 227'
-            ,pokes: ['Rhydon', 'Camerupt', 'Fearow', 'Weezing', 'Golbat', 'Banette', 'Graveler', 'Rhyhorn', 'Skarmory', 'Numel']
-            ,minLevel: 24
-            ,maxLevel: 56,
+            , pokes: ['Rhydon', 'Camerupt', 'Fearow', 'Weezing', 'Golbat', 'Banette', 'Graveler', 'Rhyhorn', 'Skarmory', 'Numel']
+            , minLevel: 24
+            , maxLevel: 56,
             respawn: 'snowpointCity',
             _unlock: {
                 badges: {
@@ -3207,9 +3207,9 @@ const ROUTES = {
         }
         , sroute229: {
             name: 'Route 229'
-            ,pokes: ['Gloom', 'Weepinbell', 'Ledian', 'Illumise', 'Roselia', 'Oddish', 'Bellsprout', 'Scyther', 'Volbeat', 'Pinsir', 'Pidgey', 'Beautifly', 'Dustox']
-            ,minLevel: 20
-            ,maxLevel: 52,
+            , pokes: ['Gloom', 'Weepinbell', 'Ledian', 'Illumise', 'Roselia', 'Oddish', 'Bellsprout', 'Scyther', 'Volbeat', 'Pinsir', 'Pidgey', 'Beautifly', 'Dustox']
+            , minLevel: 20
+            , maxLevel: 52,
             respawn: 'snowpointCity',
             _unlock: {
                 badges: {
@@ -3219,9 +3219,9 @@ const ROUTES = {
         }
         , sroute230: {
             name: 'Route 230'
-            ,pokes: ['Gloom', 'Weepinbell', 'Floatzel', 'Oddish', 'Bellsprout', 'Golduck', 'Beautifly', 'Gastrodon', 'Dustox', 'Wingull']
-            ,minLevel: 18
-            ,maxLevel: 51,
+            , pokes: ['Gloom', 'Weepinbell', 'Floatzel', 'Oddish', 'Bellsprout', 'Golduck', 'Beautifly', 'Gastrodon', 'Dustox', 'Wingull']
+            , minLevel: 18
+            , maxLevel: 51,
             respawn: 'snowpointCity',
             _unlock: {
                 badges: {
@@ -3761,7 +3761,7 @@ const ROUTES = {
     },
     Kalos: {
         _global: {
-            pokes: ['Froakie'],
+            pokes: ['Froakie', 'Fennekin', 'Chespin'],
             rarePokes: [],
             superRare: []
         },
@@ -3866,7 +3866,7 @@ const ROUTES = {
     },
     Alola: {
         _global: {
-            pokes: [],
+            pokes: ['Rowlet', 'Litten', 'Popplio'],
             rarePokes: [],
             superRare: []
         },

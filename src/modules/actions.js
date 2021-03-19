@@ -381,13 +381,13 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 document.getElementById('badgeList').innerHTML = badgesHTML;
             }
             let inventoryHTML = '';
-            let vitamins = Object.keys(VITAMINS);
+            const vitamins = Object.keys(VITAMINS);
             for (let i = 0; i < vitamins.length; i++) {
-              let vitamin = vitamins[i];
-              let vitaminName = VITAMINS[vitamin].display;
-              let count = player.vitamins[vitamin];
-              let image = `assets/images/vitamins/${vitamin}.png`;
-              inventoryHTML += `<li class="vitaminItem"><div class="inventoryVitaminAlignmentHelper"></div><img src="${image}"></img><span class="itemName">${vitaminName}</span><button class="button" onclick="userInteractions.openVitaminModal('${vitamin}')">Use (${count} available)</button></li>`;
+                const vitamin = vitamins[i];
+                const vitaminName = VITAMINS[vitamin].display;
+                const count = player.vitamins[vitamin];
+                const image = `assets/images/vitamins/${vitamin}.png`;
+                inventoryHTML += `<li class="vitaminItem"><div class="inventoryVitaminAlignmentHelper"></div><img src="${image}"></img><span class="itemName">${vitaminName}</span><button class="button" onclick="userInteractions.openVitaminModal('${vitamin}')">Use (${count} available)</button></li>`;
             }
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
@@ -440,36 +440,36 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (!VITAMINS[vitamin]) {
                 return alert(`Invalid vitamin '${vitamin}'`);
             }
-            let data = VITAMINS[vitamin];
-            let name = data.display;
-            let count = player.vitamins[vitamin];
+            const data = VITAMINS[vitamin];
+            const name = data.display;
+            const count = player.vitamins[vitamin];
             if (!count) {
-                return alert(`You don't have any of these.`);
+                return alert('You don\'t have any of these.');
             }
-            let vitaminModal = document.getElementById('vitaminModal');
+            const vitaminModal = document.getElementById('vitaminModal');
             vitaminModal.setAttribute('data-vitamin', vitamin);
             this.updateVitaminModal();
             openModal(vitaminModal);
         },
-        updateVitaminModal: function() {
-            let vitaminModal = document.getElementById('vitaminModal');
-            let vitamin = vitaminModal.getAttribute('data-vitamin');
-            let data = VITAMINS[vitamin];
-            let count = player.vitamins[vitamin];
+        updateVitaminModal: function () {
+            const vitaminModal = document.getElementById('vitaminModal');
+            const vitamin = vitaminModal.getAttribute('data-vitamin');
+            const data = VITAMINS[vitamin];
+            const count = player.vitamins[vitamin];
             document.getElementById('vitaminName').innerText = data.display;
             document.getElementById('vitaminCount').innerText = count;
             let vitaminPokemonHTML = '';
-            let list = player.getPokemon();
+            const list = player.getPokemon();
             for (let i = 0; i < list.length; i++) {
-                let poke = list[i];
-                vitaminPokemonHTML += `<li class="vitaminModalPokemon"><img src="${poke.image().party}"> <button class="button" onclick="userInteractions.useVitamin('${vitamin}', ${i})">${poke.getAppliedVitamins(data.stat)}/${poke.getMaxVitamins(data.stat)}</button></li>`
+                const poke = list[i];
+                vitaminPokemonHTML += `<li class="vitaminModalPokemon"><img src="${poke.image().party}"> <button class="button" onclick="userInteractions.useVitamin('${vitamin}', ${i})">${poke.getAppliedVitamins(data.stat)}/${poke.getMaxVitamins(data.stat)}</button></li>`;
             }
             document.getElementById('vitaminPokemon').innerHTML = vitaminPokemonHTML;
         },
-        useVitamin: function(vitamin, pokemonIndex) {
-            let vitaminData = VITAMINS[vitamin];
-            let count = player.vitamins[vitamin];
-            let poke = player.pokemons[pokemonIndex]
+        useVitamin: function (vitamin, pokemonIndex) {
+            const vitaminData = VITAMINS[vitamin];
+            const count = player.vitamins[vitamin];
+            const poke = player.pokemons[pokemonIndex];
             if (count <= 0 || !vitaminData || !poke) {
                 return;
             }
@@ -536,7 +536,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (routeData.trainer3 && routeData.trainer3.poke.length > 0) {
                 combatLoop.trainer3 = {
-                    name: routeData.trainer3.name, win: routeData.trainer3.win, reward: routeData.trainer3.reward, megaStone: routeData.trainer3.megaStone
+                    name: routeData.trainer3.name, win: routeData.trainer3.win, reward: routeData.trainer3.reward, megaStone: routeData.trainer3.megaStone,
                 };
                 combatLoop.trainer3Poke = Object.values({ ...routeData.trainer3.poke });
                 combatLoop.unpause();

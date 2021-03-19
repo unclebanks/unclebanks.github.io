@@ -1,4 +1,28 @@
-const EVOLUTIONS = {
+import { PokemonNameType } from './db';
+
+interface LevelEvolution {
+    type: 'level';
+    level: number | string;
+}
+
+interface MegaEvolution {
+    type: 'megaStone';
+    megaStone: string;
+}
+
+interface StoneEvolution {
+    type: 'stone';
+    stone: string;
+}
+
+type EvolutionType = LevelEvolution | MegaEvolution | StoneEvolution;
+
+interface Evolution {
+    to: PokemonNameType;
+    requires: EvolutionType;
+}
+
+const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Bulbasaur': [
         { 'to': 'Ivysaur', 'requires': { 'type': 'level', 'level': '16' } },
     ],
@@ -243,7 +267,7 @@ const EVOLUTIONS = {
     ],
     'Exeggcute': [
         { 'to': 'Exeggutor', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-        { 'to': 'Alola Exeggutor', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
+        { 'to': 'Alolan Exeggutor', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
     ],
     'Cubone': [
         { 'to': 'Marowak', 'requires': { 'type': 'level', 'level': '28' } },
@@ -280,6 +304,8 @@ const EVOLUTIONS = {
         { 'to': 'Flareon', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
         { 'to': 'Jolteon', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
         { 'to': 'Vaporeon', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
+        { 'to': 'Leafeon', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
+        { 'to': 'Glaceon', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
     ],
     'Omanyte': [
         { 'to': 'Omastar', 'requires': { 'type': 'level', 'level': '40' } },
@@ -690,6 +716,120 @@ const EVOLUTIONS = {
     ],
     'Frogadier': [
         { 'to': 'Greninja', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Fennekin': [
+        { 'to': 'Braixen', 'requires': { 'type': 'level', 'level': '16' } },
+    ],
+    'Braixen': [
+        { 'to': 'Delphox', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Chespin': [
+        { 'to': 'Quilladin', 'requires': { 'type': 'level', 'level': '16' } },
+    ],
+    'Quilladin': [
+        { 'to': 'Chesnaught', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Fletchling': [
+        { 'to': 'Fletchinder', 'requires': { 'type': 'level', 'level': '17' } },
+    ],
+    'Fletchinder': [
+        { 'to': 'Talonflame', 'requires': { 'type': 'level', 'level': '35' } },
+    ],
+    'Scatterbug': [
+        { 'to': 'Spewpa', 'requires': { 'type': 'level', 'level': '9' } },
+    ],
+    'Spewpa': [
+        { 'to': 'Vivillon', 'requires': { 'type': 'level', 'level': '12' } },
+    ],
+    'Bunnelby': [
+        { 'to': 'Diggersby', 'requires': { 'type': 'level', 'level': '20' } },
+    ],
+    'Litleo': [
+        { 'to': 'Pyroar', 'requires': { 'type': 'level', 'level': '35' } },
+    ],
+    'Skiddo': [
+        { 'to': 'Gogoat', 'requires': { 'type': 'level', 'level': '32' } },
+    ],
+    'Flabebe': [
+        { 'to': 'Floette', 'requires': { 'type': 'level', 'level': '19' } },
+    ],
+    'Floette': [
+        { 'to': 'Florges', 'requires': { 'type': 'stone', 'stone': 'shinyStone' } },
+    ],
+    'Pancham': [
+        { 'to': 'Pangoro', 'requires': { 'type': 'level', 'level': '32' } },
+    ],
+    'Espurr': [
+        { 'to': 'Meowstic', 'requires': { 'type': 'level', 'level': '25' } },
+    ],
+    'Honedge': [
+        { 'to': 'Doublade', 'requires': { 'type': 'level', 'level': '35' } },
+    ],
+    'Doublade': [
+        { 'to': 'Aegislash', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
+    ],
+    'Spritzee': [
+        { 'to': 'Aromatisse', 'requires': { 'type': 'stone', 'stone': 'sachet' } },
+    ],
+    'Swirlix': [
+        { 'to': 'Slurpuff', 'requires': { 'type': 'stone', 'stone': 'whippedDream' } },
+    ],
+    'Inkay': [
+        { 'to': 'Malamar', 'requires': { 'type': 'level', 'level': '30' } },
+    ],
+    'Binacle': [
+        { 'to': 'Barbaracle', 'requires': { 'type': 'level', 'level': '39' } },
+    ],
+    'Skrelp': [
+        { 'to': 'Dragalge', 'requires': { 'type': 'level', 'level': '48' } },
+    ],
+    'Clauncher': [
+        { 'to': 'Clawitzer', 'requires': { 'type': 'level', 'level': '37' } },
+    ],
+    'Tyrunt': [
+        { 'to': 'Tyrantrum', 'requires': { 'type': 'level', 'level': '39' } },
+    ],
+    'Amaura': [
+        { 'to': 'Aurorus', 'requires': { 'type': 'level', 'level': '39' } },
+    ],
+    'Helioptile': [
+        { 'to': 'Heliolisk', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
+    ],
+    'Goomy': [
+        { 'to': 'Sliggoo', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Sliggoo': [
+        { 'to': 'Goodra', 'requires': { 'type': 'level', 'level': '50' } },
+    ],
+    'Phantump': [
+        { 'to': 'Trevenant', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Pumpkaboo': [
+        { 'to': 'Gourgeist', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Bergmite': [
+        { 'to': 'Avalugg', 'requires': { 'type': 'level', 'level': '37' } },
+    ],
+    'Noibat': [
+        { 'to': 'Noivern', 'requires': { 'type': 'level', 'level': '48' } },
+    ],
+    'Popplio': [
+        { 'to': 'Brionne', 'requires': { 'type': 'level', 'level': '17' } },
+    ],
+    'Brionne': [
+        { 'to': 'Primarina', 'requires': { 'type': 'level', 'level': '34' } },
+    ],
+    'Litten': [
+        { 'to': 'Torracat', 'requires': { 'type': 'level', 'level': '17' } },
+    ],
+    'Torracat': [
+        { 'to': 'Incineroar', 'requires': { 'type': 'level', 'level': '34' } },
+    ],
+    'Rowlet': [
+        { 'to': 'Dartrix', 'requires': { 'type': 'level', 'level': '17' } },
+    ],
+    'Dartrix': [
+        { 'to': 'Decidueye', 'requires': { 'type': 'level', 'level': '34' } },
     ],
 };
 
