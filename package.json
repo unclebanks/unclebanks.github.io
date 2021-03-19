@@ -42,6 +42,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-vue": "^7.7.0",
+    "eslint-webpack-plugin": "^2.5.2",
     "favicons": "^6.2.1",
     "favicons-webpack-plugin": "^5.0.2",
     "fork-ts-checker-webpack-plugin": "^6.2.0",
