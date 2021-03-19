@@ -19,7 +19,11 @@ interface PokedexData {
     id: number | string;
 }
 
-const POKEDEX: PokedexData[] = [
+function createPokemonArray<V extends string, T extends readonly PokedexData[] & Array<{name: V}>>(...args: T) {
+    return args;
+}
+
+const POKEDEX = createPokemonArray(
     {
         'name': 'Bulbasaur',
         'stats': {
@@ -16605,6 +16609,8 @@ const POKEDEX: PokedexData[] = [
         'exp': 61,
         'id': 828,
     },
-];
+);
+
+export type PokemonNameType = typeof POKEDEX[number]['name'];
 
 export default POKEDEX;
