@@ -1,5 +1,4 @@
-// TODO: implement PokemonNameType
-type PokemonNameType = string;
+import { PokemonNameType } from './db';
 
 interface LevelEvolution {
     type: 'level';
@@ -23,7 +22,7 @@ interface Evolution {
     requires: EvolutionType;
 }
 
-const EVOLUTIONS: Record<PokemonNameType, Evolution[]> = {
+const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Bulbasaur': [
         { 'to': 'Ivysaur', 'requires': { 'type': 'level', 'level': '16' } },
     ],
@@ -268,7 +267,7 @@ const EVOLUTIONS: Record<PokemonNameType, Evolution[]> = {
     ],
     'Exeggcute': [
         { 'to': 'Exeggutor', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-        { 'to': 'Alola Exeggutor', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
+        { 'to': 'Alolan Exeggutor', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
     ],
     'Cubone': [
         { 'to': 'Marowak', 'requires': { 'type': 'level', 'level': '28' } },
