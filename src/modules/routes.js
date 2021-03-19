@@ -3761,7 +3761,7 @@ const ROUTES = {
     },
     Kalos: {
         _global: {
-            pokes: ['Froakie'],
+            pokes: ['Froakie', 'Fennekin', 'Chespin'],
             rarePokes: [],
             superRare: []
         },
@@ -3866,7 +3866,7 @@ const ROUTES = {
     },
     Alola: {
         _global: {
-            pokes: [],
+            pokes: ['Rowlet', 'Litten', 'Popplio'],
             rarePokes: [],
             superRare: []
         },

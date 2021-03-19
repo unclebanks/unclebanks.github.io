@@ -114,6 +114,8 @@ export default (lastSave, appModel) => {
             duskStone: 0,
             dawnStone: 0,
             iceStone: 0,
+            whippedDream: 0,
+            sachet: 0,
         },
         currencyAmount: {
             pokecoins: 0,
