@@ -1,4 +1,4 @@
-import POKEDEX from './db';
+import POKEDEX from './db.ts';
 
 export function RNG(chance) {
     const rnd = Math.random() * 100;
