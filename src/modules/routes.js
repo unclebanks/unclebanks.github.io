@@ -327,7 +327,7 @@ const ROUTES = {
             respawn: 'vermilionCity',
             _unlock: {
                 badges: {
-                    'Thunder Badge': true
+                    'Cascade Badge': true
                 }
             }
         }
@@ -339,7 +339,7 @@ const ROUTES = {
             respawn: 'vermilionCity',
             _unlock: {
                 badges: {
-                    'Thunder Badge': true
+                    'Cascade Badge': true
                 }
             }
         }
@@ -347,6 +347,18 @@ const ROUTES = {
             name: 'Route 9'
             , pokes: ['Rattata', 'Raticate', 'Spearow', 'Fearow', 'Ekans', 'Sandshrew', 'Nidoran F', 'Nidorina', 'Nidoran M', 'Nidorino']
             , minLevel: 9
+            , maxLevel: 17,
+            respawn: 'ceruleanCity',
+            _unlock: {
+                badges: {
+                    'Thunder Badge': true
+                }
+            }
+        },
+        kroute10: {
+            name: 'Route 10'
+            , pokes: ['Rattata', 'Raticate', 'Spearow', 'Ekans', 'Sandshrew', 'Nidoran F', 'Nidoran M', 'Machop', 'Magnemite', 'Voltorb']
+            , minLevel: 11
             , maxLevel: 17,
             respawn: 'ceruleanCity',
             _unlock: {
@@ -367,15 +379,15 @@ const ROUTES = {
                 }
             }
         },
-        kroute10: {
-            name: 'Route 10'
-            , pokes: ['Rattata', 'Raticate', 'Spearow', 'Ekans', 'Sandshrew', 'Nidoran F', 'Nidoran M', 'Machop', 'Magnemite', 'Voltorb']
-            , minLevel: 11
-            , maxLevel: 17,
-            respawn: 'ceruleanCity',
+        powerPlant: {
+            name: 'Power Plant'
+            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Grimer', 'Muk', 'Voltorb', 'Electrode', 'Electabuzz', 'Zapdos']
+            , minLevel: 20
+            , maxLevel: 50,
+            respawn: 'lavenderTown',
             _unlock: {
                 badges: {
-                    'Thunder Badge': true
+                    'Soul Badge': true
                 }
             }
         },
@@ -654,23 +666,11 @@ const ROUTES = {
                 }
             }
         },
-        powerPlant: {
-            name: 'Power Plant'
-            , pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Grimer', 'Muk', 'Voltorb', 'Electrode', 'Electabuzz', 'Zapdos']
-            , minLevel: 25
-            , maxLevel: 35,
-            respawn: 'lavenderTown',
-            _unlock: {
-                badges: {
-                    'Soul Badge': true
-                }
-            }
-        },
         kroute19: {
             name: 'Route 19'
-            , pokes: ['Raticate', 'Pidgeotto', 'Oddish', 'Ditto']
-            , minLevel: 26
-            , maxLevel: 30,
+            , pokes: ['Tentacool']
+            , minLevel: 5
+            , maxLevel: 40,
             respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {
@@ -681,8 +681,9 @@ const ROUTES = {
         , seafoamIsland: {
             name: 'Seafoam Island',
             pokes: ['Zubat', 'Golbat', 'Psyduck', 'Golduck', 'Slowpoke', 'Slowbro', 'Seel', 'Dewgong', 'Shellder', 'Krabby', 'Kingler', 'Horsea', 'Seadra', 'Staryu', 'Jynx', 'Articuno'],
-            minLevel: 30,
-            maxLevel: 40,
+            minLevel: 9,
+            maxLevel: 50,
+            respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {
                     'Soul Badge': true
@@ -691,9 +692,9 @@ const ROUTES = {
         }
         , kroute20: {
             name: 'Route 20'
-            , pokes: ['Raticate', 'Pidgeotto', 'Weepinbell', 'Kadabra']
-            , minLevel: 27
-            , maxLevel: 31,
+            , pokes: ['Tentacool']
+            , minLevel: 5
+            , maxLevel: 40,
             respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {
@@ -755,20 +756,20 @@ const ROUTES = {
         , pokemonMansion: {
             name: 'Pokemon Mansion'
             , pokes: ['Rattata', 'Ratiate', 'Vulpix', 'Growlithe', 'Ponyta', 'Grimer', 'Muk', 'Koffing', 'Weezing', 'Magmar', 'Ditto']
-            , minLevel: 32
-            , maxLevel: 40,
+            , minLevel: 26
+            , maxLevel: 46,
             respawn: 'cinnabarIsland',
             _unlock: {
                 badges: {
-                    'Volcano Badge': true
+                    'Soul Badge': true
                 }
             },
         }
         , fossilCave: {
             name: 'Fossil Restorer'
             , pokes: ['Aerodactyl', 'Omanyte', 'Kabuto', 'Lapras']
-            , minLevel: 32
-            , maxLevel: 40,
+            , minLevel: 30
+            , maxLevel: 30,
             respawn: 'cinnabarIsland',
             _unlock: {
                 badges: {
@@ -778,7 +779,7 @@ const ROUTES = {
         }
         , kroute21: {
             name: 'Route 21'
-            , pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Raticate', 'Tangela']
+            , pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Raticate', 'Tentacool', 'Tangela']
             , minLevel: 21
             , maxLevel: 32,
             respawn: 'cinnabarIsland',
@@ -828,23 +829,23 @@ const ROUTES = {
             name: 'Kanto Old Rod',
             pokes: ['Magikarp'],
             minLevel: 5,
-            maxLevel: 10,
+            maxLevel: 5,
             respawn: 'palletTown',
             kantoOldRod: 1
         }
         , kGoodRod: {
             name: 'Kanto Good Rod',
-            pokes: ['Psyduck', 'Goldeen', 'Poliwag', 'Tentacool'],
-            minLevel: 15,
-            maxLevel: 25,
+            pokes: ['Poliwag', 'Goldeen', 'Magikarp'],
+            minLevel: 5,
+            maxLevel: 15,
             respawn: 'palletTown',
             kantoGoodRod: 1
         }
         , kSuperRod: {
             name: 'Kanto Super Rod',
-            pokes: ['Shellder', 'Krabby', 'Horsea', 'Staryu', 'Dratini'],
-            minLevel: 30,
-            maxLevel: 45,
+            pokes: ['Psyduck', 'Poliwag', 'Poliwhirl', 'Tentacool', 'Tentacruel', 'Slowpoke', 'Slowbro', 'Shellder', 'Krabby', 'Kingler', 'Horsea', 'Seadra', 'Goldeen', 'Seaking', 'Staryu', 'Magikarp', 'Gyarados', 'Dratini', 'Dragonair'],
+            minLevel: 5,
+            maxLevel: 40,
             respawn: 'palletTown',
             kantoSuperRod: 1
         }
