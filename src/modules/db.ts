@@ -1,4 +1,29 @@
-const POKEDEX = [
+type GrowthRate = 'Erratic' | 'Fast' | 'Medium Fast' | 'Medium Slow' | 'Slow' | 'Fluctuating';
+
+type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
+
+interface PokedexData {
+    name: string;
+    stats: {
+        'catch rate': string | number;
+        'growth rate': GrowthRate;
+        'hp': string | number;
+        'attack': string | number;
+        'defense': string | number;
+        'sp atk': string | number;
+        'sp def': string | number;
+        'speed': string | number;
+        'types': PokemonType[];
+    };
+    exp: number;
+    id: number | string;
+}
+
+function createPokemonArray<V extends string, T extends readonly PokedexData[] & Array<{name: V}>>(...args: T) {
+    return args;
+}
+
+const POKEDEX = createPokemonArray(
     {
         'name': 'Bulbasaur',
         'stats': {
@@ -16584,6 +16609,8 @@ const POKEDEX = [
         'exp': 61,
         'id': 828,
     },
-];
+);
+
+export type PokemonNameType = typeof POKEDEX[number]['name'];
 
 export default POKEDEX;

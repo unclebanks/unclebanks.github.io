@@ -6,7 +6,7 @@
     <template #body>
       <div class="section">
         <h3 class="subtitle">
-          <span id="vitaminName">Vitamin</span> - 
+          <span id="vitaminName">Vitamin</span> -
           <span id="vitaminCount">?</span>
         </h3>
       </div>

@@ -5,15 +5,25 @@ module.exports = {
     },
     extends: [
         'plugin:vue/vue3-recommended',
+        'plugin:@typescript-eslint/recommended',
         'airbnb-base',
     ],
+    parser: 'vue-eslint-parser',
     parserOptions: {
-        ecmaVersion: 12,
+        parser: '@typescript-eslint/parser',
+        ecmaVersion: 'esnext',
         sourceType: 'module',
     },
     plugins: [
         'vue',
     ],
+    settings: {
+        'import/resolver': {
+            'node': {
+                'extensions': ['.js', '.jsx', '.ts', '.tsx', '.vue'],
+            },
+        },
+    },
     rules: {
         indent: ['error', 4],
         'quote-props': 'off',
@@ -39,5 +49,8 @@ module.exports = {
         'camelcase': 'off',
         'no-restricted-properties': 'off',
         'import/no-extraneous-dependencies': 'off',
+        '@typescript-eslint/no-empty-function': ['off'],
+        '@typescript-eslint/no-var-requires': ['off'],
+        'import/extensions': 'off',
     },
 };

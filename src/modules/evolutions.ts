@@ -1,4 +1,28 @@
-const EVOLUTIONS = {
+import { PokemonNameType } from './db';
+
+interface LevelEvolution {
+    type: 'level';
+    level: number | string;
+}
+
+interface MegaEvolution {
+    type: 'megaStone';
+    megaStone: string;
+}
+
+interface StoneEvolution {
+    type: 'stone';
+    stone: string;
+}
+
+type EvolutionType = LevelEvolution | MegaEvolution | StoneEvolution;
+
+interface Evolution {
+    to: PokemonNameType;
+    requires: EvolutionType;
+}
+
+const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Bulbasaur': [
         { 'to': 'Ivysaur', 'requires': { 'type': 'level', 'level': '16' } },
     ],
@@ -243,7 +267,7 @@ const EVOLUTIONS = {
     ],
     'Exeggcute': [
         { 'to': 'Exeggutor', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-        { 'to': 'Alola Exeggutor', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
+        { 'to': 'Alolan Exeggutor', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
     ],
     'Cubone': [
         { 'to': 'Marowak', 'requires': { 'type': 'level', 'level': '28' } },

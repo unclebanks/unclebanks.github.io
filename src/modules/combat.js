@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 import TYPES from './typeModifiers';
 import { RNG, flash, $ } from './utilities';
 import { POKEDEXFLAGS } from './data';
