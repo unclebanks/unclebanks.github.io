@@ -3368,10 +3368,10 @@ const ROUTES = {
             }
             , trainer: {
                 name: 'Cheren',
-                badge: 'Basic Badge', 
+                badge: 'Basic Badge',
                 poke: [
-                    ['Patrat', 11]
-                    ['Lillipup', 13]
+                    ['Patrat', 11],
+                    ['Lillipup', 13],
                 ]
             }
         },
@@ -3407,8 +3407,8 @@ const ROUTES = {
                 name: 'Roxie',
                 badge: 'Toxic Badge',
                 poke: [
-                    ['Koffing', 16]
-                    ['Whirlipede', 18]
+                    ['Koffing', 16],
+                    ['Whirlipede', 18],
                 ]
             }
         }
@@ -3426,9 +3426,9 @@ const ROUTES = {
                 name: 'Burgh',
                 badge: 'Insect Badge',
                 poke: [
-                    ['Swadloon', 22]
-                    ['Dwebble', 22]
-                    ['Leavanny', 24]
+                    ['Swadloon', 22],
+                    ['Dwebble', 22],
+                    ['Leavanny', 24],
                 ]
             }
             , _unlock: {
@@ -3439,7 +3439,7 @@ const ROUTES = {
         }
         , special105: {
             name: 'Castelia City'
-            , pokes: ['Cottonee', 'Pidove', 'Petilil', 'Skitty','Rattata', 'Buneary', 'Eevee']
+            , pokes: ['Cottonee', 'Pidove', 'Petilil', 'Skitty', 'Rattata', 'Buneary', 'Eevee']
             , minLevel: 15
             , maxLevel: 18
             , _unlock: {
