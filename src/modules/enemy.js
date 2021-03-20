@@ -12,27 +12,51 @@ export default (starter, player, Poke) => {
         Math.random() < (1 / (2 ** 13)),
     );
 
-    const trainerPoke = (pokemonList) => {
+    const profPoke = (pokemonList) => {
         const selected = 0;
-        combatLoop.trainerCurrentID = selected;
+        combatLoop.profCurrentID = selected;
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);
     };
-    const trainer1Poke = (pokemonList) => {
+    const prof1Poke = (pokemonList) => {
         const selected = 0;
-        combatLoop.trainerCurrentID = selected;
+        combatLoop.profCurrentID = selected;
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);
     };
-    const trainer2Poke = (pokemonList) => {
+    const prof2Poke = (pokemonList) => {
         const selected = 0;
-        combatLoop.trainerCurrentID = selected;
+        combatLoop.profCurrentID = selected;
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);
     };
-    const trainer3Poke = (pokemonList) => {
+    const prof3Poke = (pokemonList) => {
         const selected = 0;
-        combatLoop.trainerCurrentID = selected;
+        combatLoop.profCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
+    const gymLeaderPoke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.gymLeaderCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
+    const gymLeader1Poke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.gymLeaderCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
+    const gymLeader2Poke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.gymLeaderCurrentID = selected;
+        const poke = pokeByName(pokemonList[selected][0]);
+        return generator(poke, pokemonList[selected][1]);
+    };
+    const gymLeader3Poke = (pokemonList) => {
+        const selected = 0;
+        combatLoop.gymLeaderCurrentID = selected;
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);
     };
@@ -75,10 +99,14 @@ export default (starter, player, Poke) => {
     return {
         activePoke: () => active,
         clear: () => active = null,
-        trainerPoke: (pokemonList) => active = trainerPoke(pokemonList),
-        trainer1Poke: (pokemonList) => active = trainer1Poke(pokemonList),
-        trainer2Poke: (pokemonList) => active = trainer2Poke(pokemonList),
-        trainer3Poke: (pokemonList) => active = trainer3Poke(pokemonList),
+        profPoke: (pokemonList) => active = profPoke(pokemonList),
+        prof1Poke: (pokemonList) => active = prof1Poke(pokemonList),
+        prof2Poke: (pokemonList) => active = prof2Poke(pokemonList),
+        prof3Poke: (pokemonList) => active = prof3Poke(pokemonList),
+        gymLeaderPoke: (pokemonList) => active = gymLeaderPoke(pokemonList),
+        gymLeader1Poke: (pokemonList) => active = gymLeader1Poke(pokemonList),
+        gymLeader2Poke: (pokemonList) => active = gymLeader2Poke(pokemonList),
+        gymLeader3Poke: (pokemonList) => active = gymLeader3Poke(pokemonList),
         generateNew: (regionId, routeId) => active = generateNew(regionId, routeId),
         attachCL: (_combatLoop) => combatLoop = _combatLoop,
     };

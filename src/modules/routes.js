@@ -10,7 +10,7 @@ const ROUTES = {
         palletTown: {
             name: 'Pallet Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Oak',
                 win: 'oak1',
                 poke: [
@@ -19,7 +19,7 @@ const ROUTES = {
                     ['Squirtle', 15]
                 ]
             },
-            trainer1: {
+            prof1: {
                 name: 'Prof. Oak',
                 win: 'oak2',
                 poke: [
@@ -28,7 +28,7 @@ const ROUTES = {
                     ['Wartortle', 30]
                 ]
             },
-            trainer2: {
+            prof2: {
                 name: 'Prof. Oak',
                 win: 'oak3',
                 poke: [
@@ -37,7 +37,7 @@ const ROUTES = {
                     ['Blastoise', 60]
                 ]
             },
-            trainer3: {
+            prof3: {
                 name: 'Prof. Oak',
                 win: 'oak4',
                 poke: [
@@ -58,7 +58,7 @@ const ROUTES = {
         viridianCity: {
             name: 'Viridian City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Giovanni',
                 badge: 'Earth Badge',
                 poke: [
@@ -94,7 +94,7 @@ const ROUTES = {
         , pewterCity: {
             name: 'Pewter City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Brock',
                 badge: 'Boulder Badge',
                 win: 'boulder1',
@@ -103,7 +103,7 @@ const ROUTES = {
                     ['Onix', 14]
                 ]
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Brock',
                 win: 'Boulder2',
                 poke: [
@@ -112,7 +112,7 @@ const ROUTES = {
                     ['Aerodactyl', 30]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Brock',
                 win: 'Boulder3',
                 poke: [
@@ -123,7 +123,7 @@ const ROUTES = {
                     ['Omastar', 50]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Brock',
                 win: 'Boulder4',
                 poke: [
@@ -174,7 +174,7 @@ const ROUTES = {
         ceruleanCity: {
             name: 'Cerulean City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Misty',
                 badge: 'Cascade Badge',
                 win: 'cascade1',
@@ -183,7 +183,7 @@ const ROUTES = {
                     ['Starmie', 21]
                 ],
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Misty',
                 win: 'cascade2',
                 poke: [
@@ -193,7 +193,7 @@ const ROUTES = {
                     ['Goldeen', 40]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Misty',
                 win: 'cascade3',
                 poke: [
@@ -203,7 +203,7 @@ const ROUTES = {
                     ['Starmie', 70]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Misty',
                 win: 'cascade4',
                 megaStone: 'blastoisinite',
@@ -272,7 +272,7 @@ const ROUTES = {
         vermilionCity: {
             name: 'Vermilion City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Lt. Surge',
                 badge: 'Thunder Badge',
                 win: 'thunder1',
@@ -282,7 +282,7 @@ const ROUTES = {
                     ['Raichu', 24]
                 ]
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Lt. Surge',
                 win: 'thunder2',
                 poke: [
@@ -292,7 +292,7 @@ const ROUTES = {
                     ['Raichu', 40]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Lt. Surge',
                 win: 'thunder3',
                 poke: [
@@ -302,7 +302,7 @@ const ROUTES = {
                     ['Raichu', 70],
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Lt. Surge',
                 win: 'thunder4',
                 poke: [
@@ -439,7 +439,7 @@ const ROUTES = {
         celadonCity: {
             name: 'Celadon City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Erika',
                 badge: 'Rainbow Badge',
                 win: 'rainbow1',
@@ -449,7 +449,7 @@ const ROUTES = {
                     ['Vileplume', 29]
                 ]
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Erika',
                 win: 'rainbow2',
                 poke: [
@@ -459,7 +459,7 @@ const ROUTES = {
                     ['Vileplume', 50]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Erika',
                 win: 'rainbow3',
                 poke: [
@@ -470,7 +470,7 @@ const ROUTES = {
                     ['Vileplume', 75]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Erika',
                 win: 'rainbow4',
                 megaStone: 'venusaurite',
@@ -492,7 +492,7 @@ const ROUTES = {
         saffronCity: {
             name: 'Saffron City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Sabrina',
                 badge: 'Marsh Badge',
                 win: 'marsh1',
@@ -503,7 +503,7 @@ const ROUTES = {
                     ['Alakazam', 43]
                 ]
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Sabrina',
                 win: 'marsh2',
                 poke: [
@@ -513,7 +513,7 @@ const ROUTES = {
                     ['Alakazam', 50]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Sabrina',
                 win: 'marsh3',
                 poke: [
@@ -523,7 +523,7 @@ const ROUTES = {
                     ['Alakazam', 70]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Sabrina',
                 win: 'marsh4',
                 poke: [
@@ -590,7 +590,7 @@ const ROUTES = {
         fuchsiaCity: {
             name: 'Fuchsia City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Koga',
                 badge: 'Soul Badge',
                 poke: [
@@ -705,7 +705,7 @@ const ROUTES = {
         cinnabarIsland: {
             name: 'Cinnabar Island',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Blaine',
                 badge: 'Volcano Badge',
                 win: 'volcano1',
@@ -721,7 +721,7 @@ const ROUTES = {
                     'Soul Badge': true
                 }
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Blaine',
                 win: 'volcano2',
                 poke: [
@@ -731,7 +731,7 @@ const ROUTES = {
                     ['Arcanine', 60]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Blaine',
                 win: 'volcano3',
                 poke: [
@@ -741,7 +741,7 @@ const ROUTES = {
                     ['Arcanine', 80]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Blaine',
                 win: 'volcano4',
                 poke: [
@@ -864,7 +864,7 @@ const ROUTES = {
         NewBarkTown: {
             name: 'New Bark Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Elm',
                 badge: null,
                 poke: [
@@ -916,7 +916,7 @@ const ROUTES = {
         violetCity: {
             name: 'Violet City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Falkner',
                 badge: 'Zephyr Badge',
                 poke: [
@@ -1012,7 +1012,7 @@ const ROUTES = {
         , azaleaTown: {
             name: 'Azalea Town',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Bugsy',
                 badge: 'Hive Badge',
                 poke: [
@@ -1060,7 +1060,7 @@ const ROUTES = {
         goldenrodCity: {
             name: 'Goldenrod City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Whitney',
                 badge: 'Plain Badge',
                 poke: [
@@ -1149,7 +1149,7 @@ const ROUTES = {
         ecruteakCity: {
             name: 'Ecruteak City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Morty',
                 badge: 'Fog Badge',
                 poke: [
@@ -1192,7 +1192,7 @@ const ROUTES = {
         olivineCity: {
             name: 'Olivine City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Jasmine',
                 badge: 'Mineral Badge',
                 poke: [
@@ -1222,7 +1222,7 @@ const ROUTES = {
         cianwoodCity: {
             name: 'Cianwood City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Chuck',
                 badge: 'Storm Badge',
                 poke: [
@@ -1299,7 +1299,7 @@ const ROUTES = {
         mahoganyTown: {
             name: 'Mahogany Town',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Pryce',
                 badge: 'Glacier Badge',
                 poke: [
@@ -1389,7 +1389,7 @@ const ROUTES = {
         blackthornCity: {
             name: 'Blackthorn City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Clair',
                 badge: 'Rising Badge',
                 poke: [
@@ -1528,7 +1528,7 @@ const ROUTES = {
         littlerootTown: {
             name: 'Littleroot Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Birch',
                 badge: null,
                 poke: [
@@ -1566,7 +1566,7 @@ const ROUTES = {
         petalburgCity: {
             name: 'Petalburg City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Norman',
                 badge: 'Balance Badge',
                 poke: [
@@ -1596,7 +1596,7 @@ const ROUTES = {
         rustboroCity: {
             name: 'Rustboro City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Roxanne',
                 badge: 'Stone Badge',
                 poke: [
@@ -1655,7 +1655,7 @@ const ROUTES = {
         dewfordTown: {
             name: 'Dewford Town',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Brawly',
                 badge: 'Knuckle Badge',
                 poke: [
@@ -1757,7 +1757,7 @@ const ROUTES = {
         mauvilleCity: {
             name: 'Mauville City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Wattson',
                 badge: 'Dynamo Badge',
                 poke: [
@@ -1907,7 +1907,7 @@ const ROUTES = {
         lavaridgeTown: {
             name: 'Lavaridge Town',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Flannery',
                 badge: 'Heat Badge',
                 poke: [
@@ -1964,7 +1964,7 @@ const ROUTES = {
         fortreeCity: {
             name: 'Fortree City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Winona',
                 badge: 'Feather Badge',
                 poke: [
@@ -2078,7 +2078,7 @@ const ROUTES = {
         mossdeepCity: {
             name: 'Mossdeep City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Liza & Tate',
                 badge: 'Mind Badge',
                 poke: [
@@ -2159,7 +2159,7 @@ const ROUTES = {
         sootopolisCity: {
             name: 'Sootopolis City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Juan',
                 badge: 'Rain Badge',
                 poke: [
@@ -2394,7 +2394,7 @@ const ROUTES = {
         twinleafTown: {
             name: 'Twinleaf Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Rowan',
                 badge: null,
                 poke: [
@@ -2450,7 +2450,7 @@ const ROUTES = {
         , oreburghCity: {
             name: 'Oreburgh City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Roark',
                 badge: 'Coal Badge',
                 poke: [
@@ -2575,7 +2575,7 @@ const ROUTES = {
         , eternaCity: {
             name: 'Eterna City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Gardenia',
                 badge: 'Forest Badge',
                 poke: [
@@ -2653,7 +2653,7 @@ const ROUTES = {
         , hearthomeCity: {
             name: 'Hearthome City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Fantina',
                 badge: 'Relic Badge',
                 poke: [
@@ -2765,7 +2765,7 @@ const ROUTES = {
         , veilstoneCity: {
             name: 'Veilstone City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Maylene',
                 badge: 'Cobble Badge',
                 poke: [
@@ -2855,7 +2855,7 @@ const ROUTES = {
         , pastoriaCity: {
             name: 'Pastoria City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Crasher Wake',
                 badge: 'Fen Badge',
                 poke: [
@@ -2978,7 +2978,7 @@ const ROUTES = {
         , canalaveCity: {
             name: 'Canalave City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Byron',
                 badge: 'Mine Badge',
                 poke: [
@@ -3044,7 +3044,7 @@ const ROUTES = {
         , snowpointCity: {
             name: 'Snowpoint City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Candice',
                 badge: 'Icicle Badge',
                 poke: [
@@ -3087,7 +3087,7 @@ const ROUTES = {
         , sunyshoreCity: {
             name: 'Sunyshore City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Volkner',
                 badge: 'Beacon Badge',
                 poke: [
@@ -3358,13 +3358,21 @@ const ROUTES = {
         aspertiaCity: {
             name: 'Aspertia City',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Juniper',
                 badge: null,
                 poke: [
                     ['Snivy', 15],
                     ['Tepig', 15],
                     ['Oshawott', 15]
+                ]
+            },
+            gymLeader: {
+                name: 'Cheren',
+                badge: 'Basic Badge',
+                poke: [
+                    ['Patrat', 11]
+                    , ['Lillipup', 13]
                 ]
             }
         },
@@ -3396,13 +3404,18 @@ const ROUTES = {
         , virbankCity: {
             name: 'Virbank City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Roxie',
                 badge: 'Toxic Badge',
                 poke: [
                     ['Koffing', 16],
                     ['Whirlipede', 18],
                 ]
+            }
+            , _unlock: {
+                badges: {
+                    'Basic Badge': true
+                }
             }
         }
         , special104: {
@@ -3411,11 +3424,16 @@ const ROUTES = {
             , minLevel: 10
             , maxLevel: 14
             , respawn: 'virbankCity'
+            , _unlock: {
+                badges: {
+                    'Basic Badge': true
+                }
+            }
         }
         , casteliaCity: {
             name: 'Castelia City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Burgh',
                 badge: 'Insect Badge',
                 poke: [
@@ -3435,6 +3453,7 @@ const ROUTES = {
             , pokes: ['Cottonee', 'Pidove', 'Petilil', 'Skitty', 'Rattata', 'Buneary', 'Eevee']
             , minLevel: 15
             , maxLevel: 18
+            , respawn: 'casteliaCity'
             , _unlock: {
                 badges: {
                     'Toxic Badge': true
@@ -3446,6 +3465,7 @@ const ROUTES = {
             , pokes: ['Rattata', 'Zubat', 'Grimer']
             , minLevel: 14
             , maxLevel: 17
+            , respawn: 'casteliaCity'
             , _unlock: {
                 badges: {
                     'Toxic Badge': true
@@ -3457,6 +3477,7 @@ const ROUTES = {
             , pokes: ['Sandile', 'Darumaka', 'Trubbish', 'Scraggy', 'Minccino']
             , minLevel: 14
             , maxLevel: 17
+            , respawn: 'casteliaCity'
             , _unlock: {
                 badges: {
                     'Insect Badge': true
@@ -3468,6 +3489,7 @@ const ROUTES = {
             , pokes: ['Sandile', 'Darumaka', 'Maractus', 'Sigilyph', 'Dwebble', 'Sandshrew', 'Trapinch']
             , minLevel: 18
             , maxLevel: 21
+            , respawn: 'casteliaCity'
             , _unlock: {
                 badges: {
                     'Insect Badge': true
@@ -3479,83 +3501,434 @@ const ROUTES = {
             , pokes: ['Sandile', 'Yamask', 'Sandshrew']
             , minLevel: 18
             , maxLevel: 21
+            , respawn: 'casteliaCity'
             , _unlock: {
                 badges: {
                     'Insect Badge': true
                 }
             }
         }
-        , special133: {
-            name: 'Ancient Path'
-            , pokes: ['Roggenrola', 'Timburr', 'Woobat']
-            , minLevel: 16
-            , maxLevel: 18
+        , nimbasaCity: {
+            name: 'Nimbasa City'
+            , town: true
+            , gymLeader: {
+                name: 'Elesa'
+                , badge: 'Bolt Badge'
+                , poke: [
+                    ['Emolga', 28]
+                    , ['Flaaffy', 28]
+                    , ['Zebstrika', 30]
+                ]
+            }
+        }
+        , route118: {
+            name: 'Route 16'
+            , pokes: ['Gothita', 'Minccino', 'Trubbish', 'Liepard', 'Solosis']
+            , minLevel: 21
+            , maxLevel: 24
+            , respawn: 'nimbasaCity'
+            , _unlock: {
+                badges: {
+                    'Bolt Badge': true
+                }
+            }
+        }
+        , special125: {
+            name: 'Lostlorn Forest'
+            , pokes: ['Cottonee', 'Swadloon', 'Venipede', 'Petilil', 'Roselia', 'Combee', 'Heraross', 'Pinsir']
+            , minLevel: 21
+            , maxLevel: 24
+            , respawn: 'nimbasaCity'
+            , _unlock: {
+                badges: {
+                    'Bolt Badge': true
+                }
+            }
         }
         , route108: {
             name: 'Route 5'
             , pokes: ['Gothita', 'Minccino', 'Trubbish', 'Liepard', 'Solosis']
             , minLevel: 21
             , maxLevel: 24
+            , respawn: 'nimbasaCity'
+            , _unlock: {
+                badges: {
+                    'Bolt Badge': true
+                }
+            }
         }
         , special109: {
             name: 'Driftveil Drawbridge'
             , pokes: ['Ducklett']
             , minLevel: 22
             , maxLevel: 25
+            , respawn: 'nimbasaCity'
+            , _unlock: {
+                badges: {
+                    'Bolt Badge': true
+                }
+            }
+        }
+        , driftveilCity: {
+            name: 'Driftveil City'
+            , town: true
+            , gymLeader: {
+                name: 'Clay'
+                , badge: 'Quake Badge'
+                , poke: [
+                    ['Krokorok', 31]
+                    , ['Sandslash', 31]
+                    , ['Excadrill', 33]
+                ]
+            }
+            , _unlock: {
+                badges: {
+                    'Bolt Badge': true
+                }
+            }
+        }
+        , special134: {
+            name: 'Just an Illusion'
+            , pokes: ['Zorua']
+            , minLevel: 25
+            , maxLevel: 25
+            , respawn: 'driftveilCity'
+            , _unlock: {
+                badges: {
+                    'Bolt Badge': true
+                }
+            }
+        }
+        , special143: {
+            name: 'Relic Passage'
+            , pokes: ['Boldore', 'Woobat', 'Gurdurr', 'Raticate', 'Onix', 'Drilbur', 'Roggenrola', 'Timburr', 'Rattata']
+            , minLevel: 16
+            , maxLevel: 30
+            , respawn: 'driftveilCity'
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
+        }
+        , special144: {
+            name: 'Relic Castle'
+            , pokes: ['Yamask', 'Sandile', 'Sadnslash', 'Krokorok', 'Baltoy']
+            , minLevel: 27
+            , maxLevel: 30
+            , respawn: 'driftveilCity'
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
+        }
+        , special135: {
+            name: 'Relic Castle (Maze End)'
+            , pokes: ['Larvesta', 'Volcarona']
+            , minLevel: 65
+            , maxLevel: 65
+            , respawn: 'driftveilCity'
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
         }
         , route109: {
             name: 'Route 6'
-            , pokes: ['Deerling', 'Karrablast', 'Tranquill', 'Foongus', 'Swadloon', 'Shelmet']
+            , pokes: ['Deerling', 'Karrablast', 'Tranquill', 'Foongus', 'Swadloon', 'Shelmet', 'Marill']
             , minLevel: 23
             , maxLevel: 26
+            , respawn: 'driftveilCity'
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
         }
         , special110: {
             name: 'Mistralton Cave'
-            , pokes: ['Deino', 'Boldore', 'Woobat', 'Axew']
+            , pokes: ['Aron', 'Boldore', 'Woobat', 'Axew']
             , minLevel: 27
             , maxLevel: 31
+            , respawn: 'driftveilCity'
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
         }
         , special111: {
             name: 'Chargestone Cave'
-            , pokes: ['Joltik', 'Klink', 'Ferroseed', 'Boldore', 'Tynamo']
+            , pokes: ['Joltik', 'Klink', 'Ferroseed', 'Nosepass', 'Boldore', 'Tynamo', 'Drilbur']
             , minLevel: 24
             , maxLevel: 28
+            , respawn: 'driftveilCity'
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
         }
-        , special112: {
-            name: 'Reversal Mountain'
-            , pokes: ['Skorupi', 'Spoink', 'Drifblim', 'Trapinch', 'Grumpig', 'Skarmory', 'Numel', 'Camerupt']
-            , minLevel: 32
-            , maxLevel: 38
-        }
-        , special113: {
-            name: 'Strange House'
-            , pokes: ['Gothita', 'Gothorita', 'Solosis', 'Duosion']
-            , minLevel: 31
-            , maxLevel: 34
-        }
-        , special114: {
-            name: 'Nature Preserve'
-            , pokes: ['Nuzleaf', 'Altaria', 'Golduck', 'Noctowl', 'Girafarig', 'Kecleon']
-            , minLevel: 64
-            , maxLevel: 67
+        , misaltronCity: {
+            name: 'Misaltron City'
+            , town: true
+            , gymLeader: {
+                name: 'Skyla'
+                , badge: 'Jet Badge'
+                , poke: [
+                    ['Swoobat', 37]
+                    , ['Skarmory', 37]
+                    , ['Swanna', 39]
+                ]
+            }
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
         }
         , route110: {
             name: 'Route 7'
-            , pokes: ['Blitzle', 'Cubchoo', 'Deerling', 'Zebstrika', 'Watchog', 'Tranquill', 'Foongus']
+            , pokes: ['Cubchoo', 'Deerling', 'Zebstrika', 'Watchog', 'Tranquill', 'Foongus', 'Zangoose', 'Seviper']
             , minLevel: 30
             , maxLevel: 33
+            , respawn: 'misaltronCity'
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
         }
         , special115: {
             name: 'Celestial Tower'
-            , pokes: ['Golett', 'Litwick', 'Elgyem']
+            , pokes: ['Golbat', 'Litwick', 'Elgyem']
             , minLevel: 30
             , maxLevel: 33
+            , respawn: 'misaltronCity'
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
         }
         , special116: {
             name: 'Twist Mountain'
             , pokes: ['Vanillite', 'Boldore', 'Gurdurr', 'Heatmor', 'Durant', 'Woobat', 'Beartic', 'Cryogonal']
             , minLevel: 54
             , maxLevel: 57
+            , respawn: 'misaltronCity'
+        }
+        , lentimasTown: {
+            name: 'Lentimas Town'
+            , town: true
+        }
+        , special113: {
+            name: 'Strange House'
+            , pokes: ['Gothita', 'Gothorita', 'Solosis', 'Duosion', 'Litwick', 'Raticate', 'Golbat', 'Banette']
+            , minLevel: 31
+            , maxLevel: 34
+            , respawn: 'lentimasTown'
+            , _unlock: {
+                badges: {
+                    'Quake Badge': true
+                }
+            }
+        }
+        , special112: {
+            name: 'Reversal Mountain'
+            , pokes: ['Skorupi', 'Spoink', 'Drifblim', 'Trapinch', 'Grumpig', 'Skarmory', 'Numel', 'Camerupt', 'Woobat', 'Boldore']
+            , minLevel: 32
+            , maxLevel: 38
+            , respawn: 'lentimasTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , undellaTown: {
+            name: 'Undella Town'
+            , town: true
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , special123: {
+            name: 'Undella Town'
+            , pokes: ['Frillish', 'Basculin', 'Staryu']
+            , minLevel: 25
+            , maxLevel: 40
+            , respawn: 'undellaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , special126: {
+            name: 'Undella Bay'
+            , pokes: ['Mantyke', 'Remoraid', 'Spheal', 'Frillish']
+            , minLevel: 25
+            , maxLevel: 40
+            , respawn: 'undellaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , route115: {
+            name: 'Route 13'
+            , pokes: ['Tangela', 'Pelipper', 'Drifblim', 'Absol', 'Lunatone', 'Solrock', 'Frillish', 'Staryu', 'Basculin']
+            , minLevel: 34
+            , maxLevel: 37
+            , respawn: 'undellaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , special122: {
+            name: 'Giant Chasm'
+            ,
+            pokes: ['Tangela', 'Pelipper', 'Clefairy', 'Lunatone', 'Solrock', 'Delibird', 'Piloswine', 'Jynx', 'Sneasel', 'Ditto', 'Metang']
+            ,
+            minLevel: 49
+            ,
+            maxLevel: 52
+            , respawn: 'undellaTown'
+            , _unlock: {
+                badges: {
+                    'Wave Badge': true
+                }
+            }
+        }
+        , lacunosaTown: {
+            name: 'Lacunosa Town'
+            , town: true
+            , _unlock: {
+                badges: {
+                    'Wave Badge': true
+                }
+            }
+        }
+        , route114: {
+            name: 'Route 12'
+            , pokes: ['Roselia', 'Combee', 'Heracross', 'Pinsir', 'Tranquill', 'Sewaddle']
+            , minLevel: 39
+            , maxLevel: 42
+            , respawn: 'lacunosaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , special121: {
+            name: 'Village Bridge'
+            , pokes: ['Golduck', 'Marill', 'Zangoose', 'Seviper', 'Basculin']
+            , minLevel: 36
+            , maxLevel: 39
+            , respawn: 'lacunosaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , route113: {
+            name: 'Route 11'
+            , pokes: ['Golduck', 'Gligar', 'Marill', 'Zangoose', 'Seviper', 'Karrablast', 'Shelmet', 'Amoonguss', 'Basculin', 'Buizel']
+            , minLevel: 25
+            , maxLevel: 40
+            , respawn: 'lacunosaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , opelucidCity: {
+            name: 'Opelucid City'
+            , town: true
+            , gymLeader: {
+                name: 'Drayden'
+                , badge: 'Legend Badge'
+                , poke: [
+                    ['Druddigon', 46]
+                    , ['Flygon', 46]
+                    , ['Haxorus', 48]
+                ]
+            }
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , route112: {
+            name: 'Route 9'
+            , pokes: ['Gothorita', 'Minccino', 'Garbodor', 'Pawniard', 'Liepard', 'Duosion', 'Muk']
+            , minLevel: 37
+            , maxLevel: 39
+            , respawn: 'opelucidCity'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , special145: {
+            name: 'Humilau City'
+            , pokes: ['Frillish', 'Staryu', 'Basculin']
+            , minLevel: 30
+            , maxLevel: 45
+            , _unlock: {
+                badges: {
+                    'Legend Badge': true
+                }
+            }
+        }
+        , humilauCity: {
+            name: 'Humilau City'
+            , town: true
+            , gymLeader: {
+                name: 'Marlon'
+                , badge: 'Wave Badge'
+                , poke: [
+                    ['Carracosta', 49]
+                    , ['Wailord', 49]
+                    , ['Jellicent', 51]
+                ]
+            }
+            , _unlock: {
+                badges: {
+                    'Legend Badge': true
+                }
+            }
+        }
+        , route120: {
+            name: 'Route 22'
+            , pokes: ['Mienfoo', 'Amoonguss', 'Golduck', 'Maril', 'Pelipper', 'Lunatone', 'Solrock', 'Delibird', 'Basculin']
+            , minLevel: 15
+            , maxLevel: 42
+            , respawn: 'humilauCity'
+            , _unlock: {
+                badges: {
+                    'Wave Badge': true
+                }
+            }
+        }
+        , special114: {
+            name: 'Nature Preserve'
+            , pokes: ['Nuzleaf', 'Altaria', 'Golduck', 'Noctowl', 'Girafarig', 'Kecleon']
+            , minLevel: 64
+            , maxLevel: 67
         }
         , special117: {
             name: 'Icirrus City'
@@ -3581,11 +3954,11 @@ const ROUTES = {
             , minLevel: 54
             , maxLevel: 57
         }
-        , route112: {
-            name: 'Route 9'
-            , pokes: ['Gothorita', 'Minccino', 'Garbodor', 'Pawniard', 'Liepard', 'Duosion']
-            , minLevel: 37
-            , maxLevel: 39
+        , special133: {
+            name: 'Ancient Path'
+            , pokes: ['Roggenrola', 'Timburr', 'Woobat']
+            , minLevel: 16
+            , maxLevel: 18
         }
         , special120: {
             name: 'Victory Road'
@@ -3595,45 +3968,6 @@ const ROUTES = {
             minLevel: 41
             ,
             maxLevel: 50
-        }
-        , route113: {
-            name: 'Route 11'
-            , pokes: ['Golduck', 'Gligar', 'Marill', 'Zangoose', 'Seviper']
-            , minLevel: 40
-            , maxLevel: 43
-        }
-        , special121: {
-            name: 'Village Bridge'
-            , pokes: ['Golduck', 'Marill', 'Zangoose', 'Seviper']
-            , minLevel: 36
-            , maxLevel: 39
-        }
-        , route114: {
-            name: 'Route 12'
-            , pokes: ['Roselia', 'Combee', 'Heracross', 'Pinsir']
-            , minLevel: 39
-            , maxLevel: 42
-        }
-        , route115: {
-            name: 'Route 13'
-            , pokes: ['Tangela', 'Pelipper', 'Drifblim', 'Absol', 'Lunatone', 'Solrock']
-            , minLevel: 34
-            , maxLevel: 37
-        }
-        , special122: {
-            name: 'Giant Chasm'
-            ,
-            pokes: ['Tangela', 'Pelipper', 'Clefairy', 'Lunatone', 'Solrock', 'Delibird', 'Piloswine', 'Jynx', 'Sneasel', 'Ditto', 'Metang']
-            ,
-            minLevel: 49
-            ,
-            maxLevel: 52
-        }
-        , special123: {
-            name: 'Undella Town'
-            , pokes: ['Frillish', 'Basculin']
-            , minLevel: 25
-            , maxLevel: 40
         }
         , route116: {
             name: 'Route 14'
@@ -3659,24 +3993,6 @@ const ROUTES = {
             , minLevel: 54
             , maxLevel: 57
         }
-        , route118: {
-            name: 'Route 16'
-            , pokes: ['Gothita', 'Minccino', 'Trubbish', 'Liepard', 'Solosis']
-            , minLevel: 21
-            , maxLevel: 24
-        }
-        , special125: {
-            name: 'Lostlorn Forest'
-            , pokes: ['Cottonee', 'Swadloon', 'Venipede', 'Petilil']
-            , minLevel: 21
-            , maxLevel: 24
-        }
-        , special126: {
-            name: 'Undella Bay'
-            , pokes: ['Mantyke', 'Remoraid', 'Spheal']
-            , minLevel: 25
-            , maxLevel: 40
-        }
         , route119: {
             name: 'Route 21'
             , pokes: ['Mantyke', 'Remoraid', 'Spheal']
@@ -3688,12 +4004,6 @@ const ROUTES = {
             , pokes: ['Woobat', 'Boldore', 'Tynamo']
             , minLevel: 34
             , maxLevel: 37
-        }
-        , route120: {
-            name: 'Route 22'
-            , pokes: ['Pelipper', 'Golduck', 'Lunatone', 'Solrock', 'Marill', 'Delibird']
-            , minLevel: 39
-            , maxLevel: 42
         }
         , route121: {
             name: 'Route 23'
@@ -3770,18 +4080,6 @@ const ROUTES = {
             , minLevel: 10
             , maxLevel: 20
         }
-        , special134: {
-            name: 'Just an Illusion'
-            , pokes: ['Zorua']
-            , minLevel: 25
-            , maxLevel: 25
-        }
-        , special135: {
-            name: 'Relic Castle (Maze End)'
-            , pokes: ['Larvesta', 'Volcarona']
-            , minLevel: 65
-            , maxLevel: 65
-        }
         , special136: {
             name: 'Liberty Garden'
             , pokes: ['Victini']
@@ -3842,7 +4140,7 @@ const ROUTES = {
         aquacordeTown: {
             name: 'Aquacorde Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Sycamore',
                 badge: null,
                 poke: [
@@ -3947,7 +4245,7 @@ const ROUTES = {
         ikiTown: {
             name: 'Iki Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Kukui',
                 badge: null,
                 poke: [

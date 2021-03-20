@@ -29,8 +29,15 @@
         TOWN
       </button><br>
       <button
-        id="trainerButton"
-        onclick="userInteractions.checkBattle()"
+        id="profButton"
+        onclick="userInteractions.checkProfBattle()"
+        class="button"
+      >
+        PROFESSOR BATTLE
+      </button>
+      <button
+        id="gymLeaderButton"
+        onclick="userInteractions.checkGymLeaderBattle()"
         class="button"
       >
         GYM LEADER BATTLE
