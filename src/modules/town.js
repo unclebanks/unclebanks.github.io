@@ -810,7 +810,7 @@ export default (player, Poke) => {
                 const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
                 const buttonText = (own) ? 'Own' : 'Buy';
                 const buttonHTML = ` <button onclick="town.buyKalosBattleCoinItem('${i}')"${disableButton}>${buttonText}</button>`;
-                battlecoinShopHTML += `<li>${this.kalosBattlecoinShopItems[i].name}: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.kalosBattlecoinShopItems[i].battlecoins}${buttonHTML}</li>`;
+                battlecoinShopHTML += `<li>${this.kalosBattlecoinShopItems[i].name}: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${this.kalosBattlecoinShopItems[i].battlecoins}${buttonHTML}</>`;
             }
             $('#battlecoinShopItems').innerHTML = battlecoinShopHTML;
         },
