@@ -52,6 +52,8 @@ const getCommon = ({ outputPath, sourcePath, entries }) => (merge(
         },
     }),
 
+    parts.cache(),
+
     // Where to start looking for things to bundle
     { entry: ['./src'] },
 ));

@@ -12,6 +12,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const { merge } = require('webpack-merge');
+const path = require('path');
 
 const postcssLoader = (options) => ({
     loader: 'postcss-loader',
@@ -52,6 +53,10 @@ exports.loadTypescript = () => ({
                 test: /\.(j|t)sx?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
+                options: {
+                    cacheCompression: false,
+                    cacheDirectory: true,
+                },
             },
         ],
     },
@@ -163,4 +168,16 @@ exports.lint = (options = {}) => ({
             options,
         )),
     ],
+});
+
+exports.lintCache = (cacheRoot) => ({
+    cache: true,
+    cacheLocation: path.resolve(
+        cacheRoot,
+        '.eslintcache',
+    ),
+});
+
+exports.cache = (options = { type: 'filesystem' }) => ({
+    cache: options,
 });

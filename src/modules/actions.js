@@ -15,12 +15,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('It is too dangerous to travel without a POKEMON.');
                 return false;
             }
-            if (combatLoop.trainer) {
-                alert('You cannot run away from a GYM LEADER battle.');
+            if (combatLoop.prof || combatLoop.prof1 || combatLoop.prof2 || combatLoop.prof3) {
+                alert('You cannot run away from a PROFESSOR battle.');
                 return false;
             }
-            if (combatLoop.trainer1 || combatLoop.trainer2 || combatLoop.trainer3 || combatLoop.trainer4) {
-                alert('You cannot run away from a TRAINER battle.');
+            if (combatLoop.gymLeader || combatLoop.gymLeader1 || combatLoop.gymLeader2 || combatLoop.gymLeader3) {
+                alert('You cannot run away from a GYM LEADER battle.');
                 return false;
             }
             if (!player.routeUnlocked(player.settings.currentRegionId, newRouteId)) {
@@ -196,14 +196,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             renderView(dom, enemy, player);
         },
         prestigePokemon: function (pokemonIndex) {
-            if (player.unlocked.saveKill < 1) {
-                localStorage.clear();
-                player.purgeData = true;
-                window.location.reload(true);
-            } else {
-                player.getPokemon()[pokemonIndex].tryPrestige(player.getPokemon()[pokemonIndex].shiny());
-                renderView(dom, enemy, player);
-            }
+            player.getPokemon()[pokemonIndex].tryPrestige(player.getPokemon()[pokemonIndex].shiny());
+            renderView(dom, enemy, player);
         },
         moveToStorage: function (pokemonIndex) {
             appModel.$store.commit('pokemon/deposit', pokemonIndex);
@@ -478,67 +472,132 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.updateVitaminModal();
             }
         },
-        checkBattle: function () {
+        checkProfBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (!player.wins[routeData.trainer.win]) {
-                this.trainerBattle();
+            if (!player.wins[routeData.prof.win]) {
+                this.profBattle();
             }
-            if (player.wins[routeData.trainer.win] && !player.wins[routeData.trainer1.win]) {
-                this.trainer1Battle();
+            if (player.wins[routeData.prof.win] && !player.wins[routeData.prof1.win]) {
+                this.prof1Battle();
             }
-            if (player.wins[routeData.trainer.win] && player.wins[routeData.trainer1.win] && !player.wins[routeData.trainer2.win]) {
-                this.trainer2Battle();
+            if (player.wins[routeData.prof.win] && player.wins[routeData.prof1.win] && !player.wins[routeData.prof2.win]) {
+                this.prof2Battle();
             }
-            if (player.wins[routeData.trainer.win] && player.wins[routeData.trainer1.win] && player.wins[routeData.trainer2.win] && !player.wins[routeData.trainer3.win]) {
-                this.trainer3Battle();
+            if (player.wins[routeData.prof.win] && player.wins[routeData.prof1.win] && player.wins[routeData.prof2.win] && !player.wins[routeData.prof3.win]) {
+                this.prof3Battle();
             }
-            if (player.wins[routeData.trainer.win] && player.wins[routeData.trainer1.win] && player.wins[routeData.trainer2.win] && player.wins[routeData.trainer3.win]) {
-                this.trainer3ABattle();
+            if (player.wins[routeData.prof.win] && player.wins[routeData.prof1.win] && player.wins[routeData.prof2.win] && player.wins[routeData.prof3.win]) {
+                this.prof3ABattle();
             }
         },
-        trainerBattle: function () {
+        checkGymLeaderBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.trainer && routeData.trainer.poke.length > 0) {
-                combatLoop.trainer = { name: routeData.trainer.name, badge: routeData.trainer.badge, win: routeData.trainer.win };
-                combatLoop.trainerPoke = Object.values({ ...routeData.trainer.poke });
+            if (!player.wins[routeData.gymLeader.win]) {
+                this.gymLeaderBattle();
+            }
+            if (player.wins[routeData.gymLeader.win] && !player.wins[routeData.gymLeader1.win]) {
+                this.gymLeader1Battle();
+            }
+            if (player.wins[routeData.gymLeader.win] && player.wins[routeData.gymLeader1.win] && !player.wins[routeData.gymLeader2.win]) {
+                this.gymLeader2Battle();
+            }
+            if (player.wins[routeData.gymLeader.win] && player.wins[routeData.gymLeader1.win] && player.wins[routeData.gymLeader2.win] && !player.wins[routeData.gymLeader3.win]) {
+                this.gymLeader3Battle();
+            }
+            if (player.wins[routeData.gymLeader.win] && player.wins[routeData.gymLeader1.win] && player.wins[routeData.gymLeader2.win] && player.wins[routeData.gymLeader3.win]) {
+                this.gymLeader3ABattle();
+            }
+        },
+        profBattle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.prof && routeData.prof.poke.length > 0) {
+                combatLoop.prof = { name: routeData.prof.name, badge: routeData.prof.badge, win: routeData.prof.win };
+                combatLoop.profPoke = Object.values({ ...routeData.prof.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
             }
         },
-        trainer1Battle: function () {
+        prof1Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.trainer1 && routeData.trainer1.poke.length > 0) {
-                combatLoop.trainer1 = { name: routeData.trainer1.name, win: routeData.trainer1.win };
-                combatLoop.trainer1Poke = Object.values({ ...routeData.trainer1.poke });
+            if (routeData.prof1 && routeData.prof1.poke.length > 0) {
+                combatLoop.prof1 = { name: routeData.prof1.name, win: routeData.prof1.win };
+                combatLoop.prof1Poke = Object.values({ ...routeData.prof1.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
             }
         },
-        trainer2Battle: function () {
+        prof2Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.trainer2 && routeData.trainer2.poke.length > 0) {
-                combatLoop.trainer2 = { name: routeData.trainer2.name, win: routeData.trainer2.win };
-                combatLoop.trainer2Poke = Object.values({ ...routeData.trainer2.poke });
+            if (routeData.prof2 && routeData.prof2.poke.length > 0) {
+                combatLoop.prof2 = { name: routeData.prof2.name, win: routeData.prof2.win };
+                combatLoop.prof2Poke = Object.values({ ...routeData.prof2.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
             }
         },
-        trainer3Battle: function () {
+        prof3Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.trainer3 && routeData.trainer3.poke.length > 0) {
-                combatLoop.trainer3 = { name: routeData.trainer3.name, win: routeData.trainer3.win };
-                combatLoop.trainer3Poke = Object.values({ ...routeData.trainer3.poke });
+            if (routeData.prof3 && routeData.prof3.poke.length > 0) {
+                combatLoop.prof3 = { name: routeData.prof3.name, win: routeData.prof3.win };
+                combatLoop.prof3Poke = Object.values({ ...routeData.prof3.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
             }
         },
-        trainer3ABattle: function () {
+        prof3ABattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.trainer3 && routeData.trainer3.poke.length > 0) {
-                combatLoop.trainer3 = {
-                    name: routeData.trainer3.name, win: routeData.trainer3.win, reward: routeData.trainer3.reward, megaStone: routeData.trainer3.megaStone,
+            if (routeData.prof3 && routeData.prof3.poke.length > 0) {
+                combatLoop.prof3 = {
+                    name: routeData.prof3.name, win: routeData.prof3.win, reward: routeData.prof3.reward, megaStone: routeData.prof3.megaStone,
                 };
-                combatLoop.trainer3Poke = Object.values({ ...routeData.trainer3.poke });
+                combatLoop.prof3Poke = Object.values({ ...routeData.prof3.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        gymLeaderBattle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.gymLeader && routeData.gymLeader.poke.length > 0) {
+                combatLoop.gymLeader = { name: routeData.gymLeader.name, badge: routeData.gymLeader.badge, win: routeData.gymLeader.win };
+                combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymLeader.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        gymLeader1Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.gymLeader1 && routeData.gymLeader1.poke.length > 0) {
+                combatLoop.gymLeader1 = { name: routeData.gymLeader1.name, win: routeData.gymLeader1.win };
+                combatLoop.gymLeader1Poke = Object.values({ ...routeData.gymLeader1.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        gymLeader2Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.gymLeader2 && routeData.gymLeader2.poke.length > 0) {
+                combatLoop.gymLeader2 = { name: routeData.gymLeader2.name, win: routeData.gymLeader2.win };
+                combatLoop.gymLeader2Poke = Object.values({ ...routeData.gymLeader2.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        gymLeader3Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.gymLeader3 && routeData.gymLeader3.poke.length > 0) {
+                combatLoop.gymLeader3 = { name: routeData.gymLeader3.name, win: routeData.gymLeader3.win };
+                combatLoop.gymLeader3Poke = Object.values({ ...routeData.gymLeader3.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        gymLeader3ABattle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.gymLeader3 && routeData.gymLeader3.poke.length > 0) {
+                combatLoop.gymLeader3 = {
+                    name: routeData.gymLeader3.name, win: routeData.gymLeader3.win, reward: routeData.gymLeader3.reward, megaStone: routeData.gymLeader3.megaStone,
+                };
+                combatLoop.gymLeader3Poke = Object.values({ ...routeData.gymLeader3.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
             }
