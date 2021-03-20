@@ -12,7 +12,7 @@ html, body {
     grid-template-rows: 45% 25% 30%;
 }
 
-#gameContainer div {
+#gameContainer > div {
     border: 1px solid black;
 }
 
