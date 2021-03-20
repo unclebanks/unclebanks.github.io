@@ -3370,9 +3370,8 @@ const ROUTES = {
                 name: 'Cheren',
                 badge: 'Basic Badge',
                 poke: [
-                    ['Mew', 15],
-                    ['Mewtwo', 15],
-                    ['Mew', 15]
+                    ['Patrat', 11]
+                    , ['Lillipup', 13]
                 ]
             }
         },
@@ -3721,7 +3720,8 @@ const ROUTES = {
             , respawn: 'misaltronCity'
         }
         , lentimasTown: {
-            town: true
+            name: 'Lentimas Town'
+            , town: true
         }
         , special113: {
             name: 'Strange House'
@@ -3743,12 +3743,18 @@ const ROUTES = {
             , respawn: 'lentimasTown'
             , _unlock: {
                 badges: {
-                    'Quake Badge': true
+                    'Jet Badge': true
                 }
             }
         }
         , undellaTown: {
-            town: true
+            name: 'Undella Town'
+            , town: true
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
         }
         , special123: {
             name: 'Undella Town'
@@ -3758,7 +3764,7 @@ const ROUTES = {
             , respawn: 'undellaTown'
             , _unlock: {
                 badges: {
-                    'Quake Badge': true
+                    'Jet Badge': true
                 }
             }
         }
@@ -3770,7 +3776,150 @@ const ROUTES = {
             , respawn: 'undellaTown'
             , _unlock: {
                 badges: {
-                    'Quake Badge': true
+                    'Jet Badge': true
+                }
+            }
+        }
+        , route115: {
+            name: 'Route 13'
+            , pokes: ['Tangela', 'Pelipper', 'Drifblim', 'Absol', 'Lunatone', 'Solrock', 'Frillish', 'Staryu', 'Basculin']
+            , minLevel: 34
+            , maxLevel: 37
+            , respawn: 'undellaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , special122: {
+            name: 'Giant Chasm'
+            ,
+            pokes: ['Tangela', 'Pelipper', 'Clefairy', 'Lunatone', 'Solrock', 'Delibird', 'Piloswine', 'Jynx', 'Sneasel', 'Ditto', 'Metang']
+            ,
+            minLevel: 49
+            ,
+            maxLevel: 52
+            , respawn: 'undellaTown'
+            , _unlock: {
+                badges: {
+                    'Wave Badge': true
+                }
+            }
+        }
+        , lacunosaTown: {
+            name: 'Lacunosa Town'
+            , town: true
+            , _unlock: {
+                badges: {
+                    'Wave Badge': true
+                }
+            }
+        }
+        , route114: {
+            name: 'Route 12'
+            , pokes: ['Roselia', 'Combee', 'Heracross', 'Pinsir', 'Tranquill', 'Sewaddle']
+            , minLevel: 39
+            , maxLevel: 42
+            , respawn: 'lacunosaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , special121: {
+            name: 'Village Bridge'
+            , pokes: ['Golduck', 'Marill', 'Zangoose', 'Seviper', 'Basculin']
+            , minLevel: 36
+            , maxLevel: 39
+            , respawn: 'lacunosaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , route113: {
+            name: 'Route 11'
+            , pokes: ['Golduck', 'Gligar', 'Marill', 'Zangoose', 'Seviper', 'Karrablast', 'Shelmet', 'Amoonguss', 'Basculin', 'Buizel']
+            , minLevel: 25
+            , maxLevel: 40
+            , respawn: 'lacunosaTown'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , opelucidCity: {
+            name: 'Opelucid City'
+            , town: true
+            , gymLeader: {
+                name: 'Drayden'
+                , badge: 'Legend Badge'
+                , poke: [
+                    ['Druddigon', 46]
+                    , ['Flygon', 46]
+                    , ['Haxorus', 48]
+                ]
+            }
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , route112: {
+            name: 'Route 9'
+            , pokes: ['Gothorita', 'Minccino', 'Garbodor', 'Pawniard', 'Liepard', 'Duosion', 'Muk']
+            , minLevel: 37
+            , maxLevel: 39
+            , respawn: 'opelucidCity'
+            , _unlock: {
+                badges: {
+                    'Jet Badge': true
+                }
+            }
+        }
+        , special145: {
+            name: 'Humilau City'
+            , pokes: ['Frillish', 'Staryu', 'Basculin']
+            , minLevel: 30
+            , maxLevel: 45
+            , _unlock: {
+                badges: {
+                    'Legend Badge': true
+                }
+            }
+        }
+        , humilauCity: {
+            name: 'Humilau City'
+            , town: true
+            , gymLeader: {
+                name: 'Marlon'
+                , badge: 'Wave Badge'
+                , poke: [
+                    ['Carracosta', 49]
+                    , ['Wailord', 49]
+                    , ['Jellicent', 51]
+                ]
+            }
+            , _unlock: {
+                badges: {
+                    'Legend Badge': true
+                }
+            }
+        }
+        , route120: {
+            name: 'Route 22'
+            , pokes: ['Mienfoo', 'Amoonguss', 'Golduck', 'Maril', 'Pelipper', 'Lunatone', 'Solrock', 'Delibird', 'Basculin']
+            , minLevel: 15
+            , maxLevel: 42
+            , respawn: 'humilauCity'
+            , _unlock: {
+                badges: {
+                    'Wave Badge': true
                 }
             }
         }
@@ -3810,12 +3959,6 @@ const ROUTES = {
             , minLevel: 16
             , maxLevel: 18
         }
-        , route112: {
-            name: 'Route 9'
-            , pokes: ['Gothorita', 'Minccino', 'Garbodor', 'Pawniard', 'Liepard', 'Duosion']
-            , minLevel: 37
-            , maxLevel: 39
-        }
         , special120: {
             name: 'Victory Road'
             ,
@@ -3824,39 +3967,6 @@ const ROUTES = {
             minLevel: 41
             ,
             maxLevel: 50
-        }
-        , route113: {
-            name: 'Route 11'
-            , pokes: ['Golduck', 'Gligar', 'Marill', 'Zangoose', 'Seviper']
-            , minLevel: 40
-            , maxLevel: 43
-        }
-        , special121: {
-            name: 'Village Bridge'
-            , pokes: ['Golduck', 'Marill', 'Zangoose', 'Seviper']
-            , minLevel: 36
-            , maxLevel: 39
-        }
-        , route114: {
-            name: 'Route 12'
-            , pokes: ['Roselia', 'Combee', 'Heracross', 'Pinsir']
-            , minLevel: 39
-            , maxLevel: 42
-        }
-        , route115: {
-            name: 'Route 13'
-            , pokes: ['Tangela', 'Pelipper', 'Drifblim', 'Absol', 'Lunatone', 'Solrock']
-            , minLevel: 34
-            , maxLevel: 37
-        }
-        , special122: {
-            name: 'Giant Chasm'
-            ,
-            pokes: ['Tangela', 'Pelipper', 'Clefairy', 'Lunatone', 'Solrock', 'Delibird', 'Piloswine', 'Jynx', 'Sneasel', 'Ditto', 'Metang']
-            ,
-            minLevel: 49
-            ,
-            maxLevel: 52
         }
         , route116: {
             name: 'Route 14'
@@ -3893,12 +4003,6 @@ const ROUTES = {
             , pokes: ['Woobat', 'Boldore', 'Tynamo']
             , minLevel: 34
             , maxLevel: 37
-        }
-        , route120: {
-            name: 'Route 22'
-            , pokes: ['Pelipper', 'Golduck', 'Lunatone', 'Solrock', 'Marill', 'Delibird']
-            , minLevel: 39
-            , maxLevel: 42
         }
         , route121: {
             name: 'Route 23'
