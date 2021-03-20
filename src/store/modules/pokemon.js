@@ -48,9 +48,10 @@ export default {
     },
 
     mutations: {
-        load(state, { party, storage }) {
+        load(state, { party, storage, pinnedStorage }) {
             state.party = party;
             state.storage = storage;
+            state.pinnedStorage = new Set(pinnedStorage);
         },
 
         add(state, poke) {
