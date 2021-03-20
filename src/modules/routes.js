@@ -922,7 +922,7 @@ const ROUTES = {
                 badge: 'Zephyr Badge',
                 poke: [
                     ['Pidgeotto', 25],
-                    ['noctowl', 25],
+                    ['Noctowl', 25],
                     ['pidgeot', 25]
                 ]
             },
