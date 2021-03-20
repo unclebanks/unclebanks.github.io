@@ -84,7 +84,7 @@ export default {
         },
 
         totalPages() {
-            return Math.ceil(this.list.length / this.pageSize);
+            return Math.max(1, Math.ceil(this.list.length / this.pageSize));
         },
     },
 };
