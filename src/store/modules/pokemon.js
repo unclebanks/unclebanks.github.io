@@ -1,4 +1,4 @@
-import POKEDEX from '../../modules/db';
+import { pokedexMaps } from '../../modules/db';
 
 const moveToFirst = (list, index) => [
     list[index],
@@ -23,7 +23,7 @@ const moveUp = (list, index) => [
 const cmpFunctions = {
     lvl: (lhs, rhs) => lhs.level() - rhs.level(),
     dex: (lhs, rhs) => {
-        const index = (p) => POKEDEX.findIndex((x) => x.name == p.pokeName());
+        const index = (p) => pokedexMaps.name[p.pokeName()];
         return index(lhs) - index(rhs);
     },
     vlv: (lhs, rhs) => lhs.level() - rhs.level() || lhs.avgAttack() - rhs.avgAttack(),
