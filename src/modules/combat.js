@@ -93,12 +93,6 @@ export default (player, enemy) => {
                     const damage = defender.takeDamage(attacker.avgAttack() * damageMultiplier);
                     if (who === 'player') {
                     // TODO add some flair
-                        player.statistics.totalDamage += damage;
-                        if (player.unlocked.tryThis < 1) {
-                            localStorage.clear();
-                            player.purgeData = true;
-                            window.location.reload(true);
-                        }
                     }
                     dom.renderPokeOnContainer('enemy', enemy.activePoke());
                     dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back');

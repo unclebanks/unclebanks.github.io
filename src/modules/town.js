@@ -1305,12 +1305,8 @@ export default (player, Poke) => {
                 return false;
             } else {
                 player.currencyAmount.battlecoins -= item.battlecoins;
-                if (item.unlockable) {
-                    player.unlocked[item.unlockable] = 1;
-                }
-                if (item.ball) {
-                    player.ballsAmount[item.ball]++;
-                    dom.renderBalls();
+                if (item.megaStones) {
+                    player.megaStones[item.megaStones] = 1;
                 }
                 this.renderKalosBattleCoinShop(); // force refresh of shop
                 dom.renderCurrency();

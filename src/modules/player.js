@@ -220,7 +220,7 @@ export default (lastSave, appModel) => {
         purgeData: false,
 
         checksum: function (s) {
-            let chk = 0x12345678;
+            let chk = 0x12345679;
             const len = s.length;
             for (let i = 0; i < len; i++) {
                 chk += (s.charCodeAt(i) * (i + 1));
