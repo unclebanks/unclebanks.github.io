@@ -463,6 +463,10 @@ export default (lastSave, appModel) => {
                 appModel.$store.state.pokemon.storage.forEach((poke, index) => {
                     localStorage.setItem(`storage${index}`, JSON.stringify(poke.save()));
                 });
+                localStorage.setItem(
+                    'pinnedStorage',
+                    JSON.stringify([...appModel.$store.state.pokemon.pinnedStorage]),
+                );
                 localStorage.setItem('ballsAmount', JSON.stringify(this.ballsAmount));
                 localStorage.setItem('battleItems', JSON.stringify(this.battleItems));
                 localStorage.setItem('vitamins', JSON.stringify(this.vitamins));
@@ -481,6 +485,7 @@ export default (lastSave, appModel) => {
             const saveData = JSON.stringify({
                 pokes: appModel.$store.state.pokemon.party.map((poke) => poke.save()),
                 storage: appModel.$store.state.pokemon.storage.map((poke) => poke.save()),
+                pinnedStorage: [...appModel.$store.state.pokemon.pinnedStorage],
                 pokedexData: this.getPokedexData(),
                 statistics: this.statistics,
                 settings: this.settings,
@@ -531,8 +536,8 @@ export default (lastSave, appModel) => {
                     storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 }
             });
-
-            appModel.$store.commit('pokemon/load', { party, storage });
+            const pinnedStorage = JSON.parse(localStorage.getItem('pinnedStorage'));
+            appModel.$store.commit('pokemon/load', { party, storage, pinnedStorage });
 
             if (JSON.parse(localStorage.getItem('ballsAmount'))) {
                 this.ballsAmount = JSON.parse(localStorage.getItem('ballsAmount'));
@@ -613,7 +618,8 @@ export default (lastSave, appModel) => {
                     storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 });
 
-                appModel.$store.commit('pokemon/load', { party, storage });
+                const pinnedStorage = saveData.pinnedStorage;
+                appModel.$store.commit('pokemon/load', { party, storage, pinnedStorage });
 
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
