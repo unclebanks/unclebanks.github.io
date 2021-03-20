@@ -1,5 +1,5 @@
 <template>
-  <div class="buttons">
+  <div class="buttons mb-0">
     <button
       class="button"
       :disabled="page === 1"

@@ -39,6 +39,7 @@ export default {
         party: [],
         //
         storage: [],
+        pinnedStorage: new Set([]),
         storageSortDirection: 'asc',
         storageSortMethod: 'dex',
         //
@@ -131,6 +132,14 @@ export default {
             }
         },
 
+        pinStorage(state, poke) {
+            state.pinnedStorage.add(poke.pokeName());
+        },
+
+        unpinStorage(state, poke) {
+            state.pinnedStorage.delete(poke.pokeName());
+        },
+
         healAll(state) {
             state.party.forEach((poke) => poke.heal());
             state.storage.forEach((poke) => poke.heal());
@@ -145,8 +154,16 @@ export default {
                 cmpFunc = inverseCmp(cmpFunc);
             }
 
-            return state.storage.sort(cmpFunc);
+            const pinned = (poke) => state.pinnedStorage.has(poke.pokeName());
+            const pinCheck = (a, b) => Number(pinned(b)) - Number(pinned(a));
+
+            return state.storage.sort((a, b) => pinCheck(a, b) || cmpFunc(a, b));
         },
+
+        isPinned(state) {
+            return (poke) => state.pinnedStorage.has(poke.pokeName());
+        },
+
         // sortedParty,
         timeToHeal(state) {
             return Math.max(0, 30000 - (Date.now() - state.lastHeal));

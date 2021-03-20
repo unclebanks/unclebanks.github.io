@@ -37,6 +37,7 @@
     <Paginated
       :get-key="(poke) => poke.pokeName()"
       :list="storage"
+      :page-size="15"
       list-id="storageList"
       list-class="manageTeamEnabled"
     >
