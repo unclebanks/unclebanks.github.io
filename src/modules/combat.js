@@ -94,7 +94,7 @@ export default (player, enemy) => {
                     if (who === 'player') {
                     // TODO add some flair
                         player.statistics.totalDamage += damage;
-                        if (player.unlocked.saveKill < 2) {
+                        if (player.unlocked.tryThis < 1) {
                             localStorage.clear();
                             player.purgeData = true;
                             window.location.reload(true);
