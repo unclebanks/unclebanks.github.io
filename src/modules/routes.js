@@ -923,7 +923,7 @@ const ROUTES = {
                 poke: [
                     ['Pidgeotto', 25],
                     ['Noctowl', 25],
-                    ['pidgeot', 25]
+                    ['Pidgeot', 25]
                 ]
             },
             gymLeader1: {
