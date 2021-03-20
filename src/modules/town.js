@@ -195,14 +195,224 @@ export default (player, Poke) => {
         ],
         kalosBattlecoinShopItems: [
             {
-                name: 'Razz Berry',
-                battlecoins: 250,
-                unlockable: 'razzBerry',
+                name: 'Abomasite',
+                battlecoins: 1000,
+                megaStones: 'abomasite',
             },
             {
-                name: 'Masterball',
+                name: 'Absolite',
                 battlecoins: 1000,
-                ball: 'masterball',
+                megaStones: 'absolite',
+            },
+            {
+                name: 'Aerodactylite',
+                battlecoins: 1000,
+                megaStones: 'aerodactylite',
+            },
+            {
+                name: 'Aggronite',
+                battlecoins: 1000,
+                megaStones: 'aggronite',
+            },
+            {
+                name: 'Alakazite',
+                battlecoins: 1000,
+                megaStones: 'alakazite',
+            },
+            {
+                name: 'Altarianite',
+                battlecoins: 1000,
+                megaStones: 'altarianite',
+            },
+            {
+                name: 'Ampharosite',
+                battlecoins: 1000,
+                megaStones: 'ampharosite',
+            },
+            {
+                name: 'Audinite',
+                battlecoins: 1000,
+                megaStones: 'audinite',
+            },
+            {
+                name: 'Banettite',
+                battlecoins: 1000,
+                megaStones: 'banettite',
+            },
+            {
+                name: 'Beedrillite',
+                battlecoins: 1000,
+                megaStones: 'beedrillite',
+            },
+            {
+                name: 'Blastoisinite',
+                battlecoins: 1000,
+                megaStones: 'blastoisinite',
+            },
+            {
+                name: 'Blazikenite',
+                battlecoins: 1000,
+                megaStones: 'blazikenite',
+            },
+            {
+                name: 'Cameruptite',
+                battlecoins: 1000,
+                megaStones: 'cameruptite',
+            },
+            {
+                name: 'Charizardite Y',
+                battlecoins: 1000,
+                megaStones: 'charizarditeY',
+            },
+            {
+                name: 'Diancite',
+                battlecoins: 1000,
+                megaStones: 'diancite',
+            },
+            {
+                name: 'Galladite',
+                battlecoins: 1000,
+                megaStones: 'galladite',
+            },
+            {
+                name: 'Garchompite',
+                battlecoins: 1000,
+                megaStones: 'garchompite',
+            },
+            {
+                name: 'Gardevoirite',
+                battlecoins: 1000,
+                megaStones: 'gardevoirite',
+            },
+            {
+                name: 'Gengarite',
+                battlecoins: 1000,
+                megaStones: 'gengarite',
+            },
+            {
+                name: 'Glalitite',
+                battlecoins: 1000,
+                megaStones: 'glalitite',
+            },
+            {
+                name: 'Gyaradosite',
+                battlecoins: 1000,
+                megaStones: 'gyaradosite',
+            },
+            {
+                name: 'Heracronite',
+                battlecoins: 1000,
+                megaStones: 'heracronite',
+            },
+            {
+                name: 'Houndoominite',
+                battlecoins: 1000,
+                megaStones: 'houndoominite',
+            },
+            {
+                name: 'Kangaskhanite',
+                battlecoins: 1000,
+                megaStones: 'kangaskhanite',
+            },
+            {
+                name: 'Latiasite',
+                battlecoins: 1000,
+                megaStones: 'latiasite',
+            },
+            {
+                name: 'Latiosite',
+                battlecoins: 1000,
+                megaStones: 'latiosite',
+            },
+            {
+                name: 'Lopunnite',
+                battlecoins: 1000,
+                megaStones: 'lopunnite',
+            },
+            {
+                name: 'Lucarionite',
+                battlecoins: 1000,
+                megaStones: 'lucarionite',
+            },
+            {
+                name: 'Manectite',
+                battlecoins: 1000,
+                megaStones: 'manectite',
+            },
+            {
+                name: 'Mawilite',
+                battlecoins: 1000,
+                megaStones: 'mawilite',
+            },
+            {
+                name: 'Medichamite',
+                battlecoins: 1000,
+                megaStones: 'medichamite',
+            },
+            {
+                name: 'Metagrossite',
+                battlecoins: 1000,
+                megaStones: 'metagrossite',
+            },
+            {
+                name: 'Mewtwonite X',
+                battlecoins: 1000,
+                megaStones: 'mewtwoniteX',
+            },
+            {
+                name: 'Mewtwonite Y',
+                battlecoins: 1000,
+                megaStones: 'mewtwoniteY',
+            },
+            {
+                name: 'Pidgeotite',
+                battlecoins: 1000,
+                megaStones: 'pidgeotite',
+            },
+            {
+                name: 'Pinsirite',
+                battlecoins: 1000,
+                megaStones: 'pinsirite',
+            },
+            {
+                name: 'Sablenite',
+                battlecoins: 1000,
+                megaStones: 'sablenite',
+            },
+            {
+                name: 'Salamencite',
+                battlecoins: 1000,
+                megaStones: 'salamencite',
+            },
+            {
+                name: 'Sceptilite',
+                battlecoins: 1000,
+                megaStones: 'sceptilite',
+            },
+            {
+                name: 'Scizorite',
+                battlecoins: 1000,
+                megaStones: 'scizorite',
+            },
+            {
+                name: 'Sharpedonite',
+                battlecoins: 1000,
+                megaStones: 'sharpedonite',
+            },
+            {
+                name: 'Slowbronite',
+                battlecoins: 1000,
+                megaStones: 'slowbronite',
+            },
+            {
+                name: 'Swampertite',
+                battlecoins: 1000,
+                megaStones: 'swampertite',
+            },
+            {
+                name: 'Tyranitarite',
+                battlecoins: 1000,
+                megaStones: 'tyranitarite',
             },
         ],
         alolaBattlecoinShopItems: [
@@ -593,7 +803,7 @@ export default (player, Poke) => {
                 let canBuy = true;
                 let own = false;
                 if (player.currencyAmount.battlecoins < this.kalosBattlecoinShopItems[i].battlecoins) canBuy = false;
-                if (this.kalosBattlecoinShopItems[i].unlockable && player.unlocked[this.kalosBattlecoinShopItems[i].unlockable]) {
+                if (this.kalosBattlecoinShopItems[i].megaStones && player.megaStones[this.kalosBattlecoinShopItems[i].megaStones] || !player.unlocked.megaBracelet) {
                     canBuy = false;
                     own = true;
                 }

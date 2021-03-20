@@ -918,12 +918,47 @@ const ROUTES = {
             town: true,
             gymLeader: {
                 name: 'Falkner',
+                win: 'falkner1',
                 badge: 'Zephyr Badge',
                 poke: [
-                    ['Pidgey', 7],
-                    ['Pidgeotto', 9]
+                    ['Pidgeotto', 25],
+                    ['noctowl', 25],
+                    ['pidgeot', 25]
                 ]
-            }
+            },
+            gymLeader1: {
+                name: 'Falkner',
+                win: 'falkner2',
+                poke: [
+                    ['Pidgeotto', 40],
+                    ['Noctowl', 40],
+                    ['Pidgeot', 40],
+                    ['Murkrow', 40]
+                ]
+            },
+            gymLeader2: {
+                name: 'Falkner',
+                win: 'falkner3',
+                poke: [
+                    ['Dodrio', 60],
+                    ['Noctowl', 60],
+                    ['Pidgeot', 60],
+                    ['Murkrow', 60],
+                    ['Fearow', 60]
+                ]
+            },
+            gymLeader3: {
+                name: 'Falkner',
+                win: 'falkner4',
+                megaStone: 'pidgeotite',
+                poke: [
+                    ['Dodrio', 100],
+                    ['Noctowl', 100],
+                    ['M-Pidgeot', 100],
+                    ['Murkrow', 100],
+                    ['Fearow', 100]
+                ]
+            },
         }
         , sproutTower: {
             name: 'Sprout Tower'
@@ -1014,11 +1049,45 @@ const ROUTES = {
             town: true,
             gymLeader: {
                 name: 'Bugsy',
+                win: 'bugsy1',
                 badge: 'Hive Badge',
                 poke: [
-                    ['Metapod', 14],
-                    ['Kakuna', 14],
-                    ['Scyther', 16]
+                    ['Butterfree', 25],
+                    ['Beedrill', 25],
+                    ['Scyther', 25]
+                ]
+            },
+            gymLeader1: {
+                name: 'Bugsy',
+                win: 'bugsy2',
+                poke: [
+                    ['Butterfree', 60],
+                    ['Beedrill', 60],
+                    ['Scizor', 60],
+                    ['Pinsir', 60],
+                ]
+            },
+            gymLeader2: {
+                name: 'Bugsy',
+                win: 'bugsy3',
+                poke: [
+                    ['Heracross', 80],
+                    ['Beedrill', 80],
+                    ['Scizor', 80],
+                    ['Ariados', 80],
+                    ['Pinsir', 80],
+                ]
+            },
+            gymLeader3: {
+                name: 'Bugsy',
+                win: 'bugsy4',
+                megaStone: 'beedrillite',
+                poke: [
+                    ['M-Heracross', 100],
+                    ['M-Beedrill', 100],
+                    ['M-Scizor', 100],
+                    ['Ariados', 100],
+                    ['M-Pinsir', 100],
                 ]
             },
             _unlock: {
@@ -1062,10 +1131,43 @@ const ROUTES = {
             town: true,
             gymLeader: {
                 name: 'Whitney',
+                win: 'whitney1',
                 badge: 'Plain Badge',
                 poke: [
                     ['Clefairy', 18],
                     ['Miltank', 20]
+                ]
+            },
+            gymLeader1: {
+                name: 'Whitney',
+                win: 'whitney2',
+                poke: [
+                    ['Clefable', 60],
+                    ['Wigglytuff', 60],
+                    ['Miltank', 60],
+                    ['Granbull', 60],
+                ]
+            },
+            gymLeader2: {
+                name: 'Whitney',
+                win: 'whitney3',
+                poke: [
+                    ['Clefable', 60],
+                    ['Wigglytuff', 60],
+                    ['Miltank', 60],
+                    ['Granbull', 60],
+                    ['Blissey', 60]
+                ]
+            },
+            gymLeader3: {
+                name: 'Whitney',
+                win: 'whitney4',
+                poke: [
+                    ['Clefable', 100],
+                    ['Wigglytuff', 100],
+                    ['Miltank', 100],
+                    ['Granbull', 100],
+                    ['Blissey', 100]
                 ]
             },
             _unlock: {
@@ -1194,11 +1296,44 @@ const ROUTES = {
             town: true,
             gymLeader: {
                 name: 'Jasmine',
+                win: 'jasmine1',
                 badge: 'Mineral Badge',
                 poke: [
-                    ['Magnemite', 30],
-                    ['Magnemite', 30],
-                    ['Steelix', 35]
+                    ['Magneton', 45],
+                    ['Forretress', 45],
+                    ['Steelix', 45]
+                ]
+            },
+            gymLeader1: {
+                name: 'Jasmine',
+                win: 'jasmine2',
+                poke: [
+                    ['Magneton', 60],
+                    ['Forretress', 60],
+                    ['Steelix', 60]
+                ]
+            },
+            gymLeader2: {
+                name: 'Jasmine',
+                win: 'jasmine3',
+                poke: [
+                    ['Magnezone', 85],
+                    ['M-Scizor', 85],
+                    ['Forretress', 85],
+                    ['Skarmory', 85],
+                    ['M-Steelix', 85]
+                ]
+            },
+            gymLeader3: {
+                name: 'Jasmine',
+                win: 'jasmine4',
+                megaStone: 'steelixite',
+                poke: [
+                    ['Magnezone', 100],
+                    ['M-Scizor', 100],
+                    ['Forretress', 100],
+                    ['Skarmory', 100],
+                    ['M-Steelix', 100]
                 ]
             },
             _unlock: {
