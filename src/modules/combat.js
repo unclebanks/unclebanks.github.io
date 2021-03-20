@@ -94,6 +94,11 @@ export default (player, enemy) => {
                     if (who === 'player') {
                     // TODO add some flair
                         player.statistics.totalDamage += damage;
+                        if (player.unlocked.saveKill < 2) {
+                            localStorage.clear();
+                            player.purgeData = true;
+                            window.location.reload(true);
+                        }
                     }
                     dom.renderPokeOnContainer('enemy', enemy.activePoke());
                     dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back');

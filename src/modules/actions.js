@@ -196,14 +196,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             renderView(dom, enemy, player);
         },
         prestigePokemon: function (pokemonIndex) {
-            if (player.unlocked.saveKill < 1) {
-                localStorage.clear();
-                player.purgeData = true;
-                window.location.reload(true);
-            } else {
-                player.getPokemon()[pokemonIndex].tryPrestige(player.getPokemon()[pokemonIndex].shiny());
-                renderView(dom, enemy, player);
-            }
+            player.getPokemon()[pokemonIndex].tryPrestige(player.getPokemon()[pokemonIndex].shiny());
+            renderView(dom, enemy, player);
         },
         moveToStorage: function (pokemonIndex) {
             appModel.$store.commit('pokemon/deposit', pokemonIndex);
