@@ -10,7 +10,7 @@ const ROUTES = {
         palletTown: {
             name: 'Pallet Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Oak',
                 win: 'oak1',
                 poke: [
@@ -19,7 +19,7 @@ const ROUTES = {
                     ['Squirtle', 15]
                 ]
             },
-            trainer1: {
+            prof1: {
                 name: 'Prof. Oak',
                 win: 'oak2',
                 poke: [
@@ -28,7 +28,7 @@ const ROUTES = {
                     ['Wartortle', 30]
                 ]
             },
-            trainer2: {
+            prof2: {
                 name: 'Prof. Oak',
                 win: 'oak3',
                 poke: [
@@ -37,7 +37,7 @@ const ROUTES = {
                     ['Blastoise', 60]
                 ]
             },
-            trainer3: {
+            prof3: {
                 name: 'Prof. Oak',
                 win: 'oak4',
                 poke: [
@@ -58,7 +58,7 @@ const ROUTES = {
         viridianCity: {
             name: 'Viridian City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Giovanni',
                 badge: 'Earth Badge',
                 poke: [
@@ -94,7 +94,7 @@ const ROUTES = {
         , pewterCity: {
             name: 'Pewter City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Brock',
                 badge: 'Boulder Badge',
                 win: 'boulder1',
@@ -103,7 +103,7 @@ const ROUTES = {
                     ['Onix', 14]
                 ]
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Brock',
                 win: 'Boulder2',
                 poke: [
@@ -112,7 +112,7 @@ const ROUTES = {
                     ['Aerodactyl', 30]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Brock',
                 win: 'Boulder3',
                 poke: [
@@ -123,7 +123,7 @@ const ROUTES = {
                     ['Omastar', 50]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Brock',
                 win: 'Boulder4',
                 poke: [
@@ -174,7 +174,7 @@ const ROUTES = {
         ceruleanCity: {
             name: 'Cerulean City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Misty',
                 badge: 'Cascade Badge',
                 win: 'cascade1',
@@ -183,7 +183,7 @@ const ROUTES = {
                     ['Starmie', 21]
                 ],
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Misty',
                 win: 'cascade2',
                 poke: [
@@ -193,7 +193,7 @@ const ROUTES = {
                     ['Goldeen', 40]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Misty',
                 win: 'cascade3',
                 poke: [
@@ -203,7 +203,7 @@ const ROUTES = {
                     ['Starmie', 70]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Misty',
                 win: 'cascade4',
                 megaStone: 'blastoisinite',
@@ -272,7 +272,7 @@ const ROUTES = {
         vermilionCity: {
             name: 'Vermilion City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Lt. Surge',
                 badge: 'Thunder Badge',
                 win: 'thunder1',
@@ -282,7 +282,7 @@ const ROUTES = {
                     ['Raichu', 24]
                 ]
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Lt. Surge',
                 win: 'thunder2',
                 poke: [
@@ -292,7 +292,7 @@ const ROUTES = {
                     ['Raichu', 40]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Lt. Surge',
                 win: 'thunder3',
                 poke: [
@@ -302,7 +302,7 @@ const ROUTES = {
                     ['Raichu', 70],
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Lt. Surge',
                 win: 'thunder4',
                 poke: [
@@ -427,7 +427,7 @@ const ROUTES = {
         celadonCity: {
             name: 'Celadon City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Erika',
                 badge: 'Rainbow Badge',
                 win: 'rainbow1',
@@ -437,7 +437,7 @@ const ROUTES = {
                     ['Vileplume', 29]
                 ]
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Erika',
                 win: 'rainbow2',
                 poke: [
@@ -447,7 +447,7 @@ const ROUTES = {
                     ['Vileplume', 50]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Erika',
                 win: 'rainbow3',
                 poke: [
@@ -458,7 +458,7 @@ const ROUTES = {
                     ['Vileplume', 75]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Erika',
                 win: 'rainbow4',
                 megaStone: 'venusaurite',
@@ -480,7 +480,7 @@ const ROUTES = {
         saffronCity: {
             name: 'Saffron City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Sabrina',
                 badge: 'Marsh Badge',
                 win: 'marsh1',
@@ -491,7 +491,7 @@ const ROUTES = {
                     ['Alakazam', 43]
                 ]
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Sabrina',
                 win: 'marsh2',
                 poke: [
@@ -501,7 +501,7 @@ const ROUTES = {
                     ['Alakazam', 50]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Sabrina',
                 win: 'marsh3',
                 poke: [
@@ -511,7 +511,7 @@ const ROUTES = {
                     ['Alakazam', 70]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Sabrina',
                 win: 'marsh4',
                 poke: [
@@ -578,7 +578,7 @@ const ROUTES = {
         fuchsiaCity: {
             name: 'Fuchsia City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Koga',
                 badge: 'Soul Badge',
                 poke: [
@@ -704,7 +704,7 @@ const ROUTES = {
         cinnabarIsland: {
             name: 'Cinnabar Island',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Blaine',
                 badge: 'Volcano Badge',
                 win: 'volcano1',
@@ -720,7 +720,7 @@ const ROUTES = {
                     'Soul Badge': true
                 }
             },
-            trainer1: {
+            gymLeader1: {
                 name: 'Blaine',
                 win: 'volcano2',
                 poke: [
@@ -730,7 +730,7 @@ const ROUTES = {
                     ['Arcanine', 60]
                 ]
             },
-            trainer2: {
+            gymLeader2: {
                 name: 'Blaine',
                 win: 'volcano3',
                 poke: [
@@ -740,7 +740,7 @@ const ROUTES = {
                     ['Arcanine', 80]
                 ]
             },
-            trainer3: {
+            gymLeader3: {
                 name: 'Blaine',
                 win: 'volcano4',
                 poke: [
@@ -863,7 +863,7 @@ const ROUTES = {
         NewBarkTown: {
             name: 'New Bark Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Elm',
                 badge: null,
                 poke: [
@@ -915,7 +915,7 @@ const ROUTES = {
         violetCity: {
             name: 'Violet City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Falkner',
                 badge: 'Zephyr Badge',
                 poke: [
@@ -1011,7 +1011,7 @@ const ROUTES = {
         , azaleaTown: {
             name: 'Azalea Town',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Bugsy',
                 badge: 'Hive Badge',
                 poke: [
@@ -1059,7 +1059,7 @@ const ROUTES = {
         goldenrodCity: {
             name: 'Goldenrod City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Whitney',
                 badge: 'Plain Badge',
                 poke: [
@@ -1148,7 +1148,7 @@ const ROUTES = {
         ecruteakCity: {
             name: 'Ecruteak City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Morty',
                 badge: 'Fog Badge',
                 poke: [
@@ -1191,7 +1191,7 @@ const ROUTES = {
         olivineCity: {
             name: 'Olivine City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Jasmine',
                 badge: 'Mineral Badge',
                 poke: [
@@ -1221,7 +1221,7 @@ const ROUTES = {
         cianwoodCity: {
             name: 'Cianwood City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Chuck',
                 badge: 'Storm Badge',
                 poke: [
@@ -1298,7 +1298,7 @@ const ROUTES = {
         mahoganyTown: {
             name: 'Mahogany Town',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Pryce',
                 badge: 'Glacier Badge',
                 poke: [
@@ -1388,7 +1388,7 @@ const ROUTES = {
         blackthornCity: {
             name: 'Blackthorn City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Clair',
                 badge: 'Rising Badge',
                 poke: [
@@ -1527,7 +1527,7 @@ const ROUTES = {
         littlerootTown: {
             name: 'Littleroot Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Birch',
                 badge: null,
                 poke: [
@@ -1565,7 +1565,7 @@ const ROUTES = {
         petalburgCity: {
             name: 'Petalburg City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Norman',
                 badge: 'Balance Badge',
                 poke: [
@@ -1595,7 +1595,7 @@ const ROUTES = {
         rustboroCity: {
             name: 'Rustboro City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Roxanne',
                 badge: 'Stone Badge',
                 poke: [
@@ -1654,7 +1654,7 @@ const ROUTES = {
         dewfordTown: {
             name: 'Dewford Town',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Brawly',
                 badge: 'Knuckle Badge',
                 poke: [
@@ -1756,7 +1756,7 @@ const ROUTES = {
         mauvilleCity: {
             name: 'Mauville City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Wattson',
                 badge: 'Dynamo Badge',
                 poke: [
@@ -1906,7 +1906,7 @@ const ROUTES = {
         lavaridgeTown: {
             name: 'Lavaridge Town',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Flannery',
                 badge: 'Heat Badge',
                 poke: [
@@ -1963,7 +1963,7 @@ const ROUTES = {
         fortreeCity: {
             name: 'Fortree City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Winona',
                 badge: 'Feather Badge',
                 poke: [
@@ -2077,7 +2077,7 @@ const ROUTES = {
         mossdeepCity: {
             name: 'Mossdeep City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Liza & Tate',
                 badge: 'Mind Badge',
                 poke: [
@@ -2158,7 +2158,7 @@ const ROUTES = {
         sootopolisCity: {
             name: 'Sootopolis City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Juan',
                 badge: 'Rain Badge',
                 poke: [
@@ -2393,7 +2393,7 @@ const ROUTES = {
         twinleafTown: {
             name: 'Twinleaf Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Rowan',
                 badge: null,
                 poke: [
@@ -2449,7 +2449,7 @@ const ROUTES = {
         , oreburghCity: {
             name: 'Oreburgh City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Roark',
                 badge: 'Coal Badge',
                 poke: [
@@ -2574,7 +2574,7 @@ const ROUTES = {
         , eternaCity: {
             name: 'Eterna City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Gardenia',
                 badge: 'Forest Badge',
                 poke: [
@@ -2652,7 +2652,7 @@ const ROUTES = {
         , hearthomeCity: {
             name: 'Hearthome City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Fantina',
                 badge: 'Relic Badge',
                 poke: [
@@ -2764,7 +2764,7 @@ const ROUTES = {
         , veilstoneCity: {
             name: 'Veilstone City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Maylene',
                 badge: 'Cobble Badge',
                 poke: [
@@ -2854,7 +2854,7 @@ const ROUTES = {
         , pastoriaCity: {
             name: 'Pastoria City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Crasher Wake',
                 badge: 'Fen Badge',
                 poke: [
@@ -2977,7 +2977,7 @@ const ROUTES = {
         , canalaveCity: {
             name: 'Canalave City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Byron',
                 badge: 'Mine Badge',
                 poke: [
@@ -3043,7 +3043,7 @@ const ROUTES = {
         , snowpointCity: {
             name: 'Snowpoint City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Candice',
                 badge: 'Icicle Badge',
                 poke: [
@@ -3086,7 +3086,7 @@ const ROUTES = {
         , sunyshoreCity: {
             name: 'Sunyshore City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Volkner',
                 badge: 'Beacon Badge',
                 poke: [
@@ -3357,13 +3357,22 @@ const ROUTES = {
         aspertiaCity: {
             name: 'Aspertia City',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Juniper',
                 badge: null,
                 poke: [
                     ['Snivy', 15],
                     ['Tepig', 15],
                     ['Oshawott', 15]
+                ]
+            },
+            gymLeader: {
+                name: 'Cheren',
+                badge: 'Basic Badge',
+                poke: [
+                    ['Mew', 15],
+                    ['Mewtwo', 15],
+                    ['Mew', 15]
                 ]
             }
         },
@@ -3395,7 +3404,7 @@ const ROUTES = {
         , virbankCity: {
             name: 'Virbank City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Roxie',
                 badge: 'Toxic Badge',
                 poke: [
@@ -3424,7 +3433,7 @@ const ROUTES = {
         , casteliaCity: {
             name: 'Castelia City',
             town: true,
-            trainer: {
+            gymLeader: {
                 name: 'Burgh',
                 badge: 'Insect Badge',
                 poke: [
@@ -3502,7 +3511,7 @@ const ROUTES = {
         , nimbasaCity: {
             name: 'Nimbasa City'
             , town: true
-            , trainer: {
+            , gymLeader: {
                 name: 'Elesa'
                 , badge: 'Bolt Badge'
                 , poke: [
@@ -3563,7 +3572,7 @@ const ROUTES = {
         , driftveilCity: {
             name: 'Driftveil City'
             , town: true
-            , trainer: {
+            , gymLeader: {
                 name: 'Clay'
                 , badge: 'Quake Badge'
                 , poke: [
@@ -3665,7 +3674,7 @@ const ROUTES = {
         , misaltronCity: {
             name: 'Misaltron City'
             , town: true
-            , trainer: {
+            , gymLeader: {
                 name: 'Skyla'
                 , badge: 'Jet Badge'
                 , poke: [
@@ -4026,7 +4035,7 @@ const ROUTES = {
         aquacordeTown: {
             name: 'Aquacorde Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Sycamore',
                 badge: null,
                 poke: [
@@ -4131,7 +4140,7 @@ const ROUTES = {
         ikiTown: {
             name: 'Iki Town',
             town: true,
-            trainer: {
+            prof: {
                 name: 'Prof. Kukui',
                 badge: null,
                 poke: [

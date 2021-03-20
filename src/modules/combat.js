@@ -11,15 +11,24 @@ export default (player, enemy) => {
 
     const Combat = {
         paused: false,
-        trainer: null,
-        trainerPoke: {},
-        trainer1: null,
-        trainer1Poke: {},
-        trainer2: null,
-        trainer2Poke: {},
-        trainer3: null,
-        trainer3Poke: {},
-        trainerCurrentID: 0,
+        prof: null,
+        profPoke: {},
+        prof1: null,
+        prof1Poke: {},
+        prof2: null,
+        prof2Poke: {},
+        prof3: null,
+        prof3Poke: {},
+        gymLeader: null,
+        gymLeaderPoke: {},
+        gymLeader1: null,
+        gymLeader1Poke: {},
+        gymLeader2: null,
+        gymLeader2Poke: {},
+        gymLeader3: null,
+        gymLeader3Poke: {},
+        profCurrentID: 0,
+        gymLeaderCurrentID: 0,
         enemyActivePoke: null,
         playerTimerId: null,
         enemyTimerId: null,
@@ -127,89 +136,176 @@ export default (player, enemy) => {
             player.getPokemon().forEach((poke) => poke.giveExp((Combat.enemyActivePoke.baseExp() / 100) + (Combat.enemyActivePoke.level() / 10)));
             const afterExp = player.getPokemon().map((poke) => poke.level());
 
-            // was it a trainer poke
-            if (Combat.trainer) {
+            // was it a prof poke
+            if (Combat.prof) {
             // remove the pokemon
-                Combat.trainerPoke.splice(Combat.trainerCurrentID, 1);
-                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.trainerPoke.length) + 5;
+                Combat.profPoke.splice(Combat.profCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.profPoke.length) + 5;
                 player.addBattleCoins(foundBattleCoins);
-                if (Combat.trainerPoke.length < 1) {
-                    if (Combat.trainer.badge) {
-                        if (!player.badges[Combat.trainer.badge]) {
-                            player.badges[Combat.trainer.badge] = true;
+                if (Combat.profPoke.length < 1) {
+                    if (Combat.prof.badge) {
+                        if (!player.badges[Combat.prof.badge]) {
+                            player.badges[Combat.prof.badge] = true;
                             dom.renderRouteList();
                         }
                     }
-                    if (Combat.trainer.win) {
-                        if (!player.wins[Combat.trainer.win]) {
-                            player.wins[Combat.trainer.win] = true;
+                    if (Combat.prof.win) {
+                        if (!player.wins[Combat.prof.win]) {
+                            player.wins[Combat.prof.win] = true;
                             dom.renderRouteList();
                         }
                     }
-                    Combat.trainer = null;
+                    Combat.prof = null;
                     Combat.pause();
                     return false;
                 }
             }
-            if (Combat.trainer1) {
+            if (Combat.prof1) {
             // remove the pokemon
-                Combat.trainer1Poke.splice(Combat.trainerCurrentID, 2);
-                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.trainer1Poke.length) + 5;
+                Combat.prof1Poke.splice(Combat.profCurrentID, 2);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.prof1Poke.length) + 5;
                 player.addBattleCoins(foundBattleCoins);
-                if (Combat.trainer1Poke.length < 1) {
-                    if (Combat.trainer1.win) {
-                        if (!player.wins[Combat.trainer1.win]) {
-                            player.wins[Combat.trainer1.win] = true;
+                if (Combat.prof1Poke.length < 1) {
+                    if (Combat.prof1.win) {
+                        if (!player.wins[Combat.prof1.win]) {
+                            player.wins[Combat.prof1.win] = true;
                             dom.renderRouteList();
                         }
                     }
-                    Combat.trainer1 = null;
+                    Combat.prof1 = null;
                     Combat.pause();
                     return false;
                 }
             }
-            if (Combat.trainer2) {
+            if (Combat.prof2) {
             // remove the pokemon
-                Combat.trainer2Poke.splice(Combat.trainerCurrentID, 1);
-                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.trainer2Poke.length) + 5;
+                Combat.prof2Poke.splice(Combat.profCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.prof2Poke.length) + 5;
                 player.addBattleCoins(foundBattleCoins);
-                if (Combat.trainer2Poke.length < 1) {
-                    if (Combat.trainer2.win) {
-                        if (!player.wins[Combat.trainer2.win]) {
-                            player.wins[Combat.trainer2.win] = true;
+                if (Combat.prof2Poke.length < 1) {
+                    if (Combat.prof2.win) {
+                        if (!player.wins[Combat.prof2.win]) {
+                            player.wins[Combat.prof2.win] = true;
                             dom.renderRouteList();
                         }
                     }
-                    Combat.trainer2 = null;
+                    Combat.prof2 = null;
                     Combat.pause();
                     return false;
                 }
             }
-            if (Combat.trainer3) {
+            if (Combat.prof3) {
             // remove the pokemon
-                Combat.trainer3Poke.splice(Combat.trainerCurrentID, 1);
-                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.trainer3Poke.length) + 5;
+                Combat.prof3Poke.splice(Combat.profCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.prof3Poke.length) + 5;
                 player.addBattleCoins(foundBattleCoins);
-                if (Combat.trainer3Poke.length < 1) {
-                    if (Combat.trainer3.win) {
-                        if (!player.wins[Combat.trainer3.win]) {
-                            player.wins[Combat.trainer3.win] = true;
+                if (Combat.prof3Poke.length < 1) {
+                    if (Combat.prof3.win) {
+                        if (!player.wins[Combat.prof3.win]) {
+                            player.wins[Combat.prof3.win] = true;
                             dom.renderRouteList();
                         }
                     }
-                    if (Combat.trainer3.reward) {
-                        if (!player.unlocked[Combat.trainer3.reward]) {
-                            player.unlocked[Combat.trainer3.reward] = true;
+                    if (Combat.prof3.reward) {
+                        if (!player.unlocked[Combat.prof3.reward]) {
+                            player.unlocked[Combat.prof3.reward] = true;
                             dom.renderRouteList();
                         }
                     }
-                    if (Combat.trainer3.megaStone && player.unlocked.megaBracelet === true) {
-                        if (player.megaStones[Combat.trainer3.megaStone] === 0) {
-                            player.megaStones[Combat.trainer3.megaStone] += 1;
+                    if (Combat.prof3.megaStone && player.unlocked.megaBracelet === true) {
+                        if (player.megaStones[Combat.prof3.megaStone] === 0) {
+                            player.megaStones[Combat.prof3.megaStone] += 1;
                             dom.renderRouteList();
                         }
                     }
-                    Combat.trainer3 = null;
+                    Combat.prof3 = null;
+                    Combat.pause();
+                    return false;
+                }
+            }
+            // was it a gymLeader poke
+            if (Combat.gymLeader) {
+            // remove the pokemon
+                Combat.gymLeaderPoke.splice(Combat.gymLeaderCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.gymLeaderPoke.length) + 5;
+                player.addBattleCoins(foundBattleCoins);
+                if (Combat.gymLeaderPoke.length < 1) {
+                    if (Combat.gymLeader.badge) {
+                        if (!player.badges[Combat.gymLeader.badge]) {
+                            player.badges[Combat.gymLeader.badge] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    if (Combat.gymLeader.win) {
+                        if (!player.wins[Combat.gymLeader.win]) {
+                            player.wins[Combat.gymLeader.win] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    Combat.gymLeader = null;
+                    Combat.pause();
+                    return false;
+                }
+            }
+            if (Combat.gymLeader1) {
+            // remove the pokemon
+                Combat.gymLeader1Poke.splice(Combat.gymLeaderCurrentID, 2);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.gymLeader1Poke.length) + 5;
+                player.addBattleCoins(foundBattleCoins);
+                if (Combat.gymLeader1Poke.length < 1) {
+                    if (Combat.gymLeader1.win) {
+                        if (!player.wins[Combat.gymLeader1.win]) {
+                            player.wins[Combat.gymLeader1.win] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    Combat.gymLeader1 = null;
+                    Combat.pause();
+                    return false;
+                }
+            }
+            if (Combat.gymLeader2) {
+            // remove the pokemon
+                Combat.gymLeader2Poke.splice(Combat.gymLeaderCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.gymLeader2Poke.length) + 5;
+                player.addBattleCoins(foundBattleCoins);
+                if (Combat.gymLeader2Poke.length < 1) {
+                    if (Combat.gymLeader2.win) {
+                        if (!player.wins[Combat.gymLeader2.win]) {
+                            player.wins[Combat.gymLeader2.win] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    Combat.gymLeader2 = null;
+                    Combat.pause();
+                    return false;
+                }
+            }
+            if (Combat.gymLeader3) {
+            // remove the pokemon
+                Combat.gymLeader3Poke.splice(Combat.gymLeaderCurrentID, 1);
+                const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.gymLeader3Poke.length) + 5;
+                player.addBattleCoins(foundBattleCoins);
+                if (Combat.gymLeader3Poke.length < 1) {
+                    if (Combat.gymLeader3.win) {
+                        if (!player.wins[Combat.gymLeader3.win]) {
+                            player.wins[Combat.gymLeader3.win] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    if (Combat.gymLeader3.reward) {
+                        if (!player.unlocked[Combat.gymLeader3.reward]) {
+                            player.unlocked[Combat.gymLeader3.reward] = true;
+                            dom.renderRouteList();
+                        }
+                    }
+                    if (Combat.gymLeader3.megaStone && player.unlocked.megaBracelet === true) {
+                        if (player.megaStones[Combat.gymLeader3.megaStone] === 0) {
+                            player.megaStones[Combat.gymLeader3.megaStone] += 1;
+                            dom.renderRouteList();
+                        }
+                    }
+                    Combat.gymLeader3 = null;
                     Combat.pause();
                     return false;
                 }
@@ -222,14 +318,22 @@ export default (player, enemy) => {
             dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back');
         },
         newEnemy: function () {
-            if (Combat.trainer) {
-                enemy.trainerPoke(Combat.trainerPoke);
-            } else if (Combat.trainer1) {
-                enemy.trainer1Poke(Combat.trainer1Poke);
-            } else if (Combat.trainer2) {
-                enemy.trainer2Poke(Combat.trainer2Poke);
-            } else if (Combat.trainer3) {
-                enemy.trainer3Poke(Combat.trainer3Poke);
+            if (Combat.prof) {
+                enemy.profPoke(Combat.profPoke);
+            } else if (Combat.prof1) {
+                enemy.prof1Poke(Combat.prof1Poke);
+            } else if (Combat.prof2) {
+                enemy.prof2Poke(Combat.prof2Poke);
+            } else if (Combat.prof3) {
+                enemy.prof3Poke(Combat.prof3Poke);
+            } else if (Combat.gymLeader) {
+                enemy.gymLeaderPoke(Combat.gymLeaderPoke);
+            } else if (Combat.gymLeader1) {
+                enemy.gymLeader1Poke(Combat.gymLeader1Poke);
+            } else if (Combat.gymLeader2) {
+                enemy.gymLeader2Poke(Combat.gymLeader2Poke);
+            } else if (Combat.gymLeader3) {
+                enemy.gymLeader3Poke(Combat.gymLeader3Poke);
             } else {
                 enemy.generateNew(player.settings.currentRegionId, player.settings.currentRouteId);
             }
@@ -247,20 +351,36 @@ export default (player, enemy) => {
                 player.setActive(player.getPokemon().indexOf(alivePokeIndexes[0]));
                 Combat.refresh();
             } else {
-                if (Combat.trainer) {
-                    Combat.trainer = null;
+                if (Combat.prof) {
+                    Combat.prof = null;
                     Combat.pause();
                 }
-                if (Combat.trainer1) {
-                    Combat.trainer1 = null;
+                if (Combat.prof1) {
+                    Combat.prof1 = null;
                     Combat.pause();
                 }
-                if (Combat.trainer2) {
-                    Combat.trainer2 = null;
+                if (Combat.prof2) {
+                    Combat.prof2 = null;
                     Combat.pause();
                 }
-                if (Combat.trainer3) {
-                    Combat.trainer3 = null;
+                if (Combat.prof3) {
+                    Combat.prof3 = null;
+                    Combat.pause();
+                }
+                if (Combat.gymLeader) {
+                    Combat.gymLeader = null;
+                    Combat.pause();
+                }
+                if (Combat.gymLeader1) {
+                    Combat.gymLeader1 = null;
+                    Combat.pause();
+                }
+                if (Combat.gymLeader2) {
+                    Combat.gymLeader2 = null;
+                    Combat.pause();
+                }
+                if (Combat.gymLeader3) {
+                    Combat.gymLeader3 = null;
                     Combat.pause();
                 }
                 flash($('#gameContainer'));
@@ -271,7 +391,7 @@ export default (player, enemy) => {
         },
         attemptCatch: function () {
             if (
-                !Combat.trainer && !Combat.trainer1 && !Combat.trainer2 && !Combat.trainer3 && (
+                !Combat.prof && !Combat.prof1 && !Combat.prof2 && !Combat.prof3 && !Combat.gymLeader && !Combat.gymLeader1 && !Combat.gymLeader2 && !Combat.gymLeader3 && (
                     (Combat.catchEnabled == 'all')
                     || (Combat.catchEnabled == 'new' && !player.hasPokemonLike(enemy.activePoke()))
                 )
