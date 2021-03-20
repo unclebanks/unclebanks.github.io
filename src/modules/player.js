@@ -48,7 +48,7 @@ export default (lastSave, appModel) => {
             galarOldRod: 0,
             galarGoodRod: 0,
             galarSuperRod: 0,
-            saveKill: 0,
+            tryThis: 0,
         },
         megaStones: {
             abomasite: 0,
