@@ -581,6 +581,9 @@ export default (lastSave, appModel) => {
                     saveData = JSON.parse(saveData[1]);
                 } catch (err) {
                     alert('Failed to parse save data, loading canceled!');
+                    localStorage.clear();
+                    this.purgeData = true;
+                    window.location.reload(true);
                     return;
                 }
                 const party = [];
