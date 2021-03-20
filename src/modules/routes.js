@@ -858,7 +858,7 @@ const ROUTES = {
         },
         _global: {
             pokes: ['Chikorita', 'Cyndaquil', 'Totodile'],
-            rarePokes: ['Shuckle', 'Raikou', 'Entei', 'Suicune', 'Ho-Oh', 'Celebi', 'Lugia'],
+            rarePokes: ['Shuckle', 'Raikou', 'Entei', 'Suicune', 'Celebi'],
             superRare: []
         },
         NewBarkTown: {
@@ -1223,6 +1223,25 @@ const ROUTES = {
                     'Plain Badge': true
                 }
             }
+        },
+        ecruteakCity: {
+            name: 'Ecruteak City',
+            town: true,
+            gymLeader: {
+                name: 'Morty',
+                badge: 'Fog Badge',
+                poke: [
+                    ['Gastly', 21],
+                    ['Haunter', 21],
+                    ['Haunter', 23],
+                    ['Gengar', 25]
+                ]
+            },
+            _unlock: {
+                badges: {
+                    'Plain Badge': true
+                }
+            }
         }
         , burnedTower: {
             name: 'Burned Tower'
@@ -1238,29 +1257,10 @@ const ROUTES = {
         }
         , tinTower: {
             name: 'Tin Tower'
-            , pokes: ['Rattata', 'Gastly']
+            , pokes: ['Rattata', 'Gastly', 'Ho-Oh']
             , minLevel: 20
-            , maxLevel: 24,
+            , maxLevel: 70,
             respawn: 'goldenrodCity',
-            _unlock: {
-                badges: {
-                    'Plain Badge': true
-                }
-            }
-        },
-        ecruteakCity: {
-            name: 'Ecruteak City',
-            town: true,
-            gymLeader: {
-                name: 'Morty',
-                badge: 'Fog Badge',
-                poke: [
-                    ['Gastly', 21],
-                    ['Haunter', 21],
-                    ['Haunter', 23],
-                    ['Gengar', 25]
-                ]
-            },
             _unlock: {
                 badges: {
                     'Plain Badge': true
@@ -1353,8 +1353,32 @@ const ROUTES = {
                     'Mineral Badge': true
                 }
             }
-        },
-        cianwoodCity: {
+        }
+        , jroute41: {
+            name: 'Route 41'
+            , pokes: ['Mantine', 'Tentacool', 'Tentacruel']
+            , minLevel: 20
+            , maxLevel: 24,
+            respawn: 'cianwoodCity',
+            _unlock: {
+                badges: {
+                    'Storm Badge': true
+                }
+            }
+        }
+        , whirlIsland: {
+            name: 'Whirl Island'
+            , pokes: ['Zubat', 'Golbat', 'Seel', 'Krabby', 'Lugia']
+            , minLevel: 22
+            , maxLevel: 70,
+            respawn: 'cianwoodCity',
+            _unlock: {
+                badges: {
+                    'Storm Badge': true
+                }
+            }
+        }
+        , cianwoodCity: {
             name: 'Cianwood City',
             town: true,
             gymLeader: {
@@ -1371,27 +1395,27 @@ const ROUTES = {
                 }
             }
         }
-        , jroute41: {
-            name: 'Route 41'
-            , pokes: ['Mantine', 'Tentacool', 'Tentacruel']
-            , minLevel: 20
-            , maxLevel: 24,
+        , jroute47: {
+            name: 'Route 47'
+            , pokes: ['Raticate', 'Spearow', 'Fearow', 'Gloom', 'Farfetchd', 'Ditto', 'Noctowl', 'Miltank']
+            , minLevel: 40
+            , maxLevel: 43,
             respawn: 'cianwoodCity',
             _unlock: {
                 badges: {
-                    'Storm Badge': true
+                    'Mineral Badge': true
                 }
             }
         }
-        , whirlIsland: {
-            name: 'Whirl Island'
-            , pokes: ['Zubat', 'Golbat', 'Seel', 'Krabby']
-            , minLevel: 22
-            , maxLevel: 26,
+        , jroute48: {
+            name: 'Route 48'
+            , pokes: ['Fearow', 'Vulpix', 'Gloom', 'Diglett', 'Growlithe', 'Farfetchd', 'Tauros', 'Hoppip', 'Girafarig']
+            , minLevel: 40
+            , maxLevel: 43,
             respawn: 'cianwoodCity',
             _unlock: {
                 badges: {
-                    'Storm Badge': true
+                    'Mineral Badge': true
                 }
             }
         }
@@ -1457,7 +1481,7 @@ const ROUTES = {
             respawn: 'mahoganyTown',
             _unlock: {
                 badges: {
-                    'Glacier Badge': true
+                    'Storm Badge': true
                 }
             }
         }
@@ -1469,7 +1493,7 @@ const ROUTES = {
             respawn: 'mahoganyTown',
             _unlock: {
                 badges: {
-                    'Glacier Badge': true
+                    'Storm Badge': true
                 }
             }
         }
@@ -1540,30 +1564,6 @@ const ROUTES = {
                 }
             }
         }
-        , jroute47: {
-            name: 'Route 47'
-            , pokes: ['Raticate', 'Spearow', 'Fearow', 'Gloom', 'Farfetchd', 'Ditto', 'Noctowl', 'Miltank']
-            , minLevel: 40
-            , maxLevel: 43,
-            respawn: 'cianwoodCity',
-            _unlock: {
-                badges: {
-                    'Rising Badge': true
-                }
-            }
-        }
-        , jroute48: {
-            name: 'Route 48'
-            , pokes: ['Fearow', 'Vulpix', 'Gloom', 'Diglett', 'Growlithe', 'Farfetchd', 'Tauros', 'Hoppip', 'Girafarig']
-            , minLevel: 40
-            , maxLevel: 43,
-            respawn: 'cianwoodCity',
-            _unlock: {
-                badges: {
-                    'Rising Badge': true
-                }
-            }
-        }
         , jroute26: {
             name: 'Route 27'
             , pokes: ['Raticate', 'Arbok', 'Sandslash', 'Ponyta', 'Doduo', 'Dodrio', 'Noctowl', 'Quagsire']
@@ -1602,10 +1602,10 @@ const ROUTES = {
         }
         , mtSilver: {
             name: 'Mt.Silver'
-            , pokes: ['Arbok', 'Golbat', 'Parasect', 'Golduck', 'Poliwhirl', 'Machoke', 'Graveler', 'Doduo', 'Dodrio', 'Ponyta', 'Rapidash', 'Onix', 'Tangela', 'Magmar', 'Quagsire', 'Misdreavus', 'Sneasel', 'Ursaring', 'Donphan', 'Larvitar']
+            , pokes: ['Arbok', 'Golbat', 'Parasect', 'Golduck', 'Poliwhirl', 'Machoke', 'Graveler', 'Doduo', 'Dodrio', 'Ponyta', 'Rapidash', 'Onix', 'Tangela', 'Magmar', 'Quagsire', 'Misdreavus', 'Sneasel', 'Ursaring', 'Donphan', 'Larvitar', 'Pupitar']
             , minLevel: 38
             , maxLevel: 48,
-            respawn: 'blackthornCity',
+            respawn: 'NewBarkTown',
             _unlock: {
                 badges: {
                     'Rising Badge': true
@@ -1614,31 +1614,31 @@ const ROUTES = {
         }
         , jOldRod: {
             name: 'Johto Old Rod',
-            pokes: ['Remoraid'],
-            minLevel: 5,
+            pokes: ['Poliwag', 'Tentacool', 'Krabby', 'Goldeen', 'Magikarp'],
+            minLevel: 10,
             maxLevel: 10,
             respawn: 'NewBarkTown',
             johtoOldRod: 1
         }
         , jGoodRod: {
             name: 'Johto Good Rod',
-            pokes: ['Marill', 'Chinchou', 'Wooper'],
-            minLevel: 15,
-            maxLevel: 25,
+            pokes: ['Poliwag', 'Tentacool', 'Shellder', 'Krabby', 'Horsea', 'Goldeen', 'Staryu', 'Magikarp', 'Gyarados', 'Dratini', 'Chinchou', 'Corsola'],
+            minLevel: 20,
+            maxLevel: 20,
             respawn: 'NewBarkTown',
             johtoGoodRod: 1
         }
         , jSuperRod: {
             name: 'Johto Super Rod',
-            pokes: ['Corsola', 'Qwilfish', 'Lanturn', 'Octillery'],
-            minLevel: 30,
-            maxLevel: 45,
+            pokes: ['Poliwag', 'Tentacool', 'Tentacruel', 'Shellder', 'Krabby', 'Kingler', 'Horsea', 'Seadra', 'Goldeen', 'Seaking', 'Staryu', 'Magikarp', 'Gyarados', 'Dratini', 'Dragonair', 'Chinchou', 'Lanturn', 'Qwilfish', 'Corsola', 'Remoraid'],
+            minLevel: 40,
+            maxLevel: 40,
             respawn: 'NewBarkTown',
             johtoSuperRod: 1
         }
         , headbutt: {
             name: 'Headbutt'
-            , pokes: ['Aipom', 'Pineco', 'Heracross', 'Spinarak', 'Ledyba', 'Hoothoot', 'Noctowl']
+            , pokes: ['Caterpie', 'Metapod', 'Butterfree', 'Weedle', 'Kakuna', 'Beedrill', 'Spearow', 'Ekans', 'Exeggcute', 'Hoothoot', 'Noctowl', 'Spinarak', 'Ledyba', 'Aipom', 'Pineco', 'Heracross']
             , minLevel: 10
             , maxLevel: 10,
             respawn: 'blackthornCity',
