@@ -1,4 +1,4 @@
-type GrowthRate = 'Erratic' | 'Fast' | 'Medium Fast' | 'Medium Slow' | 'Slow' | 'Fluctuating';
+import { PokemonGrowthRate } from './data';
 
 type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
 
@@ -6,7 +6,7 @@ interface PokedexData {
     name: string;
     stats: {
         'catch rate': string | number;
-        'growth rate': GrowthRate;
+        'growth rate': PokemonGrowthRate;
         'hp': string | number;
         'attack': string | number;
         'defense': string | number;
