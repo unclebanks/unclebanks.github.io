@@ -3943,10 +3943,15 @@ const ROUTES: Routes = {
         },
         special116: {
             name: 'Twist Mountain',
-            pokes: ['Vanillite', 'Boldore', 'Gurdurr', 'Heatmor', 'Durant', 'Woobat', 'Beartic', 'Cryogonal'],
+            pokes: ['Onix', 'Boldore', 'Gurdurr', 'Heatmor', 'Durant', 'Woobat', 'Beartic', 'Cryogonal', 'Excadrill', 'Steelix'],
             minLevel: 54,
             maxLevel: 57,
             respawn: 'misaltronCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
         lentimasTown: {
             name: 'Lentimas Town',
@@ -4023,9 +4028,21 @@ const ROUTES: Routes = {
         },
         special122: {
             name: 'Giant Chasm',
-            pokes: ['Tangela', 'Pelipper', 'Clefairy', 'Lunatone', 'Solrock', 'Delibird', 'Piloswine', 'Jynx', 'Sneasel', 'Ditto', 'Metang'],
-            minLevel: 49,
+            pokes: ['Tangela', 'Pelipper', 'Clefairy', 'Lunatone', 'Solrock', 'Delibird', 'Piloswine', 'Seel', 'Sneasel', 'Ditto', 'Metang', 'Vanillish', 'Excadrill', 'Basculin'],
+            minLevel: 35,
             maxLevel: 52,
+            respawn: 'undellaTown',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special140: {
+            name: 'Giant Chasm (Deep Cave)',
+            pokes: ['Kyurem'],
+            minLevel: 70,
+            maxLevel: 70,
             respawn: 'undellaTown',
             _unlock: {
                 badges: {
@@ -4150,201 +4167,113 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special114: {
-            name: 'Nature Preserve',
-            pokes: ['Nuzleaf', 'Altaria', 'Golduck', 'Noctowl', 'Girafarig', 'Kecleon'],
-            minLevel: 64,
-            maxLevel: 67,
-            respawn: 'humilauCity',
-        },
-        special117: {
-            name: 'Icirrus City',
-            pokes: ['Palpitoad', 'Shelmet', 'Stunfisk', 'Karrablast'],
-            minLevel: 54,
-            maxLevel: 57,
-            respawn: 'humilauCity',
-        },
-        special118: {
-            name: 'Dragonspiral Tower',
-            pokes: ['Sawsbuck', 'Vanillish', 'Mienshao', 'Beartic', 'Druddigon', 'Golurk', 'Druddigon'],
-            minLevel: 55,
-            maxLevel: 66,
-            respawn: 'humilauCity',
-        },
-        route111: {
-            name: 'Route 8',
-            pokes: ['Palpitoad', 'Shelmet', 'Stunfisk', 'Karrablast'],
-            minLevel: 54,
-            maxLevel: 57,
-            respawn: 'humilauCity',
-        },
-        special119: {
-            name: 'Moor of Icirrus',
-            pokes: ['Palpitoad', 'Shelmet', 'Stunfisk', 'Karrablast'],
-            minLevel: 54,
-            maxLevel: 57,
-            respawn: 'humilauCity',
-        },
-        special133: {
-            name: 'Ancient Path',
-            pokes: ['Roggenrola', 'Timburr', 'Woobat'],
-            minLevel: 16,
-            maxLevel: 18,
-            respawn: 'humilauCity',
-        },
-        special120: {
-            name: 'Victory Road',
-            pokes: ['Golurk', 'Tranquill', 'Cottonee', 'Petilil', 'Gurdurr', 'Throh', 'Boldore', 'Druddigon', 'Zweilous'],
-            minLevel: 41,
-            maxLevel: 50,
-            respawn: 'humilauCity',
-        },
-        route116: {
-            name: 'Route 14',
-            pokes: ['Golduck', 'Swablu', 'Mienfoo', 'Drifblim', 'Absol', 'Altaria'],
-            minLevel: 34,
-            maxLevel: 37,
-            respawn: 'humilauCity',
-        },
-        special124: {
-            name: 'Abundant Shrine',
-            pokes: ['Cottonee', 'Swablu', 'Bronzor', 'Vulpix', 'Marill', 'Golduck', 'Altaria'],
-            minLevel: 33,
-            maxLevel: 36,
-            respawn: 'humilauCity',
-        },
-        route117: {
-            name: 'Route 15',
-            pokes: ['Sandslash', 'Gligar', 'Pupitar'],
-            minLevel: 54,
-            maxLevel: 57,
-            respawn: 'humilauCity',
-        },
-        special160: {
-            name: 'Marvelous Bridge',
-            pokes: ['Swanna'],
-            minLevel: 54,
-            maxLevel: 57,
-            respawn: 'humilauCity',
-        },
         route119: {
             name: 'Route 21',
-            pokes: ['Mantyke', 'Remoraid', 'Spheal'],
+            pokes: ['Mantyke', 'Remoraid', 'Frillish'],
             minLevel: 30,
             maxLevel: 45,
             respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
         special127: {
             name: 'Seaside Cave',
-            pokes: ['Woobat', 'Boldore', 'Tynamo'],
+            pokes: ['Woobat', 'Boldore', 'Tynamo', 'Seel', 'Golduck', 'Frillish'],
             minLevel: 34,
             maxLevel: 37,
             respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
         route121: {
             name: 'Route 23',
-            pokes: ['Bouffalant', 'Sawk', 'Mienfoo', 'Amoonguss', 'Vullaby', 'Rufflet'],
+            pokes: ['Bouffalant', 'Sawk', 'Mienfoo', 'Amoonguss', 'Vullaby', 'Rufflet', 'Throh', 'Gligar', 'Golduck', 'Basculin', 'Buizel'],
             minLevel: 47,
             maxLevel: 51,
             respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
-        special150: {
-            name: 'Pinwheel Forest',
-            pokes: ['Gurdurr', 'Palpitoad', 'Throh', 'Cottonee', 'Swadloon', 'Petilil', 'Whirlipede', 'Pansage', 'Pansear', 'Panpour'],
+        special120: {
+            name: 'Victory Road',
+            pokes: ['Golurk', 'Banette', 'Basculin', 'Marill', 'Cottonee', 'Petilil', 'Tranquill', 'Roselia', 'Altaria', 'Buizel', 'Boldore', 'Onix', 'Druddigon', 'Zweilous', 'Gurdurr', 'Throh', 'Excadrill'],
+            minLevel: 35,
+            maxLevel: 50,
+            respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special146: {
+            name: 'Clay Tunnel',
+            pokes: ['Boldore', 'Durant', 'Nosepass', 'Lairon', 'Woobat', 'Onix', 'Excadrill', 'Steelix', 'Basculin'],
             minLevel: 54,
             maxLevel: 57,
             respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
-        special128: {
-            name: 'Nacrene City',
-            pokes: ['Tirtouga', 'Archen'],
-            minLevel: 25,
-            maxLevel: 25,
+        route116: {
+            name: 'Route 14',
+            pokes: ['Golduck', 'Swablu', 'Mienfoo', 'Drifblim', 'Absol', 'Altaria', 'Basculin', 'Buizel'],
+            minLevel: 34,
+            maxLevel: 37,
             respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
-        route122: {
-            name: 'Route 3',
-            pokes: ['Tranquill', 'Watchog', 'Zebstrika', 'Herdier', 'Purrloin'],
-            minLevel: 47,
-            maxLevel: 51,
+        special124: {
+            name: 'Abundant Shrine',
+            pokes: ['Cottonee', 'Swablu', 'Bronzor', 'Vulpix', 'Marill', 'Golduck', 'Altaria', 'Petilil', 'Basculin'],
+            minLevel: 33,
+            maxLevel: 36,
             respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
-        special129: {
-            name: 'Wellspring Cave',
-            pokes: ['Boldore', 'Woobat'],
-            minLevel: 55,
-            maxLevel: 58,
+        route117: {
+            name: 'Route 15',
+            pokes: ['Sandslash', 'Gligar', 'Pupitar', 'Scrafty', 'Throh', 'Sawk'],
+            minLevel: 54,
+            maxLevel: 57,
             respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
-        special130: {
-            name: 'Dreamyard',
-            pokes: ['Watchog', 'Liepard', 'Munna'],
-            minLevel: 56,
-            maxLevel: 59,
+        special160: {
+            name: 'Marvelous Bridge',
+            pokes: ['Swanna', 'Cresselia'],
+            minLevel: 54,
+            maxLevel: 57,
             respawn: 'humilauCity',
-        },
-        route123: {
-            name: 'Route 2',
-            pokes: ['Watchog', 'Herdier', 'Liepard'],
-            minLevel: 56,
-            maxLevel: 59,
-            respawn: 'humilauCity',
-        },
-        route124: {
-            name: 'Route 1',
-            pokes: ['Herdier', 'Watchog'],
-            minLevel: 56,
-            maxLevel: 59,
-            respawn: 'humilauCity',
-        },
-        route125: {
-            name: 'Route 17',
-            pokes: ['Frillish'],
-            minLevel: 45,
-            maxLevel: 60,
-            respawn: 'humilauCity',
-        },
-        route126: {
-            name: 'Route 18',
-            pokes: ['Scrafty', 'Crustle', 'Sawk', 'Throh'],
-            minLevel: 57,
-            maxLevel: 59,
-            respawn: 'humilauCity',
-        },
-        special131: {
-            name: 'P2 Laboratory',
-            pokes: ['Watchog', 'Herdier', 'Klang', 'Scrafty'],
-            minLevel: 56,
-            maxLevel: 59,
-            respawn: 'humilauCity',
-        },
-        special132: {
-            name: 'Shaking Spots',
-            pokes: ['Audino', 'Drilbur', 'Emolga'],
-            minLevel: 10,
-            maxLevel: 20,
-            respawn: 'humilauCity',
-        },
-        special136: {
-            name: 'Liberty Garden',
-            pokes: ['Victini'],
-            minLevel: 15,
-            maxLevel: 15,
-            respawn: 'humilauCity',
-        },
-        special137: {
-            name: 'Pledge Grove',
-            pokes: ['Keldeo', 'Cobalion', 'Terrakion', 'Virizion'],
-            minLevel: 50,
-            maxLevel: 50,
-            respawn: 'humilauCity',
-        },
-        special138: {
-            name: 'Weather Guys',
-            pokes: ['Tornadus', 'Thundurus', 'Landorus'],
-            minLevel: 70,
-            maxLevel: 70,
-            respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
         special139: {
             name: 'Castle of N',
@@ -4352,27 +4281,294 @@ const ROUTES: Routes = {
             minLevel: 70,
             maxLevel: 70,
             respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
-        special140: {
-            name: 'Giant Chasm (Deep Cave)',
-            pokes: ['Kyurem'],
+        route111: {
+            name: 'Route 8',
+            pokes: ['Palpitoad', 'Shelmet', 'Stunfisk', 'Karrablast', 'Croagunk'],
+            minLevel: 54,
+            maxLevel: 57,
+            respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special119: {
+            name: 'Moor of Icirrus',
+            pokes: ['Palpitoad', 'Shelmet', 'Stunfisk', 'Karrablast', 'Croagunk'],
+            minLevel: 54,
+            maxLevel: 57,
+            respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        icirrusCity: {
+            name: 'Icirrus City',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special117: {
+            name: 'Icirrus City',
+            pokes: ['Palpitoad', 'Shelmet', 'Stunfisk', 'Karrablast', 'Croagunk'],
+            minLevel: 54,
+            maxLevel: 57,
+            respawn: 'icirrusCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special118: {
+            name: 'Dragonspiral Tower',
+            pokes: ['Sawsbuck', 'Vanillish', 'Mienshao', 'Beartic', 'Druddigon', 'Golurk', 'Tranquill', 'Basculin'],
+            minLevel: 55,
+            maxLevel: 66,
+            respawn: 'icirrusCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special150: {
+            name: 'Pinwheel Forest',
+            pokes: ['Gurdurr', 'Palpitoad', 'Throh', 'Sawk', 'Yanma', 'Toxicroak', 'Basculin', 'Marill', 'Cottonee', 'Swadloon', 'Petilil', 'Whirlipede', 'Pansage', 'Pansear', 'Panpour', 'Vigoroth'],
+            minLevel: 54,
+            maxLevel: 57,
+            respawn: 'nacreneCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        nacreneCity: {
+            name: 'Nacrene City',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special128: {
+            name: 'Nacrene City',
+            pokes: ['Tirtouga', 'Archen'],
+            minLevel: 25,
+            maxLevel: 25,
+            respawn: 'nacreneCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        route122: {
+            name: 'Route 3',
+            pokes: ['Tranquill', 'Watchog', 'Zebstrika', 'Yanma', 'Herdier', 'Purrloin', 'Basculin', 'Corphish'],
+            minLevel: 47,
+            maxLevel: 51,
+            respawn: 'nacreneCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special129: {
+            name: 'Wellspring Cave',
+            pokes: ['Boldore', 'Woobat', 'Basculin'],
+            minLevel: 55,
+            maxLevel: 58,
+            respawn: 'nacreneCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        striatonCity: {
+            name: 'Striaton City',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special114: {
+            name: 'Nature Preserve',
+            pokes: ['Nuzleaf', 'Altaria', 'Golduck', 'Noctowl', 'Girafarig', 'Kecleon', 'Fraxure', 'Basculin', 'Buizel'],
+            minLevel: 40,
+            maxLevel: 60,
+            respawn: 'striatonCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special130: {
+            name: 'Dreamyard',
+            pokes: ['Watchog', 'Liepard', 'Munna', 'Raticate', 'Jigglypuff', 'Golbat'],
+            minLevel: 56,
+            maxLevel: 59,
+            respawn: 'striatonCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        route123: {
+            name: 'Route 2',
+            pokes: ['Watchog', 'Herdier', 'Liepard', 'Jigglypuff', 'Lickitung'],
+            minLevel: 56,
+            maxLevel: 59,
+            respawn: 'humilauCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        accumulaTown: {
+            name: 'Accumula Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        route124: {
+            name: 'Route 1',
+            pokes: ['Herdier', 'Watchog', 'Jigglypuff'],
+            minLevel: 56,
+            maxLevel: 59,
+            respawn: 'accumulaTown',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        route125: {
+            name: 'Route 17',
+            pokes: ['Frillish'],
+            minLevel: 45,
+            maxLevel: 60,
+            respawn: 'accumulaTown',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        route126: {
+            name: 'Route 18',
+            pokes: ['Scrafty', 'Crustle', 'Sawk', 'Throh', 'Tropius', 'Carnivine', 'Watchog'],
+            minLevel: 57,
+            maxLevel: 59,
+            respawn: 'accumulaTown',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special131: {
+            name: 'P2 Laboratory',
+            pokes: ['Watchog', 'Herdier', 'Klang', 'Scrafty', 'Magneton', 'Weezing'],
+            minLevel: 56,
+            maxLevel: 59,
+            respawn: 'accumulaTown',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special132: {
+            name: 'Shaking Spots',
+            pokes: ['Audino', 'Drilbur', 'Emolga'],
+            minLevel: 10,
+            maxLevel: 20,
+            respawn: 'aspertiaCity',
+        },
+        special136: {
+            name: 'Liberty Garden',
+            pokes: ['Victini'],
+            minLevel: 15,
+            maxLevel: 15,
+            respawn: 'nacreneCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special137: {
+            name: 'Pledge Grove',
+            pokes: ['Keldeo', 'Cobalion', 'Terrakion', 'Virizion'],
+            minLevel: 50,
+            maxLevel: 50,
+            respawn: 'nacreneCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
+        },
+        special138: {
+            name: 'Weather Guys',
+            pokes: ['Tornadus', 'Thundurus', 'Landorus'],
             minLevel: 70,
             maxLevel: 70,
-            respawn: 'humilauCity',
+            respawn: 'nacreneCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
         special141: {
             name: 'Serene Grace',
             pokes: ['Meloetta'],
             minLevel: 50,
             maxLevel: 50,
-            respawn: 'humilauCity',
+            respawn: 'nacreneCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
         special142: {
             name: 'Not Kabutops',
             pokes: ['Genesect'],
             minLevel: 15,
             maxLevel: 15,
-            respawn: 'humilauCity',
+            respawn: 'nacreneCity',
+            _unlock: {
+                badges: {
+                    'Wave Badge': true,
+                },
+            },
         },
         uSuperRod: {
             name: 'Unova Super Rod',
