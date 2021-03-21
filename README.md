@@ -16,6 +16,7 @@ npm start -- --host "::" --port 7777
 
 You should be able to access the local server from other devices on your network (eg, a mobile connected to the same wifi) by hosting on "0.0.0.0"
 
+You can run all Jest tests with the command `npm run test`
 
 ## Releasing
 This step should only need doing by the project maintainer.
@@ -24,6 +25,7 @@ The command `npm run build:gh-pages` can be run to compile all code in productio
 
 ## Source Folder Structure
 The following diagram is ordered by topic rather than alphabetically, to make finding what you want easier.
+Some `.js` files may now be `.ts` files as we are in the process of migrating to Typescript
 ```c
 src/
 │
@@ -43,9 +45,13 @@ src/
 │
 ├── resources/        // Files to be copied into the build output (mostly images)
 │
-├── index.js          // Main js file, where the game starts
+├── index.ts          // Main js file, where the game starts
 ├── modules/          // Javscript modules
 │   └── *.js          // Various parts of the game, hopefully descriptively named
+│
+├── test/             // Folder for all Jest tests
+│   └── *.test.ts     // Individual test files, these are picked up automatically by Jest
+│
 └── store/            // Vuex stores for the game state
     ├── index.js      // Imports all stores into a single store for use in App.vue
     ├── actions.js    // Root store actions
@@ -61,9 +67,7 @@ src/
 - [Sass](https://sass-lang.com/documentation) (Styling, compiles to css)
 - [Bulma](https://bulma.io/) (CSS framework, similar to bootstrap)
 - [FontAwesome](https://fontawesome.com/) (Icons)
-
-Planned:
 - [Typescript](https://www.typescriptlang.org/) (Compile-time type-checking for javascript)
 - [Babel](https://babeljs.io/) (Transpiles modern js for older browser support)
 - [Postcss](https://postcss.org/) + [Autoprefix](https://github.com/postcss/autoprefixer) (Adds vendor prefixes to css, for older browser support)
-- [Mocha](https://mochajs.org/) + [Chai](https://www.chaijs.com/) + [Sinon](https://sinonjs.org/) (Javscript testing framework)
+- [Jest](https://jestjs.io/docs/getting-started) (Testing Framework)
