@@ -1,4 +1,4 @@
-import { $, pokeById } from './utilities';
+import { $, pokeByIndex } from './utilities';
 import POKEDEX from './db.ts';
 import { renderView } from './display';
 import { POKEDEXFLAGS } from './data';
@@ -31,7 +31,7 @@ export default (player, enemy, combatLoop, Poke) => {
                 return `assets/sprites/normal/front/${POKEDEX[id - 1].name}.png`;
             },
             selectFirstPoke: function (id) {
-                const starterPoke = new Poke(pokeById(id), 5);
+                const starterPoke = new Poke(pokeByIndex(id), 5);
                 player.addPoke(starterPoke);
                 player.addPokedex(starterPoke.pokeName(), POKEDEXFLAGS.ownNormal);
                 player.setActive(0);

@@ -1,4 +1,6 @@
-import POKEDEX, { PokedexData, pokedexMaps } from './db';
+import POKEDEX, {
+    PokedexData, pokedexMaps, PokemonIdType, PokemonNameType,
+} from './db';
 
 export function RNG(chance: number): boolean {
     const rnd = Math.random() * 100;
@@ -53,8 +55,9 @@ export function flash(element: HTMLElement): void {
     }, 10);
 }
 
-export const pokeById = (id: number): PokedexData => POKEDEX[id - 1];
-export const pokeByName = (name: string): PokedexData => POKEDEX[pokedexMaps.name[name]];
+export const pokeByIndex = (id: number): PokedexData => POKEDEX[id - 1];
+export const pokeById = (id: PokemonIdType): PokedexData => POKEDEX[pokedexMaps.id[id]];
+export const pokeByName = (name: PokemonNameType): PokedexData => POKEDEX[pokedexMaps.name[name]];
 
 export const $ = (cssQuery: string): HTMLElement => document.querySelector(cssQuery);
 export const $all = (cssQuery: string): HTMLElement[] => Array.prototype.slice.call(document.querySelectorAll(cssQuery), 0);
