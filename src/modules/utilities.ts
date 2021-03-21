@@ -1,17 +1,19 @@
-import POKEDEX from './db.ts';
+import POKEDEX, { PokedexData, pokedexMaps } from './db';
 
-export function RNG(chance) {
+export function RNG(chance: number): boolean {
     const rnd = Math.random() * 100;
     return (rnd < chance);
 }
 
-export function cloneJsonObject(object) {
+export function cloneJsonObject<T>(object: T): T {
     return JSON.parse(JSON.stringify(object));
 }
-export function randomArrayElement(array) {
+
+export function randomArrayElement<T>(array: T[]): T {
     return array[Math.floor(Math.random() * array.length)];
 }
-export function mergeArray(arr1, arr2) {
+
+export function mergeArray<T, U>(arr1: T[], arr2: U[]): (T | U)[] {
     if (arr1.length === 0 && arr2.length > 0) {
         return arr2;
     }
@@ -19,18 +21,19 @@ export function mergeArray(arr1, arr2) {
         return arr1;
     }
     if (arr1.length > 0 && arr2.length > 0) {
-        return arr1.concat(arr2);
+        return [...arr1, ...arr2];
     }
     return [];
 }
-export function isEmpty(obj) {
+
+export function isEmpty(obj: unknown): boolean {
     return Object.keys(obj).length === 0 && obj.constructor === Object;
 }
-export function camelCaseToString(text) {
+export function camelCaseToString(text: string): string {
     const result = text.replace(/([A-Z])/g, ' $1');
     return result.charAt(0).toUpperCase() + result.slice(1);
 }
-export function flash(element) {
+export function flash(element: HTMLElement): void {
     let op = 1; // initial opacity
     let fadeOut = true;
     const timer = setInterval(() => {
@@ -40,7 +43,7 @@ export function flash(element) {
         if (op >= 1 && !fadeOut) {
             clearInterval(timer);
         }
-        element.style.opacity = op;
+        element.style.opacity = String(op);
         element.style.filter = `alpha(opacity=${op * 100})`;
         if (fadeOut) {
             op -= op * 0.1;
@@ -50,8 +53,8 @@ export function flash(element) {
     }, 10);
 }
 
-export const pokeById = (id) => POKEDEX[id - 1];
-export const pokeByName = (name) => POKEDEX.find((poke) => poke.name === name);
+export const pokeById = (id: number): PokedexData => POKEDEX[id - 1];
+export const pokeByName = (name: string): PokedexData => POKEDEX[pokedexMaps.name[name]];
 
-export const $ = (cssQuery) => document.querySelector(cssQuery);
-export const $all = (cssQuery) => Array.prototype.slice.call(document.querySelectorAll(cssQuery), 0);
+export const $ = (cssQuery: string): HTMLElement => document.querySelector(cssQuery);
+export const $all = (cssQuery: string): HTMLElement[] => Array.prototype.slice.call(document.querySelectorAll(cssQuery), 0);

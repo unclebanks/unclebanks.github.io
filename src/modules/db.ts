@@ -2,7 +2,7 @@ type GrowthRate = 'Erratic' | 'Fast' | 'Medium Fast' | 'Medium Slow' | 'Slow' | 
 
 type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
 
-interface PokedexData {
+interface PokedexSetupData {
     name: string;
     stats: {
         'catch rate': string | number;
@@ -19,7 +19,7 @@ interface PokedexData {
     id: number | string;
 }
 
-function createPokemonArray<V extends string, T extends readonly PokedexData[] & Array<{name: V}>>(...args: T) {
+function createPokemonArray<V extends string, T extends readonly PokedexSetupData[] & Array<{name: V}>>(...args: T) {
     return args;
 }
 
@@ -16611,6 +16611,7 @@ const POKEDEX = createPokemonArray(
     },
 );
 
+export type PokedexData = typeof POKEDEX[number];
 export type PokemonNameType = typeof POKEDEX[number]['name'];
 
 export default POKEDEX;
