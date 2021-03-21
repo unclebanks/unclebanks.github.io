@@ -705,6 +705,228 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Abomasnow': [
         { 'to': 'M-Abomasnow', 'requires': { 'type': 'megaStone', 'megaStone': 'abomasnite' } },
     ],
+    'Snivy': [
+        { 'to': 'Servine', 'requires': { 'type': 'level', 'level': '17' } },
+    ],
+    'Servine': [
+        { 'to': 'Serperior', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Tepig': [
+        { 'to': 'Pignite', 'requires': { 'type': 'level', 'level': '17' } },
+    ],
+    'Pignite': [
+        { 'to': 'Emboar', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Oshawott': [
+        { 'to': 'Dewott', 'requires': { 'type': 'level', 'level': '17' } },
+    ],
+    'Dewott': [
+        { 'to': 'Samurott', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Patrat': [
+        { 'to': 'Watchog', 'requires': { 'type': 'level', 'level': '20' } },
+    ],
+    'Purrloin': [
+        { 'to': 'Liepard', 'requires': { 'type': 'level', 'level': '20' } },
+    ],
+    'Pidove': [
+        { 'to': 'Tranquill', 'requires': { 'type': 'level', 'level': '21' } },
+    ],
+    'Tranquill': [
+        { 'to': 'Unfezant', 'requires': { 'type': 'level', 'level': '32' } },
+    ],
+    'Sewaddle': [
+        { 'to': 'Swadloon', 'requires': { 'type': 'level', 'level': '20' } },
+    ],
+    'Swadloon': [
+        { 'to': 'Leavanny', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+    ],
+    'Lillipup': [
+        { 'to': 'Herdier', 'requires': { 'type': 'level', 'level': '16' } },
+    ],
+    'Herdier': [
+        { 'to': 'Stoutland', 'requires': { 'type': 'level', 'level': '32' } },
+    ],
+    'Pansage': [
+        { 'to': 'Simisage', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
+    ],
+    'Pansear': [
+        { 'to': 'Simisear', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
+    ],
+    'Panpour': [
+        { 'to': 'Simipour', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
+    ],
+    'Woobat': [
+        { 'to': 'Swoobat', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+    ],
+    'Venipede': [
+        { 'to': 'Whirlipede', 'requires': { 'type': 'level', 'level': '22' } },
+    ],
+    'Whirlipede': [
+        { 'to': 'Scolipede', 'requires': { 'type': 'level', 'level': '30' } },
+    ],
+    'Roggenrola': [
+        { 'to': 'Boldore', 'requires': { 'type': 'level', 'level': '25' } },
+    ],
+    'Boldore': [
+        { 'to': 'Gigalith', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Timburr': [
+        { 'to': 'Gurdurr', 'requires': { 'type': 'level', 'level': '25' } },
+    ],
+    'Gurdurr': [
+        { 'to': 'Conkeldurr', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Drilbur': [
+        { 'to': 'Excadrill', 'requires': { 'type': 'level', 'level': '31' } },
+    ],
+    'Cottonee': [
+        { 'to': 'Whimsicott', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
+    ],
+    'Petilil': [
+        { 'to': 'Lilligant', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
+    ],
+    'Munna': [
+        { 'to': 'Musharna', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
+    ],
+    'Sandile': [
+        { 'to': 'Krokorok', 'requires': { 'type': 'level', 'level': '29' } },
+    ],
+    'Krokorok': [
+        { 'to': 'Krookodile', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Darumaka': [
+        { 'to': 'Darmanitan', 'requires': { 'type': 'level', 'level': '35' } },
+    ],
+    'Trubbish': [
+        { 'to': 'Garbodor', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Minccino': [
+        { 'to': 'Cinccino', 'requires': { 'type': 'stone', 'stone': 'shinyStone' } },
+    ],
+    'Rufflet': [
+        { 'to': 'Braviary', 'requires': { 'type': 'level', 'level': '54' } },
+    ],
+    'Vullaby': [
+        { 'to': 'Mandibuzz', 'requires': { 'type': 'level', 'level': '54' } },
+    ],
+    'Dwebble': [
+        { 'to': 'Crustle', 'requires': { 'type': 'level', 'level': '34' } },
+    ],
+    'Scraggy': [
+        { 'to': 'Scrafty', 'requires': { 'type': 'level', 'level': '39' } },
+    ],
+    'Yamask': [
+        { 'to': 'Cofagrigus', 'requires': { 'type': 'level', 'level': '34' } },
+    ],
+    'Tirtouga': [
+        { 'to': 'Carracosta', 'requires': { 'type': 'level', 'level': '37' } },
+    ],
+    'Archen': [
+        { 'to': 'Archeops', 'requires': { 'type': 'level', 'level': '37' } },
+    ],
+    'Klink': [
+        { 'to': 'Klang', 'requires': { 'type': 'level', 'level': '38' } },
+    ],
+    'Klang': [
+        { 'to': 'Klinklang', 'requires': { 'type': 'level', 'level': '49' } },
+    ],
+    'Gothita': [
+        { 'to': 'Gothorita', 'requires': { 'type': 'level', 'level': '32' } },
+    ],
+    'Gothorita': [
+        { 'to': 'Gothitelle', 'requires': { 'type': 'level', 'level': '41' } },
+    ],
+    'Solosis': [
+        { 'to': 'Duosion', 'requires': { 'type': 'level', 'level': '32' } },
+    ],
+    'Duosion': [
+        { 'to': 'Reuniclus', 'requires': { 'type': 'level', 'level': '41' } },
+    ],
+    'Blitzle': [
+        { 'to': 'Zebstrika', 'requires': { 'type': 'level', 'level': '27' } },
+    ],
+    'Zorua': [
+        { 'to': 'Zoroark', 'requires': { 'type': 'level', 'level': '30' } },
+    ],
+    'Ducklett': [
+        { 'to': 'Swanna', 'requires': { 'type': 'level', 'level': '35' } },
+    ],
+    'Karrablast': [
+        { 'to': 'Escavalier', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Shelmet': [
+        { 'to': 'Accelgor', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Deerling': [
+        { 'to': 'Sawsbuck', 'requires': { 'type': 'level', 'level': '34' } },
+    ],
+    'Foongus': [
+        { 'to': 'Amoonguss', 'requires': { 'type': 'level', 'level': '39' } },
+    ],
+    'Larvesta': [
+        { 'to': 'Volcarona', 'requires': { 'type': 'level', 'level': '59' } },
+    ],
+    'Joltik': [
+        { 'to': 'Galvantula', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Ferroseed': [
+        { 'to': 'Ferrothorn', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Tynamo': [
+        { 'to': 'Eelektrik', 'requires': { 'type': 'level', 'level': '39' } },
+    ],
+    'Axew': [
+        { 'to': 'Fraxure', 'requires': { 'type': 'level', 'level': '38' } },
+    ],
+    'Fraxure': [
+        { 'to': 'Haxorus', 'requires': { 'type': 'level', 'level': '48' } },
+    ],
+    'Eelektrik': [
+        { 'to': 'Eelektross', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
+    ],
+    'Frillish': [
+        { 'to': 'Jellicent', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Elgyem': [
+        { 'to': 'Beheeyem', 'requires': { 'type': 'level', 'level': '42' } },
+    ],
+    'Litwick': [
+        { 'to': 'Lampent', 'requires': { 'type': 'level', 'level': '41' } },
+    ],
+    'Lampent': [
+        { 'to': 'Chandelure', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
+    ],
+    'Cubchoo': [
+        { 'to': 'Beartic', 'requires': { 'type': 'level', 'level': '37' } },
+    ],
+    'Mienfoo': [
+        { 'to': 'Mienshao', 'requires': { 'type': 'level', 'level': '50' } },
+    ],
+    'Pawniard': [
+        { 'to': 'Bisharp', 'requires': { 'type': 'level', 'level': '52' } },
+    ],
+    'Tympole': [
+        { 'to': 'Palpitoad', 'requires': { 'type': 'level', 'level': '25' } },
+    ],
+    'Palpitoad': [
+        { 'to': 'Seismitoad', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Vanillite': [
+        { 'to': 'Vanillish', 'requires': { 'type': 'level', 'level': '35' } },
+    ],
+    'Vanillish': [
+        { 'to': 'Vanilluxe', 'requires': { 'type': 'level', 'level': '47' } },
+    ],
+    'Golett': [
+        { 'to': 'Golurk', 'requires': { 'type': 'level', 'level': '43' } },
+    ],
+    'Deino': [
+        { 'to': 'Zweilous', 'requires': { 'type': 'level', 'level': '50' } },
+    ],
+    'Zweilous': [
+        { 'to': 'Hydreigon', 'requires': { 'type': 'level', 'level': '64' } },
+    ],
     'Audino': [
         { 'to': 'M-Audino', 'requires': { 'type': 'megaStone', 'megaStone': 'audinite' } },
     ],
