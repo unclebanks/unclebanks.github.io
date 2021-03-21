@@ -1,6 +1,4 @@
-import { PokemonGrowthRate } from './data';
-
-type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
+import { PokemonGrowthRate, PokemonType } from './data';
 
 interface PokedexSetupData {
     name: string;
