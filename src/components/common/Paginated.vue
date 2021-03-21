@@ -1,5 +1,5 @@
 <template>
-  <div class="buttons mb-0">
+  <div class="buttons are-small has-addons is-centered mb-0">
     <button
       class="button"
       :disabled="page === 1"
@@ -14,7 +14,7 @@
     >
       &lt;
     </button>
-    <span class="mr-2 mb-2">{{ page }} / {{ totalPages }}</span>
+    <span class="m-2">{{ page }} / {{ totalPages }}</span>
     <button
       class="button"
       :disabled="page === totalPages"

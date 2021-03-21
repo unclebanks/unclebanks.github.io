@@ -1,7 +1,7 @@
 <template>
   <li
     :id="`storagePoke${index}`"
-    class="is-flex is-justify-content-space-between"
+    class="is-flex is-flex-wrap-wrap is-justify-content-space-between"
   >
     <a
       href="#"
