@@ -2,7 +2,7 @@ type GrowthRate = 'Erratic' | 'Fast' | 'Medium Fast' | 'Medium Slow' | 'Slow' | 
 
 type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
 
-interface PokedexData {
+interface PokedexSetupData {
     name: string;
     stats: {
         'catch rate': string | number;
@@ -19,7 +19,16 @@ interface PokedexData {
     id: number | string;
 }
 
-function createPokemonArray<V extends string, T extends readonly PokedexData[] & Array<{name: V}>>(...args: T) {
+function createPokemonArray<
+    S extends string,
+    N extends number,
+    T extends readonly PokedexSetupData[] & Array<{
+        // this allows us to define types later which
+        // will only contain the values the key actually has
+        name: S,
+        id: S | N,
+    }>
+>(...args: T) {
     return args;
 }
 
@@ -16611,15 +16620,44 @@ const POKEDEX = createPokemonArray(
     },
 );
 
-export type PokemonNameType = typeof POKEDEX[number]['name'];
+type SetupKey = keyof typeof POKEDEX[number];
+type PokedexKeyData<T extends SetupKey> = typeof POKEDEX[number][T]
+
+export type PokedexData = typeof POKEDEX[number];
+export type PokemonNameType = PokedexKeyData<'name'>;
+export type PokemonIdType = PokedexKeyData<'id'>;
 
 export default POKEDEX;
 
-export const pokedexMaps = POKEDEX.reduce((map, poke, index) => {
-    map.name[poke.name] = index;
-    map.id[poke.id] = index;
-    return map;
-}, {
-    name: {},
-    id: {},
-});
+type AllowedRecordKey = string | number | symbol
+
+// All of the setup keys which hold data we can use as a Record Key
+type ValidMapKey = {
+    [K in SetupKey]:
+        PokedexKeyData<K> extends AllowedRecordKey ? K : never
+}[SetupKey];
+
+// Only allow Pokedex maps for valid keys
+type PokedexMapFor<T extends ValidMapKey> = Record<PokedexKeyData<T>, number>
+
+// utility to create a map with some typing
+const createMapFor = <
+    T extends ValidMapKey,
+    Map extends PokedexMapFor<T>,
+>(key: T): Map => {
+    const keyMap = POKEDEX.reduce((map, poke, index) => {
+        // Typescript thinks this might not be a valid record key,
+        // but the ValidMapKey constraint on T should keep us safe
+        const keyVal = (poke[key] as AllowedRecordKey);
+        map[keyVal] = index;
+        return map;
+    }, {});
+
+    // Typescript doesn't know if we provided all of the keys
+    return (keyMap as Map);
+};
+
+export const pokedexMaps = {
+    name: createMapFor('name'),
+    id: createMapFor('id'),
+};
