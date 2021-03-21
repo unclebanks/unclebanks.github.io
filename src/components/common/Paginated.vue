@@ -30,7 +30,15 @@
       &gt;&gt;
     </button>
   </div>
-  <p>Showing {{ offset + 1 }} - {{ offset + pagedItems.length }} of {{ list.length }}</p>
+  <p>
+    Showing
+    {{ offset + 1 }}
+    -
+    {{ offset + pagedItems.length }}
+    of
+    {{ list.length }}
+    <span v-if="isFiltered">(filtered)</span>
+  </p>
   <ul
     :id="listId"
     :class="listClass"
@@ -66,6 +74,7 @@ export default {
         pageSize: { type: Number, default: 10 },
         listId: { type: String, default: '' },
         listClass: { type: String, default: '' },
+        filter: { type: Function, default: null },
     },
 
     data: function () {
@@ -79,12 +88,30 @@ export default {
             return getOffset(this.pageSize, this.page);
         },
 
+        filteredList() {
+            return this.filter
+                ? this.list.filter(this.filter)
+                : this.list;
+        },
+
         pagedItems() {
-            return getPage(this.list, this.pageSize, this.page);
+            return getPage(this.filteredList, this.pageSize, this.page);
         },
 
         totalPages() {
-            return Math.max(1, Math.ceil(this.list.length / this.pageSize));
+            return Math.max(1, Math.ceil(this.filteredList.length / this.pageSize));
+        },
+
+        isFiltered() {
+            return this.filteredList.length < this.list.length;
+        },
+    },
+
+    watch: {
+        totalPages(newMax) {
+            if (this.page > newMax) {
+                this.page = newMax;
+            }
         },
     },
 };
