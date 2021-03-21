@@ -36,12 +36,12 @@ export const BALLRNG: Record<string, number> = {
 
 export type PokemonStatType = 'hp' | 'attack' | 'defense' | 'sp atk' | 'sp def' | 'speed';
 
-interface Vitamin {
+interface VitaminData {
     display: string,
     stat: PokemonStatType,
 }
 
-export const VITAMINS: Record<string, Vitamin> = {
+export const VITAMINS: Record<string, VitaminData> = {
     hpUp: {
         display: 'HP Up',
         stat: 'hp',
