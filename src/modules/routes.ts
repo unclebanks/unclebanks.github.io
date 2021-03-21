@@ -4580,10 +4580,19 @@ const ROUTES: Routes = {
         },
     },
     Kalos: {
+        _unlock: {
+            badges: {
+                'Wave Badge': true,
+            },
+        },
         _global: {
             pokes: ['Froakie', 'Fennekin', 'Chespin'],
             rarePokes: [],
             superRare: [],
+        },
+        vanivilleTown: {
+            name: 'Vaniville Town',
+            town: true,
         },
         aquacordeTown: {
             name: 'Aquacorde Town',
@@ -4598,12 +4607,52 @@ const ROUTES: Routes = {
                 ],
             },
         },
-        custom1: {
-            name: 'Santalune City',
-            pokes: ['Bunnelby', 'Fletchling', 'Litleo'],
+        route127: {
+            name: 'Route 2',
+            pokes: ['Bunnelby', 'Fletchling', 'Scatterbug', 'Zigzagoon', 'Pidgey', 'Weedle', 'Caterpie'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'aquacordeTown',
+        },
+        custom1: {
+            name: 'Santalune Forest',
+            pokes: ['Pansage', 'Fletchling', 'Scatterbug', 'Pansear', 'Panpour', 'Weedle', 'Caterpie', 'Pikachu', 'Metapod', 'Kakuna'],
+            minLevel: 2,
+            maxLevel: 4,
+            respawn: 'aquacordeTown',
+        },
+        route128: {
+            name: 'Route 3',
+            pokes: ['Bidoof', 'Bunnelby', 'Fletchling', 'Pidgey', 'Azurill', 'Burmy', 'Pikachu', 'Dunsparce'],
+            minLevel: 3,
+            maxLevel: 5,
+            respawn: 'aquacordeTown',
+        },
+        santaluneCity: {
+            name: 'Santalune City',
+            town: true,
+            gymLeader: {
+                name: 'Viola',
+                badge: 'Bug Badge',
+                poke: [
+                    ['Surskit', 10],
+                    ['Vivillon', 12],
+                ],
+            },
+        },
+        route129: {
+            name: 'Route 4',
+            pokes: ['Combee', 'Flabebe', 'Ledyba', 'Skitty', 'Budew', 'Ralts'],
+            minLevel: 6,
+            maxLevel: 7,
+            respawn: 'santaluneCity',
+        },
+        route130: {
+            name: 'Route 22',
+            pokes: ['Psyduck', 'Farfetchd', 'Dunsparce', 'Azurill', 'Bidoof', 'Riolu', 'Bunnelby', 'Litleo', 'Azumarill', 'Bibarel', 'Diggersby'],
+            minLevel: 6,
+            maxLevel: 27,
+            respawn: 'santaluneCity',
         },
         custom2: {
             name: 'Camphrier Town',
@@ -4691,11 +4740,27 @@ const ROUTES: Routes = {
         },
         kaOldRod: {
             name: 'Kalos Old Rod',
-            pokes: ['Skrelp', 'Clauncher'],
+            pokes: ['Skrelp', 'Clauncher', 'Magikarp'],
             minLevel: 5,
             maxLevel: 10,
             respawn: 'humilauCity',
             kalosOldRod: 1,
+        },
+        kaGoodRod: {
+            name: 'Kalos Good Rod',
+            pokes: ['Goldeen', 'Carvanha'],
+            minLevel: 25,
+            maxLevel: 25,
+            respawn: 'vanivilleTown',
+            kalosGoodRod: 1,
+        },
+        kaSuperRod: {
+            name: 'Kalos Super Rod',
+            pokes: ['Seaking', 'Gyarados', 'Sharpedo'],
+            minLevel: 35,
+            maxLevel: 35,
+            respawn: 'vanivilleTown',
+            kalosSuperRod: 1,
         },
     },
     Alola: {
