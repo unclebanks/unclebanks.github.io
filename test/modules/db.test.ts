@@ -1,14 +1,15 @@
 import fs from 'fs';
-import POKEDEX, { PokemonNameType } from '../../src/modules/db';
+import POKEDEX from '../../src/modules/db';
+import { pokeImage } from '../../src/modules/poke';
 
 const fileExists = async (path) => Boolean(await fs.promises.stat(path).catch(() => false));
 
-// move this into some src file and import it
-const imagePath = (
-    type: 'normal' | 'shiny',
-    side: 'front' | 'back',
-    name: PokemonNameType,
-) => `assets/sprites/${type}/${side}/${name}.png`;
+// // move this into some src file and import it
+// const imagePath = (
+//     type: 'normal' | 'shiny',
+//     side: 'front' | 'back',
+//     name: PokemonNameType,
+// ) => `assets/sprites/${type}/${side}/${name.replace(/[:?]/g, '')}.png`;
 
 describe('Pokedex', () => {
     describe('All pokemon', () => {
@@ -17,7 +18,7 @@ describe('Pokedex', () => {
             const sides = ['front', 'back'];
             const testImage = (type, side) => (poke) => {
                 const name = poke.name;
-                const image = `./src/resources/${imagePath(type, side, poke.name)}`;
+                const image = `./src/resources/${pokeImage(type, side, poke.name)}`;
                 test(name, () => fileExists(image).then((data) => {
                     expect(data).toBe(true);
                 }));

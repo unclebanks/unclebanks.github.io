@@ -5,7 +5,7 @@ import Display, { renderView } from './modules/display';
 import Combat from './modules/combat';
 import UserActions from './modules/actions';
 import Story from './modules/story';
-import mkPoke from './modules/poke';
+import mkPoke, { pokeImage } from './modules/poke';
 import setupModals from './modules/modalEvents';
 import POKEDEX from './modules/db';
 // include styles in webpack bundle
@@ -62,6 +62,7 @@ if (process.env.NODE_ENV === 'development') {
         dom,
         models,
         POKEDEX,
+        pokeImage,
     };
 } else {
     // Otherwise, just the things we need to make the game run

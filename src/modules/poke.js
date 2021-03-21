@@ -4,6 +4,14 @@ import { EXP_TABLE, POKEDEXFLAGS } from './data';
 import EVOLUTIONS from './evolutions.ts';
 import POKEDEX from './db.ts';
 
+export const pokeImage = function (
+    type,
+    side,
+    name,
+) {
+    return `assets/sprites/${type}/${side}/${name.replace(/[:?]/g, '')}.png`;
+};
+
 export default (player) => {
     const Poke = function (pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0, appliedVitamins = {}) {
         this.poke = cloneJsonObject(pokeModel);

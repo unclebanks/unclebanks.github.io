@@ -15959,7 +15959,7 @@ const POKEDEX = createPokemonArray(
         'id': '381-M',
     },
     {
-        'name': 'P-Kyogre',
+        'name': 'Kyogre-P',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -15977,7 +15977,7 @@ const POKEDEX = createPokemonArray(
         'id': 803,
     },
     {
-        'name': 'P-Groudon',
+        'name': 'Groudon-P',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -16164,7 +16164,7 @@ const POKEDEX = createPokemonArray(
         'id': '475-M',
     },
     {
-        'name': 'H-Rotom',
+        'name': 'Rotom-heat',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16183,7 +16183,7 @@ const POKEDEX = createPokemonArray(
         'id': 808,
     },
     {
-        'name': 'W-Rotom',
+        'name': 'Rotom-wash',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16202,7 +16202,7 @@ const POKEDEX = createPokemonArray(
         'id': 809,
     },
     {
-        'name': 'F-Rotom',
+        'name': 'Rotom-frost',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16221,7 +16221,7 @@ const POKEDEX = createPokemonArray(
         'id': 810,
     },
     {
-        'name': 'Fan-Rotom',
+        'name': 'Rotom-fan',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16240,7 +16240,7 @@ const POKEDEX = createPokemonArray(
         'id': 811,
     },
     {
-        'name': 'M-Rotom',
+        'name': 'Rotom-mow',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16391,7 +16391,7 @@ const POKEDEX = createPokemonArray(
         'id': 817,
     },
     {
-        'name': 'B-Kyurem',
+        'name': 'Kyurem-B',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -16410,7 +16410,7 @@ const POKEDEX = createPokemonArray(
         'id': 818,
     },
     {
-        'name': 'W-Kyurem',
+        'name': 'Kyurem-W',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -16467,7 +16467,7 @@ const POKEDEX = createPokemonArray(
         'id': 821,
     },
     {
-        'name': 'Ash-Greninja',
+        'name': 'Greninja-Ash',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Slow',
