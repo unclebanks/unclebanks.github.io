@@ -83,6 +83,7 @@
 <script>
 import CardModal from '../common/CardModal.vue';
 import POKEDEX from '../../modules/db';
+import { pokeImage } from '../../modules/poke';
 
 export default {
     components: {
@@ -116,7 +117,7 @@ export default {
 
         pokeImage(entry) {
             const shinyOrNormal = entry.flag === 8 ? 'shiny' : 'normal';
-            return `assets/sprites/${shinyOrNormal}/front/${entry.name}.png`;
+            return pokeImage(shinyOrNormal, 'front', entry.name);
         },
 
         pokedexId(entry) {

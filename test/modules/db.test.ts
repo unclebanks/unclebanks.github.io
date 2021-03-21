@@ -15,7 +15,7 @@ describe('Pokedex', () => {
     describe('All pokemon', () => {
         describe('have images', () => {
             const types = ['normal', 'shiny'];
-            const sides = ['front', 'back'];
+            const sides = ['front', 'back', 'party'];
             const testImage = (type, side) => (poke) => {
                 const name = poke.name;
                 const image = `./src/resources/${pokeImage(type, side, poke.name)}`;

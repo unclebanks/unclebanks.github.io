@@ -3,6 +3,7 @@ import POKEDEX from './db.ts';
 import { renderView } from './display';
 import { POKEDEXFLAGS } from './data';
 import { openModal, closeModal } from './modalEvents';
+import { pokeImage } from './poke';
 
 export default (player, enemy, combatLoop, Poke) => {
     let dom;
@@ -28,7 +29,7 @@ export default (player, enemy, combatLoop, Poke) => {
         },
         helpers: {
             getPokeImg: function (id) {
-                return `assets/sprites/normal/front/${POKEDEX[id - 1].name}.png`;
+                return pokeImage('normal', 'front', POKEDEX[id - 1].name);
             },
             selectFirstPoke: function (id) {
                 const starterPoke = new Poke(pokeByIndex(id), 5);
