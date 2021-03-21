@@ -34,38 +34,45 @@
         Desc
       </option>
     </select>
-    <ul
-      v-if="!$store.state.loading"
-      id="storageList"
-      class="manageTeamEnabled"
+    <Paginated
+      :get-key="(poke) => poke.pokeName()"
+      :list="storage"
+      :page-size="15"
+      list-id="storageList"
+      list-class="manageTeamEnabled"
     >
-      <StoragePokemon
-        v-for="(poke, index) in $store.getters['pokemon/sortedStorage']"
-        :key="poke.pokeName()"
-        :ui="ui"
-        :index="index"
-        :poke="poke"
-      />
-    </ul>
+      <template
+        #item="{ item, index, offset }"
+      >
+        <StoragePokemon
+          :ui="ui"
+          :index="index + offset"
+          :poke="item"
+        />
+      </template>
+    </Paginated>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import StoragePokemon from './StoragePokemon.vue';
+import Paginated from '../common/Paginated';
 
 export default {
     components: {
         StoragePokemon,
+        Paginated,
     },
 
     props: {
         ui: { type: Object, required: true },
     },
 
-    data: function () {
-        return {
-            test: false,
-        };
+    computed: {
+        ...mapGetters({
+            storage: 'pokemon/sortedStorage',
+        }),
     },
 };
 </script>

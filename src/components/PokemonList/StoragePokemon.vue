@@ -1,6 +1,7 @@
 <template>
   <li
     :id="`storagePoke${index}`"
+    class="is-flex is-justify-content-space-between"
   >
     <a
       href="#"
@@ -8,41 +9,36 @@
       :status="pokeStatus(poke)"
     >{{ poke.pokeName() }} ({{ poke.level() }})
     </a>
-    <br>
-    <button
-      class="pokeUpButton"
-      @click="ui.pokemonToUp(index, 'storage')"
+    <div
+      class="buttons are-small"
     >
-      <i
-        class="fa fa-arrow-up"
-        aria-hidden="true"
-      />
-    </button>
-    <button
-      class="pokeDownButton"
-      @click="ui.pokemonToDown(index, 'storage')"
-    >
-      <i
-        class="fa fa-arrow-down"
-        aria-hidden="true"
-      />
-    </button>
-    <button
-      class="pokeFirstButton"
-      @click="ui.pokemonToFirst(index, 'storage')"
-    >
-      #1
-    </button>
-    <button
-      class="toStorageButton"
-      @click="ui.moveToRoster(index)"
-    >
-      Active
-    </button>
+      <button
+        v-if="!isPinned(poke)"
+        class="button is-rounded"
+        @click="pin(poke)"
+      >
+        Pin
+      </button>
+      <button
+        v-else
+        class="button is-rounded"
+        @click="unpin(poke)"
+      >
+        Unpin
+      </button>
+      <button
+        class="button is-rounded"
+        @click="ui.moveToRoster(index)"
+      >
+        Active
+      </button>
+    </div>
   </li>
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex';
+
 export default {
     props: {
         index: { type: Number, required: true },
@@ -50,7 +46,18 @@ export default {
         ui: { type: Object, required: true },
     },
 
+    computed: {
+        ...mapGetters({
+            isPinned: 'pokemon/isPinned',
+        }),
+    },
+
     methods: {
+        ...mapMutations({
+            pin: 'pokemon/pinStorage',
+            unpin: 'pokemon/unpinStorage',
+        }),
+
         /// Duplicate, refactor please.
         pokeStatus(poke) {
             if (poke.alive()) {

@@ -16614,3 +16614,12 @@ const POKEDEX = createPokemonArray(
 export type PokemonNameType = typeof POKEDEX[number]['name'];
 
 export default POKEDEX;
+
+export const pokedexMaps = POKEDEX.reduce((map, poke, index) => {
+    map.name[poke.name] = index;
+    map.id[poke.id] = index;
+    return map;
+}, {
+    name: {},
+    id: {},
+});
