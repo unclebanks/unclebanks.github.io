@@ -4,6 +4,14 @@ import { EXP_TABLE, POKEDEXFLAGS } from './data';
 import EVOLUTIONS from './evolutions.ts';
 import POKEDEX from './db.ts';
 
+export const pokeImage = function (
+    type,
+    side,
+    name,
+) {
+    return `assets/sprites/${type}/${side}/${name.replace(/[:?]/g, '')}.png`;
+};
+
 export default (player) => {
     const Poke = function (pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0, appliedVitamins = {}) {
         this.poke = cloneJsonObject(pokeModel);
@@ -133,9 +141,9 @@ export default (player) => {
     Poke.prototype.image = function () {
         const imageType = (this.isShiny ? 'shiny' : 'normal');
         return {
-            front: 'assets/sprites/' + [imageType] + '/front/' + this.pokeName() + '.png',
-            back: 'assets/sprites/' + [imageType] + '/back/' + this.pokeName() + '.png',
-            party: 'assets/sprites/partySprites/' + [imageType] + '/' + this.pokeName() + '.png',
+            front: pokeImage(imageType, 'front', this.pokeName()),
+            back: pokeImage(imageType, 'back', this.pokeName()),
+            party: pokeImage(imageType, 'party', this.pokeName()),
         };
     };
     Poke.prototype.shiny = function () {
