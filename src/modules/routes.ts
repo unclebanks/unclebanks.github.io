@@ -4580,11 +4580,6 @@ const ROUTES: Routes = {
         },
     },
     Kalos: {
-        _unlock: {
-            badges: {
-                'Wave Badge': true,
-            },
-        },
         _global: {
             pokes: ['Froakie', 'Fennekin', 'Chespin'],
             rarePokes: [],
@@ -4607,23 +4602,23 @@ const ROUTES: Routes = {
                 ],
             },
         },
-        route127: {
+        kalosroute2: {
             name: 'Route 2',
-            pokes: ['Bunnelby', 'Fletchling', 'Scatterbug', 'Zigzagoon', 'Pidgey', 'Weedle', 'Caterpie'],
+            pokes: ['Caterpie', 'Weedle', 'Pidgey', 'Zigzagoon', 'Fletchling', 'Bunnelby', 'Scatterbug'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'aquacordeTown',
         },
-        custom1: {
+        santaluneForest: {
             name: 'Santalune Forest',
-            pokes: ['Pansage', 'Fletchling', 'Scatterbug', 'Pansear', 'Panpour', 'Weedle', 'Caterpie', 'Pikachu', 'Metapod', 'Kakuna'],
+            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pikachu', 'Pansage', 'Pansear', 'Panpour', 'Fletchling', 'Scatterbug'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'aquacordeTown',
         },
-        route128: {
+        kalosroute3: {
             name: 'Route 3',
-            pokes: ['Bidoof', 'Bunnelby', 'Fletchling', 'Pidgey', 'Azurill', 'Burmy', 'Pikachu', 'Dunsparce'],
+            pokes: ['Pidgey', 'Pikachu', 'Dunsparce', 'Azurill', 'Bidoof', 'Burmy', 'Bunnelby', 'Fletchling'],
             minLevel: 3,
             maxLevel: 5,
             respawn: 'aquacordeTown',
@@ -4640,33 +4635,330 @@ const ROUTES: Routes = {
                 ],
             },
         },
-        route129: {
-            name: 'Route 4',
-            pokes: ['Combee', 'Flabebe', 'Ledyba', 'Skitty', 'Budew', 'Ralts'],
-            minLevel: 6,
-            maxLevel: 7,
-            respawn: 'santaluneCity',
-        },
-        route130: {
+        kalosroute22: {
             name: 'Route 22',
-            pokes: ['Psyduck', 'Farfetchd', 'Dunsparce', 'Azurill', 'Bidoof', 'Riolu', 'Bunnelby', 'Litleo', 'Azumarill', 'Bibarel', 'Diggersby'],
-            minLevel: 6,
+            pokes: ['Psyduck', 'Farfetchd', 'Azumarill', 'Dunsparce', 'Azurill', 'Bidoof', 'Bibarel', 'Riolu', 'Bunnelby', 'Diggersby', 'Litleo'],
+            minLevel: 5,
             maxLevel: 27,
             respawn: 'santaluneCity',
         },
-        custom2: {
-            name: 'Camphrier Town',
-            pokes: ['Scatterbug', 'Flabebe', 'Skiddo', 'Spewpa'],
-            minLevel: 5,
+        kalosroute4: {
+            name: 'Route 4',
+            pokes: ['Ledyba', 'Ralts', 'Skitty', 'Budew', 'Combee', 'Flabebe'],
+            minLevel: 6,
             maxLevel: 8,
-            respawn: 'aquacordeTown',
+            respawn: 'santaluneCity',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
         },
-        custom3: {
-            name: 'Geosenge Town',
-            pokes: ['Furfrou', 'Spritzee', 'Swirlix'],
+        lumioseCity: {
+            name: 'Lumiose City',
+            town: true,
+            prof: {
+                name: 'Prof. Sycamore',
+                win: 'sycamore1',
+                poke: [
+                    ['Bulbasaur', 10],
+                    ['Charmander', 10],
+                    ['Squirtle', 10],
+                ],
+            },
+            prof1: {
+                name: 'Prof. Sycamore',
+                win: 'sycamore2',
+                poke: [
+                    ['Ivysaur', 30],
+                    ['Charmeleon', 30],
+                    ['Wartortle', 30],
+                ],
+            },
+            prof2: {
+                name: 'Prof. Sycamore',
+                win: 'sycamore3',
+                poke: [
+                    ['Venusaur', 60],
+                    ['Charizard', 60],
+                    ['Blastoise', 60],
+                ],
+            },
+            prof3: {
+                name: 'Prof. Sycamore',
+                win: 'sycamore4',
+                poke: [
+                    ['M-Venusaur', 100],
+                    ['M-Charizard X', 100],
+                    ['M-Charizard Y', 100],
+                    ['M-Blastoise', 100],
+                ],
+                megaStone: [
+                    'venusaurite',
+                    'charizarditeX',
+                    'charizarditeY',
+                    'blastoisinite',
+                ],
+            },
+            gymLeader: {
+                name: 'Clemont',
+                badge: 'Voltage Badge',
+                poke: [
+                    ['Emolga', 35],
+                    ['Magneton', 35],
+                    ['Heliolisk', 37],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosroute5: {
+            name: 'Route 5',
+            pokes: ['Abra', 'Doduo', 'Plusle', 'Minun', 'Gulpin', 'Bunnelby', 'Skiddo', 'Pancham', 'Furfrou'],
+            minLevel: 8,
+            maxLevel: 10,
+            respawn: 'lumioseCity',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        camphrierTown: {
+            name: 'Camphrier Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosroute6: {
+            name: 'Route 6',
+            pokes: ['Oddish', 'Sentret', 'Nincada', 'Kecleon', 'Espurr', 'Honedge'],
             minLevel: 10,
-            maxLevel: 16,
-            respawn: 'aquacordeTown',
+            maxLevel: 12,
+            respawn: 'camphrierTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosroute7: {
+            name: 'Route 7',
+            pokes: ['Smeargle', 'Volbeat', 'Illumise', 'Roselia', 'Croagunk', 'Ducklett', 'Flabebe', 'Spritzee', 'Swirlix'],
+            minLevel: 10,
+            maxLevel: 12,
+            respawn: 'camphrierTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        connectingCave: {
+            name: 'Connecting Cave',
+            pokes: ['Zubat', 'Whismur', 'Meditite', 'Axew'],
+            minLevel: 13,
+            maxLevel: 15,
+            respawn: 'camphrierTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosroute8: {
+            name: 'Route 8',
+            pokes: ['Spoink', 'Zangoose', 'Seviper', 'Absol', 'Bagon', 'Drifloon', 'Mienfoo', 'Inkay', 'Swirlix'],
+            minLevel: 13,
+            maxLevel: 15,
+            respawn: 'camphrierTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        ambretteTown: {
+            name: 'Ambrette Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosFossilLab: {
+            name: 'Fossil Restorer',
+            pokes: ['Omanyte', 'Kabuto', 'Aerodactyl', 'Lileep', 'Anorith', 'Cranidos', 'Shieldon', 'Tirtouga', 'Archen', 'Tyrunt', 'Amaura'],
+            minLevel: 20,
+            maxLevel: 20,
+            respawn: 'ambretteTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosroute9: {
+            name: 'Route 9',
+            pokes: ['Hippopotas', 'Sandile', 'Helioptile'],
+            minLevel: 15,
+            maxLevel: 17,
+            respawn: 'ambretteTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        glitteringCave: {
+            name: 'Glittering Cave',
+            pokes: ['Machop', 'Onix', 'Cubone', 'Rhyhorn', 'Kangaskhan', 'Mawile', 'Lunatone', 'Solrock', 'Woobat', 'Ferroseed'],
+            minLevel: 15,
+            maxLevel: 17,
+            respawn: 'ambretteTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        cyllageCity: {
+            name: 'Cyllage City',
+            town: true,
+            gymLeader: {
+                name: 'Grant',
+                badge: 'Cliff Badge',
+                poke: [
+                    ['Amaura', 25],
+                    ['Tyrunt', 25],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosroute10: {
+            name: 'Route 10',
+            pokes: ['Eevee', 'Snubbull', 'Houndour', 'Electrike', 'Sigilyph', 'Emolga', 'Golett', 'Hawlucha'],
+            minLevel: 19,
+            maxLevel: 21,
+            respawn: 'cyllageCity',
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        geosengeTown: {
+            name: 'Geosenge Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        teamFlareHQ: {
+            name: 'Team Flare Secret HQ',
+            pokes: ['Xerneas', 'Yveltal'],
+            minLevel: 50,
+            maxLevel: 50,
+            respawn: 'geosengeTown',
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        kalosroute11: {
+            name: 'Route 11',
+            pokes: ['Nidorina', 'Nidorino', 'Hariyama', 'Staravia', 'Chingling', 'Stunky', 'Throh', 'Sawk', 'Dedenne'],
+            minLevel: 21,
+            maxLevel: 23,
+            respawn: 'geosengeTown',
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        reflectionCave: {
+            name: 'Reflection Cave',
+            pokes: ['Mr. Mime', 'Wobbuffet', 'Sableye', 'Chingling', 'Roggenrola', 'Solosis', 'Carbink', 'Woobat', 'Ferroseed'],
+            minLevel: 21,
+            maxLevel: 23,
+            respawn: 'geosengeTown',
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        shalourCity: {
+            name: 'Shalour City',
+            town: true,
+            gymLeader: {
+                name: 'Korrina',
+                badge: 'Rumble Badge',
+                poke: [
+                    ['Mienfoo', 29],
+                    ['Machoke', 28],
+                    ['Hawlucha', 32],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        towerofMastery: {
+            name: 'Tower of Mastery',
+            town: true,
+            prof: {
+                name: 'Korrina',
+                win: 'Korrina1',
+                poke: [
+                    ['Lucario', 32],
+                ],
+                reward: 'megaBracelet',
+            },
+            prof1: {
+                name: 'Korrina',
+                win: 'Korrina2',
+                poke: [
+                    ['Lucario', 50],
+                ],
+            },
+            prof2: {
+                name: 'Korrina',
+                win: 'Korrina3',
+                poke: [
+                    ['Lucario', 70],
+                ],
+            },
+            prof3: {
+                name: 'Korrina',
+                win: 'Korrina4',
+                poke: [
+                    ['M-Lucario', 100],
+                ],
+                megaStone: 'lucarionite',
+            },
+            _unlock: {
+                badges: {
+                    'Rumble Badge': true,
+                },
+            },
         },
         custom4: {
             name: 'Coumarine City',
