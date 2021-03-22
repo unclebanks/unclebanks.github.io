@@ -387,48 +387,11 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('inventoryModal'));
         },
         viewTown: function () {
-            if (player.settings.currentRegionId === 'Kanto') {
-                town.renderPokeCoinShop();
-                town.renderBattleCoinShop();
-                town.renderCatchCoinShop();
-                openModal(document.getElementById('townModal'));
-            }
-            if (player.settings.currentRegionId === 'Johto') {
-                town.renderJohtoPokeCoinShop();
-                town.renderJohtoBattleCoinShop();
-                town.renderJohtoCatchCoinShop();
-                openModal(document.getElementById('townModal'));
-            }
-            if (player.settings.currentRegionId === 'Hoenn') {
-                town.renderHoennPokeCoinShop();
-                town.renderHoennBattleCoinShop();
-                town.renderHoennCatchCoinShop();
-                openModal(document.getElementById('townModal'));
-            }
-            if (player.settings.currentRegionId === 'Sinnoh') {
-                town.renderSinnohPokeCoinShop();
-                town.renderSinnohBattleCoinShop();
-                town.renderSinnohCatchCoinShop();
-                openModal(document.getElementById('townModal'));
-            }
-            if (player.settings.currentRegionId === 'Unova') {
-                town.renderUnovaPokeCoinShop();
-                town.renderUnovaBattleCoinShop();
-                town.renderUnovaCatchCoinShop();
-                openModal(document.getElementById('townModal'));
-            }
-            if (player.settings.currentRegionId === 'Kalos') {
-                town.renderKalosPokeCoinShop();
-                town.renderKalosBattleCoinShop();
-                town.renderKalosCatchCoinShop();
-                openModal(document.getElementById('townModal'));
-            }
-            if (player.settings.currentRegionId === 'Alola') {
-                town.renderAlolaPokeCoinShop();
-                town.renderAlolaBattleCoinShop();
-                town.renderAlolaCatchCoinShop();
-                openModal(document.getElementById('townModal'));
-            }
+            const region = player.settings.currentRegionId.toLowerCase();
+            town.renderPokeCoinShop(region);
+            town.renderBattleCoinShop(region);
+            town.renderCatchCoinShop(region);
+            openModal(document.getElementById('townModal'));
         },
         openVitaminModal: function (vitamin) {
             if (!VITAMINS[vitamin]) {
