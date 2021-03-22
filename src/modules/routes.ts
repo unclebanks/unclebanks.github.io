@@ -5165,19 +5165,132 @@ const ROUTES: Routes = {
                 },
             },
         },
-        custom8: {
-            name: 'Couriway Town',
-            pokes: ['Bergmite', 'Carbink', 'Binacle', 'Goomy', 'Noibat'],
-            minLevel: 32,
-            maxLevel: 38,
-            respawn: 'aquacordeTown',
+        kalosroute18: {
+            name: 'Route 18',
+            pokes: ['Sandslash', 'Graveler', 'Pupitar', 'Lairon', 'Torkoal', 'Gurdurr', 'Heatmor', 'Durant'],
+            minLevel: 44,
+            maxLevel: 46,
+            respawn: 'anistarCity',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
         },
-        custom11: {
+        terminusCave: {
             name: 'Terminus Cave',
-            pokes: ['Zygarde'],
-            minLevel: 70,
+            pokes: ['Sandslash', 'Graveler', 'Pupitar', 'Lairon', 'Durant', 'Zygarde'],
+            minLevel: 44,
             maxLevel: 70,
-            respawn: 'humilauCity',
+            respawn: 'anistarCity',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        couriwayTown: {
+            name: 'Couriway Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        kalosroute19: {
+            name: 'Route 19',
+            pokes: ['Weepinbell', 'Haunter', 'Quagsire', 'Drapion', 'Carnivine', 'Shelmet', 'Stunfisk', 'Sliggoo'],
+            minLevel: 46,
+            maxLevel: 48,
+            respawn: 'couriwayTown',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        snowbelleCity: {
+            name: 'Snowbelle City',
+            town: true,
+            gymLeader: {
+                name: 'Wulfric',
+                badge: 'Iceberg Badge',
+                poke: [
+                    ['Abomasnow', 56],
+                    ['Cryogonal', 55],
+                    ['Avalugg', 59],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        kalosroute20: {
+            name: 'Route 20',
+            pokes: ['Jigglypuff', 'Noctowl', 'Zoroark', 'Gothorita', 'Amoonguss', 'Trevenant'],
+            minLevel: 48,
+            maxLevel: 50,
+            respawn: 'snowbelleCity',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        pokemonVillage: {
+            name: 'Pokemon Village',
+            pokes: ['Jigglypuff', 'Ditto', 'Noctowl', 'Banette', 'Zoroark', 'Gothorita', 'Garbodor', 'Amoonguss'],
+            minLevel: 48,
+            maxLevel: 50,
+            respawn: 'snowbelleCity',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        unknownDungeon: {
+            name: 'Unknown Dungeon',
+            town: true,
+            prof: {
+                name: 'Mewtwo',
+                win: 'Mewtwo1',
+                poke: [
+                    ['Mewtwo', 70],
+                ],
+                reward: 'megaBracelet',
+            },
+            prof1: {
+                name: 'Mewtwo',
+                win: 'Mewtwo2',
+                poke: [
+                    ['Mewtwo', 90],
+                ],
+            },
+            prof2: {
+                name: 'Mewtwo',
+                win: 'Mewtwo3',
+                poke: [
+                    ['M-Mewtwo X', 100],
+                ],
+                megaStone: 'mewtwonite X',
+            },
+            prof3: {
+                name: 'Mewtwo',
+                win: 'Mewtwo4',
+                poke: [
+                    ['M-Mewtwo Y', 100],
+                ],
+                megaStone: 'mewtwonite Y',
+            },
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
         },
         custom12: {
             name: 'Queen of Rocks',
