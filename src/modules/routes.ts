@@ -4583,7 +4583,7 @@ const ROUTES: Routes = {
         _global: {
             pokes: ['Froakie', 'Fennekin', 'Chespin'],
             rarePokes: [],
-            superRare: [],
+            superRare: ['Diancie', 'Hoopa', 'Volcanion'],
         },
         vanivilleTown: {
             name: 'Vaniville Town',
@@ -5291,27 +5291,6 @@ const ROUTES: Routes = {
                     'Iceberg Badge': true,
                 },
             },
-        },
-        custom12: {
-            name: 'Queen of Rocks',
-            pokes: ['Diancie'],
-            minLevel: 50,
-            maxLevel: 50,
-            respawn: 'humilauCity',
-        },
-        custom13: {
-            name: 'The Magician',
-            pokes: ['Hoopa'],
-            minLevel: 50,
-            maxLevel: 50,
-            respawn: 'humilauCity',
-        },
-        custom14: {
-            name: 'Steam Siege',
-            pokes: ['Volcanion'],
-            minLevel: 70,
-            maxLevel: 70,
-            respawn: 'humilauCity',
         },
         kaOldRod: {
             name: 'Kalos Old Rod',
