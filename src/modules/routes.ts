@@ -4693,12 +4693,7 @@ const ROUTES: Routes = {
                     ['M-Charizard Y', 100],
                     ['M-Blastoise', 100],
                 ],
-                megaStone: [
-                    'venusaurite',
-                    'charizarditeX',
-                    'charizarditeY',
-                    'blastoisinite',
-                ],
+                megaStone: 'venusaurite',
             },
             gymLeader: {
                 name: 'Clemont',
