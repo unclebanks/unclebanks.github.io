@@ -4955,12 +4955,47 @@ const ROUTES: Routes = {
                 },
             },
         },
-        custom4: {
+        kalosroute12: {
+            name: 'Route 12',
+            pokes: ['Slowpoke', 'Exeggcute', 'Pinsir', 'Tauros', 'Heracross', 'Pachirisu', 'Chatot'],
+            minLevel: 23,
+            maxLevel: 27,
+            respawn: 'shalourCity',
+            _unlock: {
+                badges: {
+                    'Rumble Badge': true,
+                },
+            },
+        },
+        azureBay: {
+            name: 'Azure Bay',
+            pokes: ['Slowpoke', 'Exeggcute', 'Chatot', 'Inkay'],
+            minLevel: 25,
+            maxLevel: 27,
+            respawn: 'shalourCity',
+            _unlock: {
+                badges: {
+                    'Rumble Badge': true,
+                },
+            },
+        },
+        coumarineCity: {
             name: 'Coumarine City',
-            pokes: ['Hawlucha', 'Pancham', 'Inkay', 'Espurr'],
-            minLevel: 15,
-            maxLevel: 22,
-            respawn: 'aquacordeTown',
+            town: true,
+            gymLeader: {
+                name: 'Ramos',
+                badge: 'Plant Badge',
+                poke: [
+                    ['Jumpluff', 30],
+                    ['Weepinbell', 31],
+                    ['Gogoat', 34],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Rumble Badge': true,
+                },
+            },
         },
         custom5: {
             name: 'Laverre City',
