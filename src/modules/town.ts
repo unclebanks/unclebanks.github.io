@@ -701,7 +701,7 @@ class Town {
             const buttonText100 = (own) ? 'Own' : 'Buy 100';
             const buttonHTML = ` <button onclick="town.buyPokeCoinItem('${region}', ${i})"${disableButton}>${buttonText}</button>`;
             const button10HTML = ` <button onclick="town.buyPokeCoinItem('${region}', ${i}, 10)"${disableButton10}>${buttonText10}</button>`;
-            const button100HTML = ` <button onclick="town.buyPokeCoinItem100('${region}', ${i}, 100)"${disableButton100}>${buttonText100}</button>`;
+            const button100HTML = ` <button onclick="town.buyPokeCoinItem('${region}', ${i}, 100)"${disableButton100}>${buttonText100}</button>`;
             if ('ball' in item) {
                 shopHTML += `<li><img src="assets/images/pokeballs/${item.ball}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${item.pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
             } else if ('battleItem' in item) {
