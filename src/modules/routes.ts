@@ -4997,12 +4997,47 @@ const ROUTES: Routes = {
                 },
             },
         },
-        custom5: {
+        kalosroute13: {
+            name: 'Route 13',
+            pokes: ['Dugtrio', 'Trapinch', 'Gible'],
+            minLevel: 26,
+            maxLevel: 28,
+            respawn: 'coumarineCity',
+            _unlock: {
+                badges: {
+                    'Plant Badge': true,
+                },
+            },
+        },
+        kalosroute14: {
+            name: 'Route 14',
+            pokes: ['Weepinbell', 'Haunter', 'Quagsire', 'Skorupi', 'Carnivine', 'Karrablast', 'Shelmet', 'Stunfisk', 'Goomy'],
+            minLevel: 30,
+            maxLevel: 32,
+            respawn: 'lumioseCity',
+            _unlock: {
+                badges: {
+                    'Voltage Badge': true,
+                },
+            },
+        },
+        laverreCity: {
             name: 'Laverre City',
-            pokes: ['Phantump', 'Pumpkaboo'],
-            minLevel: 20,
-            maxLevel: 25,
-            respawn: 'aquacordeTown',
+            town: true,
+            gymLeader: {
+                name: 'Valerie',
+                badge: 'Fairy Badge',
+                poke: [
+                    ['Mawile', 38],
+                    ['Mr. Mime', 39],
+                    ['Sylveon', 42],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Voltage Badge': true,
+                },
+            },
         },
         custom6: {
             name: 'Ambrette Town',
@@ -5065,7 +5100,7 @@ const ROUTES: Routes = {
             pokes: ['Skrelp', 'Clauncher', 'Magikarp'],
             minLevel: 5,
             maxLevel: 10,
-            respawn: 'humilauCity',
+            respawn: 'vanivilleTown',
             kalosOldRod: 1,
         },
         kaGoodRod: {
