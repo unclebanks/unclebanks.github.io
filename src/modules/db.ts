@@ -1,12 +1,10 @@
-type GrowthRate = 'Erratic' | 'Fast' | 'Medium Fast' | 'Medium Slow' | 'Slow' | 'Fluctuating';
+import { PokemonGrowthRate, PokemonType } from './data';
 
-type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
-
-interface PokedexData {
+interface PokedexSetupData {
     name: string;
     stats: {
         'catch rate': string | number;
-        'growth rate': GrowthRate;
+        'growth rate': PokemonGrowthRate;
         'hp': string | number;
         'attack': string | number;
         'defense': string | number;
@@ -19,7 +17,16 @@ interface PokedexData {
     id: number | string;
 }
 
-function createPokemonArray<V extends string, T extends readonly PokedexData[] & Array<{name: V}>>(...args: T) {
+function createPokemonArray<
+    S extends string,
+    N extends number,
+    T extends readonly PokedexSetupData[] & Array<{
+        // this allows us to define types later which
+        // will only contain the values the key actually has
+        name: S,
+        id: S | N,
+    }>
+>(...args: T) {
     return args;
 }
 
@@ -15952,7 +15959,7 @@ const POKEDEX = createPokemonArray(
         'id': '381-M',
     },
     {
-        'name': 'P-Kyogre',
+        'name': 'Kyogre-P',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -15970,7 +15977,7 @@ const POKEDEX = createPokemonArray(
         'id': 803,
     },
     {
-        'name': 'P-Groudon',
+        'name': 'Groudon-P',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -16157,7 +16164,7 @@ const POKEDEX = createPokemonArray(
         'id': '475-M',
     },
     {
-        'name': 'H-Rotom',
+        'name': 'Rotom-heat',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16176,7 +16183,7 @@ const POKEDEX = createPokemonArray(
         'id': 808,
     },
     {
-        'name': 'W-Rotom',
+        'name': 'Rotom-wash',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16195,7 +16202,7 @@ const POKEDEX = createPokemonArray(
         'id': 809,
     },
     {
-        'name': 'F-Rotom',
+        'name': 'Rotom-frost',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16214,7 +16221,7 @@ const POKEDEX = createPokemonArray(
         'id': 810,
     },
     {
-        'name': 'Fan-Rotom',
+        'name': 'Rotom-fan',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16233,7 +16240,7 @@ const POKEDEX = createPokemonArray(
         'id': 811,
     },
     {
-        'name': 'M-Rotom',
+        'name': 'Rotom-mow',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -16384,7 +16391,7 @@ const POKEDEX = createPokemonArray(
         'id': 817,
     },
     {
-        'name': 'B-Kyurem',
+        'name': 'Kyurem-B',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -16403,7 +16410,7 @@ const POKEDEX = createPokemonArray(
         'id': 818,
     },
     {
-        'name': 'W-Kyurem',
+        'name': 'Kyurem-W',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -16460,7 +16467,7 @@ const POKEDEX = createPokemonArray(
         'id': 821,
     },
     {
-        'name': 'Ash-Greninja',
+        'name': 'Greninja-Ash',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Slow',
@@ -16611,15 +16618,44 @@ const POKEDEX = createPokemonArray(
     },
 );
 
-export type PokemonNameType = typeof POKEDEX[number]['name'];
+type SetupKey = keyof typeof POKEDEX[number];
+type PokedexKeyData<T extends SetupKey> = typeof POKEDEX[number][T]
+
+export type PokedexData = typeof POKEDEX[number];
+export type PokemonNameType = PokedexKeyData<'name'>;
+export type PokemonIdType = PokedexKeyData<'id'>;
 
 export default POKEDEX;
 
-export const pokedexMaps = POKEDEX.reduce((map, poke, index) => {
-    map.name[poke.name] = index;
-    map.id[poke.id] = index;
-    return map;
-}, {
-    name: {},
-    id: {},
-});
+type AllowedRecordKey = string | number | symbol
+
+// All of the setup keys which hold data we can use as a Record Key
+type ValidMapKey = {
+    [K in SetupKey]:
+        PokedexKeyData<K> extends AllowedRecordKey ? K : never
+}[SetupKey];
+
+// Only allow Pokedex maps for valid keys
+type PokedexMapFor<T extends ValidMapKey> = Record<PokedexKeyData<T>, number>
+
+// utility to create a map with some typing
+const createMapFor = <
+    T extends ValidMapKey,
+    Map extends PokedexMapFor<T>,
+>(key: T): Map => {
+    const keyMap = POKEDEX.reduce((map, poke, index) => {
+        // Typescript thinks this might not be a valid record key,
+        // but the ValidMapKey constraint on T should keep us safe
+        const keyVal = (poke[key] as AllowedRecordKey);
+        map[keyVal] = index;
+        return map;
+    }, {});
+
+    // Typescript doesn't know if we provided all of the keys
+    return (keyMap as Map);
+};
+
+export const pokedexMaps = {
+    name: createMapFor('name'),
+    id: createMapFor('id'),
+};

@@ -72,20 +72,5 @@
       class="battlecoins coinIcon"
       src="assets/images/currency/BattleCoin.png"
     ></span> BattleCoins: <span id="battleCoins">0</span><br>
-    <span>Battle Items:</span><br>
-    <span
-      id="pokeC"
-      title="PokeCoins"
-    ><img
-      class="pokecoins coinIcon"
-      src="assets/images/battleItems/revive.png"
-    ></span><span id="revive">0</span>
-    <span
-      id="catchC"
-      title="CatchCoins"
-    ><img
-      class="catchcoins coinIcon"
-      src="assets/images/battleItems/maxRevive.png"
-    ></span><span id="maxRevive">0</span>
   </div>
 </template>

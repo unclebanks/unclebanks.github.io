@@ -3,7 +3,7 @@ const { mode } = require('webpack-nano/argv');
 const path = require('path');
 const parts = require('./parts');
 
-const getCommon = ({ outputPath, sourcePath, entries }) => (merge(
+const getCommon = ({ outputPath, sourcePath, configPath }) => (merge(
     // more descriptive output names
     parts.nameOutput({
         path: outputPath,
@@ -19,7 +19,7 @@ const getCommon = ({ outputPath, sourcePath, entries }) => (merge(
     parts.loadVue(),
 
     // Tell webpack how to load scss files
-    parts.loadSCSS(),
+    parts.loadSCSS({ configPath }),
 
     // Copy everything in ./src/resources into the output folder
     parts.copyFiles({

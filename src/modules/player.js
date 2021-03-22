@@ -1,12 +1,11 @@
 import { POKEDEXFLAGS, BALLRNG } from './data';
 import POKEDEX from './db.ts';
-import mkPoke from './poke';
+import Poke from './poke';
 import ROUTES from './routes';
 import { pokeByName } from './utilities';
 
 export default (lastSave, appModel) => {
     let dom;
-    let Poke;
 
     const Player = {
         pokedexHighestID: 0,
@@ -644,9 +643,6 @@ export default (lastSave, appModel) => {
             dom = _dom;
         },
     };
-
-    const p = mkPoke(Player);
-    Poke = p.Poke;
 
     return Player;
 };

@@ -2,10 +2,28 @@
   <div
     id="storageBox"
   >
-    <input
-      id="autoSort"
-      type="checkbox"
-    ><label for="autoSort"><span class="checkDescription">Auto sort</span></label><br>
+    <label class="checkbox">
+      <input
+        id="autoSort"
+        type="checkbox"
+      >
+      Auto sort
+    </label>
+    <div class="field has-addons mb-1">
+      <p class="control">
+        <input
+          v-model="nameSearchText"
+          class="input is-small"
+          type="text"
+          placeholder="Enter poke name"
+        >
+      </p>
+      <p class="control">
+        <a class="button is-small is-static">
+          Search
+        </a>
+      </p>
+    </div>
     <select
       id="pokeSortOrderSelect"
       v-model="$store.state.pokemon.storageSortMethod"
@@ -38,6 +56,7 @@
       :get-key="(poke) => poke.pokeName()"
       :list="storage"
       :page-size="15"
+      :filter="filter"
       list-id="storageList"
       list-class="manageTeamEnabled"
     >
@@ -59,6 +78,11 @@ import { mapGetters } from 'vuex';
 import StoragePokemon from './StoragePokemon.vue';
 import Paginated from '../common/Paginated';
 
+const nameFilter = (name) => {
+    const lowerName = name.toLowerCase();
+    return (poke) => poke.pokeName().toLowerCase().includes(lowerName);
+};
+
 export default {
     components: {
         StoragePokemon,
@@ -69,10 +93,20 @@ export default {
         ui: { type: Object, required: true },
     },
 
+    data: function () {
+        return {
+            nameSearchText: '',
+        };
+    },
+
     computed: {
         ...mapGetters({
             storage: 'pokemon/sortedStorage',
         }),
+
+        filter() {
+            return nameFilter(this.nameSearchText);
+        },
     },
 };
 </script>

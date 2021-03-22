@@ -5,7 +5,7 @@ import Display, { renderView } from './modules/display';
 import Combat from './modules/combat';
 import UserActions from './modules/actions';
 import Story from './modules/story';
-import mkPoke from './modules/poke';
+import Poke, { pokeImage } from './modules/poke';
 import setupModals from './modules/modalEvents';
 import POKEDEX from './modules/db';
 // include styles in webpack bundle
@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // load everything we need
 const lastSave = Date.now();
 const player = Player(lastSave, models.app);
-const { Poke, makeRandomPoke } = mkPoke(player);
 const enemy = makeEnemy(null, player, Poke);
 const combatLoop = Combat(player, enemy);
 const town = Town(player, Poke);
@@ -36,6 +35,8 @@ const dom = Display(player, combatLoop, userInteractions);
 // Provide data to Vue components
 // @ts-expect-error  -- not sure what to do about this yet, so ignore error
 models.app.ui = userInteractions;
+// @ts-expect-error  -- as above
+models.app.player = player;
 
 combatLoop.attachUI(userInteractions);
 enemy.attachCL(combatLoop);
@@ -62,6 +63,7 @@ if (process.env.NODE_ENV === 'development') {
         dom,
         models,
         POKEDEX,
+        pokeImage,
     };
 } else {
     // Otherwise, just the things we need to make the game run
