@@ -192,7 +192,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             player.savePokes();
         },
         evolvePokemon: function (pokemonIndex) {
-            player.getPokemon()[pokemonIndex].tryEvolve(player.getPokemon()[pokemonIndex].shiny());
+            player.getPokemon()[pokemonIndex].tryEvolve(player.getPokemon()[pokemonIndex].shiny(), player);
             renderView(dom, enemy, player);
         },
         prestigePokemon: function (pokemonIndex) {
