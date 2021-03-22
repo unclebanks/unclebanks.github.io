@@ -5292,6 +5292,39 @@ const ROUTES: Routes = {
                 },
             },
         },
+        kalosroute21: {
+            name: 'Route 21',
+            pokes: ['Scyther', 'Ursaring', 'Spinda', 'Altaria', 'Floatzel'],
+            minLevel: 50,
+            maxLevel: 52,
+            respawn: 'snowbelleCity',
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
+        },
+        kalosVictoryRoad: {
+            name: 'Victory Road',
+            pokes: ['Fearow', 'Graveler', 'Haunter', 'Lickitung', 'Ariados', 'Shuckle', 'Skarmory', 'Gurdurr', 'Druddigon', 'Zweilous', 'Hydreigon', 'Noibat'],
+            minLevel: 57,
+            maxLevel: 59,
+            respawn: 'snowbelleCity',
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
+        },
+        kiloudeCity: {
+            name: 'Kiloude City',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
+        },
         kaOldRod: {
             name: 'Kalos Old Rod',
             pokes: ['Skrelp', 'Clauncher', 'Magikarp'],
