@@ -95,6 +95,7 @@ class Town {
                     pokecoins: 1000,
                     ball: 'ultraball',
                 },
+                /*
                 {
                     name: 'Revive',
                     pokecoins: 1000,
@@ -105,6 +106,7 @@ class Town {
                     pokecoins: 1000,
                     battleItem: 'maxRevive',
                 },
+                */
             ],
             johto: [
                 {
