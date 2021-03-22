@@ -52,11 +52,17 @@ src/
 ├── test/             // Folder for all Jest tests
 │   └── *.test.ts     // Individual test files, these are picked up automatically by Jest
 │
-└── store/            // Vuex stores for the game state
-    ├── index.js      // Imports all stores into a single store for use in App.vue
-    ├── actions.js    // Root store actions
-    ├── mutations.js   // Root store mutations
-    └── modules/      // Individual store modules
+├── store/            // Vuex stores for the game state
+│   ├── index.js      // Imports all stores into a single store for use in App.vue
+│   ├── actions.js    // Root store actions
+│   ├── mutations.js  // Root store mutations
+│   └── modules/      // Individual store modules
+│
+├── .config/          // Folder to hide away any config files we possibly can
+│
+├── .github/workflows/     // Automation config for github
+│
+└── docs/             // Build files for github pages hosting the game
 ```
 
 ## Frameworks and Development Tools
