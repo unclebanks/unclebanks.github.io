@@ -61,11 +61,11 @@
       list-class="manageTeamEnabled"
     >
       <template
-        #item="{ item, index, offset }"
+        #item="{ item, realIndex }"
       >
         <StoragePokemon
           :ui="ui"
-          :index="index + offset"
+          :index="realIndex"
           :poke="item"
         />
       </template>

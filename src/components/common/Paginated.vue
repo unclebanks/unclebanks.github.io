@@ -45,7 +45,7 @@
   >
     <slot name="listWrapper">
       <template
-        v-for="(item, index) in pagedItems"
+        v-for="({ item, realIndex }, index) in pagedItems"
         :key="getKey(item)"
       >
         <slot
@@ -53,6 +53,7 @@
           :item="item"
           :index="index"
           :offset="offset"
+          :realIndex="realIndex"
         />
       </template>
     </slot>
@@ -88,10 +89,14 @@ export default {
             return getOffset(this.pageSize, this.page);
         },
 
+        indexedList() {
+            return this.list.map((item, index) => ({ item, realIndex: index }));
+        },
+
         filteredList() {
             return this.filter
-                ? this.list.filter(this.filter)
-                : this.list;
+                ? this.indexedList.filter(({ item }) => this.filter(item))
+                : this.indexedList;
         },
 
         pagedItems() {

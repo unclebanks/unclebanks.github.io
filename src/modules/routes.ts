@@ -4580,15 +4580,10 @@ const ROUTES: Routes = {
         },
     },
     Kalos: {
-        _unlock: {
-            badges: {
-                'Wave Badge': true,
-            },
-        },
         _global: {
             pokes: ['Froakie', 'Fennekin', 'Chespin'],
             rarePokes: [],
-            superRare: [],
+            superRare: ['Diancie', 'Hoopa', 'Volcanion'],
         },
         vanivilleTown: {
             name: 'Vaniville Town',
@@ -4607,23 +4602,23 @@ const ROUTES: Routes = {
                 ],
             },
         },
-        route127: {
+        kalosroute2: {
             name: 'Route 2',
-            pokes: ['Bunnelby', 'Fletchling', 'Scatterbug', 'Zigzagoon', 'Pidgey', 'Weedle', 'Caterpie'],
+            pokes: ['Caterpie', 'Weedle', 'Pidgey', 'Zigzagoon', 'Fletchling', 'Bunnelby', 'Scatterbug'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'aquacordeTown',
         },
-        custom1: {
+        santaluneForest: {
             name: 'Santalune Forest',
-            pokes: ['Pansage', 'Fletchling', 'Scatterbug', 'Pansear', 'Panpour', 'Weedle', 'Caterpie', 'Pikachu', 'Metapod', 'Kakuna'],
+            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pikachu', 'Pansage', 'Pansear', 'Panpour', 'Fletchling', 'Scatterbug'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'aquacordeTown',
         },
-        route128: {
+        kalosroute3: {
             name: 'Route 3',
-            pokes: ['Bidoof', 'Bunnelby', 'Fletchling', 'Pidgey', 'Azurill', 'Burmy', 'Pikachu', 'Dunsparce'],
+            pokes: ['Pidgey', 'Pikachu', 'Dunsparce', 'Azurill', 'Bidoof', 'Burmy', 'Bunnelby', 'Fletchling'],
             minLevel: 3,
             maxLevel: 5,
             respawn: 'aquacordeTown',
@@ -4640,123 +4635,751 @@ const ROUTES: Routes = {
                 ],
             },
         },
-        route129: {
-            name: 'Route 4',
-            pokes: ['Combee', 'Flabebe', 'Ledyba', 'Skitty', 'Budew', 'Ralts'],
-            minLevel: 6,
-            maxLevel: 7,
-            respawn: 'santaluneCity',
-        },
-        route130: {
+        kalosroute22: {
             name: 'Route 22',
-            pokes: ['Psyduck', 'Farfetchd', 'Dunsparce', 'Azurill', 'Bidoof', 'Riolu', 'Bunnelby', 'Litleo', 'Azumarill', 'Bibarel', 'Diggersby'],
-            minLevel: 6,
+            pokes: ['Psyduck', 'Farfetchd', 'Azumarill', 'Dunsparce', 'Azurill', 'Bidoof', 'Bibarel', 'Riolu', 'Bunnelby', 'Diggersby', 'Litleo'],
+            minLevel: 5,
             maxLevel: 27,
             respawn: 'santaluneCity',
         },
-        custom2: {
-            name: 'Camphrier Town',
-            pokes: ['Scatterbug', 'Flabebe', 'Skiddo', 'Spewpa'],
-            minLevel: 5,
+        chamberofEmptiness: {
+            name: 'Chamber of Emptiness',
+            town: true,
+            prof: {
+                name: 'Banette',
+                win: 'Banette1',
+                poke: [
+                    ['Banette', 50],
+                ],
+            },
+            prof1: {
+                name: 'Banette',
+                win: 'Banette2',
+                poke: [
+                    ['Banette', 65],
+                ],
+            },
+            prof2: {
+                name: 'Banette',
+                win: 'Banette3',
+                poke: [
+                    ['Banette', 80],
+                ],
+            },
+            prof3: {
+                name: 'Banette',
+                win: 'Banette4',
+                poke: [
+                    ['M-Banette', 100],
+                ],
+                megaStone: 'banettite',
+            },
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
+        },
+        kalosroute4: {
+            name: 'Route 4',
+            pokes: ['Ledyba', 'Ralts', 'Skitty', 'Budew', 'Combee', 'Flabebe'],
+            minLevel: 6,
             maxLevel: 8,
-            respawn: 'aquacordeTown',
+            respawn: 'santaluneCity',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
         },
-        custom3: {
-            name: 'Geosenge Town',
-            pokes: ['Furfrou', 'Spritzee', 'Swirlix'],
+        lumioseCity: {
+            name: 'Lumiose City',
+            town: true,
+            prof: {
+                name: 'Prof. Sycamore',
+                win: 'sycamore1',
+                poke: [
+                    ['Bulbasaur', 10],
+                    ['Charmander', 10],
+                    ['Squirtle', 10],
+                ],
+            },
+            prof1: {
+                name: 'Prof. Sycamore',
+                win: 'sycamore2',
+                poke: [
+                    ['Ivysaur', 30],
+                    ['Charmeleon', 30],
+                    ['Wartortle', 30],
+                ],
+            },
+            prof2: {
+                name: 'Prof. Sycamore',
+                win: 'sycamore3',
+                poke: [
+                    ['Venusaur', 60],
+                    ['Charizard', 60],
+                    ['Blastoise', 60],
+                ],
+            },
+            prof3: {
+                name: 'Prof. Sycamore',
+                win: 'sycamore4',
+                poke: [
+                    ['M-Venusaur', 100],
+                    ['M-Charizard X', 100],
+                    ['M-Charizard Y', 100],
+                    ['M-Blastoise', 100],
+                ],
+                megaStone: 'venusaurite',
+            },
+            gymLeader: {
+                name: 'Clemont',
+                badge: 'Voltage Badge',
+                poke: [
+                    ['Emolga', 35],
+                    ['Magneton', 35],
+                    ['Heliolisk', 37],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosroute5: {
+            name: 'Route 5',
+            pokes: ['Abra', 'Doduo', 'Plusle', 'Minun', 'Gulpin', 'Bunnelby', 'Skiddo', 'Pancham', 'Furfrou'],
+            minLevel: 8,
+            maxLevel: 10,
+            respawn: 'lumioseCity',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        camphrierTown: {
+            name: 'Camphrier Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosroute6: {
+            name: 'Route 6',
+            pokes: ['Oddish', 'Sentret', 'Nincada', 'Kecleon', 'Espurr', 'Honedge'],
             minLevel: 10,
-            maxLevel: 16,
-            respawn: 'aquacordeTown',
+            maxLevel: 12,
+            respawn: 'camphrierTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
         },
-        custom4: {
-            name: 'Coumarine City',
-            pokes: ['Hawlucha', 'Pancham', 'Inkay', 'Espurr'],
-            minLevel: 15,
-            maxLevel: 22,
-            respawn: 'aquacordeTown',
+        kalosroute7: {
+            name: 'Route 7',
+            pokes: ['Snorlax', 'Smeargle', 'Volbeat', 'Illumise', 'Roselia', 'Croagunk', 'Ducklett', 'Flabebe', 'Spritzee', 'Swirlix'],
+            minLevel: 10,
+            maxLevel: 12,
+            respawn: 'camphrierTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
         },
-        custom5: {
-            name: 'Laverre City',
-            pokes: ['Phantump', 'Pumpkaboo'],
-            minLevel: 20,
-            maxLevel: 25,
-            respawn: 'aquacordeTown',
+        connectingCave: {
+            name: 'Connecting Cave',
+            pokes: ['Zubat', 'Whismur', 'Meditite', 'Axew'],
+            minLevel: 13,
+            maxLevel: 15,
+            respawn: 'camphrierTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
         },
-        custom6: {
+        kalosroute8: {
+            name: 'Route 8',
+            pokes: ['Spoink', 'Zangoose', 'Seviper', 'Absol', 'Bagon', 'Drifloon', 'Mienfoo', 'Inkay', 'Swirlix'],
+            minLevel: 13,
+            maxLevel: 15,
+            respawn: 'camphrierTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        ambretteTown: {
             name: 'Ambrette Town',
-            pokes: ['Amaura', 'Tyrunt'],
+            town: true,
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosFossilLab: {
+            name: 'Fossil Restorer',
+            pokes: ['Omanyte', 'Kabuto', 'Aerodactyl', 'Lileep', 'Anorith', 'Cranidos', 'Shieldon', 'Tirtouga', 'Archen', 'Tyrunt', 'Amaura'],
             minLevel: 20,
             maxLevel: 20,
-            respawn: 'aquacordeTown',
+            respawn: 'ambretteTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
         },
-        custom7: {
-            name: 'Anistar City',
-            pokes: ['Dedenne', 'Helioptile', 'Klefki', 'Honedge'],
-            minLevel: 27,
-            maxLevel: 32,
-            respawn: 'aquacordeTown',
+        kalosroute9: {
+            name: 'Route 9',
+            pokes: ['Hippopotas', 'Sandile', 'Helioptile'],
+            minLevel: 15,
+            maxLevel: 17,
+            respawn: 'ambretteTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
         },
-        custom8: {
-            name: 'Couriway Town',
-            pokes: ['Bergmite', 'Carbink', 'Binacle', 'Goomy', 'Noibat'],
-            minLevel: 32,
-            maxLevel: 38,
-            respawn: 'aquacordeTown',
+        glitteringCave: {
+            name: 'Glittering Cave',
+            pokes: ['Machop', 'Onix', 'Cubone', 'Rhyhorn', 'Kangaskhan', 'Mawile', 'Lunatone', 'Solrock', 'Woobat', 'Ferroseed'],
+            minLevel: 15,
+            maxLevel: 17,
+            respawn: 'ambretteTown',
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
         },
-        custom10: {
+        cyllageCity: {
+            name: 'Cyllage City',
+            town: true,
+            gymLeader: {
+                name: 'Grant',
+                badge: 'Cliff Badge',
+                poke: [
+                    ['Amaura', 25],
+                    ['Tyrunt', 25],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Bug Badge': true,
+                },
+            },
+        },
+        kalosroute10: {
+            name: 'Route 10',
+            pokes: ['Eevee', 'Snubbull', 'Houndour', 'Electrike', 'Sigilyph', 'Emolga', 'Golett', 'Hawlucha'],
+            minLevel: 19,
+            maxLevel: 21,
+            respawn: 'cyllageCity',
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        geosengeTown: {
+            name: 'Geosenge Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        teamFlareHQ: {
             name: 'Team Flare Secret HQ',
             pokes: ['Xerneas', 'Yveltal'],
             minLevel: 50,
             maxLevel: 50,
-            respawn: 'aquacordeTown',
+            respawn: 'geosengeTown',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
         },
-        custom11: {
+        kalosroute11: {
+            name: 'Route 11',
+            pokes: ['Nidorina', 'Nidorino', 'Hariyama', 'Staravia', 'Chingling', 'Stunky', 'Throh', 'Sawk', 'Dedenne'],
+            minLevel: 21,
+            maxLevel: 23,
+            respawn: 'geosengeTown',
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        reflectionCave: {
+            name: 'Reflection Cave',
+            pokes: ['Mr. Mime', 'Wobbuffet', 'Sableye', 'Chingling', 'Roggenrola', 'Solosis', 'Carbink', 'Woobat', 'Ferroseed'],
+            minLevel: 21,
+            maxLevel: 23,
+            respawn: 'geosengeTown',
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        shalourCity: {
+            name: 'Shalour City',
+            town: true,
+            gymLeader: {
+                name: 'Korrina',
+                badge: 'Rumble Badge',
+                poke: [
+                    ['Mienfoo', 29],
+                    ['Machoke', 28],
+                    ['Hawlucha', 32],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Cliff Badge': true,
+                },
+            },
+        },
+        towerofMastery: {
+            name: 'Tower of Mastery',
+            town: true,
+            prof: {
+                name: 'Korrina',
+                win: 'Korrina1',
+                poke: [
+                    ['Lucario', 32],
+                ],
+                reward: 'megaBracelet',
+            },
+            prof1: {
+                name: 'Korrina',
+                win: 'Korrina2',
+                poke: [
+                    ['Lucario', 50],
+                ],
+            },
+            prof2: {
+                name: 'Korrina',
+                win: 'Korrina3',
+                poke: [
+                    ['Lucario', 70],
+                ],
+            },
+            prof3: {
+                name: 'Korrina',
+                win: 'Korrina4',
+                poke: [
+                    ['M-Lucario', 100],
+                ],
+                megaStone: 'lucarionite',
+            },
+            _unlock: {
+                badges: {
+                    'Rumble Badge': true,
+                },
+            },
+        },
+        kalosroute12: {
+            name: 'Route 12',
+            pokes: ['Slowpoke', 'Exeggcute', 'Pinsir', 'Tauros', 'Lapras', 'Heracross', 'Pachirisu', 'Chatot'],
+            minLevel: 23,
+            maxLevel: 27,
+            respawn: 'shalourCity',
+            _unlock: {
+                badges: {
+                    'Rumble Badge': true,
+                },
+            },
+        },
+        azureBay: {
+            name: 'Azure Bay',
+            pokes: ['Slowpoke', 'Exeggcute', 'Chatot', 'Inkay'],
+            minLevel: 25,
+            maxLevel: 27,
+            respawn: 'shalourCity',
+            _unlock: {
+                badges: {
+                    'Rumble Badge': true,
+                },
+            },
+        },
+        coumarineCity: {
+            name: 'Coumarine City',
+            town: true,
+            gymLeader: {
+                name: 'Ramos',
+                badge: 'Plant Badge',
+                poke: [
+                    ['Jumpluff', 30],
+                    ['Weepinbell', 31],
+                    ['Gogoat', 34],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Rumble Badge': true,
+                },
+            },
+        },
+        kalosroute13: {
+            name: 'Route 13',
+            pokes: ['Dugtrio', 'Trapinch', 'Gible'],
+            minLevel: 26,
+            maxLevel: 28,
+            respawn: 'coumarineCity',
+            _unlock: {
+                badges: {
+                    'Plant Badge': true,
+                },
+            },
+        },
+        kalosroute14: {
+            name: 'Route 14',
+            pokes: ['Weepinbell', 'Haunter', 'Quagsire', 'Skorupi', 'Carnivine', 'Karrablast', 'Shelmet', 'Stunfisk', 'Goomy'],
+            minLevel: 30,
+            maxLevel: 32,
+            respawn: 'lumioseCity',
+            _unlock: {
+                badges: {
+                    'Voltage Badge': true,
+                },
+            },
+        },
+        laverreCity: {
+            name: 'Laverre City',
+            town: true,
+            gymLeader: {
+                name: 'Valerie',
+                badge: 'Fairy Badge',
+                poke: [
+                    ['Mawile', 38],
+                    ['Mr. Mime', 39],
+                    ['Sylveon', 42],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Voltage Badge': true,
+                },
+            },
+        },
+        kalosroute15: {
+            name: 'Route 15',
+            pokes: ['Mightyena', 'Skorupi', 'Watchog', 'Liepard', 'Foongus', 'Pawniard', 'Klefki'],
+            minLevel: 34,
+            maxLevel: 36,
+            respawn: 'laverreCity',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        lostHotel: {
+            name: 'Lost Hotel',
+            pokes: ['Magneton', 'Electrode', 'Rotom', 'Trubbish', 'Garbodor', 'Litwick', 'Pawniard', 'Klefki'],
+            minLevel: 34,
+            maxLevel: 36,
+            respawn: 'laverreCity',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        dendemilleTown: {
+            name: 'Dendemille Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        kalosroute16: {
+            name: 'Route 16',
+            pokes: ['Weepinbell', 'Murkrow', 'Floatzel', 'Skorupi', 'Foongus', 'Klefki', 'Phantump', 'Pumpkaboo'],
+            minLevel: 34,
+            maxLevel: 36,
+            respawn: 'dendemilleTown',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        frostCavern: {
+            name: 'Frost Cavern',
+            pokes: ['Haunter', 'Jynx', 'Piloswine', 'Beartic', 'Cryogonal', 'Bergmite'],
+            minLevel: 38,
+            maxLevel: 40,
+            respawn: 'dendemilleTown',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        frostCavern3F: {
+            name: 'Frost Cavern 3F',
+            town: true,
+            prof: {
+                name: 'Abomasnow',
+                win: 'Abomasnow1',
+                poke: [
+                    ['Abomasnow', 50],
+                ],
+            },
+            prof1: {
+                name: 'Abomasnow',
+                win: 'Abomasnow2',
+                poke: [
+                    ['Abomasnow', 65],
+                ],
+            },
+            prof2: {
+                name: 'Abomasnow',
+                win: 'Abomasnow3',
+                poke: [
+                    ['Abomasnow', 80],
+                ],
+            },
+            prof3: {
+                name: 'Abomasnow',
+                win: 'Abomasnow4',
+                poke: [
+                    ['M-Abomasnow', 100],
+                ],
+                megaStone: 'abomasite',
+            },
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        kalosroute17: {
+            name: 'Route 17',
+            pokes: ['Sneasel', 'Delibird', 'Snover', 'Abomasnow'],
+            minLevel: 38,
+            maxLevel: 40,
+            respawn: 'dendemilleTown',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        anistarCity: {
+            name: 'Anistar City',
+            town: true,
+            gymLeader: {
+                name: 'Olympia',
+                badge: 'Psychic Badge',
+                poke: [
+                    ['Sigilyph', 44],
+                    ['Slowking', 45],
+                    ['Meowstic', 48],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        kalosroute18: {
+            name: 'Route 18',
+            pokes: ['Sandslash', 'Graveler', 'Pupitar', 'Lairon', 'Torkoal', 'Gurdurr', 'Heatmor', 'Durant'],
+            minLevel: 44,
+            maxLevel: 46,
+            respawn: 'anistarCity',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        terminusCave: {
             name: 'Terminus Cave',
-            pokes: ['Zygarde'],
-            minLevel: 70,
+            pokes: ['Sandslash', 'Graveler', 'Pupitar', 'Lairon', 'Durant', 'Zygarde'],
+            minLevel: 44,
             maxLevel: 70,
-            respawn: 'humilauCity',
+            respawn: 'anistarCity',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
         },
-        custom12: {
-            name: 'Queen of Rocks',
-            pokes: ['Diancie'],
-            minLevel: 50,
+        couriwayTown: {
+            name: 'Couriway Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        kalosroute19: {
+            name: 'Route 19',
+            pokes: ['Weepinbell', 'Haunter', 'Quagsire', 'Drapion', 'Carnivine', 'Shelmet', 'Stunfisk', 'Sliggoo'],
+            minLevel: 46,
+            maxLevel: 48,
+            respawn: 'couriwayTown',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        snowbelleCity: {
+            name: 'Snowbelle City',
+            town: true,
+            gymLeader: {
+                name: 'Wulfric',
+                badge: 'Iceberg Badge',
+                poke: [
+                    ['Abomasnow', 56],
+                    ['Cryogonal', 55],
+                    ['Avalugg', 59],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
+        },
+        kalosroute20: {
+            name: 'Route 20',
+            pokes: ['Jigglypuff', 'Noctowl', 'Zoroark', 'Gothorita', 'Amoonguss', 'Trevenant'],
+            minLevel: 48,
             maxLevel: 50,
-            respawn: 'humilauCity',
+            respawn: 'snowbelleCity',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
         },
-        custom13: {
-            name: 'The Magician',
-            pokes: ['Hoopa'],
-            minLevel: 50,
+        pokemonVillage: {
+            name: 'Pokemon Village',
+            pokes: ['Jigglypuff', 'Ditto', 'Noctowl', 'Banette', 'Zoroark', 'Gothorita', 'Garbodor', 'Amoonguss'],
+            minLevel: 48,
             maxLevel: 50,
-            respawn: 'humilauCity',
+            respawn: 'snowbelleCity',
+            _unlock: {
+                badges: {
+                    'Psychic Badge': true,
+                },
+            },
         },
-        custom14: {
-            name: 'Steam Siege',
-            pokes: ['Volcanion'],
-            minLevel: 70,
-            maxLevel: 70,
-            respawn: 'humilauCity',
+        unknownDungeon: {
+            name: 'Unknown Dungeon',
+            town: true,
+            prof: {
+                name: 'Mewtwo',
+                win: 'Mewtwo1',
+                poke: [
+                    ['Mewtwo', 70],
+                ],
+            },
+            prof1: {
+                name: 'Mewtwo',
+                win: 'Mewtwo2',
+                poke: [
+                    ['Mewtwo', 90],
+                ],
+            },
+            prof2: {
+                name: 'Mewtwo',
+                win: 'Mewtwo3',
+                poke: [
+                    ['M-Mewtwo X', 100],
+                ],
+                megaStone: 'mewtwonite X',
+            },
+            prof3: {
+                name: 'Mewtwo',
+                win: 'Mewtwo4',
+                poke: [
+                    ['M-Mewtwo Y', 100],
+                ],
+                megaStone: 'mewtwonite Y',
+            },
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
+        },
+        kalosroute21: {
+            name: 'Route 21',
+            pokes: ['Scyther', 'Ursaring', 'Spinda', 'Altaria', 'Floatzel'],
+            minLevel: 50,
+            maxLevel: 52,
+            respawn: 'snowbelleCity',
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
+        },
+        kalosVictoryRoad: {
+            name: 'Victory Road',
+            pokes: ['Fearow', 'Graveler', 'Haunter', 'Lickitung', 'Ariados', 'Shuckle', 'Skarmory', 'Gurdurr', 'Druddigon', 'Zweilous', 'Hydreigon', 'Noibat'],
+            minLevel: 57,
+            maxLevel: 59,
+            respawn: 'snowbelleCity',
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
+        },
+        kiloudeCity: {
+            name: 'Kiloude City',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
         },
         kaOldRod: {
             name: 'Kalos Old Rod',
-            pokes: ['Skrelp', 'Clauncher', 'Magikarp'],
-            minLevel: 5,
-            maxLevel: 10,
-            respawn: 'humilauCity',
+            pokes: ['Poliwag', 'Magikarp', 'Luvdisc'],
+            minLevel: 15,
+            maxLevel: 15,
+            respawn: 'vanivilleTown',
             kalosOldRod: 1,
         },
         kaGoodRod: {
             name: 'Kalos Good Rod',
-            pokes: ['Goldeen', 'Carvanha'],
+            pokes: ['Poliwhirl', 'Shellder', 'Horsea', 'Goldeen', 'Staryu', 'Dratini', 'Chinchou', 'Remoraid', 'Carvanha', 'Barboach', 'Corphish', 'Clamperl', 'Basculin', 'Skrelp', 'Clauncher'],
             minLevel: 25,
-            maxLevel: 25,
+            maxLevel: 35,
             respawn: 'vanivilleTown',
             kalosGoodRod: 1,
         },
         kaSuperRod: {
             name: 'Kalos Super Rod',
-            pokes: ['Seaking', 'Gyarados', 'Sharpedo'],
+            pokes: ['Poliwhirl', 'Poliwrath', 'Cloyster', 'Seadra', 'Seaking', 'Starmie', 'Gyarados', 'Dragonair', 'Lanturn', 'Politoed', 'Qwilfish', 'Octillery', 'Sharpedo', 'Crawdaunt', 'Whiscash', 'Huntail', 'Gorebyss', 'Relicanth', 'Basculin', 'Alomomola', 'Dragalge', 'Clawitzer'],
             minLevel: 35,
             maxLevel: 35,
             respawn: 'vanivilleTown',
