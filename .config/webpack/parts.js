@@ -6,7 +6,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
-const { webpack, DefinePlugin } = require('webpack');
+const { DefinePlugin } = require('webpack');
 const WebpackBar = require('webpackbar');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
@@ -14,8 +14,13 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const { merge } = require('webpack-merge');
 const path = require('path');
 
-const postcssLoader = (options) => ({
+const postcssLoader = ({ configPath }) => ({
     loader: 'postcss-loader',
+    options: {
+        postcssOptions: {
+            config: path.resolve(configPath, 'postcss.config.js'),
+        },
+    },
 });
 
 const cssLoader = () => ({
@@ -25,7 +30,7 @@ const cssLoader = () => ({
     },
 });
 
-exports.loadSCSS = () => ({
+exports.loadSCSS = ({ configPath }) => ({
     module: {
         rules: [
             {
@@ -33,7 +38,7 @@ exports.loadSCSS = () => ({
                 use: [
                     MiniCssExtractPlugin.loader,
                     cssLoader(),
-                    postcssLoader(),
+                    postcssLoader({ configPath }),
                     'sass-loader',
                 ],
             },

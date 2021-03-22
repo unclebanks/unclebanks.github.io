@@ -1,6 +1,9 @@
 /* eslint-disable no-floating-decimal */
 /* eslint-disable quotes */
-const TYPES = {
+
+import { PokemonType } from './data';
+
+const TYPES: Record<PokemonType, Record<PokemonType, number>> = {
     "Fire": {
         "Fire": .5,
         "Water": .5,

@@ -53,4 +53,5 @@ module.exports = {
         '@typescript-eslint/no-var-requires': ['off'],
         'import/extensions': 'off',
     },
+    ignorePatterns: ['!.config'],
 };
