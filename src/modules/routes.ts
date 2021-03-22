@@ -4870,7 +4870,7 @@ const ROUTES: Routes = {
             respawn: 'geosengeTown',
             _unlock: {
                 badges: {
-                    'Cliff Badge': true,
+                    'Psychic Badge': true,
                 },
             },
         },
@@ -5039,32 +5039,137 @@ const ROUTES: Routes = {
                 },
             },
         },
-        custom6: {
-            name: 'Ambrette Town',
-            pokes: ['Amaura', 'Tyrunt'],
-            minLevel: 20,
-            maxLevel: 20,
-            respawn: 'aquacordeTown',
+        kalosroute15: {
+            name: 'Route 15',
+            pokes: ['Mightyena', 'Skorupi', 'Watchog', 'Liepard', 'Foongus', 'Pawniard', 'Klefki'],
+            minLevel: 34,
+            maxLevel: 36,
+            respawn: 'laverreCity',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
         },
-        custom7: {
+        lostHotel: {
+            name: 'Lost Hotel',
+            pokes: ['Magneton', 'Electrode', 'Rotom', 'Trubbish', 'Garbodor', 'Litwick', 'Pawniard', 'Klefki'],
+            minLevel: 34,
+            maxLevel: 36,
+            respawn: 'laverreCity',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        dendemilleTown: {
+            name: 'Dendemille Town',
+            town: true,
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        kalosroute16: {
+            name: 'Route 16',
+            pokes: ['Weepinbell', 'Murkrow', 'Floatzel', 'Skorupi', 'Foongus', 'Klefki', 'Phantump', 'Pumpkaboo'],
+            minLevel: 34,
+            maxLevel: 36,
+            respawn: 'dendemilleTown',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        frostCavern: {
+            name: 'Frost Cavern',
+            pokes: ['Haunter', 'Jynx', 'Piloswine', 'Beartic', 'Cryogonal', 'Bergmite'],
+            minLevel: 38,
+            maxLevel: 40,
+            respawn: 'dendemilleTown',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        frostCavern3F: {
+            name: 'Frost Cavern 3F',
+            town: true,
+            prof: {
+                name: 'Abomasnow',
+                win: 'Abomasnow1',
+                poke: [
+                    ['Abomasnow', 50],
+                ],
+                reward: 'megaBracelet',
+            },
+            prof1: {
+                name: 'Abomasnow',
+                win: 'Abomasnow2',
+                poke: [
+                    ['Abomasnow', 65],
+                ],
+            },
+            prof2: {
+                name: 'Abomasnow',
+                win: 'Abomasnow3',
+                poke: [
+                    ['Abomasnow', 80],
+                ],
+            },
+            prof3: {
+                name: 'Abomasnow',
+                win: 'Abomasnow4',
+                poke: [
+                    ['M-Abomasnow', 100],
+                ],
+                megaStone: 'abomasite',
+            },
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        kalosroute17: {
+            name: 'Route 17',
+            pokes: ['Sneasel', 'Delibird', 'Snover', 'Abomasnow'],
+            minLevel: 38,
+            maxLevel: 40,
+            respawn: 'dendemilleTown',
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
+        },
+        anistarCity: {
             name: 'Anistar City',
-            pokes: ['Dedenne', 'Helioptile', 'Klefki', 'Honedge'],
-            minLevel: 27,
-            maxLevel: 32,
-            respawn: 'aquacordeTown',
+            town: true,
+            gymLeader: {
+                name: 'Olympia',
+                badge: 'Psychic Badge',
+                poke: [
+                    ['Sigilyph', 44],
+                    ['Slowking', 45],
+                    ['Meowstic', 48],
+                ],
+            },
+            _unlock: {
+                badges: {
+                    'Fairy Badge': true,
+                },
+            },
         },
         custom8: {
             name: 'Couriway Town',
             pokes: ['Bergmite', 'Carbink', 'Binacle', 'Goomy', 'Noibat'],
             minLevel: 32,
             maxLevel: 38,
-            respawn: 'aquacordeTown',
-        },
-        custom10: {
-            name: 'Team Flare Secret HQ',
-            pokes: ['Xerneas', 'Yveltal'],
-            minLevel: 50,
-            maxLevel: 50,
             respawn: 'aquacordeTown',
         },
         custom11: {
