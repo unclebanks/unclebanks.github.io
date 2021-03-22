@@ -696,6 +696,12 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Lopunny': [
         { 'to': 'M-Lopunny', 'requires': { 'type': 'megaStone', 'megaStone': 'lopunnite' } },
     ],
+    'Gible': [
+        { 'to': 'Gabite', 'requires': { 'type': 'level', 'level': '24' } },
+    ],
+    'Gabite': [
+        { 'to': 'Garchomp', 'requires': { 'type': 'level', 'level': '48' } },
+    ],
     'Garchomp': [
         { 'to': 'M-Garchomp', 'requires': { 'type': 'megaStone', 'megaStone': 'garchompite' } },
     ],
