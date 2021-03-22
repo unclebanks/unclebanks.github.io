@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // load everything we need
 const lastSave = Date.now();
 const player = Player(lastSave, models.app);
-const { Poke, makeRandomPoke } = mkPoke(player);
+const { Poke } = mkPoke(player);
 const enemy = makeEnemy(null, player, Poke);
 const combatLoop = Combat(player, enemy);
 const town = Town(player, Poke);

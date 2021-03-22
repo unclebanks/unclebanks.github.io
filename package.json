@@ -10,7 +10,7 @@
     "lint": "npx eslint --ext .js,.ts,.vue ./src",
     "lint:fix": "npm run lint -- --fix",
     "typecheck": "tsc --skipLibCheck",
-    "test": "jest",
+    "test": "jest --config ./.config/jest.config.js",
     "check": "concurrently \"npm:lint\" \"npm:typecheck\" \"npm:test\""
   },
   "repository": {
@@ -24,6 +24,10 @@
     "url": "https://github.com/unclebanks/unclebanks.github.io/issues"
   },
   "homepage": "https://github.com/unclebanks/unclebanks.github.io#readme",
+  "babel": {
+    "extends": "./.config/.babelrc"
+  },
+  "browserslist": ["defaults", "not IE > 0"],
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/plugin-transform-runtime": "^7.13.10",
