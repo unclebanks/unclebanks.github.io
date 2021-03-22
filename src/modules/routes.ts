@@ -4642,6 +4642,44 @@ const ROUTES: Routes = {
             maxLevel: 27,
             respawn: 'santaluneCity',
         },
+        chamberofEmptiness: {
+            name: 'Chamber of Emptiness',
+            town: true,
+            prof: {
+                name: 'Banette',
+                win: 'Banette1',
+                poke: [
+                    ['Banette', 50],
+                ],
+            },
+            prof1: {
+                name: 'Banette',
+                win: 'Banette2',
+                poke: [
+                    ['Banette', 65],
+                ],
+            },
+            prof2: {
+                name: 'Banette',
+                win: 'Banette3',
+                poke: [
+                    ['Banette', 80],
+                ],
+            },
+            prof3: {
+                name: 'Banette',
+                win: 'Banette4',
+                poke: [
+                    ['M-Banette', 100],
+                ],
+                megaStone: 'banettite',
+            },
+            _unlock: {
+                badges: {
+                    'Iceberg Badge': true,
+                },
+            },
+        },
         kalosroute4: {
             name: 'Route 4',
             pokes: ['Ledyba', 'Ralts', 'Skitty', 'Budew', 'Combee', 'Flabebe'],
@@ -5105,7 +5143,6 @@ const ROUTES: Routes = {
                 poke: [
                     ['Abomasnow', 50],
                 ],
-                reward: 'megaBracelet',
             },
             prof1: {
                 name: 'Abomasnow',
@@ -5261,7 +5298,6 @@ const ROUTES: Routes = {
                 poke: [
                     ['Mewtwo', 70],
                 ],
-                reward: 'megaBracelet',
             },
             prof1: {
                 name: 'Mewtwo',
