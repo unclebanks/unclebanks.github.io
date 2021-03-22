@@ -11,7 +11,7 @@
     <a
       href="#"
       class="pokeListName"
-      :class="classes(poke)"
+      :class="classes(poke, player)"
       :status="pokeStatus(poke)"
       @click="ui.changePokemon(index)"
     >{{ poke.pokeName() }} ({{ poke.level() + (poke.prestigeLevel ? (`p${poke.prestigeLevel}`) : '') }})</a>
@@ -57,8 +57,8 @@
 
 <script>
 const dynamicClasses = {
-    'canEvolve': (poke) => poke.canEvolve(),
-    'canPrestige': (poke) => poke.canPrestige(),
+    'canEvolve': ({ poke, player }) => poke.canEvolve(player),
+    'canPrestige': ({ poke }) => poke.canPrestige(),
 };
 
 export default {
@@ -66,6 +66,7 @@ export default {
         ui: { type: Object, required: true },
         poke: { type: Object, required: true },
         index: { type: Number, required: true },
+        player: { type: Object, required: true },
     },
 
     methods: {
@@ -85,9 +86,9 @@ export default {
             return 'dead';
         },
 
-        classes(poke) {
+        classes(poke, player) {
             return Object.keys(dynamicClasses)
-                .filter((classname) => dynamicClasses[classname](poke))
+                .filter((classname) => dynamicClasses[classname]({ poke, player }))
                 .concat(this.pokeStatus(poke));
         },
     },
