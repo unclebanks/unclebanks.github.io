@@ -735,7 +735,7 @@ class Town {
             const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
             const buttonText = (own) ? 'Own' : 'Buy';
             const buttonHTML = ` <button onclick="town.buyBattleCoinItem('${region}', ${i})"${disableButton}>${buttonText}</button>`;
-            const showImage = true;
+            const showImage = false;
             shopHTML += `<li>${showImage ? `<img src="assets/images/battleShop/${item.name}.png" height="30" width="30"></img>` : item.name}: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${item.battlecoins}${buttonHTML}</li>`;
         }
         $('#battlecoinShopItems').innerHTML = shopHTML;
