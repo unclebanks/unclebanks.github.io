@@ -1,4 +1,20 @@
-const ACHIEVEMENTS = {
+import { PokemonNameType } from './db';
+
+interface BaseAchievement {
+    name: string,
+}
+
+interface ValueAchievement extends BaseAchievement {
+    value: number,
+}
+
+interface PokemonCaughtAchievement extends BaseAchievement {
+    pokes: PokemonNameType[],
+}
+
+type Achievement = ValueAchievement | PokemonCaughtAchievement;
+
+const ACHIEVEMENTS: Record<string, Record<string, Achievement[]>> = {
     statistics: {
         caught: [
             {
