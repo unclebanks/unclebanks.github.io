@@ -511,7 +511,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (routeData.prof3 && routeData.prof3.poke.length > 0) {
                 combatLoop.prof3 = {
-                    name: routeData.prof3.name, win: routeData.prof3.win, reward: routeData.prof3.reward, megaStone: routeData.prof3.megaStone,
+                    name: routeData.prof3.name, win: routeData.prof3.win, reward: routeData.prof3.reward, megaStone: routeData.prof3.megaStone, megaStones: routeData.prof3.megaStones,
                 };
                 combatLoop.prof3Poke = Object.values({ ...routeData.prof3.poke });
                 combatLoop.unpause();

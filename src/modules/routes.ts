@@ -11,6 +11,7 @@ interface GymLeader {
     win?: string,
     reward?: string,
     megaStone?: string,
+    megaStones?: string[],
 }
 
 // we might want professor specific stuff later, ignore warning
