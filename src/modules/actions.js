@@ -474,7 +474,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         profBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (routeData.prof && routeData.prof.poke.length > 0) {
-                combatLoop.prof = { name: routeData.prof.name, badge: routeData.prof.badge, win: routeData.prof.win, reward: routeData.prof.reward };
+                combatLoop.prof = {
+                    name: routeData.prof.name,
+                    badge: routeData.prof.badge,
+                    win: routeData.prof.win,
+                    reward: routeData.prof.reward,
+                };
                 combatLoop.profPoke = Object.values({ ...routeData.prof.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
