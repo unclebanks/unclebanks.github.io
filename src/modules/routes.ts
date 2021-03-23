@@ -5104,6 +5104,50 @@ const ROUTES: Routes = {
         dendemilleTown: {
             name: 'Dendemille Town',
             town: true,
+            prof: {
+                name: 'Krush',
+                win: 'Krush1',
+                poke: [
+                    ['Treecko', 40],
+                    ['Pupitar', 40],
+                    ['Gible', 40],
+                ],
+                reward: 'megaBracelet',
+            },
+            prof1: {
+                name: 'Krush',
+                win: 'Krush2',
+                poke: [
+                    ['Grovyle', 60],
+                    ['Murkrow', 60],
+                    ['Pupitar', 60],
+                    ['Gible', 60],
+                ],
+            },
+            prof2: {
+                name: 'Krush',
+                win: 'Krush3',
+                poke: [
+                    ['Sceptile', 80],
+                    ['Honchkrow', 80],
+                    ['Pupitar', 80],
+                    ['Stoutland', 80],
+                    ['Garchomp', 80],
+                ],
+            },
+            prof3: {
+                name: 'Krush',
+                win: 'Krush4',
+                poke: [
+                    ['Sceptile', 100],
+                    ['Honchkrow', 100],
+                    ['Pupitar', 100],
+                    ['Gallade', 100],
+                    ['Stoutland', 100],
+                    ['M-Garchomp', 100],
+                ],
+                megaStone: 'garchompite',
+            },
             _unlock: {
                 badges: {
                     'Fairy Badge': true,
@@ -5312,7 +5356,7 @@ const ROUTES: Routes = {
                 poke: [
                     ['M-Mewtwo X', 100],
                 ],
-                megaStone: 'mewtwonite X',
+                megaStone: 'mewtwoniteX',
             },
             prof3: {
                 name: 'Mewtwo',
@@ -5320,7 +5364,7 @@ const ROUTES: Routes = {
                 poke: [
                     ['M-Mewtwo Y', 100],
                 ],
-                megaStone: 'mewtwonite Y',
+                megaStone: 'mewtwoniteY',
             },
             _unlock: {
                 badges: {
