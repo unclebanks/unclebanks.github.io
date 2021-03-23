@@ -154,6 +154,12 @@ export default (player, enemy) => {
                             dom.renderRouteList();
                         }
                     }
+                    if (Combat.prof.reward) {
+                        if (!player.unlocked[Combat.prof.reward]) {
+                            player.unlocked[Combat.prof.reward] = true;
+                            dom.renderRouteList();
+                        }
+                    }
                     Combat.prof = null;
                     Combat.pause();
                     return false;
