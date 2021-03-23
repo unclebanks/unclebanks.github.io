@@ -220,7 +220,7 @@ export default (player, enemy) => {
                     }
                     if (Combat.prof3.megaStones && player.unlocked.megaBracelet === true) {
                         for (let i = 0; i < Combat.prof3.megaStones.length; i++) {
-                            let megaStone = Combat.prof3.megaStones[i];
+                            const megaStone = Combat.prof3.megaStones[i];
                             if (player.megaStones[megaStone] === 0) {
                                 player.megaStones[megaStone] += 1;
                                 renderRouteList = true;
