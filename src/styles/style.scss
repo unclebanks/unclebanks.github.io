@@ -200,9 +200,10 @@ ul {
 #navBox {
     grid-column: 2;
     grid-row: 2;
-    background-color: rgb(112, 146, 190);
+    background-image: url('../assets/other/NavBoxBackground.png');
+    background-size: cover;
 }
-#navBox .button, #viewSelectBox .button, #townBox button {
+#viewSelectBox .button, #townBox button {
     margin-top: 7px;
     align-items: center;
     border-color: black;
@@ -210,6 +211,66 @@ ul {
     height: auto;
     background-color: transparent;
     color: black;
+}
+#navBox .storageButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: auto;
+    max-height: 75px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url(../assets/other/StorageIcon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox .pokedexButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: auto;
+    max-height: 75px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url(../assets/other/PCIcon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox .statsButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: auto;
+    max-height: 75px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url(../assets/other/StatisticsIcon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox .acheivementButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: auto;
+    max-height: 75px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url(../assets/other/AcheivementsIcon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox .settingsButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: auto;
+    max-height: 75px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url(../assets/other/SettingsIcon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 #regionBox .partyButton {
     width: auto;
