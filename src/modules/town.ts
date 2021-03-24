@@ -730,7 +730,7 @@ class Town {
                 canBuy = false;
                 own = true;
             }
-            if ('megaStones' in item && this.player.megaStones[item.megaStones] || !this.player.unlocked.megaBracelet) {
+            if ('megaStones' in item && (this.player.megaStones[item.megaStones] || !this.player.unlocked.megaBracelet)) {
                 canBuy = false;
                 own = true;
             }
