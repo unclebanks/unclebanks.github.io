@@ -1059,6 +1059,138 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Dartrix': [
         { 'to': 'Decidueye', 'requires': { 'type': 'level', 'level': '34' } },
     ],
+    'Turtwig': [
+        { 'to': 'Grotle', 'requires': { 'type': 'level', 'level': '18' } },
+    ],
+    'Grotle': [
+        { 'to': 'Torterra', 'requires': { 'type': 'level', 'level': '32' } },
+    ],
+    'Chimchar': [
+        { 'to': 'Monferno', 'requires': { 'type': 'level', 'level': '14' } },
+    ],
+    'Monferno': [
+        { 'to': 'Infernape', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Piplup': [
+        { 'to': 'Prinplup', 'requires': { 'type': 'level', 'level': '16' } },
+    ],
+    'Prinplup': [
+        { 'to': 'Empoleon', 'requires': { 'type': 'level', 'level': '36' } },
+    ],
+    'Starly': [
+        { 'to': 'Staravia', 'requires': { 'type': 'level', 'level': '14' } },
+    ],
+    'Staravia': [
+        { 'to': 'Staraptor', 'requires': { 'type': 'level', 'level': '34' } },
+    ],
+    'Bidoof': [
+        { 'to': 'Bibarel', 'requires': { 'type': 'level', 'level': '15' } },
+    ],
+    'Kricketot': [
+        { 'to': 'Kricketune', 'requires': { 'type': 'level', 'level': '10' } },
+    ],
+    'Shinx': [
+        { 'to': 'Luxio', 'requires': { 'type': 'level', 'level': '15' } },
+    ],
+    'Luxio': [
+        { 'to': 'Luxray', 'requires': { 'type': 'level', 'level': '30' } },
+    ],
+    'Cranidos': [
+        { 'to': 'Rampardos', 'requires': { 'type': 'level', 'level': '30' } },
+    ],
+    'Shieldon': [
+        { 'to': 'Bastiodon', 'requires': { 'type': 'level', 'level': '30' } },
+    ],
+    'Buizel': [
+        { 'to': 'Floatzel', 'requires': { 'type': 'level', 'level': '26' } },
+    ],
+    'Aipom': [
+        { 'to': 'Ambipom', 'requires': { 'type': 'level', 'level': '30' } },
+    ],
+    'Drifloon': [
+        { 'to': 'Drifblim', 'requires': { 'type': 'level', 'level': '28' } },
+    ],
+    'Buneary': [
+        { 'to': 'Lopunny', 'requires': { 'type': 'level', 'level': 'sootheBell' } },
+    ],
+    'Misdreavus': [
+        { 'to': 'Mismagius', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
+    ],
+    'Murkrow': [
+        { 'to': 'Honchkrow', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
+    ],
+    'Glameow': [
+        { 'to': 'Purugly', 'requires': { 'type': 'level', 'level': '38' } },
+    ],
+    'Stunky': [
+        { 'to': 'Skuntank', 'requires': { 'type': 'level', 'level': '34' } },
+    ],
+    'Bronzor': [
+        { 'to': 'Bronzong', 'requires': { 'type': 'level', 'level': '33' } },
+    ],
+    'Mime Jr.': [
+        { 'to': 'Mr. Mime', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+    ],
+    'Happiny': [
+        { 'to': 'Chansey', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+    ],
+    'Munchlax': [
+        { 'to': 'Snorlax', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+    ],
+    'Riolu': [
+        { 'to': 'Lucario', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+    ],
+    'Hippopotas': [
+        { 'to': 'Hippowdon', 'requires': { 'type': 'level', 'level': '34' } },
+    ],
+    'Skorupi': [
+        { 'to': 'Drapion', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Croagunk': [
+        { 'to': 'Toxicroak', 'requires': { 'type': 'level', 'level': '37' } },
+    ],
+    'Finneon': [
+        { 'to': 'Lumineon', 'requires': { 'type': 'level', 'level': '31' } },
+    ],
+    'Mantyke': [
+        { 'to': 'Mantine', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+    ],
+    'Snover': [
+        { 'to': 'Abomasnow', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Sneasel': [
+        { 'to': 'Weavile', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
+    ],
+    'Magneton': [
+        { 'to': 'Magnezone', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
+    ],
+    'Lickitung': [
+        { 'to': 'Lickilicky', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
+    ],
+    'Rhydon': [
+        { 'to': 'Rhyperior', 'requires': { 'type': 'level', 'level': '90' } },
+    ],
+    'Tangela': [
+        { 'to': 'Tangrowth', 'requires': { 'type': 'level', 'level': '90' } },
+    ],
+    'Electabuzz': [
+        { 'to': 'Electivire', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
+    ],
+    'Magmar': [
+        { 'to': 'Magmortar', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
+    ],
+    'Yanma': [
+        { 'to': 'Yanmega', 'requires': { 'type': 'level', 'level': '50' } },
+    ],
+    'Gligar': [
+        { 'to': 'Gliscor', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
+    ],
+    'Piloswine': [
+        { 'to': 'Mamoswine', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
+    ],
+    'Porygon2': [
+        { 'to': 'Porygon-Z', 'requires': { 'type': 'level', 'level': '90' } },
+    ],
 };
 
 export default EVOLUTIONS;
