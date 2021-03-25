@@ -43,23 +43,33 @@ Poke.prototype.statValue = function (statName) {
 };
 
 const evoRequirementMet = (poke, player) => (evo) => {
-    let typeReq;
+    const requirementMet = (req) => {
+        switch (req.type) {
+        case 'level':
+            return poke.currentLevel() >= req.level;
+        case 'stone':
+            return player.unlocked[req.stone];
+        case 'megaStone':
+            return player.megaStones[req.megaStone];
+        case 'time': {
+            const currentDateTime = new Date();
+            const currentTime = currentDateTime.getHours() + currentDateTime.getMinutes() / 60 + currentDateTime.getSeconds() / 3600;
+            const invert = req.time[0] > req.time[1];
+            const timePeriod = invert ? req.time.concat().reverse() : req.time;
+            let inTimePeriod = timePeriod[0] <= currentTime && timePeriod[1] >= currentTime;
+            if (invert) {
+                inTimePeriod = !inTimePeriod;
+            }
+            return inTimePeriod;
+        }
+        case 'multi':
+            return req.every(requirementMet);
+        default:
+            return false;
+        }
+    };
 
-    switch (evo.requires.type) {
-    case 'level':
-        typeReq = poke.currentLevel() >= evo.requires.level;
-        break;
-    case 'stone':
-        typeReq = player.unlocked[evo.requires.stone];
-        break;
-    case 'megaStone':
-        typeReq = player.megaStones[evo.requires.megaStone];
-        break;
-    default:
-        typeReq = false;
-    }
-
-    return typeReq && !player.hasPokemon(evo.to, false);
+    return requirementMet(evo.requires) && !player.hasPokemon(evo.to, false);
 };
 Poke.prototype.tryEvolve = function (shiny, player) {
     const evos = EVOLUTIONS[this.pokeName()];
