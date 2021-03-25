@@ -4,6 +4,8 @@ import { RNG, flash, $ } from './utilities';
 import { POKEDEXFLAGS } from './data';
 import ROUTES from './routes';
 import { renderView } from './display';
+import Poke from './poke';
+import POKEDEX from './db';
 
 export default (player, enemy) => {
     let dom;
@@ -231,6 +233,39 @@ export default (player, enemy) => {
                                 player.megaStones[megaStone] += 1;
                                 renderRouteList = true;
                             }
+                        }
+                    }
+                    if (Combat.prof3.name === 'Prof. Oak') {
+                        if (!player.hasPokemon('Bulbasaur')) {
+                            player.addPoke(new Poke(POKEDEX[0], 5));
+                        }
+                        if (!player.hasPokemon('Squirtle')) {
+                            player.addPoke(new Poke(POKEDEX[9], 5));
+                        }
+                        if (!player.hasPokemon('Charmander')) {
+                            player.addPoke(new Poke(POKEDEX[4], 5));
+                        }
+                    }
+                    if (Combat.prof3.name === 'Prof. Elm') {
+                        if (!player.hasPokemon('Chikorita')) {
+                            player.addPoke(new Poke(POKEDEX[184], 5));
+                        }
+                        if (!player.hasPokemon('Cyndaquil')) {
+                            player.addPoke(new Poke(POKEDEX[187], 5));
+                        }
+                        if (!player.hasPokemon('Totodile')) {
+                            player.addPoke(new Poke(POKEDEX[190], 5));
+                        }
+                    }
+                    if (Combat.prof3.name === 'Prof. Birch') {
+                        if (!player.hasPokemon('Treecko')) {
+                            player.addPoke(new Poke(POKEDEX[284], 5));
+                        }
+                        if (!player.hasPokemon('Torchic')) {
+                            player.addPoke(new Poke(POKEDEX[287], 5));
+                        }
+                        if (!player.hasPokemon('Mudkip')) {
+                            player.addPoke(new Poke(POKEDEX[290], 5));
                         }
                     }
                     if (renderRouteList) {
