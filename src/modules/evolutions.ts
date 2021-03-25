@@ -444,7 +444,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Tyranitar', 'requires': { 'type': 'level', 'level': '55' } },
     ],
     'Tyranitar': [
-        { 'to': 'M-Tyranitar', 'requires': { 'type': 'megaStone', 'megaStone': 'tyranitite' } },
+        { 'to': 'M-Tyranitar', 'requires': { 'type': 'megaStone', 'megaStone': 'tyranitarite' } },
     ],
     'Treecko': [
         { 'to': 'Grovyle', 'requires': { 'type': 'level', 'level': '16' } },
