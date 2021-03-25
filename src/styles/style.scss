@@ -212,67 +212,67 @@ ul {
     background-color: transparent;
     color: black;
 }
-#navBox .storageButton {
+#navBox storageButton {
     margin-top: 7px;
     align-items: center;
     border-color: transparent;
-    width: auto;
-    max-height: 75px;
+    width: 100px;
+    max-height: 300px;
     background-color: transparent;
     color: transparent;
-    background-image:url(../assets/other/StorageIcon.png);
+    background-image:url('../assets/other/StorageIcon.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-#navBox .pokedexButton {
+#navBox acheivementButton {
     margin-top: 7px;
     align-items: center;
     border-color: transparent;
-    width: auto;
-    max-height: 75px;
+    width: 100px;
+    max-height: 300px;
     background-color: transparent;
     color: transparent;
-    background-image:url(../assets/other/PCIcon.png);
+    background-image:url('../assets/other/AcheivementsIcon.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-#navBox .statsButton {
+#navBox settingsButton {
     margin-top: 7px;
     align-items: center;
     border-color: transparent;
-    width: auto;
-    max-height: 75px;
+    width: 100px;
+    max-height: 300px;
     background-color: transparent;
     color: transparent;
-    background-image:url(../assets/other/StatisticsIcon.png);
+    background-image:url('../assets/other/SettingsIcon.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-#navBox .acheivementButton {
+#navBox statsButton {
     margin-top: 7px;
     align-items: center;
     border-color: transparent;
-    width: auto;
-    max-height: 75px;
+    width: 100px;
+    max-height: 300px;
     background-color: transparent;
     color: transparent;
-    background-image:url(../assets/other/AcheivementsIcon.png);
+    background-image:url('../assets/other/StatisticsIcon.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-#navBox .settingsButton {
+#navBox pokedexButton {
     margin-top: 7px;
     align-items: center;
     border-color: transparent;
-    width: auto;
-    max-height: 75px;
+    width: 100px;
+    max-height: 300px;
     background-color: transparent;
     color: transparent;
-    background-image:url(../assets/other/SettingsIcon.png);
+    background-image:url('../assets/other/PCIcon.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-#regionBox .partyButton {
+#regionBox partyButton {
     width: auto;
     height: fit-content;
     border-color: black;
