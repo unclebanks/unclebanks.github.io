@@ -1003,6 +1003,13 @@ const ROUTES: Routes = {
             maxLevel: 5,
             respawn: 'starter2',
         },
+        jroute46: {
+            name: 'Route 46',
+            pokes: ['Rattata', 'Spearow', 'Jigglypuff', 'Geodude', 'Phanpy'],
+            minLevel: 2,
+            maxLevel: 5,
+            respawn: 'NewBarkTown',
+        },
         cherrygroveCity: {
             name: 'Cherrygrove City',
             town: true,
@@ -1013,13 +1020,6 @@ const ROUTES: Routes = {
             minLevel: 2,
             maxLevel: 5,
             respawn: 'cherrygroveCity',
-        },
-        jroute46: {
-            name: 'Route 46',
-            pokes: ['Rattata', 'Spearow', 'Jigglypuff', 'Geodude', 'Phanpy'],
-            minLevel: 2,
-            maxLevel: 5,
-            respawn: 'NewBarkTown',
         },
         jroute31: {
             name: 'Route 31',
