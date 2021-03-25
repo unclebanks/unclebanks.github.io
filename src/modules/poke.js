@@ -63,7 +63,7 @@ const evoRequirementMet = (poke, player) => (evo) => {
             return inTimePeriod;
         }
         case 'multi':
-            return req.every(requirementMet);
+            return req.requires.every(requirementMet);
         default:
             return false;
         }
