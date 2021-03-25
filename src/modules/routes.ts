@@ -960,11 +960,39 @@ const ROUTES: Routes = {
             town: true,
             prof: {
                 name: 'Prof. Elm',
+                win: 'elm1',
                 badge: null,
                 poke: [
                     ['Chikorita', 15],
                     ['Cyndaquil', 15],
                     ['Totodile', 15],
+                ],
+            },
+            prof1: {
+                name: 'Prof. Elm',
+                win: 'elm2',
+                poke: [
+                    ['Bayleef', 30],
+                    ['Croconaw', 30],
+                    ['Quilava', 30],
+                ],
+            },
+            prof2: {
+                name: 'Prof. Elm',
+                win: 'elm3',
+                poke: [
+                    ['Meganium', 60],
+                    ['Feraligatr', 60],
+                    ['Typhlosion', 60],
+                ],
+            },
+            prof3: {
+                name: 'Prof. Elm',
+                win: 'elm4',
+                poke: [
+                    ['Meganium', 100],
+                    ['Feraligatr', 100],
+                    ['Typhlosion', 100],
                 ],
             },
         },
@@ -1761,10 +1789,38 @@ const ROUTES: Routes = {
             prof: {
                 name: 'Prof. Birch',
                 badge: null,
+                win: 'birch1',
                 poke: [
                     ['Treecko', 15],
                     ['Mudkip', 15],
                     ['Torchic', 15],
+                ],
+            },
+            prof1: {
+                name: 'Prof. Birch',
+                win: 'birch2',
+                poke: [
+                    ['Grovyle', 30],
+                    ['Combusken', 30],
+                    ['Marshtomp', 30],
+                ],
+            },
+            prof2: {
+                name: 'Prof. Birch',
+                win: 'birch3',
+                poke: [
+                    ['Sceptile', 60],
+                    ['Blaziken', 60],
+                    ['Swampert', 60],
+                ],
+            },
+            prof3: {
+                name: 'Prof. Birch',
+                win: 'birch4',
+                poke: [
+                    ['M-Sceptile', 100],
+                    ['M-Blaziken', 100],
+                    ['M-Swampert', 100],
                 ],
             },
         },
