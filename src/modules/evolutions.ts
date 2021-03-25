@@ -15,7 +15,19 @@ interface StoneEvolution {
     stone: string;
 }
 
-type EvolutionType = LevelEvolution | MegaEvolution | StoneEvolution;
+interface TimeEvolution {
+    type: 'time';
+    time: [number, number];
+}
+
+type BasicEvolutionType = LevelEvolution | MegaEvolution | StoneEvolution | TimeEvolution;
+
+interface MultiEvolution {
+    type: 'multi';
+    requires: BasicEvolutionType[];
+}
+
+type EvolutionType = BasicEvolutionType | MultiEvolution;
 
 interface Evolution {
     to: PokemonNameType;
