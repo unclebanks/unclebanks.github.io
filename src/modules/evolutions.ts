@@ -1150,7 +1150,16 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Snorlax', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
     ],
     'Riolu': [
-        { 'to': 'Lucario', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+        {
+            'to': 'Lucario',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'stone', 'stone': 'sootheBell' },
+                    { 'type': 'time', 'time': [6, 18] },
+                ]
+            }
+        },
     ],
     'Hippopotas': [
         { 'to': 'Hippowdon', 'requires': { 'type': 'level', 'level': '34' } },
