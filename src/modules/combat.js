@@ -154,6 +154,12 @@ export default (player, enemy) => {
                             dom.renderRouteList();
                         }
                     }
+                    if (Combat.prof.reward) {
+                        if (!player.unlocked[Combat.prof.reward]) {
+                            player.unlocked[Combat.prof.reward] = true;
+                            dom.renderRouteList();
+                        }
+                    }
                     Combat.prof = null;
                     Combat.pause();
                     return false;
@@ -199,23 +205,36 @@ export default (player, enemy) => {
                 const foundBattleCoins = Math.floor(Combat.enemyActivePoke.level() * Combat.prof3Poke.length) + 5;
                 player.addBattleCoins(foundBattleCoins);
                 if (Combat.prof3Poke.length < 1) {
+                    let renderRouteList = false;
                     if (Combat.prof3.win) {
                         if (!player.wins[Combat.prof3.win]) {
                             player.wins[Combat.prof3.win] = true;
-                            dom.renderRouteList();
+                            renderRouteList = true;
                         }
                     }
                     if (Combat.prof3.reward) {
                         if (!player.unlocked[Combat.prof3.reward]) {
                             player.unlocked[Combat.prof3.reward] = true;
-                            dom.renderRouteList();
+                            renderRouteList = true;
                         }
                     }
                     if (Combat.prof3.megaStone && player.unlocked.megaBracelet === true) {
                         if (player.megaStones[Combat.prof3.megaStone] === 0) {
                             player.megaStones[Combat.prof3.megaStone] += 1;
-                            dom.renderRouteList();
+                            renderRouteList = true;
                         }
+                    }
+                    if (Combat.prof3.megaStones && player.unlocked.megaBracelet === true) {
+                        for (let i = 0; i < Combat.prof3.megaStones.length; i++) {
+                            const megaStone = Combat.prof3.megaStones[i];
+                            if (player.megaStones[megaStone] === 0) {
+                                player.megaStones[megaStone] += 1;
+                                renderRouteList = true;
+                            }
+                        }
+                    }
+                    if (renderRouteList) {
+                        dom.renderRouteList();
                     }
                     Combat.prof3 = null;
                     Combat.pause();

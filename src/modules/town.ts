@@ -725,17 +725,28 @@ class Town {
             const item = shop[i];
             let canBuy = true;
             let own = false;
+            let missingMegaBracelet = false;
             if (this.player.currencyAmount.battlecoins < item.battlecoins) canBuy = false;
             if ('unlockable' in item && this.player.unlocked[item.unlockable]) {
                 canBuy = false;
                 own = true;
             }
-            if ('megaStones' in item && this.player.megaStones[item.megaStones] || !this.player.unlocked.megaBracelet) {
+            if ('megaStones' in item && this.player.megaStones[item.megaStones]) {
                 canBuy = false;
                 own = true;
             }
+            if ('megaStones' in item && !this.player.unlocked.megaBracelet) {
+                canBuy = false;
+                missingMegaBracelet = true;
+            }
             const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
-            const buttonText = (own) ? 'Own' : 'Buy';
+            let buttonText = 'Buy';
+            if (own) {
+                buttonText = 'Own';
+            }
+            if (missingMegaBracelet) {
+                buttonText = 'Missing Mega Bracelet';
+            }
             const buttonHTML = ` <button onclick="town.buyBattleCoinItem('${region}', ${i})"${disableButton}>${buttonText}</button>`;
             const showImage = false;
             shopHTML += `<li>${showImage ? `<img src="assets/images/battleShop/${item.name}.png" height="30" width="30"></img>` : item.name}: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${item.battlecoins}${buttonHTML}</li>`;
