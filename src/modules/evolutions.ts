@@ -1157,8 +1157,8 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
                 'requires': [
                     { 'type': 'stone', 'stone': 'sootheBell' },
                     { 'type': 'time', 'time': [6, 18] },
-                ]
-            }
+                ],
+            },
         },
     ],
     'Hippopotas': [
