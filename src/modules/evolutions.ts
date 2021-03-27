@@ -314,6 +314,26 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Eevee': [
         { 'to': 'Flareon', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
+        {
+            'to': 'Espeon',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '30' },
+                    { 'type': 'time', 'time': [6, 18] },
+                ],
+            },
+        },
+        {
+            'to': 'Umbreon',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '30' },
+                    { 'type': 'time', 'time': [18, 6] },
+                ],
+            },
+        },
         { 'to': 'Jolteon', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
         { 'to': 'Vaporeon', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
         { 'to': 'Leafeon', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
