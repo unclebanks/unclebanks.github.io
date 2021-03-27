@@ -15,7 +15,19 @@ interface StoneEvolution {
     stone: string;
 }
 
-type EvolutionType = LevelEvolution | MegaEvolution | StoneEvolution;
+interface TimeEvolution {
+    type: 'time';
+    time: [number, number];
+}
+
+type BasicEvolutionType = LevelEvolution | MegaEvolution | StoneEvolution | TimeEvolution;
+
+interface MultiEvolution {
+    type: 'multi';
+    requires: BasicEvolutionType[];
+}
+
+type EvolutionType = BasicEvolutionType | MultiEvolution;
 
 interface Evolution {
     to: PokemonNameType;
@@ -302,6 +314,26 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Eevee': [
         { 'to': 'Flareon', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
+        {
+            'to': 'Espeon',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '30' },
+                    { 'type': 'time', 'time': [6, 18] },
+                ],
+            },
+        },
+        {
+            'to': 'Umbreon',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '30' },
+                    { 'type': 'time', 'time': [18, 6] },
+                ],
+            },
+        },
         { 'to': 'Jolteon', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
         { 'to': 'Vaporeon', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
         { 'to': 'Leafeon', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
@@ -444,7 +476,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Tyranitar', 'requires': { 'type': 'level', 'level': '55' } },
     ],
     'Tyranitar': [
-        { 'to': 'M-Tyranitar', 'requires': { 'type': 'megaStone', 'megaStone': 'tyranitite' } },
+        { 'to': 'M-Tyranitar', 'requires': { 'type': 'megaStone', 'megaStone': 'tyranitarite' } },
     ],
     'Treecko': [
         { 'to': 'Grovyle', 'requires': { 'type': 'level', 'level': '16' } },
@@ -1138,7 +1170,16 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Snorlax', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
     ],
     'Riolu': [
-        { 'to': 'Lucario', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+        {
+            'to': 'Lucario',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'stone', 'stone': 'sootheBell' },
+                    { 'type': 'time', 'time': [6, 18] },
+                ],
+            },
+        },
     ],
     'Hippopotas': [
         { 'to': 'Hippowdon', 'requires': { 'type': 'level', 'level': '34' } },
