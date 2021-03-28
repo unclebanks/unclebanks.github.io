@@ -62,6 +62,8 @@ const evoRequirementMet = (poke, player) => (evo) => {
             }
             return inTimePeriod;
         }
+        case 'region':
+            return player.settings.currentRegionId === req.region;
         case 'multi':
             return req.requires.every(requirementMet);
         default:

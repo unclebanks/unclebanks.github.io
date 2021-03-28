@@ -16596,7 +16596,25 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 170,
-        'id': 827,
+        'id': '745-m',
+    },
+    {
+        'name': 'Lycanroc-D',
+        'stats': {
+            'catch rate': '90',
+            'growth rate': 'Medium Fast',
+            'hp': '75',
+            'attack': '115',
+            'defense': '65',
+            'sp atk': '55',
+            'sp def': '65',
+            'speed': '112',
+            'types': [
+                'Rock',
+            ],
+        },
+        'exp': 170,
+        'id': '745-D',
     },
     {
         'name': 'Wishiwashi-S',
