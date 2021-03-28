@@ -5,6 +5,11 @@ interface LevelEvolution {
     level: number | string;
 }
 
+interface regionEvolution {
+    type: 'region';
+    region: string;
+}
+
 interface MegaEvolution {
     type: 'megaStone';
     megaStone: string;
@@ -20,7 +25,7 @@ interface TimeEvolution {
     time: [number, number];
 }
 
-type BasicEvolutionType = LevelEvolution | MegaEvolution | StoneEvolution | TimeEvolution;
+type BasicEvolutionType = LevelEvolution | MegaEvolution | StoneEvolution | TimeEvolution | regionEvolution;
 
 interface MultiEvolution {
     type: 'multi';
@@ -104,13 +109,22 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Pikachu': [
         { 'to': 'Raichu', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
-        { 'to': 'Alolan Raichu', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
+        {
+            'to': 'Alolan Raichu',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'stone', 'stone': 'thunderStone' },
+                    { 'type': 'region', 'region': 'Alola' },
+                ],
+            },
+        },
     ],
     'Sandshrew': [
         { 'to': 'Sandslash', 'requires': { 'type': 'level', 'level': '22' } },
     ],
     'Alolan Sandshrew': [
-        { 'to': 'Alolan Sandslash', 'requires': { 'type': 'level', 'level': '22' } },
+        { 'to': 'Alolan Sandslash', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
     ],
     'Nidoran F': [
         { 'to': 'Nidorina', 'requires': { 'type': 'level', 'level': '16' } },
@@ -134,7 +148,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Ninetales', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
     ],
     'Alolan Vulpix': [
-        { 'to': 'Alolan Ninetales', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
+        { 'to': 'Alolan Ninetales', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
     ],
     'Igglybuff': [
         { 'to': 'Jigglypuff', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
@@ -279,11 +293,29 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Exeggcute': [
         { 'to': 'Exeggutor', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-        { 'to': 'Alolan Exeggutor', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
+        {
+            'to': 'Alolan Exeggutor',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'stone', 'stone': 'leafStone' },
+                    { 'type': 'region', 'region': 'Alola' },
+                ],
+            },
+        },
     ],
     'Cubone': [
         { 'to': 'Marowak', 'requires': { 'type': 'level', 'level': '28' } },
-        { 'to': 'Alolan Marowak', 'requires': { 'type': 'stone', 'stone': 'alolanStone' } },
+        {
+            'to': 'Alolan Marowak',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '28' },
+                    { 'type': 'region', 'region': 'Alola' },
+                ],
+            },
+        },
     ],
     'Koffing': [
         { 'to': 'Weezing', 'requires': { 'type': 'level', 'level': '35' } },
@@ -1231,6 +1263,123 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Porygon2': [
         { 'to': 'Porygon-Z', 'requires': { 'type': 'level', 'level': '90' } },
+    ],
+    'Pikipek': [
+        { 'to': 'Trumbeak', 'requires': { 'type': 'level', 'level': '14' } },
+    ],
+    'Trumbeak': [
+        { 'to': 'Toucannon', 'requires': { 'type': 'level', 'level': '28' } },
+    ],
+    'Yungoos': [
+        { 'to': 'Gumshoos', 'requires': { 'type': 'level', 'level': '20' } },
+    ],
+    'Grubbin': [
+        { 'to': 'Charjabug', 'requires': { 'type': 'level', 'level': '20' } },
+    ],
+    'Charjabug': [
+        { 'to': 'Vikavolt', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Crabrawler': [
+        { 'to': 'Crabominable', 'requires': { 'type': 'region', 'region': 'Alola' } },
+    ],
+    'Cutiefly': [
+        { 'to': 'Ribombee', 'requires': { 'type': 'level', 'level': '25' } },
+    ],
+    'Rockruff': [
+        {
+            'to': 'Lycanroc',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '25' },
+                    { 'type': 'time', 'time': [6, 18] },
+                ],
+            },
+        },
+        {
+            'to': 'Lycanroc-M',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '25' },
+                    { 'type': 'time', 'time': [18, 6] },
+                ],
+            },
+        },
+        {
+            'to': 'Lycanroc-D',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '25' },
+                    { 'type': 'region', 'region': 'Alola' },
+                ],
+            },
+        },
+    ],
+    'Mareanie': [
+        { 'to': 'Toxapex', 'requires': { 'type': 'level', 'level': '38' } },
+    ],
+    'Mudbray': [
+        { 'to': 'Mudsdale', 'requires': { 'type': 'level', 'level': '30' } },
+    ],
+    'Dewpider': [
+        { 'to': 'Araquanid', 'requires': { 'type': 'level', 'level': '22' } },
+    ],
+    'Fomantis': [
+        { 'to': 'Lurantis', 'requires': { 'type': 'level', 'level': '34' } },
+    ],
+    'Morelull': [
+        { 'to': 'Shiinotic', 'requires': { 'type': 'level', 'level': '24' } },
+    ],
+    'Salandit': [
+        { 'to': 'Salazzle', 'requires': { 'type': 'level', 'level': '33' } },
+    ],
+    'Stufful': [
+        { 'to': 'Bewear', 'requires': { 'type': 'level', 'level': '27' } },
+    ],
+    'Bounsweet': [
+        { 'to': 'Steenee', 'requires': { 'type': 'level', 'level': '18' } },
+    ],
+    'Steenee': [
+        { 'to': 'Tsareena', 'requires': { 'type': 'level', 'level': '40' } },
+    ],
+    'Wimpod': [
+        { 'to': 'Golisopod', 'requires': { 'type': 'level', 'level': '30' } },
+    ],
+    'Sandygast': [
+        { 'to': 'Palossand', 'requires': { 'type': 'level', 'level': '42' } },
+    ],
+    'Jangmo-o': [
+        { 'to': 'Hakamo-o', 'requires': { 'type': 'level', 'level': '35' } },
+    ],
+    'Hakamo-o': [
+        { 'to': 'Kommo-o', 'requires': { 'type': 'level', 'level': '45' } },
+    ],
+    'Cosmog': [
+        { 'to': 'Cosmoem', 'requires': { 'type': 'level', 'level': '43' } },
+    ],
+    'Cosmoem': [
+        {
+            'to': 'Solgaleo',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '53' },
+                    { 'type': 'time', 'time': [6, 18] },
+                ],
+            },
+        },
+        {
+            'to': 'Lunala',
+            'requires': {
+                'type': 'multi',
+                'requires': [
+                    { 'type': 'level', 'level': '53' },
+                    { 'type': 'time', 'time': [18, 6] },
+                ],
+            },
+        },
     ],
 };
 
