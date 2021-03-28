@@ -457,33 +457,33 @@ export default (lastSave, appModel) => {
             }
             return true;
         },
-        getBoostedRoamer: function(allowExpired = false) { //returns the current boosted roamer (including additional data) or a falsy value
+        getBoostedRoamer: function (allowExpired = false) { // returns the current boosted roamer (including additional data) or a falsy value
             if (!this.currentBoostedRoamer) {
                 return null;
             }
-            if (this.currentBoostedRoamer.start + this.currentBoostedRoamer.length < Date.now() && !allowExpired) { //time ran out
+            if (this.currentBoostedRoamer.start + this.currentBoostedRoamer.length < Date.now() && !allowExpired) { // time ran out
                 return null;
             }
-            if (this.currentBoostedRoamer.expired && !allowExpired) { //boost expired, probably because the player encountered it
+            if (this.currentBoostedRoamer.expired && !allowExpired) { // boost expired, probably because the player encountered it
                 return null;
             }
             return this.currentBoostedRoamer;
         },
-        routeGetBoostedRoamer: function(region, route) {
-            let roamer = this.getBoostedRoamer();
+        routeGetBoostedRoamer: function (region, route) {
+            const roamer = this.getBoostedRoamer();
             if (roamer && roamer.region.toLowerCase() === region.toLowerCase() && roamer.route === route) {
                 return roamer.pokemon;
             }
             return null;
         },
-        boostedRoamerExpired: function() {
-            let roamer = this.getBoostedRoamer(true);
+        boostedRoamerExpired: function () {
+            const roamer = this.getBoostedRoamer(true);
             if (roamer) {
                 roamer.expired = true;
                 dom.renderRouteList();
             }
         },
-        generateBoostedRoamer: function() {
+        generateBoostedRoamer: function () {
             const regions = [
                 'Johto',
             ];
@@ -492,12 +492,12 @@ export default (lastSave, appModel) => {
                 'Entei',
             ];
             const region = randomArrayElement(regions);
-            const allowedRegionRoamers = ROUTES[region]._global.superRare.filter(pokemon => allowedRoamers.indexOf(pokemon) > -1);
+            const allowedRegionRoamers = ROUTES[region]._global.superRare.filter((pokemon) => allowedRoamers.indexOf(pokemon) > -1);
             if (!allowedRegionRoamers.length) {
                 return false;
             }
             const roamer = randomArrayElement(allowedRegionRoamers);
-            const routes = Object.keys(ROUTES[region]).filter(x => x !== '_unlock' && x !== '_global' && !ROUTES[region][x].town);
+            const routes = Object.keys(ROUTES[region]).filter((routeName) => routeName !== '_unlock' && routeName !== '_global' && !ROUTES[region][routeName].town);
             const route = randomArrayElement(routes);
             const boostedRoamer = {
                 region: region,
@@ -510,7 +510,7 @@ export default (lastSave, appModel) => {
             this.currentBoostedRoamer = boostedRoamer;
             return roamer;
         },
-        checkBoostedRoamer: function() {
+        checkBoostedRoamer: function () {
             const current = this.getBoostedRoamer(true);
             const delay = 10 * 60 * 1000;
             if (!current || current.start + delay < Date.now()) {
@@ -520,7 +520,7 @@ export default (lastSave, appModel) => {
             this.checkBoostedRoamerDisplay();
             return false;
         },
-        checkBoostedRoamerDisplay: function() {
+        checkBoostedRoamerDisplay: function () {
             if (this.lastDisplayedRoamer !== this.getBoostedRoamer()) {
                 this.lastDisplayedRoamer = this.getBoostedRoamer();
                 dom.renderRouteList();
