@@ -953,7 +953,10 @@ const ROUTES: Routes = {
         _global: {
             pokes: [],
             rarePokes: [],
-            superRare: [],
+            superRare: [
+                'Raikou',
+                'Entei',
+            ],
         },
         newBarkTown: {
             name: 'New Bark Town',
