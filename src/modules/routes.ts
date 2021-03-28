@@ -97,8 +97,8 @@ type Routes = Record<string, RegionLocations | RegionData>
 const ROUTES: Routes = {
     Kanto: {
         _global: {
-            pokes: ['Bulbasaur', 'Charmander', 'Squirtle', 'Eevee', 'Porygon'],
-            rarePokes: ['Mew'],
+            pokes: [],
+            rarePokes: [],
             superRare: [],
         },
         palletTown: {
@@ -849,7 +849,7 @@ const ROUTES: Routes = {
         },
         pokemonMansion: {
             name: 'Pokemon Mansion',
-            pokes: ['Rattata', 'Raticate', 'Vulpix', 'Growlithe', 'Ponyta', 'Grimer', 'Muk', 'Koffing', 'Weezing', 'Magmar', 'Ditto'],
+            pokes: ['Rattata', 'Raticate', 'Vulpix', 'Growlithe', 'Ponyta', 'Grimer', 'Muk', 'Koffing', 'Weezing', 'Magmar', 'Ditto', 'Porygon'],
             minLevel: 26,
             maxLevel: 46,
             respawn: 'cinnabarIsland',
@@ -897,7 +897,7 @@ const ROUTES: Routes = {
         },
         victoryRoad: {
             name: 'Victory Road',
-            pokes: ['Zubat', 'Golbat', 'Venomoth', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Onix', 'Marowak', 'Moltres'],
+            pokes: ['Zubat', 'Golbat', 'Venomoth', 'Machop', 'Machoke', 'Geodude', 'Graveler', 'Onix', 'Marowak', 'Moltres', 'Eevee'],
             minLevel: 36,
             maxLevel: 45,
             respawn: 'viridianCity',
@@ -909,7 +909,7 @@ const ROUTES: Routes = {
         },
         ceruleanCave: {
             name: 'Cerulean Cave',
-            pokes: ['Arbok', 'Raichu', 'Sandslash', 'Wigglytuff', 'Golbat', 'Gloom', 'Parasect', 'Venomoth', 'Kadabra', 'Weepinbell', 'Graveler', 'Magneton', 'Dodrio', 'Hypno', 'Electrode', 'Marowak', 'Lickitung', 'Rhyhorn', 'Rhydon', 'Chansey', 'Ditto', 'Mewtwo'],
+            pokes: ['Arbok', 'Raichu', 'Sandslash', 'Wigglytuff', 'Golbat', 'Gloom', 'Parasect', 'Venomoth', 'Kadabra', 'Weepinbell', 'Graveler', 'Magneton', 'Dodrio', 'Hypno', 'Electrode', 'Marowak', 'Lickitung', 'Rhyhorn', 'Rhydon', 'Chansey', 'Ditto', 'Mewtwo', 'Mew'],
             minLevel: 51,
             maxLevel: 60,
             respawn: 'ceruleanCity',
@@ -951,8 +951,8 @@ const ROUTES: Routes = {
             },
         },
         _global: {
-            pokes: ['Chikorita', 'Cyndaquil', 'Totodile'],
-            rarePokes: ['Shuckle', 'Raikou', 'Entei', 'Suicune', 'Celebi'],
+            pokes: [],
+            rarePokes: [],
             superRare: [],
         },
         NewBarkTown: {
@@ -998,7 +998,7 @@ const ROUTES: Routes = {
         },
         jroute29: {
             name: 'Route 29',
-            pokes: ['Pidgey', 'Rattata', 'Sentret', 'Hoothoot', 'Hoppip'],
+            pokes: ['Pidgey', 'Rattata', 'Sentret', 'Hoothoot', 'Hoppip', 'Chikorita', 'Cyndaquil', 'Totodile'],
             minLevel: 2,
             maxLevel: 5,
             respawn: 'starter2',
@@ -1761,7 +1761,7 @@ const ROUTES: Routes = {
         },
         headbutt: {
             name: 'Headbutt',
-            pokes: ['Caterpie', 'Metapod', 'Butterfree', 'Weedle', 'Kakuna', 'Beedrill', 'Spearow', 'Ekans', 'Exeggcute', 'Hoothoot', 'Noctowl', 'Spinarak', 'Ledyba', 'Aipom', 'Pineco', 'Heracross'],
+            pokes: ['Caterpie', 'Metapod', 'Butterfree', 'Weedle', 'Kakuna', 'Beedrill', 'Spearow', 'Ekans', 'Exeggcute', 'Hoothoot', 'Noctowl', 'Spinarak', 'Ledyba', 'Aipom', 'Pineco', 'Heracross', 'Shuckle', 'Raikou', 'Entei', 'Suicune', 'Celebi'],
             minLevel: 10,
             maxLevel: 10,
             respawn: 'blackthornCity',
@@ -1779,8 +1779,8 @@ const ROUTES: Routes = {
             },
         },
         _global: {
-            pokes: ['Treecko', 'Mudkip', 'Torchic'],
-            rarePokes: ['Deoxys', 'Jirachi', 'Rayquaza'],
+            pokes: [],
+            rarePokes: [],
             superRare: [],
         },
         littlerootTown: {
@@ -2465,7 +2465,7 @@ const ROUTES: Routes = {
         },
         hVictoryRoad: {
             name: 'Victory Road',
-            pokes: ['Zubat', 'Golbat', 'Whiscash', 'Loudred', 'Makuhita', 'Hariyama', 'Sableye', 'Mawile', 'Aron', 'Lairon', 'Meditite', 'Medicham'],
+            pokes: ['Zubat', 'Golbat', 'Whiscash', 'Loudred', 'Makuhita', 'Hariyama', 'Sableye', 'Mawile', 'Aron', 'Lairon', 'Meditite', 'Medicham', 'Treecko', 'Mudkip', 'Torchic', 'Deoxys', 'Jirachi', 'Rayquaza'],
             minLevel: 36,
             maxLevel: 42,
             respawn: 'sootopolisCity',
@@ -2672,7 +2672,7 @@ const ROUTES: Routes = {
             },
         },
         _global: {
-            pokes: ['Turtwig', 'Chimchar', 'Piplup'],
+            pokes: [],
             rarePokes: [],
             superRare: [],
         },
@@ -2691,7 +2691,7 @@ const ROUTES: Routes = {
         },
         sroute201: {
             name: 'Route 201',
-            pokes: ['Starly', 'Bidoof', 'Kricketot'],
+            pokes: ['Starly', 'Bidoof', 'Kricketot', 'Turtwig', 'Chimchar', 'Piplup'],
             minLevel: 2,
             maxLevel: 3,
             respawn: 'twinleafTown',
@@ -3636,7 +3636,7 @@ const ROUTES: Routes = {
             },
         },
         _global: {
-            pokes: ['Snivy', 'Oshawott', 'Tepig'],
+            pokes: [],
             rarePokes: [],
             superRare: [],
         },
@@ -3674,7 +3674,7 @@ const ROUTES: Routes = {
         },
         route106: {
             name: 'Route 20',
-            pokes: ['Pidove', 'Sunkern', 'Patrat', 'Purrloin', 'Sewaddle'],
+            pokes: ['Pidove', 'Sunkern', 'Patrat', 'Purrloin', 'Sewaddle', 'Snivy', 'Oshawott', 'Tepig'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'floccesyTown',
@@ -4638,9 +4638,9 @@ const ROUTES: Routes = {
     },
     Kalos: {
         _global: {
-            pokes: ['Froakie', 'Fennekin', 'Chespin'],
+            pokes: [],
             rarePokes: [],
-            superRare: ['Diancie', 'Hoopa', 'Volcanion'],
+            superRare: [],
         },
         vanivilleTown: {
             name: 'Vaniville Town',
@@ -4661,14 +4661,14 @@ const ROUTES: Routes = {
         },
         kalosroute2: {
             name: 'Route 2',
-            pokes: ['Caterpie', 'Weedle', 'Pidgey', 'Zigzagoon', 'Fletchling', 'Bunnelby', 'Scatterbug'],
+            pokes: ['Caterpie', 'Weedle', 'Pidgey', 'Zigzagoon', 'Fletchling', 'Bunnelby', 'Scatterbug', 'Froakie', 'Fennekin', 'Chespin'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'aquacordeTown',
         },
         santaluneForest: {
             name: 'Santalune Forest',
-            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pikachu', 'Pansage', 'Pansear', 'Panpour', 'Fletchling', 'Scatterbug'],
+            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pikachu', 'Pansage', 'Pansear', 'Panpour', 'Fletchling', 'Scatterbug', 'Diancie', 'Hoopa', 'Volcanion'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'aquacordeTown',
@@ -5494,7 +5494,7 @@ const ROUTES: Routes = {
     },
     Alola: {
         _global: {
-            pokes: ['Rowlet', 'Litten', 'Popplio'],
+            pokes: [],
             rarePokes: [],
             superRare: [],
         },
@@ -5513,7 +5513,7 @@ const ROUTES: Routes = {
         },
         custom16: {
             name: 'Route 1',
-            pokes: ['Pikipek', 'Yungoos', 'Grubbin'],
+            pokes: ['Pikipek', 'Yungoos', 'Grubbin', 'Rowlet', 'Litten', 'Popplio'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'ikiTown',
