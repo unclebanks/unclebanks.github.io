@@ -2,7 +2,7 @@ import { POKEDEXFLAGS, BALLRNG } from './data';
 import POKEDEX from './db.ts';
 import Poke from './poke';
 import ROUTES from './routes';
-import { pokeByName } from './utilities';
+import { pokeByName, randomArrayElement } from './utilities';
 
 export default (lastSave, appModel) => {
     let dom;
@@ -11,6 +11,14 @@ export default (lastSave, appModel) => {
         pokedexHighestID: 0,
         activePokeID: 0,
         lastHeal: Date.now(),
+        currentBoostedRoamer: {
+            region: 'Johto',
+            route: '11',
+            pokemon: 'Raikou',
+            start: 0,
+            length: 5 * 60 * 1000,
+            expired: false,
+        },
         selectedBall: 'pokeball',
         ballsAmount: {
             pokeball: 20,
@@ -449,6 +457,75 @@ export default (lastSave, appModel) => {
             }
             return true;
         },
+        getBoostedRoamer: function(allowExpired = false) { //returns the current boosted roamer (including additional data) or a falsy value
+            if (!this.currentBoostedRoamer) {
+                return null;
+            }
+            if (this.currentBoostedRoamer.start + this.currentBoostedRoamer.length < Date.now() && !allowExpired) { //time ran out
+                return null;
+            }
+            if (this.currentBoostedRoamer.expired && !allowExpired) { //boost expired, probably because the player encountered it
+                return null;
+            }
+            return this.currentBoostedRoamer;
+        },
+        routeGetBoostedRoamer: function(region, route) {
+            let roamer = this.getBoostedRoamer();
+            if (roamer && roamer.region.toLowerCase() === region.toLowerCase() && roamer.route === route) {
+                return roamer.pokemon;
+            }
+            return null;
+        },
+        boostedRoamerExpired: function() {
+            let roamer = this.getBoostedRoamer(true);
+            if (roamer) {
+                roamer.expired = true;
+                dom.renderRouteList();
+            }
+        },
+        generateBoostedRoamer: function() {
+            const regions = [
+                'Johto',
+            ];
+            const allowedRoamers = [
+                'Raikou',
+                'Entei',
+            ];
+            const region = randomArrayElement(regions);
+            const allowedRegionRoamers = ROUTES[region]._global.superRare.filter(pokemon => allowedRoamers.indexOf(pokemon) > -1);
+            if (!allowedRegionRoamers.length) {
+                return false;
+            }
+            const roamer = randomArrayElement(allowedRegionRoamers);
+            const routes = Object.keys(ROUTES[region]).filter(x => x !== '_unlock' && x !== '_global' && !ROUTES[region][x].town);
+            const route = randomArrayElement(routes);
+            const boostedRoamer = {
+                region: region,
+                route: route,
+                pokemon: roamer,
+                start: Date.now(),
+                length: 5 * 60 * 1000,
+                expired: false,
+            };
+            this.currentBoostedRoamer = boostedRoamer;
+            return roamer;
+        },
+        checkBoostedRoamer: function() {
+            const current = this.getBoostedRoamer(true);
+            const delay = 10 * 60 * 1000;
+            if (!current || current.start + delay < Date.now()) {
+                this.generateBoostedRoamer();
+                return true;
+            }
+            this.checkBoostedRoamerDisplay();
+            return false;
+        },
+        checkBoostedRoamerDisplay: function() {
+            if (this.lastDisplayedRoamer !== this.getBoostedRoamer()) {
+                this.lastDisplayedRoamer = this.getBoostedRoamer();
+                dom.renderRouteList();
+            }
+        },
         // Load and Save functions
         savePokes: function (force = false) {
         // Don't save more then every 60 seconds
@@ -478,6 +555,7 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('megaStones', JSON.stringify(this.megaStones));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
+                localStorage.setItem('currentBoostedRoamer', JSON.stringify(this.currentBoostedRoamer));
             }
         },
         saveToString: function () {
@@ -497,6 +575,7 @@ export default (lastSave, appModel) => {
                 currencyAmount: this.currencyAmount,
                 battleItems: this.battleItems,
                 vitamins: this.vitamins,
+                currentBoostedRoamer: this.currentBoostedRoamer,
             });
             return btoa(`${this.checksum(saveData)}|${saveData}`);
         },
@@ -576,6 +655,9 @@ export default (lastSave, appModel) => {
             if (JSON.parse(localStorage.getItem('vitamins'))) {
                 this.vitamins = JSON.parse(localStorage.getItem('vitamins'));
             }
+            if (JSON.parse(localStorage.getItem('currentBoostedRoamer'))) {
+                this.currentBoostedRoamer = JSON.parse(localStorage.getItem('currentBoostedRoamer'));
+            }
         },
         loadFromString: function (_saveData) {
             let saveData = atob(_saveData);
@@ -632,6 +714,7 @@ export default (lastSave, appModel) => {
                 }
                 this.badges = saveData.badges ? saveData.badges : {};
                 this.wins = saveData.wins ? saveData.wins : {};
+                this.currentBoostedRoamer = saveData.currentBoostedRoamer;
                 const loadedUnlocked = saveData.unlocked ? saveData.unlocked : [];
                 this.unlocked = { ...this.unlocked, ...loadedUnlocked };
             } else {
