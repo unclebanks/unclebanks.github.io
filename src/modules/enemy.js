@@ -91,7 +91,13 @@ export default (starter, player, Poke) => {
                 pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
             }
         }
-        const poke = pokeByName(randomArrayElement(pokemonList));
+        const boostedRoamer = player.routeGetBoostedRoamer(regionId, routeId);
+        let forcedPoke = false;
+        if (boostedRoamer && Math.random() < 0.05) {
+            forcedPoke = boostedRoamer;
+            player.boostedRoamerExpired();
+        }
+        const poke = pokeByName(forcedPoke ? forcedPoke : randomArrayElement(pokemonList));
         const level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)));
         return generator(poke, level);
     };
