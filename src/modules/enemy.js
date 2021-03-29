@@ -94,6 +94,9 @@ export default (starter, player, Poke) => {
         const boostedRoamer = player.routeGetBoostedRoamer(regionId, routeId, false);
         let pokeSpecies = false;
         let level = 1;
+        if (boostedRoamer) { // remove boosted roamer from regular spawn pool
+            pokemonList = pokemonList.filter((pokemon) => pokemon !== boostedRoamer.pokemon);
+        }
         if (boostedRoamer && Math.random() < 0.05) {
             pokeSpecies = boostedRoamer.pokemon;
             level = boostedRoamer.level || 50;
