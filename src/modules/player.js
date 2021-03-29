@@ -469,10 +469,10 @@ export default (lastSave, appModel) => {
             }
             return this.currentBoostedRoamer;
         },
-        routeGetBoostedRoamer: function (region, route) {
+        routeGetBoostedRoamer: function (region, route, returnNameOnly = true) {
             const roamer = this.getBoostedRoamer();
             if (roamer && roamer.region.toLowerCase() === region.toLowerCase() && roamer.route === route) {
-                return roamer.pokemon;
+                return returnNameOnly ? roamer.pokemon : roamer;
             }
             return null;
         },
@@ -503,6 +503,7 @@ export default (lastSave, appModel) => {
                 region: region,
                 route: route,
                 pokemon: roamer,
+                level: 40,
                 start: Date.now(),
                 length: 5 * 60 * 1000,
                 expired: false,
