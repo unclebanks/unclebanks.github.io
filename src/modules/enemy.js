@@ -87,9 +87,9 @@ export default (starter, player, Poke) => {
             if (regionData._global.superRare && Math.random() < (1 / (2 ** 16))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.superRare);
             }
-            if (routeData._special) {
-                pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
-            }
+        }
+        if (routeData._special) {
+            pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
         }
         const boostedRoamer = player.routeGetBoostedRoamer(regionId, routeId, false);
         let pokeSpecies = false;
