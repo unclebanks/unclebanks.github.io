@@ -34,6 +34,7 @@ export default (player, combatLoop, userInteractions) => {
             const townBox = $('#townBox');
             const profButton = $('#profButton');
             const gymLeaderButton = $('#gymLeaderButton');
+            const npcButton = $('#npcButton');
             if (!poke) {
                 container.style.display = 'none';
                 if (id == 'enemy') {
@@ -43,6 +44,8 @@ export default (player, combatLoop, userInteractions) => {
                     profButton.innerHTML = (route.prof) ? route.prof.name : '';
                     gymLeaderButton.style.display = (route.gymLeader) ? '' : 'none';
                     gymLeaderButton.innerHTML = (route.gymLeader) ? route.gymLeader.name : '';
+                    npcButton.style.display = (route.npc) ? '' : 'none';
+                    npcButton.innerHTML = (route.npc) ? route.npc.name : '';
                 }
                 return null;
             }
