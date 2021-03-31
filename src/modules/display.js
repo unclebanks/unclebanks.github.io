@@ -154,7 +154,7 @@ export default (player, combatLoop, userInteractions) => {
                         routeWeight = 'normal';
                     }
                     const boostedRoamer = player.routeGetBoostedRoamer(player.settings.currentRegionId, routeId);
-                    const roamerIcon = boostedRoamer ? (`<img class="roamerIcon" src="assets/images/roamers/${boostedRoamer}_2.png">`) : '';
+                    const roamerIcon = boostedRoamer ? (`<img class="roamerIcon" src="assets/images/roamers/${boostedRoamer}.png">`) : '';
                     const routeLevels = (!route.town) ? ` (${route.minLevel}~${route.maxLevel})` : '';
                     const routeHTML = `<li><a href="#" onclick="${routeOnClick}" style="color: ${routeColor}; font-weight: ${routeWeight};" >${route.name}${routeLevels}</a>${roamerIcon}</li>`;
                     this.setValue(listElement, routeHTML, true);
