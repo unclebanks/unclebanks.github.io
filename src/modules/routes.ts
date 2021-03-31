@@ -10,6 +10,7 @@ interface GymLeader {
     badge?: string,
     win?: string,
     reward?: string,
+    event?: string,
     megaStone?: string,
     megaStones?: string[],
 }
@@ -17,6 +18,14 @@ interface GymLeader {
 // we might want professor specific stuff later, ignore warning
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Professor extends GymLeader {}
+
+interface NPC {
+    name: string,
+    reward?: string,
+    event?: string,
+    megaStone?: string,
+    megaStones?: string[],
+}
 
 interface Town {
     name: string,
@@ -29,6 +38,7 @@ interface Town {
     gymLeader1?: GymLeader,
     gymLeader2?: GymLeader,
     gymLeader3?: GymLeader,
+    npc?: NPC,
     _unlock?: UnlockData,
 }
 
@@ -228,6 +238,10 @@ const ROUTES: Routes = {
                     ['Omastar', 75],
                 ],
             },
+            npc: {
+                name: 'Pewter Museum',
+                event: 'pewterMuseum1',
+            },
         },
         kroute3: {
             name: 'Route 3',
@@ -333,6 +347,19 @@ const ROUTES: Routes = {
             minLevel: 7,
             maxLevel: 14,
             respawn: 'ceruleanCity',
+            _unlock: {
+                badges: {
+                    'Boulder Badge': true,
+                },
+            },
+        },
+        seasideCottage: {
+            name: 'Seaside Cottage',
+            town: true,
+            npc: {
+                name: 'Bill',
+                event: 'bill1',
+            },
             _unlock: {
                 badges: {
                     'Boulder Badge': true,
@@ -846,6 +873,10 @@ const ROUTES: Routes = {
                 ],
                 megaStone: 'charizarditeX',
             },
+            npc: {
+                name: 'Cinnabar Lab',
+                event: 'cinnabarLab1',
+            },
         },
         pokemonMansion: {
             name: 'Pokemon Mansion',
@@ -861,7 +892,7 @@ const ROUTES: Routes = {
         },
         fossilCave: {
             name: 'Fossil Restorer',
-            pokes: ['Aerodactyl', 'Omanyte', 'Kabuto', 'Lapras'],
+            pokes: ['Omanyte', 'Kabuto', 'Lapras'],
             minLevel: 30,
             maxLevel: 30,
             respawn: 'cinnabarIsland',

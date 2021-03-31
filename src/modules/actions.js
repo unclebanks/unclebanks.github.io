@@ -4,6 +4,8 @@ import { $, camelCaseToString, isEmpty } from './utilities';
 import ACHIEVEMENTS from './achievements';
 import { POKEDEXFLAGS, VITAMINS } from './data';
 import { openModal, closeModal } from './modalEvents';
+import Poke from './poke';
+import POKEDEX from './db';
 
 export default (player, combatLoop, enemy, town, story, appModel) => {
     let dom;
@@ -469,6 +471,71 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
             if (player.wins[routeData.gymLeader.win] && player.wins[routeData.gymLeader1.win] && player.wins[routeData.gymLeader2.win] && player.wins[routeData.gymLeader3.win]) {
                 this.gymLeader3ABattle();
+            }
+        },
+        checkNPC: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.npc.name === 'Bill') {
+                this.billEvent();
+            }
+            if (routeData.npc.name === 'Pewter Museum') {
+                this.pewterMuseumEvent();
+            }
+            if (routeData.npc.name === 'Cinnabar Lab') {
+                this.cinnabarLabEvent();
+            }
+        },
+        billEvent: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (!player.events[routeData.npc.event]) {
+                alert('Hi! Thanks for stopping by. Show me a Haunter, Machoke, Graveler, or Kadabra and I will give you their evolved forms');
+                player.events[routeData.npc.event] = true;
+            }
+            if (player.hasPokemon('Machoke') && !player.hasPokemon('Machamp')) {
+                player.addPoke(new Poke(POKEDEX[85], 25));
+                player.addPokedex('Machamp', POKEDEXFLAGS.ownNormal);
+                alert('I see you have a Machoke. Here is a Machamp');
+            }
+            if (player.hasPokemon('Kadabra') && !player.hasPokemon('Alakazam')) {
+                player.addPoke(new Poke(POKEDEX[81], 25));
+                player.addPokedex('Alakazam', POKEDEXFLAGS.ownNormal);
+                alert('I see you have a Kadabra. Here is a Alakazam');
+            }
+            if (player.hasPokemon('Graveler') && !player.hasPokemon('Golem')) {
+                player.addPoke(new Poke(POKEDEX[93], 25));
+                player.addPokedex('Golem', POKEDEXFLAGS.ownNormal);
+                alert('I see you have a Graveler. Here is a Golem');
+            }
+            if (player.hasPokemon('Haunter') && !player.hasPokemon('Gengar')) {
+                player.addPoke(new Poke(POKEDEX[117], 25));
+                player.addPokedex('Gengar', POKEDEXFLAGS.ownNormal);
+                alert('I see you have a Haunter. Here is a Gengar');
+            } else {
+                alert('No trades right now. Sorry');
+            }
+        },
+        pewterMuseumEvent: function () {
+            if (player.events.pewterMuseum1 === true) {
+                alert('Did you take that fossil to Cinnabar Island?');
+            }
+            if (!player.badges['Boulder Badge']) {
+                alert('Why not beat Brock and come back?');
+            }
+            if (player.badges['Boulder Badge'] === true && !player.events.pewterMuseum1) {
+                player.unlocked.oldAmber = true;
+                alert('Congrats on the win. Take this Old Amber as a bonus');
+                player.events.pewterMuseum1 = true;
+            }
+        },
+        cinnabarLabEvent: function () {
+            if (!player.events.cinnabarLab1) {
+                alert('Welcome, if you have any fossils we can restore them to the Pokemon they were.');
+                player.events.cinnabarLab1 = true;
+            }
+            if (player.events.cinnabarLab1 === true && player.unlocked.oldAmber === true) {
+                alert('Is that an Old Amber? Ha! Now it is an Aerodactyl');
+                player.addPoke(new Poke(POKEDEX[171], 25));
+                player.addPokedex('Aerodactyl', POKEDEXFLAGS.ownNormal);
             }
         },
         profBattle: function () {
