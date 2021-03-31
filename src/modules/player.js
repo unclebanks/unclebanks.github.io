@@ -22,6 +22,9 @@ export default (lastSave, appModel) => {
             shinyDex: 0,
             razzBerry: 0,
             timeMachine: 0,
+            oldAmber: 0,
+            ssTicket: 0,
+            safariTicket: 0,
             megaBracelet: 0,
             kantoOldRod: 0,
             kantoGoodRod: 0,
@@ -156,42 +159,6 @@ export default (lastSave, appModel) => {
             training: 0,
         },
         statistics: {
-            fireBeaten: 0,
-            waterBeaten: 0,
-            grassBeaten: 0,
-            electricBeaten: 0,
-            normalBeaten: 0,
-            iceBeaten: 0,
-            fightingBeaten: 0,
-            poisonBeaten: 0,
-            groundBeaten: 0,
-            flyingBeaten: 0,
-            psychicBeaten: 0,
-            bugBeaten: 0,
-            rockBeaten: 0,
-            ghostBeaten: 0,
-            darkBeaten: 0,
-            dragonBeaten: 0,
-            steelBeaten: 0,
-            fairyBeaten: 0,
-            fireCaught: 0,
-            waterCaught: 0,
-            grassCaught: 0,
-            electricCaught: 0,
-            normalCaught: 0,
-            iceCaught: 0,
-            fightingCaught: 0,
-            poisonCaught: 0,
-            groundCaught: 0,
-            flyingCaught: 0,
-            psychicCaught: 0,
-            bugCaught: 0,
-            rockCaught: 0,
-            ghostCaught: 0,
-            darkCaught: 0,
-            dragonCaught: 0,
-            steelCaught: 0,
-            fairyCaught: 0,
             seen: 0,
             caught: 0,
             beaten: 0,
@@ -216,6 +183,7 @@ export default (lastSave, appModel) => {
         },
         badges: {},
         wins: {},
+        events: {},
         purgeData: false,
 
         checksum: function (s) {
@@ -474,6 +442,7 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
                 localStorage.setItem('wins', JSON.stringify(this.wins));
+                localStorage.setItem('events', JSON.stringify(this.events));
                 localStorage.setItem('unlocked', JSON.stringify(this.unlocked));
                 localStorage.setItem('megaStones', JSON.stringify(this.megaStones));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
@@ -491,6 +460,7 @@ export default (lastSave, appModel) => {
                 ballsAmount: this.ballsAmount,
                 badges: this.badges,
                 wins: this.wins,
+                events: this.events,
                 unlocked: this.unlocked,
                 megaStones: this.megaStones,
                 evoStones: this.evoStones,
@@ -556,6 +526,9 @@ export default (lastSave, appModel) => {
             }
             if (JSON.parse(localStorage.getItem('wins'))) {
                 this.wins = JSON.parse(localStorage.getItem('wins'));
+            }
+            if (JSON.parse(localStorage.getItem('events'))) {
+                this.events = JSON.parse(localStorage.getItem('events'));
             }
             if (JSON.parse(localStorage.getItem('unlocked'))) {
                 const loadedUnlocked = JSON.parse(localStorage.getItem('unlocked'));
@@ -632,6 +605,7 @@ export default (lastSave, appModel) => {
                 }
                 this.badges = saveData.badges ? saveData.badges : {};
                 this.wins = saveData.wins ? saveData.wins : {};
+                this.events = saveData.events ? saveData.events : {};
                 const loadedUnlocked = saveData.unlocked ? saveData.unlocked : [];
                 this.unlocked = { ...this.unlocked, ...loadedUnlocked };
             } else {
