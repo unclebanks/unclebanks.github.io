@@ -206,9 +206,6 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Abra': [
         { 'to': 'Kadabra', 'requires': { 'type': 'level', 'level': 16 } },
     ],
-    'Kadabra': [
-        { 'to': 'Alakazam', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
     'Alakazam': [
         { 'to': 'M-Alakazam', 'requires': { 'type': 'megaStone', 'megaStone': 'alakazite' } },
     ],
@@ -221,9 +218,6 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Machop': [
         { 'to': 'Machoke', 'requires': { 'type': 'level', 'level': 28 } },
     ],
-    'Machoke': [
-        { 'to': 'Machamp', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
     'Bellsprout': [
         { 'to': 'Weepinbell', 'requires': { 'type': 'level', 'level': 21 } },
     ],
@@ -235,9 +229,6 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Geodude': [
         { 'to': 'Graveler', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Graveler': [
-        { 'to': 'Golem', 'requires': { 'type': 'level', 'level': 40 } },
     ],
     'Alolan Geodude': [
         { 'to': 'Alolan Graveler', 'requires': { 'type': 'level', 'level': 25 } },
@@ -275,9 +266,6 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Gastly': [
         { 'to': 'Haunter', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Haunter': [
-        { 'to': 'Gengar', 'requires': { 'type': 'level', 'level': 40 } },
     ],
     'Gengar': [
         { 'to': 'M-Gengar', 'requires': { 'type': 'megaStone', 'megaStone': 'gengarite' } },
