@@ -478,6 +478,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.npc.name === 'Bill') {
                 this.billEvent();
             }
+            if (routeData.npc.name === 'Pewter Museum') {
+                this.pewterMuseumEvent();
+            }
+            if (routeData.npc.name === 'Cinnabar Lab') {
+                this.cinnabarLabEvent();
+            }
         },
         billEvent: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
@@ -506,6 +512,30 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('I see you have a Haunter. Here is a Gengar');
             } else {
                 alert('No trades right now. Sorry');
+            }
+        },
+        pewterMuseumEvent: function () {
+            if (player.events.pewterMuseum1 === true) {
+                alert('Did you take that fossil to Cinnabar Island?');
+            }
+            if (!player.badges['Boulder Badge']) {
+                alert('Why not beat Brock and come back?');
+            }
+            if (player.badges['Boulder Badge'] === true && !player.events.pewterMuseum1) {
+                player.unlocked.oldAmber = true;
+                alert('Congrats on the win. Take this Old Amber as a bonus');
+                player.events.pewterMuseum1 = true;
+            }
+        },
+        cinnabarLabEvent: function () {
+            if (!player.events.cinnabarLab1) {
+                alert('Welcome, if you have any fossils we can restore them to the Pokemon they were.');
+                player.events.cinnabarLab1 = true;
+            }
+            if (player.events.cinnabarLab1 === true && player.unlocked.oldAmber === true) {
+                alert('Is that an Old Amber? Ha! Now it is an Aerodactyl');
+                player.addPoke(new Poke(POKEDEX[171], 25));
+                player.addPokedex('Aerodactyl', POKEDEXFLAGS.ownNormal);
             }
         },
         profBattle: function () {

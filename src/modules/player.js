@@ -22,6 +22,7 @@ export default (lastSave, appModel) => {
             shinyDex: 0,
             razzBerry: 0,
             timeMachine: 0,
+            oldAmber: 0,
             ssTicket: 0,
             safariTicket: 0,
             megaBracelet: 0,

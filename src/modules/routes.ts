@@ -238,6 +238,10 @@ const ROUTES: Routes = {
                     ['Omastar', 75],
                 ],
             },
+            npc: {
+                name: 'Pewter Museum',
+                event: 'pewterMuseum1',
+            },
         },
         kroute3: {
             name: 'Route 3',
@@ -869,6 +873,10 @@ const ROUTES: Routes = {
                 ],
                 megaStone: 'charizarditeX',
             },
+            npc: {
+                name: 'Cinnabar Lab',
+                event: 'cinnabarLab1',
+            },
         },
         pokemonMansion: {
             name: 'Pokemon Mansion',
@@ -884,7 +892,7 @@ const ROUTES: Routes = {
         },
         fossilCave: {
             name: 'Fossil Restorer',
-            pokes: ['Aerodactyl', 'Omanyte', 'Kabuto', 'Lapras'],
+            pokes: ['Omanyte', 'Kabuto', 'Lapras'],
             minLevel: 30,
             maxLevel: 30,
             respawn: 'cinnabarIsland',
