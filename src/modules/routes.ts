@@ -21,6 +21,7 @@ interface Professor extends GymLeader {}
 
 interface NPC {
     name: string,
+    poke?: Array<[PokemonNameType, number]>,
     reward?: string,
     event?: string,
     megaStone?: string,
@@ -31,13 +32,7 @@ interface Town {
     name: string,
     town: true,
     prof?: Professor,
-    prof1?: Professor,
-    prof2?: Professor,
-    prof3?: Professor,
     gymLeader?: GymLeader,
-    gymLeader1?: GymLeader,
-    gymLeader2?: GymLeader,
-    gymLeader3?: GymLeader,
     npc?: NPC,
     _unlock?: UnlockData,
 }
@@ -114,42 +109,9 @@ const ROUTES: Routes = {
         palletTown: {
             name: 'Pallet Town',
             town: true,
-            prof: {
+            npc: {
                 name: 'Prof. Oak',
-                win: 'oak1',
-                poke: [
-                    ['Bulbasaur', 15],
-                    ['Charmander', 15],
-                    ['Squirtle', 15],
-                ],
-            },
-            prof1: {
-                name: 'Prof. Oak',
-                win: 'oak2',
-                poke: [
-                    ['Ivysaur', 30],
-                    ['Charmeleon', 30],
-                    ['Wartortle', 30],
-                ],
-            },
-            prof2: {
-                name: 'Prof. Oak',
-                win: 'oak3',
-                poke: [
-                    ['Venusaur', 60],
-                    ['Charizard', 60],
-                    ['Blastoise', 60],
-                ],
-            },
-            prof3: {
-                name: 'Prof. Oak',
-                win: 'oak4',
-                poke: [
-                    ['Venusaur', 100],
-                    ['Charizard', 100],
-                    ['Blastoise', 100],
-                ],
-                reward: 'megaBracelet',
+                event: 'profOak1',
             },
         },
         kroute1: {
@@ -207,37 +169,6 @@ const ROUTES: Routes = {
                     ['Onix', 14],
                 ],
             },
-            gymLeader1: {
-                name: 'Brock',
-                win: 'Boulder2',
-                poke: [
-                    ['Geodude', 30],
-                    ['Onix', 30],
-                    ['Aerodactyl', 30],
-                ],
-            },
-            gymLeader2: {
-                name: 'Brock',
-                win: 'Boulder3',
-                poke: [
-                    ['Golem', 50],
-                    ['Onix', 50],
-                    ['Aerodactyl', 50],
-                    ['Kabutops', 50],
-                    ['Omastar', 50],
-                ],
-            },
-            gymLeader3: {
-                name: 'Brock',
-                win: 'Boulder4',
-                poke: [
-                    ['Golem', 75],
-                    ['Onix', 75],
-                    ['Aerodactyl', 75],
-                    ['Kabutops', 75],
-                    ['Omastar', 75],
-                ],
-            },
             npc: {
                 name: 'Pewter Museum',
                 event: 'pewterMuseum1',
@@ -291,36 +222,21 @@ const ROUTES: Routes = {
                     ['Starmie', 21],
                 ],
             },
-            gymLeader1: {
-                name: 'Misty',
-                win: 'cascade2',
-                poke: [
-                    ['Horsea', 40],
-                    ['Psyduck', 40],
-                    ['Starmie', 40],
-                    ['Goldeen', 40],
-                ],
+            _unlock: {
+                badges: {
+                    'Boulder Badge': true,
+                },
             },
-            gymLeader2: {
-                name: 'Misty',
-                win: 'cascade3',
+        },
+        nuggetBridge: {
+            name: 'Nugget Bridge',
+            town: true,
+            npc: {
+                name: 'Nugget 5',
+                event: 'nugget5',
                 poke: [
-                    ['Seaking', 70],
-                    ['Seaking', 70],
-                    ['Golduck', 70],
-                    ['Starmie', 70],
-                ],
-            },
-            gymLeader3: {
-                name: 'Misty',
-                win: 'cascade4',
-                megaStone: 'blastoisinite',
-                poke: [
-                    ['Seaking', 100],
-                    ['Seadra', 100],
-                    ['Golduck', 100],
-                    ['Starmie', 100],
-                    ['Gyarados', 100],
+                    ['Staryu', 18],
+                    ['Starmie', 21],
                 ],
             },
             _unlock: {
@@ -401,37 +317,6 @@ const ROUTES: Routes = {
                     ['Voltorb', 21],
                     ['Pikachu', 18],
                     ['Raichu', 24],
-                ],
-            },
-            gymLeader1: {
-                name: 'Lt. Surge',
-                win: 'thunder2',
-                poke: [
-                    ['Electrode', 40],
-                    ['Pikachu', 40],
-                    ['Magnemite', 40],
-                    ['Raichu', 40],
-                ],
-            },
-            gymLeader2: {
-                name: 'Lt. Surge',
-                win: 'thunder3',
-                poke: [
-                    ['Electrode', 70],
-                    ['Electabuzz', 70],
-                    ['Magneton', 70],
-                    ['Raichu', 70],
-                ],
-            },
-            gymLeader3: {
-                name: 'Lt. Surge',
-                win: 'thunder4',
-                poke: [
-                    ['Electrode', 100],
-                    ['Electabuzz', 100],
-                    ['Magneton', 100],
-                    ['Raichu', 100],
-                    ['Jolteon', 100],
                 ],
             },
             _unlock: {
@@ -570,40 +455,6 @@ const ROUTES: Routes = {
                     ['Vileplume', 29],
                 ],
             },
-            gymLeader1: {
-                name: 'Erika',
-                win: 'rainbow2',
-                poke: [
-                    ['Victreebel', 50],
-                    ['Tangela', 50],
-                    ['Gloom', 50],
-                    ['Vileplume', 50],
-                ],
-            },
-            gymLeader2: {
-                name: 'Erika',
-                win: 'rainbow3',
-                poke: [
-                    ['Victreebel', 75],
-                    ['Tangela', 75],
-                    ['Parasect', 75],
-                    ['Exeggutor', 75],
-                    ['Vileplume', 75],
-                ],
-            },
-            gymLeader3: {
-                name: 'Erika',
-                win: 'rainbow4',
-                megaStone: 'venusaurite',
-                poke: [
-                    ['Victreebel', 100],
-                    ['Tangela', 100],
-                    ['Parasect', 100],
-                    ['Exeggutor', 100],
-                    ['Venusaur', 100],
-                    ['Vileplume', 100],
-                ],
-            },
             _unlock: {
                 badges: {
                     'Thunder Badge': true,
@@ -622,36 +473,6 @@ const ROUTES: Routes = {
                     ['Mr. Mime', 37],
                     ['Venomoth', 38],
                     ['Alakazam', 43],
-                ],
-            },
-            gymLeader1: {
-                name: 'Sabrina',
-                win: 'marsh2',
-                poke: [
-                    ['Kadabra', 50],
-                    ['Mr. Mime', 50],
-                    ['Venomoth', 50],
-                    ['Alakazam', 50],
-                ],
-            },
-            gymLeader2: {
-                name: 'Sabrina',
-                win: 'marsh3',
-                poke: [
-                    ['Kadabra', 70],
-                    ['Mr. Mime', 70],
-                    ['Venomoth', 70],
-                    ['Alakazam', 70],
-                ],
-            },
-            gymLeader3: {
-                name: 'Sabrina',
-                win: 'marsh4',
-                poke: [
-                    ['Kadabra', 100],
-                    ['Mr. Mime', 100],
-                    ['Venomoth', 100],
-                    ['Alakazam', 100],
                 ],
             },
             _unlock: {
@@ -842,37 +663,6 @@ const ROUTES: Routes = {
                     'Soul Badge': true,
                 },
             },
-            gymLeader1: {
-                name: 'Blaine',
-                win: 'volcano2',
-                poke: [
-                    ['Growlithe', 60],
-                    ['Ponyta', 60],
-                    ['Rapidash', 60],
-                    ['Arcanine', 60],
-                ],
-            },
-            gymLeader2: {
-                name: 'Blaine',
-                win: 'volcano3',
-                poke: [
-                    ['Growlithe', 80],
-                    ['Ponyta', 80],
-                    ['Rapidash', 80],
-                    ['Arcanine', 80],
-                ],
-            },
-            gymLeader3: {
-                name: 'Blaine',
-                win: 'volcano4',
-                poke: [
-                    ['Growlithe', 100],
-                    ['Ponyta', 100],
-                    ['Rapidash', 100],
-                    ['Arcanine', 100],
-                ],
-                megaStone: 'charizarditeX',
-            },
             npc: {
                 name: 'Cinnabar Lab',
                 event: 'cinnabarLab1',
@@ -999,33 +789,6 @@ const ROUTES: Routes = {
                     ['Totodile', 15],
                 ],
             },
-            prof1: {
-                name: 'Prof. Elm',
-                win: 'elm2',
-                poke: [
-                    ['Bayleef', 30],
-                    ['Croconaw', 30],
-                    ['Quilava', 30],
-                ],
-            },
-            prof2: {
-                name: 'Prof. Elm',
-                win: 'elm3',
-                poke: [
-                    ['Meganium', 60],
-                    ['Feraligatr', 60],
-                    ['Typhlosion', 60],
-                ],
-            },
-            prof3: {
-                name: 'Prof. Elm',
-                win: 'elm4',
-                poke: [
-                    ['Meganium', 100],
-                    ['Feraligatr', 100],
-                    ['Typhlosion', 100],
-                ],
-            },
         },
         johtoroute29: {
             name: 'Route 29',
@@ -1077,39 +840,6 @@ const ROUTES: Routes = {
                     ['Pidgeotto', 25],
                     ['Noctowl', 25],
                     ['Pidgeot', 25],
-                ],
-            },
-            gymLeader1: {
-                name: 'Falkner',
-                win: 'falkner2',
-                poke: [
-                    ['Pidgeotto', 40],
-                    ['Noctowl', 40],
-                    ['Pidgeot', 40],
-                    ['Murkrow', 40],
-                ],
-            },
-            gymLeader2: {
-                name: 'Falkner',
-                win: 'falkner3',
-                poke: [
-                    ['Dodrio', 60],
-                    ['Noctowl', 60],
-                    ['Pidgeot', 60],
-                    ['Murkrow', 60],
-                    ['Fearow', 60],
-                ],
-            },
-            gymLeader3: {
-                name: 'Falkner',
-                win: 'falkner4',
-                megaStone: 'pidgeotite',
-                poke: [
-                    ['Dodrio', 100],
-                    ['Noctowl', 100],
-                    ['M-Pidgeot', 100],
-                    ['Murkrow', 100],
-                    ['Fearow', 100],
                 ],
             },
         },
@@ -1210,39 +940,6 @@ const ROUTES: Routes = {
                     ['Scyther', 25],
                 ],
             },
-            gymLeader1: {
-                name: 'Bugsy',
-                win: 'bugsy2',
-                poke: [
-                    ['Butterfree', 60],
-                    ['Beedrill', 60],
-                    ['Scizor', 60],
-                    ['Pinsir', 60],
-                ],
-            },
-            gymLeader2: {
-                name: 'Bugsy',
-                win: 'bugsy3',
-                poke: [
-                    ['Heracross', 80],
-                    ['Beedrill', 80],
-                    ['Scizor', 80],
-                    ['Ariados', 80],
-                    ['Pinsir', 80],
-                ],
-            },
-            gymLeader3: {
-                name: 'Bugsy',
-                win: 'bugsy4',
-                megaStone: 'beedrillite',
-                poke: [
-                    ['M-Heracross', 100],
-                    ['M-Beedrill', 100],
-                    ['M-Scizor', 100],
-                    ['Ariados', 100],
-                    ['M-Pinsir', 100],
-                ],
-            },
             _unlock: {
                 badges: {
                     'Zephyr Badge': true,
@@ -1295,38 +992,6 @@ const ROUTES: Routes = {
                 poke: [
                     ['Clefairy', 18],
                     ['Miltank', 20],
-                ],
-            },
-            gymLeader1: {
-                name: 'Whitney',
-                win: 'whitney2',
-                poke: [
-                    ['Clefable', 60],
-                    ['Wigglytuff', 60],
-                    ['Miltank', 60],
-                    ['Granbull', 60],
-                ],
-            },
-            gymLeader2: {
-                name: 'Whitney',
-                win: 'whitney3',
-                poke: [
-                    ['Clefable', 60],
-                    ['Wigglytuff', 60],
-                    ['Miltank', 60],
-                    ['Granbull', 60],
-                    ['Blissey', 60],
-                ],
-            },
-            gymLeader3: {
-                name: 'Whitney',
-                win: 'whitney4',
-                poke: [
-                    ['Clefable', 100],
-                    ['Wigglytuff', 100],
-                    ['Miltank', 100],
-                    ['Granbull', 100],
-                    ['Blissey', 100],
                 ],
             },
             _unlock: {
@@ -1461,38 +1126,6 @@ const ROUTES: Routes = {
                     ['Magneton', 45],
                     ['Forretress', 45],
                     ['Steelix', 45],
-                ],
-            },
-            gymLeader1: {
-                name: 'Jasmine',
-                win: 'jasmine2',
-                poke: [
-                    ['Magneton', 60],
-                    ['Forretress', 60],
-                    ['Steelix', 60],
-                ],
-            },
-            gymLeader2: {
-                name: 'Jasmine',
-                win: 'jasmine3',
-                poke: [
-                    ['Magnezone', 85],
-                    ['M-Scizor', 85],
-                    ['Forretress', 85],
-                    ['Skarmory', 85],
-                    ['M-Steelix', 85],
-                ],
-            },
-            gymLeader3: {
-                name: 'Jasmine',
-                win: 'jasmine4',
-                megaStone: 'steelixite',
-                poke: [
-                    ['Magnezone', 100],
-                    ['M-Scizor', 100],
-                    ['Forretress', 100],
-                    ['Skarmory', 100],
-                    ['M-Steelix', 100],
                 ],
             },
             _unlock: {
@@ -1854,33 +1487,6 @@ const ROUTES: Routes = {
                     ['Treecko', 15],
                     ['Mudkip', 15],
                     ['Torchic', 15],
-                ],
-            },
-            prof1: {
-                name: 'Prof. Birch',
-                win: 'birch2',
-                poke: [
-                    ['Grovyle', 30],
-                    ['Combusken', 30],
-                    ['Marshtomp', 30],
-                ],
-            },
-            prof2: {
-                name: 'Prof. Birch',
-                win: 'birch3',
-                poke: [
-                    ['Sceptile', 60],
-                    ['Blaziken', 60],
-                    ['Swampert', 60],
-                ],
-            },
-            prof3: {
-                name: 'Prof. Birch',
-                win: 'birch4',
-                poke: [
-                    ['M-Sceptile', 100],
-                    ['M-Blaziken', 100],
-                    ['M-Swampert', 100],
                 ],
             },
         },
@@ -4769,28 +4375,6 @@ const ROUTES: Routes = {
                     ['Banette', 50],
                 ],
             },
-            prof1: {
-                name: 'Banette',
-                win: 'Banette2',
-                poke: [
-                    ['Banette', 65],
-                ],
-            },
-            prof2: {
-                name: 'Banette',
-                win: 'Banette3',
-                poke: [
-                    ['Banette', 80],
-                ],
-            },
-            prof3: {
-                name: 'Banette',
-                win: 'Banette4',
-                poke: [
-                    ['M-Banette', 100],
-                ],
-                megaStone: 'banettite',
-            },
             _unlock: {
                 badges: {
                     'Iceberg Badge': true,
@@ -4819,40 +4403,6 @@ const ROUTES: Routes = {
                     ['Bulbasaur', 10],
                     ['Charmander', 10],
                     ['Squirtle', 10],
-                ],
-            },
-            prof1: {
-                name: 'Prof. Sycamore',
-                win: 'sycamore2',
-                poke: [
-                    ['Ivysaur', 30],
-                    ['Charmeleon', 30],
-                    ['Wartortle', 30],
-                ],
-            },
-            prof2: {
-                name: 'Prof. Sycamore',
-                win: 'sycamore3',
-                poke: [
-                    ['Venusaur', 60],
-                    ['Charizard', 60],
-                    ['Blastoise', 60],
-                ],
-            },
-            prof3: {
-                name: 'Prof. Sycamore',
-                win: 'sycamore4',
-                poke: [
-                    ['M-Venusaur', 100],
-                    ['M-Charizard X', 100],
-                    ['M-Charizard Y', 100],
-                    ['M-Blastoise', 100],
-                ],
-                megaStones: [
-                    'charizarditeX',
-                    'charizarditeY',
-                    'blastoisinite',
-                    'venusaurite',
                 ],
             },
             gymLeader: {
@@ -5087,28 +4637,6 @@ const ROUTES: Routes = {
                 ],
                 reward: 'megaBracelet',
             },
-            prof1: {
-                name: 'Korrina',
-                win: 'Korrina2',
-                poke: [
-                    ['Lucario', 50],
-                ],
-            },
-            prof2: {
-                name: 'Korrina',
-                win: 'Korrina3',
-                poke: [
-                    ['Lucario', 70],
-                ],
-            },
-            prof3: {
-                name: 'Korrina',
-                win: 'Korrina4',
-                poke: [
-                    ['M-Lucario', 100],
-                ],
-                megaStone: 'lucarionite',
-            },
             _unlock: {
                 badges: {
                     'Rumble Badge': true,
@@ -5236,40 +4764,6 @@ const ROUTES: Routes = {
                 ],
                 reward: 'megaBracelet',
             },
-            prof1: {
-                name: 'Krush',
-                win: 'Krush2',
-                poke: [
-                    ['Grovyle', 60],
-                    ['Murkrow', 60],
-                    ['Pupitar', 60],
-                    ['Gible', 60],
-                ],
-            },
-            prof2: {
-                name: 'Krush',
-                win: 'Krush3',
-                poke: [
-                    ['Sceptile', 80],
-                    ['Honchkrow', 80],
-                    ['Pupitar', 80],
-                    ['Stoutland', 80],
-                    ['Garchomp', 80],
-                ],
-            },
-            prof3: {
-                name: 'Krush',
-                win: 'Krush4',
-                poke: [
-                    ['Sceptile', 100],
-                    ['Honchkrow', 100],
-                    ['Pupitar', 100],
-                    ['Gallade', 100],
-                    ['Stoutland', 100],
-                    ['M-Garchomp', 100],
-                ],
-                megaStone: 'garchompite',
-            },
             _unlock: {
                 badges: {
                     'Fairy Badge': true,
@@ -5309,28 +4803,6 @@ const ROUTES: Routes = {
                 poke: [
                     ['Abomasnow', 50],
                 ],
-            },
-            prof1: {
-                name: 'Abomasnow',
-                win: 'Abomasnow2',
-                poke: [
-                    ['Abomasnow', 65],
-                ],
-            },
-            prof2: {
-                name: 'Abomasnow',
-                win: 'Abomasnow3',
-                poke: [
-                    ['Abomasnow', 80],
-                ],
-            },
-            prof3: {
-                name: 'Abomasnow',
-                win: 'Abomasnow4',
-                poke: [
-                    ['M-Abomasnow', 100],
-                ],
-                megaStone: 'abomasite',
             },
             _unlock: {
                 badges: {
@@ -5464,29 +4936,6 @@ const ROUTES: Routes = {
                 poke: [
                     ['Mewtwo', 70],
                 ],
-            },
-            prof1: {
-                name: 'Mewtwo',
-                win: 'Mewtwo2',
-                poke: [
-                    ['Mewtwo', 90],
-                ],
-            },
-            prof2: {
-                name: 'Mewtwo',
-                win: 'Mewtwo3',
-                poke: [
-                    ['M-Mewtwo X', 100],
-                ],
-                megaStone: 'mewtwoniteX',
-            },
-            prof3: {
-                name: 'Mewtwo',
-                win: 'Mewtwo4',
-                poke: [
-                    ['M-Mewtwo Y', 100],
-                ],
-                megaStone: 'mewtwoniteY',
             },
             _unlock: {
                 badges: {

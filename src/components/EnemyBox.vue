@@ -30,14 +30,14 @@
       </button><br>
       <button
         id="profButton"
-        onclick="userInteractions.checkProfBattle()"
+        onclick="userInteractions.profBattle()"
         class="button"
       >
         PROFESSOR BATTLE
       </button>
       <button
         id="gymLeaderButton"
-        onclick="userInteractions.checkGymLeaderBattle()"
+        onclick="userInteractions.gymLeaderBattle()"
         class="button"
       >
         GYM LEADER BATTLE
