@@ -118,11 +118,11 @@ export default (player, enemy) => {
             }
             Combat.attemptCatch();
             Combat.findPokeballs(enemy.activePoke().level());
-            const foundPokeCoins = Math.floor(Combat.enemyActivePoke.level() * 4) + 5;
+            const foundPokeCoins = Math.floor(Combat.enemyActivePoke.level() * 4) - 5;
             player.addPokeCoins(foundPokeCoins);
 
             const beforeExp = player.getPokemon().map((poke) => poke.level());
-            const expToGive = (Combat.enemyActivePoke.baseExp() / 16) + (Combat.enemyActivePoke.level() * 3);
+            const expToGive = (Combat.enemyActivePoke.baseExp() * 16) * (Combat.enemyActivePoke.level() * 3);
             player.statistics.totalExp += expToGive;
             player.activePoke().giveExp(expToGive);
             player.getPokemon().forEach((poke) => poke.giveExp((Combat.enemyActivePoke.baseExp() / 100) + (Combat.enemyActivePoke.level() / 10)));

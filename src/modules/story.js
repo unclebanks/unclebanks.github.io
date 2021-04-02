@@ -39,7 +39,6 @@ export default (player, enemy, combatLoop, Poke) => {
                 combatLoop.unpause();
                 renderView(dom, enemy, player);
                 dom.renderRoutesBox();
-                player.unlocked.tryThis += 1;
                 closeModal($('#storyModal'));
             },
         },

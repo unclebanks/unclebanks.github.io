@@ -369,13 +369,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('achievementsModal'));
         },
         viewInventory: function () {
-            if (!isEmpty(player.badges)) {
-                let badgesHTML = '';
-                for (const badge in player.badges) {
-                    badgesHTML += `${'<img src="assets/images/badges/'}${[badge]}.png"></img>`;
-                }
-                document.getElementById('badgeList').innerHTML = badgesHTML;
-            }
             let inventoryHTML = '';
             const vitamins = Object.keys(VITAMINS);
             for (let i = 0; i < vitamins.length; i++) {
@@ -387,6 +380,42 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
+        },
+        viewBadges: function () {
+            if (!isEmpty(player.badges)) {
+                let badgesHTML = '';
+                for (const badge in player.badges) {
+                    badgesHTML += `${'<img src="assets/images/badges/'}${[badge]}.png"></img>`;
+                }
+                document.getElementById('badgeList').innerHTML = badgesHTML;
+                openModal(document.getElementById('badgesModal'));
+            } else {
+                alert('You have no Badges');
+            }
+        },
+        viewEvoStones: function () {
+            if (!isEmpty(player.evoStones)) {
+                let evoStonesHTML = '';
+                for (const evoStones in player.evoStones) {
+                    evoStonesHTML += `${'<img src="assets/images/evoStones/'}${[evoStones]}.png"></img>`;
+                }
+                document.getElementById('evoStoneList').innerHTML = evoStonesHTML;
+                openModal(document.getElementById('evoStonesModal'));
+            } else {
+                alert('You have no Evolution Stones');
+            }
+        },
+        viewKeyItems: function () {
+            if (!isEmpty(player.unlocked)) {
+                let keyItemsHTML = '';
+                for (const keyItems in player.unlocked) {
+                    keyItemsHTML += `${'<img src="assets/images/evoStones/'}${[keyItems]}.png"></img>`;
+                }
+                document.getElementById('keyItemsList').innerHTML = keyItemsHTML;
+                openModal(document.getElementById('keyItemsModal'));
+            } else {
+                alert('You have no Key Items');
+            }
         },
         viewTown: function () {
             const region = player.settings.currentRegionId.toLowerCase();
