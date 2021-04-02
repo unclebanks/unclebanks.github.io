@@ -409,7 +409,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (!isEmpty(player.unlocked)) {
                 let keyItemsHTML = '';
                 for (const keyItems in player.unlocked) {
-                    keyItemsHTML += `${'<img src="assets/images/evoStones/'}${[keyItems]}.png"></img>`;
+                    keyItemsHTML += `${'<img src="assets/images/keyItems/'}${[keyItems]}.png"></img>`;
                 }
                 document.getElementById('keyItemsList').innerHTML = keyItemsHTML;
                 openModal(document.getElementById('keyItemsModal'));

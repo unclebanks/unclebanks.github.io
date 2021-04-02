@@ -1,7 +1,7 @@
 <template>
   <CardModal
     name="keyItems"
-    title="KeyItems"
+    title="Key Items"
   >
     <template #body>
       <div class="section">

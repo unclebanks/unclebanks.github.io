@@ -1,7 +1,7 @@
 <template>
   <CardModal
     name="evoStones"
-    title="EvolutionStones"
+    title="Evolution Stones"
   >
     <template #body>
       <div class="section">
