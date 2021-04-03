@@ -24,7 +24,11 @@ interface ShopItemMegaStone extends ShopItemBase {
     megaStones: string,
 }
 
-type ShopItem = ShopItemBall | ShopItemBattleItem | ShopItemUnlockable | ShopItemMegaStone;
+interface ShopItemEvoStone extends ShopItemBase {
+    evoStones: string,
+}
+
+type ShopItem = ShopItemBall | ShopItemBattleItem | ShopItemUnlockable | ShopItemMegaStone | ShopItemEvoStone;
 
 interface PokecoinShopItemBase {
     pokecoins: number,
@@ -527,27 +531,27 @@ class Town {
                 {
                     name: 'Thunder Stone',
                     catchcoins: 1000,
-                    unlockable: 'thunderStone',
+                    evoStones: 'thunderStone',
                 },
                 {
                     name: 'Fire Stone',
                     catchcoins: 1000,
-                    unlockable: 'fireStone',
+                    evoStones: 'fireStone',
                 },
                 {
                     name: 'Water Stone',
                     catchcoins: 1000,
-                    unlockable: 'waterStone',
+                    evoStones: 'waterStone',
                 },
                 {
                     name: 'Leaf Stone',
                     catchcoins: 1000,
-                    unlockable: 'leafStone',
+                    evoStones: 'leafStone',
                 },
                 {
                     name: 'Moon Stone',
                     catchcoins: 1000,
-                    unlockable: 'moonStone',
+                    evoStones: 'moonStone',
                 },
             ],
             johto: [
@@ -569,27 +573,27 @@ class Town {
                 {
                     name: 'Sun Stone',
                     catchcoins: 1000,
-                    unlockable: 'sunStone',
+                    evoStones: 'sunStone',
                 },
                 {
                     name: 'Metal Coat',
                     catchcoins: 1000,
-                    unlockable: 'metalCoat',
+                    evoStones: 'metalCoat',
                 },
                 {
                     name: 'Soothe Bell',
                     catchcoins: 1000,
-                    unlockable: 'sootheBell',
+                    evoStones: 'sootheBell',
                 },
                 {
                     name: 'Upgrade',
                     catchcoins: 1000,
-                    unlockable: 'upGrade',
+                    evoStones: 'upGrade',
                 },
                 {
                     name: 'Dragon Scale',
                     catchcoins: 1000,
-                    unlockable: 'dragonScale',
+                    evoStones: 'dragonScale',
                 },
             ],
             hoenn: [
@@ -769,6 +773,10 @@ class Town {
                 canBuy = false;
                 own = true;
             }
+            if ('evoStones' in item && this.player.evoStones[item.evoStones]) {
+                canBuy = false;
+                own = true;
+            }
             const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
             const buttonText = (own) ? 'Own' : 'Buy';
             const buttonHTML = ` <button onclick="town.buyCatchCoinItem('${region}', ${i})"${disableButton}>${buttonText}</button>`;
@@ -841,6 +849,10 @@ class Town {
             this.player.currencyAmount.catchcoins -= item.catchcoins;
             if ('unlockable' in item) {
                 this.player.unlocked[item.unlockable] = 1;
+                this.dom.renderRouteList();
+            }
+            if ('evoStones' in item) {
+                this.player.evoStones[item.evoStones] = 1;
                 this.dom.renderRouteList();
             }
             this.renderCatchCoinShop(region); // force refresh of shop

@@ -369,13 +369,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('achievementsModal'));
         },
         viewInventory: function () {
-            if (!isEmpty(player.badges)) {
-                let badgesHTML = '';
-                for (const badge in player.badges) {
-                    badgesHTML += `${'<img src="assets/images/badges/'}${[badge]}.png"></img>`;
-                }
-                document.getElementById('badgeList').innerHTML = badgesHTML;
-            }
             let inventoryHTML = '';
             const vitamins = Object.keys(VITAMINS);
             for (let i = 0; i < vitamins.length; i++) {
@@ -387,6 +380,42 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
+        },
+        viewBadges: function () {
+            if (!isEmpty(player.badges)) {
+                let badgesHTML = '';
+                for (const badge in player.badges) {
+                    badgesHTML += `${'<img src="assets/images/badges/'}${[badge]}.png"></img>`;
+                }
+                document.getElementById('badgeList').innerHTML = badgesHTML;
+                openModal(document.getElementById('badgesModal'));
+            } else {
+                alert('You have no Badges');
+            }
+        },
+        viewEvoStones: function () {
+            if (!isEmpty(player.evoStones)) {
+                let evoStonesHTML = '';
+                for (const evoStones in player.evoStones) {
+                    evoStonesHTML += `${'<img src="assets/images/evoStones/'}${[evoStones]}.png"></img>`;
+                }
+                document.getElementById('evoStoneList').innerHTML = evoStonesHTML;
+                openModal(document.getElementById('evoStonesModal'));
+            } else {
+                alert('You have no Evolution Stones');
+            }
+        },
+        viewKeyItems: function () {
+            if (!isEmpty(player.unlocked)) {
+                let keyItemsHTML = '';
+                for (const keyItems in player.unlocked) {
+                    keyItemsHTML += `${'<img src="assets/images/keyItems/'}${[keyItems]}.png"></img>`;
+                }
+                document.getElementById('keyItemsList').innerHTML = keyItemsHTML;
+                openModal(document.getElementById('keyItemsModal'));
+            } else {
+                alert('You have no Key Items');
+            }
         },
         viewTown: function () {
             const region = player.settings.currentRegionId.toLowerCase();
@@ -473,16 +502,58 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.gymLeader3ABattle();
             }
         },
+        checkNPCBattle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.npc.name === 'Nugget 5') {
+                this.npcBattle();
+            }
+        },
         checkNPC: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.npc.name === 'Bill') {
-                this.billEvent();
+            if (routeData.npc.name === 'Prof. Oak') {
+                this.oakEvent();
             }
             if (routeData.npc.name === 'Pewter Museum') {
                 this.pewterMuseumEvent();
             }
+            if (routeData.npc.name === 'Nugget 5') {
+                this.nuggetBridgeEvent();
+            }
+            if (routeData.npc.name === 'Bill') {
+                this.billEvent();
+            }
             if (routeData.npc.name === 'Cinnabar Lab') {
                 this.cinnabarLabEvent();
+            }
+        },
+        oakEvent: function () {
+            alert('How is your Pokedex Coming along?');
+        },
+        pewterMuseumEvent: function () {
+            if (player.events.pewterMuseum1 === true) {
+                alert('Did you take that fossil to Cinnabar Island?');
+            }
+            if (!player.badges['Boulder Badge']) {
+                alert('Why not beat Brock and come back?');
+            }
+            if (player.badges['Boulder Badge'] === true && !player.events.pewterMuseum1) {
+                player.unlocked.oldAmber = true;
+                alert('Congrats on the win. Take this Old Amber as a bonus');
+                player.events.pewterMuseum1 = true;
+            }
+        },
+        nuggetBridgeEvent: function () {
+            if (player.events.nugget5 === true && !player.hasPokemon('Charmander')) {
+                alert('I think you would do great in Team Rocket. Here is a Charmander as a bribe.');
+                player.addPoke(new Poke(POKEDEX[4], 25));
+                player.addPokedex('Charmander', POKEDEXFLAGS.ownNormal);
+            }
+            if (!player.events.nugget5) {
+                alert('Defeat the 5 of us in a row to win a special prize!');
+                this.checkNPCBattle();
+            }
+            if (player.events.nugget5 === true && player.hasPokemon('Charmander')) {
+                alert('You feel like joining us yet?');
             }
         },
         billEvent: function () {
@@ -514,19 +585,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('No trades right now. Sorry');
             }
         },
-        pewterMuseumEvent: function () {
-            if (player.events.pewterMuseum1 === true) {
-                alert('Did you take that fossil to Cinnabar Island?');
-            }
-            if (!player.badges['Boulder Badge']) {
-                alert('Why not beat Brock and come back?');
-            }
-            if (player.badges['Boulder Badge'] === true && !player.events.pewterMuseum1) {
-                player.unlocked.oldAmber = true;
-                alert('Congrats on the win. Take this Old Amber as a bonus');
-                player.events.pewterMuseum1 = true;
-            }
-        },
         cinnabarLabEvent: function () {
             if (!player.events.cinnabarLab1) {
                 alert('Welcome, if you have any fossils we can restore them to the Pokemon they were.');
@@ -552,44 +610,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 combatLoop.refresh();
             }
         },
-        prof1Battle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.prof1 && routeData.prof1.poke.length > 0) {
-                combatLoop.prof1 = { name: routeData.prof1.name, win: routeData.prof1.win };
-                combatLoop.prof1Poke = Object.values({ ...routeData.prof1.poke });
-                combatLoop.unpause();
-                combatLoop.refresh();
-            }
-        },
-        prof2Battle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.prof2 && routeData.prof2.poke.length > 0) {
-                combatLoop.prof2 = { name: routeData.prof2.name, win: routeData.prof2.win };
-                combatLoop.prof2Poke = Object.values({ ...routeData.prof2.poke });
-                combatLoop.unpause();
-                combatLoop.refresh();
-            }
-        },
-        prof3Battle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.prof3 && routeData.prof3.poke.length > 0) {
-                combatLoop.prof3 = { name: routeData.prof3.name, win: routeData.prof3.win };
-                combatLoop.prof3Poke = Object.values({ ...routeData.prof3.poke });
-                combatLoop.unpause();
-                combatLoop.refresh();
-            }
-        },
-        prof3ABattle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.prof3 && routeData.prof3.poke.length > 0) {
-                combatLoop.prof3 = {
-                    name: routeData.prof3.name, win: routeData.prof3.win, reward: routeData.prof3.reward, megaStone: routeData.prof3.megaStone, megaStones: routeData.prof3.megaStones,
-                };
-                combatLoop.prof3Poke = Object.values({ ...routeData.prof3.poke });
-                combatLoop.unpause();
-                combatLoop.refresh();
-            }
-        },
         gymLeaderBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (routeData.gymLeader && routeData.gymLeader.poke.length > 0) {
@@ -599,40 +619,14 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 combatLoop.refresh();
             }
         },
-        gymLeader1Battle: function () {
+        npcBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.gymLeader1 && routeData.gymLeader1.poke.length > 0) {
-                combatLoop.gymLeader1 = { name: routeData.gymLeader1.name, win: routeData.gymLeader1.win };
-                combatLoop.gymLeader1Poke = Object.values({ ...routeData.gymLeader1.poke });
-                combatLoop.unpause();
-                combatLoop.refresh();
-            }
-        },
-        gymLeader2Battle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.gymLeader2 && routeData.gymLeader2.poke.length > 0) {
-                combatLoop.gymLeader2 = { name: routeData.gymLeader2.name, win: routeData.gymLeader2.win };
-                combatLoop.gymLeader2Poke = Object.values({ ...routeData.gymLeader2.poke });
-                combatLoop.unpause();
-                combatLoop.refresh();
-            }
-        },
-        gymLeader3Battle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.gymLeader3 && routeData.gymLeader3.poke.length > 0) {
-                combatLoop.gymLeader3 = { name: routeData.gymLeader3.name, win: routeData.gymLeader3.win };
-                combatLoop.gymLeader3Poke = Object.values({ ...routeData.gymLeader3.poke });
-                combatLoop.unpause();
-                combatLoop.refresh();
-            }
-        },
-        gymLeader3ABattle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.gymLeader3 && routeData.gymLeader3.poke.length > 0) {
-                combatLoop.gymLeader3 = {
-                    name: routeData.gymLeader3.name, win: routeData.gymLeader3.win, reward: routeData.gymLeader3.reward, megaStone: routeData.gymLeader3.megaStone,
+            if (routeData.npc && routeData.npc.poke.length > 0) {
+                combatLoop.npc = {
+                    name: routeData.npc.name,
+                    event: routeData.npc.event,
                 };
-                combatLoop.gymLeader3Poke = Object.values({ ...routeData.gymLeader3.poke });
+                combatLoop.npcPoke = Object.values({ ...routeData.npc.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
             }

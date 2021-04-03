@@ -18,45 +18,15 @@ export default (starter, player, Poke) => {
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);
     };
-    const prof1Poke = (pokemonList) => {
-        const selected = 0;
-        combatLoop.profCurrentID = selected;
-        const poke = pokeByName(pokemonList[selected][0]);
-        return generator(poke, pokemonList[selected][1]);
-    };
-    const prof2Poke = (pokemonList) => {
-        const selected = 0;
-        combatLoop.profCurrentID = selected;
-        const poke = pokeByName(pokemonList[selected][0]);
-        return generator(poke, pokemonList[selected][1]);
-    };
-    const prof3Poke = (pokemonList) => {
-        const selected = 0;
-        combatLoop.profCurrentID = selected;
-        const poke = pokeByName(pokemonList[selected][0]);
-        return generator(poke, pokemonList[selected][1]);
-    };
     const gymLeaderPoke = (pokemonList) => {
         const selected = 0;
         combatLoop.gymLeaderCurrentID = selected;
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);
     };
-    const gymLeader1Poke = (pokemonList) => {
+    const npcPoke = (pokemonList) => {
         const selected = 0;
-        combatLoop.gymLeaderCurrentID = selected;
-        const poke = pokeByName(pokemonList[selected][0]);
-        return generator(poke, pokemonList[selected][1]);
-    };
-    const gymLeader2Poke = (pokemonList) => {
-        const selected = 0;
-        combatLoop.gymLeaderCurrentID = selected;
-        const poke = pokeByName(pokemonList[selected][0]);
-        return generator(poke, pokemonList[selected][1]);
-    };
-    const gymLeader3Poke = (pokemonList) => {
-        const selected = 0;
-        combatLoop.gymLeaderCurrentID = selected;
+        combatLoop.npcCurrentID = selected;
         const poke = pokeByName(pokemonList[selected][0]);
         return generator(poke, pokemonList[selected][1]);
     };
@@ -87,12 +57,25 @@ export default (starter, player, Poke) => {
             if (regionData._global.superRare && Math.random() < (1 / (2 ** 16))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.superRare);
             }
-            if (routeData._special) {
-                pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
-            }
         }
-        const poke = pokeByName(randomArrayElement(pokemonList));
-        const level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)));
+        if (routeData._special) {
+            pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
+        }
+        const boostedRoamer = player.routeGetBoostedRoamer(regionId, routeId, false);
+        let pokeSpecies = false;
+        let level = 1;
+        if (boostedRoamer) { // remove boosted roamer from regular spawn pool
+            pokemonList = pokemonList.filter((pokemon) => pokemon !== boostedRoamer.pokemon);
+        }
+        if (boostedRoamer && Math.random() < 0.05) {
+            pokeSpecies = boostedRoamer.pokemon;
+            level = boostedRoamer.level || 50;
+            player.boostedRoamerExpired();
+        } else {
+            pokeSpecies = randomArrayElement(pokemonList);
+            level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)));
+        }
+        const poke = pokeByName(pokeSpecies);
         return generator(poke, level);
     };
 
@@ -100,13 +83,8 @@ export default (starter, player, Poke) => {
         activePoke: () => active,
         clear: () => active = null,
         profPoke: (pokemonList) => active = profPoke(pokemonList),
-        prof1Poke: (pokemonList) => active = prof1Poke(pokemonList),
-        prof2Poke: (pokemonList) => active = prof2Poke(pokemonList),
-        prof3Poke: (pokemonList) => active = prof3Poke(pokemonList),
         gymLeaderPoke: (pokemonList) => active = gymLeaderPoke(pokemonList),
-        gymLeader1Poke: (pokemonList) => active = gymLeader1Poke(pokemonList),
-        gymLeader2Poke: (pokemonList) => active = gymLeader2Poke(pokemonList),
-        gymLeader3Poke: (pokemonList) => active = gymLeader3Poke(pokemonList),
+        npcPoke: (pokemonList) => active = npcPoke(pokemonList),
         generateNew: (regionId, routeId) => active = generateNew(regionId, routeId),
         attachCL: (_combatLoop) => combatLoop = _combatLoop,
     };
