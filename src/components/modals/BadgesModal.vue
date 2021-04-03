@@ -1,14 +1,14 @@
 <template>
   <CardModal
-    name="inventory"
-    title="Vitamins"
+    name="badges"
+    title="Badges"
   >
     <template #body>
       <div class="section">
         <h3 class="subtitle">
-          Vitamins
+          Badges
         </h3>
-        <ul id="inventoryList">
+        <ul id="badgeList">
           <li>Nothing</li>
         </ul>
       </div>

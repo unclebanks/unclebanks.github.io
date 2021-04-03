@@ -48,7 +48,7 @@ const evoRequirementMet = (poke, player) => (evo) => {
         case 'level':
             return poke.currentLevel() >= req.level;
         case 'stone':
-            return player.unlocked[req.stone];
+            return player.evoStones[req.stone];
         case 'megaStone':
             return player.megaStones[req.megaStone];
         case 'time': {

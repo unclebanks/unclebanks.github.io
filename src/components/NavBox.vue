@@ -5,7 +5,7 @@
         onclick="userInteractions.viewInventory()"
         class="button"
       >
-        Inventory
+        Vitamins
       </button>
 
       <button

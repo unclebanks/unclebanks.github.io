@@ -18,40 +18,7 @@ export default (lastSave, appModel) => {
             ultraball: 0,
             masterball: 0,
         },
-        unlocked: {
-            shinyDex: 0,
-            razzBerry: 0,
-            timeMachine: 0,
-            oldAmber: 0,
-            ssTicket: 0,
-            safariTicket: 0,
-            megaBracelet: 0,
-            kantoOldRod: 0,
-            kantoGoodRod: 0,
-            kantoSuperRod: 0,
-            johtoOldRod: 0,
-            johtoGoodRod: 0,
-            johtoSuperRod: 0,
-            hoennOldRod: 0,
-            hoennGoodRod: 0,
-            hoennSuperRod: 0,
-            sinnohOldRod: 0,
-            sinnohGoodRod: 0,
-            sinnohSuperRod: 0,
-            unovaOldRod: 0,
-            unovaGoodRod: 0,
-            unovaSuperRod: 0,
-            kalosOldRod: 0,
-            kalosGoodRod: 0,
-            kalosSuperRod: 0,
-            alolaOldRod: 0,
-            alolaGoodRod: 0,
-            alolaSuperRod: 0,
-            galarOldRod: 0,
-            galarGoodRod: 0,
-            galarSuperRod: 0,
-            tryThis: 0,
-        },
+        unlocked: {},
         megaStones: {
             abomasite: 0,
             absolite: 0,
@@ -101,24 +68,7 @@ export default (lastSave, appModel) => {
             tyranitarite: 0,
             venusaurite: 0,
         },
-        evoStones: {
-            thunderStone: 0,
-            fireStone: 0,
-            waterStone: 0,
-            leafStone: 0,
-            moonStone: 0,
-            sunStone: 0,
-            metalCoat: 0,
-            sootheBell: 0,
-            dragonScale: 0,
-            upGrade: 0,
-            shinyStone: 0,
-            duskStone: 0,
-            dawnStone: 0,
-            iceStone: 0,
-            whippedDream: 0,
-            sachet: 0,
-        },
+        evoStones: {},
         currencyAmount: {
             pokecoins: 0,
             catchcoins: 0,
@@ -349,67 +299,67 @@ export default (lastSave, appModel) => {
         },
         routeUnlocked: function (region, route) {
             const routeData = ROUTES[region][route];
-            if (routeData.kantoOldRod && Player.unlocked.kantoOldRod < routeData.kantoOldRod) {
+            if (routeData.kantoOldRod && !Player.unlocked.kantoOldRod) {
                 return false;
             }
-            if (routeData.kantoGoodRod && Player.unlocked.kantoGoodRod < routeData.kantoGoodRod) {
+            if (routeData.kantoGoodRod && !Player.unlocked.kantoGoodRod) {
                 return false;
             }
-            if (routeData.kantoSuperRod && Player.unlocked.kantoSuperRod < routeData.kantoSuperRod) {
+            if (routeData.kantoSuperRod && !Player.unlocked.kantoSuperRod) {
                 return false;
             }
-            if (routeData.johtoOldRod && Player.unlocked.johtoOldRod < routeData.johtoOldRod) {
+            if (routeData.johtoOldRod && !Player.unlocked.johtoOldRod) {
                 return false;
             }
-            if (routeData.johtoGoodRod && Player.unlocked.johtoGoodRod < routeData.johtoGoodRod) {
+            if (routeData.johtoGoodRod && !Player.unlocked.johtoGoodRod) {
                 return false;
             }
-            if (routeData.johtoSuperRod && Player.unlocked.johtoSuperRod < routeData.johtoSuperRod) {
+            if (routeData.johtoSuperRod && !Player.unlocked.johtoSuperRod) {
                 return false;
             }
-            if (routeData.hoennOldRod && Player.unlocked.hoennOldRod < routeData.hoennOldRod) {
+            if (routeData.hoennOldRod && !Player.unlocked.hoennOldRod) {
                 return false;
             }
-            if (routeData.hoennGoodRod && Player.unlocked.hoennGoodRod < routeData.hoennGoodRod) {
+            if (routeData.hoennGoodRod && !Player.unlocked.hoennGoodRod) {
                 return false;
             }
-            if (routeData.hoennSuperRod && Player.unlocked.hoennSuperRod < routeData.hoennSuperRod) {
+            if (routeData.hoennSuperRod && !Player.unlocked.hoennSuperRod) {
                 return false;
             }
-            if (routeData.sinnohOldRod && Player.unlocked.sinnohOldRod < routeData.sinnohOldRod) {
+            if (routeData.sinnohOldRod && !Player.unlocked.sinnohOldRod) {
                 return false;
             }
-            if (routeData.sinnohGoodRod && Player.unlocked.sinnohGoodRod < routeData.sinnohGoodRod) {
+            if (routeData.sinnohGoodRod && !Player.unlocked.sinnohGoodRod) {
                 return false;
             }
-            if (routeData.sinnohSuperRod && Player.unlocked.sinnohSuperRod < routeData.sinnohSuperRod) {
+            if (routeData.sinnohSuperRod && !Player.unlocked.sinnohSuperRod) {
                 return false;
             }
-            if (routeData.unovaOldRod && Player.unlocked.unovaOldRod < routeData.unovaOldRod) {
+            if (routeData.unovaOldRod && !Player.unlocked.unovaOldRod) {
                 return false;
             }
-            if (routeData.unovaGoodRod && Player.unlocked.unovaGoodRod < routeData.unovaGoodRod) {
+            if (routeData.unovaGoodRod && !Player.unlocked.unovaGoodRod) {
                 return false;
             }
-            if (routeData.unovaSuperRod && Player.unlocked.unovaSuperRod < routeData.unovaSuperRod) {
+            if (routeData.unovaSuperRod && !Player.unlocked.unovaSuperRod) {
                 return false;
             }
-            if (routeData.kalosOldRod && Player.unlocked.kalosOldRod < routeData.kalosOldRod) {
+            if (routeData.kalosOldRod && !Player.unlocked.kalosOldRod) {
                 return false;
             }
-            if (routeData.kalosGoodRod && Player.unlocked.kalosGoodRod < routeData.kalosGoodRod) {
+            if (routeData.kalosGoodRod && !Player.unlocked.kalosGoodRod) {
                 return false;
             }
-            if (routeData.kalosSuperRod && Player.unlocked.kalosSuperRod < routeData.kalosSuperRod) {
+            if (routeData.kalosSuperRod && !Player.unlocked.kalosSuperRod) {
                 return false;
             }
-            if (routeData.alolaOldRod && Player.unlocked.alolaOldRod < routeData.alolaOldRod) {
+            if (routeData.alolaOldRod && !Player.unlocked.alolaOldRod) {
                 return false;
             }
-            if (routeData.alolaGoodRod && Player.unlocked.alolaGoodRod < routeData.alolaGoodRod) {
+            if (routeData.alolaGoodRod && !Player.unlocked.alolaGoodRod) {
                 return false;
             }
-            if (routeData.alolaSuperRod && Player.unlocked.alolaSuperRod < routeData.alolaSuperRod) {
+            if (routeData.alolaSuperRod && !Player.unlocked.alolaSuperRod) {
                 return false;
             }
             if (routeData._unlock) {
