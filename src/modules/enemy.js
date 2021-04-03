@@ -57,12 +57,25 @@ export default (starter, player, Poke) => {
             if (regionData._global.superRare && Math.random() < (1 / (2 ** 16))) {
                 pokemonList = mergeArray(pokemonList, regionData._global.superRare);
             }
-            if (routeData._special) {
-                pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
-            }
         }
-        const poke = pokeByName(randomArrayElement(pokemonList));
-        const level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)));
+        if (routeData._special) {
+            pokemonList = mergeArray(pokemonList, routeData._special.filter(requirementMet).flatMap((s) => s.pokemon));
+        }
+        const boostedRoamer = player.routeGetBoostedRoamer(regionId, routeId, false);
+        let pokeSpecies = false;
+        let level = 1;
+        if (boostedRoamer) { // remove boosted roamer from regular spawn pool
+            pokemonList = pokemonList.filter((pokemon) => pokemon !== boostedRoamer.pokemon);
+        }
+        if (boostedRoamer && Math.random() < 0.05) {
+            pokeSpecies = boostedRoamer.pokemon;
+            level = boostedRoamer.level || 50;
+            player.boostedRoamerExpired();
+        } else {
+            pokeSpecies = randomArrayElement(pokemonList);
+            level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)));
+        }
+        const poke = pokeByName(pokeSpecies);
         return generator(poke, level);
     };
 

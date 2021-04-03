@@ -200,6 +200,10 @@ export default (player, enemy) => {
                 }
             }
 
+            if (player.checkBoostedRoamer()) {
+                dom.renderRouteList();
+            }
+
             player.savePokes();
             Combat.newEnemy();
             Combat.enemyTimer();
