@@ -50,7 +50,7 @@ type BattlecoinShopItem = BattlecoinShopItemBase & ShopItem;
 
 type BattlecoinShop = BattlecoinShopItem[];
 
-type CatchcoinShopItem = CatchcoinShopItemBase & ShopItem[];
+type CatchcoinShopItem = CatchcoinShopItemBase & ShopItem;
 
 type CatchcoinShop = CatchcoinShopItem[];
 
@@ -780,7 +780,7 @@ class Town {
             const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
             const buttonText = (own) ? 'Own' : 'Buy';
             const buttonHTML = ` <button onclick="town.buyCatchCoinItem('${region}', ${i})"${disableButton}>${buttonText}</button>`;
-            shopHTML += `${'<li><img src="assets/images/evoStones/'}${item.evoStones}.png" height="30" width="30"></img>: <img src="assets/images/currency/CatchCoin.png" height="16" width="16"></img>${item.catchcoins}${buttonHTML}</li>`;
+            shopHTML += `${'<li><img src="assets/images/evoStones/'}${item.name}.png" height="30" width="30"></img>: <img src="assets/images/currency/CatchCoin.png" height="16" width="16"></img>${item.catchcoins}${buttonHTML}</li>`;
         }
         $('#catchcoinShopItems').innerHTML = shopHTML;
     }
