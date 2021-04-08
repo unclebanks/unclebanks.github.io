@@ -761,7 +761,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'M-Lucario', 'requires': { 'type': 'megaStone', 'megaStone': 'lucarionite' } },
     ],
     'Abomasnow': [
-        { 'to': 'M-Abomasnow', 'requires': { 'type': 'megaStone', 'megaStone': 'abomasnite' } },
+        { 'to': 'M-Abomasnow', 'requires': { 'type': 'megaStone', 'megaStone': 'abomasite' } },
     ],
     'Snivy': [
         { 'to': 'Servine', 'requires': { 'type': 'level', 'level': 17 } },

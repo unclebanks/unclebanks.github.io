@@ -2045,6 +2045,10 @@ const ROUTES: Routes = {
                     ['Solrock', 70],
                 ],
             },
+            npc: {
+                name: 'Steven\'s Home',
+                event: 'beldum1',
+            },
             _unlock: {
                 badges: {
                     'Feather Badge': true,
