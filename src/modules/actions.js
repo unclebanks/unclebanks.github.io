@@ -537,6 +537,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.npc.name === 'Cinnabar Lab') {
                 this.cinnabarLabEvent();
             }
+            if (routeData.npc.name === 'Steven\'s House') {
+                this.beldumEvent();
+            }
         },
         oakEvent: function () {
             alert('How is your Pokedex Coming along?');
@@ -606,6 +609,16 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('Is that an Old Amber? Ha! Now it is an Aerodactyl');
                 player.addPoke(new Poke(POKEDEX[171], 25));
                 player.addPokedex('Aerodactyl', POKEDEXFLAGS.ownNormal);
+            }
+        },
+        beldumEvent: function () {
+            if (!player.events.beldum1) {
+                alert('Congrats on being dope. Take this Beldum');
+                player.addPoke(new Poke(pokeByName('Beldum'), 5));
+                player.addPokedex('Beldum', POKEDEXFLAGS.ownNormal);
+                player.events.beldum1 = true;
+            } else {
+                alert('No one is home');
             }
         },
         profBattle: function () {
