@@ -27,6 +27,7 @@ export default (lastSave, appModel) => {
             masterball: 0,
         },
         unlocked: {},
+        secretCodes: {},
         megaStones: {
             abomasite: 0,
             absolite: 0,
@@ -473,6 +474,7 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('events', JSON.stringify(this.events));
                 localStorage.setItem('unlocked', JSON.stringify(this.unlocked));
                 localStorage.setItem('megaStones', JSON.stringify(this.megaStones));
+                localStorage.setItem('secretCodes', JSON.stringify(this.secretCodes));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
                 localStorage.setItem('currentBoostedRoamer', JSON.stringify(this.currentBoostedRoamer));
@@ -492,6 +494,7 @@ export default (lastSave, appModel) => {
                 events: this.events,
                 unlocked: this.unlocked,
                 megaStones: this.megaStones,
+                secretCodes: this.secretCodes,
                 evoStones: this.evoStones,
                 currencyAmount: this.currencyAmount,
                 battleItems: this.battleItems,
@@ -581,6 +584,9 @@ export default (lastSave, appModel) => {
             }
             if (JSON.parse(localStorage.getItem('currentBoostedRoamer'))) {
                 this.currentBoostedRoamer = JSON.parse(localStorage.getItem('currentBoostedRoamer'));
+            }
+            if (JSON.parse(localStorage.getItem('secretCodes'))) {
+                this.secretCodes = JSON.parse(localStorage.getItem('secretCodes'));
             }
         },
         loadFromString: function (_saveData) {

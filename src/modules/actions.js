@@ -1,6 +1,7 @@
 import { renderView } from './display';
 import ROUTES from './routes';
-import { $, camelCaseToString, isEmpty } from './utilities';
+// eslint-disable-next-line object-curly-newline
+import { $, camelCaseToString, isEmpty, pokeByName } from './utilities';
 import ACHIEVEMENTS from './achievements';
 import { POKEDEXFLAGS, VITAMINS } from './data';
 import { openModal, closeModal } from './modalEvents';
@@ -380,6 +381,17 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
+        },
+        enterCode: function () {
+            // eslint-disable-next-line prefer-const
+            let secretCode = prompt('Please enter your secret code', 'Secret Code');
+            if (secretCode === 'Charmander' && !player.secretCodes.charmander) {
+                player.addPoke(new Poke(pokeByName('Charmander'), 50));
+                player.secretCodes.charmander = true;
+            }
+            if (player.secretCodes.charmander) {
+                alert('You have already claimed this code');
+            }
         },
         viewBadges: function () {
             if (!isEmpty(player.badges)) {
