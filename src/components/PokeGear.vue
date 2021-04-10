@@ -22,6 +22,13 @@
         class="button"
       >
         Key Items
+      </button><br>
+      <button
+        id="keyItemsButton"
+        onclick="userInteractions.enterCode()"
+        class="button"
+      >
+        Secret Codes
       </button>
     </div>
   </div>

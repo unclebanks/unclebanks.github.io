@@ -1,6 +1,7 @@
 import { renderView } from './display';
 import ROUTES from './routes';
-import { $, camelCaseToString, isEmpty } from './utilities';
+// eslint-disable-next-line object-curly-newline
+import { $, camelCaseToString, isEmpty, pokeByName } from './utilities';
 import ACHIEVEMENTS from './achievements';
 import { POKEDEXFLAGS, VITAMINS } from './data';
 import { openModal, closeModal } from './modalEvents';
@@ -381,6 +382,16 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
         },
+        enterCode: function () {
+            // eslint-disable-next-line prefer-const
+            let secretCode = prompt('Please enter your secret code', 'Secret Code');
+            if (secretCode === 'Charmander' && !player.secretCodes.charmander) {
+                player.addPoke(new Poke(pokeByName('Charmander'), 50));
+                player.secretCodes.charmander = true;
+            } else {
+                alert('Code Invalid or Already Claimed');
+            }
+        },
         viewBadges: function () {
             if (!isEmpty(player.badges)) {
                 let badgesHTML = '';
@@ -525,6 +536,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.npc.name === 'Cinnabar Lab') {
                 this.cinnabarLabEvent();
             }
+            if (routeData.npc.name === 'Steven\'s House') {
+                this.beldumEvent();
+            }
+            if (routeData.npc.name === 'Shrine\'s Old Man') {
+                this.abundantOldManEvent();
+            }
         },
         oakEvent: function () {
             alert('How is your Pokedex Coming along?');
@@ -594,6 +611,29 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('Is that an Old Amber? Ha! Now it is an Aerodactyl');
                 player.addPoke(new Poke(POKEDEX[171], 25));
                 player.addPokedex('Aerodactyl', POKEDEXFLAGS.ownNormal);
+            }
+        },
+        beldumEvent: function () {
+            if (!player.events.beldum1) {
+                alert('Congrats on being dope. Take this Beldum');
+                player.addPoke(new Poke(pokeByName('Beldum'), 5));
+                player.addPokedex('Beldum', POKEDEXFLAGS.ownNormal);
+                player.events.beldum1 = true;
+            } else {
+                alert('No one is home');
+            }
+        },
+        abundantOldManEvent: function () {
+            if (!player.events.abundantShrineEvent && player.hasPokemon('Thunderus') && player.hasPokemon('Landorus') && player.hasPokemon('Tornadus')) {
+                alert('Amazing that you\'ve tamed the Forces of Nature. Take this item to take them to the next level');
+                player.evoStones.revealGlass = 1;
+                player.events.abundantShrineEvent = true;
+            }
+            if (player.events.abundantShrineEvent === true) {
+                alert('Have you tried using the Reveal Glass on the Forces of Nature yet?');
+            }
+            if (!player.events.abundantShrineEvent && !player.hasPokemon('Landorus')) {
+                alert('Come back to me when you\'ve master the Forces of Nature');
             }
         },
         profBattle: function () {

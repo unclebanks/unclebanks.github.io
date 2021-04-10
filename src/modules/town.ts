@@ -222,22 +222,12 @@ class Town {
                     battlecoins: 2500,
                     unlockable: 'razzBerry',
                 },
-                {
-                    name: 'Masterball',
-                    battlecoins: 10000,
-                    ball: 'masterball',
-                },
             ],
             johto: [
                 {
                     name: 'Razz Berry',
                     battlecoins: 250,
                     unlockable: 'razzBerry',
-                },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
                 },
             ],
             hoenn: [
@@ -246,11 +236,6 @@ class Town {
                     battlecoins: 250,
                     unlockable: 'razzBerry',
                 },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
-                },
             ],
             sinnoh: [
                 {
@@ -258,22 +243,12 @@ class Town {
                     battlecoins: 250,
                     unlockable: 'razzBerry',
                 },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
-                },
             ],
             unova: [
                 {
                     name: 'Razz Berry',
                     battlecoins: 250,
                     unlockable: 'razzBerry',
-                },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
                 },
             ],
             kalos: [
@@ -504,11 +479,6 @@ class Town {
                     battlecoins: 250,
                     unlockable: 'razzBerry',
                 },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
-                },
             ],
         };
         this.catchcoinShops = {
@@ -679,6 +649,11 @@ class Town {
                     name: 'Super Rod',
                     catchcoins: 10000,
                     unlockable: 'alolaSuperRod',
+                },
+                {
+                    name: 'Ice Stone',
+                    catchcoins: 10000,
+                    evoStones: 'iceStone',
                 },
             ],
         };

@@ -2045,6 +2045,10 @@ const ROUTES: Routes = {
                     ['Solrock', 70],
                 ],
             },
+            npc: {
+                name: 'Steven\'s Home',
+                event: 'beldum1',
+            },
             _unlock: {
                 badges: {
                     'Feather Badge': true,
@@ -2516,7 +2520,7 @@ const ROUTES: Routes = {
         },
         strangeTV: {
             name: 'Strange TV',
-            pokes: ['Rotom'],
+            pokes: ['Rotom', 'Rotom-heat', 'Rotom-wash', 'Rotom-frost', 'Rotom-fan', 'Rotom-mow'],
             minLevel: 15,
             maxLevel: 15,
             respawn: 'floaromaTown',
@@ -3967,14 +3971,10 @@ const ROUTES: Routes = {
         },
         special124: {
             name: 'Abundant Shrine',
-            pokes: ['Cottonee', 'Swablu', 'Bronzor', 'Vulpix', 'Marill', 'Golduck', 'Altaria', 'Petilil', 'Basculin'],
-            minLevel: 33,
-            maxLevel: 36,
-            respawn: 'humilauCity',
-            _unlock: {
-                badges: {
-                    'Wave Badge': true,
-                },
+            town: true,
+            npc: {
+                name: 'Shrine\'s Old Man',
+                event: 'abundantOldMan',
             },
         },
         route117: {
