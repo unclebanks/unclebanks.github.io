@@ -539,6 +539,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.npc.name === 'Steven\'s House') {
                 this.beldumEvent();
             }
+            if (routeData.npc.name === 'Shrine\'s Old Man') {
+                this.abundantOldManEvent();
+            }
         },
         oakEvent: function () {
             alert('How is your Pokedex Coming along?');
@@ -618,6 +621,19 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.events.beldum1 = true;
             } else {
                 alert('No one is home');
+            }
+        },
+        abundantOldManEvent: function () {
+            if (!player.events.abundantShrineEvent && player.hasPokemon('Thunderus') && player.hasPokemon('Landorus') && player.hasPokemon('Tornadus')) {
+                alert('Amazing that you\'ve tamed the Forces of Nature. Take this item to take them to the next level');
+                player.evoStones.revealGlass = 1;
+                player.events.abundantShrineEvent = true;
+            }
+            if (player.events.abundantShrineEvent === true) {
+                alert('Have you tried using the Reveal Glass on the Forces of Nature yet?');
+            }
+            if (!player.events.abundantShrineEvent && !player.hasPokemon('Landorus')) {
+                alert('Come back to me when you\'ve master the Forces of Nature');
             }
         },
         profBattle: function () {

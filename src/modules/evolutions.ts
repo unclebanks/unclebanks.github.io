@@ -498,6 +498,15 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Tyranitar': [
         { 'to': 'M-Tyranitar', 'requires': { 'type': 'megaStone', 'megaStone': 'tyranitarite' } },
     ],
+    'Landorus': [
+        { 'to': 'Landorus-T', 'requires': { 'type': 'stone', 'stone': 'revealGlass' } },
+    ],
+    'Tornadus': [
+        { 'to': 'Tornadus-T', 'requires': { 'type': 'stone', 'stone': 'revealGlass' } },
+    ],
+    'Thundurus': [
+        { 'to': 'Thundurus-T', 'requires': { 'type': 'stone', 'stone': 'revealGlass' } },
+    ],
     'Treecko': [
         { 'to': 'Grovyle', 'requires': { 'type': 'level', 'level': 16 } },
     ],
@@ -1343,6 +1352,9 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Hakamo-o': [
         { 'to': 'Kommo-o', 'requires': { 'type': 'level', 'level': 45 } },
+    ],
+    'Type: Null': [
+        { 'to': 'Silvally', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
     ],
     'Cosmog': [
         { 'to': 'Cosmoem', 'requires': { 'type': 'level', 'level': 43 } },
