@@ -41,7 +41,7 @@
         class="button"
       >
         GYM LEADER BATTLE
-      </button>
+      </button><br>
       <button
         id="npcButton"
         onclick="userInteractions.checkNPC()"
