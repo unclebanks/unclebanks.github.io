@@ -536,7 +536,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.npc.name === 'Cinnabar Lab') {
                 this.cinnabarLabEvent();
             }
-            if (routeData.npc.name === 'Steven\'s House') {
+            if (routeData.npc.name === 'Steven\'s Home') {
                 this.beldumEvent();
             }
             if (routeData.npc.name === 'Shrine\'s Old Man') {
@@ -624,7 +624,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         abundantOldManEvent: function () {
-            if (!player.events.abundantShrineEvent && player.hasPokemon('Thunderus') && player.hasPokemon('Landorus') && player.hasPokemon('Tornadus')) {
+            if (!player.events.abundantShrineEvent && player.hasPokemon('Thundurus') && player.hasPokemon('Landorus') && player.hasPokemon('Tornadus')) {
                 alert('Amazing that you\'ve tamed the Forces of Nature. Take this item to take them to the next level');
                 player.evoStones.revealGlass = 1;
                 player.events.abundantShrineEvent = true;
