@@ -390,7 +390,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.addPoke(new Poke(pokeByName('Charmander'), 50));
                 player.secretCodes.charmander = true;
             } else {
-                alert('Code Invalid or Already Claimed');
+                notify('Code Invalid or Already Claimed', { type: 'danger' });
             }
         },
         viewBadges: function () {
