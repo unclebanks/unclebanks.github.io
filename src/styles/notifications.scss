@@ -1,0 +1,13 @@
+#notifications {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+
+    width: 20%;
+    height: 100vh;
+    overflow: hidden;
+
+    .notification {
+        border: 2px solid darkslategray;
+    }
+}

@@ -7,6 +7,7 @@ import { POKEDEXFLAGS, VITAMINS } from './data';
 import { openModal, closeModal } from './modalEvents';
 import Poke from './poke';
 import POKEDEX from './db';
+import notify from './notify';
 
 export default (player, combatLoop, enemy, town, story, appModel) => {
     let dom;
@@ -15,19 +16,19 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
 
         changeRoute: function (newRouteId, force = false) {
             if (!force && player.alivePokeIndexes().length == 0) {
-                alert('It is too dangerous to travel without a POKEMON.');
+                notify('It is too dangerous to travel without a POKEMON.');
                 return false;
             }
             if (combatLoop.prof || combatLoop.prof1 || combatLoop.prof2 || combatLoop.prof3) {
-                alert('You cannot run away from a PROFESSOR battle.');
+                notify('You cannot run away from a PROFESSOR battle.');
                 return false;
             }
             if (combatLoop.gymLeader || combatLoop.gymLeader1 || combatLoop.gymLeader2 || combatLoop.gymLeader3) {
-                alert('You cannot run away from a GYM LEADER battle.');
+                notify('You cannot run away from a GYM LEADER battle.');
                 return false;
             }
             if (!player.routeUnlocked(player.settings.currentRegionId, newRouteId)) {
-                alert('You cannot go there yet.');
+                notify('You cannot go there yet.');
                 return false;
             }
             player.settings.currentRouteId = newRouteId;
