@@ -212,7 +212,7 @@ ul {
     background-color: transparent;
     color: black;
 }
-#navBox storageButton {
+#navBox vitaminButton {
     margin-top: 7px;
     align-items: center;
     border-color: transparent;
@@ -224,7 +224,31 @@ ul {
     background-size: contain;
     background-repeat: no-repeat;
 }
-#navBox acheivementButton {
+#navBox dexButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: 100px;
+    max-height: 300px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url('../assets/other/PCIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox statsButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: 100px;
+    max-height: 300px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url('../assets/other/StatisticsIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox achievementButton {
     margin-top: 7px;
     align-items: center;
     border-color: transparent;
@@ -245,30 +269,6 @@ ul {
     background-color: transparent;
     color: transparent;
     background-image:url('../assets/other/SettingsIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox statsButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/StatisticsIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox pokedexButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/PCIcon.png');
     background-size: contain;
     background-repeat: no-repeat;
 }

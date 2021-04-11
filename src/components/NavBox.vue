@@ -4,20 +4,19 @@
     <br>
     <br>
     <br>
-    <br>
     <div class="buttons is-centered mb-0">
-      <acheivementButton
+      <achievementButton
         onclick="userInteractions.viewAchievements()"
         class="button"
       >
         .
-      </acheivementButton>
-      <storageButton
-        onclick="userInteractions.viewInventory()"
+      </achievementButton>
+      <vitaminButton
+        onclick="userInteractions.viewVitamins()"
         class="button"
       >
         .
-      </storageButton>
+      </vitaminButton>
 
       <statsButton
         onclick="userInteractions.viewStatistics()"
@@ -27,13 +26,12 @@
       </statsButton>
     </div>
     <div class="buttons is-centered">
-      <pokedexButton
-        id="viewPokeDex"
+      <dexButton
         onclick="userInteractions.viewStatistics()"
         class="button"
       >
         .
-      </pokedexButton>
+      </dexButton>
 
       <settingsButton
         class="button modal-button"
