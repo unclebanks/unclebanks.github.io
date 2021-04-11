@@ -5046,7 +5046,7 @@ const ROUTES: Routes = {
             pokes: ['Drowzee'],
             minLevel: 6,
             maxLevel: 9,
-            respawn: 'hauoliTown'
+            respawn: 'hauoliTown',
         },
         alola3: {
             name: 'Route 3',
@@ -5089,7 +5089,7 @@ const ROUTES: Routes = {
             pokes: ['Alolan Rattata', 'Eevee', 'Igglybuff', 'Lillipup', 'Pikipek', 'Yungoos', 'Mudbray', 'Crabrawler', 'Grubbin'],
             minLevel: 15,
             maxLevel: 18,
-            respawn: 'paniolaTown'
+            respawn: 'paniolaTown',
         },
         alola7: {
             name: 'Route 7',
@@ -5125,7 +5125,7 @@ const ROUTES: Routes = {
             minLevel: 18,
             maxLevel: 21,
             respawn: 'paniolaTown',
-        },  
+        },
         specialSpots: {
             name: 'Special Spots',
             pokes: ['Wimpod', 'Sandygast', 'Pyukumuku'],
