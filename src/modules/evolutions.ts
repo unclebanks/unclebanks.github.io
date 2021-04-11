@@ -441,6 +441,9 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Bonsly': [
         { 'to': 'Sudowoodo', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
     ],
+    'Porygon': [
+        { 'to': 'Porygon2', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
+    ],
     'Scyther': [
         { 'to': 'Scizor', 'requires': { 'type': 'stone', 'stone': 'metalCoat' } },
     ],
@@ -494,9 +497,6 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Pupitar': [
         { 'to': 'Tyranitar', 'requires': { 'type': 'level', 'level': 55 } },
-    ],
-    'Porygon': [
-        { 'to': 'Porygon2', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
     ],
     'Tyranitar': [
         { 'to': 'M-Tyranitar', 'requires': { 'type': 'megaStone', 'megaStone': 'tyranitarite' } },
