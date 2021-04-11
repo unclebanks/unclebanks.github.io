@@ -442,7 +442,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Sudowoodo', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
     ],
     'Porygon': [
-        { 'to': 'Porygon2', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
+        { 'to': 'Porygon2', 'requires': { 'type': 'stone', 'stone': 'Upgrade' } },
     ],
     'Scyther': [
         { 'to': 'Scizor', 'requires': { 'type': 'stone', 'stone': 'metalCoat' } },
