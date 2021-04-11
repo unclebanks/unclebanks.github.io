@@ -5023,112 +5023,187 @@ const ROUTES: Routes = {
                 ],
             },
         },
-        custom16: {
+        alola1: {
             name: 'Route 1',
             pokes: ['Pikipek', 'Yungoos', 'Grubbin', 'Rowlet', 'Litten', 'Popplio'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'ikiTown',
         },
-        custom17: {
+        hauoliTown: {
+            name: 'Hauoli Town',
+            town: true,
+        },
+        alola2: {
+            name: 'Route 2',
+            pokes: ['Alolan Rattata', 'Alolan Meowth', 'Abra', 'Drowzee', 'Smeargle', 'Yungoos', 'Spearow', 'Growlithe', 'Cutiefly', 'Makuhita'],
+            minLevel: 5,
+            maxLevel: 8,
+            respawn: 'hauoliTown',
+        },
+        verdantCavern: {
+            name: 'Verdant Cavern',
+            pokes: ['Drowzee'],
+            minLevel: 6,
+            maxLevel: 9,
+            respawn: 'hauoliTown'
+        },
+        alola3: {
             name: 'Route 3',
             pokes: ['Cutiefly', 'Rockruff', 'Oricorio', 'Crabrawler'],
             minLevel: 9,
             maxLevel: 12,
             respawn: 'ikiTown',
         },
-        custom18: {
+        heaheaCity: {
+            name: 'Heahea City',
+            town: true,
+        },
+        alola4: {
+            name: 'Route 4',
+            pokes: ['Alolan Rattata', 'Eevee', 'Igglybuff', 'Lillipup', 'Pikipek', 'Yungoos', 'Mudbray', 'Crabrawler', 'Grubbin'],
+            minLevel: 9,
+            maxLevel: 12,
+            respawn: 'ikiTown',
+        },
+        alola5: {
             name: 'Route 5',
             pokes: ['Mudbray', 'Dewpider', 'Salandit', 'Stufful'],
             minLevel: 13,
             maxLevel: 16,
-            respawn: 'ikiTown',
+            respawn: 'heaheaCity',
         },
-        custom19: {
+        paniolaTown: {
+            name: 'Paniola Town',
+            town: true,
+        },
+        brookletHill: {
+            name: 'Brooklet Hill',
+            pokes: ['Paras', 'Psyduck', 'Poliwag', 'Wingull', 'Surskit', 'Lillipup', 'Dewpider', 'Morelull'],
+            minLevel: 15,
+            maxLevel: 18,
+            respawn: 'paniolaTown',
+        },
+        alola6: {
+            name: 'Route 6',
+            pokes: ['Alolan Rattata', 'Eevee', 'Igglybuff', 'Lillipup', 'Pikipek', 'Yungoos', 'Mudbray', 'Crabrawler', 'Grubbin'],
+            minLevel: 15,
+            maxLevel: 18,
+            respawn: 'paniolaTown'
+        },
+        alola7: {
+            name: 'Route 7',
+            pokes: ['Tentacool', 'Wingull', 'Alolan Diglett', 'Finneon', 'Pyukumuku', 'Staryu', 'Magikarp', 'Wishiwashi'],
+            minLevel: 16,
+            maxLevel: 18,
+            respawn: 'paniolaTown',
+        },
+        welaVolcanoPark: {
+            name: 'Wela Volcano Park',
+            pokes: ['Cubone', 'Kangaskhan', 'Magby', 'Fletchling', 'Salandit', 'Nihilego'],
+            minLevel: 16,
+            maxLevel: 18,
+            respawn: 'paniolaTown',
+        },
+        seawardCave: {
+            name: 'Seaward Cave',
+            pokes: ['Tentacool', 'Wingull', 'Finneon', 'Luvdisc', 'Magikarp', 'Corsola', 'Wishiwashi'],
+            minLevel: 16,
+            maxLevel: 18,
+            respawn: 'paniolaTown',
+        },
+        alola8: {
+            name: 'Route 8',
+            pokes: ['Alolan Rattata', 'Fletchinder', 'Trumbeak', 'Yungoos', 'Salandit', 'Stufful', 'Crabrawler', 'Wimpod'],
+            minLevel: 18,
+            maxLevel: 20,
+            respawn: 'paniolaTown',
+        },
+        lushJungle: {
             name: 'Lush Jungle',
             pokes: ['Fomantis', 'Morelull', 'Bounsweet', 'Comfey', 'Oranguru', 'Passimian'],
             minLevel: 18,
             maxLevel: 21,
-            respawn: 'ikiTown',
-        },
-        custom20: {
+            respawn: 'paniolaTown',
+        },  
+        specialSpots: {
             name: 'Special Spots',
             pokes: ['Wimpod', 'Sandygast', 'Pyukumuku'],
             minLevel: 20,
             maxLevel: 20,
             respawn: 'ikiTown',
         },
-        custom21: {
+        mountHokulani: {
             name: 'Mount Hokulani',
             pokes: ['Minior', 'Komala'],
             minLevel: 25,
             maxLevel: 28,
             respawn: 'ikiTown',
         },
-        custom22: {
+        alola14: {
             name: 'Route 14',
             pokes: ['Turtonator', 'Togedemaru', 'Mimikyu'],
             minLevel: 29,
             maxLevel: 32,
             respawn: 'ikiTown',
         },
-        custom23: {
+        mountLanakila: {
             name: 'Mount Lanakila',
             pokes: ['Drampa', 'Jangmo-o'],
             minLevel: 42,
             maxLevel: 45,
             respawn: 'ikiTown',
         },
-        custom24: {
+        custom1: {
             name: 'Welcome to Alola',
             pokes: ['Alolan Rattata', 'Alolan Sandshrew', 'Alolan Vulpix', 'Alolan Diglett', 'Alolan Meowth', 'Alolan Geodude', 'Alolan Grimer'],
             minLevel: 20,
             maxLevel: 20,
             respawn: 'ikiTown',
         },
-        custom25: {
+        custom2: {
             name: 'Aether Paradise',
-            pokes: ['Type: Null', 'Cosmog'],
+            pokes: ['Type: Null', 'Cosmog', 'Cosmoem', 'Silvally'],
             minLevel: 40,
             maxLevel: 40,
             respawn: 'ikiTown',
         },
-        custom26: {
+        custom3: {
             name: 'Ruins',
             pokes: ['Tapu Koko', 'Tapu Lele', 'Tapu Bulu', 'Tapu Fini'],
             minLevel: 60,
             maxLevel: 60,
             respawn: 'ikiTown',
         },
-        custom27: {
+        custom4: {
             name: 'Altar',
             pokes: ['Solgaleo', 'Lunala'],
             minLevel: 55,
             maxLevel: 55,
             respawn: 'ikiTown',
         },
-        custom28: {
+        custom5: {
             name: 'Ultra Wormholes',
             pokes: ['Nihilego', 'Buzzwole', 'Pheromosa', 'Xurkitree', 'Celesteela', 'Kartana', 'Guzzlord'],
             minLevel: 55,
             maxLevel: 70,
             respawn: 'ikiTown',
         },
-        custom29: {
+        custom6: {
             name: 'Not an Ultra Beast',
             pokes: ['Necrozma'],
             minLevel: 70,
             maxLevel: 70,
             respawn: 'ikiTown',
         },
-        custom30: {
+        custom7: {
             name: 'Not a PokeBall',
             pokes: ['Magearna'],
             minLevel: 50,
             maxLevel: 50,
             respawn: 'ikiTown',
         },
-        custom31: {
+        custom8: {
             name: 'Fighting Ghost',
             pokes: ['Marshadow'],
             minLevel: 50,
