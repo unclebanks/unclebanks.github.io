@@ -98,9 +98,6 @@ Poke.prototype.canEvolve = function (player) {
 };
 Poke.prototype.tryPrestige = function () {
     if (this.canPrestige()) {
-        if (this.prestigeLevel > 10 && this.isShiny === false) {
-            this.isShiny = true;
-        }
         this.exp = this.expTable[4];
         this.setHp(this.maxHp());
         this.prestigeLevel++;
