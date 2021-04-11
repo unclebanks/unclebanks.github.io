@@ -495,6 +495,9 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Pupitar': [
         { 'to': 'Tyranitar', 'requires': { 'type': 'level', 'level': 55 } },
     ],
+    'Porygon': [
+        { 'to': 'Porygon2', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
+    ],
     'Tyranitar': [
         { 'to': 'M-Tyranitar', 'requires': { 'type': 'megaStone', 'megaStone': 'tyranitarite' } },
     ],
