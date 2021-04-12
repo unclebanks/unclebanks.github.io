@@ -24,7 +24,11 @@ interface ShopItemMegaStone extends ShopItemBase {
     megaStones: string,
 }
 
-type ShopItem = ShopItemBall | ShopItemBattleItem | ShopItemUnlockable | ShopItemMegaStone;
+interface ShopItemEvoStone extends ShopItemBase {
+    evoStones: string,
+}
+
+type ShopItem = ShopItemBall | ShopItemBattleItem | ShopItemUnlockable | ShopItemMegaStone | ShopItemEvoStone;
 
 interface PokecoinShopItemBase {
     pokecoins: number,
@@ -218,22 +222,12 @@ class Town {
                     battlecoins: 2500,
                     unlockable: 'razzBerry',
                 },
-                {
-                    name: 'Masterball',
-                    battlecoins: 10000,
-                    ball: 'masterball',
-                },
             ],
             johto: [
                 {
                     name: 'Razz Berry',
                     battlecoins: 250,
                     unlockable: 'razzBerry',
-                },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
                 },
             ],
             hoenn: [
@@ -242,11 +236,6 @@ class Town {
                     battlecoins: 250,
                     unlockable: 'razzBerry',
                 },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
-                },
             ],
             sinnoh: [
                 {
@@ -254,22 +243,12 @@ class Town {
                     battlecoins: 250,
                     unlockable: 'razzBerry',
                 },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
-                },
             ],
             unova: [
                 {
                     name: 'Razz Berry',
                     battlecoins: 250,
                     unlockable: 'razzBerry',
-                },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
                 },
             ],
             kalos: [
@@ -500,11 +479,6 @@ class Town {
                     battlecoins: 250,
                     unlockable: 'razzBerry',
                 },
-                {
-                    name: 'Masterball',
-                    battlecoins: 1000,
-                    ball: 'masterball',
-                },
             ],
         };
         this.catchcoinShops = {
@@ -527,27 +501,27 @@ class Town {
                 {
                     name: 'Thunder Stone',
                     catchcoins: 1000,
-                    unlockable: 'thunderStone',
+                    evoStones: 'thunderStone',
                 },
                 {
                     name: 'Fire Stone',
                     catchcoins: 1000,
-                    unlockable: 'fireStone',
+                    evoStones: 'fireStone',
                 },
                 {
                     name: 'Water Stone',
                     catchcoins: 1000,
-                    unlockable: 'waterStone',
+                    evoStones: 'waterStone',
                 },
                 {
                     name: 'Leaf Stone',
                     catchcoins: 1000,
-                    unlockable: 'leafStone',
+                    evoStones: 'leafStone',
                 },
                 {
                     name: 'Moon Stone',
                     catchcoins: 1000,
-                    unlockable: 'moonStone',
+                    evoStones: 'moonStone',
                 },
             ],
             johto: [
@@ -569,27 +543,27 @@ class Town {
                 {
                     name: 'Sun Stone',
                     catchcoins: 1000,
-                    unlockable: 'sunStone',
+                    evoStones: 'sunStone',
                 },
                 {
                     name: 'Metal Coat',
                     catchcoins: 1000,
-                    unlockable: 'metalCoat',
+                    evoStones: 'metalCoat',
                 },
                 {
                     name: 'Soothe Bell',
                     catchcoins: 1000,
-                    unlockable: 'sootheBell',
+                    evoStones: 'sootheBell',
                 },
                 {
                     name: 'Upgrade',
                     catchcoins: 1000,
-                    unlockable: 'upGrade',
+                    evoStones: 'upGrade',
                 },
                 {
                     name: 'Dragon Scale',
                     catchcoins: 1000,
-                    unlockable: 'dragonScale',
+                    evoStones: 'dragonScale',
                 },
             ],
             hoenn: [
@@ -676,6 +650,11 @@ class Town {
                     catchcoins: 10000,
                     unlockable: 'alolaSuperRod',
                 },
+                {
+                    name: 'Ice Stone',
+                    catchcoins: 10000,
+                    evoStones: 'iceStone',
+                },
             ],
         };
     }
@@ -725,17 +704,28 @@ class Town {
             const item = shop[i];
             let canBuy = true;
             let own = false;
+            let missingMegaBracelet = false;
             if (this.player.currencyAmount.battlecoins < item.battlecoins) canBuy = false;
             if ('unlockable' in item && this.player.unlocked[item.unlockable]) {
                 canBuy = false;
                 own = true;
             }
-            if ('megaStones' in item && this.player.megaStones[item.megaStones] || !this.player.unlocked.megaBracelet) {
+            if ('megaStones' in item && this.player.megaStones[item.megaStones]) {
                 canBuy = false;
                 own = true;
             }
+            if ('megaStones' in item && !this.player.unlocked.megaBracelet) {
+                canBuy = false;
+                missingMegaBracelet = true;
+            }
             const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
-            const buttonText = (own) ? 'Own' : 'Buy';
+            let buttonText = 'Buy';
+            if (own) {
+                buttonText = 'Own';
+            }
+            if (missingMegaBracelet) {
+                buttonText = 'Missing Mega Bracelet';
+            }
             const buttonHTML = ` <button onclick="town.buyBattleCoinItem('${region}', ${i})"${disableButton}>${buttonText}</button>`;
             const showImage = false;
             shopHTML += `<li>${showImage ? `<img src="assets/images/battleShop/${item.name}.png" height="30" width="30"></img>` : item.name}: <img src="assets/images/currency/BattleCoin.png" height="16" width="16"></img>${item.battlecoins}${buttonHTML}</li>`;
@@ -755,6 +745,10 @@ class Town {
             let own = false;
             if (this.player.currencyAmount.catchcoins < item.catchcoins) canBuy = false;
             if ('unlockable' in item && this.player.unlocked[item.unlockable]) {
+                canBuy = false;
+                own = true;
+            }
+            if ('evoStones' in item && this.player.evoStones[item.evoStones]) {
                 canBuy = false;
                 own = true;
             }
@@ -830,6 +824,10 @@ class Town {
             this.player.currencyAmount.catchcoins -= item.catchcoins;
             if ('unlockable' in item) {
                 this.player.unlocked[item.unlockable] = 1;
+                this.dom.renderRouteList();
+            }
+            if ('evoStones' in item) {
+                this.player.evoStones[item.evoStones] = 1;
                 this.dom.renderRouteList();
             }
             this.renderCatchCoinShop(region); // force refresh of shop

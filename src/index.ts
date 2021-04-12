@@ -8,6 +8,8 @@ import Story from './modules/story';
 import Poke, { pokeImage } from './modules/poke';
 import setupModals from './modules/modalEvents';
 import POKEDEX from './modules/db';
+import * as utilities from './modules/utilities';
+import notify from './modules/notify';
 // include styles in webpack bundle
 import './index.scss';
 
@@ -64,6 +66,8 @@ if (process.env.NODE_ENV === 'development') {
         models,
         POKEDEX,
         pokeImage,
+        ...utilities,
+        notify,
     };
 } else {
     // Otherwise, just the things we need to make the game run
