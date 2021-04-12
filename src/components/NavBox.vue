@@ -3,7 +3,6 @@
     <br>
     <br>
     <br>
-    <br>
     <div class="buttons is-centered mb-0">
       <achievementButton
         onclick="userInteractions.viewAchievements()"
@@ -11,15 +10,8 @@
       >
         .
       </achievementButton>
-      <vitaminButton
-        onclick="userInteractions.viewVitamins()"
-        class="button"
-      >
-        .
-      </vitaminButton>
-
       <statsButton
-        onclick="userInteractions.viewStatistics()"
+        id="viewPokeDex"
         class="button"
       >
         .
