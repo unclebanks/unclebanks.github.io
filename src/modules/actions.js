@@ -58,7 +58,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                alert('You have not unlocked this region yet');
+                notify('You have not unlocked this region yet');
             }
         },
         goToJohto: function () {
@@ -72,7 +72,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                alert('You have not unlocked this region yet');
+                notify('You have not unlocked this region yet');
             }
         },
         goToHoenn: function () {
@@ -86,7 +86,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                alert('You have not unlocked this region yet');
+                notify('You have not unlocked this region yet');
             }
         },
         goToSinnoh: function () {
@@ -100,7 +100,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                alert('You have not unlocked this region yet');
+                notify('You have not unlocked this region yet');
             }
         },
         goToUnova: function () {
@@ -114,7 +114,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                alert('You have not unlocked this region yet');
+                notify('You have not unlocked this region yet');
             }
         },
         goToKalos: function () {
@@ -128,7 +128,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                alert('You have not unlocked this region yet');
+                notify('You have not unlocked this region yet');
             }
         },
         goToAlola: function () {
@@ -142,7 +142,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                alert('You have not unlocked this region yet');
+                notify('You have not unlocked this region yet');
             }
         },
         goToGalar: function () {
@@ -156,11 +156,11 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
                 }
             } else {
-                alert('You have not unlocked this region yet');
+                notify('You have not unlocked this region yet');
             }
         },
         goToNone: function () {
-            alert('This region is not implemented yet');
+            notify('This region is not implemented yet');
         },
         enablePokeListAutoSort: function () {
             player.settings.autoSort = $('#autoSort').checked;
@@ -402,7 +402,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 document.getElementById('badgeList').innerHTML = badgesHTML;
                 openModal(document.getElementById('badgesModal'));
             } else {
-                alert('You have no Badges');
+                notify('You have no Badges');
             }
         },
         viewEvoStones: function () {
@@ -414,7 +414,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 document.getElementById('evoStoneList').innerHTML = evoStonesHTML;
                 openModal(document.getElementById('evoStonesModal'));
             } else {
-                alert('You have no Evolution Stones');
+                notify('You have no Evolution Stones');
             }
         },
         viewKeyItems: function () {
@@ -426,7 +426,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 document.getElementById('keyItemsList').innerHTML = keyItemsHTML;
                 openModal(document.getElementById('keyItemsModal'));
             } else {
-                alert('You have no Key Items');
+                notify('You have no Key Items');
             }
         },
         viewTown: function () {
@@ -438,13 +438,13 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         openVitaminModal: function (vitamin) {
             if (!VITAMINS[vitamin]) {
-                return alert(`Invalid vitamin '${vitamin}'`);
+                return notify(`Invalid vitamin '${vitamin}'`);
             }
             const data = VITAMINS[vitamin];
             const name = data.display;
             const count = player.vitamins[vitamin];
             if (!count) {
-                return alert('You don\'t have any of these.');
+                return notify('You don\'t have any of these.');
             }
             const vitaminModal = document.getElementById('vitaminModal');
             vitaminModal.setAttribute('data-vitamin', vitamin);
@@ -545,96 +545,96 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         oakEvent: function () {
-            alert('How is your Pokedex Coming along?');
+            notify('How is your Pokedex Coming along?');
         },
         pewterMuseumEvent: function () {
             if (player.events.pewterMuseum1 === true) {
-                alert('Did you take that fossil to Cinnabar Island?');
+                notify('Did you take that fossil to Cinnabar Island?');
             }
             if (!player.badges['Boulder Badge']) {
-                alert('Why not beat Brock and come back?');
+                notify('Why not beat Brock and come back?');
             }
             if (player.badges['Boulder Badge'] === true && !player.events.pewterMuseum1) {
                 player.unlocked.oldAmber = true;
-                alert('Congrats on the win. Take this Old Amber as a bonus');
+                notify('Congrats on the win. Take this Old Amber as a bonus');
                 player.events.pewterMuseum1 = true;
             }
         },
         nuggetBridgeEvent: function () {
             if (player.events.nugget5 === true && !player.hasPokemon('Charmander')) {
-                alert('I think you would do great in Team Rocket. Here is a Charmander as a bribe.');
+                notify('I think you would do great in Team Rocket. Here is a Charmander as a bribe.');
                 player.addPoke(new Poke(POKEDEX[4], 25));
                 player.addPokedex('Charmander', POKEDEXFLAGS.ownNormal);
             }
             if (!player.events.nugget5) {
-                alert('Defeat the 5 of us in a row to win a special prize!');
+                notify('Defeat the 5 of us in a row to win a special prize!');
                 this.checkNPCBattle();
             }
             if (player.events.nugget5 === true && player.hasPokemon('Charmander')) {
-                alert('You feel like joining us yet?');
+                notify('You feel like joining us yet?');
             }
         },
         billEvent: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (!player.events[routeData.npc.event]) {
-                alert('Hi! Thanks for stopping by. Show me a Haunter, Machoke, Graveler, or Kadabra and I will give you their evolved forms');
+                notify('Hi! Thanks for stopping by. Show me a Haunter, Machoke, Graveler, or Kadabra and I will give you their evolved forms');
                 player.events[routeData.npc.event] = true;
             }
             if (player.hasPokemon('Machoke') && !player.hasPokemon('Machamp')) {
                 player.addPoke(new Poke(POKEDEX[85], 25));
                 player.addPokedex('Machamp', POKEDEXFLAGS.ownNormal);
-                alert('I see you have a Machoke. Here is a Machamp');
+                notify('I see you have a Machoke. Here is a Machamp');
             }
             if (player.hasPokemon('Kadabra') && !player.hasPokemon('Alakazam')) {
                 player.addPoke(new Poke(POKEDEX[81], 25));
                 player.addPokedex('Alakazam', POKEDEXFLAGS.ownNormal);
-                alert('I see you have a Kadabra. Here is a Alakazam');
+                notify('I see you have a Kadabra. Here is a Alakazam');
             }
             if (player.hasPokemon('Graveler') && !player.hasPokemon('Golem')) {
                 player.addPoke(new Poke(POKEDEX[93], 25));
                 player.addPokedex('Golem', POKEDEXFLAGS.ownNormal);
-                alert('I see you have a Graveler. Here is a Golem');
+                notify('I see you have a Graveler. Here is a Golem');
             }
             if (player.hasPokemon('Haunter') && !player.hasPokemon('Gengar')) {
                 player.addPoke(new Poke(POKEDEX[117], 25));
                 player.addPokedex('Gengar', POKEDEXFLAGS.ownNormal);
-                alert('I see you have a Haunter. Here is a Gengar');
+                notify('I see you have a Haunter. Here is a Gengar');
             } else {
-                alert('No trades right now. Sorry');
+                notify('No trades right now. Sorry');
             }
         },
         cinnabarLabEvent: function () {
             if (!player.events.cinnabarLab1) {
-                alert('Welcome, if you have any fossils we can restore them to the Pokemon they were.');
+                notify('Welcome, if you have any fossils we can restore them to the Pokemon they were.');
                 player.events.cinnabarLab1 = true;
             }
             if (player.events.cinnabarLab1 === true && player.unlocked.oldAmber === true) {
-                alert('Is that an Old Amber? Ha! Now it is an Aerodactyl');
+                notify('Is that an Old Amber? Ha! Now it is an Aerodactyl');
                 player.addPoke(new Poke(POKEDEX[171], 25));
                 player.addPokedex('Aerodactyl', POKEDEXFLAGS.ownNormal);
             }
         },
         beldumEvent: function () {
             if (!player.events.beldum1) {
-                alert('Congrats on being dope. Take this Beldum');
+                notify('Congrats on being dope. Take this Beldum');
                 player.addPoke(new Poke(pokeByName('Beldum'), 5));
                 player.addPokedex('Beldum', POKEDEXFLAGS.ownNormal);
                 player.events.beldum1 = true;
             } else {
-                alert('No one is home');
+                notify('No one is home');
             }
         },
         abundantOldManEvent: function () {
             if (!player.events.abundantShrineEvent && player.hasPokemon('Thundurus') && player.hasPokemon('Landorus') && player.hasPokemon('Tornadus')) {
-                alert('Amazing that you\'ve tamed the Forces of Nature. Take this item to take them to the next level');
+                notify('Amazing that you\'ve tamed the Forces of Nature. Take this item to take them to the next level');
                 player.evoStones.revealGlass = 1;
                 player.events.abundantShrineEvent = true;
             }
             if (player.events.abundantShrineEvent === true) {
-                alert('Have you tried using the Reveal Glass on the Forces of Nature yet?');
+                notify('Have you tried using the Reveal Glass on the Forces of Nature yet?');
             }
             if (!player.events.abundantShrineEvent && !player.hasPokemon('Landorus')) {
-                alert('Come back to me when you\'ve master the Forces of Nature');
+                notify('Come back to me when you\'ve master the Forces of Nature');
             }
         },
         profBattle: function () {
