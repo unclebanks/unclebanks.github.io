@@ -4,8 +4,9 @@
     left: 5px;
 
     width: 20%;
-    height: 100vh;
+    max-height: 100vh;
     overflow: hidden;
+    pointer-events: none;
 
     .notification {
         border: 2px solid darkslategray;
