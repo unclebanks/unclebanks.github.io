@@ -5,7 +5,6 @@
     <br>
     <div class="buttons is-centered mb-0">
       <achievementButton
-      <button
         onclick="userInteractions.viewAchievements()"
         class="button"
       >
