@@ -8177,7 +8177,7 @@ const POKEDEX = createPokemonArray(
         'id': 382,
     },
     {
-        'name': 'P-Kyogre',
+        'name': 'Kyogre-P',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -8213,7 +8213,7 @@ const POKEDEX = createPokemonArray(
         'id': 383,
     },
     {
-        'name': 'P-Groudon',
+        'name': 'Groudon-P',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -8251,7 +8251,7 @@ const POKEDEX = createPokemonArray(
         'id': 384,
     },
     {
-        'name': 'M-Rayquaza',
+        'name': 'Rayquaza-M',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -13487,7 +13487,7 @@ const POKEDEX = createPokemonArray(
         'id': 646,
     },
     {
-        'name': 'B-Kyurem',
+        'name': 'Kyurem-B',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -13506,7 +13506,7 @@ const POKEDEX = createPokemonArray(
         'id': 818,
     },
     {
-        'name': 'W-Kyurem',
+        'name': 'Kyurem-W',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
@@ -13785,7 +13785,7 @@ const POKEDEX = createPokemonArray(
         'id': 658,
     },
     {
-        'name': 'Ash-Greninja',
+        'name': 'Greninja-Ash',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Slow',
