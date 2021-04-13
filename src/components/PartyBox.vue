@@ -59,6 +59,7 @@
           :poke="poke"
           :index="index"
           :ui="ui"
+          :player="player"
         />
       </ul>
     </div>
@@ -75,6 +76,7 @@ export default {
 
     props: {
         ui: { type: Object, required: true },
+        player: { type: Object, required: true },
     },
 
     data: function () {

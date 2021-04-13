@@ -1,21 +1,12 @@
 <template>
   <CardModal
     name="inventory"
-    title="Inventory"
+    title="Vitamins"
   >
     <template #body>
       <div class="section">
         <h3 class="subtitle">
-          Badges
-        </h3>
-        <ul id="badgeList">
-          <li>Nothing</li>
-        </ul>
-      </div>
-      <hr>
-      <div class="section">
-        <h3 class="subtitle">
-          Inventory
+          Vitamins
         </h3>
         <ul id="inventoryList">
           <li>Nothing</li>

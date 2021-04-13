@@ -1,4 +1,5 @@
-import POKEDEX from '../../modules/db';
+import { pokedexMaps } from '../../modules/db';
+import notify from '../../modules/notify';
 
 const moveToFirst = (list, index) => [
     list[index],
@@ -23,7 +24,7 @@ const moveUp = (list, index) => [
 const cmpFunctions = {
     lvl: (lhs, rhs) => lhs.level() - rhs.level(),
     dex: (lhs, rhs) => {
-        const index = (p) => POKEDEX.findIndex((x) => x.name == p.pokeName());
+        const index = (p) => pokedexMaps.name[p.pokeName()];
         return index(lhs) - index(rhs);
     },
     vlv: (lhs, rhs) => lhs.level() - rhs.level() || lhs.avgAttack() - rhs.avgAttack(),
@@ -39,6 +40,7 @@ export default {
         party: [],
         //
         storage: [],
+        pinnedStorage: new Set([]),
         storageSortDirection: 'asc',
         storageSortMethod: 'dex',
         //
@@ -47,9 +49,10 @@ export default {
     },
 
     mutations: {
-        load(state, { party, storage }) {
+        load(state, { party, storage, pinnedStorage }) {
             state.party = party;
             state.storage = storage;
+            state.pinnedStorage = new Set(pinnedStorage);
         },
 
         add(state, poke) {
@@ -80,7 +83,7 @@ export default {
                 state.storage.push(poke);
             } else {
                 // dom.showPopup('You must have at least one active pokemon!');
-                alert('You must have at least one active pokemon!');
+                notify('You must have at least one active pokemon!');
             }
         },
 
@@ -91,7 +94,7 @@ export default {
                 state.party.push(poke);
             } else {
                 // dom.showPopup('You can only have six active pokemon!');
-                alert('You can only have six active pokemon!');
+                notify('You can only have six active pokemon!');
             }
         },
 
@@ -131,6 +134,14 @@ export default {
             }
         },
 
+        pinStorage(state, poke) {
+            state.pinnedStorage.add(poke.pokeName());
+        },
+
+        unpinStorage(state, poke) {
+            state.pinnedStorage.delete(poke.pokeName());
+        },
+
         healAll(state) {
             state.party.forEach((poke) => poke.heal());
             state.storage.forEach((poke) => poke.heal());
@@ -145,8 +156,16 @@ export default {
                 cmpFunc = inverseCmp(cmpFunc);
             }
 
-            return state.storage.sort(cmpFunc);
+            const pinned = (poke) => state.pinnedStorage.has(poke.pokeName());
+            const pinCheck = (a, b) => Number(pinned(b)) - Number(pinned(a));
+
+            return state.storage.sort((a, b) => pinCheck(a, b) || cmpFunc(a, b));
         },
+
+        isPinned(state) {
+            return (poke) => state.pinnedStorage.has(poke.pokeName());
+        },
+
         // sortedParty,
         timeToHeal(state) {
             return Math.max(0, 30000 - (Date.now() - state.lastHeal));

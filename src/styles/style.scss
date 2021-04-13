@@ -8,11 +8,11 @@ html, body {
     font-family: 'Lato', sans-serif;
     color: rgb(0, 0, 0);
     display: grid;
-    grid-template-columns: 18% 30% 30% 22%;
+    grid-template-columns: minmax(210px, 18%) 30% 30% 22%;
     grid-template-rows: 45% 25% 30%;
 }
 
-#gameContainer div {
+#gameContainer > div {
     border: 1px solid black;
 }
 
@@ -64,6 +64,12 @@ ul {
     float: left;
     text-align: left;
     background-color: rgb(112, 146, 190);
+}
+
+.roamerIcon {
+    margin-left: 3px;
+    height: 16px;
+    width: auto;
 }
 
 #listBox ul {
@@ -200,9 +206,10 @@ ul {
 #navBox {
     grid-column: 2;
     grid-row: 2;
-    background-color: rgb(112, 146, 190);
+    background-image: url('../assets/other/NavBoxBackground.png');
+    background-size: cover;
 }
-#navBox .button, #viewSelectBox .button, #townBox button {
+#viewSelectBox .button, #townBox button {
     margin-top: 7px;
     align-items: center;
     border-color: black;
@@ -211,7 +218,67 @@ ul {
     background-color: transparent;
     color: black;
 }
-#regionBox .partyButton {
+#navBox vitaminButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: 100px;
+    max-height: 300px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url('../assets/other/StorageIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox dexButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: 100px;
+    max-height: 300px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url('../assets/other/PCIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox statsButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: 100px;
+    max-height: 300px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url('../assets/other/StatisticsIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox achievementButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: 100px;
+    max-height: 300px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url('../assets/other/AcheivementsIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#navBox settingsButton {
+    margin-top: 7px;
+    align-items: center;
+    border-color: transparent;
+    width: 100px;
+    max-height: 300px;
+    background-color: transparent;
+    color: transparent;
+    background-image:url('../assets/other/SettingsIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#regionBox partyButton {
     width: auto;
     height: fit-content;
     border-color: black;
