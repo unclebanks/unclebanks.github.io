@@ -4,7 +4,7 @@
       <span>Inventory</span><br>
       <button
         id="badgesButton"
-        onclick="userInteractions.viewBadges()"
+        onclick="userInteractions.viewBadgeCase()"
         class="button"
       >
         Badges
