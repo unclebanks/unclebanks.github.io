@@ -8251,7 +8251,7 @@ const POKEDEX = createPokemonArray(
         'id': 384,
     },
     {
-        'name': 'Rayquaza-M',
+        'name': 'M-Rayquaza',
         'stats': {
             'catch rate': '3',
             'growth rate': 'Slow',
