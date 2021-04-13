@@ -34,6 +34,7 @@ export default (player, combatLoop, userInteractions) => {
             const townBox = $('#townBox');
             const profButton = $('#profButton');
             const gymLeaderButton = $('#gymLeaderButton');
+            const npcButton = $('#npcButton');
             if (!poke) {
                 container.style.display = 'none';
                 if (id == 'enemy') {
@@ -43,6 +44,8 @@ export default (player, combatLoop, userInteractions) => {
                     profButton.innerHTML = (route.prof) ? route.prof.name : '';
                     gymLeaderButton.style.display = (route.gymLeader) ? '' : 'none';
                     gymLeaderButton.innerHTML = (route.gymLeader) ? route.gymLeader.name : '';
+                    npcButton.style.display = (route.npc) ? '' : 'none';
+                    npcButton.innerHTML = (route.npc) ? route.npc.name : '';
                 }
                 return null;
             }
@@ -150,8 +153,10 @@ export default (player, combatLoop, userInteractions) => {
                         routeColor = COLORS.route.locked;
                         routeWeight = 'normal';
                     }
+                    const boostedRoamer = player.routeGetBoostedRoamer(player.settings.currentRegionId, routeId);
+                    const roamerIcon = boostedRoamer ? (`<img class="roamerIcon" src="assets/images/roamers/${boostedRoamer}.png">`) : '';
                     const routeLevels = (!route.town) ? ` (${route.minLevel}~${route.maxLevel})` : '';
-                    const routeHTML = `<li><a href="#" onclick="${routeOnClick}" style="color: ${routeColor}; font-weight: ${routeWeight};" >${route.name}${routeLevels}</a></li>`;
+                    const routeHTML = `<li><a href="#" onclick="${routeOnClick}" style="color: ${routeColor}; font-weight: ${routeWeight};" >${route.name}${routeLevels}</a>${roamerIcon}</li>`;
                     this.setValue(listElement, routeHTML, true);
                 }
             });

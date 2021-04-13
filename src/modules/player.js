@@ -1,17 +1,24 @@
 import { POKEDEXFLAGS, BALLRNG } from './data';
 import POKEDEX from './db.ts';
-import mkPoke from './poke';
+import Poke from './poke';
 import ROUTES from './routes';
-import { pokeByName } from './utilities';
+import { pokeByName, randomArrayElement } from './utilities';
 
 export default (lastSave, appModel) => {
     let dom;
-    let Poke;
 
     const Player = {
         pokedexHighestID: 0,
         activePokeID: 0,
         lastHeal: Date.now(),
+        currentBoostedRoamer: {
+            region: 'Johto',
+            route: '11',
+            pokemon: 'Raikou',
+            start: 0,
+            length: 5 * 60 * 1000,
+            expired: false,
+        },
         selectedBall: 'pokeball',
         ballsAmount: {
             pokeball: 20,
@@ -19,37 +26,8 @@ export default (lastSave, appModel) => {
             ultraball: 0,
             masterball: 0,
         },
-        unlocked: {
-            shinyDex: 0,
-            razzBerry: 0,
-            timeMachine: 0,
-            megaBracelet: 0,
-            kantoOldRod: 0,
-            kantoGoodRod: 0,
-            kantoSuperRod: 0,
-            johtoOldRod: 0,
-            johtoGoodRod: 0,
-            johtoSuperRod: 0,
-            hoennOldRod: 0,
-            hoennGoodRod: 0,
-            hoennSuperRod: 0,
-            sinnohOldRod: 0,
-            sinnohGoodRod: 0,
-            sinnohSuperRod: 0,
-            unovaOldRod: 0,
-            unovaGoodRod: 0,
-            unovaSuperRod: 0,
-            kalosOldRod: 0,
-            kalosGoodRod: 0,
-            kalosSuperRod: 0,
-            alolaOldRod: 0,
-            alolaGoodRod: 0,
-            alolaSuperRod: 0,
-            galarOldRod: 0,
-            galarGoodRod: 0,
-            galarSuperRod: 0,
-            saveKill: 0,
-        },
+        unlocked: {},
+        secretCodes: {},
         megaStones: {
             abomasite: 0,
             absolite: 0,
@@ -99,24 +77,7 @@ export default (lastSave, appModel) => {
             tyranitarite: 0,
             venusaurite: 0,
         },
-        evoStones: {
-            thunderStone: 0,
-            fireStone: 0,
-            waterStone: 0,
-            leafStone: 0,
-            moonStone: 0,
-            sunStone: 0,
-            metalCoat: 0,
-            sootheBell: 0,
-            dragonScale: 0,
-            upGrade: 0,
-            shinyStone: 0,
-            duskStone: 0,
-            dawnStone: 0,
-            iceStone: 0,
-            whippedDream: 0,
-            sachet: 0,
-        },
+        evoStones: {},
         currencyAmount: {
             pokecoins: 0,
             catchcoins: 0,
@@ -157,42 +118,6 @@ export default (lastSave, appModel) => {
             training: 0,
         },
         statistics: {
-            fireBeaten: 0,
-            waterBeaten: 0,
-            grassBeaten: 0,
-            electricBeaten: 0,
-            normalBeaten: 0,
-            iceBeaten: 0,
-            fightingBeaten: 0,
-            poisonBeaten: 0,
-            groundBeaten: 0,
-            flyingBeaten: 0,
-            psychicBeaten: 0,
-            bugBeaten: 0,
-            rockBeaten: 0,
-            ghostBeaten: 0,
-            darkBeaten: 0,
-            dragonBeaten: 0,
-            steelBeaten: 0,
-            fairyBeaten: 0,
-            fireCaught: 0,
-            waterCaught: 0,
-            grassCaught: 0,
-            electricCaught: 0,
-            normalCaught: 0,
-            iceCaught: 0,
-            fightingCaught: 0,
-            poisonCaught: 0,
-            groundCaught: 0,
-            flyingCaught: 0,
-            psychicCaught: 0,
-            bugCaught: 0,
-            rockCaught: 0,
-            ghostCaught: 0,
-            darkCaught: 0,
-            dragonCaught: 0,
-            steelCaught: 0,
-            fairyCaught: 0,
             seen: 0,
             caught: 0,
             beaten: 0,
@@ -217,10 +142,11 @@ export default (lastSave, appModel) => {
         },
         badges: {},
         wins: {},
+        events: {},
         purgeData: false,
 
         checksum: function (s) {
-            let chk = 0x12345678;
+            let chk = 0x12345679;
             const len = s.length;
             for (let i = 0; i < len; i++) {
                 chk += (s.charCodeAt(i) * (i + 1));
@@ -382,73 +308,143 @@ export default (lastSave, appModel) => {
         },
         routeUnlocked: function (region, route) {
             const routeData = ROUTES[region][route];
-            if (routeData.kantoOldRod && Player.unlocked.kantoOldRod < routeData.kantoOldRod) {
+            if (routeData.kantoOldRod && !Player.unlocked.kantoOldRod) {
                 return false;
             }
-            if (routeData.kantoGoodRod && Player.unlocked.kantoGoodRod < routeData.kantoGoodRod) {
+            if (routeData.kantoGoodRod && !Player.unlocked.kantoGoodRod) {
                 return false;
             }
-            if (routeData.kantoSuperRod && Player.unlocked.kantoSuperRod < routeData.kantoSuperRod) {
+            if (routeData.kantoSuperRod && !Player.unlocked.kantoSuperRod) {
                 return false;
             }
-            if (routeData.johtoOldRod && Player.unlocked.johtoOldRod < routeData.johtoOldRod) {
+            if (routeData.johtoOldRod && !Player.unlocked.johtoOldRod) {
                 return false;
             }
-            if (routeData.johtoGoodRod && Player.unlocked.johtoGoodRod < routeData.johtoGoodRod) {
+            if (routeData.johtoGoodRod && !Player.unlocked.johtoGoodRod) {
                 return false;
             }
-            if (routeData.johtoSuperRod && Player.unlocked.johtoSuperRod < routeData.johtoSuperRod) {
+            if (routeData.johtoSuperRod && !Player.unlocked.johtoSuperRod) {
                 return false;
             }
-            if (routeData.hoennOldRod && Player.unlocked.hoennOldRod < routeData.hoennOldRod) {
+            if (routeData.hoennOldRod && !Player.unlocked.hoennOldRod) {
                 return false;
             }
-            if (routeData.hoennGoodRod && Player.unlocked.hoennGoodRod < routeData.hoennGoodRod) {
+            if (routeData.hoennGoodRod && !Player.unlocked.hoennGoodRod) {
                 return false;
             }
-            if (routeData.hoennSuperRod && Player.unlocked.hoennSuperRod < routeData.hoennSuperRod) {
+            if (routeData.hoennSuperRod && !Player.unlocked.hoennSuperRod) {
                 return false;
             }
-            if (routeData.sinnohOldRod && Player.unlocked.sinnohOldRod < routeData.sinnohOldRod) {
+            if (routeData.sinnohOldRod && !Player.unlocked.sinnohOldRod) {
                 return false;
             }
-            if (routeData.sinnohGoodRod && Player.unlocked.sinnohGoodRod < routeData.sinnohGoodRod) {
+            if (routeData.sinnohGoodRod && !Player.unlocked.sinnohGoodRod) {
                 return false;
             }
-            if (routeData.sinnohSuperRod && Player.unlocked.sinnohSuperRod < routeData.sinnohSuperRod) {
+            if (routeData.sinnohSuperRod && !Player.unlocked.sinnohSuperRod) {
                 return false;
             }
-            if (routeData.unovaOldRod && Player.unlocked.unovaOldRod < routeData.unovaOldRod) {
+            if (routeData.unovaOldRod && !Player.unlocked.unovaOldRod) {
                 return false;
             }
-            if (routeData.unovaGoodRod && Player.unlocked.unovaGoodRod < routeData.unovaGoodRod) {
+            if (routeData.unovaGoodRod && !Player.unlocked.unovaGoodRod) {
                 return false;
             }
-            if (routeData.unovaSuperRod && Player.unlocked.unovaSuperRod < routeData.unovaSuperRod) {
+            if (routeData.unovaSuperRod && !Player.unlocked.unovaSuperRod) {
                 return false;
             }
-            if (routeData.kalosOldRod && Player.unlocked.kalosOldRod < routeData.kalosOldRod) {
+            if (routeData.kalosOldRod && !Player.unlocked.kalosOldRod) {
                 return false;
             }
-            if (routeData.kalosGoodRod && Player.unlocked.kalosGoodRod < routeData.kalosGoodRod) {
+            if (routeData.kalosGoodRod && !Player.unlocked.kalosGoodRod) {
                 return false;
             }
-            if (routeData.kalosSuperRod && Player.unlocked.kalosSuperRod < routeData.kalosSuperRod) {
+            if (routeData.kalosSuperRod && !Player.unlocked.kalosSuperRod) {
                 return false;
             }
-            if (routeData.alolaOldRod && Player.unlocked.alolaOldRod < routeData.alolaOldRod) {
+            if (routeData.alolaOldRod && !Player.unlocked.alolaOldRod) {
                 return false;
             }
-            if (routeData.alolaGoodRod && Player.unlocked.alolaGoodRod < routeData.alolaGoodRod) {
+            if (routeData.alolaGoodRod && !Player.unlocked.alolaGoodRod) {
                 return false;
             }
-            if (routeData.alolaSuperRod && Player.unlocked.alolaSuperRod < routeData.alolaSuperRod) {
+            if (routeData.alolaSuperRod && !Player.unlocked.alolaSuperRod) {
                 return false;
             }
             if (routeData._unlock) {
                 return this.meetsCriteria(routeData._unlock);
             }
             return true;
+        },
+        getBoostedRoamer: function (allowExpired = false) { // returns the current boosted roamer (including additional data) or a falsy value
+            if (!this.currentBoostedRoamer) {
+                return null;
+            }
+            if (this.currentBoostedRoamer.start + this.currentBoostedRoamer.length < Date.now() && !allowExpired) { // time ran out
+                return null;
+            }
+            if (this.currentBoostedRoamer.expired && !allowExpired) { // boost expired, probably because the player encountered it
+                return null;
+            }
+            return this.currentBoostedRoamer;
+        },
+        routeGetBoostedRoamer: function (region, route, returnNameOnly = true) {
+            const roamer = this.getBoostedRoamer();
+            if (roamer && roamer.region.toLowerCase() === region.toLowerCase() && roamer.route === route) {
+                return returnNameOnly ? roamer.pokemon : roamer;
+            }
+            return null;
+        },
+        boostedRoamerExpired: function () {
+            const roamer = this.getBoostedRoamer(true);
+            if (roamer) {
+                roamer.expired = true;
+                dom.renderRouteList();
+            }
+        },
+        generateBoostedRoamer: function () {
+            const regions = [
+                'Johto',
+            ];
+            const allowedRoamers = [
+                'Raikou',
+                'Entei',
+            ];
+            const region = randomArrayElement(regions);
+            const allowedRegionRoamers = ROUTES[region]._global.superRare.filter((pokemon) => allowedRoamers.indexOf(pokemon) > -1);
+            if (!allowedRegionRoamers.length) {
+                return false;
+            }
+            const roamer = randomArrayElement(allowedRegionRoamers);
+            const routes = Object.keys(ROUTES[region]).filter((routeName) => routeName !== '_unlock' && routeName !== '_global' && !ROUTES[region][routeName].town);
+            const route = randomArrayElement(routes);
+            const boostedRoamer = {
+                region: region,
+                route: route,
+                pokemon: roamer,
+                level: 40,
+                start: Date.now(),
+                length: 5 * 60 * 1000,
+                expired: false,
+            };
+            this.currentBoostedRoamer = boostedRoamer;
+            return roamer;
+        },
+        checkBoostedRoamer: function () {
+            const current = this.getBoostedRoamer(true);
+            const delay = 10 * 60 * 1000;
+            if (!current || current.start + delay < Date.now()) {
+                this.generateBoostedRoamer();
+                return true;
+            }
+            this.checkBoostedRoamerDisplay();
+            return false;
+        },
+        checkBoostedRoamerDisplay: function () {
+            if (this.lastDisplayedRoamer !== this.getBoostedRoamer()) {
+                this.lastDisplayedRoamer = this.getBoostedRoamer();
+                dom.renderRouteList();
+            }
         },
         // Load and Save functions
         savePokes: function (force = false) {
@@ -463,6 +459,10 @@ export default (lastSave, appModel) => {
                 appModel.$store.state.pokemon.storage.forEach((poke, index) => {
                     localStorage.setItem(`storage${index}`, JSON.stringify(poke.save()));
                 });
+                localStorage.setItem(
+                    'pinnedStorage',
+                    JSON.stringify([...appModel.$store.state.pokemon.pinnedStorage]),
+                );
                 localStorage.setItem('ballsAmount', JSON.stringify(this.ballsAmount));
                 localStorage.setItem('battleItems', JSON.stringify(this.battleItems));
                 localStorage.setItem('vitamins', JSON.stringify(this.vitamins));
@@ -471,28 +471,35 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
                 localStorage.setItem('wins', JSON.stringify(this.wins));
+                localStorage.setItem('events', JSON.stringify(this.events));
                 localStorage.setItem('unlocked', JSON.stringify(this.unlocked));
                 localStorage.setItem('megaStones', JSON.stringify(this.megaStones));
+                localStorage.setItem('secretCodes', JSON.stringify(this.secretCodes));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
+                localStorage.setItem('currentBoostedRoamer', JSON.stringify(this.currentBoostedRoamer));
             }
         },
         saveToString: function () {
             const saveData = JSON.stringify({
                 pokes: appModel.$store.state.pokemon.party.map((poke) => poke.save()),
                 storage: appModel.$store.state.pokemon.storage.map((poke) => poke.save()),
+                pinnedStorage: [...appModel.$store.state.pokemon.pinnedStorage],
                 pokedexData: this.getPokedexData(),
                 statistics: this.statistics,
                 settings: this.settings,
                 ballsAmount: this.ballsAmount,
                 badges: this.badges,
                 wins: this.wins,
+                events: this.events,
                 unlocked: this.unlocked,
                 megaStones: this.megaStones,
+                secretCodes: this.secretCodes,
                 evoStones: this.evoStones,
                 currencyAmount: this.currencyAmount,
                 battleItems: this.battleItems,
                 vitamins: this.vitamins,
+                currentBoostedRoamer: this.currentBoostedRoamer,
             });
             return btoa(`${this.checksum(saveData)}|${saveData}`);
         },
@@ -531,8 +538,8 @@ export default (lastSave, appModel) => {
                     storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 }
             });
-
-            appModel.$store.commit('pokemon/load', { party, storage });
+            const pinnedStorage = JSON.parse(localStorage.getItem('pinnedStorage'));
+            appModel.$store.commit('pokemon/load', { party, storage, pinnedStorage });
 
             if (JSON.parse(localStorage.getItem('ballsAmount'))) {
                 this.ballsAmount = JSON.parse(localStorage.getItem('ballsAmount'));
@@ -553,6 +560,9 @@ export default (lastSave, appModel) => {
             if (JSON.parse(localStorage.getItem('wins'))) {
                 this.wins = JSON.parse(localStorage.getItem('wins'));
             }
+            if (JSON.parse(localStorage.getItem('events'))) {
+                this.events = JSON.parse(localStorage.getItem('events'));
+            }
             if (JSON.parse(localStorage.getItem('unlocked'))) {
                 const loadedUnlocked = JSON.parse(localStorage.getItem('unlocked'));
                 this.unlocked = { ...this.unlocked, ...loadedUnlocked };
@@ -572,6 +582,12 @@ export default (lastSave, appModel) => {
             if (JSON.parse(localStorage.getItem('vitamins'))) {
                 this.vitamins = JSON.parse(localStorage.getItem('vitamins'));
             }
+            if (JSON.parse(localStorage.getItem('currentBoostedRoamer'))) {
+                this.currentBoostedRoamer = JSON.parse(localStorage.getItem('currentBoostedRoamer'));
+            }
+            if (JSON.parse(localStorage.getItem('secretCodes'))) {
+                this.secretCodes = JSON.parse(localStorage.getItem('secretCodes'));
+            }
         },
         loadFromString: function (_saveData) {
             let saveData = atob(_saveData);
@@ -581,6 +597,9 @@ export default (lastSave, appModel) => {
                     saveData = JSON.parse(saveData[1]);
                 } catch (err) {
                     alert('Failed to parse save data, loading canceled!');
+                    localStorage.clear();
+                    this.purgeData = true;
+                    window.location.reload(true);
                     return;
                 }
                 const party = [];
@@ -610,7 +629,8 @@ export default (lastSave, appModel) => {
                     storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 });
 
-                appModel.$store.commit('pokemon/load', { party, storage });
+                const pinnedStorage = saveData.pinnedStorage;
+                appModel.$store.commit('pokemon/load', { party, storage, pinnedStorage });
 
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
@@ -624,6 +644,8 @@ export default (lastSave, appModel) => {
                 }
                 this.badges = saveData.badges ? saveData.badges : {};
                 this.wins = saveData.wins ? saveData.wins : {};
+                this.currentBoostedRoamer = saveData.currentBoostedRoamer;
+                this.events = saveData.events ? saveData.events : {};
                 const loadedUnlocked = saveData.unlocked ? saveData.unlocked : [];
                 this.unlocked = { ...this.unlocked, ...loadedUnlocked };
             } else {
@@ -635,9 +657,6 @@ export default (lastSave, appModel) => {
             dom = _dom;
         },
     };
-
-    const p = mkPoke(Player);
-    Poke = p.Poke;
 
     return Player;
 };

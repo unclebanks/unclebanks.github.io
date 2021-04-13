@@ -7,7 +7,10 @@
     <PlayerBox />
     <NavBox />
     <RegionBox />
-    <PartyBox :ui="ui" />
+    <PartyBox
+      :ui="ui"
+      :player="player"
+    />
     <PokeGear />
   </div>
 
@@ -48,6 +51,7 @@ export default {
     data() {
         return {
             ui: dummy,
+            player: {},
         };
     },
 };

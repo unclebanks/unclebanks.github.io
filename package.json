@@ -1,6 +1,6 @@
 {
   "name": "no-name-pokemon-game",
-  "version": "0.1.21",
+  "version": "0.2.9",
   "description": "This is a game that is based off of PokeIdle Extended (which in turn is based off of PokeIdle).",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,10 @@
     "build:gh-pages": "npm run build -- --folder docs",
     "start": "wp --mode development",
     "lint": "npx eslint --ext .js,.ts,.vue ./src",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "typecheck": "tsc --skipLibCheck",
+    "test": "jest --config ./.config/jest.config.js",
+    "check": "concurrently \"npm:lint\" \"npm:typecheck\" \"npm:test\""
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,13 @@
     "url": "https://github.com/unclebanks/unclebanks.github.io/issues"
   },
   "homepage": "https://github.com/unclebanks/unclebanks.github.io#readme",
+  "babel": {
+    "extends": "./.config/.babelrc"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE > 0"
+  ],
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/plugin-transform-runtime": "^7.13.10",
@@ -31,14 +41,17 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@types/jest": "^26.0.21",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/compiler-sfc": "^3.0.7",
     "autoprefixer": "^10.2.5",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "babel-preset-typescript-vue3": "^2.0.11",
     "bulma": "^0.9.2",
     "compression-webpack-plugin": "^7.1.2",
+    "concurrently": "^6.0.0",
     "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.1.1",
     "css-minimizer-webpack-plugin": "^1.2.0",
@@ -51,6 +64,7 @@
     "favicons-webpack-plugin": "^5.0.2",
     "fork-ts-checker-webpack-plugin": "^6.2.0",
     "html-webpack-plugin": "^5.2.0",
+    "jest": "^26.6.3",
     "mini-css-extract-plugin": "^1.3.9",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.8",

@@ -1,41 +1,36 @@
 <template>
   <div id="navBox">
+    <br>
+    <br>
+    <br>
     <div class="buttons is-centered mb-0">
-      <button
-        onclick="userInteractions.viewInventory()"
-        class="button"
-      >
-        Inventory
-      </button>
-
-      <button
+      <achievementButton
         onclick="userInteractions.viewAchievements()"
         class="button"
       >
-        Achievements
-      </button>
-
-      <button
-        onclick="userInteractions.viewStatistics()"
-        class="button"
-      >
-        View Stats
-      </button>
-    </div>
-    <div class="buttons is-centered">
-      <button
+        .
+      </achievementButton>
+      <statsButton
         id="viewPokeDex"
         class="button"
       >
-        PokeDex
-      </button>
+        .
+      </statsButton>
+    </div>
+    <div class="buttons is-centered">
+      <dexButton
+        onclick="userInteractions.viewStatistics()"
+        class="button"
+      >
+        .
+      </dexButton>
 
-      <button
+      <settingsButton
         class="button modal-button"
         data-target="settingsModal"
       >
-        Settings
-      </button>
+        .
+      </settingsButton>
     </div>
   </div>
 </template>

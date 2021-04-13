@@ -2,10 +2,28 @@
   <div
     id="storageBox"
   >
-    <input
-      id="autoSort"
-      type="checkbox"
-    ><label for="autoSort"><span class="checkDescription">Auto sort</span></label><br>
+    <label class="checkbox">
+      <input
+        id="autoSort"
+        type="checkbox"
+      >
+      Auto sort
+    </label>
+    <div class="field has-addons mb-1">
+      <p class="control">
+        <input
+          v-model="nameSearchText"
+          class="input is-small"
+          type="text"
+          placeholder="Enter poke name"
+        >
+      </p>
+      <p class="control">
+        <a class="button is-small is-static">
+          Search
+        </a>
+      </p>
+    </div>
     <select
       id="pokeSortOrderSelect"
       v-model="$store.state.pokemon.storageSortMethod"
@@ -34,28 +52,41 @@
         Desc
       </option>
     </select>
-    <ul
-      v-if="!$store.state.loading"
-      id="storageList"
-      class="manageTeamEnabled"
+    <Paginated
+      :get-key="(poke) => poke.pokeName()"
+      :list="storage"
+      :page-size="15"
+      :filter="filter"
+      list-id="storageList"
+      list-class="manageTeamEnabled"
     >
-      <StoragePokemon
-        v-for="(poke, index) in $store.getters['pokemon/sortedStorage']"
-        :key="poke.pokeName()"
-        :ui="ui"
-        :index="index"
-        :poke="poke"
-      />
-    </ul>
+      <template
+        #item="{ item, realIndex }"
+      >
+        <StoragePokemon
+          :ui="ui"
+          :index="realIndex"
+          :poke="item"
+        />
+      </template>
+    </Paginated>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import StoragePokemon from './StoragePokemon.vue';
+import Paginated from '../common/Paginated';
+
+const nameFilter = (name) => {
+    const lowerName = name.toLowerCase();
+    return (poke) => poke.pokeName().toLowerCase().includes(lowerName);
+};
 
 export default {
     components: {
         StoragePokemon,
+        Paginated,
     },
 
     props: {
@@ -64,8 +95,18 @@ export default {
 
     data: function () {
         return {
-            test: false,
+            nameSearchText: '',
         };
+    },
+
+    computed: {
+        ...mapGetters({
+            storage: 'pokemon/sortedStorage',
+        }),
+
+        filter() {
+            return nameFilter(this.nameSearchText);
+        },
     },
 };
 </script>
