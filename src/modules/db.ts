@@ -10179,7 +10179,7 @@ const POKEDEX = createPokemonArray(
         'id': 479,
     },
     {
-        'name': 'H-Rotom',
+        'name': 'Rotom-heat',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -10198,7 +10198,7 @@ const POKEDEX = createPokemonArray(
         'id': 808,
     },
     {
-        'name': 'W-Rotom',
+        'name': 'Rotom-wash',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -10217,7 +10217,7 @@ const POKEDEX = createPokemonArray(
         'id': 809,
     },
     {
-        'name': 'F-Rotom',
+        'name': 'Rotom-frost',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -10236,7 +10236,7 @@ const POKEDEX = createPokemonArray(
         'id': 810,
     },
     {
-        'name': 'Fan-Rotom',
+        'name': 'Rotom-fan',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -10255,7 +10255,7 @@ const POKEDEX = createPokemonArray(
         'id': 811,
     },
     {
-        'name': 'M-Rotom',
+        'name': 'Rotom-mow',
         'stats': {
             'catch rate': '45',
             'growth rate': 'Medium Fast',
@@ -15533,6 +15533,24 @@ const POKEDEX = createPokemonArray(
         },
         'exp': 170,
         'id': 827,
+    },
+    {
+        'name': 'Lycanroc-D',
+        'stats': {
+            'catch rate': '90',
+            'growth rate': 'Medium Fast',
+            'hp': '75',
+            'attack': '115',
+            'defense': '65',
+            'sp atk': '55',
+            'sp def': '65',
+            'speed': '112',
+            'types': [
+                'Rock',
+            ],
+        },
+        'exp': 170,
+        'id': '745-D',
     },
     {
         'name': 'Wishiwashi',
