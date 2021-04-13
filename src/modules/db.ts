@@ -16103,7 +16103,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 302,
-        'id': 803,
+        'id': '382-Primal',
     },
     {
         'name': 'Groudon-P',
@@ -16122,7 +16122,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 302,
-        'id': 804,
+        'id': '383-Primal',
     },
     {
         'name': 'M-Rayquaza',
@@ -16159,7 +16159,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 270,
-        'id': 805,
+        'id': '386-Attack',
     },
     {
         'name': 'Deoxys-D',
@@ -16177,7 +16177,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 270,
-        'id': 806,
+        'id': '386-Defense',
     },
     {
         'name': 'Deoxys-S',
@@ -16195,7 +16195,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 270,
-        'id': 807,
+        'id': '386-Speed',
     },
     {
         'name': 'M-Garchomp',
@@ -16309,7 +16309,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 154,
-        'id': 808,
+        'id': '479-H',
     },
     {
         'name': 'Rotom-wash',
@@ -16328,7 +16328,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 154,
-        'id': 809,
+        'id': '479-W',
     },
     {
         'name': 'Rotom-frost',
@@ -16347,7 +16347,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 154,
-        'id': 810,
+        'id': '479-FR',
     },
     {
         'name': 'Rotom-fan',
@@ -16366,7 +16366,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 154,
-        'id': 811,
+        'id': '479-FA',
     },
     {
         'name': 'Rotom-mow',
@@ -16404,7 +16404,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 306,
-        'id': 812,
+        'id': '487-O',
     },
     {
         'name': 'Shaymin-S',
@@ -16423,7 +16423,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 270,
-        'id': 813,
+        'id': '492-SKY',
     },
     {
         'name': 'M-Audino',
@@ -16461,7 +16461,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 168,
-        'id': 814,
+        'id': '555-Z',
     },
     {
         'name': 'Tornadus-T',
@@ -16479,7 +16479,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 261,
-        'id': 815,
+        'id': '641-T',
     },
     {
         'name': 'Thundurus-T',
@@ -16498,7 +16498,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 261,
-        'id': 816,
+        'id': '642-T',
     },
     {
         'name': 'Landorus-T',
@@ -16517,7 +16517,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 270,
-        'id': 817,
+        'id': '645-T',
     },
     {
         'name': 'Kyurem-B',
@@ -16536,7 +16536,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 297,
-        'id': 818,
+        'id': '646-B',
     },
     {
         'name': 'Kyurem-W',
@@ -16555,7 +16555,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 297,
-        'id': 819,
+        'id': '646-W',
     },
     {
         'name': 'Keldeo-R',
@@ -16574,7 +16574,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 261,
-        'id': 820,
+        'id': '647-R',
     },
     {
         'name': 'Meloetta-P',
@@ -16593,7 +16593,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 270,
-        'id': 821,
+        'id': '648-P',
     },
     {
         'name': 'Greninja-Ash',
@@ -16612,7 +16612,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 239,
-        'id': 822,
+        'id': '658-Ash',
     },
     {
         'name': 'Aegislash-B',
@@ -16631,7 +16631,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 234,
-        'id': 823,
+        'id': '681-B',
     },
     {
         'name': 'Zygarde-10',
@@ -16650,7 +16650,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 270,
-        'id': 824,
+        'id': '718-10%',
     },
     {
         'name': 'Zygarde-C',
@@ -16669,7 +16669,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 270,
-        'id': 825,
+        'id': '718-C',
     },
     {
         'name': 'M-Diancie',
@@ -16707,7 +16707,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 270,
-        'id': 826,
+        'id': '720-U',
     },
     {
         'name': 'Lycanroc-M',
@@ -16761,7 +16761,7 @@ const POKEDEX = createPokemonArray(
             ],
         },
         'exp': 61,
-        'id': 828,
+        'id': '746-School',
     },
 );
 
