@@ -16634,6 +16634,96 @@ const POKEDEX = createPokemonArray(
         'exp': 120,
         'id': 802,
     },
+    {
+        'name': 'Meltan',
+        'stats': {
+            'catch rate': '3',
+            'growth rate': 'Slow',
+            'hp': '46',
+            'attack': '65',
+            'defense': '65',
+            'sp atk': '55',
+            'sp def': '35',
+            'speed': '34',
+            'types': [
+                'Steel',
+            ],
+        },
+        'exp': 135,
+        'id': 808,
+    },
+    {
+        'name': 'Melmetal',
+        'stats': {
+            'catch rate': '3',
+            'growth rate': 'Slow',
+            'hp': '135',
+            'attack': '143',
+            'defense': '143',
+            'sp atk': '80',
+            'sp def': '65',
+            'speed': '34',
+            'types': [
+                'Steel',
+            ],
+        },
+        'exp': 270,
+        'id': 809,
+    },
+    {
+        'name': 'Grookey',
+        'stats': {
+            'catch rate': '45',
+            'growth rate': 'Medium Slow',
+            'hp': '50',
+            'attack': '65',
+            'defense': '50',
+            'sp atk': '40',
+            'sp def': '40',
+            'speed': '65',
+            'types': [
+                'Grass',
+            ],
+        },
+        'exp': 62,
+        'id': 810,
+    },
+    {
+        'name': 'Thwackey',
+        'stats': {
+            'catch rate': '45',
+            'growth rate': 'Medium Slow',
+            'hp': '70',
+            'attack': '85',
+            'defense': '70',
+            'sp atk': '55',
+            'sp def': '60',
+            'speed': '80',
+            'types': [
+                'Grass',
+            ],
+        },
+        'exp': 147,
+        'id': 811,
+    },
+    {
+        'name': 'Rillaboom',
+        'stats': {
+            'catch rate': '45',
+            'growth rate': 'Medium Slow',
+            'hp': '100',
+            'attack': '125',
+            'defense': '90',
+            'sp atk': '60',
+            'sp def': '70',
+            'speed': '85',
+            'types': [
+                'Grass',
+            ],
+        },
+        'exp': 265,
+        'id': 812,
+    },
 );
 
 type SetupKey = keyof typeof POKEDEX[number];
