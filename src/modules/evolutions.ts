@@ -1166,13 +1166,13 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Bastiodon', 'requires': { 'type': 'level', 'level': 30 } },
     ],
     'Burmy': [
-        {'to': 'Wormadam', 'requires': {'type': 'level', 'level': 20} },
+        { 'to': 'Wormadam', 'requires': { 'type': 'level', 'level': 20 } },
     ],
     'Wormadam': [
-        {'to': 'Mothim', 'requires': {'type': 'level', 'level': 20}}
+        { 'to': 'Mothim', 'requires': { 'type': 'level', 'level': 20 } },
     ],
     'Combee': [
-        {'to': 'Vespiquen', 'requires': {'type': 'level', 'level': 21}}
+        { 'to': 'Vespiquen', 'requires': { 'type': 'level', 'level': 21 } },
     ],
     'Buizel': [
         { 'to': 'Floatzel', 'requires': { 'type': 'level', 'level': 26 } },
