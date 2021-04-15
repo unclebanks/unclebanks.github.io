@@ -1,4 +1,5 @@
 import { pokedexMaps } from '../../modules/db';
+import notify from '../../modules/notify';
 
 const moveToFirst = (list, index) => [
     list[index],
@@ -82,7 +83,7 @@ export default {
                 state.storage.push(poke);
             } else {
                 // dom.showPopup('You must have at least one active pokemon!');
-                alert('You must have at least one active pokemon!');
+                notify('You must have at least one active pokemon!');
             }
         },
 
@@ -93,7 +94,7 @@ export default {
                 state.party.push(poke);
             } else {
                 // dom.showPopup('You can only have six active pokemon!');
-                alert('You can only have six active pokemon!');
+                notify('You can only have six active pokemon!');
             }
         },
 
