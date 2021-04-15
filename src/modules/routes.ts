@@ -5167,7 +5167,7 @@ const ROUTES: Routes = {
             pokes: ['Ledian', 'Alolan Raticate', 'Ariados', 'Fearow', 'Skarmory', 'Pancham', 'Gumshoos'],
             minLevel: 22,
             maxLevel: 25,
-            respawn: 'malieCity'
+            respawn: 'malieCity',
         },
         mountHokulani: {
             name: 'Mount Hokulani',
@@ -5188,14 +5188,14 @@ const ROUTES: Routes = {
             pokes: ['Alolan Geodude', 'Elekid', 'Torkoal', 'Mudbray'],
             minLevel: 24,
             maxLevel: 27,
-            respawn: 'malieCity'
+            respawn: 'malieCity',
         },
         alola13: {
             name: 'Route 13',
             pokes: ['Magikarp', 'Wishiwashi', 'Bruxish'],
             minLevel: 26,
             maxLevel: 29,
-            respawn: 'malieCity'
+            respawn: 'malieCity',
         },
         alola14: {
             name: 'Route 14',
@@ -5219,14 +5219,14 @@ const ROUTES: Routes = {
             respawn: 'malieCity',
         },
         poTown: {
-            name: 'Po Town', 
+            name: 'Po Town',
             town: true,
             gymLeader: {
                 name: 'Team Skull Grant',
                 badge: null,
                 poke: [
                     ['Ekans', 37],
-                    ['Salandit', 37]
+                    ['Salandit', 37],
                 ],
             },
         },
@@ -5242,12 +5242,12 @@ const ROUTES: Routes = {
             pokes: ['Magikarp', 'Wailmer', 'Dhelmise', 'Aerodactyl', 'Steenee'],
             minLevel: 32,
             maxLevel: 35,
-            respawn: 'poTown'
+            respawn: 'poTown',
         },
         ruinsOfHope: {
             name: 'Ruins of Hope',
             pokes: ['Tapu Fini'],
-            minLevel: 36, 
+            minLevel: 36,
             maxLevel: 36,
             respawn: 'poTown',
         },
@@ -5302,7 +5302,7 @@ const ROUTES: Routes = {
         },
         custom5: {
             name: 'Ultra Wormholes',
-            pokes: ['Nihilego', 'Buzzwole', 'Pheromosa', 'Xurkitree', 'Celesteela', 'Kartana', 'Guzzlord', 'Poiple', 'Naganadel', 'Blacephalon', 'Stakataka'],
+            pokes: ['Nihilego', 'Buzzwole', 'Pheromosa', 'Xurkitree', 'Celesteela', 'Kartana', 'Guzzlord', 'Poipole', 'Naganadel', 'Blacephalon', 'Stakataka'],
             minLevel: 55,
             maxLevel: 70,
             respawn: 'ikiTown',
