@@ -675,7 +675,7 @@ class Town {
             if (this.player.currencyAmount.pokecoins < item.pokecoins) canBuy = false;
             if (this.player.currencyAmount.pokecoins < item.pokecoins * 10) canBuy10 = false;
             if (this.player.currencyAmount.pokecoins < item.pokecoins * 100) canBuy100 = false;
-            if (this.player.currencyAmount.pokecoins < item.pokecoins * 100) canBuy1000 = false;
+            if (this.player.currencyAmount.pokecoins < item.pokecoins * 1000) canBuy1000 = false;
             const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
             const disableButton10 = (!canBuy10 || own) ? ' disabled="true"' : '';
             const disableButton100 = (!canBuy100 || own) ? ' disabled="true"' : '';
