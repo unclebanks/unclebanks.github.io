@@ -565,6 +565,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.npc.name === 'Shrine\'s Old Man') {
                 this.abundantOldManEvent();
             }
+            if (routeData.npc.name === 'Game Corner') {
+                this.gameCorner();
+            }
+        },
+        gameCorner: function () {
+            openModal(document.getElementById('gameCornerModal'));
         },
         oakEvent: function () {
             notify('How is your Pokedex Coming along?');
