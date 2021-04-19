@@ -345,15 +345,28 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
         },
+        renderBeatenAchievement: function () {
+            const beatenReq = player.statisticsRequirements.beaten;
+            const beaten1Req = player.statisticsRequirements.beaten1;
+            if (player.statistics.beaten > beatenReq) { return beaten1Req; } else { return beatenReq; }
+        },
         renderPokemonDefeated: function () {
             const pokemonDefeatedElement = $('#pokemonDefeated');
-            pokemonDefeatedElement.innerHTML = player.statistics.beaten;
+            pokemonDefeatedElement.innerHTML = `${player.statistics.beaten}/${this.renderBeatenAchievement()}`;
         },
         checkPokemonDefeated: function () {
-            if (player.statistics.beaten > 10) {
+            if (player.statistics.beaten > 49 && !player.events.beaten) {
+                player.ballsAmount.masterball += 50;
+                dom.renderBalls();
+                notify('You deafeated 50 POKEMON and earned 50 MASTERBALLS');
+                player.events.beaten = true;
+            }
+            if (player.events.beaten && player.statistics.beaten > 99 && !player.events.beaten1) {
                 player.ballsAmount.masterball += 100;
                 dom.renderBalls();
-            } else { notify('Defeat 10 Pokemon and try again'); }
+                notify('You defeated 100 POKEMON and earned 100 MASTERBALLS');
+                player.events.beaten1 = true;
+            } else { notify('Defeat 50 Pokemon and try again'); }
         },
         viewAchievements: function () {
             this.renderPokemonDefeated();
