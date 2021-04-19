@@ -6,7 +6,7 @@ html, body {
 
 #gameContainer {
     font-family: 'Lato', sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: minmax(210px, 18%) 30% 30% 22%;
     grid-template-rows: 45% 25% 30%;
@@ -32,7 +32,7 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 #partyBox {
@@ -41,7 +41,7 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 
     li, p {
         display: inline-block;
@@ -52,7 +52,7 @@ ul {
     grid-column: 3;
     grid-row: 2 / 4;
     margin-bottom: none;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
     text-align: center;
 }
 
@@ -63,7 +63,7 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 .roamerIcon {
@@ -117,10 +117,10 @@ ul {
 }
 
 .activeNormal {
-    color: black;
+    color: rgb(83, 255, 83);
 }
 .inactiveNormal {
-    color: black;
+    color: rgb(83, 255, 83);
 }
 .dead {
     color: red;
@@ -142,7 +142,7 @@ ul {
     grid-row: 2;
     width: 50%;
     text-align: center;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 #viewSelectBox p {
@@ -154,7 +154,7 @@ ul {
     grid-row: 1;
     padding: 5px;
     font-size: medium;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 #invBox p {
@@ -171,14 +171,14 @@ ul {
     margin-left: 50%;
     float: right;
     grid-row: 1;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 #playerBox {
     grid-column: 2;
     grid-row: 1;
     width: 50%;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
     align-content: center;
 }
 
@@ -189,7 +189,7 @@ ul {
     margin-top: 30%;
     max-height: 100px;
     overflow-y: hidden;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 #console-text {
     padding-left: 9px;
@@ -201,7 +201,7 @@ ul {
     grid-column: 4;
     grid-row: 3;
     text-align: center;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 #navBox {
     grid-column: 2;
@@ -228,7 +228,7 @@ ul {
     width: auto;
     height: auto;
     background-color: transparent;
-    color: black;
+    color: white;
 }
 #navBox vitaminButton {
     margin-top: 7px;
