@@ -82,6 +82,7 @@ export default (lastSave, appModel) => {
             pokecoins: 0,
             catchcoins: 0,
             battlecoins: 0,
+            gametokens: 0,
         },
         battleItems: {
             xAttack: 0,

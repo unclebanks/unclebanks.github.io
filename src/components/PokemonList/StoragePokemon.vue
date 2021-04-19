@@ -8,7 +8,7 @@
       :class="`pokeListName ${pokeStatus(poke)}`"
       :status="pokeStatus(poke)"
     >{{ poke.pokeName() }} ({{ poke.level() }})
-    </a>
+    </a><br>
     <div
       class="buttons are-small"
     >

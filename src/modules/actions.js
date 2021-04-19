@@ -393,17 +393,39 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 notify('Code Invalid or Already Claimed', { type: 'danger' });
             }
         },
-        viewBadges: function () {
+        viewBadgeCase: function () {
             if (!isEmpty(player.badges)) {
-                let badgesHTML = '';
-                for (const badge in player.badges) {
-                    badgesHTML += `${'<img src="assets/images/badges/'}${[badge]}.png"></img>`;
+                if (player.badges['Boulder Badge'] === true) {
+                    document.getElementById('boulderBadge').style.visibility = 'visible';
                 }
-                document.getElementById('badgeList').innerHTML = badgesHTML;
-                openModal(document.getElementById('badgesModal'));
+                if (player.badges['Cascade Badge'] === true) {
+                    document.getElementById('cascadeBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Thunder Badge'] === true) {
+                    document.getElementById('thunderBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Rainbow Badge'] === true) {
+                    document.getElementById('rainbowBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Soul Badge'] === true) {
+                    document.getElementById('soulBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Marsh Badge'] === true) {
+                    document.getElementById('marshBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Volcano Badge'] === true) {
+                    document.getElementById('volcanoBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Earth Badge'] === true) {
+                    document.getElementById('earthBadge').style.visibility = 'visible';
+                }
+                openModal(document.getElementById('badgecaseModal'));
             } else {
                 notify('You have no Badges');
             }
+        },
+        renderBoulderBadge: function () {
+            openModal(document.getElementById('brockModal'));
         },
         viewEvoStones: function () {
             if (!isEmpty(player.evoStones)) {
@@ -543,6 +565,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.npc.name === 'Shrine\'s Old Man') {
                 this.abundantOldManEvent();
             }
+            if (routeData.npc.name === 'Game Corner') {
+                this.gameCorner();
+            }
+        },
+        gameCorner: function () {
+            openModal(document.getElementById('gameCornerModal'));
         },
         oakEvent: function () {
             notify('How is your Pokedex Coming along?');

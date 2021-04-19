@@ -11,7 +11,7 @@ export type PokemonGrowthRate = keyof typeof EXP_TABLE;
 export const COLORS: Record<string, Record<string, string>> = {};
 COLORS['route'] = {};
 COLORS['route']['locked'] = 'rgb(255, 0, 0)';
-COLORS['route']['unlocked'] = 'rgb(0, 0, 0)';
+COLORS['route']['unlocked'] = 'rgb(255, 255, 255)';
 COLORS['route']['current'] = 'rgb(139, 69, 19)';
 
 export const POKEDEXFLAGS: Record<string, number> = {};

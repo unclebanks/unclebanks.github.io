@@ -11,6 +11,9 @@
   <TownModal />
   <StoryModal :ui="ui" />
   <PokedexModal />
+  <BadgeCaseModal :ui="ui" />
+  <BrockModal />
+  <GameCornerModal />
 </template>
 
 <script>
@@ -26,6 +29,9 @@ import StatisticsModal from './modals/StatisticsModal.vue';
 import StoryModal from './modals/StoryModal.vue';
 import TownModal from './modals/TownModal.vue';
 import PokedexModal from './modals/PokedexModal.vue';
+import BadgeCaseModal from './modals/BadgeCaseModal.vue';
+import BrockModal from './modals/BrockModal.vue';
+import GameCornerModal from './modals/GameCornerModal.vue';
 
 export default {
     components: {
@@ -41,6 +47,9 @@ export default {
         TownModal,
         StoryModal,
         PokedexModal,
+        BadgeCaseModal,
+        BrockModal,
+        GameCornerModal,
     },
 
     props: {
