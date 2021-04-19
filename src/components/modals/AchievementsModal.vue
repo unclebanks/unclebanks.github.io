@@ -5,9 +5,12 @@
   >
     <template #body>
       <div>
-        <ul id="achievementsList">
-          <li>Nothing</li>
-        </ul>
+        <p>Pokemon Defeated</p><button
+          id="pokemonDefeated"
+          @click="ui.checkPokemonDefeated()"
+        >
+          0
+        </button><br>
       </div>
     </template>
   </CardModal>
@@ -19,6 +22,10 @@ import CardModal from '../common/CardModal.vue';
 export default {
     components: {
         CardModal,
+    },
+
+    props: {
+        ui: { type: Object, required: true },
     },
 };
 </script>
