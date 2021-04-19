@@ -1,4 +1,4 @@
-import { renderView } from './display';
+import display, { renderView } from './display';
 import ROUTES from './routes';
 // eslint-disable-next-line object-curly-newline
 import { $, camelCaseToString, isEmpty, pokeByName } from './utilities';
@@ -332,44 +332,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             document.getElementById('statisticsList').innerHTML = statList;
             openModal(document.getElementById('statisticsModal'));
         },
-        viewAchievements: function () {
-            let achievementHTML = '';
-            let completeState; let
-                complete;
-            for (const subgroup in ACHIEVEMENTS.statistics) {
-                for (let i = 0, count = ACHIEVEMENTS.statistics[subgroup].length; i < count; i++) {
-                    complete = (player.statistics[subgroup] >= ACHIEVEMENTS.statistics[subgroup][i].value);
-                    completeState = complete ? ACHIEVEMENTS.statistics[subgroup][i].value : player.statistics[subgroup];
-                    achievementHTML += `<li${complete ? ' class="complete"' : ''}><b>${ACHIEVEMENTS.statistics[subgroup][i].name}</b>: ${camelCaseToString(subgroup)} ${completeState}/${ACHIEVEMENTS.statistics[subgroup][i].value}</li>`;
-                }
-            }
-            for (let i = 0, count = ACHIEVEMENTS.dex.caughtCount.length; i < count; i++) {
-                const progress = player.countPokedex(POKEDEXFLAGS.releasedNormal);
-                complete = (progress >= ACHIEVEMENTS.dex.caughtCount[i].value);
-                completeState = complete ? ACHIEVEMENTS.dex.caughtCount[i].value : progress;
-                achievementHTML += `<li${complete ? ' class="complete"' : ''}><b>${ACHIEVEMENTS.dex.caughtCount[i].name}</b>: Unique Caught ${completeState}/${ACHIEVEMENTS.dex.caughtCount[i].value}</li>`;
-            }
-            for (let i = 0, count = ACHIEVEMENTS.dex.caught.length; i < count; i++) {
-                let progress = 0;
-                const needed = ACHIEVEMENTS.dex.caught[i].pokes.length;
-                let string = '';
-                for (let j = 0; j < needed; j++) {
-                    const pokeName = ACHIEVEMENTS.dex.caught[i].pokes[j];
-                    string += (j > 0) ? ', ' : '';
-                    if (player.hasDexEntry(pokeName, POKEDEXFLAGS.releasedNormal)) {
-                        string += `<s>${pokeName}</s>`;
-                        progress++;
-                    } else {
-                        string += pokeName;
-                    }
-                }
-                complete = (progress >= needed);
-                completeState = complete ? needed : progress;
-                achievementHTML += `<li${complete ? ' class="complete"' : ''}><b>${ACHIEVEMENTS.dex.caught[i].name}</b>: Catch ${string}</li>`;
-            }
-            document.getElementById('achievementsList').innerHTML = achievementHTML;
-            openModal(document.getElementById('achievementsModal'));
-        },
         viewInventory: function () {
             let inventoryHTML = '';
             const vitamins = Object.keys(VITAMINS);
@@ -382,6 +344,20 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
+        },
+        renderPokemonDefeated: function () {
+            const pokemonDefeatedElement = $('#pokemonDefeated');
+            pokemonDefeatedElement.innerHTML = player.statistics.beaten;
+        },
+        checkPokemonDefeated: function () {
+            if (player.statistics.beaten > 10) {
+                player.ballsAmount.masterball += 100;
+                dom.renderBalls();
+            } else { notify('Defeat 10 Pokemon and try again'); }
+        },
+        viewAchievements: function () {
+            this.renderPokemonDefeated();
+            openModal(document.getElementById('achievementsModal'));
         },
         enterCode: function () {
             // eslint-disable-next-line prefer-const

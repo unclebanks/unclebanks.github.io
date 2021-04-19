@@ -6,6 +6,8 @@ import ROUTES from './routes';
 import { renderView } from './display';
 import Poke from './poke';
 import POKEDEX from './db';
+import actions from '../store/actions';
+import notify from './notify';
 
 export default (player, enemy) => {
     let dom;
@@ -116,6 +118,7 @@ export default (player, enemy) => {
             if (enemy.activePoke().shiny()) {
                 player.statistics.shinyBeaten++;
             }
+            player.statistics.beaten++;
             Combat.attemptCatch();
             Combat.findPokeballs(enemy.activePoke().level());
             const foundPokeCoins = Math.floor(Combat.enemyActivePoke.level() * 4) - 5;
@@ -272,6 +275,7 @@ export default (player, enemy) => {
                         player.statistics.successfulThrows++;
                         player.statistics[`${selectedBall}SuccessfulThrows`]++;
                         player.addCatchCoins(gainCatchCoins);
+                        notify(`You caught ${enemy.activePoke().pokeName()}`);
                         if (!player.hasPokemonLike(enemy.activePoke())) {
                             player.addPoke(enemy.activePoke());
                         }
@@ -283,6 +287,9 @@ export default (player, enemy) => {
                             player.statistics.caught++;
                         }
                         renderView(dom, enemy, player);
+                    }
+                    if (!rngHappened) {
+                        notify(`You did not catch ${enemy.activePoke().pokeName()}`);
                     }
                 }
             }
