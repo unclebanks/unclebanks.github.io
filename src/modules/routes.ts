@@ -455,6 +455,10 @@ const ROUTES: Routes = {
                     ['Vileplume', 29],
                 ],
             },
+            npc: {
+                name: 'Game Corner',
+                event: 'gameCorner',
+            },
             _unlock: {
                 badges: {
                     'Thunder Badge': true,

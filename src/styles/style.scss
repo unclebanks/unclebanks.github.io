@@ -209,6 +209,18 @@ ul {
     background-image: url('../assets/other/NavBoxBackground.png');
     background-size: cover;
 }
+#gameCornerBuilding {
+    background-image: url('../assets/other/GameCornerBackground.png');
+    background-size: cover;
+}
+#gameCornerBuilding .span {
+    color: rgb(255, 0, 0);
+    background-color: #FFF;
+}
+#prizeCorner {
+    margin-left: 50%;
+    margin-top: auto;
+}
 #viewSelectBox .button, #townBox button {
     margin-top: 7px;
     align-items: center;
