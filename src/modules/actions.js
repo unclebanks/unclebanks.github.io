@@ -358,7 +358,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (player.statistics.beaten > 49 && !player.events.beaten) {
                 player.ballsAmount.masterball += 50;
                 dom.renderBalls();
-                notify('You deafeated 50 POKEMON and earned 50 MASTERBALLS');
+                notify('You defeated 50 POKEMON and earned 50 MASTERBALLS');
                 player.events.beaten = true;
             }
             if (player.events.beaten && player.statistics.beaten > 99 && !player.events.beaten1) {
