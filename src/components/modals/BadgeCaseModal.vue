@@ -7,43 +7,43 @@
       <div id="badges">
         <div id="kantoBadges">
           <h4>Kanto Badges</h4><br>
-          <boulderButton
+          <button
             id="boulderBadge"
             style="visibility:hidden"
             class="button"
             @click="ui.renderBoulderBadge()"
           />
-          <cascadeButton
+          <button
             id="cascadeBadge"
             style="visibility:hidden"
             class="button"
           />
-          <thunderButton
+          <button
             id="thunderBadge"
             style="visibility:hidden"
             class="button"
           />
-          <rainbowButton
+          <button
             id="rainbowBadge"
             style="visibility:hidden"
             class="button"
           />
-          <soulButton
+          <button
             id="soulBadge"
             style="visibility:hidden"
             class="button"
           />
-          <marshButton
+          <button
             id="marshBadge"
             style="visibility:hidden"
             class="button"
           />
-          <volcanoButton
+          <button
             id="volcanoBadge"
             style="visibility:hidden"
             class="button"
           />
-          <earthButton
+          <button
             id="earthBadge"
             style="visibility:hidden"
             class="button"
