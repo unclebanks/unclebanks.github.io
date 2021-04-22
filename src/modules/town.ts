@@ -582,6 +582,11 @@ class Town {
                     catchcoins: 10000,
                     unlockable: 'hoennSuperRod',
                 },
+                {
+                    name: 'Kings Rock',
+                    catchcoins: 1000,
+                    evoStones: 'kingsRock',
+                },
             ],
             sinnoh: [
                 {
@@ -598,6 +603,11 @@ class Town {
                     name: 'Super Rod',
                     catchcoins: 10000,
                     unlockable: 'sinnohSuperRod',
+                },
+                {
+                    name: 'Dusk Stone',
+                    catchcoins: 1000,
+                    evoStones: 'duskStone',
                 },
             ],
             unova: [
@@ -655,6 +665,16 @@ class Town {
                     catchcoins: 10000,
                     evoStones: 'iceStone',
                 },
+                {
+                    name: 'Sachet',
+                    catchcoins: 1000,
+                    evoStones: 'Sachet'
+                },
+                {
+                    name: 'Whipped Dream',
+                    catchcoins: 1000,
+                    evoStones: 'whippedDream'
+                }
             ],
         };
     }
