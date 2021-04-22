@@ -668,13 +668,13 @@ class Town {
                 {
                     name: 'Sachet',
                     catchcoins: 1000,
-                    evoStones: 'Sachet'
+                    evoStones: 'Sachet',
                 },
                 {
                     name: 'Whipped Dream',
                     catchcoins: 1000,
-                    evoStones: 'whippedDream'
-                }
+                    evoStones: 'whippedDream',
+                },
             ],
         };
     }
