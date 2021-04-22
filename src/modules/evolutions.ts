@@ -492,6 +492,9 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Phanpy': [
         { 'to': 'Donphan', 'requires': { 'type': 'level', 'level': 25 } },
     ],
+    'Tyrogue': [
+        { 'to': 'Hitmontop', 'requires': { 'type': 'level', 'level': 20 } },
+    ],
     'Larvitar': [
         { 'to': 'Pupitar', 'requires': { 'type': 'level', 'level': 30 } },
     ],
@@ -1262,7 +1265,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Electivire', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
     ],
     'Magmar': [
-        { 'to': 'Magmortar', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
+        { 'to': 'Magmortar', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
     ],
     'Yanma': [
         { 'to': 'Yanmega', 'requires': { 'type': 'level', 'level': 50 } },

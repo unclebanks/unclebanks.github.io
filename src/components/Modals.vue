@@ -12,8 +12,8 @@
   <StoryModal :ui="ui" />
   <PokedexModal />
   <BadgeCaseModal :ui="ui" />
-  <BrockModal />
-  <GameCornerModal />
+  <BrockModal :ui="ui" />
+  <GameCornerModal :ui="ui" />
 </template>
 
 <script>

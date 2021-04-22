@@ -1570,7 +1570,7 @@ const ROUTES: Routes = {
         },
         hroute116: {
             name: 'Route 116',
-            pokes: ['Abra', 'Poochyena', 'Zigzagoon', 'Taillow', 'Nincada', 'Whismur', 'Skitty'],
+            pokes: ['Abra', 'Poochyena', 'Zigzagoon', 'Taillow', 'Nincada', 'Whismur', 'Skitty', 'Shedinja'],
             minLevel: 6,
             maxLevel: 8,
             respawn: 'rustboroCity',

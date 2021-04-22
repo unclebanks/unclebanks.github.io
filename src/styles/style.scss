@@ -19,7 +19,11 @@ html, body {
 #gameContainer > div > div {
     border: none !important;
 }
-
+.button, button {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
 ul {
     list-style: none;
     padding-left: 0;
@@ -54,12 +58,6 @@ ul {
     margin-bottom: none;
     background-color: rgb(58, 58, 58);
     text-align: center;
-}
-
-#pokeGear .button {
-    background-color: transparent;
-    color: white;
-    border-color: white;
 }
 
 #routesBox {
@@ -187,19 +185,6 @@ ul {
     background-color: rgb(58, 58, 58);
     align-content: center;
 }
-
-#console {
-    grid-column: 2;
-    grid-row: 2;
-    height: 50%;
-    margin-top: 30%;
-    max-height: 100px;
-    overflow-y: hidden;
-    background-color: rgb(58, 58, 58);
-}
-#console-text {
-    padding-left: 9px;
-}
 #townBox {
     text-align: center;
 }
@@ -209,16 +194,11 @@ ul {
     text-align: center;
     background-color: rgb(58, 58, 58);
 }
-#regionBox .button {
-    background-color: transparent;
-    color: white;
-    border-color: white;
-}
 #navBox {
     grid-column: 2;
     grid-row: 2;
-    background-image: url('../assets/other/NavBoxBackground.png');
-    background-size: cover;
+    background-color: rgb(58, 58, 58);
+    text-align: center;
 }
 #gameCornerBuilding {
     background-image: url('../assets/other/GameCornerBackground.png');
@@ -241,76 +221,12 @@ ul {
     background-color: transparent;
     color: white;
 }
-#navBox vitaminButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/StorageIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox dexButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/PCIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox statsButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/StatisticsIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox achievementButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/AcheivementsIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox settingsButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/SettingsIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 #regionBox partyButton {
     width: auto;
     height: fit-content;
     border-color: black;
     background-color: transparent;
     color: black;
-}
-
-#navBox p {
-    margin: 0 0 5px 0;
 }
 
 .pokeBox {
