@@ -141,6 +141,10 @@ export default (lastSave, appModel) => {
             totalBattleCoins: 0,
             totalExp: 0,
         },
+        statisticsRequirements: {
+            beaten: 50,
+            beaten1: 100,
+        },
         badges: {},
         wins: {},
         events: {},
@@ -469,6 +473,7 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('vitamins', JSON.stringify(this.vitamins));
                 localStorage.setItem('pokedexData', JSON.stringify(this.getPokedexData()));
                 localStorage.setItem('statistics', JSON.stringify(this.statistics));
+                localStorage.setItem('statisticsRequirements', JSON.stringify(this.statisticsRequirements));
                 localStorage.setItem('settings', JSON.stringify(this.settings));
                 localStorage.setItem('badges', JSON.stringify(this.badges));
                 localStorage.setItem('wins', JSON.stringify(this.wins));
@@ -488,6 +493,7 @@ export default (lastSave, appModel) => {
                 pinnedStorage: [...appModel.$store.state.pokemon.pinnedStorage],
                 pokedexData: this.getPokedexData(),
                 statistics: this.statistics,
+                statisticsRequirements: this.statisticsRequirements,
                 settings: this.settings,
                 ballsAmount: this.ballsAmount,
                 badges: this.badges,
@@ -551,6 +557,9 @@ export default (lastSave, appModel) => {
             if (JSON.parse(localStorage.getItem('statistics'))) {
                 const loadedStats = JSON.parse(localStorage.getItem('statistics'));
                 this.statistics = { ...this.statistics, ...loadedStats };
+            }
+            if (JSON.parse(localStorage.getItem('statisticsRequirements'))) {
+                this.statisticsRequirements = JSON.parse(localStorage.getItem('statisticsRequirements'));
             }
             if (JSON.parse(localStorage.getItem('settings'))) {
                 this.settings = JSON.parse(localStorage.getItem('settings'));
@@ -643,6 +652,7 @@ export default (lastSave, appModel) => {
                 if (saveData.settings) {
                     this.settings = saveData.settings;
                 }
+                this.statisticsRequirements = saveData.statisticsRequirements;
                 this.badges = saveData.badges ? saveData.badges : {};
                 this.wins = saveData.wins ? saveData.wins : {};
                 this.currentBoostedRoamer = saveData.currentBoostedRoamer;

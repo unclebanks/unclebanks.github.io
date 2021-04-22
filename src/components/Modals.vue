@@ -6,7 +6,7 @@
   <KeyItemsModal />
   <VitaminModal />
   <SettingsModal :ui="ui" />
-  <AchievementsModal />
+  <AchievementsModal :ui="ui" />
   <StatisticsModal />
   <TownModal />
   <StoryModal :ui="ui" />

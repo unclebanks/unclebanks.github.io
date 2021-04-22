@@ -1,4 +1,4 @@
-Welcome to the NoNamePokemonGame github. This is a game that is based off of PokeIdle Extended (which in turn is based off of PokeIdle). This game is in extreme alpha stage so please do not expect much. Since the game is very early in development we are always looking for contributors in any capacity. Please be civil with each other and enjoy your time here. If you would like to join our discord to stay up to date with things https://discord.gg/6VmndrjPmK
+Welcome to the NoNamePokemonGame github. This is a game that is based off of PokeIdle Extended (which in turn is based off of PokeIdle). This game is in extreme alpha stage so please do not expect much.
 
 ## Developer Setup
 You will need node installed, so that the `npm` command is available to use
