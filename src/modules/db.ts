@@ -16637,7 +16637,7 @@ const POKEDEX = createPokemonArray(
     {
         'name': 'Poipole',
         'stats': {
-            'catch rate': '17',
+            'catch rate': '45',
             'growth rate': 'Slow',
             'hp': '67',
             'attack': '73',
@@ -16655,7 +16655,7 @@ const POKEDEX = createPokemonArray(
     {
         'name': 'Naganadel',
         'stats': {
-            'catch rate': '17',
+            'catch rate': '45',
             'growth rate': 'Slow',
             'hp': '73',
             'attack': '73',
@@ -16674,7 +16674,7 @@ const POKEDEX = createPokemonArray(
     {
         'name': 'Stakataka',
         'stats': {
-            'catch rate': '3',
+            'catch rate': '30',
             'growth rate': 'Slow',
             'hp': '61',
             'attack': '131',
@@ -16702,8 +16702,8 @@ const POKEDEX = createPokemonArray(
             'sp def': '79',
             'speed': '107',
             'types': [
-                'Ghost',
                 'Fire',
+                'Ghost',
             ],
         },
         'exp': 257,
