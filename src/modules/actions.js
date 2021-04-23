@@ -1,4 +1,4 @@
-import { renderView } from './display';
+import display, { renderView } from './display';
 import ROUTES from './routes';
 // eslint-disable-next-line object-curly-newline
 import { $, camelCaseToString, isEmpty, pokeByName } from './utilities';
@@ -332,44 +332,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             document.getElementById('statisticsList').innerHTML = statList;
             openModal(document.getElementById('statisticsModal'));
         },
-        viewAchievements: function () {
-            let achievementHTML = '';
-            let completeState; let
-                complete;
-            for (const subgroup in ACHIEVEMENTS.statistics) {
-                for (let i = 0, count = ACHIEVEMENTS.statistics[subgroup].length; i < count; i++) {
-                    complete = (player.statistics[subgroup] >= ACHIEVEMENTS.statistics[subgroup][i].value);
-                    completeState = complete ? ACHIEVEMENTS.statistics[subgroup][i].value : player.statistics[subgroup];
-                    achievementHTML += `<li${complete ? ' class="complete"' : ''}><b>${ACHIEVEMENTS.statistics[subgroup][i].name}</b>: ${camelCaseToString(subgroup)} ${completeState}/${ACHIEVEMENTS.statistics[subgroup][i].value}</li>`;
-                }
-            }
-            for (let i = 0, count = ACHIEVEMENTS.dex.caughtCount.length; i < count; i++) {
-                const progress = player.countPokedex(POKEDEXFLAGS.releasedNormal);
-                complete = (progress >= ACHIEVEMENTS.dex.caughtCount[i].value);
-                completeState = complete ? ACHIEVEMENTS.dex.caughtCount[i].value : progress;
-                achievementHTML += `<li${complete ? ' class="complete"' : ''}><b>${ACHIEVEMENTS.dex.caughtCount[i].name}</b>: Unique Caught ${completeState}/${ACHIEVEMENTS.dex.caughtCount[i].value}</li>`;
-            }
-            for (let i = 0, count = ACHIEVEMENTS.dex.caught.length; i < count; i++) {
-                let progress = 0;
-                const needed = ACHIEVEMENTS.dex.caught[i].pokes.length;
-                let string = '';
-                for (let j = 0; j < needed; j++) {
-                    const pokeName = ACHIEVEMENTS.dex.caught[i].pokes[j];
-                    string += (j > 0) ? ', ' : '';
-                    if (player.hasDexEntry(pokeName, POKEDEXFLAGS.releasedNormal)) {
-                        string += `<s>${pokeName}</s>`;
-                        progress++;
-                    } else {
-                        string += pokeName;
-                    }
-                }
-                complete = (progress >= needed);
-                completeState = complete ? needed : progress;
-                achievementHTML += `<li${complete ? ' class="complete"' : ''}><b>${ACHIEVEMENTS.dex.caught[i].name}</b>: Catch ${string}</li>`;
-            }
-            document.getElementById('achievementsList').innerHTML = achievementHTML;
-            openModal(document.getElementById('achievementsModal'));
-        },
         viewInventory: function () {
             let inventoryHTML = '';
             const vitamins = Object.keys(VITAMINS);
@@ -383,6 +345,33 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             document.getElementById('inventoryList').innerHTML = inventoryHTML;
             openModal(document.getElementById('inventoryModal'));
         },
+        renderBeatenAchievement: function () {
+            const beatenReq = player.statisticsRequirements.beaten;
+            const beaten1Req = player.statisticsRequirements.beaten1;
+            if (player.statistics.beaten > beatenReq) { return beaten1Req; } else { return beatenReq; }
+        },
+        renderPokemonDefeated: function () {
+            const pokemonDefeatedElement = $('#pokemonDefeated');
+            pokemonDefeatedElement.innerHTML = `${player.statistics.beaten}/${this.renderBeatenAchievement()}`;
+        },
+        checkPokemonDefeated: function () {
+            if (player.statistics.beaten > 49 && !player.events.beaten) {
+                player.ballsAmount.masterball += 50;
+                dom.renderBalls();
+                notify('You defeated 50 POKEMON and earned 50 MASTERBALLS');
+                player.events.beaten = true;
+            }
+            if (player.events.beaten && player.statistics.beaten > 99 && !player.events.beaten1) {
+                player.ballsAmount.masterball += 100;
+                dom.renderBalls();
+                notify('You defeated 100 POKEMON and earned 100 MASTERBALLS');
+                player.events.beaten1 = true;
+            } else { notify('Defeat 50 Pokemon and try again'); }
+        },
+        viewAchievements: function () {
+            this.renderPokemonDefeated();
+            openModal(document.getElementById('achievementsModal'));
+        },
         enterCode: function () {
             // eslint-disable-next-line prefer-const
             let secretCode = prompt('Please enter your secret code', 'Secret Code');
@@ -393,17 +382,39 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 notify('Code Invalid or Already Claimed', { type: 'danger' });
             }
         },
-        viewBadges: function () {
+        viewBadgeCase: function () {
             if (!isEmpty(player.badges)) {
-                let badgesHTML = '';
-                for (const badge in player.badges) {
-                    badgesHTML += `${'<img src="assets/images/badges/'}${[badge]}.png"></img>`;
+                if (player.badges['Boulder Badge'] === true) {
+                    document.getElementById('boulderBadge').style.visibility = 'visible';
                 }
-                document.getElementById('badgeList').innerHTML = badgesHTML;
-                openModal(document.getElementById('badgesModal'));
+                if (player.badges['Cascade Badge'] === true) {
+                    document.getElementById('cascadeBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Thunder Badge'] === true) {
+                    document.getElementById('thunderBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Rainbow Badge'] === true) {
+                    document.getElementById('rainbowBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Soul Badge'] === true) {
+                    document.getElementById('soulBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Marsh Badge'] === true) {
+                    document.getElementById('marshBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Volcano Badge'] === true) {
+                    document.getElementById('volcanoBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Earth Badge'] === true) {
+                    document.getElementById('earthBadge').style.visibility = 'visible';
+                }
+                openModal(document.getElementById('badgecaseModal'));
             } else {
                 notify('You have no Badges');
             }
+        },
+        renderBoulderBadge: function () {
+            openModal(document.getElementById('brockModal'));
         },
         viewEvoStones: function () {
             if (!isEmpty(player.evoStones)) {
@@ -543,6 +554,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.npc.name === 'Shrine\'s Old Man') {
                 this.abundantOldManEvent();
             }
+            if (routeData.npc.name === 'Game Corner') {
+                this.gameCorner();
+            }
+        },
+        gameCorner: function () {
+            openModal(document.getElementById('gameCornerModal'));
         },
         oakEvent: function () {
             notify('How is your Pokedex Coming along?');

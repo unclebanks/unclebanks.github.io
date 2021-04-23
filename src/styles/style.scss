@@ -6,7 +6,7 @@ html, body {
 
 #gameContainer {
     font-family: 'Lato', sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: minmax(210px, 18%) 30% 30% 22%;
     grid-template-rows: 45% 25% 30%;
@@ -19,7 +19,11 @@ html, body {
 #gameContainer > div > div {
     border: none !important;
 }
-
+.button, button {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
 ul {
     list-style: none;
     padding-left: 0;
@@ -32,7 +36,7 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 #partyBox {
@@ -41,7 +45,7 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 
     li, p {
         display: inline-block;
@@ -52,7 +56,7 @@ ul {
     grid-column: 3;
     grid-row: 2 / 4;
     margin-bottom: none;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
     text-align: center;
 }
 
@@ -63,7 +67,7 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 .roamerIcon {
@@ -117,10 +121,10 @@ ul {
 }
 
 .activeNormal {
-    color: black;
+    color: rgb(83, 255, 83);
 }
 .inactiveNormal {
-    color: black;
+    color: rgb(83, 255, 83);
 }
 .dead {
     color: red;
@@ -142,7 +146,7 @@ ul {
     grid-row: 2;
     width: 50%;
     text-align: center;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 #viewSelectBox p {
@@ -154,7 +158,7 @@ ul {
     grid-row: 1;
     padding: 5px;
     font-size: medium;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 #invBox p {
@@ -171,28 +175,15 @@ ul {
     margin-left: 50%;
     float: right;
     grid-row: 1;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 
 #playerBox {
     grid-column: 2;
     grid-row: 1;
     width: 50%;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
     align-content: center;
-}
-
-#console {
-    grid-column: 2;
-    grid-row: 2;
-    height: 50%;
-    margin-top: 30%;
-    max-height: 100px;
-    overflow-y: hidden;
-    background-color: rgb(112, 146, 190);
-}
-#console-text {
-    padding-left: 9px;
 }
 #townBox {
     text-align: center;
@@ -201,82 +192,34 @@ ul {
     grid-column: 4;
     grid-row: 3;
     text-align: center;
-    background-color: rgb(112, 146, 190);
+    background-color: rgb(58, 58, 58);
 }
 #navBox {
     grid-column: 2;
     grid-row: 2;
-    background-image: url('../assets/other/NavBoxBackground.png');
+    background-color: rgb(58, 58, 58);
+    text-align: center;
+}
+#gameCornerBuilding {
+    background-image: url('../assets/other/GameCornerBackground.png');
     background-size: cover;
+}
+#gameCornerBuilding .span {
+    color: rgb(255, 0, 0);
+    background-color: #FFF;
+}
+#prizeCorner {
+    margin-left: 50%;
+    margin-top: auto;
 }
 #viewSelectBox .button, #townBox button {
     margin-top: 7px;
     align-items: center;
-    border-color: black;
+    border-color: white;
     width: auto;
     height: auto;
     background-color: transparent;
-    color: black;
-}
-#navBox vitaminButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/StorageIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox dexButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/PCIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox statsButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/StatisticsIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox achievementButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/AcheivementsIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#navBox settingsButton {
-    margin-top: 7px;
-    align-items: center;
-    border-color: transparent;
-    width: 100px;
-    max-height: 300px;
-    background-color: transparent;
-    color: transparent;
-    background-image:url('../assets/other/SettingsIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    color: white;
 }
 #regionBox partyButton {
     width: auto;
@@ -284,10 +227,6 @@ ul {
     border-color: black;
     background-color: transparent;
     color: black;
-}
-
-#navBox p {
-    margin: 0 0 5px 0;
 }
 
 .pokeBox {
@@ -500,6 +439,70 @@ progress.expBar {
 #achievementsList li.complete {
     text-decoration: line-through;
     font-style: italic;
+}
+
+#boulderBadge {
+    background-image: url('../assets/images/badges/Boulder\ Badge.png');
+    margin-top: 7px;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+#brockImage {
+    background-image: url('../assets/images/gymLeaders/Brock2.png');
+    height: 370px;
+    width: 150px;
+}
+#brockMon1 {
+    background-image: url('../assets/sprites/normal/front/Geodude.png');
+    height: 96px;
+    width: 96px;
+}
+#brockMon2 {
+    background-image: url('../assets/sprites/normal/front/Onix.png');
+    height: 96px;
+    width: 96px;
+}
+#cascadeBadge {
+    background-image: url('../assets/images/badges/Cascade\ Badge.png');
+    margin-top: 7px;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+#thunderBadge {
+    background-image: url('../assets/images/badges/Thunder\ Badge.png');
+    margin-top: 7px;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+#rainbowBadge {
+    background-image: url('../assets/images/badges/Rainbow\ Badge.png');
+    margin-top: 7px;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+#soulBadge {
+    background-image: url('../assets/images/badges/Soul\ Badge.png');
+    margin-top: 7px;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+#marshBadge {
+    background-image: url('../assets/images/badges/Marsh\ Badge.png');
+    margin-top: 7px;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+#volcanoBadge {
+    background-image: url('../assets/images/badges/Volcano\ Badge.png');
+    margin-top: 7px;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+#earthBadge {
+    background-image: url('../assets/images/badges/Earth\ Badge.png');
+    margin-top: 7px;
+    min-width: fit-content;
+    min-height: fit-content;
 }
 
 .townBuilding {

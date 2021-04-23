@@ -492,6 +492,9 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Phanpy': [
         { 'to': 'Donphan', 'requires': { 'type': 'level', 'level': 25 } },
     ],
+    'Tyrogue': [
+        { 'to': 'Hitmontop', 'requires': { 'type': 'level', 'level': 20 } },
+    ],
     'Larvitar': [
         { 'to': 'Pupitar', 'requires': { 'type': 'level', 'level': 30 } },
     ],
@@ -1165,6 +1168,15 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Shieldon': [
         { 'to': 'Bastiodon', 'requires': { 'type': 'level', 'level': 30 } },
     ],
+    'Burmy': [
+        { 'to': 'Wormadam', 'requires': { 'type': 'level', 'level': 20 } },
+    ],
+    'Wormadam': [
+        { 'to': 'Mothim', 'requires': { 'type': 'level', 'level': 20 } },
+    ],
+    'Combee': [
+        { 'to': 'Vespiquen', 'requires': { 'type': 'level', 'level': 21 } },
+    ],
     'Buizel': [
         { 'to': 'Floatzel', 'requires': { 'type': 'level', 'level': 26 } },
     ],
@@ -1197,6 +1209,9 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     ],
     'Happiny': [
         { 'to': 'Chansey', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
+    ],
+    'Chansey': [
+        { 'to': 'Blissey', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
     ],
     'Munchlax': [
         { 'to': 'Snorlax', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
@@ -1250,7 +1265,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Electivire', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
     ],
     'Magmar': [
-        { 'to': 'Magmortar', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
+        { 'to': 'Magmortar', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
     ],
     'Yanma': [
         { 'to': 'Yanmega', 'requires': { 'type': 'level', 'level': 50 } },

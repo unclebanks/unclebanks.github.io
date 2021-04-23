@@ -17,7 +17,7 @@ type NotifOptions = {
 const defaultOptions: NotifOptions = {
     type: 'info',
     light: true,
-    duration: 5000,
+    duration: 2000,
     isHtml: false,
     closeButton: true,
 };

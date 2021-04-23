@@ -16612,7 +16612,7 @@ const POKEDEX = createPokemonArray(
                 'Fairy',
             ],
         },
-        'exp': 120,
+        'exp': 270,
         'id': 801,
     },
     {
@@ -16631,7 +16631,7 @@ const POKEDEX = createPokemonArray(
                 'Ghost',
             ],
         },
-        'exp': 120,
+        'exp': 270,
         'id': 802,
     },
     {

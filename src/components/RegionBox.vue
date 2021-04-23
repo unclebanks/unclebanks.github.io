@@ -8,7 +8,7 @@
         class="button"
         value="Kanto"
       >
-        Kanto
+        KANTO
       </button>
       <button
         id="johtoButton"
@@ -16,7 +16,7 @@
         class="button"
         value="Johto"
       >
-        Johto
+        JOHTO
       </button>
       <button
         id="hoennButton"
@@ -24,7 +24,7 @@
         class="button"
         value="Hoenn"
       >
-        Hoenn
+        HOENN
       </button><br>
       <button
         id="sinnohButton"
@@ -32,7 +32,7 @@
         class="button"
         value="Sinnoh"
       >
-        Sinnoh
+        SINNOH
       </button>
       <button
         id="unovaButton"
@@ -40,7 +40,7 @@
         class="button"
         value="Unova"
       >
-        Unova
+        UNOVA
       </button>
       <button
         id="kalosButton"
@@ -48,7 +48,7 @@
         class="button"
         value="Kalos"
       >
-        Kalos
+        KALOS
       </button><br>
       <button
         id="alolaButton"
@@ -56,7 +56,7 @@
         class="button"
         value="Alola"
       >
-        Alola
+        ALOLA
       </button>
       <button
         id="galarButton"
@@ -64,7 +64,7 @@
         class="button"
         value="Galar"
       >
-        Galar
+        GALAR
       </button><br>
     </div>
   </div>

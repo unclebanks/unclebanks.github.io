@@ -582,6 +582,11 @@ class Town {
                     catchcoins: 10000,
                     unlockable: 'hoennSuperRod',
                 },
+                {
+                    name: 'Kings Rock',
+                    catchcoins: 1000,
+                    evoStones: 'kingsRock',
+                },
             ],
             sinnoh: [
                 {
@@ -598,6 +603,11 @@ class Town {
                     name: 'Super Rod',
                     catchcoins: 10000,
                     unlockable: 'sinnohSuperRod',
+                },
+                {
+                    name: 'Dusk Stone',
+                    catchcoins: 1000,
+                    evoStones: 'duskStone',
                 },
             ],
             unova: [
@@ -655,6 +665,16 @@ class Town {
                     catchcoins: 10000,
                     evoStones: 'iceStone',
                 },
+                {
+                    name: 'Sachet',
+                    catchcoins: 1000,
+                    evoStones: 'Sachet',
+                },
+                {
+                    name: 'Whipped Dream',
+                    catchcoins: 1000,
+                    evoStones: 'whippedDream',
+                },
             ],
         };
     }
@@ -670,25 +690,30 @@ class Town {
             let canBuy = true;
             let canBuy10 = true;
             let canBuy100 = true;
+            let canBuy1000 = true;
             const own = false;
             if (this.player.currencyAmount.pokecoins < item.pokecoins) canBuy = false;
             if (this.player.currencyAmount.pokecoins < item.pokecoins * 10) canBuy10 = false;
             if (this.player.currencyAmount.pokecoins < item.pokecoins * 100) canBuy100 = false;
+            if (this.player.currencyAmount.pokecoins < item.pokecoins * 1000) canBuy1000 = false;
             const disableButton = (!canBuy || own) ? ' disabled="true"' : '';
             const disableButton10 = (!canBuy10 || own) ? ' disabled="true"' : '';
             const disableButton100 = (!canBuy100 || own) ? ' disabled="true"' : '';
+            const disableButton1000 = (!canBuy1000 || own) ? ' disabled="true"' : '';
             const buttonText = (own) ? 'Own' : 'Buy';
             const buttonText10 = (own) ? 'Own' : 'Buy 10';
             const buttonText100 = (own) ? 'Own' : 'Buy 100';
+            const buttonText1000 = (own) ? 'Own' : 'Buy 1000';
             const buttonHTML = ` <button onclick="town.buyPokeCoinItem('${region}', ${i})"${disableButton}>${buttonText}</button>`;
             const button10HTML = ` <button onclick="town.buyPokeCoinItem('${region}', ${i}, 10)"${disableButton10}>${buttonText10}</button>`;
             const button100HTML = ` <button onclick="town.buyPokeCoinItem('${region}', ${i}, 100)"${disableButton100}>${buttonText100}</button>`;
+            const button1000HTML = ` <button onclick="town.buyPokeCoinItem('${region}', ${i}, 1000)"${disableButton1000}>${buttonText1000}</button>`;
             if ('ball' in item) {
-                shopHTML += `<li><img src="assets/images/pokeballs/${item.ball}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${item.pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
+                shopHTML += `<li><img src="assets/images/pokeballs/${item.ball}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${item.pokecoins}${buttonHTML}${button10HTML}${button100HTML}${button1000HTML}</li>`;
             } else if ('battleItem' in item) {
-                shopHTML += `<li><img src="assets/images/battleItems/${item.battleItem}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${item.pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
+                shopHTML += `<li><img src="assets/images/battleItems/${item.battleItem}.png" height="30" width="30"></img>: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${item.pokecoins}${buttonHTML}${button10HTML}${button100HTML}${button1000HTML}</li>`;
             } else {
-                shopHTML += `<li>${item.name}: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${item.pokecoins}${buttonHTML}${button10HTML}${button100HTML}</li>`;
+                shopHTML += `<li>${item.name}: <img src="assets/images/currency/PokeCoin.png" height="16" width="16"></img>${item.pokecoins}${buttonHTML}${button10HTML}${button100HTML}${button1000HTML}</li>`;
             }
         }
         $('#pokecoinShopItems').innerHTML = shopHTML;
