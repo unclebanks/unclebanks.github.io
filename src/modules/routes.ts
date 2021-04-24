@@ -838,7 +838,7 @@ const ROUTES: Routes = {
                     ['Pidgeot', 56],
                 ],
             },
-        }
+        },
     },
     Johto: {
         _unlock: {
@@ -2552,7 +2552,7 @@ const ROUTES: Routes = {
                     ['Milotic', 58],
                 ],
             },
-        }
+        },
     },
     Sinnoh: {
         _unlock: {
@@ -4617,7 +4617,7 @@ const ROUTES: Routes = {
                     ['Medicham', 72],
                     ['Lucario', 72],
                     ['Mienshao', 72],
-                    ['Conkeldurr', 74]
+                    ['Conkeldurr', 74],
                 ],
             },
         },
@@ -4647,7 +4647,7 @@ const ROUTES: Routes = {
                     ['Gothitelle', 72],
                     ['Gallade', 72],
                     ['Reuniclus', 72],
-                    ['Metagross', 74]
+                    ['Metagross', 74],
                 ],
             },
         },
@@ -5431,7 +5431,7 @@ const ROUTES: Routes = {
                     ['Gardevoir', 68],
                 ],
             },
-        }
+        },
     },
     Alola: {
         _global: {
