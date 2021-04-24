@@ -350,9 +350,18 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const beaten1Req = player.statisticsRequirements.beaten1;
             if (player.statistics.beaten > beatenReq) { return beaten1Req; } else { return beatenReq; }
         },
+        renderCaughtAchievement: function () {
+            const caughtReq = player.statisticsRequirements.caught;
+            const caught1Req = player.statisticsRequirements.caught1;
+            if (player.statistics.caught > caughtReq) { return caught1Req; } else { return caughtReq; }
+        },
         renderPokemonDefeated: function () {
             const pokemonDefeatedElement = $('#pokemonDefeated');
             pokemonDefeatedElement.innerHTML = `${player.statistics.beaten}/${this.renderBeatenAchievement()}`;
+        },
+        renderPokemonCaught: function () {
+            const pokemonCaughtElement = $('#pokemonCaught');
+            pokemonCaughtElement.innerHTML = `${player.statistics.caught}/${this.renderCaughtAchievement()}`;
         },
         checkPokemonDefeated: function () {
             if (player.statistics.beaten > 49 && !player.events.beaten) {
@@ -368,8 +377,23 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.events.beaten1 = true;
             } else { notify('Defeat 50 Pokemon and try again'); }
         },
+        checkPokemonCaught: function () {
+            if (player.statistics.caught > 49 && !player.events.caught) {
+                player.ballsAmount.masterball += 99;
+                dom.renderBalls();
+                notify('You caught 100 POKEMON and earned 50 MASTERBALLS');
+                player.events.caught = true;
+            }
+            if (player.events.caught && player.statistics.caught > 999 && !player.events.caught1) {
+                player.ballsAmount.masterball += 100;
+                dom.renderBalls();
+                notify('You caught 1000 POKEMON and earned 100 MASTERBALLS');
+                player.events.caught1 = true;
+            } else { notify('catch more Pokemon and try again'); }
+        },
         viewAchievements: function () {
             this.renderPokemonDefeated();
+            this.renderPokemonCaught();
             openModal(document.getElementById('achievementsModal'));
         },
         enterCode: function () {
