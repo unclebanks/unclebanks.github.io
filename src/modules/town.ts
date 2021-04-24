@@ -609,6 +609,11 @@ class Town {
                     catchcoins: 1000,
                     evoStones: 'duskStone',
                 },
+                {
+                    name: 'Protector',
+                    catchcoins: 1000,
+                    evoStones: 'Protector',
+                },
             ],
             unova: [
                 {
