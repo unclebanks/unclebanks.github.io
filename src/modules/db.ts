@@ -16817,7 +16817,6 @@ const POKEDEX = createPokemonArray(
         'exp': 265,
         'id': 812,
     },
-);
     {
         'name': 'Scorbunny',
         'stats': {
@@ -18501,6 +18500,7 @@ const POKEDEX = createPokemonArray(
         'id': '898-S',
     },
 );
+};
 
 type SetupKey = keyof typeof POKEDEX[number];
 type PokedexKeyData<T extends SetupKey> = typeof POKEDEX[number][T]
