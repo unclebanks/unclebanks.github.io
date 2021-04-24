@@ -4,10 +4,18 @@
     title="Achievements"
   >
     <template #body>
-      <div>
+      <div id="achievements">
         <p>Pokemon Defeated</p><button
           id="pokemonDefeated"
+          class="button"
           @click="ui.checkPokemonDefeated()"
+        >
+          0
+        </button>
+        <p>Pokemon Caught</p><button
+          id="pokemonCaught"
+          class="button"
+          @click="ui.checkPokemonCaught()"
         >
           0
         </button><br>

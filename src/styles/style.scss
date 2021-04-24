@@ -10,6 +10,7 @@ html, body {
     display: grid;
     grid-template-columns: minmax(210px, 18%) 30% 30% 22%;
     grid-template-rows: 45% 25% 30%;
+    background-color: rgb(58, 58, 58);
 }
 
 #gameContainer > div {
@@ -36,7 +37,6 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(58, 58, 58);
 }
 
 #partyBox {
@@ -45,7 +45,6 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(58, 58, 58);
 
     li, p {
         display: inline-block;
@@ -56,7 +55,6 @@ ul {
     grid-column: 3;
     grid-row: 2 / 4;
     margin-bottom: none;
-    background-color: rgb(58, 58, 58);
     text-align: center;
 }
 
@@ -67,7 +65,6 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(58, 58, 58);
 }
 
 .roamerIcon {
@@ -146,7 +143,6 @@ ul {
     grid-row: 2;
     width: 50%;
     text-align: center;
-    background-color: rgb(58, 58, 58);
 }
 
 #viewSelectBox p {
@@ -158,7 +154,6 @@ ul {
     grid-row: 1;
     padding: 5px;
     font-size: medium;
-    background-color: rgb(58, 58, 58);
 }
 
 #invBox p {
@@ -175,14 +170,12 @@ ul {
     margin-left: 50%;
     float: right;
     grid-row: 1;
-    background-color: rgb(58, 58, 58);
 }
 
 #playerBox {
     grid-column: 2;
     grid-row: 1;
     width: 50%;
-    background-color: rgb(58, 58, 58);
     align-content: center;
 }
 #townBox {
@@ -192,12 +185,10 @@ ul {
     grid-column: 4;
     grid-row: 3;
     text-align: center;
-    background-color: rgb(58, 58, 58);
 }
 #navBox {
     grid-column: 2;
     grid-row: 2;
-    background-color: rgb(58, 58, 58);
     text-align: center;
 }
 #gameCornerBuilding {
@@ -335,6 +326,18 @@ progress.expBar {
     height: 50px;
 }
 
+.modal-card-head {
+    background-color: grey;
+}
+.modal-card-body {
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+.modal-card-foot {
+    background-color: grey;
+    color: white;
+}
+
 #popupText {
     vertical-align: middle;
     margin: auto;
@@ -427,18 +430,6 @@ progress.expBar {
 
 #saveLoadButtons {
     margin-bottom: 7px;
-}
-
-#statisticsList li, #achievementsList li {
-    padding: 2px 15px;
-}
-#statisticsList li:nth-child(even) {background: #CCC}
-#statisticsList li:nth-child(odd) {background: #FFF}
-#achievementsList li:nth-child(even) {background: #CCC}
-#achievementsList li:nth-child(odd) {background: #FFF}
-#achievementsList li.complete {
-    text-decoration: line-through;
-    font-style: italic;
 }
 
 #boulderBadge {
