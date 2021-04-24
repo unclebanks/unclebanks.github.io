@@ -34,7 +34,7 @@ Poke.prototype.statValue = function (statName) {
         ? ((raw * 100 + 50) * this.currentLevel()) / 150
         : ((raw * this.currentLevel()) / 40);
     if (statName !== 'speed' && statName !== 'hp') {
-        calculated *= Math.pow(1.25, this.prestigeLevel);
+        calculated *= Math.pow(2, this.prestigeLevel);
     }
     if (statName === 'hp') {
         calculated *= 3;
