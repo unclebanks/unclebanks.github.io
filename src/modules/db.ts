@@ -17792,25 +17792,6 @@ const POKEDEX = createPokemonArray(
         'id': 865,
     },
     {
-        'name': 'Mr. Rime',
-        'stats': {
-            'catch rate': '30',
-            'growth rate': 'Slow',
-            'hp': '61',
-            'attack': '131',
-            'defense': '211',
-            'sp atk': '53',
-            'sp def': '101',
-            'speed': '13',
-            'types': [
-                'Ice',
-                'Psychic',
-            ],
-        },
-        'exp': 257,
-        'id': 866,
-    },
-    {
         'name': 'Runerigus',
         'stats': {
             'catch rate': '30',
@@ -17939,7 +17920,6 @@ const POKEDEX = createPokemonArray(
         'exp': 265,
         'id': 873,
     },
-);
     {
         'name': 'Stonjourner',
         'stats': {
@@ -18221,25 +18201,6 @@ const POKEDEX = createPokemonArray(
         'id': 888,
     },
     {
-        'name': 'Zacian-C',
-        'stats': {
-            'catch rate': '30',
-            'growth rate': 'Slow',
-            'hp': '61',
-            'attack': '131',
-            'defense': '211',
-            'sp atk': '53',
-            'sp def': '101',
-            'speed': '13',
-            'types': [
-                'Fairy',
-                'Steel',
-            ],
-        },
-        'exp': 257,
-        'id': '888-C',
-    },
-    {
         'name': 'Zamazenta',
         'stats': {
             'catch rate': '30',
@@ -18256,25 +18217,6 @@ const POKEDEX = createPokemonArray(
         },
         'exp': 257,
         'id': 889,
-    },
-    {
-        'name': 'Zamazenta-C',
-        'stats': {
-            'catch rate': '3',
-            'growth rate': 'Slow',
-            'hp': '88',
-            'attack': '112',
-            'defense': '75',
-            'sp atk': '102',
-            'sp def': '80',
-            'speed': '143',
-            'types': [
-                'Fighting',
-                'Steel',
-            ],
-        },
-        'exp': 270,
-        'id': '889-C',
     },
     {
         'name': 'Eternatus',
@@ -18312,44 +18254,6 @@ const POKEDEX = createPokemonArray(
         },
         'exp': 270,
         'id': 891,
-    },
-    {
-        'name': 'Urshifu-S',
-        'stats': {
-            'catch rate': '45',
-            'growth rate': 'Medium Slow',
-            'hp': '50',
-            'attack': '65',
-            'defense': '50',
-            'sp atk': '40',
-            'sp def': '40',
-            'speed': '65',
-            'types': [
-                'Fighting',
-                'Dark',
-            ],
-        },
-        'exp': 62,
-        'id': '892-S',
-    },
-    {
-        'name': 'Urshifu-R',
-        'stats': {
-            'catch rate': '45',
-            'growth rate': 'Medium Slow',
-            'hp': '70',
-            'attack': '85',
-            'defense': '70',
-            'sp atk': '55',
-            'sp def': '60',
-            'speed': '80',
-            'types': [
-                'Fighting',
-                'Water',
-            ],
-        },
-        'exp': 147,
-        'id': '892-R',
     },
     {
         'name': 'Zarude',
@@ -18442,64 +18346,6 @@ const POKEDEX = createPokemonArray(
         'exp': 265,
         'id': 897,
     },
-    {
-        'name': 'Calyrex',
-        'stats': {
-            'catch rate': '45',
-            'growth rate': 'Slow',
-            'hp': '70',
-            'attack': '85',
-            'defense': '70',
-            'sp atk': '55',
-            'sp def': '60',
-            'speed': '80',
-            'types': [
-                'Psychic',
-                'Grass',
-            ],
-        },
-        'exp': 147,
-        'id': 898,
-    },
-    {
-        'name': 'Calyrex-G',
-        'stats': {
-            'catch rate': '45',
-            'growth rate': 'Slow',
-            'hp': '100',
-            'attack': '125',
-            'defense': '90',
-            'sp atk': '60',
-            'sp def': '70',
-            'speed': '85',
-            'types': [
-                'Psychic',
-                'Ice',
-            ],
-        },
-        'exp': 265,
-        'id': '898-G',
-    },
-    {
-        'name': 'Calyrex-S',
-        'stats': {
-            'catch rate': '45',
-            'growth rate': 'Slow',
-            'hp': '100',
-            'attack': '125',
-            'defense': '90',
-            'sp atk': '60',
-            'sp def': '70',
-            'speed': '85',
-            'types': [
-                'Psychic',
-                'Ghost',
-            ],
-        },
-        'exp': 265,
-        'id': '898-S',
-    },
-  };
 );
 
 type SetupKey = keyof typeof POKEDEX[number];
