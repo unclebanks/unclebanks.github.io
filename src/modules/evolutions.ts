@@ -1177,6 +1177,9 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Combee': [
         { 'to': 'Vespiquen', 'requires': { 'type': 'level', 'level': 21 } },
     ],
+    'Cherubi': [
+        { 'to': 'Cherrim', 'requires': { 'type': 'level', 'level': 21 } },
+    ],
     'Buizel': [
         { 'to': 'Floatzel', 'requires': { 'type': 'level', 'level': 26 } },
     ],
@@ -1256,7 +1259,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Lickilicky', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
     ],
     'Rhydon': [
-        { 'to': 'Rhyperior', 'requires': { 'type': 'level', 'level': 90 } },
+        { 'to': 'Rhyperior', 'requires': { 'type': 'stone', 'stone': 'Protector' } },
     ],
     'Tangela': [
         { 'to': 'Tangrowth', 'requires': { 'type': 'level', 'level': 90 } },
