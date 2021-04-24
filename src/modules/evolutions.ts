@@ -1178,7 +1178,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
         { 'to': 'Vespiquen', 'requires': { 'type': 'level', 'level': 21 } },
     ],
     'Cherubi': [
-        { 'to': 'Cherrim', 'requires': { 'type': 'level', 'level': 21 } },
+        { 'to': 'Cherrim', 'requires': { 'type': 'level', 'level': 21   } },
     ],
     'Buizel': [
         { 'to': 'Floatzel', 'requires': { 'type': 'level', 'level': 26 } },
