@@ -5,11 +5,12 @@ export default (starter, player, Poke) => {
     let active = starter;
     let combatLoop;
 
-    const generator = (poke, level) => new Poke(
+    const generator = (poke, level, prestigeLevel) => new Poke(
         poke,
         level,
         false,
         Math.random() < (1 / (2 ** 13)),
+        prestigeLevel,
     );
 
     const profPoke = (pokemonList) => {
@@ -64,6 +65,7 @@ export default (starter, player, Poke) => {
         const boostedRoamer = player.routeGetBoostedRoamer(regionId, routeId, false);
         let pokeSpecies = false;
         let level = 1;
+        let prestigeLevel = 0;
         if (boostedRoamer) { // remove boosted roamer from regular spawn pool
             pokemonList = pokemonList.filter((pokemon) => pokemon !== boostedRoamer.pokemon);
         }
@@ -73,10 +75,11 @@ export default (starter, player, Poke) => {
             player.boostedRoamerExpired();
         } else {
             pokeSpecies = randomArrayElement(pokemonList);
-            level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)));
+            level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)) * (player.activePoke().prestigeLevel + 1));
+            if (level > 100) { level = 100; prestigeLevel = 1; }
         }
         const poke = pokeByName(pokeSpecies);
-        return generator(poke, level);
+        return generator(poke, level, prestigeLevel);
     };
 
     return {
