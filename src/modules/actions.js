@@ -8,6 +8,7 @@ import { openModal, closeModal } from './modalEvents';
 import Poke from './poke';
 import POKEDEX from './db';
 import notify from './notify';
+import pokedex from '../store/modules/pokedex';
 
 export default (player, combatLoop, enemy, town, story, appModel) => {
     let dom;
@@ -350,9 +351,27 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const beaten1Req = player.statisticsRequirements.beaten1;
             if (player.statistics.beaten > beatenReq) { return beaten1Req; } else { return beatenReq; }
         },
+        renderCaughtAchievement: function () {
+            const caughtReq = player.statisticsRequirements.caught;
+            const caught1Req = player.statisticsRequirements.caught1;
+            if (player.statistics.caught > caughtReq) { return caught1Req; } else { return caughtReq; }
+        },
+        renderOwnedAchievement: function () {
+            const ownedReq = player.statisticsRequirements.owned;
+            const owned1Req = player.statisticsRequirements.owned1;
+            if (player.countPokedex(5) + player.countPokedex(7) > ownedReq) { return owned1Req; } else { return ownedReq; }
+        },
         renderPokemonDefeated: function () {
             const pokemonDefeatedElement = $('#pokemonDefeated');
             pokemonDefeatedElement.innerHTML = `${player.statistics.beaten}/${this.renderBeatenAchievement()}`;
+        },
+        renderPokemonCaught: function () {
+            const pokemonCaughtElement = $('#pokemonCaught');
+            pokemonCaughtElement.innerHTML = `${player.statistics.caught}/${this.renderCaughtAchievement()}`;
+        },
+        renderPokemonOwned: function () {
+            const pokemonOwnedElement = $('#pokemonOwned');
+            pokemonOwnedElement.innerHTML = `${player.countPokedex(5) + player.countPokedex(7)}/${this.renderOwnedAchievement()}`;
         },
         checkPokemonDefeated: function () {
             if (player.statistics.beaten > 49 && !player.events.beaten) {
@@ -366,10 +385,40 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 dom.renderBalls();
                 notify('You defeated 100 POKEMON and earned 100 MASTERBALLS');
                 player.events.beaten1 = true;
-            } else { notify('Defeat 50 Pokemon and try again'); }
+            } else { notify('Defeat more Pokemon and try again'); }
+        },
+        checkPokemonCaught: function () {
+            if (player.statistics.caught > 49 && !player.events.caught) {
+                player.ballsAmount.masterball += 99;
+                dom.renderBalls();
+                notify('You caught 100 POKEMON and earned 50 MASTERBALLS');
+                player.events.caught = true;
+            }
+            if (player.events.caught && player.statistics.caught > 999 && !player.events.caught1) {
+                player.ballsAmount.masterball += 100;
+                dom.renderBalls();
+                notify('You caught 1000 POKEMON and earned 100 MASTERBALLS');
+                player.events.caught1 = true;
+            } else { notify('catch more Pokemon and try again'); }
+        },
+        checkPokemonOwned: function () {
+            if (player.countPokedex(5) + player.countPokedex(7) > 100 && !player.events.owned) {
+                player.ballsAmount.masterball += 99;
+                dom.renderBalls();
+                notify('You caught 100 POKEMON and earned 50 MASTERBALLS');
+                player.events.owned = true;
+            }
+            if (player.events.owned && player.countPokedex(5) + player.countPokedex(7) > 150 && !player.events.owned1) {
+                player.ballsAmount.masterball += 100;
+                dom.renderBalls();
+                notify('You caught 1000 POKEMON and earned 100 MASTERBALLS');
+                player.events.owned1 = true;
+            } else { notify('catch more varied Pokemon and try again'); }
         },
         viewAchievements: function () {
             this.renderPokemonDefeated();
+            this.renderPokemonCaught();
+            this.renderPokemonOwned();
             openModal(document.getElementById('achievementsModal'));
         },
         enterCode: function () {
@@ -439,6 +488,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else {
                 notify('You have no Key Items');
             }
+        },
+        viewRegionSelect: function () {
+            openModal(document.getElementById('regionselectModal'));
         },
         viewTown: function () {
             const region = player.settings.currentRegionId.toLowerCase();

@@ -30,6 +30,28 @@
 
       <hr>
       <h3 class="subtitle">
+        Enter Secret Codes
+      </h3>
+
+      <button
+        id="keyItemsButton"
+        class="button"
+        @click="ui.enterCode()"
+      >
+        SECRET CODES
+      </button>
+      <hr>
+      <h3 class="subtitle">
+        Redeem Achievement Bonuses
+      </h3>
+      <button
+        class="button"
+        @click="ui.viewAchievements()"
+      >
+        ACHIEVEMENTS
+      </button>
+      <hr>
+      <h3 class="subtitle">
         Import and Export Save
       </h3>
 

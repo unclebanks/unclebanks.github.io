@@ -768,6 +768,77 @@ const ROUTES: Routes = {
             respawn: 'palletTown',
             kantoSuperRod: 1,
         },
+        elite4Lorelei: {
+            name: 'Elite 4 Lorelei',
+            town: true,
+            gymLeader: {
+                name: 'Lorelei',
+                poke: [
+                    ['Dewgong', 54],
+                    ['Cloyster', 53],
+                    ['Slowbro', 54],
+                    ['Jynx', 56],
+                    ['Lapras', 56],
+                ],
+            },
+        },
+        elite4KantoBruno: {
+            name: 'Elite 4 Bruno Kanto',
+            town: true,
+            gymLeader: {
+                name: 'Bruno',
+                poke: [
+                    ['Onix', 53],
+                    ['Hitmonchan', 55],
+                    ['Hitmonlee', 55],
+                    ['Onix', 56],
+                    ['Machamp', 58],
+                ],
+            },
+        },
+        elite4Agatha: {
+            name: 'Elite 4 Agatha',
+            town: true,
+            gymLeader: {
+                name: 'Agatha',
+                poke: [
+                    ['Gengar', 56],
+                    ['Golbat', 56],
+                    ['Haunter', 55],
+                    ['Arbok', 58],
+                    ['Gengar', 60],
+                ],
+            },
+        },
+        elite4Lance: {
+            name: 'Elite 4 Lance',
+            town: true,
+            gymLeader: {
+                name: 'Lance',
+                poke: [
+                    ['Gyarados', 58],
+                    ['Dragonair', 56],
+                    ['Dragonair', 56],
+                    ['Aerodactyl', 60],
+                    ['Dragonite', 62],
+                ],
+            },
+        },
+        championBlue: {
+            name: 'Champion Blue',
+            town: true,
+            gymLeader: {
+                name: 'Blue',
+                poke: [
+                    ['Exeggutor', 58],
+                    ['Arcanine', 54],
+                    ['Alakazam', 58],
+                    ['Rhydon', 56],
+                    ['Gyarados', 58],
+                    ['Pidgeot', 56],
+                ],
+            },
+        },
     },
     Johto: {
         _unlock: {
@@ -1469,6 +1540,76 @@ const ROUTES: Routes = {
                 badges: {
                     'Hive Badge': true,
                 },
+            },
+        },
+        elite4Will: {
+            name: 'Elite 4 Will',
+            town: true,
+            gymLeader: {
+                name: 'Will',
+                poke: [
+                    ['Xatu', 40],
+                    ['Jynx', 41],
+                    ['Slowbro', 41],
+                    ['Exeggutor', 42],
+                    ['Xatu', 42],
+                ],
+            },
+        },
+        elite4Koga: {
+            name: 'Elite 4 Koga',
+            town: true,
+            gymLeader: {
+                name: 'Koga',
+                poke: [
+                    ['Koffing', 37],
+                    ['Koffing', 37],
+                    ['Muk', 39],
+                    ['Weezing', 43],
+                ],
+            },
+        },
+        elite4JohtoBruno: {
+            name: 'Elite 4 Bruno Johto',
+            town: true,
+            gymLeader: {
+                name: 'Bruno',
+                poke: [
+                    ['Onix', 53],
+                    ['Hitmonchan', 55],
+                    ['Hitmonlee', 55],
+                    ['Onix', 56],
+                    ['Machamp', 58],
+                ],
+            },
+        },
+        elite4Karen: {
+            name: 'Elite 4 Karen',
+            town: true,
+            gymLeader: {
+                name: 'Karen',
+                poke: [
+                    ['Umbreon', 42],
+                    ['Vileplume', 42],
+                    ['Murkrow', 44],
+                    ['Gengar', 45],
+                    ['Houndoom', 47],
+                ],
+            },
+        },
+        championLance: {
+            name: 'Champion Lance',
+            town: true,
+            gymLeader: {
+                name: 'Lance',
+                poke: [
+                    ['Gyarados', 44],
+                    ['Dragonite', 47],
+                    ['Aerodactyl', 46],
+                    ['Charizard', 46],
+                    ['Dragonite', 47],
+                    ['Dragonite', 50],
+                ],
             },
         },
     },
@@ -2341,6 +2482,77 @@ const ROUTES: Routes = {
             respawn: 'littlerootTown',
             hoennSuperRod: 1,
         },
+        elite4Sidney: {
+            name: 'Elite 4 Sidney',
+            town: true,
+            gymLeader: {
+                name: 'Sidney',
+                poke: [
+                    ['Mightyena', 46],
+                    ['Cacturne', 46],
+                    ['Shiftry', 48],
+                    ['Sharpedo', 48],
+                    ['Absol', 49],
+                ],
+            },
+        },
+        elite4Phoebe: {
+            name: 'Elite 4 Phoebe',
+            town: true,
+            gymLeader: {
+                name: 'Phoebe',
+                poke: [
+                    ['Dusclops', 48],
+                    ['Banette', 49],
+                    ['Banette', 49],
+                    ['Sableye', 50],
+                    ['Dusclops', 51],
+                ],
+            },
+        },
+        elite4Glacia: {
+            name: 'Elite 4 Glacia',
+            town: true,
+            gymLeader: {
+                name: 'Glacia',
+                poke: [
+                    ['Glalie', 50],
+                    ['Sealeo', 50],
+                    ['Sealeo', 52],
+                    ['Glalie', 52],
+                    ['Walrein', 53],
+                ],
+            },
+        },
+        elite4Drake: {
+            name: 'Elite 4 Drake',
+            town: true,
+            gymLeader: {
+                name: 'Drake',
+                poke: [
+                    ['Shelgon', 52],
+                    ['Altaria', 54],
+                    ['Flygon', 53],
+                    ['Flygon', 53],
+                    ['Salamence', 55],
+                ],
+            },
+        },
+        championWallace: {
+            name: 'Champion Wallace',
+            town: true,
+            gymLeader: {
+                name: 'Wallace',
+                poke: [
+                    ['Wailord', 57],
+                    ['Whiscash', 56],
+                    ['Tentacruel', 55],
+                    ['Ludicolo', 56],
+                    ['Gyarados', 56],
+                    ['Milotic', 58],
+                ],
+            },
+        },
     },
     Sinnoh: {
         _unlock: {
@@ -2452,7 +2664,7 @@ const ROUTES: Routes = {
         },
         floaromaMeadow: {
             name: 'Floaroma Meadow',
-            pokes: ['Combee', 'Burmy', 'Cherubi', 'Munchlax'],
+            pokes: ['Combee', 'Burmy', 'Cherubi', 'Munchlax', 'Wormadam'],
             minLevel: 5,
             maxLevel: 15,
             respawn: 'floaromaTown',
@@ -3163,7 +3375,7 @@ const ROUTES: Routes = {
         },
         sroute228: {
             name: 'Route 228',
-            pokes: ['Cacturne', 'Dugtrio', 'Rhydon', 'Diglett', 'Cacnea'],
+            pokes: ['Cacturne', 'Dugtrio', 'Rhydon', 'Diglett', 'Cacnea', 'Beldum'],
             minLevel: 23,
             maxLevel: 54,
             respawn: 'snowpointCity',
@@ -3304,6 +3516,77 @@ const ROUTES: Routes = {
             maxLevel: 45,
             respawn: 'twinleafTown',
             sinnohSuperRod: 1,
+        },
+        elite4Aaron: {
+            name: 'Elite 4 Aaron',
+            town: true,
+            gymLeader: {
+                name: 'Aaron',
+                poke: [
+                    ['Dustox', 53],
+                    ['Vespiquen', 54],
+                    ['Heracross', 54],
+                    ['Beautifly', 53],
+                    ['Drapion', 57],
+                ],
+            },
+        },
+        elite4Bertha: {
+            name: 'Elite 4 Bertha',
+            town: true,
+            gymLeader: {
+                name: 'Bertha',
+                poke: [
+                    ['Quagsire', 55],
+                    ['Sudowoodo', 56],
+                    ['Whiscash', 55],
+                    ['Hippowdon', 59],
+                    ['Golem', 56],
+                ],
+            },
+        },
+        elite4Flint: {
+            name: 'Elite 4 Flint',
+            town: true,
+            gymLeader: {
+                name: 'Flint',
+                poke: [
+                    ['Rapidash', 58],
+                    ['Infernape', 61],
+                    ['Steelix', 57],
+                    ['Lopunny', 57],
+                    ['Drifblim', 58],
+                ],
+            },
+        },
+        elite4Lucian: {
+            name: 'Elite 4 Lucian',
+            town: true,
+            gymLeader: {
+                name: 'Lucian',
+                poke: [
+                    ['Mr. Mime', 53],
+                    ['Espeon', 55],
+                    ['Bronzong', 54],
+                    ['Alakazam', 56],
+                    ['Gallade', 59],
+                ],
+            },
+        },
+        championCynthia: {
+            name: 'Champion Cynthia',
+            town: true,
+            gymLeader: {
+                name: 'Cynthia',
+                poke: [
+                    ['Spiritomb', 61],
+                    ['Gastrodon', 60],
+                    ['Roserade', 60],
+                    ['Lucario', 63],
+                    ['Milotic', 63],
+                    ['Garchomp', 66],
+                ],
+            },
         },
     },
     Unova: {
@@ -4308,6 +4591,81 @@ const ROUTES: Routes = {
             respawn: 'aspertiaCity',
             unovaSuperRod: 1,
         },
+        elite4Shauntal: {
+            name: 'Elite 4 Shauntal',
+            town: true,
+            gymLeader: {
+                name: 'Shauntal',
+                poke: [
+                    ['Cofagrigus', 72],
+                    ['Mismagius', 72],
+                    ['Froslass', 72],
+                    ['Drifblim', 72],
+                    ['Golurk', 72],
+                    ['Chandelure', 74],
+                ],
+            },
+        },
+        elite4Marshal: {
+            name: 'Elite 4 Marshal',
+            town: true,
+            gymLeader: {
+                name: 'Marshal',
+                poke: [
+                    ['Throh', 72],
+                    ['Sawk', 72],
+                    ['Medicham', 72],
+                    ['Lucario', 72],
+                    ['Mienshao', 72],
+                    ['Conkeldurr', 74],
+                ],
+            },
+        },
+        elite4Grimsley: {
+            name: 'Elite 4 Grimsley',
+            town: true,
+            gymLeader: {
+                name: 'Grimsley',
+                poke: [
+                    ['Liepard', 77],
+                    ['Honchkrow', 77],
+                    ['Scrafty', 77],
+                    ['Houndoom', 77],
+                    ['Krookodile', 77],
+                    ['Bisharp', 79],
+                ],
+            },
+        },
+        elite4Caitlin: {
+            name: 'Elite 4 Caitlin',
+            town: true,
+            gymLeader: {
+                name: 'Caitlin',
+                poke: [
+                    ['Musharna', 72],
+                    ['Sigilyph', 72],
+                    ['Gothitelle', 72],
+                    ['Gallade', 72],
+                    ['Reuniclus', 72],
+                    ['Metagross', 74],
+                ],
+            },
+        },
+        championIris: {
+            name: 'Champion Iris',
+            town: true,
+            gymLeader: {
+                name: 'Iris',
+                poke: [
+                    ['Hydreigon', 57],
+                    ['Druddigon', 57],
+                    ['Aggron', 57],
+                    ['Archeops', 57],
+                    ['Lapras', 57],
+                    ['Haxorus', 59],
+                ],
+            },
+        },
     },
     Kalos: {
         _global: {
@@ -5007,6 +5365,73 @@ const ROUTES: Routes = {
             respawn: 'vanivilleTown',
             kalosSuperRod: 1,
         },
+        elite4Malva: {
+            name: 'Elite 4 Malva',
+            town: true,
+            gymLeader: {
+                name: 'Malva',
+                poke: [
+                    ['Pyroar', 63],
+                    ['Torkoal', 63],
+                    ['Chandelure', 63],
+                    ['Talonflame', 65],
+                ],
+            },
+        },
+        elite4Siebold: {
+            name: 'Elite 4 Siebold',
+            town: true,
+            gymLeader: {
+                name: 'Siebold',
+                poke: [
+                    ['Clawitzer', 63],
+                    ['Starmie', 63],
+                    ['Gyarados', 63],
+                    ['Barbaracle', 65],
+                ],
+            },
+        },
+        elite4Wikstrom: {
+            name: 'Elite 4 Wikstrom',
+            town: true,
+            gymLeader: {
+                name: 'Wikstrom',
+                poke: [
+                    ['Klefki', 63],
+                    ['Probopass', 63],
+                    ['Scizor', 63],
+                    ['Aegislash', 65],
+                ],
+            },
+        },
+        elite4Drasna: {
+            name: 'Elite 4 Drasna',
+            town: true,
+            gymLeader: {
+                name: 'Drasna',
+                poke: [
+                    ['Dragalge', 63],
+                    ['Altaria', 63],
+                    ['Druddigon', 63],
+                    ['Noivern', 65],
+                ],
+            },
+        },
+        championDianthe: {
+            name: 'Champion Dianthe',
+            town: true,
+            gymLeader: {
+                name: 'Dianthe',
+                poke: [
+                    ['Hawlucha', 64],
+                    ['Tyrantrum', 65],
+                    ['Aurorus', 65],
+                    ['Gourgeist', 65],
+                    ['Goodra', 66],
+                    ['Gardevoir', 68],
+                ],
+            },
+        },
     },
     Alola: {
         _global: {
@@ -5340,7 +5765,7 @@ const ROUTES: Routes = {
             respawn: 'ikiTown',
         },
         custom10: {
-            name: 'Flying Steel Bars',
+            name: 'Spinny Steel Things',
             pokes: ['Meltan', 'Melmetal'],
             minLevel: 40,
             maxLevel: 40,
@@ -5369,6 +5794,77 @@ const ROUTES: Routes = {
             maxLevel: 45,
             respawn: 'ikiTown',
             alolaSuperRod: 1,
+        },
+        elite4Hala: {
+            name: 'Elite 4 Hala',
+            town: true,
+            gymLeader: {
+                name: 'Hala',
+                poke: [
+                    ['Hariyama', 54],
+                    ['Primeape', 54],
+                    ['Bewear', 54],
+                    ['Poliwrath', 54],
+                    ['Crabominable', 55],
+                ],
+            },
+        },
+        elite4Olivia: {
+            name: 'Elite 4 Olivia',
+            town: true,
+            gymLeader: {
+                name: 'Olivia',
+                poke: [
+                    ['Relicanth', 63],
+                    ['Carbink', 63],
+                    ['Golem', 63],
+                    ['Probopass', 63],
+                    ['Lycanroc', 63],
+                ],
+            },
+        },
+        elite4Acerola: {
+            name: 'Elite 4 Acerola',
+            town: true,
+            gymLeader: {
+                name: 'Acerola',
+                poke: [
+                    ['Sableye', 54],
+                    ['Drifblim', 54],
+                    ['Dhelmise', 54],
+                    ['Froslass', 54],
+                    ['Palossand', 55],
+                ],
+            },
+        },
+        elite4Kahili: {
+            name: 'Elite 4 Kahili',
+            town: true,
+            gymLeader: {
+                name: 'Kahili',
+                poke: [
+                    ['Skarmory', 63],
+                    ['Crobat', 63],
+                    ['Oricorio', 63],
+                    ['Mandibuzz', 63],
+                    ['Toucannon', 63],
+                ],
+            },
+        },
+        championKukui: {
+            name: 'Champion Kukui',
+            town: true,
+            gymLeader: {
+                name: 'Kukui',
+                poke: [
+                    ['Lycanroc', 57],
+                    ['Alolan Ninetales', 56],
+                    ['Braviary', 56],
+                    ['Magnezone', 56],
+                    ['Snorlax', 56],
+                    ['Primarina', 68],
+                ],
+            },
         },
     },
 };

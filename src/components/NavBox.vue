@@ -2,28 +2,10 @@
   <div id="navBox">
     <span>MENU STUFF</span><br>
     <button
-      onclick="userInteractions.viewAchievements()"
-      class="button"
-    >
-      ACHIEVEMENTS
-    </button>
-    <button
       id="viewPokeDex"
       class="button"
     >
       POKEDEX
-    </button>
-    <button
-      onclick="userInteractions.viewStatistics()"
-      class="button"
-    >
-      STATISTICS
-    </button>
-    <button
-      class="button modal-button"
-      data-target="settingsModal"
-    >
-      SETTINGS
     </button>
     <button
       id="badgesButton"
@@ -45,13 +27,12 @@
       class="button"
     >
       KEY ITEMS
-    </button><br>
+    </button>
     <button
-      id="keyItemsButton"
-      onclick="userInteractions.enterCode()"
-      class="button"
+      class="button modal-button"
+      data-target="settingsModal"
     >
-      SECRET CODES
+      SETTINGS
     </button>
   </div>
 </template>

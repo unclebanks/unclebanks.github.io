@@ -68,7 +68,7 @@ export default (player, combatLoop, userInteractions) => {
                 expBar: container.querySelector('.expBar'),
                 status: container.querySelector('.status'),
             };
-            this.setValue(domElements.name, `${poke.pokeName()} (${poke.level()})`);
+            this.setValue(domElements.name, `${poke.pokeName()} (L${poke.level()}, P${poke.prestigeLevel})`);
             this.setProp(domElements.img, 'src', poke.image()[face]);
             this.setValue(domElements.hp, poke.lifeAsText());
             this.setProp(domElements.hpBar, 'value', poke.getHp());

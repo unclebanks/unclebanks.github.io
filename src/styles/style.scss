@@ -10,6 +10,11 @@ html, body {
     display: grid;
     grid-template-columns: minmax(210px, 18%) 30% 30% 22%;
     grid-template-rows: 45% 25% 30%;
+    background-color: rgb(58, 58, 58);
+}
+
+.subtitle {
+    color: white;
 }
 
 #gameContainer > div {
@@ -36,7 +41,6 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(58, 58, 58);
 }
 
 #partyBox {
@@ -45,29 +49,19 @@ ul {
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(58, 58, 58);
 
     li, p {
         display: inline-block;
     }
 }
 
-#pokeGear {
-    grid-column: 3;
-    grid-row: 2 / 4;
-    margin-bottom: none;
-    background-color: rgb(58, 58, 58);
-    text-align: center;
-}
-
 #routesBox {
     grid-column: 4;
-    grid-row: 1 / 3;
-    max-height: 600px;
+    grid-row: 1 / 4;
+    max-height: 750px;
     overflow: auto;
     float: left;
     text-align: left;
-    background-color: rgb(58, 58, 58);
 }
 
 .roamerIcon {
@@ -146,7 +140,6 @@ ul {
     grid-row: 2;
     width: 50%;
     text-align: center;
-    background-color: rgb(58, 58, 58);
 }
 
 #viewSelectBox p {
@@ -155,10 +148,10 @@ ul {
 
 #invBox {
     grid-column: 3;
-    grid-row: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
     padding: 5px;
     font-size: medium;
-    background-color: rgb(58, 58, 58);
 }
 
 #invBox p {
@@ -170,34 +163,26 @@ ul {
 }
 
 #enemyBox {
-    grid-column: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
     width: 50%;
     margin-left: 50%;
     float: right;
     grid-row: 1;
-    background-color: rgb(58, 58, 58);
 }
 
 #playerBox {
-    grid-column: 2;
+    grid-column: 2 / 4;
     grid-row: 1;
     width: 50%;
-    background-color: rgb(58, 58, 58);
     align-content: center;
 }
 #townBox {
     text-align: center;
 }
-#regionBox {
-    grid-column: 4;
-    grid-row: 3;
-    text-align: center;
-    background-color: rgb(58, 58, 58);
-}
 #navBox {
     grid-column: 2;
     grid-row: 2;
-    background-color: rgb(58, 58, 58);
     text-align: center;
 }
 #gameCornerBuilding {
@@ -234,14 +219,13 @@ ul {
     line-height: 25px;
     font-size: 12px;
     text-align: center;
-    width: 165px;
     float: center;
 }
 .pokeBox .img.attacked-right{
-    margin-left: 15px;
+    margin-left: 30px;
 }
 .pokeBox .img.attacked-left{
-    margin-right: 15px;
+    margin-right: 30px;
 }
 .pokeBox .img {
     transition: margin 0.08s ease-out;
@@ -333,6 +317,19 @@ progress.expBar {
     overflow: auto;
     width: 300px;
     height: 50px;
+}
+
+.modal-card-head {
+    background-color: grey;
+    color: white;
+}
+.modal-card-body {
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+.modal-card-foot {
+    background-color: grey;
+    color: white;
 }
 
 #popupText {
@@ -429,18 +426,6 @@ progress.expBar {
     margin-bottom: 7px;
 }
 
-#statisticsList li, #achievementsList li {
-    padding: 2px 15px;
-}
-#statisticsList li:nth-child(even) {background: #CCC}
-#statisticsList li:nth-child(odd) {background: #FFF}
-#achievementsList li:nth-child(even) {background: #CCC}
-#achievementsList li:nth-child(odd) {background: #FFF}
-#achievementsList li.complete {
-    text-decoration: line-through;
-    font-style: italic;
-}
-
 #boulderBadge {
     background-image: url('../assets/images/badges/Boulder\ Badge.png');
     margin-top: 7px;
@@ -509,7 +494,7 @@ progress.expBar {
     width: 90%;
     float: left;
     margin-left: 20px;
-    background-color: rgb(240,240,240);
+    background-color: transparent;
 }
 .townBuilding h4 { margin-left: 10px; }
 .townBuilding ul {

@@ -8,7 +8,7 @@
         id="enableCatchNew"
         type="checkbox"
       ><span>New</span></label>
-    </p><br>
+    </p>
     <input
       id="pokeball"
       type="radio"
@@ -71,6 +71,12 @@
     ><img
       class="battlecoins coinIcon"
       src="assets/images/currency/BattleCoin.png"
-    ></span> BattleCoins: <span id="battleCoins">0</span><br>
+    ></span> BattleCoins: <span id="battleCoins">0</span><br><br>
+    <button
+      class="button"
+      onclick="userInteractions.viewRegionSelect()"
+    >
+      REGION SELECT
+    </button>
   </div>
 </template>

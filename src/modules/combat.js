@@ -273,6 +273,7 @@ export default (player, enemy) => {
                     const rngHappened = RNG(((enemy.activePoke().catchRate() * player.ballRNG(selectedBall)) / 3) * catchBonus);
                     if (rngHappened) {
                         player.statistics.successfulThrows++;
+                        player.statistics.caught++;
                         player.statistics[`${selectedBall}SuccessfulThrows`]++;
                         player.addCatchCoins(gainCatchCoins);
                         notify(`You caught ${enemy.activePoke().pokeName()}`);

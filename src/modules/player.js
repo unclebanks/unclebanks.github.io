@@ -144,6 +144,10 @@ export default (lastSave, appModel) => {
         statisticsRequirements: {
             beaten: 50,
             beaten1: 100,
+            caught: 100,
+            caught1: 1000,
+            owned: 100,
+            owned1: 150,
         },
         badges: {},
         wins: {},
