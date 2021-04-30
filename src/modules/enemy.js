@@ -73,7 +73,7 @@ export default (starter, player, Poke) => {
             player.boostedRoamerExpired();
         } else {
             pokeSpecies = randomArrayElement(pokemonList);
-            level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)));
+            level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)) * (player.activePoke().prestigeLevel + 1));
         }
         const poke = pokeByName(pokeSpecies);
         return generator(poke, level);
