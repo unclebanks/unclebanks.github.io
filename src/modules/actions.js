@@ -489,6 +489,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 notify('You have no Key Items');
             }
         },
+        viewRegionSelect: function () {
+            openModal(document.getElementById('regionselectModal'));
+        },
         viewTown: function () {
             const region = player.settings.currentRegionId.toLowerCase();
             town.renderPokeCoinShop(region);

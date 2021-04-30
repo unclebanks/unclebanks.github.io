@@ -26,6 +26,7 @@
         >
           0
         </button><br>
+        <hr>
         <button
           class="button"
           @click="ui.viewStatistics()"
