@@ -13,6 +13,10 @@ html, body {
     background-color: rgb(58, 58, 58);
 }
 
+.subtitle {
+    color: white;
+}
+
 #gameContainer > div {
     border: 1px solid black;
 }
@@ -328,6 +332,7 @@ progress.expBar {
 
 .modal-card-head {
     background-color: grey;
+    color: white;
 }
 .modal-card-body {
     background-color: rgb(58, 58, 58);

@@ -18,6 +18,19 @@
           @click="ui.checkPokemonCaught()"
         >
           0
+        </button>
+        <p>Pokemon Owned</p><button
+          id="pokemonOwned"
+          class="button"
+          @click="ui.checkPokemonDefeated()"
+        >
+          0
+        </button><br>
+        <button
+          class="button"
+          @click="ui.viewStatistics()"
+        >
+          STATISTICS
         </button><br>
       </div>
     </template>
