@@ -6,12 +6,10 @@
     <EnemyBox />
     <PlayerBox />
     <NavBox />
-    <RegionBox />
     <PartyBox
       :ui="ui"
       :player="player"
     />
-    <PokeGear />
   </div>
 
   <Modals :ui="ui" />
@@ -25,9 +23,7 @@ import Inventory from './Inventory.vue';
 import EnemyBox from './EnemyBox.vue';
 import PlayerBox from './PlayerBox.vue';
 import NavBox from './NavBox.vue';
-import RegionBox from './RegionBox.vue';
 import PartyBox from './PartyBox.vue';
-import PokeGear from './PokeGear.vue';
 import Modals from './Modals.vue';
 
 // Fake userInteractions object that does nothing
@@ -42,9 +38,7 @@ export default {
         EnemyBox,
         PlayerBox,
         NavBox,
-        RegionBox,
         PartyBox,
-        PokeGear,
         Modals,
     },
 
