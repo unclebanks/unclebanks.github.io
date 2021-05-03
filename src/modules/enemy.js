@@ -10,6 +10,7 @@ export default (starter, player, Poke) => {
         level,
         false,
         Math.random() < (1 / (2 ** 13)),
+        false,
         prestigeLevel,
     );
 
