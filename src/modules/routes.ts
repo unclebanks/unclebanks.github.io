@@ -5417,11 +5417,11 @@ const ROUTES: Routes = {
                 ],
             },
         },
-        championDianthe: {
-            name: 'Champion Dianthe',
+        championDiantha: {
+            name: 'Champion Diantha',
             town: true,
             gymLeader: {
-                name: 'Dianthe',
+                name: 'Diantha',
                 poke: [
                     ['Hawlucha', 64],
                     ['Tyrantrum', 65],
