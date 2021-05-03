@@ -2502,11 +2502,11 @@ const ROUTES: Routes = {
             gymLeader: {
                 name: 'Phoebe',
                 poke: [
-                    ['Dusclops', 48],
-                    ['Banette', 49],
-                    ['Banette', 49],
-                    ['Sableye', 50],
-                    ['Dusclops', 51],
+                    ['Dusclops', 58],
+                    ['Banette', 59],
+                    ['Banette', 59],
+                    ['Sableye', 60],
+                    ['Dusclops', 61],
                 ],
             },
         },
@@ -2516,11 +2516,11 @@ const ROUTES: Routes = {
             gymLeader: {
                 name: 'Glacia',
                 poke: [
-                    ['Glalie', 50],
-                    ['Sealeo', 50],
-                    ['Sealeo', 52],
-                    ['Glalie', 52],
-                    ['Walrein', 53],
+                    ['Glalie', 60],
+                    ['Sealeo', 60],
+                    ['Sealeo', 62],
+                    ['Glalie', 62],
+                    ['Walrein', 63],
                 ],
             },
         },
@@ -2530,11 +2530,11 @@ const ROUTES: Routes = {
             gymLeader: {
                 name: 'Drake',
                 poke: [
-                    ['Shelgon', 52],
-                    ['Altaria', 54],
-                    ['Flygon', 53],
-                    ['Flygon', 53],
-                    ['Salamence', 55],
+                    ['Shelgon', 62],
+                    ['Altaria', 64],
+                    ['Flygon', 63],
+                    ['Flygon', 63],
+                    ['Salamence', 65],
                 ],
             },
         },
@@ -2544,12 +2544,12 @@ const ROUTES: Routes = {
             gymLeader: {
                 name: 'Wallace',
                 poke: [
-                    ['Wailord', 57],
-                    ['Whiscash', 56],
-                    ['Tentacruel', 55],
-                    ['Ludicolo', 56],
-                    ['Gyarados', 56],
-                    ['Milotic', 58],
+                    ['Wailord', 67],
+                    ['Whiscash', 66],
+                    ['Tentacruel', 65],
+                    ['Ludicolo', 66],
+                    ['Gyarados', 66],
+                    ['Milotic', 68],
                 ],
             },
         },
@@ -3551,11 +3551,11 @@ const ROUTES: Routes = {
             gymLeader: {
                 name: 'Flint',
                 poke: [
-                    ['Rapidash', 58],
-                    ['Infernape', 61],
-                    ['Steelix', 57],
-                    ['Lopunny', 57],
-                    ['Drifblim', 58],
+                    ['Houndoom', 58],
+                    ['Flareon', 57],
+                    ['Rapidash', 53],
+                    ['Infernape', 55],
+                    ['Magmortar', 57],
                 ],
             },
         },
@@ -4606,21 +4606,6 @@ const ROUTES: Routes = {
                 ],
             },
         },
-        elite4Marshal: {
-            name: 'Elite 4 Marshal',
-            town: true,
-            gymLeader: {
-                name: 'Marshal',
-                poke: [
-                    ['Throh', 72],
-                    ['Sawk', 72],
-                    ['Medicham', 72],
-                    ['Lucario', 72],
-                    ['Mienshao', 72],
-                    ['Conkeldurr', 74],
-                ],
-            },
-        },
         elite4Grimsley: {
             name: 'Elite 4 Grimsley',
             town: true,
@@ -4651,18 +4636,33 @@ const ROUTES: Routes = {
                 ],
             },
         },
+        elite4Marshal: {
+            name: 'Elite 4 Marshal',
+            town: true,
+            gymLeader: {
+                name: 'Marshal',
+                poke: [
+                    ['Throh', 72],
+                    ['Sawk', 72],
+                    ['Medicham', 72],
+                    ['Lucario', 72],
+                    ['Mienshao', 72],
+                    ['Conkeldurr', 74],
+                ],
+            },
+        },
         championIris: {
             name: 'Champion Iris',
             town: true,
             gymLeader: {
                 name: 'Iris',
                 poke: [
-                    ['Hydreigon', 57],
-                    ['Druddigon', 57],
-                    ['Aggron', 57],
-                    ['Archeops', 57],
-                    ['Lapras', 57],
-                    ['Haxorus', 59],
+                    ['Hydreigon', 87],
+                    ['Druddigon', 87],
+                    ['Aggron', 87],
+                    ['Archeops', 87],
+                    ['Lapras', 87],
+                    ['Haxorus', 89],
                 ],
             },
         },
@@ -5417,11 +5417,11 @@ const ROUTES: Routes = {
                 ],
             },
         },
-        championDianthe: {
-            name: 'Champion Dianthe',
+        championDiantha: {
+            name: 'Champion Diantha',
             town: true,
             gymLeader: {
-                name: 'Dianthe',
+                name: 'Diantha',
                 poke: [
                     ['Hawlucha', 64],
                     ['Tyrantrum', 65],
