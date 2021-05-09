@@ -4,22 +4,29 @@
     title="Town"
   >
     <template #body>
-      <div id="townBuildings">
-        <div
-          id="pokecoinShop"
-          class="townBuilding"
+      <div
+        id="townModalBox"
+      >
+        <button
+          onclick="userInteractions.viewShop()"
+          class="button"
         >
-          <h4>PokeCoin Shop</h4>
-          <ul id="pokecoinShopItems" />
-          <div id="battlecoinShop">
-            <h4>BattleCoin Shop</h4>
-            <ul id="battlecoinShopItems" />
-          </div>
-          <div id="catchcoinShop">
-            <h4>CatchCoin Shop</h4>
-            <ul id="catchcoinShopItems" />
-          </div>
-        </div>
+          Shop
+        </button><br>
+        <button
+          id="profButton"
+          onclick="userInteractions.checkNPC()"
+          class="button"
+        >
+          PROF
+        </button><br>
+        <button
+          id="npcButton"
+          onclick="userInteractions.checkNPC()"
+          class="button"
+        >
+          NPC
+        </button><br>
       </div>
     </template>
   </CardModal>

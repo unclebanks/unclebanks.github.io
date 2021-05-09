@@ -493,11 +493,44 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('regionselectModal'));
         },
         viewTown: function () {
+            this.renderTown();
+            openModal(document.getElementById('townModal'));
+        },
+        renderTown: function () {
+            const npc = $('#npcButton');
+            const prof = $('#profButton');
+            const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            npc.style.display = (route.npc) ? '' : 'none';
+            npc.innerHTML = (route.npc) ? route.npc.name : '';
+            prof.style.display = (route.prof) ? '' : 'none';
+            prof.innerHTML = (route.prof) ? route.prof.name : '';
+        },
+        viewShop: function () {
+            closeModal(document.getElementById('townModal'));
             const region = player.settings.currentRegionId.toLowerCase();
             town.renderPokeCoinShop(region);
             town.renderBattleCoinShop(region);
             town.renderCatchCoinShop(region);
-            openModal(document.getElementById('townModal'));
+            openModal(document.getElementById('shopModal'));
+        },
+        renderGym: function () {
+            const gymTrainer1 = $('#gymTrainer1');
+            const gymTrainer2 = $('#gymTrainer2');
+            const gymLeader = $('#gymLeader');
+            const fanBoy = $('#fanBoy');
+            const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            gymTrainer1.style.display = (route.gym.gymTrainer1) ? '' : 'none';
+            gymTrainer1.innerHTML = (route.gym.gymTrainer1) ? route.gym.gymTrainer1.name : '';
+            gymTrainer2.style.display = (route.gym.gymTrainer2) ? '' : 'none';
+            gymTrainer2.innerHTML = (route.gym.gymTrainer2) ? route.gym.gymTrainer2.name : '';
+            gymLeader.style.display = (route.gym.gymLeader) ? '' : 'none';
+            gymLeader.innerHTML = (route.gym.gymLeader) ? route.gym.gymLeader.name : '';
+            fanBoy.style.display = (route.gym.fanBoy) ? '' : 'none';
+            fanBoy.innerHTML = (route.gym.fanBoy) ? route.gym.fanBoy.name : '';
+        },
+        viewGym: function () {
+            this.renderGym();
+            openModal(document.getElementById('gymModal'));
         },
         openVitaminModal: function (vitamin) {
             if (!VITAMINS[vitamin]) {
@@ -721,10 +754,21 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         gymLeaderBattle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
+            closeModal(document.getElementById('gymModal'));
             if (routeData.gymLeader && routeData.gymLeader.poke.length > 0) {
                 combatLoop.gymLeader = { name: routeData.gymLeader.name, badge: routeData.gymLeader.badge, win: routeData.gymLeader.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymLeader.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            }
+        },
+        gymTrainer1Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
+            closeModal(document.getElementById('gymModal'));
+            if (routeData.gymTrainer1 && routeData.gymTrainer1.poke.length > 0) {
+                combatLoop.gymLeader = { name: routeData.gymTrainer1.name, badge: routeData.gymTrainer1.badge, win: routeData.gymTrainer1.win };
+                combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer1.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
             }

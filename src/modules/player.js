@@ -413,7 +413,7 @@ export default (lastSave, appModel) => {
         },
         generateBoostedRoamer: function () {
             const regions = [
-                'Johto',
+                'Kanto',
             ];
             const allowedRoamers = [
                 'Raikou',
