@@ -22,6 +22,13 @@
           Error
         </button><br>
         <button
+          id="gymTrainer3"
+          onclick="userInteractions.gymTrainer3Battle()"
+          class="button"
+        >
+          Error
+        </button><br>
+        <button
           id="gymLeader"
           onclick="userInteractions.gymLeaderBattle()"
           class="button"

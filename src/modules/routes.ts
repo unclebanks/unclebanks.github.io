@@ -13,6 +13,7 @@ interface GymLeader {
     event?: string,
     megaStone?: string,
     megaStones?: string[],
+    req?: string,
 }
 
 interface GymTrainer1 {
@@ -21,11 +22,13 @@ interface GymTrainer1 {
     win?: string,
     reward?: string,
     event?: string,
+    req?: string,
 }
 
 interface GymTrainer2 {
     name: string,
     poke: Array<[PokemonNameType, number]>,
+    req?: string,
     win?: string,
     reward?: string,
     event?: string,
@@ -34,6 +37,7 @@ interface GymTrainer2 {
 interface GymTrainer3 {
     name: string,
     poke: Array<[PokemonNameType, number]>,
+    req?: string,
     win?: string,
     reward?: string,
     event?: string,
@@ -52,6 +56,7 @@ interface EliteFour1 {
 interface EliteFour2 {
     name: string,
     poke: Array<[PokemonNameType, number]>,
+    req?: string,
     win?: string,
     reward?: string,
     event?: string,
@@ -62,6 +67,7 @@ interface EliteFour2 {
 interface EliteFour3 {
     name: string,
     poke: Array<[PokemonNameType, number]>,
+    req?: string,
     win?: string,
     reward?: string,
     event?: string,
@@ -72,6 +78,7 @@ interface EliteFour3 {
 interface EliteFour4 {
     name: string,
     poke: Array<[PokemonNameType, number]>,
+    req?: string,
     win?: string,
     reward?: string,
     event?: string,
@@ -82,6 +89,7 @@ interface EliteFour4 {
 interface EliteFourChampion {
     name: string,
     poke: Array<[PokemonNameType, number]>,
+    req?: string,
     win?: string,
     reward?: string,
     event?: string,
@@ -217,6 +225,7 @@ const ROUTES: Routes = {
                     poke: [
                         ['Pikachu', 5],
                     ],
+                    req: 'cinnabarGym1',
                 },
                 gymLeader: {
                     name: 'Giovanni',
@@ -228,6 +237,7 @@ const ROUTES: Routes = {
                         ['Nidoking', 45],
                         ['Rhydon', 50],
                     ],
+                    req: 'viridianGym1',
                 },
 
             },
@@ -259,11 +269,12 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Pewter Gym',
                 gymTrainer1: {
-                    name: 'Camper Jerry',
+                    name: 'Jr. Trainer',
                     poke: [
                         ['Diglett', 11],
                         ['Sandshrew', 11],
                     ],
+                    win: 'pewterGym1',
                 },
                 gymLeader: {
                     name: 'Brock',
@@ -273,6 +284,7 @@ const ROUTES: Routes = {
                         ['Geodude', 12],
                         ['Onix', 14],
                     ],
+                    req: 'pewterGym1',
                 },
             },
             npc: {
@@ -322,17 +334,20 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Cerulean Gym',
                 gymTrainer1: {
-                    name: 'Swimmer Parker',
+                    name: 'Swimmer',
                     poke: [
                         ['Horsea', 16],
                         ['Shellder', 16],
                     ],
+                    win: 'ceruleanGym1',
                 },
                 gymTrainer2: {
-                    name: 'Jr. Trainer Brianna',
+                    name: 'Jr. Trainer',
                     poke: [
                         ['Goldeen', 19],
                     ],
+                    req: 'ceruleanGym1',
+                    win: 'ceruleanGym2',
                 },
                 gymLeader: {
                     name: 'Misty',
@@ -342,6 +357,7 @@ const ROUTES: Routes = {
                         ['Staryu', 18],
                         ['Starmie', 21],
                     ],
+                    req: 'ceruleanGym2',
                 },
             },
             _unlock: {
@@ -434,15 +450,36 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Vermilion Gym',
                 gymTrainer1: {
-                    name: 'Test',
+                    name: 'Sailor',
                     poke: [
-                        ['Pikachu', 5],
+                        ['Pikachu', 21],
+                        ['Pikachu', 21],
                     ],
+                    win: 'vermilionGym1',
+                },
+                gymTrainer2: {
+                    name: 'Rocker',
+                    poke: [
+                        ['Voltorb', 20],
+                        ['Magnemite', 20],
+                        ['Voltorb', 20],
+                    ],
+                    win: 'vermilionGym2',
+                    req: 'vermilionGym1',
+                },
+                gymTrainer3: {
+                    name: 'Gentleman',
+                    poke: [
+                        ['Pikachu', 23],
+                    ],
+                    win: 'vermilionGym3',
+                    req: 'vermilionGym2',
                 },
                 gymLeader: {
                     name: 'Lt. Surge',
                     badge: 'Thunder Badge',
                     win: 'thunder1',
+                    req: 'vermilionGym3',
                     poke: [
                         ['Voltorb', 21],
                         ['Pikachu', 18],
@@ -579,15 +616,39 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Celadon Gym',
                 gymTrainer1: {
-                    name: 'Test',
+                    name: 'Lass',
                     poke: [
-                        ['Pikachu', 5],
+                        ['Bellsprout', 21],
+                        ['Weepinbell', 23],
                     ],
+                    win: 'celadonGym1',
+                },
+                gymTrainer2: {
+                    name: 'Beauty',
+                    poke: [
+                        ['Oddish', 21],
+                        ['Bellsprout', 21],
+                        ['Oddish', 21],
+                        ['Bellsprout', 21],
+                    ],
+                    win: 'celadonGym2',
+                    req: 'celadonGym1',
+                },
+                gymTrainer3: {
+                    name: 'Cooltrainer',
+                    poke: [
+                        ['Weepinbell', 24],
+                        ['Gloom', 24],
+                        ['Ivysaur', 24],
+                    ],
+                    win: 'celadonGym3',
+                    req: 'celadonGym2',
                 },
                 gymLeader: {
                     name: 'Erika',
                     badge: 'Rainbow Badge',
                     win: 'rainbow1',
+                    req: 'celadonGym3',
                     poke: [
                         ['Victreebel', 29],
                         ['Tangela', 24],
@@ -611,15 +672,29 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Saffron Gym',
                 gymTrainer1: {
-                    name: 'Test',
+                    name: 'Psychic',
                     poke: [
-                        ['Pikachu', 5],
+                        ['Mr. Mime', 34],
+                        ['Kadabra', 34],
                     ],
+                    win: 'saffronGym1',
+                },
+                gymTrainer2: {
+                    name: 'Psychic',
+                    poke: [
+                        ['Kadabra', 34],
+                        ['Slowbro', 38],
+                        ['Mr. Mime', 38],
+                        ['Haunter', 34],
+                    ],
+                    win: 'saffronGym2',
+                    req: 'saffronGym1',
                 },
                 gymLeader: {
                     name: 'Sabrina',
                     badge: 'Marsh Badge',
                     win: 'marsh1',
+                    req: 'saffronGym2',
                     poke: [
                         ['Kadabra', 38],
                         ['Mr. Mime', 37],
@@ -692,6 +767,7 @@ const ROUTES: Routes = {
                     poke: [
                         ['Pikachu', 5],
                     ],
+                    win: 'fuchsiaGym1',
                 },
                 gymLeader: {
                     name: 'Koga',
@@ -702,6 +778,7 @@ const ROUTES: Routes = {
                         ['Koffing', 37],
                         ['Weezing', 43],
                     ],
+                    req: 'fuchsiaGym1',
                 },
             },
             _unlock: {

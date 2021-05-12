@@ -1,7 +1,7 @@
 <template>
   <CardModal
     name="shop"
-    title="Shop"
+    title="POKEMART"
   >
     <template #body>
       <div id="townBuildings">

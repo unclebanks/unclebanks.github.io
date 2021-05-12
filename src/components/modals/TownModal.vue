@@ -11,7 +11,7 @@
           onclick="userInteractions.viewShop()"
           class="button"
         >
-          Shop
+          POKEMART
         </button><br>
         <button
           id="profButton"
