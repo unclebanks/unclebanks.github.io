@@ -1,6 +1,9 @@
 <template>
   <div id="enemyBox">
-    <div class="pokeBox">
+    <div
+      class="pokeBox"
+      onclick="combatLoop.clickDamage()"
+    >
       <span class="name" /><br>
       <img
         id="enemyImg"
@@ -29,26 +32,12 @@
         TOWN
       </button><br>
       <button
-        id="profButton"
-        onclick="userInteractions.profBattle()"
+        id="gymButton"
+        onclick="userInteractions.viewGym()"
         class="button"
       >
         PROFESSOR BATTLE
       </button>
-      <button
-        id="gymLeaderButton"
-        onclick="userInteractions.gymLeaderBattle()"
-        class="button"
-      >
-        GYM LEADER BATTLE
-      </button><br>
-      <button
-        id="npcButton"
-        onclick="userInteractions.checkNPC()"
-        class="button"
-      >
-        NPC
-      </button><br>
     </div>
   </div>
 </template>

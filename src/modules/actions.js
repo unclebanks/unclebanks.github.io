@@ -9,6 +9,7 @@ import Poke from './poke';
 import POKEDEX from './db';
 import notify from './notify';
 import pokedex from '../store/modules/pokedex';
+import Combat from './combat';
 
 export default (player, combatLoop, enemy, town, story, appModel) => {
     let dom;
@@ -493,11 +494,47 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('regionselectModal'));
         },
         viewTown: function () {
+            this.renderTown();
+            openModal(document.getElementById('townModal'));
+        },
+        renderTown: function () {
+            const npc = $('#npcButton');
+            const prof = $('#profButton');
+            const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            npc.style.display = (route.npc) ? '' : 'none';
+            npc.innerHTML = (route.npc) ? route.npc.name : '';
+            prof.style.display = (route.prof) ? '' : 'none';
+            prof.innerHTML = (route.prof) ? route.prof.name : '';
+        },
+        viewShop: function () {
+            closeModal(document.getElementById('townModal'));
             const region = player.settings.currentRegionId.toLowerCase();
             town.renderPokeCoinShop(region);
             town.renderBattleCoinShop(region);
             town.renderCatchCoinShop(region);
-            openModal(document.getElementById('townModal'));
+            openModal(document.getElementById('shopModal'));
+        },
+        renderGym: function () {
+            const gymTrainer1 = $('#gymTrainer1');
+            const gymTrainer2 = $('#gymTrainer2');
+            const gymTrainer3 = $('#gymTrainer3');
+            const gymLeader = $('#gymLeader');
+            const fanBoy = $('#fanBoy');
+            const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            gymTrainer1.style.display = (route.gym.gymTrainer1) ? '' : 'none';
+            gymTrainer1.innerHTML = (route.gym.gymTrainer1) ? route.gym.gymTrainer1.name : '';
+            gymTrainer2.style.display = (route.gym.gymTrainer2) ? '' : 'none';
+            gymTrainer2.innerHTML = (route.gym.gymTrainer2) ? route.gym.gymTrainer2.name : '';
+            gymTrainer3.style.display = (route.gym.gymTrainer3) ? '' : 'none';
+            gymTrainer3.innerHTML = (route.gym.gymTrainer3) ? route.gym.gymTrainer3.name : '';
+            gymLeader.style.display = (route.gym.gymLeader) ? '' : 'none';
+            gymLeader.innerHTML = (route.gym.gymLeader) ? route.gym.gymLeader.name : '';
+            fanBoy.style.display = (route.gym.fanBoy) ? '' : 'none';
+            fanBoy.innerHTML = (route.gym.fanBoy) ? route.gym.fanBoy.name : '';
+        },
+        viewGym: function () {
+            this.renderGym();
+            openModal(document.getElementById('gymModal'));
         },
         openVitaminModal: function (vitamin) {
             if (!VITAMINS[vitamin]) {
@@ -721,12 +758,51 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         gymLeaderBattle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.gymLeader && routeData.gymLeader.poke.length > 0) {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
+            closeModal(document.getElementById('gymModal'));
+            if (routeData.gymLeader && routeData.gymLeader.poke.length > 0 && player.wins[routeData.gymLeader.req]) {
                 combatLoop.gymLeader = { name: routeData.gymLeader.name, badge: routeData.gymLeader.badge, win: routeData.gymLeader.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymLeader.poke });
                 combatLoop.unpause();
                 combatLoop.refresh();
+            } else {
+                notify('Defeat the previous trainers and try again.');
+            }
+        },
+        gymTrainer1Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
+            closeModal(document.getElementById('gymModal'));
+            if (routeData.gymTrainer1.req && !player.wins[routeData.gymTrainer1.req]) {
+                notify('Defeat more GYM LEADERS and try again');
+            } else if (routeData.gymTrainer1 && routeData.gymTrainer1.poke.length > 0) {
+                combatLoop.gymLeader = { name: routeData.gymTrainer1.name, win: routeData.gymTrainer1.win };
+                combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer1.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { notify('Something is broken :/'); }
+        },
+        gymTrainer2Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
+            closeModal(document.getElementById('gymModal'));
+            if (routeData.gymTrainer2 && routeData.gymTrainer2.poke.length > 0 && player.wins[routeData.gymTrainer2.req]) {
+                combatLoop.gymLeader = { name: routeData.gymTrainer2.name, win: routeData.gymTrainer2.win };
+                combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer2.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else {
+                notify('Defeat the previous trainer and try again.');
+            }
+        },
+        gymTrainer3Battle: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
+            closeModal(document.getElementById('gymModal'));
+            if (routeData.gymTrainer3 && routeData.gymTrainer3.poke.length > 0 && player.wins[routeData.gymTrainer3.req]) {
+                combatLoop.gymLeader = { name: routeData.gymTrainer3.name, win: routeData.gymTrainer3.win };
+                combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer3.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else {
+                notify('Defeat the previous trainer and try again.');
             }
         },
         npcBattle: function () {
