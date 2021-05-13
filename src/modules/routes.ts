@@ -1151,7 +1151,7 @@ const ROUTES: Routes = {
                     ['Pidgeot', 56],
                 ],
             },
-        }, */
+        },
     },
     Johto: {
         _unlock: {
@@ -6178,7 +6178,7 @@ const ROUTES: Routes = {
                     ['Primarina', 68],
                 ],
             },
-        },
+        }, */
     },
 };
 
