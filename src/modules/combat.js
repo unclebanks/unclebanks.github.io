@@ -117,12 +117,13 @@ export default (player, enemy) => {
         clickDamage: function () {
             if (!enemy.activePoke()) return null;
             if (enemy.activePoke().alive()) {
-                // calculate damage done
                 const damageMultiplier = 10;
                 const damage = enemy.activePoke().takeDamage(10 * damageMultiplier);
                 dom.renderPokeOnContainer('enemy', enemy.activePoke());
             }
             if (!enemy.activePoke().alive()) {
+                window.clearTimeout(Combat.playerTimerId);
+                window.clearTimeout(Combat.enemyTimerId);
                 Combat.enemyFaint();
             }
             dom.renderPokeOnContainer('enemy', enemy.activePoke());
