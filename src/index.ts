@@ -75,6 +75,7 @@ if (process.env.NODE_ENV === 'development') {
         userInteractions,
         story,
         town,
+        combatLoop,
     };
 }
 
