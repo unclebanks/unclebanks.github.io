@@ -1,6 +1,9 @@
 <template>
   <div id="enemyBox">
-    <div class="pokeBox">
+    <div
+      class="pokeBox"
+      onclick="combatLoop.clickDamage()"
+    >
       <span class="name" /><br>
       <img
         id="enemyImg"

@@ -114,6 +114,21 @@ export default (player, enemy) => {
                 dom.renderPokeOnContainer('enemy', enemy.activePoke());
             }
         },
+        clickDamage: function () {
+            if (!enemy.activePoke()) return null;
+            if (enemy.activePoke().alive()) {
+                // calculate damage done
+                const damageMultiplier = 10;
+                const damage = enemy.activePoke().takeDamage(10 * damageMultiplier);
+                dom.renderPokeOnContainer('enemy', enemy.activePoke());
+            }
+            if (!enemy.activePoke().alive()) {
+                if (!enemy.activePoke().alive()) {
+                    Combat.enemyFaint();
+                }
+                dom.renderPokeOnContainer('enemy', enemy.activePoke());
+            }
+        },
         enemyFaint: function () {
             if (enemy.activePoke().shiny()) {
                 player.statistics.shinyBeaten++;
@@ -125,7 +140,7 @@ export default (player, enemy) => {
             player.addPokeCoins(foundPokeCoins);
 
             const beforeExp = player.getPokemon().map((poke) => poke.level());
-            const expToGive = (Combat.enemyActivePoke.baseExp() * 16) * (Combat.enemyActivePoke.level() * 3);
+            const expToGive = (Combat.enemyActivePoke.baseExp() / 16) + (Combat.enemyActivePoke.level() * 3);
             player.statistics.totalExp += expToGive;
             player.activePoke().giveExp(expToGive);
             player.getPokemon().forEach((poke) => poke.giveExp((Combat.enemyActivePoke.baseExp() / 100) + (Combat.enemyActivePoke.level() / 10)));

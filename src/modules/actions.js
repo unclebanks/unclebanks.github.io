@@ -9,6 +9,7 @@ import Poke from './poke';
 import POKEDEX from './db';
 import notify from './notify';
 import pokedex from '../store/modules/pokedex';
+import Combat from './combat';
 
 export default (player, combatLoop, enemy, town, story, appModel) => {
     let dom;
