@@ -114,6 +114,20 @@ export default (player, enemy) => {
                 dom.renderPokeOnContainer('enemy', enemy.activePoke());
             }
         },
+        clickDamage: function () {
+            if (!enemy.activePoke()) return null;
+            if (enemy.activePoke().alive()) {
+                const damageMultiplier = player.activePoke().avgAttack() + player.activePoke().level();
+                const damage = enemy.activePoke().takeDamage(damageMultiplier);
+                dom.renderPokeOnContainer('enemy', enemy.activePoke());
+            }
+            if (!enemy.activePoke().alive()) {
+                window.clearTimeout(Combat.playerTimerId);
+                window.clearTimeout(Combat.enemyTimerId);
+                Combat.enemyFaint();
+            }
+            dom.renderPokeOnContainer('enemy', enemy.activePoke());
+        },
         enemyFaint: function () {
             if (enemy.activePoke().shiny()) {
                 player.statistics.shinyBeaten++;

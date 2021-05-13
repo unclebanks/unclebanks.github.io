@@ -32,20 +32,14 @@ export default (player, combatLoop, userInteractions) => {
         renderPokeOnContainer: function (id, poke, face) {
             const container = $(`#${id}Box`).querySelector('.pokeBox');
             const townBox = $('#townBox');
-            const profButton = $('#profButton');
-            const gymLeaderButton = $('#gymLeaderButton');
-            const npcButton = $('#npcButton');
+            const gymButton = $('#gymButton');
             if (!poke) {
                 container.style.display = 'none';
                 if (id == 'enemy') {
                     townBox.style.display = 'block';
                     const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-                    profButton.style.display = (route.prof) ? '' : 'none';
-                    profButton.innerHTML = (route.prof) ? route.prof.name : '';
-                    gymLeaderButton.style.display = (route.gymLeader) ? '' : 'none';
-                    gymLeaderButton.innerHTML = (route.gymLeader) ? route.gymLeader.name : '';
-                    npcButton.style.display = (route.npc) ? '' : 'none';
-                    npcButton.innerHTML = (route.npc) ? route.npc.name : '';
+                    gymButton.style.display = (route.gym) ? '' : 'none';
+                    gymButton.innerHTML = (route.gym) ? route.gym.name : '';
                 }
                 return null;
             }

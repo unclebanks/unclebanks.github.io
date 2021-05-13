@@ -12,8 +12,8 @@ export default (lastSave, appModel) => {
         activePokeID: 0,
         lastHeal: Date.now(),
         currentBoostedRoamer: {
-            region: 'Johto',
-            route: '11',
+            region: 'Kanto',
+            route: '1',
             pokemon: 'Raikou',
             start: 0,
             length: 5 * 60 * 1000,
@@ -413,7 +413,7 @@ export default (lastSave, appModel) => {
         },
         generateBoostedRoamer: function () {
             const regions = [
-                'Johto',
+                'Kanto',
             ];
             const allowedRoamers = [
                 'Raikou',
