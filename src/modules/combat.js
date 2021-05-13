@@ -123,11 +123,9 @@ export default (player, enemy) => {
                 dom.renderPokeOnContainer('enemy', enemy.activePoke());
             }
             if (!enemy.activePoke().alive()) {
-                if (!enemy.activePoke().alive()) {
-                    Combat.enemyFaint();
-                }
-                dom.renderPokeOnContainer('enemy', enemy.activePoke());
+                Combat.enemyFaint();
             }
+            dom.renderPokeOnContainer('enemy', enemy.activePoke());
         },
         enemyFaint: function () {
             if (enemy.activePoke().shiny()) {
