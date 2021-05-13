@@ -221,11 +221,34 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Viridian Gym',
                 gymTrainer1: {
-                    name: 'Test',
+                    name: 'Lass',
                     poke: [
-                        ['Pikachu', 5],
+                        ['Bellsprout', 21],
+                        ['Weepinbell', 23],
                     ],
-                    req: 'cinnabarGym1',
+                    win: 'viridianGym1',
+                    req: 'volcano1',
+                },
+                gymTrainer2: {
+                    name: 'Beauty',
+                    poke: [
+                        ['Oddish', 21],
+                        ['Bellsprout', 21],
+                        ['Oddish', 21],
+                        ['Bellsprout', 21],
+                    ],
+                    win: 'viridianGym2',
+                    req: 'viridianGym1',
+                },
+                gymTrainer3: {
+                    name: 'Cooltrainer',
+                    poke: [
+                        ['Weepinbell', 24],
+                        ['Gloom', 24],
+                        ['Ivysaur', 24],
+                    ],
+                    win: 'viridianGym3',
+                    req: 'viridianGym2',
                 },
                 gymLeader: {
                     name: 'Giovanni',
@@ -237,7 +260,7 @@ const ROUTES: Routes = {
                         ['Nidoking', 45],
                         ['Rhydon', 50],
                     ],
-                    req: 'viridianGym1',
+                    req: 'viridianGym3',
                 },
 
             },
@@ -763,11 +786,33 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Fuchsia Gym',
                 gymTrainer1: {
-                    name: 'Test',
+                    name: 'Lass',
                     poke: [
-                        ['Pikachu', 5],
+                        ['Bellsprout', 21],
+                        ['Weepinbell', 23],
                     ],
                     win: 'fuchsiaGym1',
+                },
+                gymTrainer2: {
+                    name: 'Beauty',
+                    poke: [
+                        ['Oddish', 21],
+                        ['Bellsprout', 21],
+                        ['Oddish', 21],
+                        ['Bellsprout', 21],
+                    ],
+                    win: 'fuchsiaGym2',
+                    req: 'fuchsiaGym1',
+                },
+                gymTrainer3: {
+                    name: 'Cooltrainer',
+                    poke: [
+                        ['Weepinbell', 24],
+                        ['Gloom', 24],
+                        ['Ivysaur', 24],
+                    ],
+                    win: 'fuchsiaGym3',
+                    req: 'fuchsiaGym2',
                 },
                 gymLeader: {
                     name: 'Koga',
@@ -778,7 +823,7 @@ const ROUTES: Routes = {
                         ['Koffing', 37],
                         ['Weezing', 43],
                     ],
-                    req: 'fuchsiaGym1',
+                    req: 'fuchsiaGym3',
                 },
             },
             _unlock: {
@@ -889,15 +934,39 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Cinnabar Gym',
                 gymTrainer1: {
-                    name: 'Test',
+                    name: 'Lass',
                     poke: [
-                        ['Pikachu', 5],
+                        ['Bellsprout', 21],
+                        ['Weepinbell', 23],
                     ],
+                    win: 'cinnabarGym1',
+                },
+                gymTrainer2: {
+                    name: 'Beauty',
+                    poke: [
+                        ['Oddish', 21],
+                        ['Bellsprout', 21],
+                        ['Oddish', 21],
+                        ['Bellsprout', 21],
+                    ],
+                    win: 'cinnabarGym2',
+                    req: 'cinnabarGym1',
+                },
+                gymTrainer3: {
+                    name: 'Cooltrainer',
+                    poke: [
+                        ['Weepinbell', 24],
+                        ['Gloom', 24],
+                        ['Ivysaur', 24],
+                    ],
+                    win: 'cinnabarGym3',
+                    req: 'cinnabarGym2',
                 },
                 gymLeader: {
                     name: 'Blaine',
                     badge: 'Volcano Badge',
                     win: 'volcano1',
+                    req: 'cinnabarGym3',
                     poke: [
                         ['Growlithe', 42],
                         ['Ponyta', 40],

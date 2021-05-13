@@ -117,8 +117,8 @@ export default (player, enemy) => {
         clickDamage: function () {
             if (!enemy.activePoke()) return null;
             if (enemy.activePoke().alive()) {
-                const damageMultiplier = 10;
-                const damage = enemy.activePoke().takeDamage(10 * damageMultiplier);
+                const damageMultiplier = player.activePoke().avgAttack() + player.activePoke().level();
+                const damage = enemy.activePoke().takeDamage(damageMultiplier);
                 dom.renderPokeOnContainer('enemy', enemy.activePoke());
             }
             if (!enemy.activePoke().alive()) {
