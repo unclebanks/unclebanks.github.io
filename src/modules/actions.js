@@ -498,9 +498,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('townModal'));
         },
         renderTown: function () {
+            const pokeMart = $('#pokeMartButton');
             const npc = $('#npcButton');
             const prof = $('#profButton');
             const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            pokeMart.style.display = (route.pokeMart) ? '' : 'none';
+            pokeMart.innerHTML = (route.pokeMart) ? 'PokeMart' : '';
             npc.style.display = (route.npc) ? '' : 'none';
             npc.innerHTML = (route.npc) ? route.npc.name : '';
             prof.style.display = (route.prof) ? '' : 'none';

@@ -8,6 +8,7 @@
         id="townModalBox"
       >
         <button
+          id="pokeMartButton"
           onclick="userInteractions.viewShop()"
           class="button"
         >
