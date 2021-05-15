@@ -161,6 +161,20 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 notify('You have not unlocked this region yet');
             }
         },
+        goToFandom: function () {
+            if (player.regionUnlocked('Fandom')) {
+                player.settings.currentRegionId = 'Fandom';
+                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
+                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
+                } else {
+                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
+                }
+            } else {
+                notify('You have not unlocked this region yet');
+            }
+        },
         goToNone: function () {
             notify('This region is not implemented yet');
         },
@@ -498,9 +512,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('townModal'));
         },
         renderTown: function () {
+            const pokeMart = $('#pokeMartButton');
             const npc = $('#npcButton');
             const prof = $('#profButton');
             const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            pokeMart.style.display = (route.pokeMart) ? '' : 'none';
+            pokeMart.innerHTML = (route.pokeMart) ? 'PokeMart' : '';
             npc.style.display = (route.npc) ? '' : 'none';
             npc.innerHTML = (route.npc) ? route.npc.name : '';
             prof.style.display = (route.prof) ? '' : 'none';

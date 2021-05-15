@@ -73,10 +73,74 @@
       src="assets/images/currency/BattleCoin.png"
     ></span> BattleCoins: <span id="battleCoins">0</span><br><br>
     <button
+      id="kantoButton"
       class="button"
-      onclick="userInteractions.viewRegionSelect()"
+      value="Kanto"
+      onclick="userInteractions.goToKanto()"
     >
-      REGION SELECT
+      KANTO
     </button>
+    <button
+      id="johtoButton"
+      class="button"
+      onclick="userInteractions.goToJohto()"
+    >
+      JOHTO
+    </button>
+    <button
+      id="hoennButton"
+      class="button"
+      onclick="userInteractions.goToNone()"
+    >
+      HOENN
+    </button>
+    <button
+      id="sinnohButton"
+      class="button"
+      value="Sinnoh"
+      onclick="userInteractions.goToNone()"
+    >
+      SINNOH
+    </button>
+    <button
+      id="unovaButton"
+      class="button"
+      value="Unova"
+      onclick="userInteractions.goToNone()"
+    >
+      UNOVA
+    </button>
+    <button
+      id="kalosButton"
+      class="button"
+      value="Kalos"
+      onclick="userInteractions.goToNone()"
+    >
+      KALOS
+    </button>
+    <button
+      id="alolaButton"
+      class="button"
+      value="Alola"
+      onclick="userInteractions.goToNone()"
+    >
+      ALOLA
+    </button>
+    <button
+      id="galarButton"
+      class="button"
+      value="Galar"
+      onclick="userInteractions.goToNone()"
+    >
+      GALAR
+    </button>
+    <button
+      id="fandomButton"
+      class="button"
+      value="Fandom"
+      onclick="userInteractions.goToFandom()"
+    >
+      FANDOM
+    </button><br>
   </div>
 </template>
