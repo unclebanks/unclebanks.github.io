@@ -6382,6 +6382,156 @@ const ROUTES: Routes = {
             },
         }, */
     },
+    Fandom: {
+        _unlock: {
+            badges: {
+                'Earth Badge': true,
+            },
+        },
+        _global: {
+            pokes: [],
+            rarePokes: [],
+            superRare: [],
+        },
+        fanTown: {
+            name: 'Fan Town',
+            town: true,
+            pokeMart: true,
+        },
+        kroute1: {
+            name: 'Route 1',
+            pokes: ['Pidgey', 'Rattata'],
+            minLevel: 2,
+            maxLevel: 5,
+            respawn: 'kaliTown',
+        },
+        kaliTown: {
+            name: 'Kali Town',
+            town: true,
+            pokeMart: true,
+            gym: {
+                name: 'Kali Gym',
+                gymTrainer1: {
+                    name: 'Surfer',
+                    poke: [
+                        ['Poliwrath', 63],
+                        ['Golisopod', 65],
+                        ['Kingdra', 66],
+                    ],
+                    win: 'kaliGym1',
+                },
+                gymTrainer2: {
+                    name: 'Tech Genius',
+                    poke: [
+                        ['Oranguru', 62],
+                        ['Electivire', 64],
+                        ['Alakazam', 65],
+                        ['Metagross', 67],
+                    ],
+                    win: 'kaliGym2',
+                    req: 'kaliGym1',
+                },
+                gymTrainer3: {
+                    name: 'Liberal',
+                    poke: [
+                        ['Glaceon', 67],
+                        ['Gyarados', 66],
+                        ['Nidoqueen', 68],
+                    ],
+                    win: 'kaliGym3',
+                    req: 'kaliGym2',
+                },
+                gymLeader: {
+                    name: 'Krush',
+                    win: 'power1',
+                    req: 'kaliGym3',
+                    poke: [
+                        ['Mudsdale', 59],
+                        ['Stoutland', 61],
+                        ['Sceptile', 61],
+                        ['Honchkrow', 62],
+                        ['Garchomp', 64],
+                    ],
+                },
+            },
+        },
+        penguinVille: {
+            name: 'Penguinville',
+            town: true,
+            pokeMart: true,
+            gym: {
+                name: 'Penguinville Gym',
+                gymLeader: {
+                    name: 'Penguin',
+                    poke: [
+                        ['Dewgong', 62],
+                        ['Alolan Sandslash', 59],
+                        ['Jynx', 61],
+                        ['Glaceon', 60],
+                        ['M-Abomasnow', 69],
+                        ['Empoleon', 69],
+                    ],
+                },
+            },
+        },
+        gabeCity: {
+            name: 'Gabe City',
+            town: true,
+            pokeMart: true,
+            gym: {
+                name: 'Gabe Gym',
+                gymLeader: {
+                    name: 'Gabe',
+                    poke: [
+                        ['M-Gardevoir', 62],
+                        ['Serperior', 59],
+                        ['Lucario', 61],
+                        ['Zoroark', 60],
+                    ],
+                },
+            },
+        },
+        randoHamlet: {
+            name: 'Rando Hamlet',
+            town: true,
+            pokeMart: true,
+            gym: {
+                name: 'Rando Gym',
+                gymLeader: {
+                    name: 'Rando',
+                    poke: [
+                        ['Decidueye', 62],
+                        ['Salazzle', 59],
+                        ['Mimikyu', 61],
+                        ['Lycanroc', 60],
+                        ['Zeraora', 69],
+                        ['Kartana', 69],
+                    ],
+                },
+            },
+        },
+        pixlSquare: {
+            name: 'PixL Square',
+            town: true,
+            pokeMart: true,
+            gym: {
+                name: 'PixL Gym',
+                gymLeader: {
+                    name: 'PixL',
+                    poke: [
+                        ['Infernape', 69],
+                        ['M-Lucario', 69],
+                        ['Gardevoir', 69],
+                        ['Gallade', 69],
+                        ['Primarina', 69],
+                        ['Celebi', 69],
+                        ['Meloetta', 69],
+                        ['Ho-Oh', 69],
+                    ],
+                },
+            },
+        },
+    },
 };
 
 export default ROUTES;

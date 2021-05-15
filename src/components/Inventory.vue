@@ -133,6 +133,14 @@
       onclick="userInteractions.goToNone()"
     >
       GALAR
+    </button>
+    <button
+      id="fandomButton"
+      class="button"
+      value="Fandom"
+      onclick="userInteractions.goToFandom()"
+    >
+      FANDOM
     </button><br>
   </div>
 </template>
