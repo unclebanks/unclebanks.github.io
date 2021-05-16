@@ -777,7 +777,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         gymLeaderBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
             closeModal(document.getElementById('gymModal'));
-            if (routeData.gymLeader && routeData.gymLeader.poke.length > 0 && player.wins[routeData.gymLeader.req]) {
+            if (routeData.gymLeader && routeData.gymLeader.poke.length > 0 && (!routeData.gymLeader.req || player.wins[routeData.gymLeader.req])) {
                 combatLoop.gymLeader = { name: routeData.gymLeader.name, badge: routeData.gymLeader.badge, win: routeData.gymLeader.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymLeader.poke });
                 combatLoop.unpause();
