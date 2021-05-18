@@ -90,7 +90,7 @@
     <button
       id="hoennButton"
       class="button"
-      onclick="userInteractions.goToNone()"
+      onclick="userInteractions.goToHoenn()"
     >
       HOENN
     </button>
@@ -98,7 +98,7 @@
       id="sinnohButton"
       class="button"
       value="Sinnoh"
-      onclick="userInteractions.goToNone()"
+      onclick="userInteractions.goToSinnoh()"
     >
       SINNOH
     </button>
