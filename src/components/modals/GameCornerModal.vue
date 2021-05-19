@@ -20,20 +20,20 @@
         </div>
         <br>
         <div id="headsTails">
-          <span class="span">Heads or Tails</span>
+          <span class="span">Win or Lose</span>
           <br>
           <br>
           <button
             class="button"
-            @click="ui.heads()"
+            @click="ui.betAllGameTokens()"
           >
-            Heads
+            All
           </button>
           <button
             class="button"
-            @click="ui.renderBoulderBadge()"
+            @click="ui.betHalfGameTokens()"
           >
-            Tails
+            Half
           </button>
         </div>
         <div id="prizeCorner">
@@ -43,6 +43,12 @@
             @click="ui.freebie()"
           >
             Freebies
+          </button>
+          <button
+            class="button"
+            @click="ui.prizeCorner()"
+          >
+            Prizes
           </button>
         </div>
       </div>

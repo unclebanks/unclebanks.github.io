@@ -671,10 +671,19 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const gameTokensElement = $('#gameTokens');
             gameTokensElement.innerHTML = player.currencyAmount.gametokens;
         },
+        renderPrizeTokens: function () {
+            const gameTokensElement = $('#prizeTokens');
+            gameTokensElement.innerHTML = player.currencyAmount.gametokens;
+        },
         gameCorner: function () {
             closeModal(document.getElementById('townModal'));
             this.renderGameTokens();
             openModal(document.getElementById('gameCornerModal'));
+        },
+        prizeCorner: function () {
+            closeModal(document.getElementById('gameCornerModal'));
+            openModal(document.getElementById('prizeCornerModal'));
+            this.renderPrizeTokens();
         },
         freebie: function () {
             if (player.currencyAmount.gametokens === 0) {
@@ -682,18 +691,33 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.renderGameTokens();
             } else alert('You have enough tokens to play');
         },
-        heads: function () {
+        betAllGameTokens: function () {
             const heads = Math.random();
             const totalAmount = player.currencyAmount.gametokens;
             if (totalAmount === 0) {
-                alert('Go Check Freebies');
+                alert('Go check Freebies');
             } else if (heads >= 0.6) {
                 alert('You doubled your tokens');
                 player.currencyAmount.gametokens += totalAmount;
                 this.renderGameTokens();
             } else {
-                alert('You lost is all');
+                alert('You lost it all');
                 player.currencyAmount.gametokens -= totalAmount;
+                this.renderGameTokens();
+            }
+        },
+        betHalfGameTokens: function () {
+            const heads = Math.random();
+            const totalAmount = player.currencyAmount.gametokens;
+            if (totalAmount === 0) {
+                alert('Go check Freebies');
+            } else if (heads >= 0.6) {
+                alert('You won half of your tokens');
+                player.currencyAmount.gametokens += (totalAmount * 0.5);
+                this.renderGameTokens();
+            } else {
+                alert('You lost half of your tokens');
+                player.currencyAmount.gametokens -= (totalAmount * 0.5);
                 this.renderGameTokens();
             }
         },
