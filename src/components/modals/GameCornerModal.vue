@@ -25,7 +25,7 @@
           <br>
           <button
             class="button"
-            @click="ui.renderBoulderBadge()"
+            @click="ui.heads()"
           >
             Heads
           </button>
@@ -40,6 +40,7 @@
           <span class="span">Prize Corner</span><br>
           <button
             class="button"
+            @click="ui.freebie()"
           >
             Freebies
           </button>

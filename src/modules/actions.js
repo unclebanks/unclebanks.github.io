@@ -663,9 +663,39 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.npc.name === 'Game Corner') {
                 this.gameCorner();
             }
+            if (this.Freebie) {
+                alert('GoodJob!');
+            }
+        },
+        renderGameTokens: function () {
+            const gameTokensElement = $('#gameTokens');
+            gameTokensElement.innerHTML = player.currencyAmount.gametokens;
         },
         gameCorner: function () {
+            closeModal(document.getElementById('townModal'));
+            this.renderGameTokens();
             openModal(document.getElementById('gameCornerModal'));
+        },
+        freebie: function () {
+            if (player.currencyAmount.gametokens === 0) {
+                player.currencyAmount.gametokens += 100;
+                this.renderGameTokens();
+            } else alert('You have enough tokens to play');
+        },
+        heads: function () {
+            const heads = Math.random();
+            const totalAmount = player.currencyAmount.gametokens;
+            if (totalAmount === 0) {
+                alert('Go Check Freebies');
+            } else if (heads >= 0.6) {
+                alert('You doubled your tokens');
+                player.currencyAmount.gametokens += totalAmount;
+                this.renderGameTokens();
+            } else {
+                alert('You lost is all');
+                player.currencyAmount.gametokens -= totalAmount;
+                this.renderGameTokens();
+            }
         },
         oakEvent: function () {
             notify('How is your Pokedex Coming along?');

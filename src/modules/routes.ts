@@ -380,6 +380,14 @@ const ROUTES: Routes = {
             name: 'Cerulean City',
             town: true,
             pokeMart: true,
+            npc: {
+                name: 'Nugget 5',
+                event: 'nugget5',
+                poke: [
+                    ['Staryu', 18],
+                    ['Starmie', 21],
+                ],
+            },
             gym: {
                 name: 'Cerulean Gym',
                 gymTrainer1: {
@@ -408,23 +416,6 @@ const ROUTES: Routes = {
                     ],
                     req: 'ceruleanGym2',
                 },
-            },
-            _unlock: {
-                badges: {
-                    'Boulder Badge': true,
-                },
-            },
-        },
-        nuggetBridge: {
-            name: 'Nugget Bridge',
-            town: true,
-            npc: {
-                name: 'Nugget 5',
-                event: 'nugget5',
-                poke: [
-                    ['Staryu', 18],
-                    ['Starmie', 21],
-                ],
             },
             _unlock: {
                 badges: {
