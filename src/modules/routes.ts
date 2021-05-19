@@ -16,6 +16,24 @@ interface GymLeader {
     req?: string,
 }
 
+type ItemSpecialRequirement = {
+    type: 'item',
+    item: string, // do you have a proper "item" type?
+  }
+
+  type PokemonDefeatSpecialRequirement = {
+    type: 'pokemonTypeDefeat',
+    statistic: string,
+    need: number,
+  }
+
+type SpecialRequirement = ItemSpecialRequirement | PokemonDefeatSpecialRequirement;
+
+interface SpecialPokemon {
+    requirement: SpecialRequirement,
+    pokemon: PokemonNameType[],
+  }
+
 interface GymTrainer1 {
     name: string,
     poke: Array<[PokemonNameType, number]>,
@@ -141,6 +159,7 @@ interface Route {
     // may want to define all town names before this for stronger typing
     respawn: string,
     _unlock?: UnlockData,
+    _special?: SpecialPokemon[],
 
     // Need to do something about these, can probably be made into
     // an unlock condition and become part of UnlockData.
@@ -215,6 +234,9 @@ const ROUTES: Routes = {
             minLevel: 2,
             maxLevel: 5,
             respawn: 'palletTown',
+            _special: [
+                { requirement: { type: 'item', item: 'kantoOldRod' }, pokemon: ['Squirtle'] },
+            ],
         },
         viridianCity: {
             name: 'Viridian City',
@@ -358,6 +380,14 @@ const ROUTES: Routes = {
             name: 'Cerulean City',
             town: true,
             pokeMart: true,
+            npc: {
+                name: 'Nugget 5',
+                event: 'nugget5',
+                poke: [
+                    ['Staryu', 18],
+                    ['Starmie', 21],
+                ],
+            },
             gym: {
                 name: 'Cerulean Gym',
                 gymTrainer1: {
@@ -386,23 +416,6 @@ const ROUTES: Routes = {
                     ],
                     req: 'ceruleanGym2',
                 },
-            },
-            _unlock: {
-                badges: {
-                    'Boulder Badge': true,
-                },
-            },
-        },
-        nuggetBridge: {
-            name: 'Nugget Bridge',
-            town: true,
-            npc: {
-                name: 'Nugget 5',
-                event: 'nugget5',
-                poke: [
-                    ['Staryu', 18],
-                    ['Starmie', 21],
-                ],
             },
             _unlock: {
                 badges: {
@@ -2126,7 +2139,7 @@ const ROUTES: Routes = {
                     ['Dragonite', 50],
                 ],
             },
-        },
+        }, */
     },
     Hoenn: {
         _unlock: {
@@ -2142,16 +2155,6 @@ const ROUTES: Routes = {
         littlerootTown: {
             name: 'Littleroot Town',
             town: true,
-            prof: {
-                name: 'Prof. Birch',
-                badge: null,
-                win: 'birch1',
-                poke: [
-                    ['Treecko', 15],
-                    ['Mudkip', 15],
-                    ['Torchic', 15],
-                ],
-            },
         },
         hroute101: {
             name: 'Route 101',
@@ -2181,17 +2184,20 @@ const ROUTES: Routes = {
         petalburgCity: {
             name: 'Petalburg City',
             town: true,
-            gymLeader: {
-                name: 'Norman',
-                badge: 'Balance Badge',
-                poke: [
-                    ['Slaking', 57],
-                    ['Blissey', 57],
-                    ['Kangaskhan', 55],
-                    ['Tauros', 57],
-                    ['Spinda', 58],
-                    ['Slaking', 60],
-                ],
+            gym: {
+                name: 'Petalburg Gym',
+                gymLeader: {
+                    name: 'Norman',
+                    badge: 'Balance Badge',
+                    poke: [
+                        ['Slaking', 57],
+                        ['Blissey', 57],
+                        ['Kangaskhan', 55],
+                        ['Tauros', 57],
+                        ['Spinda', 58],
+                        ['Slaking', 60],
+                    ],
+                },
             },
         },
         hroute104: {
@@ -2211,17 +2217,20 @@ const ROUTES: Routes = {
         rustboroCity: {
             name: 'Rustboro City',
             town: true,
-            gymLeader: {
-                name: 'Roxanne',
-                badge: 'Stone Badge',
-                poke: [
-                    ['Aerodactyl', 47],
-                    ['Golem', 47],
-                    ['Omastar', 47],
-                    ['Kabutops', 50],
-                    ['Steelix', 50],
-                    ['Nosepass', 52],
-                ],
+            gym: {
+                name: 'Rustboro Gym',
+                gymLeader: {
+                    name: 'Roxanne',
+                    badge: 'Stone Badge',
+                    poke: [
+                        ['Aerodactyl', 47],
+                        ['Golem', 47],
+                        ['Omastar', 47],
+                        ['Kabutops', 50],
+                        ['Steelix', 50],
+                        ['Nosepass', 52],
+                    ],
+                },
             },
         },
         hroute116: {
@@ -2270,17 +2279,20 @@ const ROUTES: Routes = {
         dewfordTown: {
             name: 'Dewford Town',
             town: true,
-            gymLeader: {
-                name: 'Brawly',
-                badge: 'Knuckle Badge',
-                poke: [
-                    ['Hitmonlee', 47],
-                    ['Hitmonchan', 47],
-                    ['Machamp', 47],
-                    ['Medicham', 50],
-                    ['Hitmontop', 50],
-                    ['Hariyama', 52],
-                ],
+            gym: {
+                name: 'Dewford Gym',
+                gymLeader: {
+                    name: 'Brawly',
+                    badge: 'Knuckle Badge',
+                    poke: [
+                        ['Hitmonlee', 47],
+                        ['Hitmonchan', 47],
+                        ['Machamp', 47],
+                        ['Medicham', 50],
+                        ['Hitmontop', 50],
+                        ['Hariyama', 52],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -2372,17 +2384,20 @@ const ROUTES: Routes = {
         mauvilleCity: {
             name: 'Mauville City',
             town: true,
-            gymLeader: {
-                name: 'Wattson',
-                badge: 'Dynamo Badge',
-                poke: [
-                    ['Electabuzz', 50],
-                    ['Raichu', 51],
-                    ['Ampharos', 53],
-                    ['Electrode', 53],
-                    ['Magneton', 53],
-                    ['Manectric', 55],
-                ],
+            gym: {
+                name: 'Mauville Gym',
+                gymLeader: {
+                    name: 'Wattson',
+                    badge: 'Dynamo Badge',
+                    poke: [
+                        ['Electabuzz', 50],
+                        ['Raichu', 51],
+                        ['Ampharos', 53],
+                        ['Electrode', 53],
+                        ['Magneton', 53],
+                        ['Manectric', 55],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -2522,17 +2537,20 @@ const ROUTES: Routes = {
         lavaridgeTown: {
             name: 'Lavaridge Town',
             town: true,
-            gymLeader: {
-                name: 'Flannery',
-                badge: 'Heat Badge',
-                poke: [
-                    ['Arcanine', 55],
-                    ['Magcargo', 51],
-                    ['Houndoom', 53],
-                    ['Rapidash', 53],
-                    ['Camerupt', 53],
-                    ['Torkoal', 55],
-                ],
+            gym: {
+                name: 'Lavaridge Gym',
+                gymLeader: {
+                    name: 'Flannery',
+                    badge: 'Heat Badge',
+                    poke: [
+                        ['Arcanine', 55],
+                        ['Magcargo', 51],
+                        ['Houndoom', 53],
+                        ['Rapidash', 53],
+                        ['Camerupt', 53],
+                        ['Torkoal', 55],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -2579,17 +2597,20 @@ const ROUTES: Routes = {
         fortreeCity: {
             name: 'Fortree City',
             town: true,
-            gymLeader: {
-                name: 'Winona',
-                badge: 'Feather Badge',
-                poke: [
-                    ['Noctowl', 53],
-                    ['Tropius', 55],
-                    ['Pelipper', 55],
-                    ['Dragonite', 58],
-                    ['Skarmory', 57],
-                    ['Altaria', 60],
-                ],
+            gym: {
+                name: 'Fortree Gym',
+                gymLeader: {
+                    name: 'Winona',
+                    badge: 'Feather Badge',
+                    poke: [
+                        ['Noctowl', 53],
+                        ['Tropius', 55],
+                        ['Pelipper', 55],
+                        ['Dragonite', 58],
+                        ['Skarmory', 57],
+                        ['Altaria', 60],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -2693,17 +2714,20 @@ const ROUTES: Routes = {
         mossdeepCity: {
             name: 'Mossdeep City',
             town: true,
-            gymLeader: {
-                name: 'Liza & Tate',
-                badge: 'Mind Badge',
-                poke: [
-                    ['Hypno', 64],
-                    ['Claydol', 66],
-                    ['Slowking', 66],
-                    ['Xatu', 68],
-                    ['Lunatone', 70],
-                    ['Solrock', 70],
-                ],
+            gym: {
+                name: 'Mossdeep Gym',
+                gymLeader: {
+                    name: 'Liza & Tate',
+                    badge: 'Mind Badge',
+                    poke: [
+                        ['Hypno', 64],
+                        ['Claydol', 66],
+                        ['Slowking', 66],
+                        ['Xatu', 68],
+                        ['Lunatone', 70],
+                        ['Solrock', 70],
+                    ],
+                },
             },
             npc: {
                 name: 'Steven\'s Home',
@@ -2778,17 +2802,20 @@ const ROUTES: Routes = {
         sootopolisCity: {
             name: 'Sootopolis City',
             town: true,
-            gymLeader: {
-                name: 'Juan',
-                badge: 'Rain Badge',
-                poke: [
-                    ['Lapras', 75],
-                    ['Whiscash', 75],
-                    ['Politoed', 78],
-                    ['Walrein', 78],
-                    ['Crawdaunt', 79],
-                    ['Kingdra', 80],
-                ],
+            gym: {
+                name: 'Sootopolis Gym',
+                gymLeader: {
+                    name: 'Juan',
+                    badge: 'Rain Badge',
+                    poke: [
+                        ['Lapras', 75],
+                        ['Whiscash', 75],
+                        ['Politoed', 78],
+                        ['Walrein', 78],
+                        ['Crawdaunt', 79],
+                        ['Kingdra', 80],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -2997,48 +3024,43 @@ const ROUTES: Routes = {
             respawn: 'littlerootTown',
             hoennSuperRod: 1,
         },
-        elite4Sidney: {
-            name: 'Elite 4 Sidney',
+        elite4Hoenn: {
+            name: 'Hoenn Pokemon League',
             town: true,
-            gymLeader: {
-                name: 'Sidney',
-                poke: [
-                    ['Mightyena', 46],
-                    ['Cacturne', 46],
-                    ['Shiftry', 48],
-                    ['Sharpedo', 48],
-                    ['Absol', 49],
-                ],
+            gym: {
+                name: 'Elite 4',
+                gymTrainer1: {
+                    name: 'Sidney',
+                    poke: [
+                        ['Mightyena', 46],
+                        ['Cacturne', 46],
+                        ['Shiftry', 48],
+                        ['Sharpedo', 48],
+                        ['Absol', 49],
+                    ],
+                },
+                gymTrainer2: {
+                    name: 'Phoebe',
+                    poke: [
+                        ['Dusclops', 58],
+                        ['Banette', 59],
+                        ['Banette', 59],
+                        ['Sableye', 60],
+                        ['Dusclops', 61],
+                    ],
+                },
+                gymTrainer3: {
+                    name: 'Glacia',
+                    poke: [
+                        ['Glalie', 60],
+                        ['Sealeo', 60],
+                        ['Sealeo', 62],
+                        ['Glalie', 62],
+                        ['Walrein', 63],
+                    ],
+                },
             },
-        },
-        elite4Phoebe: {
-            name: 'Elite 4 Phoebe',
-            town: true,
-            gymLeader: {
-                name: 'Phoebe',
-                poke: [
-                    ['Dusclops', 58],
-                    ['Banette', 59],
-                    ['Banette', 59],
-                    ['Sableye', 60],
-                    ['Dusclops', 61],
-                ],
-            },
-        },
-        elite4Glacia: {
-            name: 'Elite 4 Glacia',
-            town: true,
-            gymLeader: {
-                name: 'Glacia',
-                poke: [
-                    ['Glalie', 60],
-                    ['Sealeo', 60],
-                    ['Sealeo', 62],
-                    ['Glalie', 62],
-                    ['Walrein', 63],
-                ],
-            },
-        },
+        }, /*
         elite4Drake: {
             name: 'Elite 4 Drake',
             town: true,
@@ -3067,7 +3089,7 @@ const ROUTES: Routes = {
                     ['Milotic', 68],
                 ],
             },
-        },
+        }, */
     },
     Sinnoh: {
         _unlock: {
@@ -3083,15 +3105,6 @@ const ROUTES: Routes = {
         twinleafTown: {
             name: 'Twinleaf Town',
             town: true,
-            prof: {
-                name: 'Prof. Rowan',
-                badge: null,
-                poke: [
-                    ['Turtwig', 15],
-                    ['Chimchar', 15],
-                    ['Piplup', 15],
-                ],
-            },
         },
         sroute201: {
             name: 'Route 201',
@@ -3139,14 +3152,17 @@ const ROUTES: Routes = {
         oreburghCity: {
             name: 'Oreburgh City',
             town: true,
-            gymLeader: {
-                name: 'Roark',
-                badge: 'Coal Badge',
-                poke: [
-                    ['Geodude', 12],
-                    ['Onix', 12],
-                    ['Cranidos', 14],
-                ],
+            gym: {
+                name: 'Oreburgh Gym',
+                gymLeader: {
+                    name: 'Roark',
+                    badge: 'Coal Badge',
+                    poke: [
+                        ['Geodude', 12],
+                        ['Onix', 12],
+                        ['Cranidos', 14],
+                    ],
+                },
             },
         },
         oreburghMine: {
@@ -3264,14 +3280,17 @@ const ROUTES: Routes = {
         eternaCity: {
             name: 'Eterna City',
             town: true,
-            gymLeader: {
-                name: 'Gardenia',
-                badge: 'Forest Badge',
-                poke: [
-                    ['Cherubi', 19],
-                    ['Turtwig', 19],
-                    ['Roserade', 22],
-                ],
+            gym: {
+                name: 'Eterna Gym',
+                gymLeader: {
+                    name: 'Gardenia',
+                    badge: 'Forest Badge',
+                    poke: [
+                        ['Cherubi', 19],
+                        ['Turtwig', 19],
+                        ['Roserade', 22],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -3342,14 +3361,17 @@ const ROUTES: Routes = {
         hearthomeCity: {
             name: 'Hearthome City',
             town: true,
-            gymLeader: {
-                name: 'Fantina',
-                badge: 'Relic Badge',
-                poke: [
-                    ['Duskull', 24],
-                    ['Haunter', 24],
-                    ['Mismagius', 26],
-                ],
+            gym: {
+                name: 'Eterna Gym',
+                gymLeader: {
+                    name: 'Fantina',
+                    badge: 'Relic Badge',
+                    poke: [
+                        ['Duskull', 24],
+                        ['Haunter', 24],
+                        ['Mismagius', 26],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -3417,7 +3439,7 @@ const ROUTES: Routes = {
         },
         solaceonRuins: {
             name: 'Solaceon Ruins',
-            pokes: ['Unown'],
+            pokes: ['Unown A'],
             minLevel: 14,
             maxLevel: 30,
             respawn: 'solaceonTown',
@@ -3454,14 +3476,17 @@ const ROUTES: Routes = {
         veilstoneCity: {
             name: 'Veilstone City',
             town: true,
-            gymLeader: {
-                name: 'Maylene',
-                badge: 'Cobble Badge',
-                poke: [
-                    ['Meditite', 24],
-                    ['Machoke', 24],
-                    ['Lucario', 26],
-                ],
+            gym: {
+                name: 'Veilstone Gym',
+                gymLeader: {
+                    name: 'Maylene',
+                    badge: 'Cobble Badge',
+                    poke: [
+                        ['Meditite', 24],
+                        ['Machoke', 24],
+                        ['Lucario', 26],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -3544,14 +3569,17 @@ const ROUTES: Routes = {
         pastoriaCity: {
             name: 'Pastoria City',
             town: true,
-            gymLeader: {
-                name: 'Crasher Wake',
-                badge: 'Fen Badge',
-                poke: [
-                    ['Gyarados', 24],
-                    ['Quagsire', 24],
-                    ['Floatzel', 26],
-                ],
+            gym: {
+                name: 'Pastoria Gym',
+                gymLeader: {
+                    name: 'Crasher Wake',
+                    badge: 'Fen Badge',
+                    poke: [
+                        ['Gyarados', 24],
+                        ['Quagsire', 24],
+                        ['Floatzel', 26],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -3667,14 +3695,17 @@ const ROUTES: Routes = {
         canalaveCity: {
             name: 'Canalave City',
             town: true,
-            gymLeader: {
-                name: 'Byron',
-                badge: 'Mine Badge',
-                poke: [
-                    ['Magneton', 24],
-                    ['Steelix', 24],
-                    ['Bastiodon', 26],
-                ],
+            gym: {
+                name: 'Canalave Gym',
+                gymLeader: {
+                    name: 'Byron',
+                    badge: 'Mine Badge',
+                    poke: [
+                        ['Magneton', 24],
+                        ['Steelix', 24],
+                        ['Bastiodon', 26],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -3733,15 +3764,18 @@ const ROUTES: Routes = {
         snowpointCity: {
             name: 'Snowpoint City',
             town: true,
-            gymLeader: {
-                name: 'Candice',
-                badge: 'Icicle Badge',
-                poke: [
-                    ['Sneasel', 24],
-                    ['Piloswine', 24],
-                    ['Abomasnow', 26],
-                    ['Froslass', 26],
-                ],
+            gym: {
+                name: 'Snowpoint Gym',
+                gymLeader: {
+                    name: 'Candice',
+                    badge: 'Icicle Badge',
+                    poke: [
+                        ['Sneasel', 24],
+                        ['Piloswine', 24],
+                        ['Abomasnow', 26],
+                        ['Froslass', 26],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -3776,15 +3810,18 @@ const ROUTES: Routes = {
         sunyshoreCity: {
             name: 'Sunyshore City',
             town: true,
-            gymLeader: {
-                name: 'Volkner',
-                badge: 'Beacon Badge',
-                poke: [
-                    ['Jolteon', 24],
-                    ['Raichu', 24],
-                    ['Luxray', 26],
-                    ['Electivire', 26],
-                ],
+            gym: {
+                name: 'Sunyshore Gym',
+                gymLeader: {
+                    name: 'Volkner',
+                    badge: 'Beacon Badge',
+                    poke: [
+                        ['Jolteon', 24],
+                        ['Raichu', 24],
+                        ['Luxray', 26],
+                        ['Electivire', 26],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -4032,62 +4069,53 @@ const ROUTES: Routes = {
             respawn: 'twinleafTown',
             sinnohSuperRod: 1,
         },
-        elite4Aaron: {
-            name: 'Elite 4 Aaron',
+        elite4Sinnoh: {
+            name: 'Sinnoh Pokemon League',
             town: true,
-            gymLeader: {
-                name: 'Aaron',
-                poke: [
-                    ['Dustox', 53],
-                    ['Vespiquen', 54],
-                    ['Heracross', 54],
-                    ['Beautifly', 53],
-                    ['Drapion', 57],
-                ],
+            gym: {
+                name: 'Elite 4',
+                gymTrainer1: {
+                    name: 'Aaron',
+                    poke: [
+                        ['Dustox', 53],
+                        ['Vespiquen', 54],
+                        ['Heracross', 54],
+                        ['Beautifly', 53],
+                        ['Drapion', 57],
+                    ],
+                },
+                gymTrainer2: {
+                    name: 'Bertha',
+                    poke: [
+                        ['Quagsire', 55],
+                        ['Sudowoodo', 56],
+                        ['Whiscash', 55],
+                        ['Hippowdon', 59],
+                        ['Golem', 56],
+                    ],
+                },
+                gymTrainer3: {
+                    name: 'Flint',
+                    poke: [
+                        ['Houndoom', 58],
+                        ['Flareon', 57],
+                        ['Rapidash', 53],
+                        ['Infernape', 55],
+                        ['Magmortar', 57],
+                    ],
+                },
+                gymLeader: {
+                    name: 'Lucian',
+                    poke: [
+                        ['Mr. Mime', 53],
+                        ['Espeon', 55],
+                        ['Bronzong', 54],
+                        ['Alakazam', 56],
+                        ['Gallade', 59],
+                    ],
+                },
             },
-        },
-        elite4Bertha: {
-            name: 'Elite 4 Bertha',
-            town: true,
-            gymLeader: {
-                name: 'Bertha',
-                poke: [
-                    ['Quagsire', 55],
-                    ['Sudowoodo', 56],
-                    ['Whiscash', 55],
-                    ['Hippowdon', 59],
-                    ['Golem', 56],
-                ],
-            },
-        },
-        elite4Flint: {
-            name: 'Elite 4 Flint',
-            town: true,
-            gymLeader: {
-                name: 'Flint',
-                poke: [
-                    ['Houndoom', 58],
-                    ['Flareon', 57],
-                    ['Rapidash', 53],
-                    ['Infernape', 55],
-                    ['Magmortar', 57],
-                ],
-            },
-        },
-        elite4Lucian: {
-            name: 'Elite 4 Lucian',
-            town: true,
-            gymLeader: {
-                name: 'Lucian',
-                poke: [
-                    ['Mr. Mime', 53],
-                    ['Espeon', 55],
-                    ['Bronzong', 54],
-                    ['Alakazam', 56],
-                    ['Gallade', 59],
-                ],
-            },
-        },
+        }, /*
         championCynthia: {
             name: 'Champion Cynthia',
             town: true,
@@ -4102,8 +4130,8 @@ const ROUTES: Routes = {
                     ['Garchomp', 66],
                 ],
             },
-        },
-    },
+        }, */
+    }, /*
     Unova: {
         _unlock: {
             badges: {
@@ -6380,8 +6408,8 @@ const ROUTES: Routes = {
                     ['Primarina', 68],
                 ],
             },
-        }, */
-    },
+        },
+    },  */
     Fandom: {
         _unlock: {
             badges: {
