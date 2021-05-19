@@ -16,6 +16,24 @@ interface GymLeader {
     req?: string,
 }
 
+type ItemSpecialRequirement = {
+    type: 'item',
+    item: string, // do you have a proper "item" type?
+  }
+
+  type PokemonDefeatSpecialRequirement = {
+    type: 'pokemonTypeDefeat',
+    statistic: string,
+    need: number,
+  }
+
+type SpecialRequirement = ItemSpecialRequirement | PokemonDefeatSpecialRequirement;
+
+interface SpecialPokemon {
+    requirement: SpecialRequirement,
+    pokemon: PokemonNameType[],
+  }
+
 interface GymTrainer1 {
     name: string,
     poke: Array<[PokemonNameType, number]>,
@@ -141,6 +159,7 @@ interface Route {
     // may want to define all town names before this for stronger typing
     respawn: string,
     _unlock?: UnlockData,
+    _special?: SpecialPokemon[],
 
     // Need to do something about these, can probably be made into
     // an unlock condition and become part of UnlockData.
@@ -215,6 +234,9 @@ const ROUTES: Routes = {
             minLevel: 2,
             maxLevel: 5,
             respawn: 'palletTown',
+            _special: [
+                { requirement: { type: 'item', item: 'kantoOldRod' }, pokemon: ['Squirtle'] },
+            ],
         },
         viridianCity: {
             name: 'Viridian City',
@@ -358,6 +380,14 @@ const ROUTES: Routes = {
             name: 'Cerulean City',
             town: true,
             pokeMart: true,
+            npc: {
+                name: 'Nugget 5',
+                event: 'nugget5',
+                poke: [
+                    ['Staryu', 18],
+                    ['Starmie', 21],
+                ],
+            },
             gym: {
                 name: 'Cerulean Gym',
                 gymTrainer1: {
@@ -386,23 +416,6 @@ const ROUTES: Routes = {
                     ],
                     req: 'ceruleanGym2',
                 },
-            },
-            _unlock: {
-                badges: {
-                    'Boulder Badge': true,
-                },
-            },
-        },
-        nuggetBridge: {
-            name: 'Nugget Bridge',
-            town: true,
-            npc: {
-                name: 'Nugget 5',
-                event: 'nugget5',
-                poke: [
-                    ['Staryu', 18],
-                    ['Starmie', 21],
-                ],
             },
             _unlock: {
                 badges: {
