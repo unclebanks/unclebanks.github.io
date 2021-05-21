@@ -17,6 +17,14 @@
             id="prizeTokens"
             class="span"
           >0</span><br>
+          <hr>
+          <span>Pokemon</span><br>
+          <span>Abra</span><br>
+          <span>1000 GameTokens</span><br>
+          <img
+            src="assets/sprites/normal/party/abra.png"
+            @click="ui.buyAbra()"
+          >
         </div>
       </div>
     </template>

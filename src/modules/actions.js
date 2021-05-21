@@ -691,6 +691,21 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.renderGameTokens();
             } else alert('You have enough tokens to play');
         },
+        buyAbra: function () {
+            let gametokens = player.currencyAmount.gametokens;
+            const abra = 'Abra';
+            if (player.hasPokemon(abra)) {
+                alert('You already have an Abra, save your tokens');
+            } else if (!player.hasPokemon(abra) && gametokens >= 1000) {
+                player.addPoke(new Poke(abra, 9));
+                gametokens -= 1000;
+                alert('Enjoy your Abra');
+            } else if (gametokens < 1000) {
+                alert('Get more tokens and come back');
+            } else {
+                alert('Idk honestly');
+            }
+        },
         betAllGameTokens: function () {
             const heads = Math.random();
             const totalAmount = player.currencyAmount.gametokens;
