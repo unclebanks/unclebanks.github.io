@@ -292,8 +292,8 @@ const ROUTES: Routes = {
         kroute22: {
             name: 'Route 22',
             pokes: ['Rattata', 'Nidoran F', 'Nidoran M', 'Mankey', 'Spearow'],
-            minLevel: 2,
-            maxLevel: 5,
+            minLevel: 99,
+            maxLevel: 100,
             respawn: 'viridianCity',
         },
         kroute2: {
@@ -6555,6 +6555,57 @@ const ROUTES: Routes = {
                         ['Celebi', 69],
                         ['Meloetta', 69],
                         ['Ho-Oh', 69],
+                    ],
+                },
+            },
+        },
+        freezingMines: {
+            name: 'Freezing Mines',
+            town: true,
+            pokeMart: true,
+            gym: {
+                name: 'Freezing Gym',
+                gymTrainer1: {
+                    name: 'Miner',
+                    poke: [
+                        ['Excadrill', 50],
+                        ['Camerupt', 50],
+                        ['Torterra', 50],
+                        ['Probopass', 50],
+                    ],
+                    win: 'freezingGym1',
+                },
+                gymTrainer2: {
+                    name: 'Ace Trainer',
+                    poke: [
+                        ['Manectric', 52],
+                        ['Altaria', 52],
+                        ['Blaziken', 52],
+                        ['Sceptile', 52],
+                    ],
+                    win: 'freezingGym2',
+                    req: 'freezingGym1',
+                },
+                gymTrainer3: {
+                    name: 'Hiker',
+                    poke: [
+                        ['Weavile', 55],
+                        ['Bronzong', 55],
+                        ['Regice', 57],
+                    ],
+                    win: 'freezingGym3',
+                    req: 'freezingGym2',
+                },
+                gymLeader: {
+                    name: 'ColdOre',
+                    req: 'freezingGym3',
+                    poke: [
+                        ['Boldore', 58],
+                        ['M-Swampert', 57],
+                        ['Staraptor', 57],
+                        ['Swellow', 57],
+                        ['Rayquaza', 56],
+                        ['M-Charizard X', 60],
                     ],
                 },
             },
