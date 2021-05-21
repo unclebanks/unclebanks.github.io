@@ -290,9 +290,16 @@ export default (player, enemy) => {
                         player.statistics.caught++;
                         player.statistics[`${selectedBall}SuccessfulThrows`]++;
                         player.addCatchCoins(gainCatchCoins);
-                        notify(`You caught ${enemy.activePoke().pokeName()}`);
+                        if (player.hasPokemonLike(enemy.activePoke())) {
+                            if (dom.checkConfirmed('#oldCaughtNotification')) {
+                                notify(`You caught ${enemy.activePoke().pokeName()}`);
+                            }
+                        }
                         if (!player.hasPokemonLike(enemy.activePoke())) {
                             player.addPoke(enemy.activePoke());
+                            if (dom.checkConfirmed('#newCaughtNotification')) {
+                                notify(`You caught ${enemy.activePoke().pokeName()}`);
+                            }
                         }
                         player.addPokedex(enemy.activePoke().pokeName(), (enemy.activePoke().shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
                         if (enemy.activePoke().shiny()) {
@@ -304,7 +311,9 @@ export default (player, enemy) => {
                         renderView(dom, enemy, player);
                     }
                     if (!rngHappened) {
-                        notify(`You did not catch ${enemy.activePoke().pokeName()}`);
+                        if (dom.checkConfirmed('#missCatchNotification')) {
+                            notify(`You did not catch ${enemy.activePoke().pokeName()}`);
+                        }
                     }
                 }
             }

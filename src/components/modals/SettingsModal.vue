@@ -30,6 +30,28 @@
 
       <hr>
       <h3 class="subtitle">
+        Notifications
+      </h3>
+      <p>
+        <input
+          id="newCaughtNotification"
+          type="checkbox"
+          class="mr-1"
+        ><label for="newCaughtNotification">New Caught</label><br>
+        <input
+          id="oldCaughtNotification"
+          type="checkbox"
+          class="mr-1"
+        ><label for="oldCaughtNotification">Old Caught</label><br>
+        <input
+          id="missCatchNotification"
+          type="checkbox"
+          class="mr-1"
+        ><label for="missCatchNotification">Miss Catch</label>
+      </p>
+
+      <hr>
+      <h3 class="subtitle">
         Enter Secret Codes
       </h3>
 
