@@ -27,7 +27,12 @@ type ItemSpecialRequirement = {
     need: number,
   }
 
-type SpecialRequirement = ItemSpecialRequirement | PokemonDefeatSpecialRequirement;
+  type EvoStoneSpecialRequirement = {
+      type: 'evoStone',
+      evoStone: string,
+  }
+
+type SpecialRequirement = ItemSpecialRequirement | PokemonDefeatSpecialRequirement | EvoStoneSpecialRequirement;
 
 interface SpecialPokemon {
     requirement: SpecialRequirement,
@@ -354,7 +359,7 @@ const ROUTES: Routes = {
         },
         mtMoon: {
             name: 'Mt. Moon',
-            pokes: ['Zubat', 'Clefairy', 'Paras', 'Geodude', 'Sandshrew'],
+            pokes: ['Zubat', 'Paras', 'Geodude', 'Sandshrew'],
             minLevel: 6,
             maxLevel: 12,
             respawn: 'pewterCity',
@@ -363,6 +368,9 @@ const ROUTES: Routes = {
                     'Boulder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Clefairy'] },
+            ],
         },
         kroute4: {
             name: 'Route 4',
@@ -536,7 +544,7 @@ const ROUTES: Routes = {
         },
         diglettCave: {
             name: 'Diglett Cave',
-            pokes: ['Diglett', 'Dugtrio', 'Bulbasaur', 'Squirtle'],
+            pokes: ['Diglett', 'Dugtrio'],
             minLevel: 15,
             maxLevel: 31,
             respawn: 'vermilionCity',

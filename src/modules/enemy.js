@@ -37,6 +37,8 @@ export default (starter, player, Poke) => {
         switch (req.requirement.type) {
         case 'item':
             return player.unlocked[req.requirement.item];
+        case 'evoStone':
+            return player.evoStones[req.requirement.evoStone];
         case 'pokemonTypeDefeat':
             return player.statistics[req.requirement.statistic] > [req.requirement.need];
         default:
