@@ -304,7 +304,6 @@ export default (player, enemy) => {
                         player.addPokedex(enemy.activePoke().pokeName(), (enemy.activePoke().shiny() ? POKEDEXFLAGS.ownShiny : POKEDEXFLAGS.ownNormal));
                         if (enemy.activePoke().shiny()) {
                             player.statistics.shinyCaught++;
-                            player.unlocked.shinyDex = 1;
                         } else {
                             player.statistics.caught++;
                         }

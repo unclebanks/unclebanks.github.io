@@ -1,7 +1,7 @@
 import display, { renderView } from './display';
 import ROUTES from './routes';
 // eslint-disable-next-line object-curly-newline
-import { $, camelCaseToString, isEmpty, pokeByName } from './utilities';
+import { $, camelCaseToString, isEmpty, pokeById, pokeByIndex, pokeByName } from './utilities';
 import ACHIEVEMENTS from './achievements';
 import { POKEDEXFLAGS, VITAMINS } from './data';
 import { openModal, closeModal } from './modalEvents';
@@ -439,11 +439,24 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         enterCode: function () {
             // eslint-disable-next-line prefer-const
             let secretCode = prompt('Please enter your secret code', 'Secret Code');
+            const rando = Math.round(Math.random() * 898);
             if (secretCode === 'Charmander' && !player.secretCodes.charmander) {
                 player.addPoke(new Poke(pokeByName('Charmander'), 50));
                 player.secretCodes.charmander = true;
+            } else if (secretCode === 'skipToTheEnd') {
+                player.badges['Earth Badge'] = true;
+                player.badges['Rising Badge'] = true;
+            } else if (secretCode === 'ColdOre' && !player.secretCodes.coldOre) {
+                player.addPoke(new Poke(pokeByName('Roggenrola'), 10));
+                player.secretCodes.coldOre = true;
+            } else if (secretCode === 'randoooo' && player.secretCodes.rando != true) {
+                player.addPoke(new Poke(pokeByIndex(rando), 5));
+                player.secretCodes.rando = true;
+            } else if (secretCode === 'SHINYOMG' && player.secretCodes.shiny != true) {
+                player.addPoke(new Poke(pokeByIndex(rando), 5, null, true));
+                player.secretCodes.shiny = true;
             } else {
-                notify('Code Invalid or Already Claimed', { type: 'danger' });
+                alert('Code Invalid or Already Claimed');
             }
         },
         viewBadgeCase: function () {
