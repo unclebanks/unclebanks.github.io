@@ -472,6 +472,30 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 if (player.badges['Earth Badge'] === true) {
                     document.getElementById('earthBadge').style.visibility = 'visible';
                 }
+                if (player.badges['Zephyr Badge'] === true) {
+                    document.getElementById('zephyrBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Hive Badge'] === true) {
+                    document.getElementById('hiveBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Plain Badge'] === true) {
+                    document.getElementById('plainBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Fog Badge'] === true) {
+                    document.getElementById('fogBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Storm Badge'] === true) {
+                    document.getElementById('stormBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Mineral Badge'] === true) {
+                    document.getElementById('mineralBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Glacier Badge'] === true) {
+                    document.getElementById('glacierBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Rising Badge'] === true) {
+                    document.getElementById('risingBadge').style.visibility = 'visible';
+                }
                 openModal(document.getElementById('badgecaseModal'));
                 closeModal(document.getElementById('bagModal'));
             } else {
