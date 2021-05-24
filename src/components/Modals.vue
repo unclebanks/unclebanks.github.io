@@ -15,7 +15,7 @@
   <BrockModal :ui="ui" />
   <GameCornerModal :ui="ui" />
   <PrizeCornerModal :ui="ui" />
-  <RegionSelectModal :ui="ui" />
+  <BagModal :ui="ui" />
   <GymModal :ui="ui" />
   <TownModal />
 </template>
@@ -37,7 +37,7 @@ import BadgeCaseModal from './modals/BadgeCaseModal.vue';
 import BrockModal from './modals/BrockModal.vue';
 import GameCornerModal from './modals/GameCornerModal.vue';
 import PrizeCornerModal from './modals/PrizeCornerModal.vue';
-import RegionSelectModal from './modals/RegionSelectModal.vue';
+import BagModal from './modals/BagModal.vue';
 import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
 
@@ -59,7 +59,7 @@ export default {
         BrockModal,
         GameCornerModal,
         PrizeCornerModal,
-        RegionSelectModal,
+        BagModal,
         GymModal,
         TownModal,
     },

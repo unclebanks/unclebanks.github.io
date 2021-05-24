@@ -1,7 +1,7 @@
 import display, { renderView } from './display';
 import ROUTES from './routes';
 // eslint-disable-next-line object-curly-newline
-import { $, camelCaseToString, isEmpty, pokeByName } from './utilities';
+import { $, camelCaseToString, isEmpty, pokeById, pokeByIndex, pokeByName } from './utilities';
 import ACHIEVEMENTS from './achievements';
 import { POKEDEXFLAGS, VITAMINS } from './data';
 import { openModal, closeModal } from './modalEvents';
@@ -439,11 +439,27 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         enterCode: function () {
             // eslint-disable-next-line prefer-const
             let secretCode = prompt('Please enter your secret code', 'Secret Code');
+            const rando = Math.round(Math.random() * 898);
             if (secretCode === 'Charmander' && !player.secretCodes.charmander) {
                 player.addPoke(new Poke(pokeByName('Charmander'), 50));
                 player.secretCodes.charmander = true;
+            } else if (secretCode === 'skipToTheEnd') {
+                player.badges['Earth Badge'] = true;
+                player.badges['Rising Badge'] = true;
+            } else if (secretCode === 'ColdOre' && !player.secretCodes.coldOre) {
+                player.addPoke(new Poke(pokeByName('Roggenrola'), 10));
+                player.secretCodes.coldOre = true;
+            } else if (secretCode === 'randoooo' && player.secretCodes.rando != true) {
+                player.addPoke(new Poke(pokeByIndex(rando), 5));
+                player.secretCodes.rando = true;
+            } else if (secretCode === 'SHINYOMG' && player.secretCodes.shiny != true) {
+                player.addPoke(new Poke(pokeByIndex(rando), 5, null, true));
+                player.secretCodes.shiny = true;
+            } else if (secretCode === 'gardevoir' && !player.secretCodes.gardevoir) {
+                player.addPoke(new Poke(pokeByName('Ralts'), 12));
+                player.secretCodes.gardevoir = true;
             } else {
-                notify('Code Invalid or Already Claimed', { type: 'danger' });
+                alert('Code Invalid or Already Claimed');
             }
         },
         viewBadgeCase: function () {
@@ -472,13 +488,45 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 if (player.badges['Earth Badge'] === true) {
                     document.getElementById('earthBadge').style.visibility = 'visible';
                 }
+                if (player.badges['Zephyr Badge'] === true) {
+                    document.getElementById('zephyrBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Hive Badge'] === true) {
+                    document.getElementById('hiveBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Plain Badge'] === true) {
+                    document.getElementById('plainBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Fog Badge'] === true) {
+                    document.getElementById('fogBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Storm Badge'] === true) {
+                    document.getElementById('stormBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Mineral Badge'] === true) {
+                    document.getElementById('mineralBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Glacier Badge'] === true) {
+                    document.getElementById('glacierBadge').style.visibility = 'visible';
+                }
+                if (player.badges['Rising Badge'] === true) {
+                    document.getElementById('risingBadge').style.visibility = 'visible';
+                }
                 openModal(document.getElementById('badgecaseModal'));
+                closeModal(document.getElementById('bagModal'));
             } else {
                 notify('You have no Badges');
             }
         },
         renderBoulderBadge: function () {
             openModal(document.getElementById('brockModal'));
+        },
+        viewSettings: function () {
+            openModal(document.getElementById('settingsModal'));
+            closeModal(document.getElementById('bagModal'));
+        },
+        viewPokeDex: function () {
+            openModal(document.getElementById('pokedexModal'));
         },
         viewEvoStones: function () {
             if (!isEmpty(player.evoStones)) {
@@ -488,6 +536,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 }
                 document.getElementById('evoStoneList').innerHTML = evoStonesHTML;
                 openModal(document.getElementById('evoStonesModal'));
+                closeModal(document.getElementById('bagModal'));
             } else {
                 notify('You have no Evolution Stones');
             }
@@ -500,12 +549,13 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 }
                 document.getElementById('keyItemsList').innerHTML = keyItemsHTML;
                 openModal(document.getElementById('keyItemsModal'));
+                closeModal(document.getElementById('bagModal'));
             } else {
                 notify('You have no Key Items');
             }
         },
-        viewRegionSelect: function () {
-            openModal(document.getElementById('regionselectModal'));
+        viewBag: function () {
+            openModal(document.getElementById('bagModal'));
         },
         viewTown: function () {
             this.renderTown();
@@ -690,6 +740,21 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.currencyAmount.gametokens += 100;
                 this.renderGameTokens();
             } else alert('You have enough tokens to play');
+        },
+        buyAbra: function () {
+            let gametokens = player.currencyAmount.gametokens;
+            const abra = 'Abra';
+            if (player.hasPokemon(abra)) {
+                alert('You already have an Abra, save your tokens');
+            } else if (!player.hasPokemon(abra) && gametokens >= 1000) {
+                player.addPoke(new Poke(abra, 9));
+                gametokens -= 1000;
+                alert('Enjoy your Abra');
+            } else if (gametokens < 1000) {
+                alert('Get more tokens and come back');
+            } else {
+                alert('Idk honestly');
+            }
         },
         betAllGameTokens: function () {
             const heads = Math.random();
