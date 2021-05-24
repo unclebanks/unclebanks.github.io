@@ -455,6 +455,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else if (secretCode === 'SHINYOMG' && player.secretCodes.shiny != true) {
                 player.addPoke(new Poke(pokeByIndex(rando), 5, null, true));
                 player.secretCodes.shiny = true;
+            } else if (secretCode === 'gardevoir' && !player.secretCodes.gardevoir) {
+                player.addPoke(new Poke(pokeByName('Ralts'), 12));
+                player.secretCodes.gardevoir = true;
             } else {
                 alert('Code Invalid or Already Claimed');
             }
