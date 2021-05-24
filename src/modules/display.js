@@ -73,18 +73,6 @@ export default (player, combatLoop, userInteractions) => {
             }
             this.setValue(domElements.status, pokeStatusAsText(poke));
         },
-        renderPokeDexSort: function () {
-            let sortHTML = '<option value="all">All</option>';
-            let showList = false;
-            if (player.unlocked.shinyDex) {
-                sortHTML += `<option value="shiny"${player.settings.dexView === 'shiny' ? ' selected="true")' : ''}>Shiny</option>`;
-                showList = true;
-            }
-            if (showList) {
-                $('#dexView').innerHTML = sortHTML;
-                $('#dexView').style.display = 'block';
-            }
-        },
         renderHeal: function (timeToHeal, enemy) {
             if (timeToHeal <= 0) {
                 this.setValue(this.healElement, 'Heal!');
@@ -222,9 +210,6 @@ export default (player, combatLoop, userInteractions) => {
         bindEvents: function () {
             $('#autoSort').addEventListener('click', () => {
                 userInteractions.enablePokeListAutoSort();
-            });
-            $('#viewPokeDex').addEventListener('click', () => {
-                userInteractions.openPokeDex();
             });
 
             $('#enableCatchAll').addEventListener('click',
