@@ -473,12 +473,20 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                     document.getElementById('earthBadge').style.visibility = 'visible';
                 }
                 openModal(document.getElementById('badgecaseModal'));
+                closeModal(document.getElementById('bagModal'));
             } else {
                 notify('You have no Badges');
             }
         },
         renderBoulderBadge: function () {
             openModal(document.getElementById('brockModal'));
+        },
+        viewSettings: function () {
+            openModal(document.getElementById('settingsModal'));
+            closeModal(document.getElementById('bagModal'));
+        },
+        viewPokeDex: function () {
+            openModal(document.getElementById('pokedexModal'));
         },
         viewEvoStones: function () {
             if (!isEmpty(player.evoStones)) {
@@ -488,6 +496,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 }
                 document.getElementById('evoStoneList').innerHTML = evoStonesHTML;
                 openModal(document.getElementById('evoStonesModal'));
+                closeModal(document.getElementById('bagModal'));
             } else {
                 notify('You have no Evolution Stones');
             }
@@ -500,12 +509,13 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 }
                 document.getElementById('keyItemsList').innerHTML = keyItemsHTML;
                 openModal(document.getElementById('keyItemsModal'));
+                closeModal(document.getElementById('bagModal'));
             } else {
                 notify('You have no Key Items');
             }
         },
-        viewRegionSelect: function () {
-            openModal(document.getElementById('regionselectModal'));
+        viewBag: function () {
+            openModal(document.getElementById('bagModal'));
         },
         viewTown: function () {
             this.renderTown();

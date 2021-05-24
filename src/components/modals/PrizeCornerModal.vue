@@ -18,13 +18,27 @@
             class="span"
           >0</span><br>
           <hr>
-          <span>Pokemon</span><br>
-          <span>Abra</span><br>
-          <span>1000 GameTokens</span><br>
-          <img
-            src="assets/sprites/normal/party/abra.png"
-            @click="ui.buyAbra()"
-          >
+          <div id="pokemonRewards">
+            <span>Pokemon</span><br>
+            <img
+              src="assets/sprites/normal/party/abra.png"
+              @click="ui.buyAbra()"
+            ><br>
+            <span>Abra</span><br>
+            <span>1000</span><br>
+            <img
+              src="assets/sprites/normal/party/dratini.png"
+              @click="ui.buyDratini()"
+            ><br>
+            <span>Dratini</span><br>
+            <span>4600</span><br>
+            <img
+              src="assets/sprites/normal/party/porygon.png"
+              @click="ui.buyPorygon()"
+            ><br>
+            <span>Porygon</span><br>
+            <span>9999</span><br>
+          </div>
         </div>
       </div>
     </template>
