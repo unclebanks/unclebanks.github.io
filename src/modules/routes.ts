@@ -145,6 +145,9 @@ interface NPC {
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Professor extends NPC {}
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface Story extends NPC {}
+
 interface Town {
     name: string,
     town: true,
@@ -152,6 +155,7 @@ interface Town {
     gym?: Gym,
     pokeMart?: true,
     npc?: NPC,
+    story? : Story,
     _unlock?: UnlockData,
 }
 
@@ -228,7 +232,7 @@ const ROUTES: Routes = {
         palletTown: {
             name: 'Pallet Town',
             town: true,
-            npc: {
+            prof: {
                 name: 'Prof. Oak',
                 event: 'profOak1',
             },
@@ -247,6 +251,9 @@ const ROUTES: Routes = {
             name: 'Viridian City',
             town: true,
             pokeMart: true,
+            npc: {
+                name: 'Pokemart Attendant',
+            },
             gym: {
                 name: 'Viridian Gym',
                 gymTrainer1: {
@@ -396,6 +403,10 @@ const ROUTES: Routes = {
                     ['Starmie', 21],
                 ],
             },
+            story: {
+                name: 'Burgled House',
+                event: 'rocketThiefCerulean',
+            },
             gym: {
                 name: 'Cerulean Gym',
                 gymTrainer1: {
@@ -496,6 +507,12 @@ const ROUTES: Routes = {
             name: 'Vermilion City',
             town: true,
             pokeMart: true,
+            npc: {
+                name: 'Vermilion Fishing Guru',
+            },
+            story: {
+                name: 'S.S. Anne',
+            },
             gym: {
                 name: 'Vermilion Gym',
                 gymTrainer1: {

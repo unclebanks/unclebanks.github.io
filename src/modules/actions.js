@@ -565,11 +565,14 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const pokeMart = $('#pokeMartButton');
             const npc = $('#npcButton');
             const prof = $('#profButton');
+            const story = $('#storyButton');
             const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             pokeMart.style.display = (route.pokeMart) ? '' : 'none';
             pokeMart.innerHTML = (route.pokeMart) ? 'PokeMart' : '';
             npc.style.display = (route.npc) ? '' : 'none';
             npc.innerHTML = (route.npc) ? route.npc.name : '';
+            story.style.display = (route.story) ? '' : 'none';
+            story.innerHTML = (route.story) ? route.story.name : '';
             prof.style.display = (route.prof) ? '' : 'none';
             prof.innerHTML = (route.prof) ? route.prof.name : '';
         },
@@ -645,24 +648,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.updateVitaminModal();
             }
         },
-        checkProfBattle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (!player.wins[routeData.prof.win]) {
-                this.profBattle();
-            }
-            if (player.wins[routeData.prof.win] && !player.wins[routeData.prof1.win]) {
-                this.prof1Battle();
-            }
-            if (player.wins[routeData.prof.win] && player.wins[routeData.prof1.win] && !player.wins[routeData.prof2.win]) {
-                this.prof2Battle();
-            }
-            if (player.wins[routeData.prof.win] && player.wins[routeData.prof1.win] && player.wins[routeData.prof2.win] && !player.wins[routeData.prof3.win]) {
-                this.prof3Battle();
-            }
-            if (player.wins[routeData.prof.win] && player.wins[routeData.prof1.win] && player.wins[routeData.prof2.win] && player.wins[routeData.prof3.win]) {
-                this.prof3ABattle();
-            }
-        },
         checkGymLeaderBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (!player.wins[routeData.gymLeader.win]) {
@@ -689,9 +674,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         checkNPC: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.npc.name === 'Prof. Oak') {
-                this.oakLab();
-            }
             if (routeData.npc.name === 'Pewter Museum') {
                 this.pewterMuseumEvent();
             }
@@ -715,6 +697,18 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
             if (this.Freebie) {
                 alert('GoodJob!');
+            }
+        },
+        checkProf: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.prof.name === 'Prof. Oak') {
+                this.oakLab();
+            }
+        },
+        checkStory: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.story.name === 'Burgled House') {
+                alert('Good Job');
             }
         },
         renderGameTokens: function () {
@@ -815,14 +809,14 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         pewterMuseumEvent: function () {
             if (player.events.pewterMuseum1 === true) {
-                notify('Did you take that fossil to Cinnabar Island?');
+                alert('Did you take that fossil to Cinnabar Island?');
             }
             if (!player.badges['Boulder Badge']) {
-                notify('Why not beat Brock and come back?');
+                alert('Why not beat Brock and come back?');
             }
             if (player.badges['Boulder Badge'] === true && !player.events.pewterMuseum1) {
                 player.unlocked.oldAmber = true;
-                notify('Congrats on the win. Take this Old Amber as a bonus');
+                alert('Congrats on the win. Take this Old Amber as a bonus');
                 player.events.pewterMuseum1 = true;
             }
         },

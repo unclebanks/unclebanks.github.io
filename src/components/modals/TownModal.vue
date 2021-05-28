@@ -16,7 +16,7 @@
         </button><br>
         <button
           id="profButton"
-          onclick="userInteractions.checkNPC()"
+          onclick="userInteractions.checkProf()"
           class="button"
         >
           PROF
@@ -27,6 +27,13 @@
           class="button"
         >
           NPC
+        </button><br>
+        <button
+          id="storyButton"
+          onclick="userInteractions.checkStory()"
+          class="button"
+        >
+          STORY
         </button><br>
       </div>
     </template>
