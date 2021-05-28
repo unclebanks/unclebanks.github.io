@@ -18,6 +18,7 @@
   <BagModal :ui="ui" />
   <GymModal :ui="ui" />
   <TownModal />
+  <OakLabModal />
 </template>
 
 <script>
@@ -40,6 +41,7 @@ import PrizeCornerModal from './modals/PrizeCornerModal.vue';
 import BagModal from './modals/BagModal.vue';
 import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
+import OakLabModal from './modals/OakLabModal';
 
 export default {
     components: {
@@ -62,6 +64,7 @@ export default {
         BagModal,
         GymModal,
         TownModal,
+        OakLabModal,
     },
 
     props: {

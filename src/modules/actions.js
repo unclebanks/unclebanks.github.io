@@ -690,7 +690,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         checkNPC: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (routeData.npc.name === 'Prof. Oak') {
-                this.oakEvent();
+                this.oakLab();
             }
             if (routeData.npc.name === 'Pewter Museum') {
                 this.pewterMuseumEvent();
@@ -786,8 +786,32 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.renderGameTokens();
             }
         },
-        oakEvent: function () {
-            notify('How is your Pokedex Coming along?');
+        oakLab: function () {
+            openModal(document.getElementById('oaklabModal'));
+        },
+        oakAide1: function () {
+            if (player.events.oakAide1 != true) {
+                alert('I am just a simple aide. No need to talk to me again');
+                player.events.oakAide1 = true;
+            } else if (player.events.oakAide1 === true && !player.events.oakAide1A) {
+                alert('No, honestly, I have work to do. Please leave me alone');
+                player.events.oakAide1A = true;
+            } else if (player.events.oakAide1A && !player.events.oakAide1B) {
+                alert('Please just take the Pokeballs and leave me alone');
+                player.events.oakAide1B = true;
+                player.ballsAmount.pokeball += 10;
+                dom.renderBalls();
+            } else if (player.events.oakAide1B === true) {
+                alert('Fine, start over... Leave me alone and check your Pokeballs');
+                player.ballsAmount.pokeball = 0;
+                dom.renderBalls();
+            }
+        },
+        oakAide2: function () {
+            alert('Have you talked to the other aide? They get a little overwhelmed sometimes, I would be careful if I were you.');
+        },
+        oakLabOak: function () {
+            alert('How is your POKEDEX coming along?');
         },
         pewterMuseumEvent: function () {
             if (player.events.pewterMuseum1 === true) {
