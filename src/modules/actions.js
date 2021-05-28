@@ -673,27 +673,30 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         checkNPC: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.npc.name === 'Pewter Museum') {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].npc.name;
+            if (routeData === 'Pewter Museum') {
                 this.pewterMuseumEvent();
             }
-            if (routeData.npc.name === 'Nugget 5') {
+            if (routeData === 'Nugget 5') {
                 this.nuggetBridgeEvent();
             }
-            if (routeData.npc.name === 'Bill') {
+            if (routeData === 'Bill') {
                 this.billEvent();
             }
-            if (routeData.npc.name === 'Cinnabar Lab') {
+            if (routeData === 'Cinnabar Lab') {
                 this.cinnabarLabEvent();
             }
-            if (routeData.npc.name === 'Steven\'s Home') {
+            if (routeData === 'Steven\'s Home') {
                 this.beldumEvent();
             }
-            if (routeData.npc.name === 'Shrine\'s Old Man') {
+            if (routeData === 'Shrine\'s Old Man') {
                 this.abundantOldManEvent();
             }
-            if (routeData.npc.name === 'Game Corner') {
+            if (routeData === 'Game Corner') {
                 this.gameCorner();
+            }
+            if (routeData === 'Vermilion Fishing Guru') {
+                this.vFisherman();
             }
             if (this.Freebie) {
                 alert('GoodJob!');
@@ -701,7 +704,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         checkProf: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.prof.name === 'Prof. Oak') {
+            if (routeData.prof.name === 'Prof. Oak\'s Lab') {
                 this.oakLab();
             }
         },
@@ -710,6 +713,13 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.story.name === 'Burgled House') {
                 alert('Good Job');
             }
+        },
+        vFisherman: function () {
+            if (!player.unlocked.kantoOldRod) {
+                alert('You seem like a good kid. Take this Fishing Rod.');
+                player.unlocked.kantoOldRod = 1;
+                dom.renderRouteList();
+            } else { alert('How do you like fishing?'); }
         },
         renderGameTokens: function () {
             const gameTokensElement = $('#gameTokens');

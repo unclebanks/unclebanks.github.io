@@ -233,7 +233,7 @@ const ROUTES: Routes = {
             name: 'Pallet Town',
             town: true,
             prof: {
-                name: 'Prof. Oak',
+                name: 'Prof. Oak\'s Lab',
                 event: 'profOak1',
             },
         },
