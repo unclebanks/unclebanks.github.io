@@ -19,6 +19,9 @@
   <GymModal :ui="ui" />
   <TownModal />
   <OakLabModal />
+  <palletTownModal />
+  <viridianCityModal />
+  <pewterCityModal />
 </template>
 
 <script>
@@ -42,6 +45,9 @@ import BagModal from './modals/BagModal.vue';
 import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
 import OakLabModal from './modals/OakLabModal';
+import palletTownModal from './modals/palletTownModal';
+import viridianCityModal from './modals/viridianCityModal';
+import pewterCityModal from './modals/pewterCityModal';
 
 export default {
     components: {
@@ -65,6 +71,9 @@ export default {
         GymModal,
         TownModal,
         OakLabModal,
+        palletTownModal,
+        viridianCityModal,
+        pewterCityModal,
     },
 
     props: {

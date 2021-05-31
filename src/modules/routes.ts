@@ -252,7 +252,7 @@ const ROUTES: Routes = {
             town: true,
             pokeMart: true,
             npc: {
-                name: 'Pokemart Attendant',
+                name: 'PokeMart Attendant',
             },
             gym: {
                 name: 'Viridian Gym',

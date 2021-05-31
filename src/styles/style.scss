@@ -530,6 +530,48 @@ progress.expBar {
     min-height: fit-content;
 }
 
+#palletTownModalBox {
+    background-image: url('../assets/backgrounds/palletTownNoBuildings.png');
+    background-size: 100%;
+    height: 481px;
+}
+
+#playerHouseButtonKanto {
+    background-image: url('../assets/backgrounds/kantoHouse.png');
+    background-size: cover;
+    height: 96px;
+    width: 100px;
+}
+
+#rivalHouseButtonKanto {
+    background-image: url('../assets/backgrounds/kantoHouse.png');
+    background-size: cover;
+    height: 96px;
+    width: 100px;
+}
+
+#oakLabButtonKanto {
+    background-image: url('../assets/backgrounds/kantoOakLab.png');
+    background-size: cover;
+    height: 106px;
+    width: 160px;
+}
+
+#oaklabModalBox {
+    background-image: url('../assets/backgrounds/oakLab.png');
+    background-size: cover;
+}
+
+#viridianCityModalBox {
+    background-image: url('../assets/backgrounds/viridianCityNoBuildings.png');
+    background-size: cover;
+}
+
+#pewterCityModalBox {
+    background-image: url('../assets/backgrounds/pewterCityNoBuildings.png');
+    background-size: cover;
+}
+
 .townBuilding {
     width: 90%;
     float: left;
