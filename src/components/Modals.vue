@@ -22,6 +22,13 @@
   <palletTownModal />
   <viridianCityModal />
   <pewterCityModal />
+  <vermilionCityModal />
+  <ceruleanCityModal />
+  <lavenderTownModal />
+  <celadonCityModal />
+  <fuchsiaCityModal />
+  <saffronCityModal />
+  <cinnabarIslandModal />
 </template>
 
 <script>
@@ -45,9 +52,16 @@ import BagModal from './modals/BagModal.vue';
 import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
 import OakLabModal from './modals/OakLabModal';
-import palletTownModal from './modals/palletTownModal';
-import viridianCityModal from './modals/viridianCityModal';
-import pewterCityModal from './modals/pewterCityModal';
+import palletTownModal from './modals/towns/palletTownModal';
+import viridianCityModal from './modals/towns/viridianCityModal';
+import pewterCityModal from './modals/towns/pewterCityModal';
+import vermilionCityModal from './modals/towns/vermilionCityModal';
+import ceruleanCityModal from './modals/towns/ceruleanCityModal';
+import lavenderTownModal from './modals/towns/lavenderTownModal';
+import celadonCityModal from './modals/towns/celadonCityModal';
+import fuchsiaCityModal from './modals/towns/fuchsiaCityModal';
+import saffronCityModal from './modals/towns/saffronCityModal';
+import cinnabarIslandModal from './modals/towns/cinnabarIslandModal';
 
 export default {
     components: {
@@ -74,6 +88,13 @@ export default {
         palletTownModal,
         viridianCityModal,
         pewterCityModal,
+        vermilionCityModal,
+        ceruleanCityModal,
+        lavenderTownModal,
+        celadonCityModal,
+        fuchsiaCityModal,
+        saffronCityModal,
+        cinnabarIslandModal,
     },
 
     props: {

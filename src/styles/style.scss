@@ -531,45 +531,39 @@ progress.expBar {
 }
 
 #palletTownModalBox {
-    background-image: url('../assets/backgrounds/palletTownNoBuildings.png');
-    background-size: 100%;
+    background-image: url('../assets/backgrounds/palletTown.png');
+    background-size: cover;
     height: 481px;
 }
 
-#playerHouseButtonKanto {
-    background-image: url('../assets/backgrounds/kantoHouse.png');
-    background-size: cover;
-    height: 96px;
-    width: 100px;
-}
-
-#rivalHouseButtonKanto {
-    background-image: url('../assets/backgrounds/kantoHouse.png');
-    background-size: cover;
-    height: 96px;
-    width: 100px;
-}
-
-#oakLabButtonKanto {
-    background-image: url('../assets/backgrounds/kantoOakLab.png');
-    background-size: cover;
-    height: 106px;
-    width: 160px;
+#palletTownModalBox .button {
+    background-color: rgb(58, 58, 58);
 }
 
 #oaklabModalBox {
-    background-image: url('../assets/backgrounds/oakLab.png');
-    background-size: cover;
+    background-image: url('../assets/backgrounds/oakLabKanto.png');
+    background-size: contain;
+    height: 481px;
+    width: 460px;
+}
+
+#oaklabModalBox .button {
+    background-color: rgb(58, 58, 58);
 }
 
 #viridianCityModalBox {
-    background-image: url('../assets/backgrounds/viridianCityNoBuildings.png');
+    background-image: url('../assets/backgrounds/viridianCity.png');
     background-size: cover;
 }
 
 #pewterCityModalBox {
-    background-image: url('../assets/backgrounds/pewterCityNoBuildings.png');
+    background-image: url('../assets/backgrounds/pewterCity.png');
     background-size: cover;
+    height: 481px;
+}
+
+#pewterCityModalBox .button {
+    background-color: rgb(58, 58, 58);
 }
 
 .townBuilding {

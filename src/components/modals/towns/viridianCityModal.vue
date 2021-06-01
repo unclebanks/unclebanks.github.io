@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import CardModal from '../common/CardModal.vue';
+import CardModal from '../../common/CardModal.vue';
 
 export default {
     components: {

@@ -1,34 +1,40 @@
 <template>
   <CardModal
-    name="pallettown"
-    title="Pallet Town"
+    name="cinnabarisland"
+    title="Cinnabar Island"
   >
     <template #body>
       <div
-        id="palletTownModalBox"
+        id="cinnabarIslandModalBox"
       >
         <button
           id="playerHouseButtonKanto"
           onclick="userInteractions.playerHouse()"
           class="button"
-        /><br>
+        >
+          Red's House
+        </button><br>
         <button
           id="rivalHouseButtonKanto"
           onclick="userInteractions.rivalHouseKanto()"
           class="button"
-        /><br>
+        >
+          Blue's House
+        </button><br>
         <button
           id="oakLabButtonKanto"
           onclick="userInteractions.oakLab()"
           class="button"
-        /><br>
+        >
+          Prof. Oak's Lab
+        </button><br>
       </div>
     </template>
   </CardModal>
 </template>
 
 <script>
-import CardModal from '../common/CardModal.vue';
+import CardModal from '../../common/CardModal.vue';
 
 export default {
     components: {
