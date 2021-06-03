@@ -8,30 +8,30 @@ EXP_TABLE['Fast'] = [1, 2, 6, 21, 51, 100, 172, 274, 409, 583, 800, 1064, 1382, 
 
 export type PokemonGrowthRate = keyof typeof EXP_TABLE;
 
-export const COLORS: Record<string, Record<string, string>> = {};
-COLORS['route'] = {};
-COLORS['route']['locked'] = 'rgb(255, 0, 0)';
-COLORS['route']['unlocked'] = 'rgb(255, 255, 255)';
-COLORS['route']['current'] = 'rgb(139, 69, 19)';
-
-export const POKEDEXFLAGS: Record<string, number> = {};
-POKEDEXFLAGS['unseen'] = 0;
-POKEDEXFLAGS['seenNormal'] = 1;
-POKEDEXFLAGS['seenShiny'] = 2;
-POKEDEXFLAGS['releasedNormal'] = 3; // from releasing into wild
-POKEDEXFLAGS['releasedShiny'] = 4; // from releasing into wild
-POKEDEXFLAGS['ownedNormal'] = 5; // from evolution
-POKEDEXFLAGS['ownNormal'] = 6; // in current rosta
-POKEDEXFLAGS['ownedShiny'] = 7; // from evolution
-POKEDEXFLAGS['ownShiny'] = 8; // in current rosta
+export enum COLORS  {
+    'locked' = 'rgb(255, 0, 0)',
+    'unlocked' = 'rgb(255, 255, 255)',
+    'current' = 'rgb(139, 69, 19)',
+}
+export enum POKEDEXFLAGS  {
+    'unseen' = 0,
+    'seenNormal',
+    'seenShiny',
+    'releasedNormal',
+    'releasedShiny',
+    'ownedNormal',
+    'ownNormal',
+    'ownedShiny',
+    'ownShiny',
+}
 
 export type PokedexFlagName = keyof typeof POKEDEXFLAGS;
 
-export const BALLRNG: Record<string, number> = {
-    pokeball: 1,
-    greatball: 1.5,
-    ultraball: 2,
-    masterball: 100,
+export enum BALLRNG {
+    pokeball =  1,
+    greatball = 1.5,
+    ultraball = 2,
+    masterball = 100,
 };
 
 export type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
@@ -43,7 +43,7 @@ interface VitaminData {
     stat: PokemonStatType,
 }
 
-export const VITAMINS: Record<string, VitaminData> = {
+export const VITAMIN: Record<string, VitaminData> = {
     hpUp: {
         display: 'HP Up',
         stat: 'hp',

@@ -3,17 +3,18 @@ import { PokemonNameType } from './db';
 interface UnlockData {
     badges: Record<string, boolean>,
 }
-
-interface GymLeader {
+interface Trainer {
     name: string,
     poke: Array<[PokemonNameType, number]>,
-    badge?: string,
     win?: string,
     reward?: string,
     event?: string,
+    req?: string,
+}
+interface GymLeader extends Trainer {
+    badge?: string,
     megaStone?: string,
     megaStones?: string[],
-    req?: string,
 }
 
 type ItemSpecialRequirement = {
@@ -39,97 +40,19 @@ interface SpecialPokemon {
     pokemon: PokemonNameType[],
   }
 
-interface GymTrainer1 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    win?: string,
-    reward?: string,
-    event?: string,
-    req?: string,
-}
-
-interface GymTrainer2 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-}
-
-interface GymTrainer3 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-}
-
-interface EliteFour1 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    win?: string,
-    reward?: string,
-    event?: string,
+interface EliteFour extends Trainer {
     megaStone?: string,
     megaStones?: string[],
 }
 
-interface EliteFour2 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-    megaStone?: string,
-    megaStones?: string[],
-}
 
-interface EliteFour3 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-    megaStone?: string,
-    megaStones?: string[],
-}
-
-interface EliteFour4 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-    megaStone?: string,
-    megaStones?: string[],
-}
-
-interface EliteFourChampion {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-    megaStone?: string,
-    megaStones?: string[],
-}
+interface EliteFourChampion extends EliteFour {}
 
 interface Gym {
     name: string,
     gymLeader?: GymLeader,
-    gymTrainer1?: GymTrainer1,
-    gymTrainer2?: GymTrainer2,
-    gymTrainer3?: GymTrainer3,
-    eliteFour1?: EliteFour1,
-    eliteFour2?: EliteFour2,
-    eliteFour3?: EliteFour3,
-    eliteFour4?: EliteFour4,
+    gymTrainer?: Trainer[],
+    eliteFour?: EliteFour[]
     eliteFourChampion?: EliteFourChampion,
 }
 
@@ -256,7 +179,8 @@ const ROUTES: Routes = {
             },
             gym: {
                 name: 'Viridian Gym',
-                gymTrainer1: {
+                gymTrainer: [
+                {
                     name: 'Lass',
                     poke: [
                         ['Bellsprout', 21],
@@ -265,7 +189,7 @@ const ROUTES: Routes = {
                     win: 'viridianGym1',
                     req: 'volcano1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Beauty',
                     poke: [
                         ['Oddish', 21],
@@ -276,7 +200,7 @@ const ROUTES: Routes = {
                     win: 'viridianGym2',
                     req: 'viridianGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Cooltrainer',
                     poke: [
                         ['Weepinbell', 24],
@@ -286,6 +210,7 @@ const ROUTES: Routes = {
                     win: 'viridianGym3',
                     req: 'viridianGym2',
                 },
+            ],
                 gymLeader: {
                     name: 'Giovanni',
                     badge: 'Earth Badge',
@@ -328,7 +253,8 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Pewter Gym',
-                gymTrainer1: {
+                gymTrainer: [
+                {
                     name: 'Jr. Trainer',
                     poke: [
                         ['Diglett', 11],
@@ -336,6 +262,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'pewterGym1',
                 },
+                ],
                 gymLeader: {
                     name: 'Brock',
                     badge: 'Boulder Badge',
@@ -409,7 +336,8 @@ const ROUTES: Routes = {
             },
             gym: {
                 name: 'Cerulean Gym',
-                gymTrainer1: {
+                gymTrainer: [
+                {
                     name: 'Swimmer',
                     poke: [
                         ['Horsea', 16],
@@ -417,7 +345,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'ceruleanGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Jr. Trainer',
                     poke: [
                         ['Goldeen', 19],
@@ -425,6 +353,7 @@ const ROUTES: Routes = {
                     req: 'ceruleanGym1',
                     win: 'ceruleanGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Misty',
                     badge: 'Cascade Badge',
@@ -515,32 +444,34 @@ const ROUTES: Routes = {
             },
             gym: {
                 name: 'Vermilion Gym',
-                gymTrainer1: {
-                    name: 'Sailor',
-                    poke: [
-                        ['Pikachu', 21],
-                        ['Pikachu', 21],
-                    ],
-                    win: 'vermilionGym1',
-                },
-                gymTrainer2: {
-                    name: 'Rocker',
-                    poke: [
-                        ['Voltorb', 20],
-                        ['Magnemite', 20],
-                        ['Voltorb', 20],
-                    ],
-                    win: 'vermilionGym2',
-                    req: 'vermilionGym1',
-                },
-                gymTrainer3: {
-                    name: 'Gentleman',
-                    poke: [
-                        ['Pikachu', 23],
-                    ],
-                    win: 'vermilionGym3',
-                    req: 'vermilionGym2',
-                },
+                gymTrainer: [
+                    {
+                        name: 'Sailor',
+                        poke: [
+                            ['Pikachu', 21],
+                            ['Pikachu', 21],
+                        ],
+                        win: 'vermilionGym1',
+                    },
+                    {
+                        name: 'Rocker',
+                        poke: [
+                            ['Voltorb', 20],
+                            ['Magnemite', 20],
+                            ['Voltorb', 20],
+                        ],
+                        win: 'vermilionGym2',
+                        req: 'vermilionGym1',
+                    },
+                    {
+                        name: 'Gentleman',
+                        poke: [
+                            ['Pikachu', 23],
+                        ],
+                        win: 'vermilionGym3',
+                        req: 'vermilionGym2',
+                    },
+                ],
                 gymLeader: {
                     name: 'Lt. Surge',
                     badge: 'Thunder Badge',
@@ -683,35 +614,37 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Celadon Gym',
-                gymTrainer1: {
-                    name: 'Lass',
-                    poke: [
-                        ['Bellsprout', 21],
-                        ['Weepinbell', 23],
-                    ],
-                    win: 'celadonGym1',
-                },
-                gymTrainer2: {
-                    name: 'Beauty',
-                    poke: [
-                        ['Oddish', 21],
-                        ['Bellsprout', 21],
-                        ['Oddish', 21],
-                        ['Bellsprout', 21],
-                    ],
-                    win: 'celadonGym2',
-                    req: 'celadonGym1',
-                },
-                gymTrainer3: {
-                    name: 'Cooltrainer',
-                    poke: [
-                        ['Weepinbell', 24],
-                        ['Gloom', 24],
-                        ['Ivysaur', 24],
-                    ],
-                    win: 'celadonGym3',
-                    req: 'celadonGym2',
-                },
+                gymTrainer: [
+                    {
+                        name: 'Lass',
+                        poke: [
+                            ['Bellsprout', 21],
+                            ['Weepinbell', 23],
+                        ],
+                        win: 'celadonGym1',
+                    },
+                    {
+                        name: 'Beauty',
+                        poke: [
+                            ['Oddish', 21],
+                            ['Bellsprout', 21],
+                            ['Oddish', 21],
+                            ['Bellsprout', 21],
+                        ],
+                        win: 'celadonGym2',
+                        req: 'celadonGym1',
+                    },
+                    {
+                        name: 'Cooltrainer',
+                        poke: [
+                            ['Weepinbell', 24],
+                            ['Gloom', 24],
+                            ['Ivysaur', 24],
+                        ],
+                        win: 'celadonGym3',
+                        req: 'celadonGym2',
+                    },
+                ],
                 gymLeader: {
                     name: 'Erika',
                     badge: 'Rainbow Badge',
@@ -740,7 +673,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Saffron Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Psychic',
                     poke: [
                         ['Mr. Mime', 34],
@@ -748,7 +681,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'saffronGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Psychic',
                     poke: [
                         ['Kadabra', 34],
@@ -759,6 +692,7 @@ const ROUTES: Routes = {
                     win: 'saffronGym2',
                     req: 'saffronGym1',
                 },
+                ],
                 gymLeader: {
                     name: 'Sabrina',
                     badge: 'Marsh Badge',
@@ -832,7 +766,8 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Fuchsia Gym',
-                gymTrainer1: {
+                gymTrainer: [
+                {
                     name: 'Juggler',
                     poke: [
                         ['Drowzee', 32],
@@ -840,7 +775,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'fuchsiaGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Tamer',
                     poke: [
                         ['Arbok', 32],
@@ -850,7 +785,7 @@ const ROUTES: Routes = {
                     win: 'fuchsiaGym2',
                     req: 'fuchsiaGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Juggler',
                     poke: [
                         ['Hypno', 35],
@@ -860,6 +795,7 @@ const ROUTES: Routes = {
                     win: 'fuchsiaGym3',
                     req: 'fuchsiaGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Koga',
                     badge: 'Soul Badge',
@@ -980,7 +916,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Cinnabar Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Burgler',
                     poke: [
                         ['Growlithe', 36],
@@ -989,7 +925,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'cinnabarGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Super Nerd',
                     poke: [
                         ['Ponyta', 36],
@@ -1000,7 +936,7 @@ const ROUTES: Routes = {
                     win: 'cinnabarGym2',
                     req: 'cinnabarGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Burgler',
                     poke: [
                         ['Growlithe', 36],
@@ -1010,6 +946,7 @@ const ROUTES: Routes = {
                     win: 'cinnabarGym3',
                     req: 'cinnabarGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Blaine',
                     badge: 'Volcano Badge',
@@ -1194,7 +1131,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Violet Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Lass',
                     poke: [
                         ['Bellsprout', 21],
@@ -1202,7 +1139,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'violetGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Beauty',
                     poke: [
                         ['Oddish', 21],
@@ -1213,7 +1150,7 @@ const ROUTES: Routes = {
                     win: 'violetGym2',
                     req: 'violetGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Cooltrainer',
                     poke: [
                         ['Weepinbell', 24],
@@ -1223,6 +1160,7 @@ const ROUTES: Routes = {
                     win: 'violetGym3',
                     req: 'violetGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Falkner',
                     win: 'falkner1',
@@ -1326,7 +1264,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Azalea Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Lass',
                     poke: [
                         ['Bellsprout', 21],
@@ -1334,7 +1272,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'azaleaGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Beauty',
                     poke: [
                         ['Oddish', 21],
@@ -1345,7 +1283,7 @@ const ROUTES: Routes = {
                     win: 'azaleaGym2',
                     req: 'azaleaGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Cooltrainer',
                     poke: [
                         ['Weepinbell', 24],
@@ -1355,6 +1293,7 @@ const ROUTES: Routes = {
                     win: 'azaleaGym3',
                     req: 'azaleaGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Bugsy',
                     win: 'bugsy1',
@@ -1415,7 +1354,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Goldenrod Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Lass',
                     poke: [
                         ['Bellsprout', 21],
@@ -1423,7 +1362,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'goldenrodGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Beauty',
                     poke: [
                         ['Oddish', 21],
@@ -1434,7 +1373,7 @@ const ROUTES: Routes = {
                     win: 'goldenrodGym2',
                     req: 'goldenrodGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Cooltrainer',
                     poke: [
                         ['Weepinbell', 24],
@@ -1444,6 +1383,7 @@ const ROUTES: Routes = {
                     win: 'goldenrodGym3',
                     req: 'goldenrodGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Whitney',
                     win: 'whitney1',
@@ -1515,7 +1455,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Ecruteak Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Lass',
                     poke: [
                         ['Bellsprout', 21],
@@ -1523,7 +1463,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'ecruteakGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Beauty',
                     poke: [
                         ['Oddish', 21],
@@ -1534,7 +1474,7 @@ const ROUTES: Routes = {
                     win: 'ecruteakGym2',
                     req: 'ecruteakGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Cooltrainer',
                     poke: [
                         ['Weepinbell', 24],
@@ -1544,6 +1484,7 @@ const ROUTES: Routes = {
                     win: 'ecruteakGym3',
                     req: 'ecruteakGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Morty',
                     badge: 'Fog Badge',
@@ -1616,7 +1557,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Olivine Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Lass',
                     poke: [
                         ['Bellsprout', 21],
@@ -1624,7 +1565,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'olivineGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Beauty',
                     poke: [
                         ['Oddish', 21],
@@ -1635,7 +1576,7 @@ const ROUTES: Routes = {
                     win: 'olivineGym2',
                     req: 'olivineGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Cooltrainer',
                     poke: [
                         ['Weepinbell', 24],
@@ -1645,6 +1586,7 @@ const ROUTES: Routes = {
                     win: 'olivineGym3',
                     req: 'olivineGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Jasmine',
                     win: 'jasmine1',
@@ -1705,7 +1647,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Cianwood Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Lass',
                     poke: [
                         ['Bellsprout', 21],
@@ -1713,7 +1655,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'cianwoodGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Beauty',
                     poke: [
                         ['Oddish', 21],
@@ -1724,7 +1666,7 @@ const ROUTES: Routes = {
                     win: 'cianwoodGym2',
                     req: 'cianwoodGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Cooltrainer',
                     poke: [
                         ['Weepinbell', 24],
@@ -1734,6 +1676,7 @@ const ROUTES: Routes = {
                     win: 'cianwoodGym3',
                     req: 'cianwoodGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Chuck',
                     badge: 'Storm Badge',
@@ -1816,7 +1759,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Mahogany Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Lass',
                     poke: [
                         ['Bellsprout', 21],
@@ -1824,7 +1767,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'mahoganyGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Beauty',
                     poke: [
                         ['Oddish', 21],
@@ -1835,7 +1778,7 @@ const ROUTES: Routes = {
                     win: 'mahoganyGym2',
                     req: 'mahoganyGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Cooltrainer',
                     poke: [
                         ['Weepinbell', 24],
@@ -1845,6 +1788,7 @@ const ROUTES: Routes = {
                     win: 'mahoganyGym3',
                     req: 'mahoganyGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Pryce',
                     badge: 'Glacier Badge',
@@ -1928,7 +1872,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Blackthorn Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Lass',
                     poke: [
                         ['Bellsprout', 21],
@@ -1936,7 +1880,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'blackthornGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Beauty',
                     poke: [
                         ['Oddish', 21],
@@ -1947,7 +1891,7 @@ const ROUTES: Routes = {
                     win: 'blackthornGym2',
                     req: 'blackthornGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Cooltrainer',
                     poke: [
                         ['Weepinbell', 24],
@@ -1957,6 +1901,7 @@ const ROUTES: Routes = {
                     win: 'blackthornGym3',
                     req: 'blackthornGym2',
                 },
+                ],
                 gymLeader: {
                     name: 'Clair',
                     badge: 'Rising Badge',
@@ -3054,7 +2999,7 @@ const ROUTES: Routes = {
             town: true,
             gym: {
                 name: 'Elite 4',
-                gymTrainer1: {
+                eliteFour: [{
                     name: 'Sidney',
                     poke: [
                         ['Mightyena', 46],
@@ -3064,7 +3009,7 @@ const ROUTES: Routes = {
                         ['Absol', 49],
                     ],
                 },
-                gymTrainer2: {
+                {
                     name: 'Phoebe',
                     poke: [
                         ['Dusclops', 58],
@@ -3074,7 +3019,7 @@ const ROUTES: Routes = {
                         ['Dusclops', 61],
                     ],
                 },
-                gymTrainer3: {
+                {
                     name: 'Glacia',
                     poke: [
                         ['Glalie', 60],
@@ -3084,8 +3029,10 @@ const ROUTES: Routes = {
                         ['Walrein', 63],
                     ],
                 },
+            ],
             },
-        }, /*
+        },
+        /*
         elite4Drake: {
             name: 'Elite 4 Drake',
             town: true,
@@ -4099,7 +4046,7 @@ const ROUTES: Routes = {
             town: true,
             gym: {
                 name: 'Elite 4',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Aaron',
                     poke: [
                         ['Dustox', 53],
@@ -4109,7 +4056,7 @@ const ROUTES: Routes = {
                         ['Drapion', 57],
                     ],
                 },
-                gymTrainer2: {
+                {
                     name: 'Bertha',
                     poke: [
                         ['Quagsire', 55],
@@ -4119,7 +4066,7 @@ const ROUTES: Routes = {
                         ['Golem', 56],
                     ],
                 },
-                gymTrainer3: {
+                {
                     name: 'Flint',
                     poke: [
                         ['Houndoom', 58],
@@ -4129,6 +4076,7 @@ const ROUTES: Routes = {
                         ['Magmortar', 57],
                     ],
                 },
+            ],
                 gymLeader: {
                     name: 'Lucian',
                     poke: [
@@ -6464,7 +6412,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Kali Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Surfer',
                     poke: [
                         ['Poliwrath', 63],
@@ -6473,7 +6421,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'kaliGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Tech Genius',
                     poke: [
                         ['Oranguru', 62],
@@ -6484,7 +6432,7 @@ const ROUTES: Routes = {
                     win: 'kaliGym2',
                     req: 'kaliGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Liberal',
                     poke: [
                         ['Glaceon', 67],
@@ -6494,6 +6442,7 @@ const ROUTES: Routes = {
                     win: 'kaliGym3',
                     req: 'kaliGym2',
                 },
+            ],
                 gymLeader: {
                     name: 'Krush',
                     win: 'power1',
@@ -6590,7 +6539,7 @@ const ROUTES: Routes = {
             pokeMart: true,
             gym: {
                 name: 'Freezing Gym',
-                gymTrainer1: {
+                gymTrainer: [{
                     name: 'Miner',
                     poke: [
                         ['Excadrill', 50],
@@ -6600,7 +6549,7 @@ const ROUTES: Routes = {
                     ],
                     win: 'freezingGym1',
                 },
-                gymTrainer2: {
+                {
                     name: 'Ace Trainer',
                     poke: [
                         ['Manectric', 52],
@@ -6611,7 +6560,7 @@ const ROUTES: Routes = {
                     win: 'freezingGym2',
                     req: 'freezingGym1',
                 },
-                gymTrainer3: {
+                {
                     name: 'Hiker',
                     poke: [
                         ['Weavile', 55],
@@ -6621,6 +6570,7 @@ const ROUTES: Routes = {
                     win: 'freezingGym3',
                     req: 'freezingGym2',
                 },
+            ],
                 gymLeader: {
                     name: 'ColdOre',
                     req: 'freezingGym3',
