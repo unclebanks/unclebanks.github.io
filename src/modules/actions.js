@@ -560,9 +560,15 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         viewBag: function() {
             openModal(document.getElementById('bagModal'));
         },
-        viewTown: function() {
-            this.renderTown();
-            openModal(document.getElementById('townModal'));
+        viewTown: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
+            if (routeData === 'Pallet Town') {
+                openModal(document.getElementById('pallettownModal'));
+            } else if (routeData === 'Viridian City') {
+                openModal(document.getElementById('viridiancityModal'));
+            } else if (routeData === 'Pewter City') {
+                openModal(document.getElementById('pewtercityModal'));
+            } else { alert('Not implemented yet'); }
         },
         renderTown: function() {
             const pokeMart = $('#pokeMartButton');
@@ -677,6 +683,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         checkNPC: function() {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].npc.name;
+            if (routeData === 'PokeMart Attendant') {
+                this.viridianPokeMartEvent();
+            }
             if (routeData === 'Pewter Museum') {
                 this.pewterMuseumEvent();
             }
@@ -717,7 +726,20 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('Good Job');
             }
         },
-        vFisherman: function() {
+        viridianPokeMartEvent: function () {
+            if (!player.events.oakParcelReceived) {
+                alert('Hey! Did you come from Pallet Town? AWESOME!!! Can you give this to Prof. Oak for me?');
+                player.events.oakParcelReceived = true;
+            } else if (player.events.oakParcelReceived === true && !player.events.oakParcelGiven) {
+                alert('Can you deliver that to Prof. Oak please? Come see me when you are done.');
+            } else if (player.events.oakParcelGiven && !player.events.viridianPokeMartEvent) {
+                alert('Thanks for helping me out. Take these POKEBALLS as a sign of my gratitude!');
+                player.ballsAmount.pokeball += 20;
+                dom.renderBalls();
+                player.events.viridianPokeMartEvent = true;
+            } else { alert('Thanks for delivering the parcel for me kid. I wish you the best in your endeavors'); }
+        },
+        vFisherman: function () {
             if (!player.unlocked.kantoOldRod) {
                 alert('You seem like a good kid. Take this Fishing Rod.');
                 player.unlocked.kantoOldRod = 1;
@@ -793,10 +815,17 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.renderGameTokens();
             }
         },
-        oakLab: function() {
+        oakLab: function () {
+            closeModal(document.getElementById('pallettownModal'));
             openModal(document.getElementById('oaklabModal'));
         },
-        oakAide1: function() {
+        playerHouse: function () {
+            alert('Player House');
+        },
+        rivalHouseKanto: function () {
+            alert('Rival House');
+        },
+        oakAide1: function () {
             if (player.events.oakAide1 != true) {
                 alert('I am just a simple aide. No need to talk to me again');
                 player.events.oakAide1 = true;
@@ -817,8 +846,11 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         oakAide2: function() {
             alert('Have you talked to the other aide? They get a little overwhelmed sometimes, I would be careful if I were you.');
         },
-        oakLabOak: function() {
-            alert('How is your POKEDEX coming along?');
+        oakLabOak: function () {
+            if (player.events.oakParcelReceived && !player.events.oakParcelGiven) {
+                alert('This must be the parcel I ordered, thank you for delivering it.');
+                player.events.oakParcelGiven = true;
+            } else { alert('How is your POKEDEX coming along?'); }
         },
         pewterMuseumEvent: function() {
             if (player.events.pewterMuseum1 === true) {
@@ -847,33 +879,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 notify('You feel like joining us yet?');
             }
         },
-        billEvent: function() {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (!player.events[routeData.npc.event]) {
-                notify('Hi! Thanks for stopping by. Show me a Haunter, Machoke, Graveler, or Kadabra and I will give you their evolved forms');
-                player.events[routeData.npc.event] = true;
-            }
-            if (player.hasPokemon('Machoke') && !player.hasPokemon('Machamp')) {
-                player.addPoke(new Poke(POKEDEX[85], 25));
-                player.addPokedex('Machamp', POKEDEXFLAGS.ownNormal);
-                notify('I see you have a Machoke. Here is a Machamp');
-            }
-            if (player.hasPokemon('Kadabra') && !player.hasPokemon('Alakazam')) {
-                player.addPoke(new Poke(POKEDEX[81], 25));
-                player.addPokedex('Alakazam', POKEDEXFLAGS.ownNormal);
-                notify('I see you have a Kadabra. Here is a Alakazam');
-            }
-            if (player.hasPokemon('Graveler') && !player.hasPokemon('Golem')) {
-                player.addPoke(new Poke(POKEDEX[93], 25));
-                player.addPokedex('Golem', POKEDEXFLAGS.ownNormal);
-                notify('I see you have a Graveler. Here is a Golem');
-            }
-            if (player.hasPokemon('Haunter') && !player.hasPokemon('Gengar')) {
-                player.addPoke(new Poke(POKEDEX[117], 25));
-                player.addPokedex('Gengar', POKEDEXFLAGS.ownNormal);
-                notify('I see you have a Haunter. Here is a Gengar');
-            } else {
-                notify('No trades right now. Sorry');
+        billEvent: function () {
+            if (!player.events.billMonBefore) {
+                alert('Hey kid! I am not a POKEMON, my name is Bill and I am a little stuck. Could you help me out? Press that button over there once I am in the machine. Thanks in advance.');
+                player.events.billMonBefore = true;
+            } else if (player.events.billMonBefore && !player.events.billMonBefore1) {
+                alert('This needs to be finished for the SS ANNE stuff');
             }
         },
         cinnabarLabEvent: function() {
