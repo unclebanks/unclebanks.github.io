@@ -530,6 +530,42 @@ progress.expBar {
     min-height: fit-content;
 }
 
+#palletTownModalBox {
+    background-image: url('../assets/backgrounds/palletTown.png');
+    background-size: cover;
+    height: 481px;
+}
+
+#palletTownModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#oaklabModalBox {
+    background-image: url('../assets/backgrounds/oakLabKanto.png');
+    background-size: contain;
+    height: 481px;
+    width: 460px;
+}
+
+#oaklabModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#viridianCityModalBox {
+    background-image: url('../assets/backgrounds/viridianCity.png');
+    background-size: cover;
+}
+
+#pewterCityModalBox {
+    background-image: url('../assets/backgrounds/pewterCity.png');
+    background-size: cover;
+    height: 481px;
+}
+
+#pewterCityModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
 .townBuilding {
     width: 90%;
     float: left;
