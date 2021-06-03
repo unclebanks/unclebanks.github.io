@@ -464,6 +464,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else if (secretCode === 'Krush' && !player.secretCodes.krush) {
                 player.addPoke(new Poke(pokeByName('Garchomp'), 55));
                 player.secretCodes.krush = true;
+            } else if (secretCode === 'Bulbasaur' && !player.secretCodes.bulbasaur) {
+                player.addPoke(new Poke(pokeByName('Bulbasaur'), 5));
+                player.secretCodes.bulbasaur = true;
             } else {
                 alert('Code Invalid or Already Claimed');
             }
