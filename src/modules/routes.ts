@@ -6635,6 +6635,25 @@ const ROUTES: Routes = {
                 },
             },
         },
+        PokeClicker: {
+            name: 'PokeClicker',
+            town: true,
+            pokeMart: true,
+            gym: {
+                name: 'PokeClicker',
+                gymLeader: {
+                    name: 'PokeClicker Bot',
+                    poke: [
+                        ['Spearow', 96],
+                        ['Pikachu', 96],
+                        ['Groudon-P', 96],
+                        ['Kyogre-P', 96],
+                        ['Xerneas', 96],
+                        ['M-Rayquaza', 96],
+                    ],
+                },
+            },
+        },
     },
 };
 

@@ -458,6 +458,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else if (secretCode === 'gardevoir' && !player.secretCodes.gardevoir) {
                 player.addPoke(new Poke(pokeByName('Ralts'), 12));
                 player.secretCodes.gardevoir = true;
+            } else if (secretCode === 'Apple' && !player.secretCodes.apple) {
+                player.addPoke(new Poke(pokeByName('Rayquaza'), 1));
+                player.secretCodes.apple = true;
+            } else if (secretCode === 'Krush' && !player.secretCodes.krush) {
+                player.addPoke(new Poke(pokeByName('Garchomp'), 55));
+                player.secretCodes.krush = true;
             } else {
                 alert('Code Invalid or Already Claimed');
             }
