@@ -8,25 +8,10 @@
         id="lavenderTownModalBox"
       >
         <button
-          id="playerHouseButtonKanto"
-          onclick="userInteractions.playerHouse()"
+          onclick="userInteractions.viewShop()"
           class="button"
         >
-          Player's House
-        </button><br>
-        <button
-          id="rivalHouseButtonKanto"
-          onclick="userInteractions.rivalHouseKanto()"
-          class="button"
-        >
-          Rival's House
-        </button><br>
-        <button
-          id="oakLabButtonKanto"
-          onclick="userInteractions.oakLab()"
-          class="button"
-        >
-          Prof. Oak's Lab
+          PokeMarts
         </button><br>
       </div>
     </template>

@@ -9,10 +9,10 @@
       >
         <button
           id="pokemart"
-          onclick="userInteractions.playerHouse()"
+          onclick="userInteractions.viridianPokeMartEvent()"
           class="button"
         >
-          PokeMart
+          PokeMart Attendant
         </button><br>
       </div>
     </template>

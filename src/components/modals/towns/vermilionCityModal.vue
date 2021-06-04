@@ -8,25 +8,10 @@
         id="vermilionCityModalBox"
       >
         <button
-          id="playerHouseButtonKanto"
-          onclick="userInteractions.playerHouse()"
+          onclick="userInteractions.vFisherman()"
           class="button"
         >
-          Red's House
-        </button><br>
-        <button
-          id="rivalHouseButtonKanto"
-          onclick="userInteractions.rivalHouseKanto()"
-          class="button"
-        >
-          Blue's House
-        </button><br>
-        <button
-          id="oakLabButtonKanto"
-          onclick="userInteractions.oakLab()"
-          class="button"
-        >
-          Prof. Oak's Lab
+          Fishing Guru
         </button><br>
       </div>
     </template>

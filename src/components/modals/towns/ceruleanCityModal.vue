@@ -8,25 +8,16 @@
         id="ceruleanCityModalBox"
       >
         <button
-          id="playerHouseButtonKanto"
-          onclick="userInteractions.playerHouse()"
+          onclick="userInteractions.nuggetBridgeEvent()"
           class="button"
         >
-          Player's House
+          Nugget Bridge
         </button><br>
         <button
-          id="rivalHouseButtonKanto"
-          onclick="userInteractions.rivalHouseKanto()"
+          onclick="userInteractions.checkStory()"
           class="button"
         >
-          Rival's House
-        </button><br>
-        <button
-          id="oakLabButtonKanto"
-          onclick="userInteractions.oakLab()"
-          class="button"
-        >
-          Prof. Oak's Lab
+          Burgled House
         </button><br>
       </div>
     </template>
