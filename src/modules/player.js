@@ -77,13 +77,13 @@ export default (lastSave, appModel) => {
             venusaurite: 0,
         },
         defeatedWith: {
-          beedrill: 0,
+            beedrill: 0,
         },
         typeStats: {
-          bugBeaten: 0,
-          poisonBeaten: 0,
-          bugCaught: 0,
-          poisonCaught: 0,
+            bugBeaten: 0,
+            poisonBeaten: 0,
+            bugCaught: 0,
+            poisonCaught: 0,
         },
         evoStones: {},
         currencyAmount: {
