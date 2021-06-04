@@ -1001,6 +1001,18 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 combatLoop.refresh();
             }
         },
+        megaBeedrillQuest: function () {
+            if ((player.typeStats.bugBeaten + player.typeStats.poisonBeaten >= 500) && (!player.events.megaBeedrillQuest)) {
+                player.defeatedWith.beedrill = 0;
+                if ((player.typeStats.bugBeaten >= 1000) && (player.typeStats.poisonBeaten >= 1000)) {
+                    if (player.defeatedWith.beedrill >= 2500) {
+                        player.addPoke(new Poke(pokeByName('M-Beedrill'), 10));
+                        player.events.megaBeedrillQuest = true;
+                    }
+                }
+            }
+        },
+        // This part ^^^ was not within the actions brackets, also, add poke was not correctly utilized.
         closeStory: function () {
             if (story.canClose) {
                 $('#storyContainer').style.display = 'none';
