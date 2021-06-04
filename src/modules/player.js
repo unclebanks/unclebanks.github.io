@@ -491,6 +491,7 @@ export default (lastSave, appModel) => {
                 localStorage.setItem('secretCodes', JSON.stringify(this.secretCodes));
                 localStorage.setItem('evoStones', JSON.stringify(this.evoStones));
                 localStorage.setItem('currencyAmount', JSON.stringify(this.currencyAmount));
+                localStorage.setItem('defeatedWith', JSON.stringify(this.defeatedWith));
                 localStorage.setItem('currentBoostedRoamer', JSON.stringify(this.currentBoostedRoamer));
             }
         },
@@ -511,6 +512,7 @@ export default (lastSave, appModel) => {
                 megaStones: this.megaStones,
                 secretCodes: this.secretCodes,
                 evoStones: this.evoStones,
+                defeatedWith: this.defeatedWith,
                 currencyAmount: this.currencyAmount,
                 battleItems: this.battleItems,
                 vitamins: this.vitamins,
@@ -588,6 +590,9 @@ export default (lastSave, appModel) => {
             if (JSON.parse(localStorage.getItem('currencyAmount'))) {
                 this.currencyAmount = JSON.parse(localStorage.getItem('currencyAmount'));
             }
+            if (JSON.parse(localStorage.getItem('defeatedWith'))) {
+                this.defeatedWith = JSON.parse(localStorage.getItem('defeatedWith'));
+            }
             if (JSON.parse(localStorage.getItem('megaStones'))) {
                 this.megaStones = JSON.parse(localStorage.getItem('megaStones'));
             }
@@ -653,6 +658,7 @@ export default (lastSave, appModel) => {
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
                 this.battleItems = saveData.battleItems;
+                this.defeatedWith = saveData.defeatedWith;
                 this.vitamins = saveData.vitamins;
                 appModel.$store.commit('pokedex/loadData', saveData.pokedexData ? saveData.pokedexData : []);
                 const loadedStats = saveData.statistics ? saveData.statistics : {};
