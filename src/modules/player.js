@@ -1,4 +1,4 @@
-import { POKEDEXFLAGS, BALLRNG } from './data';
+import { POKEDEXFLAGS, BALLRNG, PokemonType } from './data';
 import POKEDEX from './db.ts';
 import Poke from './poke';
 import ROUTES from './routes';
@@ -80,10 +80,10 @@ export default (lastSave, appModel) => {
             beedrill: 0,
         },
         typeStats: {
-            bugBeaten: 0,
-            poisonBeaten: 0,
-            bugCaught: 0,
-            poisonCaught: 0,
+            defeatedType: 
+              PokemonTypes.reduce((a,b) => {a[b] = 0; return a}, {}),
+            caughtType: 
+              PokemonTypes.reduce((a,b) => {a[b] = 0; return a}, {}),
         },
         evoStones: {},
         currencyAmount: {

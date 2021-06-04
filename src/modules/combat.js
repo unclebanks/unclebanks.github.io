@@ -1,7 +1,7 @@
 /* eslint-disable no-redeclare */
 import TYPES from './typeModifiers';
 import { RNG, flash, $ } from './utilities';
-import { POKEDEXFLAGS } from './data';
+import { POKEDEXFLAGS, PokemonTypes } from './data';
 import ROUTES from './routes';
 import { renderView } from './display';
 import Poke from './poke';
