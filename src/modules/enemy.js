@@ -1,4 +1,4 @@
-import { mergeArray, pokeByName, randomArrayElement, requirementMetGenerator } from './utilities';
+import { mergeArray, pokeByName, randomArrayElement, requirementMetGenerator, } from './utilities';
 import ROUTES from './routes';
 
 export default (starter, player, Poke) => {

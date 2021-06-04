@@ -1,6 +1,7 @@
-import { $, flash, pokeByName, requirementMetGenerator } from './utilities';
+import { $, flash, pokeByName, requirementMetGenerator, } from './utilities';
 import ROUTES from './routes';
 import { COLORS } from './data';
+import Poke from './poke';
 
 export const renderView = (dom, enemy, player, purge = true) => {
     dom.renderPokeOnContainer('enemy', enemy.activePoke());
@@ -132,15 +133,15 @@ export default (player, combatLoop, userInteractions) => {
                     if (unlocked) {
                         routeColor = (routeId === player.settings.currentRouteId) ? COLORS.route.current : COLORS.route.unlocked;
                         routeWeight = (routeId === player.settings.currentRouteId) ? 'bold' : 'normal';
-                        if (routeColor !== COLORS.route.current) { //don't overwrite this color, might confuse the user
-                            let status = 2; //2 for shiny caught, 1 for regular caught, 0 for missing
+                        if (routeColor !== COLORS.route.current) { // don't overwrite this color, might confuse the user
+                            let status = 2; // 2 for shiny caught, 1 for regular caught, 0 for missing
                             let encounters = route.pokes;
                             if (route._special) {
                                 encounters = encounters.concat(route._special.filter(requirementMet).flatMap(s => s.pokemon));
                             }
                             for (let i = 0; i < encounters.length; i++) {
-                                let encounter = encounters[i];
-                                let encounterPokemon = new Poke(pokeByName(encounter), 1, 0, false);
+                                const encounter = encounters[i];
+                                const encounterPokemon = new Poke(pokeByName(encounter), 1, 0, false);
                                 if (!player.hasPokemonLike(encounterPokemon)) {
                                     status = 0;
                                     break;
