@@ -1,3 +1,4 @@
+// eslint-disable-next-line object-curly-newline
 import { $, flash, pokeByName, requirementMetGenerator, } from './utilities';
 import ROUTES from './routes';
 import { COLORS } from './data';
@@ -137,7 +138,7 @@ export default (player, combatLoop, userInteractions) => {
                             let status = 2; // 2 for shiny caught, 1 for regular caught, 0 for missing
                             let encounters = route.pokes;
                             if (route._special) {
-                                encounters = encounters.concat(route._special.filter(requirementMet).flatMap(s => s.pokemon));
+                                encounters = encounters.concat(route._special.filter(requirementMet).flatMap((s) => s.pokemon));
                             }
                             for (let i = 0; i < encounters.length; i++) {
                                 const encounter = encounters[i];

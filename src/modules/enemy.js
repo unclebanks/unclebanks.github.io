@@ -1,3 +1,4 @@
+// eslint-disable-next-line object-curly-newline
 import { mergeArray, pokeByName, randomArrayElement, requirementMetGenerator, } from './utilities';
 import ROUTES from './routes';
 
