@@ -134,7 +134,7 @@ export default (player, enemy) => {
             }
             for (let x = 0; x < player.defeatedWith.length; x++) {
                 if (player.activePoke().pokeName() === player.defeatedWith[x]) {
-                  player.defeatedWith[x]++;
+                    player.defeatedWith[x]++;
                 }
             }
             for (let a = 0; a < enemy.activePoke().types().length; a++) {
