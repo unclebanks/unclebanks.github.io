@@ -1,7 +1,6 @@
-import { $, flash, pokeByName } from './utilities';
+import { $, flash, pokeByName, requirementMetGenerator } from './utilities';
 import ROUTES from './routes';
 import { COLORS } from './data';
-import { requirementMet } from './enemy';
 
 export const renderView = (dom, enemy, player, purge = true) => {
     dom.renderPokeOnContainer('enemy', enemy.activePoke());
@@ -117,6 +116,7 @@ export default (player, combatLoop, userInteractions) => {
             }
         },
         renderRouteList: function () {
+            const requirementMet = requirementMetGenerator(player);
             this.renderRegionSelect();
             const routes = ROUTES[player.settings.currentRegionId];
             const listElement = $('#routeList');
