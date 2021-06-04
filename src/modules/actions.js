@@ -1035,10 +1035,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         megaBeedrillQuest: function () {
             if ((player.typeStats.bugBeaten + player.typeStats.poisonBeaten >= 500) && (!player.events.megaBeedrillQuest)) {
+                alert("You've unlocked the Mega Beedrill quest!");
                 player.defeatedWith.beedrill = 0;
                 if ((player.typeStats.bugBeaten >= 1000) && (player.typeStats.poisonBeaten >= 1000)) {
                     if (player.defeatedWith.beedrill >= 2500) {
-                        player.addPoke(new Poke(pokeByName('M-Beedrill'), 10));
+                        player.megaStones.beedrillite = 1;
+                        player.statistics['megaQuestsCompleted']++;
                         player.events.megaBeedrillQuest = true;
                     }
                 }

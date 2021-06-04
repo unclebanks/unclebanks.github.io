@@ -132,18 +132,16 @@ export default (player, enemy) => {
             if (enemy.activePoke().shiny()) {
                 player.statistics.shinyBeaten++;
             }
-            if (player.activePoke().pokeName() === 'Beedrill') {
-                player.defeatedWith.beedrill += 1;
+            for (let x = 0; x < player.defeatedWith.length; x++)
+            {
+              if(player.activePoke().pokeName() === player.defeatedWith[x])
+              {
+                player.defeatedWith[x]++;
+              }
             }
             for (let a = 0; a < enemy.activePoke().types().length; a++) {
                 // ^^^ This was written wrong. Idk if it works now cuz idk arrays
-                if (enemy.activePoke().types()[a] === 'Bug') {
-                    player.typeStats.bugBeaten += 1;
-                }
-                if (enemy.activePoke().types()[a] === 'Poison') {
-                    player.typeStats.poisonBeaten += 1;
-                    // This ^^^ needs the whole address written
-                }
+                player.typeStats.defeatedTypes[enemy.activePoke().types()[a]]++;
             }
             player.statistics.beaten++;
             Combat.attemptCatch();

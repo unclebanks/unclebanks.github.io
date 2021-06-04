@@ -1,4 +1,4 @@
-import { POKEDEXFLAGS, BALLRNG, PokemonType } from './data';
+import { POKEDEXFLAGS, BALLRNG, PokemonTypes, MegaWithoutQuest } from './data';
 import POKEDEX from './db.ts';
 import Poke from './poke';
 import ROUTES from './routes';
@@ -75,9 +75,10 @@ export default (lastSave, appModel) => {
             swampertite: 0,
             tyranitarite: 0,
             venusaurite: 0,
+            beedrillite: 0,
         },
         defeatedWith: {
-            beedrill: 0,
+            MegaWithoutQuest.reduce((a,b) => {a[b] = 0; return a}, {}),
         },
         typeStats: {
             defeatedType: 
@@ -148,6 +149,7 @@ export default (lastSave, appModel) => {
             totalCatchCoins: 0,
             totalBattleCoins: 0,
             totalExp: 0,
+            megaQuestsCompleted: 0,
         },
         statisticsRequirements: {
             beaten: 50,
