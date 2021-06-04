@@ -78,12 +78,12 @@ export default (lastSave, appModel) => {
             beedrillite: 0,
         },
         defeatedWith:
-            MegaWithoutQuest.reduce((a, b) => { a[b] = 0; return a }; {}),
+            MegaWithoutQuest.reduce((a, b) => { a[b] = 0; return a }, {}),
         typeStats: {
             defeatedType:
-              PokemonTypes.reduce((a, b) => { a[b] = 0; return a }; {}),
+              PokemonTypes.reduce((a, b) => { a[b] = 0; return a }, {}),
             caughtType:
-              PokemonTypes.reduce((a, b) => { a[b] = 0; return a }; {}),
+              PokemonTypes.reduce((a, b) => { a[b] = 0; return a }, {}),
         },
         evoStones: {},
         currencyAmount: {
