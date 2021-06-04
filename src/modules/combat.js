@@ -132,14 +132,12 @@ export default (player, enemy) => {
             if (enemy.activePoke().shiny()) {
                 player.statistics.shinyBeaten++;
             }
-            for (let x = 0; x < player.defeatedWith.length; x++)
-            {
-              if(player.activePoke().pokeName() === player.defeatedWith[x])
-              {
-                player.defeatedWith[x]++;
-              }
-            }
-            for (let a = 0; a < enemy.activePoke().types().length; a++) {
+            for (let x = 0; x < player.defeatedWith.length; x++) {
+                if(player.activePoke().pokeName() === player.defeatedWith[x]) {
+                  player.defeatedWith[x]++;
+                }
+                }
+              for (let a = 0; a < enemy.activePoke().types().length; a++) {
                 // ^^^ This was written wrong. Idk if it works now cuz idk arrays
                 player.typeStats.defeatedTypes[enemy.activePoke().types()[a]]++;
             }
