@@ -145,6 +145,9 @@ interface NPC {
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Professor extends NPC {}
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface Story extends NPC {}
+
 interface Town {
     name: string,
     town: true,
@@ -152,6 +155,7 @@ interface Town {
     gym?: Gym,
     pokeMart?: true,
     npc?: NPC,
+    story? : Story,
     _unlock?: UnlockData,
 }
 
@@ -228,8 +232,8 @@ const ROUTES: Routes = {
         palletTown: {
             name: 'Pallet Town',
             town: true,
-            npc: {
-                name: 'Prof. Oak',
+            prof: {
+                name: 'Prof. Oak\'s Lab',
                 event: 'profOak1',
             },
         },
@@ -247,6 +251,9 @@ const ROUTES: Routes = {
             name: 'Viridian City',
             town: true,
             pokeMart: true,
+            npc: {
+                name: 'PokeMart Attendant',
+            },
             gym: {
                 name: 'Viridian Gym',
                 gymTrainer1: {
@@ -396,6 +403,10 @@ const ROUTES: Routes = {
                     ['Starmie', 21],
                 ],
             },
+            story: {
+                name: 'Burgled House',
+                event: 'rocketThiefCerulean',
+            },
             gym: {
                 name: 'Cerulean Gym',
                 gymTrainer1: {
@@ -496,6 +507,12 @@ const ROUTES: Routes = {
             name: 'Vermilion City',
             town: true,
             pokeMart: true,
+            npc: {
+                name: 'Vermilion Fishing Guru',
+            },
+            story: {
+                name: 'S.S. Anne',
+            },
             gym: {
                 name: 'Vermilion Gym',
                 gymTrainer1: {
@@ -816,30 +833,29 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Fuchsia Gym',
                 gymTrainer1: {
-                    name: 'Lass',
+                    name: 'Juggler',
                     poke: [
-                        ['Bellsprout', 21],
-                        ['Weepinbell', 23],
+                        ['Drowzee', 32],
+                        ['Hypno', 32],
                     ],
                     win: 'fuchsiaGym1',
                 },
                 gymTrainer2: {
-                    name: 'Beauty',
+                    name: 'Tamer',
                     poke: [
-                        ['Oddish', 21],
-                        ['Bellsprout', 21],
-                        ['Oddish', 21],
-                        ['Bellsprout', 21],
+                        ['Arbok', 32],
+                        ['Sandslash', 32],
+                        ['Arbok', 32],
                     ],
                     win: 'fuchsiaGym2',
                     req: 'fuchsiaGym1',
                 },
                 gymTrainer3: {
-                    name: 'Cooltrainer',
+                    name: 'Juggler',
                     poke: [
-                        ['Weepinbell', 24],
-                        ['Gloom', 24],
-                        ['Ivysaur', 24],
+                        ['Hypno', 35],
+                        ['Kadabra', 35],
+                        ['Arbok', 35],
                     ],
                     win: 'fuchsiaGym3',
                     req: 'fuchsiaGym2',
@@ -965,30 +981,31 @@ const ROUTES: Routes = {
             gym: {
                 name: 'Cinnabar Gym',
                 gymTrainer1: {
-                    name: 'Lass',
+                    name: 'Burgler',
                     poke: [
-                        ['Bellsprout', 21],
-                        ['Weepinbell', 23],
+                        ['Growlithe', 36],
+                        ['Vulpix', 36],
+                        ['Ninetales', 36],
                     ],
                     win: 'cinnabarGym1',
                 },
                 gymTrainer2: {
-                    name: 'Beauty',
+                    name: 'Super Nerd',
                     poke: [
-                        ['Oddish', 21],
-                        ['Bellsprout', 21],
-                        ['Oddish', 21],
-                        ['Bellsprout', 21],
+                        ['Ponyta', 36],
+                        ['Charmeleon', 36],
+                        ['Growlithe', 36],
+                        ['Rapidash', 36],
                     ],
                     win: 'cinnabarGym2',
                     req: 'cinnabarGym1',
                 },
                 gymTrainer3: {
-                    name: 'Cooltrainer',
+                    name: 'Burgler',
                     poke: [
-                        ['Weepinbell', 24],
-                        ['Gloom', 24],
-                        ['Ivysaur', 24],
+                        ['Growlithe', 36],
+                        ['Rapidash', 36],
+                        ['Arcanine', 36],
                     ],
                     win: 'cinnabarGym3',
                     req: 'cinnabarGym2',
@@ -6614,6 +6631,25 @@ const ROUTES: Routes = {
                         ['Swellow', 57],
                         ['Rayquaza', 56],
                         ['M-Charizard X', 60],
+                    ],
+                },
+            },
+        },
+        PokeClicker: {
+            name: 'PokeClicker',
+            town: true,
+            pokeMart: true,
+            gym: {
+                name: 'PokeClicker',
+                gymLeader: {
+                    name: 'PokeClicker Bot',
+                    poke: [
+                        ['Spearow', 96],
+                        ['Pikachu', 96],
+                        ['Groudon-P', 96],
+                        ['Kyogre-P', 96],
+                        ['Xerneas', 96],
+                        ['M-Rayquaza', 96],
                     ],
                 },
             },
