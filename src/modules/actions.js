@@ -1040,7 +1040,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 if ((player.typeStats.bugBeaten >= 1000) && (player.typeStats.poisonBeaten >= 1000)) {
                     if (player.defeatedWith.beedrill >= 2500) {
                         player.megaStones.beedrillite = 1;
-                        player.statistics['megaQuestsCompleted']++;
+                        player.statistics.MegaQuestCompleted++;
                         player.events.megaBeedrillQuest = true;
                     }
                 }

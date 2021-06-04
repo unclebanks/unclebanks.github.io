@@ -77,9 +77,8 @@ export default (lastSave, appModel) => {
             venusaurite: 0,
             beedrillite: 0,
         },
-        defeatedWith: {
+        defeatedWith: 
             MegaWithoutQuest.reduce((a,b) => {a[b] = 0; return a}, {}),
-        },
         typeStats: {
             defeatedType: 
               PokemonTypes.reduce((a,b) => {a[b] = 0; return a}, {}),
