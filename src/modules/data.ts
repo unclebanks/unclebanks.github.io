@@ -57,6 +57,8 @@ export const PokemonTypes = [
 
 export type PokemonType = typeof PokemonTypes[number];
 
+export const testType: PokemonType = "Firre";
+
 export type PokemonStatType = 'hp' | 'attack' | 'defense' | 'sp atk' | 'sp def' | 'speed';
 
 interface VitaminData {
