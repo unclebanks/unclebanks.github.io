@@ -151,6 +151,7 @@ export default (starter, player, Poke) => {
         gymLeaderPoke: (pokemonList) => active = gymLeaderPoke(pokemonList),
         npcPoke: (pokemonList) => active = npcPoke(pokemonList),
         generateNew: (regionId, routeId) => active = generateNew(regionId, routeId),
+        requirementMet,
         attachCL: (_combatLoop) => combatLoop = _combatLoop,
     };
 };
