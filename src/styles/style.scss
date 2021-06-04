@@ -531,7 +531,7 @@ progress.expBar {
 }
 
 #palletTownModalBox {
-    background-image: url('../assets/backgrounds/palletTown.png');
+    background-image: url('../assets/backgrounds/kanto/palletTown/palletTown.png');
     background-size: cover;
     height: 481px;
 }
@@ -540,8 +540,38 @@ progress.expBar {
     background-color: rgb(58, 58, 58);
 }
 
+#redHouseModalBox {
+    background-image: url('../assets/backgrounds/kanto/palletTown/redHouse.png');
+    background-size: cover;
+    height: 481px;
+}
+
+#redHouseModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#redRoomModalBox {
+    background-image: url('../assets/backgrounds/kanto/palletTown/redRoom.png');
+    background-size: cover;
+    height: 481px;
+}
+
+#redRoomModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#blueHouseModalBox {
+    background-image: url('../assets/backgrounds/kanto/palletTown/blueHouse.png');
+    background-size: cover;
+    height: 481px;
+}
+
+#blueHouseModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
 #oaklabModalBox {
-    background-image: url('../assets/backgrounds/oakLabKanto.png');
+    background-image: url('../assets/backgrounds/kanto/palletTown/oakLabKanto.png');
     background-size: contain;
     height: 481px;
     width: 460px;
@@ -552,7 +582,7 @@ progress.expBar {
 }
 
 #viridianCityModalBox {
-    background-image: url('../assets/backgrounds/viridianCity.png');
+    background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCity.png');
     background-size: cover;
     height: 460px;
 }
@@ -562,7 +592,7 @@ progress.expBar {
 }
 
 #pewterCityModalBox {
-    background-image: url('../assets/backgrounds/pewterCity.png');
+    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterCity.png');
     background-size: cover;
     height: 481px;
 }
@@ -572,7 +602,7 @@ progress.expBar {
 }
 
 #ceruleanCityModalBox {
-    background-image: url('../assets/backgrounds/ceruleanCity.png');
+    background-image: url('../assets/backgrounds/kanto/ceruleanCity/ceruleanCity.png');
     background-size: cover;
     height: 481px;
 }
@@ -582,7 +612,7 @@ progress.expBar {
 }
 
 #vermilionCityModalBox {
-    background-image: url('../assets/backgrounds/vermilionCity.png');
+    background-image: url('../assets/backgrounds/kanto/vermilionCity/vermilionCity.png');
     background-size: cover;
     height: 481px;
 }
@@ -592,7 +622,7 @@ progress.expBar {
 }
 
 #lavenderTownModalBox {
-    background-image: url('../assets/backgrounds/lavenderTown.png');
+    background-image: url('../assets/backgrounds/kanto/lavenderTown/lavenderTown.png');
     background-size: cover;
     height: 481px;
 }
@@ -602,7 +632,7 @@ progress.expBar {
 }
 
 #celadonCityModalBox {
-    background-image: url('../assets/backgrounds/celadonCity.png');
+    background-image: url('../assets/backgrounds/kanto/celadonCity/celadonCity.png');
     background-size: cover;
     height: 481px;
 }
@@ -612,7 +642,7 @@ progress.expBar {
 }
 
 #saffronCityModalBox {
-    background-image: url('../assets/backgrounds/saffronCity.png');
+    background-image: url('../assets/backgrounds/kanto/saffronCity/saffronCity.png');
     background-size: cover;
     height: 481px;
 }
@@ -622,7 +652,7 @@ progress.expBar {
 }
 
 #fuchsiaCityModalBox {
-    background-image: url('../assets/backgrounds/fuchsiaCity.png');
+    background-image: url('../assets/backgrounds/kanto/fuchsiaCity/fuchsiaCity.png');
     background-size: cover;
     height: 481px;
 }
@@ -632,7 +662,7 @@ progress.expBar {
 }
 
 #cinnabarIslandModalBox {
-    background-image: url('../assets/backgrounds/cinnabarIsland.png');
+    background-image: url('../assets/backgrounds/kanto/cinnabarIsland/cinnabarIsland.png');
     background-size: cover;
     height: 481px;
 }

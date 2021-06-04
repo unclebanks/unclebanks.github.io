@@ -29,6 +29,9 @@
   <fuchsiaCityModal />
   <saffronCityModal />
   <cinnabarIslandModal />
+  <redHouseModal />
+  <redRoomModal />
+  <blueHouseModal />
 </template>
 
 <script>
@@ -52,7 +55,10 @@ import BagModal from './modals/BagModal.vue';
 import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
 import OakLabModal from './modals/OakLabModal';
-import palletTownModal from './modals/towns/palletTownModal';
+import palletTownModal from './modals/towns/palletTown/palletTownModal';
+import redHouseModal from './modals/towns/palletTown/redHouseModal';
+import redRoomModal from './modals/towns/palletTown/redRoomModal';
+import blueHouseModal from './modals/towns/palletTown/blueHouseModal';
 import viridianCityModal from './modals/towns/viridianCityModal';
 import pewterCityModal from './modals/towns/pewterCityModal';
 import vermilionCityModal from './modals/towns/vermilionCityModal';
@@ -86,6 +92,9 @@ export default {
         TownModal,
         OakLabModal,
         palletTownModal,
+        redHouseModal,
+        redRoomModal,
+        blueHouseModal,
         viridianCityModal,
         pewterCityModal,
         vermilionCityModal,

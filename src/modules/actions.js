@@ -824,11 +824,35 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('pallettownModal'));
             openModal(document.getElementById('oaklabModal'));
         },
-        playerHouse: function () {
-            alert('Player House');
+        redHouse: function () {
+            closeModal(document.getElementById('pallettownModal'));
+            openModal(document.getElementById('redhouseModal'));
         },
-        rivalHouseKanto: function () {
-            alert('Rival House');
+        redMom: function () {
+            alert('Hi! My Red is not home right now. Check back another time.');
+        },
+        redTV: function () {
+            alert('Two kids are walking along some railroad tracks.');
+        },
+        redRoom: function () {
+            closeModal(document.getElementById('redhouseModal'));
+            openModal(document.getElementById('redroomModal'));
+        },
+        redPC: function () {
+            alert('The computer is powered off.');
+        },
+        redVideoGames: function () {
+            alert('This is a pretty old console.');
+        },
+        redMap: function () {
+            alert('I wonder why all these places on the map are crossed off.');
+        },
+        blueHouse: function () {
+            closeModal(document.getElementById('pallettownModal'));
+            openModal(document.getElementById('bluehouseModal'));
+        },
+        blueSister: function () {
+            alert('Hi! My brother is not home right now. Check back another time.');
         },
         oakAide1: function () {
             if (player.events.oakAide1 != true) {

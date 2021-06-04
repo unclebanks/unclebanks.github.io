@@ -9,14 +9,14 @@
       >
         <button
           id="playerHouseButtonKanto"
-          onclick="userInteractions.playerHouse()"
+          onclick="userInteractions.redHouse()"
           class="button"
         >
           Red's House
         </button><br>
         <button
           id="rivalHouseButtonKanto"
-          onclick="userInteractions.rivalHouseKanto()"
+          onclick="userInteractions.blueHouse()"
           class="button"
         >
           Blue's House
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import CardModal from '../../common/CardModal.vue';
+import CardModal from '../../../common/CardModal.vue';
 
 export default {
     components: {
