@@ -1,4 +1,6 @@
-import { POKEDEXFLAGS, BALLRNG, PokemonTypes, MegaWithoutQuest } from './data';
+import {
+    POKEDEXFLAGS, BALLRNG, PokemonTypes, MegaWithoutQuest,
+} from './data';
 import POKEDEX from './db.ts';
 import Poke from './poke';
 import ROUTES from './routes';
@@ -78,12 +80,12 @@ export default (lastSave, appModel) => {
             beedrillite: 0,
         },
         defeatedWith:
-            MegaWithoutQuest.reduce((a, b) => { a[b] = 0; return a }, {}),
+            MegaWithoutQuest.reduce((a, b) => { a[b] = 0; return a; }, {}),
         typeStats: {
             defeatedType:
-              PokemonTypes.reduce((a, b) => { a[b] = 0; return a }, {}),
+              PokemonTypes.reduce((a, b) => { a[b] = 0; return a; }, {}),
             caughtType:
-              PokemonTypes.reduce((a, b) => { a[b] = 0; return a }, {}),
+              PokemonTypes.reduce((a, b) => { a[b] = 0; return a; }, {}),
         },
         evoStones: {},
         currencyAmount: {
