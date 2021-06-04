@@ -1,18 +1,17 @@
 <template>
   <CardModal
-    name="viridiancity"
-    title="Viridian City"
+    name="cinnabarisland"
+    title="Cinnabar Island"
   >
     <template #body>
       <div
-        id="viridianCityModalBox"
+        id="cinnabarIslandModalBox"
       >
         <button
-          id="pokemart"
-          onclick="userInteractions.viridianPokeMartEvent()"
+          onclick="userInteractions.openCinnabarLab()"
           class="button"
         >
-          PokeMart Attendant
+          Cinnabar Lab
         </button><br>
       </div>
     </template>
@@ -20,7 +19,7 @@
 </template>
 
 <script>
-import CardModal from '../../common/CardModal.vue';
+import CardModal from '../../../common/CardModal.vue';
 
 export default {
     components: {

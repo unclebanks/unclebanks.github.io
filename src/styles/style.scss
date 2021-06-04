@@ -591,6 +591,26 @@ progress.expBar {
     background-color: rgb(58, 58, 58);
 }
 
+#viridianPokeMartModalBox {
+    background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityPokeMart.png');
+    background-size: cover;
+    height: 460px;
+}
+
+#viridianPokeMartModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#viridianGymModalBox {
+    background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityGym.png');
+    background-size: cover;
+    height: 460px;
+}
+
+#viridianGymModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
 #pewterCityModalBox {
     background-image: url('../assets/backgrounds/kanto/pewterCity/pewterCity.png');
     background-size: cover;
@@ -641,6 +661,20 @@ progress.expBar {
     background-color: rgb(58, 58, 58);
 }
 
+#gameCornerBuilding {
+    background-image: url('../assets/backgrounds/kanto/celadonCity/celadonGameCorner.png');
+    background-size: cover;
+    height: 481px;
+}
+
+#gameCornerBuilding .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#gameCornerBuilding .span {
+    color: black;
+}
+
 #saffronCityModalBox {
     background-image: url('../assets/backgrounds/kanto/saffronCity/saffronCity.png');
     background-size: cover;
@@ -662,12 +696,22 @@ progress.expBar {
 }
 
 #cinnabarIslandModalBox {
-    background-image: url('../assets/backgrounds/kanto/cinnabarIsland/cinnabarIsland.png');
+    background-image: url('../assets/backgrounds/kanto/cinnabarIsland/kantoCinnabarIsland.png');
     background-size: cover;
     height: 481px;
 }
 
 #cinnabarIslandModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#cinnabarLabModalBox {
+    background-image: url('../assets/backgrounds/kanto/cinnabarIsland/cinnabarLab.png');
+    background-size: cover;
+    height: 481px;
+}
+
+#cinnabarLabModalBox .button {
     background-color: rgb(58, 58, 58);
 }
 

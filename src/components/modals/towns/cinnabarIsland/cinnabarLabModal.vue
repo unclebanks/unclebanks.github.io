@@ -1,17 +1,17 @@
 <template>
   <CardModal
-    name="lavendertown"
-    title="Lavender Town"
+    name="cinnabarlab"
+    title="Cinnabar Lab"
   >
     <template #body>
       <div
-        id="lavenderTownModalBox"
+        id="cinnabarLabModalBox"
       >
         <button
-          onclick="userInteractions.justTestStuff()"
+          onclick="userInteractions.cinnabarLabEvent()"
           class="button"
         >
-          NOTHING
+          Scientist
         </button><br>
       </div>
     </template>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import CardModal from '../../common/CardModal.vue';
+import CardModal from '../../../common/CardModal.vue';
 
 export default {
     components: {

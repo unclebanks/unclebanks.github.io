@@ -21,6 +21,8 @@
   <OakLabModal />
   <palletTownModal />
   <viridianCityModal />
+  <viridianPokeMartModal />
+  <viridianGymModal />
   <pewterCityModal />
   <vermilionCityModal />
   <ceruleanCityModal />
@@ -29,6 +31,7 @@
   <fuchsiaCityModal />
   <saffronCityModal />
   <cinnabarIslandModal />
+  <cinnabarLabModal />
   <redHouseModal />
   <redRoomModal />
   <blueHouseModal />
@@ -59,7 +62,9 @@ import palletTownModal from './modals/towns/palletTown/palletTownModal';
 import redHouseModal from './modals/towns/palletTown/redHouseModal';
 import redRoomModal from './modals/towns/palletTown/redRoomModal';
 import blueHouseModal from './modals/towns/palletTown/blueHouseModal';
-import viridianCityModal from './modals/towns/viridianCityModal';
+import viridianCityModal from './modals/towns/viridianCity/viridianCityModal';
+import viridianPokeMartModal from './modals/towns/viridianCity/viridianPokeMartModal';
+import viridianGymModal from './modals/towns/viridianCity/viridianGymModal';
 import pewterCityModal from './modals/towns/pewterCityModal';
 import vermilionCityModal from './modals/towns/vermilionCityModal';
 import ceruleanCityModal from './modals/towns/ceruleanCityModal';
@@ -67,7 +72,8 @@ import lavenderTownModal from './modals/towns/lavenderTownModal';
 import celadonCityModal from './modals/towns/celadonCityModal';
 import fuchsiaCityModal from './modals/towns/fuchsiaCityModal';
 import saffronCityModal from './modals/towns/saffronCityModal';
-import cinnabarIslandModal from './modals/towns/cinnabarIslandModal';
+import cinnabarIslandModal from './modals/towns/cinnabarIsland/cinnabarIslandModal';
+import cinnabarLabModal from './modals/towns/cinnabarIsland/cinnabarLabModal';
 
 export default {
     components: {
@@ -96,6 +102,8 @@ export default {
         redRoomModal,
         blueHouseModal,
         viridianCityModal,
+        viridianPokeMartModal,
+        viridianGymModal,
         pewterCityModal,
         vermilionCityModal,
         ceruleanCityModal,
@@ -104,6 +112,7 @@ export default {
         fuchsiaCityModal,
         saffronCityModal,
         cinnabarIslandModal,
+        cinnabarLabModal,
     },
 
     props: {

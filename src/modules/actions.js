@@ -178,6 +178,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         goToNone: function () {
             notify('This region is not implemented yet');
         },
+        justTestStuff: function () {
+            alert('Nothing is here yet.');
+        },
         enablePokeListAutoSort: function () {
             player.settings.autoSort = $('#autoSort').checked;
             // hide or show sort dropdowns
@@ -706,9 +709,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData === 'Bill') {
                 this.billEvent();
             }
-            if (routeData === 'Cinnabar Lab') {
-                this.cinnabarLabEvent();
-            }
             if (routeData === 'Steven\'s Home') {
                 this.beldumEvent();
             }
@@ -881,6 +881,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.events.oakParcelGiven = true;
             } else { alert('How is your POKEDEX coming along?'); }
         },
+        viridianPokeMart: function () {
+            closeModal(document.getElementById('viridiancityModal'));
+            openModal(document.getElementById('viridianpokemartModal'));
+        },
         pewterMuseumEvent: function () {
             if (player.events.pewterMuseum1 === true) {
                 alert('Did you take that fossil to Cinnabar Island?');
@@ -916,6 +920,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else if (player.events.billMonBefore && !player.events.billMonBefore1) {
                 alert('This needs to be finished for the SS ANNE stuff');
             }
+        },
+        openCinnabarLab: function () {
+            closeModal(document.getElementById('cinnabarislandModal'));
+            openModal(document.getElementById('cinnabarlabModal'));
         },
         cinnabarLabEvent: function () {
             if (!player.events.cinnabarLab1) {

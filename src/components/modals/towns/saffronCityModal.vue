@@ -8,7 +8,7 @@
         id="saffronCityModalBox"
       >
         <button
-          onclick="userInteractions.playerHouse()"
+          onclick="userInteractions.justTestStuff()"
           class="button"
         >
           TEST
