@@ -1,5 +1,5 @@
 // eslint-disable-next-line object-curly-newline
-import { $, flash, pokeByName, requirementMetGenerator, } from './utilities';
+import { $, flash, pokeByName, requirementMetGenerator } from './utilities';
 import ROUTES from './routes';
 import { COLORS } from './data';
 import Poke from './poke';
