@@ -702,6 +702,22 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
     return UserActions;
 };
 
+megaBeedrillQuest: function () 
+{
+  if((player.typeStats.bugBeaten + play.typeStats.poisonBeaten >= 500) && (!player.events.megaBeedrillQuest))
+  {
+    player.defeatedWith.beedrill = 0;
+    if ((player.typeStats.bugBeaten >= 1000) && (player.typeStats.poisonBeaten >= 1000))
+    {
+      if(player.defeatedWith.beedrill >= 2500)
+      {
+        player.addPoke(getPokemon('M-Beedrill'));
+        player.events.megaBeedrillQuest = true;
+      }
+    }
+  }
+}
+
 export const dummy = new Proxy({}, {
     get(target, prop) {
         return () => {};

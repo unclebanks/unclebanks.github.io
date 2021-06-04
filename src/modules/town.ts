@@ -298,11 +298,6 @@ class Town {
                     megaStones: 'banettite',
                 },
                 {
-                    name: 'Beedrillite',
-                    battlecoins: 1000,
-                    megaStones: 'beedrillite',
-                },
-                {
                     name: 'Blastoisinite',
                     battlecoins: 1000,
                     megaStones: 'blastoisinite',

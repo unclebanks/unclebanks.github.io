@@ -118,6 +118,21 @@ export default (player, enemy) => {
             if (enemy.activePoke().shiny()) {
                 player.statistics.shinyBeaten++;
             }
+            if (player.activePoke().getName() === "Beedrill")
+            {
+              player.defeatedWith.beedrill += 1;
+            }
+            for(int a = 0; a < enemy.activePoke().types().length(); a++)
+            {
+              if (enemy.activePoke().types()[a] === "Bug")
+              {
+                bugBeaten += 1;
+              }
+              if (enemy.activePoke().types()[a] === "Poison")
+              {
+                poisonBeaten += 1;
+              }
+            }
             player.statistics.beaten++;
             Combat.attemptCatch();
             Combat.findPokeballs(enemy.activePoke().level());

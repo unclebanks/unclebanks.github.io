@@ -38,7 +38,6 @@ export default (lastSave, appModel) => {
             ampharosite: 0,
             audinite: 0,
             banettite: 0,
-            beedrillite: 0,
             blastoisinite: 0,
             blazikenite: 0,
             cameruptite: 0,
@@ -76,6 +75,15 @@ export default (lastSave, appModel) => {
             swampertite: 0,
             tyranitarite: 0,
             venusaurite: 0,
+        },
+        defeatedWith: {
+          beedrill: 0,
+        },
+        typeStats: {
+          bugBeaten: 0,
+          poisonBeaten: 0,
+          bugCaught: 0,
+          poisonCaught: 0,
         },
         evoStones: {},
         currencyAmount: {

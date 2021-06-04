@@ -80,9 +80,6 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
     'Kakuna': [
         { 'to': 'Beedrill', 'requires': { 'type': 'level', 'level': 10 } },
     ],
-    'Beedrill': [
-        { 'to': 'M-Beedrill', 'requires': { 'type': 'megaStone', 'megaStone': 'beedrillite' } },
-    ],
     'Pidgey': [
         { 'to': 'Pidgeotto', 'requires': { 'type': 'level', 'level': 18 } },
     ],
