@@ -13,7 +13,27 @@ COLORS['route'] = {};
 COLORS['route']['locked'] = 'rgb(255, 0, 0)';
 COLORS['route']['unlocked'] = 'rgb(255, 255, 255)';
 COLORS['route']['current'] = 'rgb(139, 69, 19)';
-
+// Used for the type effectiveness
+export enum PokemonTypeEnum {
+        Normal = 0,
+        Fire,
+        Water,
+        Electric,
+        Grass,
+        Ice,
+        Fighting,
+        Poison,
+        Ground,
+        Flying,
+        Psychic,
+        Bug,
+        Rock,
+        Ghost,
+        Dragon,
+        Dark,
+        Steel,
+        Fairy,
+}
 export const POKEDEXFLAGS: Record<string, number> = {};
 POKEDEXFLAGS['unseen'] = 0;
 POKEDEXFLAGS['seenNormal'] = 1;
