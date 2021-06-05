@@ -1036,12 +1036,25 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         megaBeedrillQuest: function () {
             if ((player.typeStats.bugBeaten + player.typeStats.poisonBeaten >= 500) && (!player.events.megaBeedrillQuest)) {
                 alert("You've unlocked the Mega Beedrill quest!");
-                player.defeatedWith.beedrill = 0;
+                player.defeatedWith.Beedrill = 0;
                 if ((player.typeStats.bugBeaten >= 1000) && (player.typeStats.poisonBeaten >= 1000)) {
-                    if (player.defeatedWith.beedrill >= 2500) {
+                    if (player.defeatedWith.Beedrill >= 2500) {
                         player.megaStones.beedrillite = 1;
                         player.statistics.MegaQuestCompleted++;
                         player.events.megaBeedrillQuest = true;
+                    }
+                }
+            }
+        },
+        megaSableyeQuest: function () {
+            if ((player.typeStats.ghostBeaten + player.typeStats.darkBeaten >= 250) && (!player.events.megaSableyeQuest)) {
+                alert("You've unlocked the Mega Sableye quest!");
+                player.defeatedWith.Sableye = 0;
+                if ((player.typeStats.darkBeaten >= 500) && (player.typeStats.ghostBeaten >= 500)) {
+                    if (player.defeatedWith.Sableye >= 5000) {
+                        player.megaStones.sablenite = 1;
+                        player.statistics.MegaQuestCompleted++;
+                        player.events.megaSableyeQuest = true;
                     }
                 }
             }
