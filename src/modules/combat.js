@@ -138,8 +138,7 @@ export default (player, enemy) => {
                 }
             }
             for (let a = 0; a < enemy.activePoke().types().length; a++) {
-                // ^^^ This was written wrong. Idk if it works now cuz idk arrays
-                player.typeStats.defeatedTypes[enemy.activePoke().types()[a]]++;
+                player.typeStats.defeatedType[enemy.activePoke().types()[a]]++;
             }
             player.statistics.beaten++;
             Combat.attemptCatch();
