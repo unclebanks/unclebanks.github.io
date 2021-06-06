@@ -611,9 +611,11 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         viewShop: function () {
             // closeModal(document.getElementById('townModal'));
             const region = player.settings.currentRegionId.toLowerCase();
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
             town.renderPokeCoinShop(region);
             town.renderBattleCoinShop(region);
             town.renderCatchCoinShop(region);
+            closeModal(document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokemartModal`));
             openModal(document.getElementById('shopModal'));
         },
         renderGym: function () {
@@ -883,7 +885,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         viridianPokeMart: function () {
             closeModal(document.getElementById('viridiancityModal'));
-            openModal(document.getElementById('viridianpokemartModal'));
+            openModal(document.getElementById('viridiancitypokemartModal'));
         },
         pewterMuseumEvent: function () {
             if (player.events.pewterMuseum1 === true) {

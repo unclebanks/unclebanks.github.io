@@ -21,7 +21,7 @@
   <OakLabModal />
   <palletTownModal />
   <viridianCityModal />
-  <viridianPokeMartModal />
+  <viridiancityPokeMartModal />
   <viridianGymModal />
   <pewterCityModal />
   <vermilionCityModal />
@@ -63,7 +63,7 @@ import redHouseModal from './modals/towns/palletTown/redHouseModal';
 import redRoomModal from './modals/towns/palletTown/redRoomModal';
 import blueHouseModal from './modals/towns/palletTown/blueHouseModal';
 import viridianCityModal from './modals/towns/viridianCity/viridianCityModal';
-import viridianPokeMartModal from './modals/towns/viridianCity/viridianPokeMartModal';
+import viridiancityPokeMartModal from './modals/towns/viridianCity/viridianPokeMartModal';
 import viridianGymModal from './modals/towns/viridianCity/viridianGymModal';
 import pewterCityModal from './modals/towns/pewterCityModal';
 import vermilionCityModal from './modals/towns/vermilionCityModal';
@@ -102,7 +102,7 @@ export default {
         redRoomModal,
         blueHouseModal,
         viridianCityModal,
-        viridianPokeMartModal,
+        viridiancityPokeMartModal,
         viridianGymModal,
         pewterCityModal,
         vermilionCityModal,

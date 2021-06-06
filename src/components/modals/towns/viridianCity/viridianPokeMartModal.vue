@@ -1,6 +1,6 @@
 <template>
   <CardModal
-    name="viridianpokemart"
+    name="viridiancitypokemart"
     title="PokeMart"
   >
     <template #body>
@@ -12,6 +12,12 @@
           class="button"
         >
           PokeMart Attendant
+        </button><br>
+        <button
+          onclick="userInteractions.viewShop()"
+          class="button"
+        >
+          Shop
         </button><br>
       </div>
     </template>
