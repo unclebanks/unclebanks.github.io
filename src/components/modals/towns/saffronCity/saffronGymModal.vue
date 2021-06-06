@@ -1,39 +1,32 @@
 <template>
   <CardModal
-    name="viridiangym"
-    title="Viridian Gym"
+    name="saffrongym"
+    title="Saffron Gym"
   >
     <template #body>
       <div
-        id="viridianGymModalBox"
+        id="saffronGymModalBox"
       >
         <button
           id="gymTrainer1"
           onclick="userInteractions.gymTrainer1Battle()"
           class="button"
         >
-          Lass
+          Psychic
         </button><br>
         <button
           id="gymTrainer2"
           onclick="userInteractions.gymTrainer2Battle()"
           class="button"
         >
-          Beauty
-        </button><br>
-        <button
-          id="gymTrainer3"
-          onclick="userInteractions.gymTrainer3Battle()"
-          class="button"
-        >
-          Cool Trainer
+          Psychic
         </button><br>
         <button
           id="gymLeader"
           onclick="userInteractions.gymLeaderBattle()"
           class="button"
         >
-          Giovanni
+          Sabrina
         </button><br>
       </div>
     </template>

@@ -1,11 +1,11 @@
 <template>
   <CardModal
-    name="viridiangym"
-    title="Viridian Gym"
+    name="cinnabargym"
+    title="Cinnabar Gym"
   >
     <template #body>
       <div
-        id="viridianGymModalBox"
+        id="cinnabarGymModalBox"
       >
         <button
           id="gymTrainer1"

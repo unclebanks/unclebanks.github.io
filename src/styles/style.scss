@@ -601,6 +601,16 @@ progress.expBar {
     background-color: rgb(58, 58, 58);
 }
 
+#viridianPokeCenterModalBox {
+    background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityPokemonCenter.png');
+    background-size: cover;
+    height: 360px;
+}
+
+#viridianPokeCenterModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
 #viridianGymModalBox {
     background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityGym.png');
     background-size: cover;

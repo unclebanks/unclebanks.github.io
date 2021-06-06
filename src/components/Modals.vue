@@ -18,23 +18,48 @@
   <BagModal :ui="ui" />
   <GymModal :ui="ui" />
   <TownModal />
-  <OakLabModal />
+  <OakLabModal :ui="ui" />
   <palletTownModal />
-  <viridianCityModal />
-  <viridianPokeMartModal />
-  <viridianGymModal />
-  <pewterCityModal />
-  <vermilionCityModal />
-  <ceruleanCityModal />
-  <lavenderTownModal />
-  <celadonCityModal />
-  <fuchsiaCityModal />
-  <saffronCityModal />
-  <cinnabarIslandModal />
-  <cinnabarLabModal />
   <redHouseModal />
   <redRoomModal />
   <blueHouseModal />
+  <viridianCityModal />
+  <viridiancityPokeMartModal />
+  <viridiancityPokeCenterModal />
+  <viridianGymModal />
+  <pewterCityModal />
+  <pewtercityPokeMartModal />
+  <pewtercityPokeCenterModal />
+  <pewterGymModal />
+  <ceruleanCityModal />
+  <ceruleancityPokeMartModal />
+  <ceruleancityPokeCenterModal />
+  <ceruleanGymModal />
+  <vermilionCityModal />
+  <vermilioncityPokeMartModal />
+  <vermilioncityPokeCenterModal />
+  <vermilionGymModal />
+  <lavenderTownModal />
+  <lavendertownPokeMartModal />
+  <lavendertownPokeCenterModal />
+  <celadonCityModal />
+  <celadoncityPokeMartModal />
+  <celadoncityPokeCenterModal />
+  <celadonGymModal />
+  <fuchsiaCityModal />
+  <fuchsiacityPokeMartModal />
+  <fuchsiacityPokeCenterModal />
+  <fuchsiaGymModal />
+  <saffronCityModal />
+  <saffroncityPokeMartModal />
+  <saffroncityPokeCenterModal />
+  <saffronGymModal />
+  <cinnabarIslandModal />
+  <cinnabarislandPokeMartModal />
+  <cinnabarislandPokeCenterModal />
+  <cinnabarGymModal />
+  <cinnabarLabModal />
+  <cinnabarislandPokeMartModal />
 </template>
 
 <script>
@@ -63,17 +88,41 @@ import redHouseModal from './modals/towns/palletTown/redHouseModal';
 import redRoomModal from './modals/towns/palletTown/redRoomModal';
 import blueHouseModal from './modals/towns/palletTown/blueHouseModal';
 import viridianCityModal from './modals/towns/viridianCity/viridianCityModal';
-import viridianPokeMartModal from './modals/towns/viridianCity/viridianPokeMartModal';
+import viridiancityPokeMartModal from './modals/towns/viridianCity/viridianPokeMartModal';
+import viridiancityPokeCenterModal from './modals/towns/viridianCity/viridianPokeCenterModal';
 import viridianGymModal from './modals/towns/viridianCity/viridianGymModal';
-import pewterCityModal from './modals/towns/pewterCityModal';
-import vermilionCityModal from './modals/towns/vermilionCityModal';
-import ceruleanCityModal from './modals/towns/ceruleanCityModal';
-import lavenderTownModal from './modals/towns/lavenderTownModal';
-import celadonCityModal from './modals/towns/celadonCityModal';
-import fuchsiaCityModal from './modals/towns/fuchsiaCityModal';
-import saffronCityModal from './modals/towns/saffronCityModal';
+import pewterCityModal from './modals/towns/pewterCity/pewterCityModal';
+import pewtercityPokeMartModal from './modals/towns/pewterCity/pewterPokeMartModal';
+import pewtercityPokeCenterModal from './modals/towns/pewterCity/pewterPokeCenterModal';
+import pewterGymModal from './modals/towns/pewterCity/pewterGymModal';
+import ceruleanCityModal from './modals/towns/ceruleanCity/ceruleanCityModal';
+import ceruleancityPokeMartModal from './modals/towns/ceruleanCity/ceruleanPokeMartModal';
+import ceruleancityPokeCenterModal from './modals/towns/ceruleanCity/ceruleanPokeCenterModal';
+import ceruleanGymModal from './modals/towns/ceruleanCity/ceruleanGymModal';
+import vermilionCityModal from './modals/towns/vermilionCity/vermilionCityModal';
+import vermilioncityPokeMartModal from './modals/towns/vermilionCity/vermilionPokeMartModal';
+import vermilioncityPokeCenterModal from './modals/towns/vermilionCity/vermilionPokeCenterModal';
+import vermilionGymModal from './modals/towns/vermilionCity/vermilionGymModal';
+import lavenderTownModal from './modals/towns/lavenderTown/lavenderTownModal';
+import lavendertownPokeMartModal from './modals/towns/lavenderTown/lavenderPokeMartModal';
+import lavendertownPokeCenterModal from './modals/towns/lavenderTown/lavenderPokeCenterModal';
+import celadonCityModal from './modals/towns/celadonCity/celadonCityModal';
+import celadoncityPokeMartModal from './modals/towns/celadonCity/celadonPokeMartModal';
+import celadoncityPokeCenterModal from './modals/towns/celadonCity/celadonPokeCenterModal';
+import celadonGymModal from './modals/towns/celadonCity/celadonGymModal';
+import fuchsiaCityModal from './modals/towns/fuchsiaCity/fuchsiaCityModal';
+import fuchsiacityPokeMartModal from './modals/towns/fuchsiaCity/fuchsiaPokeMartModal';
+import fuchsiacityPokeCenterModal from './modals/towns/fuchsiaCity/fuchsiaPokeCenterModal';
+import fuchsiaGymModal from './modals/towns/fuchsiaCity/fuchsiaGymModal';
+import saffronCityModal from './modals/towns/saffronCity/saffronCityModal';
+import saffroncityPokeMartModal from './modals/towns/saffronCity/saffronPokeMartModal';
+import saffroncityPokeCenterModal from './modals/towns/saffronCity/saffronPokeCenterModal';
+import saffronGymModal from './modals/towns/saffronCity/saffronGymModal';
 import cinnabarIslandModal from './modals/towns/cinnabarIsland/cinnabarIslandModal';
+import cinnabarislandPokeCenterModal from './modals/towns/cinnabarIsland/cinnabarPokeCenterModal';
+import cinnabarGymModal from './modals/towns/cinnabarIsland/cinnabarGymModal';
 import cinnabarLabModal from './modals/towns/cinnabarIsland/cinnabarLabModal';
+import cinnabarislandPokeMartModal from './modals/towns/cinnabarIsland/cinnabarPokeMartModal';
 
 export default {
     components: {
@@ -102,17 +151,41 @@ export default {
         redRoomModal,
         blueHouseModal,
         viridianCityModal,
-        viridianPokeMartModal,
+        viridiancityPokeMartModal,
+        viridiancityPokeCenterModal,
         viridianGymModal,
         pewterCityModal,
-        vermilionCityModal,
+        pewtercityPokeMartModal,
+        pewtercityPokeCenterModal,
+        pewterGymModal,
         ceruleanCityModal,
+        ceruleancityPokeMartModal,
+        ceruleancityPokeCenterModal,
+        ceruleanGymModal,
+        vermilionCityModal,
+        vermilioncityPokeMartModal,
+        vermilioncityPokeCenterModal,
+        vermilionGymModal,
         lavenderTownModal,
+        lavendertownPokeMartModal,
+        lavendertownPokeCenterModal,
         celadonCityModal,
+        celadoncityPokeMartModal,
+        celadoncityPokeCenterModal,
+        celadonGymModal,
         fuchsiaCityModal,
+        fuchsiacityPokeMartModal,
+        fuchsiacityPokeCenterModal,
+        fuchsiaGymModal,
         saffronCityModal,
+        saffroncityPokeMartModal,
+        saffroncityPokeCenterModal,
+        saffronGymModal,
         cinnabarIslandModal,
+        cinnabarislandPokeCenterModal,
+        cinnabarGymModal,
         cinnabarLabModal,
+        cinnabarislandPokeMartModal,
     },
 
     props: {

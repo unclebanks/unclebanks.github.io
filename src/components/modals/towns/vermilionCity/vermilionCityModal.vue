@@ -1,42 +1,36 @@
 <template>
   <CardModal
-    name="cinnabarisland"
-    title="Cinnabar Island"
+    name="vermilioncity"
+    title="Vermilion City"
   >
     <template #body>
       <div
-        id="cinnabarIslandModalBox"
+        id="vermilionCityModalBox"
       >
         <button
-          onclick="userInteractions.cinnabarPokeMart()"
+          onclick="userInteractions.vFisherman()"
           class="button"
         >
-          PokeMart
+          Fishing Guru
         </button><br>
         <button
-          onclick="userInteractions.openCinnabarLab()"
-          class="button"
-        >
-          Cinnabar Lab
-        </button><br>
-        <button
-          onclick="userInteractions.cinnabarPokeCenter()"
+          onclick="userInteractions.vermilionPokeCenter()"
           class="button"
         >
           Pokemon Center
         </button><br>
         <button
-          onclick="userInteractions.cinnabarPokeMart()"
+          onclick="userInteractions.vermilionPokeMart()"
           class="button"
         >
           PokeMart
         </button><br>
         <button
           id="pokemart"
-          onclick="userInteractions.cinnabarGym()"
+          onclick="userInteractions.vermilionGym()"
           class="button"
         >
-          Cinnabar Gym
+          Vermilion Gym
         </button><br>
       </div>
     </template>

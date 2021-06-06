@@ -34,7 +34,49 @@ export const BALLRNG: Record<string, number> = {
     masterball: 100,
 };
 
-export type PokemonType = 'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' | 'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy';
+export const PokemonTypes = [
+    'Normal',
+    'Fighting',
+    'Flying',
+    'Poison',
+    'Ground',
+    'Rock',
+    'Bug',
+    'Ghost',
+    'Steel',
+    'Fire',
+    'Water',
+    'Grass',
+    'Electric',
+    'Psychic',
+    'Ice',
+    'Dragon',
+    'Dark',
+    'Fairy',
+] as const;
+
+export const MegaWithoutQuest = [
+    'Beedrill',
+    'Aggron',
+    'Alakazam',
+    'Banette',
+    'Garchomp',
+    'Gyarados',
+    'Heracross',
+    'Houdoom',
+    'Kangaskhan',
+    'Medicham',
+    'Pinsir',
+    'Scizor',
+    'Tyranitar',
+    'Manectric',
+    'Glalie',
+    'Lopunny',
+    'Sableye',
+    'Steelix',
+] as const;
+
+export type PokemonType = typeof PokemonTypes[number];
 
 export type PokemonStatType = 'hp' | 'attack' | 'defense' | 'sp atk' | 'sp def' | 'speed';
 

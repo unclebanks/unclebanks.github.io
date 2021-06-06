@@ -1,42 +1,42 @@
 <template>
   <CardModal
-    name="cinnabarisland"
-    title="Cinnabar Island"
+    name="ceruleancity"
+    title="Cerulean City"
   >
     <template #body>
       <div
-        id="cinnabarIslandModalBox"
+        id="ceruleanCityModalBox"
       >
         <button
-          onclick="userInteractions.cinnabarPokeMart()"
+          onclick="userInteractions.nuggetBridgeEvent()"
           class="button"
         >
-          PokeMart
+          Nugget Bridge
         </button><br>
         <button
-          onclick="userInteractions.openCinnabarLab()"
+          onclick="userInteractions.checkStory()"
           class="button"
         >
-          Cinnabar Lab
+          Burgled House
         </button><br>
         <button
-          onclick="userInteractions.cinnabarPokeCenter()"
+          onclick="userInteractions.ceruleanPokeCenter()"
           class="button"
         >
           Pokemon Center
         </button><br>
         <button
-          onclick="userInteractions.cinnabarPokeMart()"
+          onclick="userInteractions.ceruleanPokeMart()"
           class="button"
         >
           PokeMart
         </button><br>
         <button
           id="pokemart"
-          onclick="userInteractions.cinnabarGym()"
+          onclick="userInteractions.ceruleanGym()"
           class="button"
         >
-          Cinnabar Gym
+          Cerulean Gym
         </button><br>
       </div>
     </template>

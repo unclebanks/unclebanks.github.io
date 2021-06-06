@@ -1,18 +1,12 @@
 <template>
   <CardModal
-    name="viridiancitypokemart"
+    name="saffroncitypokemart"
     title="PokeMart"
   >
     <template #body>
       <div
-        id="viridianPokeMartModalBox"
+        id="saffronPokeMartModalBox"
       >
-        <button
-          onclick="userInteractions.viridianPokeMartEvent()"
-          class="button"
-        >
-          PokeMart Attendant
-        </button><br>
         <button
           onclick="userInteractions.viewShop()"
           class="button"

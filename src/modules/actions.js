@@ -611,9 +611,11 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         viewShop: function () {
             // closeModal(document.getElementById('townModal'));
             const region = player.settings.currentRegionId.toLowerCase();
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
             town.renderPokeCoinShop(region);
             town.renderBattleCoinShop(region);
             town.renderCatchCoinShop(region);
+            closeModal(document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokemartModal`));
             openModal(document.getElementById('shopModal'));
         },
         renderGym: function () {
@@ -866,14 +868,24 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.events.oakAide1B = true;
                 player.ballsAmount.pokeball += 10;
                 dom.renderBalls();
-            } else if (player.events.oakAide1B === true) {
+            } else if (player.events.oakAide1B === true && !player.events.oakAide1C) {
                 alert('Fine, start over... Leave me alone and check your Pokeballs');
+                player.events.oakAide1C = true;
                 player.ballsAmount.pokeball = 0;
                 dom.renderBalls();
+            } else if (player.events.oakAide1C) {
+                alert('Leave me alone before something REALLY bad happens to you and your POKEMON');
             }
         },
         oakAide2: function () {
-            alert('Have you talked to the other aide? They get a little overwhelmed sometimes, I would be careful if I were you.');
+            if (!player.events.oakAide1) {
+                alert('Have you talked to the other aide? They get a little overwhelmed sometimes, I would be careful if I were you.');
+            } else if (player.events.oakAide1C === true && !player.events.oakAide2) {
+                alert('I am sorry for my coworker. Please take these as an apology and try to avoid dangerous NPCs in the future.');
+                player.ballsAmount.pokeball += 10;
+                dom.renderBalls();
+                player.events.oakAide2 = true;
+            } else { alert('Hiya! I work as an Aide.'); }
         },
         oakLabOak: function () {
             if (player.events.oakParcelReceived && !player.events.oakParcelGiven) {
@@ -881,9 +893,48 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.events.oakParcelGiven = true;
             } else { alert('How is your POKEDEX coming along?'); }
         },
+        viridianPokeCenter: function () {
+            closeModal(document.getElementById('viridiancityModal'));
+            openModal(document.getElementById('viridiancitypokecenterModal'));
+        },
+        viridianDrunkard: function () {
+            if (!player.events.oakParcelReceived) {
+                alert('I am so hungover. Can you run to the PokeMart and grab me some medicine from the PokeMart Attendant?');
+                player.events.viridianDrunkard = true;
+            } else if (player.events.oakParcelReceived && !player.events.viridianDrunkard) {
+                alert('I was feeling sick earlier and had a quest for you to grab me medicine with a nice reward but you missed it. Sometimes the order that you check NPCs in matters.');
+            } else if (player.events.viridianDrunkard && !player.events.viridianDrunkard1) {
+                alert('I felt better before you got here. Thanks anyways though, here are some GREATBALLS for your troubles');
+                player.ballsAmount.greatball += 20;
+                dom.renderBalls();
+                player.events.viridianDrunkard1 = true;
+            } else if (player.events.viridianDrunkard1) {
+                alert('Thanks for taking the time to talk to me. Many other NPCs will offer you rewards or quests but be careful, sometimes the order you talk to us matters and you might miss some stuff.');
+            }
+        },
         viridianPokeMart: function () {
             closeModal(document.getElementById('viridiancityModal'));
-            openModal(document.getElementById('viridianpokemartModal'));
+            openModal(document.getElementById('viridiancitypokemartModal'));
+        },
+        viridianGym: function () {
+            if (!player.badges['Volcano Badge']) {
+                alert('The door is locked. You should check back later.');
+            } else {
+                closeModal(document.getElementById('viridiancityModal'));
+                openModal(document.getElementById('viridiangymModal'));
+            }
+        },
+        pewterPokeMart: function () {
+            closeModal(document.getElementById('pewtercityModal'));
+            openModal(document.getElementById('pewtercitypokemartModal'));
+        },
+        pewterPokeCenter: function () {
+            closeModal(document.getElementById('pewtercityModal'));
+            openModal(document.getElementById('pewtercitypokecenterModal'));
+        },
+        pewterGym: function () {
+            closeModal(document.getElementById('pewtercityModal'));
+            openModal(document.getElementById('pewtergymModal'));
         },
         pewterMuseumEvent: function () {
             if (player.events.pewterMuseum1 === true) {
@@ -897,6 +948,74 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('Congrats on the win. Take this Old Amber as a bonus');
                 player.events.pewterMuseum1 = true;
             }
+        },
+        ceruleanPokeMart: function () {
+            closeModal(document.getElementById('ceruleancityModal'));
+            openModal(document.getElementById('ceruleancitypokemartModal'));
+        },
+        ceruleanPokeCenter: function () {
+            closeModal(document.getElementById('ceruleancityModal'));
+            openModal(document.getElementById('ceruleancitypokecenterModal'));
+        },
+        ceruleanGym: function () {
+            closeModal(document.getElementById('ceruleancityModal'));
+            openModal(document.getElementById('ceruleangymModal'));
+        },
+        vermilionPokeMart: function () {
+            closeModal(document.getElementById('vermilioncityModal'));
+            openModal(document.getElementById('vermilioncitypokemartModal'));
+        },
+        vermilionPokeCenter: function () {
+            closeModal(document.getElementById('vermilioncityModal'));
+            openModal(document.getElementById('vermilioncitypokecenterModal'));
+        },
+        vermilionGym: function () {
+            closeModal(document.getElementById('vermilioncityModal'));
+            openModal(document.getElementById('vermiliongymModal'));
+        },
+        celadonPokeMart: function () {
+            closeModal(document.getElementById('celadoncityModal'));
+            openModal(document.getElementById('celadoncitypokemartModal'));
+        },
+        celadonPokeCenter: function () {
+            closeModal(document.getElementById('celadoncityModal'));
+            openModal(document.getElementById('celadoncitypokecenterModal'));
+        },
+        celadonGym: function () {
+            closeModal(document.getElementById('celadoncityModal'));
+            openModal(document.getElementById('celadongymModal'));
+        },
+        fuchsiaPokeMart: function () {
+            closeModal(document.getElementById('fuchsiacityModal'));
+            openModal(document.getElementById('fuchsiacitypokemartModal'));
+        },
+        fuchsiaPokeCenter: function () {
+            closeModal(document.getElementById('fuchsiacityModal'));
+            openModal(document.getElementById('fuchsiacitypokecenterModal'));
+        },
+        fuchsiaGym: function () {
+            closeModal(document.getElementById('fuchsiacityModal'));
+            openModal(document.getElementById('fuchsiagymModal'));
+        },
+        saffronPokeMart: function () {
+            closeModal(document.getElementById('saffroncityModal'));
+            openModal(document.getElementById('saffroncitypokemartModal'));
+        },
+        saffronPokeCenter: function () {
+            closeModal(document.getElementById('saffroncityModal'));
+            openModal(document.getElementById('saffroncitypokecenterModal'));
+        },
+        saffronGym: function () {
+            closeModal(document.getElementById('saffroncityModal'));
+            openModal(document.getElementById('saffrongymModal'));
+        },
+        lavenderPokeMart: function () {
+            closeModal(document.getElementById('lavendertownModal'));
+            openModal(document.getElementById('lavendertownpokemartModal'));
+        },
+        lavenderPokeCenter: function () {
+            closeModal(document.getElementById('lavendertownModal'));
+            openModal(document.getElementById('lavendertownpokecenterModal'));
         },
         nuggetBridgeEvent: function () {
             if (player.events.nugget5 === true && !player.hasPokemon('Charmander')) {
@@ -935,6 +1054,18 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.addPoke(new Poke(POKEDEX[171], 25));
                 player.addPokedex('Aerodactyl', POKEDEXFLAGS.ownNormal);
             }
+        },
+        cinnabarPokeMart: function () {
+            closeModal(document.getElementById('cinnabarislandModal'));
+            openModal(document.getElementById('cinnabarislandpokemartModal'));
+        },
+        cinnabarPokeCenter: function () {
+            closeModal(document.getElementById('cinnabarislandModal'));
+            openModal(document.getElementById('cinnabarislandpokecenterModal'));
+        },
+        cinnabarGym: function () {
+            closeModal(document.getElementById('cinnabarislandModal'));
+            openModal(document.getElementById('cinnabargymModal'));
         },
         beldumEvent: function () {
             if (!player.events.beldum1) {
@@ -1035,11 +1166,26 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         megaBeedrillQuest: function () {
             if ((player.typeStats.bugBeaten + player.typeStats.poisonBeaten >= 500) && (!player.events.megaBeedrillQuest)) {
-                player.defeatedWith.beedrill = 0;
+                alert("You've unlocked the Mega Beedrill quest!");
+                player.defeatedWith.Beedrill = 0;
                 if ((player.typeStats.bugBeaten >= 1000) && (player.typeStats.poisonBeaten >= 1000)) {
-                    if (player.defeatedWith.beedrill >= 2500) {
-                        player.addPoke(new Poke(pokeByName('M-Beedrill'), 10));
+                    if (player.defeatedWith.Beedrill >= 2500) {
+                        player.megaStones.beedrillite = 1;
+                        player.statistics.MegaQuestCompleted++;
                         player.events.megaBeedrillQuest = true;
+                    }
+                }
+            }
+        },
+        megaSableyeQuest: function () {
+            if ((player.typeStats.ghostBeaten + player.typeStats.darkBeaten >= 250) && (!player.events.megaSableyeQuest)) {
+                alert("You've unlocked the Mega Sableye quest!");
+                player.defeatedWith.Sableye = 0;
+                if ((player.typeStats.darkBeaten >= 500) && (player.typeStats.ghostBeaten >= 500)) {
+                    if (player.defeatedWith.Sableye >= 5000) {
+                        player.megaStones.sablenite = 1;
+                        player.statistics.MegaQuestCompleted++;
+                        player.events.megaSableyeQuest = true;
                     }
                 }
             }

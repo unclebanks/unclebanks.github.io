@@ -1,23 +1,25 @@
 <template>
   <CardModal
-    name="viridiancitypokemart"
-    title="PokeMart"
+    name="pewtergym"
+    title="Pewter Gym"
   >
     <template #body>
       <div
-        id="viridianPokeMartModalBox"
+        id="pewterGymModalBox"
       >
         <button
-          onclick="userInteractions.viridianPokeMartEvent()"
+          id="gymTrainer1"
+          onclick="userInteractions.gymTrainer1Battle()"
           class="button"
         >
-          PokeMart Attendant
+          Jr. Trainer
         </button><br>
         <button
-          onclick="userInteractions.viewShop()"
+          id="gymLeader"
+          onclick="userInteractions.gymLeaderBattle()"
           class="button"
         >
-          Shop
+          Brock
         </button><br>
       </div>
     </template>
