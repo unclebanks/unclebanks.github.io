@@ -8,20 +8,20 @@
         id="oaklabModalBox"
       >
         <button
-          onclick="userInteractions.oakAide1()"
           class="button"
+          @click="ui.oakAide1()"
         >
           Prof. Aide 1
         </button><br>
         <button
-          onclick="userInteractions.oakAide2()"
           class="button"
+          @click="ui.oakAide2()"
         >
           Prof. Aide 2
         </button><br>
         <button
-          onclick="userInteractions.oakLabOak()"
           class="button"
+          @click="ui.oakLabOak()"
         >
           Prof. Oak
         </button><br>
@@ -36,6 +36,10 @@ import CardModal from '../common/CardModal.vue';
 export default {
     components: {
         CardModal,
+    },
+
+    props: {
+        ui: { type: Object, required: true },
     },
 };
 </script>

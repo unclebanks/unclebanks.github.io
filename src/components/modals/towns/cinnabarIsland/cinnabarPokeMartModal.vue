@@ -1,23 +1,23 @@
 <template>
   <CardModal
-    name="ceruleancity"
-    title="Cerulean City"
+    name="cinnabarislandpokemart"
+    title="PokeMart"
   >
     <template #body>
       <div
-        id="ceruleanCityModalBox"
+        id="cinnabarPokeMartModalBox"
       >
         <button
-          onclick="userInteractions.nuggetBridgeEvent()"
+          onclick="userInteractions.viridianPokeMartEvent()"
           class="button"
         >
-          Nugget Bridge
+          PokeMart Attendant
         </button><br>
         <button
-          onclick="userInteractions.checkStory()"
+          onclick="userInteractions.viewShop()"
           class="button"
         >
-          Burgled House
+          Shop
         </button><br>
       </div>
     </template>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import CardModal from '../../common/CardModal.vue';
+import CardModal from '../../../common/CardModal.vue';
 
 export default {
     components: {

@@ -1,11 +1,11 @@
 <template>
   <CardModal
-    name="viridiangym"
-    title="Viridian Gym"
+    name="celadongym"
+    title="Celadon Gym"
   >
     <template #body>
       <div
-        id="viridianGymModalBox"
+        id="celadonGymModalBox"
       >
         <button
           id="gymTrainer1"
@@ -33,7 +33,7 @@
           onclick="userInteractions.gymLeaderBattle()"
           class="button"
         >
-          Giovanni
+          Erika
         </button><br>
       </div>
     </template>

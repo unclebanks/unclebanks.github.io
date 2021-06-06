@@ -1,17 +1,17 @@
 <template>
   <CardModal
-    name="celadoncity"
-    title="Celadon City"
+    name="celadoncitypokemart"
+    title="PokeMart"
   >
     <template #body>
       <div
-        id="celadonCityModalBox"
+        id="celadonPokeMartModalBox"
       >
         <button
-          onclick="userInteractions.gameCorner()"
+          onclick="userInteractions.viewShop()"
           class="button"
         >
-          Game Corner
+          Shop
         </button><br>
       </div>
     </template>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import CardModal from '../../common/CardModal.vue';
+import CardModal from '../../../common/CardModal.vue';
 
 export default {
     components: {
