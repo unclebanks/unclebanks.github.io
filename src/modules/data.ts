@@ -55,6 +55,27 @@ export const PokemonTypes = [
     'Fairy',
 ] as const;
 
+export const MegaWithoutQuest = [
+    'Beedrill',
+    'Aggron',
+    'Alakazam',
+    'Banette',
+    'Garchomp',
+    'Gyarados',
+    'Heracross',
+    'Houdoom',
+    'Kangaskhan',
+    'Medicham',
+    'Pinsir',
+    'Scizor',
+    'Tyranitar',
+    'Manectric',
+    'Glalie',
+    'Lopunny',
+    'Sableye',
+    'Steelix',
+] as const;
+
 export type PokemonType = typeof PokemonTypes[number];
 
 export type PokemonStatType = 'hp' | 'attack' | 'defense' | 'sp atk' | 'sp def' | 'speed';
