@@ -19,6 +19,7 @@
   <GymModal :ui="ui" />
   <TownModal />
   <OakLabModal :ui="ui" />
+  <KantoModal />
   <palletTownModal />
   <redHouseModal />
   <redRoomModal />
@@ -31,6 +32,7 @@
   <pewtercityPokeMartModal />
   <pewtercityPokeCenterModal />
   <pewterGymModal />
+  <pewterMuseumModal />
   <ceruleanCityModal />
   <ceruleancityPokeMartModal />
   <ceruleancityPokeCenterModal />
@@ -82,6 +84,7 @@ import PrizeCornerModal from './modals/PrizeCornerModal.vue';
 import BagModal from './modals/BagModal.vue';
 import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
+import KantoModal from './modals/KantoModal';
 import OakLabModal from './modals/OakLabModal';
 import palletTownModal from './modals/towns/palletTown/palletTownModal';
 import redHouseModal from './modals/towns/palletTown/redHouseModal';
@@ -95,6 +98,7 @@ import pewterCityModal from './modals/towns/pewterCity/pewterCityModal';
 import pewtercityPokeMartModal from './modals/towns/pewterCity/pewterPokeMartModal';
 import pewtercityPokeCenterModal from './modals/towns/pewterCity/pewterPokeCenterModal';
 import pewterGymModal from './modals/towns/pewterCity/pewterGymModal';
+import pewterMuseumModal from './modals/towns/pewterCity/pewterMuseumModal';
 import ceruleanCityModal from './modals/towns/ceruleanCity/ceruleanCityModal';
 import ceruleancityPokeMartModal from './modals/towns/ceruleanCity/ceruleanPokeMartModal';
 import ceruleancityPokeCenterModal from './modals/towns/ceruleanCity/ceruleanPokeCenterModal';
@@ -158,6 +162,7 @@ export default {
         pewtercityPokeMartModal,
         pewtercityPokeCenterModal,
         pewterGymModal,
+        pewterMuseumModal,
         ceruleanCityModal,
         ceruleancityPokeMartModal,
         ceruleancityPokeCenterModal,
@@ -186,6 +191,7 @@ export default {
         cinnabarGymModal,
         cinnabarLabModal,
         cinnabarislandPokeMartModal,
+        KantoModal,
     },
 
     props: {

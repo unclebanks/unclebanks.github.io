@@ -8,7 +8,7 @@
         id="pewterCityModalBox"
       >
         <button
-          onclick="userInteractions.pewterMuseumEvent()"
+          onclick="userInteractions.pewterMuseum()"
           class="button"
         >
           Museum

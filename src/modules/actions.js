@@ -936,7 +936,18 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('pewtercityModal'));
             openModal(document.getElementById('pewtergymModal'));
         },
-        pewterMuseumEvent: function () {
+        pewterMuseum: function () {
+            closeModal(document.getElementById('pewtercityModal'));
+            openModal(document.getElementById('pewtermuseumModal'));
+        },
+        kantoTest: function () {
+            closeModal(document.getElementById('pallettownModal'));
+            openModal(document.getElementById('kantoModal'));
+        },
+        test: function () {
+            alert('Fuck yeah');
+        },
+        pewterMuseumScientist: function () {
             if (player.events.pewterMuseum1 === true) {
                 alert('Did you take that fossil to Cinnabar Island?');
             }

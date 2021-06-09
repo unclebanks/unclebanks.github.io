@@ -631,6 +631,57 @@ progress.expBar {
     background-color: rgb(58, 58, 58);
 }
 
+#pewterMuseumModalBox {
+    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterMuseum.png');
+    background-size: cover;
+    height: 200px;
+}
+
+#pewterMuseumModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#pewterGymModalBox {
+    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterGym.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 512px;
+    width: 400px;
+}
+
+#kantoMap {
+    background-image: url('../assets/backgrounds/kanto/palletTown/palletTown.png');
+    height: 402px;
+    width: 400px;
+}
+#kantoMapTEST .kantotestbox {
+    background-color: black;
+}
+
+#pewterGymModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#pewterPokeCenterModalBox {
+    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterPokeCenter.png');
+    background-size: cover;
+    height: 480px;
+}
+
+#pewterPokeCenterModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#pewterPokeMartModalBox {
+    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterPokeMart.png');
+    background-size: cover;
+    height: 480px;
+}
+
+#pewterPokeMartModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
 #ceruleanCityModalBox {
     background-image: url('../assets/backgrounds/kanto/ceruleanCity/ceruleanCity.png');
     background-size: cover;
