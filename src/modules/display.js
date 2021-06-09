@@ -134,9 +134,9 @@ export default (player, combatLoop, userInteractions) => {
                     if (unlocked) {
                         routeColor = (routeId === player.settings.currentRouteId) ? COLORS.route.current : COLORS.route.unlocked;
                         routeWeight = (routeId === player.settings.currentRouteId) ? 'bold' : 'normal';
-                        if (routeColor !== COLORS.route.current) { // don't overwrite this color, might confuse the user
+                        if (routeColor !== COLORS.route.current && route.pokes) { // don't overwrite this color, might confuse the user
                             let status = 2; // 2 for shiny caught, 1 for regular caught, 0 for missing
-                            let encounters = route.pokes;
+                            let encounters = route.pokes || [];
                             if (route._special) {
                                 encounters = encounters.concat(route._special.filter(requirementMet).flatMap((s) => s.pokemon));
                             }
