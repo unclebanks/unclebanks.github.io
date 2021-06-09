@@ -4,6 +4,7 @@
     title="Kanto"
   >
     <template #body>
+      <img
         id="kantoMap"
         usemap="#kantomap"
       >
