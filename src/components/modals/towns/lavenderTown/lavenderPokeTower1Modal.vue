@@ -1,29 +1,23 @@
 <template>
   <CardModal
-    name="lavendertown"
-    title="Lavender Town"
+    name="lavendertownpoketower1"
+    title="Pokemon Tower First Floor"
   >
     <template #body>
       <div
-        id="lavenderTownModalBox"
+        id="lavenderPokeTower1ModalBox"
       >
         <button
-          onclick="userInteractions.lavenderPokeTower1()"
+          onclick="userInteractions.lavenderPokeTower2UP()"
           class="button"
         >
-          Pokemon Tower
+          Second Floor
         </button><br>
         <button
-          onclick="userInteractions.lavenderPokeCenter()"
+          onclick="userInteractions.lavenderPokeTowerReceptionist()"
           class="button"
         >
-          Pokemon Center
-        </button><br>
-        <button
-          onclick="userInteractions.lavenderPokeMart()"
-          class="button"
-        >
-          PokeMart
+          Receptionist
         </button><br>
       </div>
     </template>

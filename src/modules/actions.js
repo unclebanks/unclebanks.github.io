@@ -980,6 +980,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('vermilioncityModal'));
             openModal(document.getElementById('vermilioncitypokecenterModal'));
         },
+        vermilionSSANNE: function () {
+            closeModal(document.getElementById('vermilioncityModal'));
+            openModal(document.getElementById('vermilioncityssanne1Modal'));
+        },
         vermilionGym: function () {
             closeModal(document.getElementById('vermilioncityModal'));
             openModal(document.getElementById('vermiliongymModal'));
@@ -1027,6 +1031,61 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         lavenderPokeCenter: function () {
             closeModal(document.getElementById('lavendertownModal'));
             openModal(document.getElementById('lavendertownpokecenterModal'));
+        },
+        lavenderPokeTower1: function () {
+            closeModal(document.getElementById('lavendertownModal'));
+            openModal(document.getElementById('lavendertownpoketower1Modal'));
+        },
+        lavenderPokeTower1DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower2Modal'));
+            openModal(document.getElementById('lavendertownpoketower1Modal'));
+        },
+        lavenderPokeTower2UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower1Modal'));
+            openModal(document.getElementById('lavendertownpoketower2Modal'));
+        },
+        lavenderPokeTower2DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower3Modal'));
+            openModal(document.getElementById('lavendertownpoketower2Modal'));
+        },
+        lavenderPokeTower3UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower2Modal'));
+            openModal(document.getElementById('lavendertownpoketower3Modal'));
+        },
+        lavenderPokeTower3DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower4Modal'));
+            openModal(document.getElementById('lavendertownpoketower3Modal'));
+        },
+        lavenderPokeTower4UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower3Modal'));
+            openModal(document.getElementById('lavendertownpoketower4Modal'));
+        },
+        lavenderPokeTower4DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower5Modal'));
+            openModal(document.getElementById('lavendertownpoketower4Modal'));
+        },
+        lavenderPokeTower5UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower4Modal'));
+            openModal(document.getElementById('lavendertownpoketower5Modal'));
+        },
+        lavenderPokeTower5DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower6Modal'));
+            openModal(document.getElementById('lavendertownpoketower5Modal'));
+        },
+        lavenderPokeTower6UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower5Modal'));
+            openModal(document.getElementById('lavendertownpoketower6Modal'));
+        },
+        lavenderPokeTower6DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower7Modal'));
+            openModal(document.getElementById('lavendertownpoketower6Modal'));
+        },
+        lavenderPokeTower7UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower6Modal'));
+            openModal(document.getElementById('lavendertownpoketower7Modal'));
+        },
+        lavenderPokeTowerReceptionist: function () {
+            alert('Welcome to the Pokemon Tower. There is nothing here yet but a questline will be implemented shortly');
         },
         nuggetBridgeEvent: function () {
             if (player.events.nugget5 === true && !player.hasPokemon('Charmander')) {
