@@ -537,10 +537,6 @@ progress.expBar {
     width: 384px;
 }
 
-#palletTownModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
 #redHouseModalBox {
     background-image: url('../assets/backgrounds/kanto/palletTown/redHouse.png');
     background-size: cover;
@@ -548,19 +544,11 @@ progress.expBar {
     height: 320px;
 }
 
-#redHouseModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
 #redRoomModalBox {
     background-image: url('../assets/backgrounds/kanto/palletTown/redRoom.png');
     background-size: contain;
-    width: 208px;
-    height: 160px;
-}
-
-#redRoomModalBox .button {
-    background-color: rgb(58, 58, 58);
+    width: 384px;
+    height: 288px;
 }
 
 #blueHouseModalBox {
@@ -576,22 +564,15 @@ progress.expBar {
 #oaklabModalBox {
     background-image: url('../assets/backgrounds/kanto/palletTown/oakLabKanto.png');
     background-size: contain;
-    height: 481px;
-    width: 460px;
-}
-
-#oaklabModalBox .button {
-    background-color: rgb(58, 58, 58);
+    height: 448px;
+    width: 416px;
 }
 
 #viridianCityModalBox {
     background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCity.png');
     background-size: cover;
-    height: 460px;
-}
-
-#viridianCityModalBox .button {
-    background-color: rgb(58, 58, 58);
+    width: 568px;
+    height: 473px;
 }
 
 #viridianPokeMartModalBox {

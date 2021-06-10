@@ -828,9 +828,17 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('pallettownModal'));
             openModal(document.getElementById('oaklabModal'));
         },
+        oakLabExit: function () {
+            closeModal(document.getElementById('oaklabModal'));
+            openModal(document.getElementById('pallettownModal'));
+        },
         redHouse: function () {
             closeModal(document.getElementById('pallettownModal'));
             openModal(document.getElementById('redhouseModal'));
+        },
+        redHouseExit: function () {
+            closeModal(document.getElementById('redhouseModal'));
+            openModal(document.getElementById('pallettownModal'));
         },
         redMom: function () {
             alert('Hi! My Red is not home right now. Check back another time.');
@@ -841,6 +849,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         redRoom: function () {
             closeModal(document.getElementById('redhouseModal'));
             openModal(document.getElementById('redroomModal'));
+        },
+        redRoomDown: function () {
+            closeModal(document.getElementById('redroomModal'));
+            openModal(document.getElementById('redhouseModal'));
         },
         redPC: function () {
             alert('The computer is powered off.');

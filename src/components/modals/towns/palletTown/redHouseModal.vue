@@ -27,6 +27,11 @@
           coords="316,32,416,114"
           onclick="userInteractions.redRoom()"
         >
+        <area
+          shape="rect"
+          coords="118,256,171,297"
+          onclick="userInteractions.redHouseExit()"
+        >
       </map>
     </template>
   </CardModal>

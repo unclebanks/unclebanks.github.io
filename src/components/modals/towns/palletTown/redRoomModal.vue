@@ -4,28 +4,35 @@
     title="Red's Room"
   >
     <template #body>
-      <div
+      <img
         id="redRoomModalBox"
+        usemap="#redRoomMap"
       >
-        <button
+
+      <map
+        name="redRoomMap"
+      >
+        <area
+          shape="rect"
+          coords="32,22,64,97"
           onclick="userInteractions.redPC()"
-          class="button"
         >
-          Red's PC
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="193,123,224,209"
           onclick="userInteractions.redVideoGames()"
-          class="button"
         >
-          Red's Video Games
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="352,24,384,48"
           onclick="userInteractions.redMap()"
-          class="button"
         >
-          Red's Map
-        </button><br>
-      </div>
+        <area
+          shape="rect"
+          coords="257,58,348,129"
+          onclick="userInteractions.redRoomDown()"
+        >
+      </map>
     </template>
   </CardModal>
 </template>
