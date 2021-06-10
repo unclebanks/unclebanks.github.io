@@ -533,7 +533,8 @@ progress.expBar {
 #palletTownModalBox {
     background-image: url('../assets/backgrounds/kanto/palletTown/palletTown.png');
     background-size: cover;
-    height: 481px;
+    height: 320px;
+    width: 384px;
 }
 
 #palletTownModalBox .button {
@@ -543,7 +544,8 @@ progress.expBar {
 #redHouseModalBox {
     background-image: url('../assets/backgrounds/kanto/palletTown/redHouse.png');
     background-size: cover;
-    height: 481px;
+    width: 416px;
+    height: 320px;
 }
 
 #redHouseModalBox .button {
@@ -552,8 +554,9 @@ progress.expBar {
 
 #redRoomModalBox {
     background-image: url('../assets/backgrounds/kanto/palletTown/redRoom.png');
-    background-size: cover;
-    height: 481px;
+    background-size: contain;
+    width: 208px;
+    height: 160px;
 }
 
 #redRoomModalBox .button {
@@ -651,11 +654,8 @@ progress.expBar {
 
 #kantoMap {
     background-image: url('../assets/backgrounds/kanto/palletTown/palletTown.png');
-    height: 402px;
-    width: 400px;
-}
-#kantoMapTEST .kantotestbox {
-    background-color: black;
+    height: 320px;
+    width: 384px;
 }
 
 #pewterGymModalBox .button {
@@ -709,6 +709,28 @@ progress.expBar {
 }
 
 #ceruleanPokeMartModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#seasideBillHouseBeforeConvertModalBox {
+    background-image: url('../assets/backgrounds/kanto/ceruleanCity/seasideCottageBeforeConvert.png');
+    background-size: cover;
+    width: 480px;
+    height: 352px;
+}
+
+#seasideBillHouseBeforeConvertModalBox .button {
+    background-color: rgb(58, 58, 58);
+}
+
+#seasideBillHouseAfterConvertModalBox {
+    background-image: url('../assets/backgrounds/kanto/ceruleanCity/seasideCottageAfterConvert.png');
+    background-size: cover;
+    width: 480px;
+    height: 352px;
+}
+
+#seasideBillHouseAfterConvertModalBox .button {
     background-color: rgb(58, 58, 58);
 }
 
@@ -794,7 +816,7 @@ progress.expBar {
 }
 
 #lavenderPokeTower2ModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/kantoPokemonTowerF3.png');
+    background-image: url('../assets/backgrounds/kanto/lavenderTown/kantoPokemonTowerF2.png');
     background-size: cover;
     height: 480px;
 }

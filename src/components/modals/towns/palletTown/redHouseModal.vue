@@ -4,28 +4,30 @@
     title="Red's House"
   >
     <template #body>
-      <div
+      <img
         id="redHouseModalBox"
+        usemap="#redHouseMap"
       >
-        <button
+
+      <map
+        name="redHouseMap"
+      >
+        <area
+          shape="rect"
+          coords="255,117,290,162"
           onclick="userInteractions.redMom()"
-          class="button"
         >
-          Red's Mom
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="191,25,225,78"
           onclick="userInteractions.redTV()"
-          class="button"
         >
-          Red's TV
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="316,32,416,114"
           onclick="userInteractions.redRoom()"
-          class="button"
         >
-          Red's Room
-        </button><br>
-      </div>
+      </map>
     </template>
   </CardModal>
 </template>

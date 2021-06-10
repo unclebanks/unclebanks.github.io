@@ -19,7 +19,6 @@
   <GymModal :ui="ui" />
   <TownModal />
   <OakLabModal :ui="ui" />
-  <KantoModal />
   <palletTownModal />
   <redHouseModal />
   <redRoomModal />
@@ -37,6 +36,9 @@
   <ceruleancityPokeMartModal />
   <ceruleancityPokeCenterModal />
   <ceruleanGymModal />
+  <seasideCottageModal />
+  <seasideBillHouseBeforeConvertModal />
+  <seasideBillHouseAfterConvertModal />
   <vermilionCityModal />
   <vermilioncityPokeMartModal />
   <vermilioncityPokeCenterModal />
@@ -92,7 +94,6 @@ import PrizeCornerModal from './modals/PrizeCornerModal.vue';
 import BagModal from './modals/BagModal.vue';
 import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
-import KantoModal from './modals/KantoModal';
 import OakLabModal from './modals/OakLabModal';
 import palletTownModal from './modals/towns/palletTown/palletTownModal';
 import redHouseModal from './modals/towns/palletTown/redHouseModal';
@@ -111,6 +112,9 @@ import ceruleanCityModal from './modals/towns/ceruleanCity/ceruleanCityModal';
 import ceruleancityPokeMartModal from './modals/towns/ceruleanCity/ceruleanPokeMartModal';
 import ceruleancityPokeCenterModal from './modals/towns/ceruleanCity/ceruleanPokeCenterModal';
 import ceruleanGymModal from './modals/towns/ceruleanCity/ceruleanGymModal';
+import seasideCottageModal from './modals/towns/ceruleanCity/seasideCottageModal';
+import seasideBillHouseBeforeConvertModal from './modals/towns/ceruleanCity/seasideBillHouseBeforeConvertModal';
+import seasideBillHouseAfterConvertModal from './modals/towns/ceruleanCity/seasideBillHouseAfterConvertModal';
 import vermilionCityModal from './modals/towns/vermilionCity/vermilionCityModal';
 import vermilioncityPokeMartModal from './modals/towns/vermilionCity/vermilionPokeMartModal';
 import vermilioncityPokeCenterModal from './modals/towns/vermilionCity/vermilionPokeCenterModal';
@@ -183,6 +187,9 @@ export default {
         ceruleancityPokeMartModal,
         ceruleancityPokeCenterModal,
         ceruleanGymModal,
+        seasideCottageModal,
+        seasideBillHouseBeforeConvertModal,
+        seasideBillHouseAfterConvertModal,
         vermilionCityModal,
         vermilioncityPokeMartModal,
         vermilioncityPokeCenterModal,
@@ -215,7 +222,6 @@ export default {
         cinnabarGymModal,
         cinnabarLabModal,
         cinnabarislandPokeMartModal,
-        KantoModal,
     },
 
     props: {
