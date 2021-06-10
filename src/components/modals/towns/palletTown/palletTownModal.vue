@@ -4,31 +4,31 @@
     title="Pallet Town"
   >
     <template #body>
-      <div
+      <img
         id="palletTownModalBox"
+        usemap="#kantomap"
       >
-        <button
-          id="playerHouseButtonKanto"
+
+      <map
+        id="kantoMapTEST"
+        name="kantomap"
+      >
+        <area
+          shape="rect"
+          coords="81,54,159,126"
           onclick="userInteractions.redHouse()"
-          class="button"
         >
-          Red's House
-        </button><br>
-        <button
-          id="rivalHouseButtonKanto"
+        <area
+          shape="rect"
+          coords="224,56,304,128"
           onclick="userInteractions.blueHouse()"
-          class="button"
         >
-          Blue's House
-        </button><br>
-        <button
-          id="oakLabButtonKanto"
+        <area
+          shape="rect"
+          coords="208,152,320,223"
           onclick="userInteractions.oakLab()"
-          class="button"
         >
-          Prof. Oak's Lab
-        </button><br>
-      </div>
+      </map>
     </template>
   </CardModal>
 </template>

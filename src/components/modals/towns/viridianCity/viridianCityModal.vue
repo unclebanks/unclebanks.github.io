@@ -4,35 +4,35 @@
     title="Viridian City"
   >
     <template #body>
-      <div
+      <img
         id="viridianCityModalBox"
+        usemap="#viridianCitymap"
       >
-        <button
+
+      <map
+        name="viridianCitymap"
+      >
+        <area
+          shape="rect"
+          coords="81,54,159,126"
           onclick="userInteractions.viridianDrunkard()"
-          class="button"
         >
-          Drunken Old Man
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="284,267,344,320"
           onclick="userInteractions.viridianPokeCenter()"
-          class="button"
         >
-          Pokemon Center
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="402,191,450,237"
           onclick="userInteractions.viridianPokeMart()"
-          class="button"
         >
-          PokeMart
-        </button><br>
-        <button
-          id="pokemart"
+        <area
+          shape="rect"
+          coords="390,71,463,124"
           onclick="userInteractions.viridianGym()"
-          class="button"
         >
-          Viridian Gym
-        </button><br>
-      </div>
+      </map>
     </template>
   </CardModal>
 </template>

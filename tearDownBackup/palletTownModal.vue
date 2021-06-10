@@ -1,36 +1,38 @@
 <template>
   <CardModal
-    name="pewtercity"
-    title="Pewter City"
+    name="pallettown"
+    title="Pallet Town"
   >
     <template #body>
       <div
-        id="pewterCityModalBox"
+        id="palletTownModalBox"
       >
         <button
-          onclick="userInteractions.pewterMuseum()"
+          id="playerHouseButtonKanto"
+          onclick="userInteractions.redHouse()"
           class="button"
         >
-          Museum
+          Red's House
         </button><br>
         <button
-          onclick="userInteractions.pewterPokeCenter()"
+          id="rivalHouseButtonKanto"
+          onclick="userInteractions.blueHouse()"
           class="button"
         >
-          Pokemon Center
+          Blue's House
         </button><br>
         <button
-          onclick="userInteractions.pewterPokeMart()"
+          id="oakLabButtonKanto"
+          onclick="userInteractions.oakLab()"
           class="button"
         >
-          PokeMart
+          Prof. Oak's Lab
         </button><br>
         <button
-          id="pokemart"
-          onclick="userInteractions.pewterGym()"
+          onclick="userInteractions.kantoTest()"
           class="button"
         >
-          Pewter Gym
+          Kanto TEST
         </button><br>
       </div>
     </template>

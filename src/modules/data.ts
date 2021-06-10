@@ -13,6 +13,8 @@ COLORS['route'] = {};
 COLORS['route']['locked'] = 'rgb(255, 0, 0)';
 COLORS['route']['unlocked'] = 'rgb(255, 255, 255)';
 COLORS['route']['current'] = 'rgb(139, 69, 19)';
+COLORS['route']['caughtAll'] = 'rgb(0, 127, 0)';
+COLORS['route']['caughtAllShinies'] = 'rgb(127, 127, 0)';
 
 export const POKEDEXFLAGS: Record<string, number> = {};
 POKEDEXFLAGS['unseen'] = 0;

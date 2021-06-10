@@ -14,6 +14,12 @@
           Fishing Guru
         </button><br>
         <button
+          onclick="userInteractions.vermilionSSANNE()"
+          class="button"
+        >
+          S.S. ANNE
+        </button><br>
+        <button
           onclick="userInteractions.vermilionPokeCenter()"
           class="button"
         >

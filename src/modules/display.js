@@ -1,6 +1,8 @@
-import { $, flash } from './utilities';
+// eslint-disable-next-line object-curly-newline
+import { $, flash, pokeByName, requirementMetGenerator } from './utilities';
 import ROUTES from './routes';
 import { COLORS } from './data';
+import Poke from './poke';
 
 export const renderView = (dom, enemy, player, purge = true) => {
     dom.renderPokeOnContainer('enemy', enemy.activePoke());
@@ -116,6 +118,7 @@ export default (player, combatLoop, userInteractions) => {
             }
         },
         renderRouteList: function () {
+            const requirementMet = requirementMetGenerator(player);
             this.renderRegionSelect();
             const routes = ROUTES[player.settings.currentRegionId];
             const listElement = $('#routeList');
@@ -131,6 +134,30 @@ export default (player, combatLoop, userInteractions) => {
                     if (unlocked) {
                         routeColor = (routeId === player.settings.currentRouteId) ? COLORS.route.current : COLORS.route.unlocked;
                         routeWeight = (routeId === player.settings.currentRouteId) ? 'bold' : 'normal';
+                        if (routeColor !== COLORS.route.current && route.pokes) { // don't overwrite this color, might confuse the user
+                            let status = 2; // 2 for shiny caught, 1 for regular caught, 0 for missing
+                            let encounters = route.pokes || [];
+                            if (route._special) {
+                                encounters = encounters.concat(route._special.filter(requirementMet).flatMap((s) => s.pokemon));
+                            }
+                            for (let i = 0; i < encounters.length; i++) {
+                                const encounter = encounters[i];
+                                const encounterPokemon = new Poke(pokeByName(encounter), 1, 0, false);
+                                if (!player.hasPokemonLike(encounterPokemon)) {
+                                    status = 0;
+                                    break;
+                                }
+                                encounterPokemon.isShiny = true;
+                                if (status === 2 && !player.hasPokemonLike(encounterPokemon)) {
+                                    status = 1;
+                                }
+                            }
+                            if (status === 2) {
+                                routeColor = COLORS.route.caughtAllShinies;
+                            } else if (status === 1) {
+                                routeColor = COLORS.route.caughtAll;
+                            }
+                        }
                     } else {
                         routeColor = COLORS.route.locked;
                         routeWeight = 'normal';

@@ -31,17 +31,29 @@
   <pewtercityPokeMartModal />
   <pewtercityPokeCenterModal />
   <pewterGymModal />
+  <pewterMuseumModal />
   <ceruleanCityModal />
   <ceruleancityPokeMartModal />
   <ceruleancityPokeCenterModal />
   <ceruleanGymModal />
+  <seasideCottageModal />
+  <seasideBillHouseBeforeConvertModal />
+  <seasideBillHouseAfterConvertModal />
   <vermilionCityModal />
   <vermilioncityPokeMartModal />
   <vermilioncityPokeCenterModal />
+  <vermilionSSANNE1Modal />
   <vermilionGymModal />
   <lavenderTownModal />
   <lavendertownPokeMartModal />
   <lavendertownPokeCenterModal />
+  <lavendertownPokeTower1Modal />
+  <lavendertownPokeTower2Modal />
+  <lavendertownPokeTower3Modal />
+  <lavendertownPokeTower4Modal />
+  <lavendertownPokeTower5Modal />
+  <lavendertownPokeTower6Modal />
+  <lavendertownPokeTower7Modal />
   <celadonCityModal />
   <celadoncityPokeMartModal />
   <celadoncityPokeCenterModal />
@@ -95,17 +107,29 @@ import pewterCityModal from './modals/towns/pewterCity/pewterCityModal';
 import pewtercityPokeMartModal from './modals/towns/pewterCity/pewterPokeMartModal';
 import pewtercityPokeCenterModal from './modals/towns/pewterCity/pewterPokeCenterModal';
 import pewterGymModal from './modals/towns/pewterCity/pewterGymModal';
+import pewterMuseumModal from './modals/towns/pewterCity/pewterMuseumModal';
 import ceruleanCityModal from './modals/towns/ceruleanCity/ceruleanCityModal';
 import ceruleancityPokeMartModal from './modals/towns/ceruleanCity/ceruleanPokeMartModal';
 import ceruleancityPokeCenterModal from './modals/towns/ceruleanCity/ceruleanPokeCenterModal';
 import ceruleanGymModal from './modals/towns/ceruleanCity/ceruleanGymModal';
+import seasideCottageModal from './modals/towns/ceruleanCity/seasideCottageModal';
+import seasideBillHouseBeforeConvertModal from './modals/towns/ceruleanCity/seasideBillHouseBeforeConvertModal';
+import seasideBillHouseAfterConvertModal from './modals/towns/ceruleanCity/seasideBillHouseAfterConvertModal';
 import vermilionCityModal from './modals/towns/vermilionCity/vermilionCityModal';
 import vermilioncityPokeMartModal from './modals/towns/vermilionCity/vermilionPokeMartModal';
 import vermilioncityPokeCenterModal from './modals/towns/vermilionCity/vermilionPokeCenterModal';
+import vermilionSSANNE1Modal from './modals/towns/vermilionCity/vermilionSSANNE1Modal';
 import vermilionGymModal from './modals/towns/vermilionCity/vermilionGymModal';
 import lavenderTownModal from './modals/towns/lavenderTown/lavenderTownModal';
 import lavendertownPokeMartModal from './modals/towns/lavenderTown/lavenderPokeMartModal';
 import lavendertownPokeCenterModal from './modals/towns/lavenderTown/lavenderPokeCenterModal';
+import lavendertownPokeTower1Modal from './modals/towns/lavenderTown/lavenderPokeTower1Modal';
+import lavendertownPokeTower2Modal from './modals/towns/lavenderTown/lavenderPokeTower2Modal';
+import lavendertownPokeTower3Modal from './modals/towns/lavenderTown/lavenderPokeTower3Modal';
+import lavendertownPokeTower4Modal from './modals/towns/lavenderTown/lavenderPokeTower4Modal';
+import lavendertownPokeTower5Modal from './modals/towns/lavenderTown/lavenderPokeTower5Modal';
+import lavendertownPokeTower6Modal from './modals/towns/lavenderTown/lavenderPokeTower6Modal';
+import lavendertownPokeTower7Modal from './modals/towns/lavenderTown/lavenderPokeTower7Modal';
 import celadonCityModal from './modals/towns/celadonCity/celadonCityModal';
 import celadoncityPokeMartModal from './modals/towns/celadonCity/celadonPokeMartModal';
 import celadoncityPokeCenterModal from './modals/towns/celadonCity/celadonPokeCenterModal';
@@ -158,17 +182,29 @@ export default {
         pewtercityPokeMartModal,
         pewtercityPokeCenterModal,
         pewterGymModal,
+        pewterMuseumModal,
         ceruleanCityModal,
         ceruleancityPokeMartModal,
         ceruleancityPokeCenterModal,
         ceruleanGymModal,
+        seasideCottageModal,
+        seasideBillHouseBeforeConvertModal,
+        seasideBillHouseAfterConvertModal,
         vermilionCityModal,
         vermilioncityPokeMartModal,
         vermilioncityPokeCenterModal,
         vermilionGymModal,
+        vermilionSSANNE1Modal,
         lavenderTownModal,
         lavendertownPokeMartModal,
         lavendertownPokeCenterModal,
+        lavendertownPokeTower1Modal,
+        lavendertownPokeTower2Modal,
+        lavendertownPokeTower3Modal,
+        lavendertownPokeTower4Modal,
+        lavendertownPokeTower5Modal,
+        lavendertownPokeTower6Modal,
+        lavendertownPokeTower7Modal,
         celadonCityModal,
         celadoncityPokeMartModal,
         celadoncityPokeCenterModal,

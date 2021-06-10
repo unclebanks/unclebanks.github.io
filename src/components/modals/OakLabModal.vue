@@ -4,28 +4,35 @@
     title="Oak's Lab"
   >
     <template #body>
-      <div
+      <img
         id="oaklabModalBox"
+        usemap="#oakLabMap"
       >
-        <button
-          class="button"
-          @click="ui.oakAide1()"
+
+      <map
+        name="oakLabMap"
+      >
+        <area
+          shape="rect"
+          coords="354,310,381,348"
+          onclick="userInteractions.oakAide1()"
         >
-          Prof. Aide 1
-        </button><br>
-        <button
-          class="button"
-          @click="ui.oakAide2()"
+        <area
+          shape="rect"
+          coords="98,343,126,383"
+          onclick="userInteractions.oakAide2()"
         >
-          Prof. Aide 2
-        </button><br>
-        <button
-          class="button"
-          @click="ui.oakLabOak()"
+        <area
+          shape="rect"
+          coords="193,85,224,127"
+          onclick="userInteractions.oakLabOak()"
         >
-          Prof. Oak
-        </button><br>
-      </div>
+        <area
+          shape="rect"
+          coords="182,391,233,426"
+          onclick="userInteractions.oakLabExit()"
+        >
+      </map>
     </template>
   </CardModal>
 </template>

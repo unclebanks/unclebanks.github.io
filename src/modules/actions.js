@@ -579,6 +579,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 openModal(document.getElementById('pewtercityModal'));
             } else if (routeData === 'Cerulean City') {
                 openModal(document.getElementById('ceruleancityModal'));
+            } else if (routeData === 'Seaside Cottage') {
+                openModal(document.getElementById('seasidecottageModal'));
             } else if (routeData === 'Vermilion City') {
                 openModal(document.getElementById('vermilioncityModal'));
             } else if (routeData === 'Lavender Town') {
@@ -826,9 +828,17 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('pallettownModal'));
             openModal(document.getElementById('oaklabModal'));
         },
+        oakLabExit: function () {
+            closeModal(document.getElementById('oaklabModal'));
+            openModal(document.getElementById('pallettownModal'));
+        },
         redHouse: function () {
             closeModal(document.getElementById('pallettownModal'));
             openModal(document.getElementById('redhouseModal'));
+        },
+        redHouseExit: function () {
+            closeModal(document.getElementById('redhouseModal'));
+            openModal(document.getElementById('pallettownModal'));
         },
         redMom: function () {
             alert('Hi! My Red is not home right now. Check back another time.');
@@ -839,6 +849,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         redRoom: function () {
             closeModal(document.getElementById('redhouseModal'));
             openModal(document.getElementById('redroomModal'));
+        },
+        redRoomDown: function () {
+            closeModal(document.getElementById('redroomModal'));
+            openModal(document.getElementById('redhouseModal'));
         },
         redPC: function () {
             alert('The computer is powered off.');
@@ -885,7 +899,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.ballsAmount.pokeball += 10;
                 dom.renderBalls();
                 player.events.oakAide2 = true;
-            } else { alert('Hiya! I work as an Aide.'); }
+            } else { alert('Hiya! I work as an Aide. Be sure to talk to other NPCs as well. Some of us do stuff, others not so much.'); }
         },
         oakLabOak: function () {
             if (player.events.oakParcelReceived && !player.events.oakParcelGiven) {
@@ -936,7 +950,18 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('pewtercityModal'));
             openModal(document.getElementById('pewtergymModal'));
         },
-        pewterMuseumEvent: function () {
+        pewterMuseum: function () {
+            closeModal(document.getElementById('pewtercityModal'));
+            openModal(document.getElementById('pewtermuseumModal'));
+        },
+        kantoTest: function () {
+            closeModal(document.getElementById('pallettownModal'));
+            openModal(document.getElementById('kantoModal'));
+        },
+        test: function () {
+            alert('PLACEHOLDER');
+        },
+        pewterMuseumScientist: function () {
             if (player.events.pewterMuseum1 === true) {
                 alert('Did you take that fossil to Cinnabar Island?');
             }
@@ -961,6 +986,18 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('ceruleancityModal'));
             openModal(document.getElementById('ceruleangymModal'));
         },
+        billsHouse: function () {
+            if (!player.events.billPressTheButton) {
+                closeModal(document.getElementById('seasidecottageModal'));
+                openModal(document.getElementById('seasidebillhousebeforeconvertModal'));
+            } else {
+                closeModal(document.getElementById('seasidecottageModal'));
+                openModal(document.getElementById('seasidebillhouseafterconvertModal'));
+            }
+        },
+        billsBackyard: function () {
+            alert('The gate is locked. . . For now.');
+        },
         vermilionPokeMart: function () {
             closeModal(document.getElementById('vermilioncityModal'));
             openModal(document.getElementById('vermilioncitypokemartModal'));
@@ -968,6 +1005,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         vermilionPokeCenter: function () {
             closeModal(document.getElementById('vermilioncityModal'));
             openModal(document.getElementById('vermilioncitypokecenterModal'));
+        },
+        vermilionSSANNE: function () {
+            closeModal(document.getElementById('vermilioncityModal'));
+            openModal(document.getElementById('vermilioncityssanne1Modal'));
         },
         vermilionGym: function () {
             closeModal(document.getElementById('vermilioncityModal'));
@@ -1017,6 +1058,61 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('lavendertownModal'));
             openModal(document.getElementById('lavendertownpokecenterModal'));
         },
+        lavenderPokeTower1: function () {
+            closeModal(document.getElementById('lavendertownModal'));
+            openModal(document.getElementById('lavendertownpoketower1Modal'));
+        },
+        lavenderPokeTower1DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower2Modal'));
+            openModal(document.getElementById('lavendertownpoketower1Modal'));
+        },
+        lavenderPokeTower2UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower1Modal'));
+            openModal(document.getElementById('lavendertownpoketower2Modal'));
+        },
+        lavenderPokeTower2DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower3Modal'));
+            openModal(document.getElementById('lavendertownpoketower2Modal'));
+        },
+        lavenderPokeTower3UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower2Modal'));
+            openModal(document.getElementById('lavendertownpoketower3Modal'));
+        },
+        lavenderPokeTower3DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower4Modal'));
+            openModal(document.getElementById('lavendertownpoketower3Modal'));
+        },
+        lavenderPokeTower4UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower3Modal'));
+            openModal(document.getElementById('lavendertownpoketower4Modal'));
+        },
+        lavenderPokeTower4DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower5Modal'));
+            openModal(document.getElementById('lavendertownpoketower4Modal'));
+        },
+        lavenderPokeTower5UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower4Modal'));
+            openModal(document.getElementById('lavendertownpoketower5Modal'));
+        },
+        lavenderPokeTower5DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower6Modal'));
+            openModal(document.getElementById('lavendertownpoketower5Modal'));
+        },
+        lavenderPokeTower6UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower5Modal'));
+            openModal(document.getElementById('lavendertownpoketower6Modal'));
+        },
+        lavenderPokeTower6DOWN: function () {
+            closeModal(document.getElementById('lavendertownpoketower7Modal'));
+            openModal(document.getElementById('lavendertownpoketower6Modal'));
+        },
+        lavenderPokeTower7UP: function () {
+            closeModal(document.getElementById('lavendertownpoketower6Modal'));
+            openModal(document.getElementById('lavendertownpoketower7Modal'));
+        },
+        lavenderPokeTowerReceptionist: function () {
+            alert('Welcome to the Pokemon Tower. There is nothing here yet but a questline will be implemented shortly');
+        },
         nuggetBridgeEvent: function () {
             if (player.events.nugget5 === true && !player.hasPokemon('Charmander')) {
                 alert('I think you would do great in Team Rocket. Here is a Charmander as a bribe.');
@@ -1033,11 +1129,23 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         billEvent: function () {
-            if (!player.events.billMonBefore) {
+            if (!player.events.billPressTheButton) {
                 alert('Hey kid! I am not a POKEMON, my name is Bill and I am a little stuck. Could you help me out? Press that button over there once I am in the machine. Thanks in advance.');
-                player.events.billMonBefore = true;
-            } else if (player.events.billMonBefore && !player.events.billMonBefore1) {
-                alert('This needs to be finished for the SS ANNE stuff');
+                player.events.billPressTheButton = true;
+            } else if (player.events.billPressTheButton && !player.events.billConverted) {
+                alert('Can you hurry up please?');
+            } else {
+                alert('Pretty dope huh?');
+            }
+        },
+        billsComputerKanto: function () {
+            if (player.events.billPressTheButton && !player.events.billConverted) {
+                alert('Bill entered the DNA machine and returned to normal form.');
+                player.events.billConverted = true;
+                closeModal(document.getElementById('seasidebillhousebeforeconvertModal'));
+                openModal(document.getElementById('seasidebillhouseafterconvertModal'));
+            } else {
+                alert('this needs to be finished');
             }
         },
         openCinnabarLab: function () {
