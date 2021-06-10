@@ -1,4 +1,5 @@
-import { mergeArray, pokeByName, randomArrayElement } from './utilities';
+// eslint-disable-next-line object-curly-newline
+import { mergeArray, pokeByName, randomArrayElement, requirementMetGenerator } from './utilities';
 import ROUTES from './routes';
 
 export default (starter, player, Poke) => {
@@ -33,18 +34,7 @@ export default (starter, player, Poke) => {
         return generator(poke, pokemonList[selected][1]);
     };
 
-    const requirementMet = (req) => {
-        switch (req.requirement.type) {
-        case 'item':
-            return player.unlocked[req.requirement.item];
-        case 'evoStone':
-            return player.evoStones[req.requirement.evoStone];
-        case 'pokemonTypeDefeat':
-            return player.statistics[req.requirement.statistic] > [req.requirement.need];
-        default:
-            return false;
-        }
-    };
+    const requirementMet = requirementMetGenerator(player);
 
     const generateNew = (regionId, routeId) => {
         const regionData = ROUTES[regionId];

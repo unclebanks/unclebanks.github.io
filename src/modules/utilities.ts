@@ -2,6 +2,21 @@ import POKEDEX, {
     PokedexData, pokedexMaps, PokemonIdType, PokemonNameType,
 } from './db';
 
+export function requirementMetGenerator(player) {
+    return (req) => {
+        switch (req.requirement.type) {
+        case 'item':
+            return player.unlocked[req.requirement.item];
+        case 'evoStone':
+            return player.evoStones[req.requirement.evoStone];
+        case 'pokemonTypeDefeat':
+            return player.statistics[req.requirement.statistic] > [req.requirement.need];
+        default:
+            return false;
+        }
+    };
+}
+
 export function RNG(chance: number): boolean {
     const rnd = Math.random() * 100;
     return (rnd < chance);
