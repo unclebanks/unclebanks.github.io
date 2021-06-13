@@ -29,6 +29,11 @@
         >
         <area
           shape="rect"
+          coords="160,117,191,158"
+          onclick="userInteractions.blueOakLab()"
+        >
+        <area
+          shape="rect"
           coords="182,391,233,426"
           onclick="userInteractions.oakLabExit()"
         >
@@ -38,7 +43,7 @@
 </template>
 
 <script>
-import CardModal from '../common/CardModal.vue';
+import CardModal from '../../../common/CardModal.vue';
 
 export default {
     components: {

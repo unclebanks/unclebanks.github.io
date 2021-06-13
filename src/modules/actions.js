@@ -571,8 +571,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         viewTown: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
-            if (routeData === 'Pallet Town') {
+            if (routeData === 'Pallet Town' && !player.events.oakParcelReceived) {
                 openModal(document.getElementById('pallettownModal'));
+            } else if (routeData === 'Pallet Town') {
+                openModal(document.getElementById('pallettownnooakModal'));
             } else if (routeData === 'Viridian City') {
                 openModal(document.getElementById('viridiancityModal'));
             } else if (routeData === 'Pewter City') {
@@ -825,20 +827,34 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         oakLab: function () {
-            closeModal(document.getElementById('pallettownModal'));
-            openModal(document.getElementById('oaklabModal'));
+            if (player.events.oakParcelReceived) {
+                openModal(document.getElementById('oaklabModal'));
+                closeModal(document.getElementById('pallettownnooakModal'));
+            } else {
+                openModal(document.getElementById('oaklabnooakModal'));
+                closeModal(document.getElementById('pallettownModal'));
+            }
         },
         oakLabExit: function () {
             closeModal(document.getElementById('oaklabModal'));
-            openModal(document.getElementById('pallettownModal'));
+            if (player.events.oakParcelReceived) {
+                openModal(document.getElementById('pallettownnooakModal'));
+            } else {
+                openModal(document.getElementById('pallettownModal'));
+            }
         },
         redHouse: function () {
             closeModal(document.getElementById('pallettownModal'));
+            closeModal(document.getElementById('pallettownnooakModal'));
             openModal(document.getElementById('redhouseModal'));
         },
         redHouseExit: function () {
             closeModal(document.getElementById('redhouseModal'));
-            openModal(document.getElementById('pallettownModal'));
+            if (player.events.oakParcelReceived) {
+                openModal(document.getElementById('pallettownnooakModal'));
+            } else {
+                openModal(document.getElementById('pallettownModal'));
+            }
         },
         redMom: function () {
             alert('Hi! My Red is not home right now. Check back another time.');
@@ -864,8 +880,21 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             alert('I wonder why all these places on the map are crossed off.');
         },
         blueHouse: function () {
-            closeModal(document.getElementById('pallettownModal'));
-            openModal(document.getElementById('bluehouseModal'));
+            if (player.events.oakParcelReceived) {
+                openModal(document.getElementById('bluehouseModal'));
+                closeModal(document.getElementById('pallettownnooakModal'));
+            } else {
+                openModal(document.getElementById('bluehouseModal'));
+                closeModal(document.getElementById('pallettownModal'));
+            }
+        },
+        blueHouseExit: function () {
+            closeModal(document.getElementById('bluehouseModal'));
+            if (player.events.oakParcelReceived) {
+                openModal(document.getElementById('pallettownnooakModal'));
+            } else {
+                openModal(document.getElementById('pallettownModal'));
+            }
         },
         blueSister: function () {
             alert('Hi! My brother is not home right now. Check back another time.');
@@ -905,7 +934,22 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (player.events.oakParcelReceived && !player.events.oakParcelGiven) {
                 alert('This must be the parcel I ordered, thank you for delivering it.');
                 player.events.oakParcelGiven = true;
-            } else { alert('How is your POKEDEX coming along?'); }
+            } else if (!player.events.oakParcelReceived) {
+                alert('I wonder where my parcel from Viridian City could be. . .');
+            } else { alert('There is more stuff to be implemented later on here.'); }
+        },
+        blueOakLab: function () {
+            if (!player.events.oakParcelReceived) {
+                alert('My grandpa Prof. Oak should be somewhere around Pallet Town waiting for his parcel to arrive.');
+            } else if (player.events.oakParcelReceived && !player.events.oakParcelGiven) {
+                alert('You should go talk to my grandpa. He has something important to tell us and I am tired of waiting.');
+            } else if (player.events.oakParcelGiven && player.events.Squirtle === true) {
+                alert('There will be a trainer battle implemented here later on based on your choosing Squirtle');
+            } else if (player.events.oakParcelGiven && player.events.Charmander === true) {
+                alert('There will be a trainer battle implemented here later onbased on your choosing Charmander');
+            } else if (player.events.oakParcelGiven && player.events.Bulbasaur === true) {
+                alert('There will be a trainer battle implemented here later onbased on your choosing Bulbasaur');
+            }
         },
         viridianPokeCenter: function () {
             closeModal(document.getElementById('viridiancityModal'));
