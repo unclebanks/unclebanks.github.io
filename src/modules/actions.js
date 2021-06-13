@@ -955,6 +955,22 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('viridiancityModal'));
             openModal(document.getElementById('viridiancitypokecenterModal'));
         },
+        viridianPokeCenterExit: function () {
+            openModal(document.getElementById('viridiancityModal'));
+            closeModal(document.getElementById('viridiancitypokecenterModal'));
+        },
+        viridianPokeCenterOldGuy: function () {
+            alert('I need a purpose');
+        },
+        viridianPokeCenterHat: function () {
+            alert('I need a purpose');
+        },
+        viridianPokeCenterNoHat: function () {
+            alert('I need a purpose');
+        },
+        viridianNurseJoy: function () {
+            alert('I need a purpose');
+        },
         viridianDrunkard: function () {
             if (!player.events.oakParcelReceived) {
                 alert('I am so hungover. Can you run to the PokeMart and grab me some medicine from the PokeMart Attendant?');
@@ -973,6 +989,16 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         viridianPokeMart: function () {
             closeModal(document.getElementById('viridiancityModal'));
             openModal(document.getElementById('viridiancitypokemartModal'));
+        },
+        viridianPokeMartExit: function () {
+            openModal(document.getElementById('viridiancityModal'));
+            closeModal(document.getElementById('viridiancitypokemartModal'));
+        },
+        viridianPokeMartHat: function () {
+            alert('I need a purpose');
+        },
+        viridianPokeMartGirl: function () {
+            alert('I need a purpose');
         },
         viridianGym: function () {
             if (!player.badges['Volcano Badge']) {

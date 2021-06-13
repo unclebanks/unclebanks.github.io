@@ -589,7 +589,8 @@ progress.expBar {
 #viridianPokeMartModalBox {
     background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityPokeMart.png');
     background-size: cover;
-    height: 460px;
+    width: 352px;
+    height: 288px;
 }
 
 #viridianPokeMartModalBox .button {
@@ -599,11 +600,8 @@ progress.expBar {
 #viridianPokeCenterModalBox {
     background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityPokemonCenter.png');
     background-size: cover;
-    height: 360px;
-}
-
-#viridianPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
+    width: 480px;
+    height: 320px;
 }
 
 #viridianGymModalBox {
