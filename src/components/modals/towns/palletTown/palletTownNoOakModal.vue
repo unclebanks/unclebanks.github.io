@@ -1,16 +1,16 @@
 <template>
   <CardModal
-    name="pallettown"
+    name="pallettownnooak"
     title="Pallet Town"
   >
     <template #body>
       <img
-        id="palletTownModalBox"
-        usemap="#palletTownMap"
+        id="palletTownNoOakModalBox"
+        usemap="#palletTownNoOakMap"
       >
 
       <map
-        name="palletTownMap"
+        name="palletTownNoOakMap"
       >
         <area
           shape="rect"
@@ -26,11 +26,6 @@
           shape="rect"
           coords="208,152,320,223"
           onclick="userInteractions.oakLab()"
-        >
-        <area
-          shape="rect"
-          coords="161,123,175,145"
-          onclick="userInteractions.oakLabOak()"
         >
       </map>
     </template>

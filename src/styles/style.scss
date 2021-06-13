@@ -537,32 +537,43 @@ progress.expBar {
     width: 384px;
 }
 
+#palletTownNoOakModalBox {
+    background-image: url('../assets/backgrounds/kanto/palletTown/palletTownNoOak.png');
+    background-size: cover;
+    height: 320px;
+    width: 384px;
+}
+
 #redHouseModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/redHouse.png');
+    background-image: url('../assets/backgrounds/kanto/palletTown/redHouse/redHouse.png');
     background-size: cover;
     width: 416px;
     height: 320px;
 }
 
 #redRoomModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/redRoom.png');
+    background-image: url('../assets/backgrounds/kanto/palletTown/redHouse/redRoom.png');
     background-size: contain;
     width: 384px;
     height: 288px;
 }
 
 #blueHouseModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/blueHouse.png');
+    background-image: url('../assets/backgrounds/kanto/palletTown/blueHouse/blueHouse.png');
     background-size: cover;
-    height: 481px;
-}
-
-#blueHouseModalBox .button {
-    background-color: rgb(58, 58, 58);
+    width: 416px;
+    height: 320px;
 }
 
 #oaklabModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/oakLabKanto.png');
+    background-image: url('../assets/backgrounds/kanto/palletTown/oakLab/oakLabKanto.png');
+    background-size: contain;
+    height: 448px;
+    width: 416px;
+}
+
+#oaklabNoOakModalBox {
+    background-image: url('../assets/backgrounds/kanto/palletTown/oakLab/oakLabNoOak.png');
     background-size: contain;
     height: 448px;
     width: 416px;
@@ -578,7 +589,8 @@ progress.expBar {
 #viridianPokeMartModalBox {
     background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityPokeMart.png');
     background-size: cover;
-    height: 460px;
+    width: 352px;
+    height: 288px;
 }
 
 #viridianPokeMartModalBox .button {
@@ -588,11 +600,8 @@ progress.expBar {
 #viridianPokeCenterModalBox {
     background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityPokemonCenter.png');
     background-size: cover;
-    height: 360px;
-}
-
-#viridianPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
+    width: 480px;
+    height: 320px;
 }
 
 #viridianGymModalBox {

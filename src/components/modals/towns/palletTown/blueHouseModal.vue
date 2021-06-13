@@ -4,16 +4,25 @@
     title="Blue's House"
   >
     <template #body>
-      <div
+      <img
         id="blueHouseModalBox"
+        usemap="#blueHouseMap"
       >
-        <button
+
+      <map
+        name="blueHouseMap"
+      >
+        <area
+          shape="rect"
+          coords="322,182,352,225"
           onclick="userInteractions.blueSister()"
-          class="button"
         >
-          Blue's Sister
-        </button><br>
-      </div>
+        <area
+          shape="rect"
+          coords="117,265,171,296"
+          onclick="userInteractions.blueHouseExit()"
+        >
+      </map>
     </template>
   </CardModal>
 </template>

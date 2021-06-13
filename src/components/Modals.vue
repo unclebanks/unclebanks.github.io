@@ -19,7 +19,9 @@
   <GymModal :ui="ui" />
   <TownModal />
   <OakLabModal :ui="ui" />
+  <OakLabNoOakModal :ui="ui" />
   <palletTownModal />
+  <palletTownNoOakModal />
   <redHouseModal />
   <redRoomModal />
   <blueHouseModal />
@@ -94,8 +96,10 @@ import PrizeCornerModal from './modals/PrizeCornerModal.vue';
 import BagModal from './modals/BagModal.vue';
 import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
-import OakLabModal from './modals/OakLabModal';
+import OakLabModal from './modals/towns/palletTown/OakLabModal';
+import OakLabNoOakModal from './modals/towns/palletTown/OakLabNoOakModal';
 import palletTownModal from './modals/towns/palletTown/palletTownModal';
+import palletTownNoOakModal from './modals/towns/palletTown/palletTownNoOakModal';
 import redHouseModal from './modals/towns/palletTown/redHouseModal';
 import redRoomModal from './modals/towns/palletTown/redRoomModal';
 import blueHouseModal from './modals/towns/palletTown/blueHouseModal';
@@ -170,7 +174,9 @@ export default {
         GymModal,
         TownModal,
         OakLabModal,
+        OakLabNoOakModal,
         palletTownModal,
+        palletTownNoOakModal,
         redHouseModal,
         redRoomModal,
         blueHouseModal,
