@@ -75,6 +75,8 @@
   <cinnabarLabModal />
   <cinnabarislandPokeMartModal />
   <kantoRoute1Modal />
+  <kantoRoute22Modal />
+  <kantoRoute22NoBlueModal />
 </template>
 
 <script>
@@ -153,6 +155,8 @@ import cinnabarGymModal from './modals/kanto/towns/cinnabarIsland/cinnabarGymMod
 import cinnabarLabModal from './modals/kanto/towns/cinnabarIsland/cinnabarLabModal';
 import cinnabarislandPokeMartModal from './modals/kanto/towns/cinnabarIsland/cinnabarPokeMartModal';
 import kantoRoute1Modal from './modals/kanto/routes/kantoRoute1Modal';
+import kantoRoute22Modal from './modals/kanto/routes/kantoRoute22Modal';
+import kantoRoute22NoBlueModal from './modals/kanto/routes/kantoRoute22NoBlueModal';
 
 export default {
     components: {
@@ -231,6 +235,8 @@ export default {
         cinnabarLabModal,
         cinnabarislandPokeMartModal,
         kantoRoute1Modal,
+        kantoRoute22Modal,
+        kantoRoute22NoBlueModal,
     },
 
     props: {

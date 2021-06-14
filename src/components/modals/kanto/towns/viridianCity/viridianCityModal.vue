@@ -32,6 +32,16 @@
           coords="390,71,463,124"
           onclick="userInteractions.viridianGym()"
         >
+        <area
+          shape="rect"
+          coords="0,188,70,238"
+          onclick="userInteractions.viridianToRoute22()"
+        >
+        <area
+          shape="rect"
+          coords="260,412,307,473"
+          onclick="userInteractions.viridianToRoute1()"
+        >
       </map>
     </template>
   </CardModal>

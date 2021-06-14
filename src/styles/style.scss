@@ -1000,6 +1000,20 @@ progress.expBar {
     height: 640px;
     width: 384px;
 }
+#kantoRoute22ModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute22.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 640px;
+    height: 384px;
+}
+#kantoRoute22NoBlueModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute22NoBlue.png');
+    background-size: contain;
+    height: 384px;
+    width: 640px;
+}
+
 .townBuilding {
     width: 90%;
     float: left;

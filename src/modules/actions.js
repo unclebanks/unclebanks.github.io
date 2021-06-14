@@ -973,6 +973,21 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('viridiancityModal'));
             closeModal(document.getElementById('kantoroute1Modal'));
         },
+        route22ToViridian: function () {
+            openModal(document.getElementById('viridiancityModal'));
+            closeModal(document.getElementById('kantoroute22Modal'));
+        },
+        viridianToRoute22: function () {
+            openModal(document.getElementById('kantoroute22Modal'));
+            closeModal(document.getElementById('viridiancityModal'));
+        },
+        viridianToRoute1: function () {
+            openModal(document.getElementById('kantoroute1Modal'));
+            closeModal(document.getElementById('viridiancityModal'));
+        },
+        blueRoute22: function () {
+            alert('Needs battle here');
+        },
         viridianPokeCenter: function () {
             closeModal(document.getElementById('viridiancityModal'));
             openModal(document.getElementById('viridiancitypokecenterModal'));
