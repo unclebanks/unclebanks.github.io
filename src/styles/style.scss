@@ -529,7 +529,7 @@ progress.expBar {
     min-width: fit-content;
     min-height: fit-content;
 }
-
+// Towns
 #palletTownModalBox {
     background-image: url('../assets/backgrounds/kanto/palletTown/palletTown.png');
     background-size: cover;
@@ -640,12 +640,6 @@ progress.expBar {
     background-repeat: no-repeat;
     height: 512px;
     width: 400px;
-}
-
-#kantoMap {
-    background-image: url('../assets/backgrounds/kanto/palletTown/palletTown.png');
-    height: 320px;
-    width: 384px;
 }
 
 #pewterGymModalBox .button {
@@ -997,6 +991,27 @@ progress.expBar {
 
 #cinnabarPokeMartModalBox .button {
     background-color: rgb(58, 58, 58);
+}
+// Routes
+
+#kantoRoute1ModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute1.png');
+    background-size: contain;
+    height: 640px;
+    width: 384px;
+}
+#kantoRoute22ModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute22.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 640px;
+    height: 384px;
+}
+#kantoRoute22NoBlueModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute22NoBlue.png');
+    background-size: contain;
+    height: 384px;
+    width: 640px;
 }
 
 .townBuilding {

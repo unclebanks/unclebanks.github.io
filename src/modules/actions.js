@@ -951,6 +951,43 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('There will be a trainer battle implemented here later onbased on your choosing Bulbasaur');
             }
         },
+        palletToRoute1: function () {
+            if (player.events.oakParcelReceived) {
+                openModal(document.getElementById('kantoroute1Modal'));
+                closeModal(document.getElementById('pallettownnooakModal'));
+            } else {
+                openModal(document.getElementById('kantoroute1Modal'));
+                closeModal(document.getElementById('pallettownModal'));
+            }
+        },
+        route1ToPallet: function () {
+            if (player.events.oakParcelReceived) {
+                openModal(document.getElementById('pallettownnooakModal'));
+                closeModal(document.getElementById('kantoroute1Modal'));
+            } else {
+                openModal(document.getElementById('pallettownModal'));
+                closeModal(document.getElementById('kantoroute1Modal'));
+            }
+        },
+        route1ToViridian: function () {
+            openModal(document.getElementById('viridiancityModal'));
+            closeModal(document.getElementById('kantoroute1Modal'));
+        },
+        route22ToViridian: function () {
+            openModal(document.getElementById('viridiancityModal'));
+            closeModal(document.getElementById('kantoroute22Modal'));
+        },
+        viridianToRoute22: function () {
+            openModal(document.getElementById('kantoroute22Modal'));
+            closeModal(document.getElementById('viridiancityModal'));
+        },
+        viridianToRoute1: function () {
+            openModal(document.getElementById('kantoroute1Modal'));
+            closeModal(document.getElementById('viridiancityModal'));
+        },
+        blueRoute22: function () {
+            alert('Needs battle here');
+        },
         viridianPokeCenter: function () {
             closeModal(document.getElementById('viridiancityModal'));
             openModal(document.getElementById('viridiancitypokecenterModal'));
