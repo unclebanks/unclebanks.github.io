@@ -32,6 +32,11 @@
           coords="248,139,303,179"
           onclick="userInteractions.gameCorner()"
         >
+        <area
+          shape="rect"
+          coords="304,141,329,169"
+          onclick="userInteractions.prizeCorner()"
+        >
       </map>
     </template>
   </CardModal>

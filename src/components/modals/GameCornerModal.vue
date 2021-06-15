@@ -44,12 +44,6 @@
           >
             Freebies
           </button>
-          <button
-            class="button"
-            @click="ui.prizeCorner()"
-          >
-            Prizes
-          </button>
         </div>
       </div>
     </template>

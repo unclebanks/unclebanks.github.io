@@ -771,7 +771,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('gameCornerModal'));
         },
         prizeCorner: function () {
-            closeModal(document.getElementById('gameCornerModal'));
+            closeModal(document.getElementById('celadoncityModal'));
             openModal(document.getElementById('prizeCornerModal'));
             this.renderPrizeTokens();
         },
