@@ -796,6 +796,36 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('Idk honestly');
             }
         },
+        buyDratini: function () {
+            let gametokens = player.currencyAmount.gametokens;
+            const dratini = 'Dratini';
+            if (player.hasPokemon(dratini)) {
+                alert('You already have a Dratini, save your tokens');
+            } else if (!player.hasPokemon(dratini) && gametokens >= 1000) {
+                player.addPoke(new Poke(dratini, 9));
+                gametokens -= 1000;
+                alert('Enjoy your Dratini');
+            } else if (gametokens < 1000) {
+                alert('Get more tokens and come back');
+            } else {
+                alert('Idk honestly');
+            }
+        },
+        buyPorygon: function () {
+            let gametokens = player.currencyAmount.gametokens;
+            const porygon = 'Porygon';
+            if (player.hasPokemon(porygon)) {
+                alert('You already have a Porygon, save your tokens');
+            } else if (!player.hasPokemon(porygon) && gametokens >= 1000) {
+                player.addPoke(new Poke(porygon, 9));
+                gametokens -= 1000;
+                alert('Enjoy your Porygon');
+            } else if (gametokens < 1000) {
+                alert('Get more tokens and come back');
+            } else {
+                alert('Idk honestly');
+            }
+        },
         betAllGameTokens: function () {
             const heads = Math.random();
             const totalAmount = player.currencyAmount.gametokens;
