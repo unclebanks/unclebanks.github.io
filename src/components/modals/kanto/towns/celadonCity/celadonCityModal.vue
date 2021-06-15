@@ -4,35 +4,40 @@
     title="Celadon City"
   >
     <template #body>
-      <div
+      <img
         id="celadonCityModalBox"
+        usemap="#celadonCitymap"
       >
-        <button
-          onclick="userInteractions.gameCorner()"
-          class="button"
-        >
-          Game Corner
-        </button><br>
-        <button
+
+      <map
+        name="celadonCitymap"
+      >
+        <area
+          shape="rect"
+          coords="368,62,408,96"
           onclick="userInteractions.celadonPokeCenter()"
-          class="button"
         >
-          Pokemon Center
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="72,39,144,122"
           onclick="userInteractions.celadonPokeMart()"
-          class="button"
         >
-          PokeMart
-        </button><br>
-        <button
-          id="pokemart"
+        <area
+          shape="rect"
+          coords="64,208,128,247"
           onclick="userInteractions.celadonGym()"
-          class="button"
         >
-          Celadon Gym
-        </button><br>
-      </div>
+        <area
+          shape="rect"
+          coords="248,139,303,179"
+          onclick="userInteractions.gameCorner()"
+        >
+        <area
+          shape="rect"
+          coords="304,141,329,169"
+          onclick="userInteractions.prizeCorner()"
+        >
+      </map>
     </template>
   </CardModal>
 </template>

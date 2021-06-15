@@ -771,7 +771,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('gameCornerModal'));
         },
         prizeCorner: function () {
-            closeModal(document.getElementById('gameCornerModal'));
+            closeModal(document.getElementById('celadoncityModal'));
             openModal(document.getElementById('prizeCornerModal'));
             this.renderPrizeTokens();
         },
@@ -790,6 +790,36 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.addPoke(new Poke(abra, 9));
                 gametokens -= 1000;
                 alert('Enjoy your Abra');
+            } else if (gametokens < 1000) {
+                alert('Get more tokens and come back');
+            } else {
+                alert('Idk honestly');
+            }
+        },
+        buyDratini: function () {
+            let gametokens = player.currencyAmount.gametokens;
+            const dratini = 'Dratini';
+            if (player.hasPokemon(dratini)) {
+                alert('You already have a Dratini, save your tokens');
+            } else if (!player.hasPokemon(dratini) && gametokens >= 1000) {
+                player.addPoke(new Poke(dratini, 9));
+                gametokens -= 1000;
+                alert('Enjoy your Dratini');
+            } else if (gametokens < 1000) {
+                alert('Get more tokens and come back');
+            } else {
+                alert('Idk honestly');
+            }
+        },
+        buyPorygon: function () {
+            let gametokens = player.currencyAmount.gametokens;
+            const porygon = 'Porygon';
+            if (player.hasPokemon(porygon)) {
+                alert('You already have a Porygon, save your tokens');
+            } else if (!player.hasPokemon(porygon) && gametokens >= 1000) {
+                player.addPoke(new Poke(porygon, 9));
+                gametokens -= 1000;
+                alert('Enjoy your Porygon');
             } else if (gametokens < 1000) {
                 alert('Get more tokens and come back');
             } else {
@@ -827,7 +857,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         oakLab: function () {
-            if (player.events.oakParcelReceived) {
+            if (player.events.oakParcelReceived === true) {
                 openModal(document.getElementById('oaklabModal'));
                 closeModal(document.getElementById('pallettownnooakModal'));
             } else {
