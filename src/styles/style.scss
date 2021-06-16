@@ -617,7 +617,8 @@ progress.expBar {
 #pewterCityModalBox {
     background-image: url('../assets/backgrounds/kanto/pewterCity/pewterCity.png');
     background-size: cover;
-    height: 481px;
+    height: 320px;
+    width: 384px;
 }
 
 #pewterCityModalBox .button {
@@ -1013,6 +1014,24 @@ progress.expBar {
     background-size: contain;
     height: 384px;
     width: 640px;
+}
+#kantoRoute2BottomModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute2Bottom.png');
+    background-size: contain;
+    height: 566px;
+    width: 384px;
+}
+#kantoRoute2TopModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute2Top.png');
+    background-size: contain;
+    height: 679px;
+    width: 384px;
+}
+#kantoViridianForestModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/viridianForest/viridianForest.png');
+    background-size: contain;
+    height: 552px;
+    width: 432px;
 }
 
 .townBuilding {

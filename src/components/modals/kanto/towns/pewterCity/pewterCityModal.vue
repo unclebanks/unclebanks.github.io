@@ -4,35 +4,45 @@
     title="Pewter City"
   >
     <template #body>
-      <div
+      <img
         id="pewterCityModalBox"
+        usemap="#pewterCitymap"
       >
-        <button
+
+      <map
+        name="pewterCitymap"
+      >
+        <area
+          shape="rect"
+          coords="97,4,183,64"
           onclick="userInteractions.pewterMuseum()"
-          class="button"
         >
-          Museum
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="119,173,161,209"
           onclick="userInteractions.pewterPokeCenter()"
-          class="button"
         >
-          Pokemon Center
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="207,120,241,153"
           onclick="userInteractions.pewterPokeMart()"
-          class="button"
         >
-          PokeMart
-        </button><br>
-        <button
-          id="pokemart"
+        <area
+          shape="rect"
+          coords="95,96,151,136"
           onclick="userInteractions.pewterGym()"
-          class="button"
         >
-          Pewter Gym
-        </button><br>
-      </div>
+        <area
+          shape="rect"
+          coords="159,287,194,320"
+          onclick="userInteractions.pewterToRoute2Top()"
+        >
+        <area
+          shape="rect"
+          coords="320,158,384,191"
+          onclick="userInteractions.pewterToRoute3()"
+        >
+      </map>
     </template>
   </CardModal>
 </template>

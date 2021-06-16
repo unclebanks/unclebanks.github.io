@@ -1013,6 +1013,34 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('kantoroute22Modal'));
             this.changeRoute('viridianCity');
         },
+        route2BottomToViridian: function () {
+            openModal(document.getElementById('viridiancityModal'));
+            closeModal(document.getElementById('kantoroute2bottomModal'));
+            this.changeRoute('viridianCity');
+        },
+        route2BottomToRoute2Top: function () {
+            openModal(document.getElementById('kantoroute2topModal'));
+            closeModal(document.getElementById('kantoroute2bottomModal'));
+        },
+        route2BottomToKantoViridianForest: function () {
+            openModal(document.getElementById('kantoviridianforestModal'));
+            closeModal(document.getElementById('kantoroute2bottomModal'));
+            this.changeRoute('viridianForest');
+        },
+        route2TopToPewter: function () {
+            openModal(document.getElementById('pewtercityModal'));
+            closeModal(document.getElementById('kantoroute2topModal'));
+            this.changeRoute('pewterCity');
+        },
+        route2TopToRoute2Bottom: function () {
+            openModal(document.getElementById('kantoroute2bottomModal'));
+            closeModal(document.getElementById('kantoroute2topModal'));
+        },
+        route2TopToKantoViridianForest: function () {
+            openModal(document.getElementById('kantoviridianforestModal'));
+            closeModal(document.getElementById('kantoroute2topModal'));
+            this.changeRoute('viridianForest');
+        },
         viridianToRoute22: function () {
             openModal(document.getElementById('kantoroute22Modal'));
             closeModal(document.getElementById('viridiancityModal'));
@@ -1022,6 +1050,21 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('kantoroute1Modal'));
             closeModal(document.getElementById('viridiancityModal'));
             this.changeRoute('kroute1');
+        },
+        viridianToRoute2Bottom: function () {
+            openModal(document.getElementById('kantoroute2bottomModal'));
+            closeModal(document.getElementById('viridiancityModal'));
+            this.changeRoute('kroute2');
+        },
+        kantoViridianForestToRoute2Bottom: function () {
+            openModal(document.getElementById('kantoroute2bottomModal'));
+            closeModal(document.getElementById('kantoviridianforestModal'));
+            this.changeRoute('kroute2');
+        },
+        kantoViridianForestToRoute2Top: function () {
+            openModal(document.getElementById('kantoroute2topModal'));
+            closeModal(document.getElementById('kantoviridianforestModal'));
+            this.changeRoute('kroute2');
         },
         blueRoute22: function () {
             alert('Needs battle here');
@@ -1082,6 +1125,18 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 closeModal(document.getElementById('viridiancityModal'));
                 openModal(document.getElementById('viridiangymModal'));
             }
+        },
+        pewterToRoute2Top: function () {
+            openModal(document.getElementById('kantoroute2topModal'));
+            closeModal(document.getElementById('pewtercityModal'));
+            this.changeRoute('kroute2');
+        },
+        pewterToRoute3: function () {
+            if (player.badges['Boulder Badge'] === true) {
+                openModal(document.getElementById('kantoroute3Modal'));
+                closeModal(document.getElementById('pewtercityModal'));
+                this.changeRoute('kroute3');
+            } else { alert('Defeat Brock before moving on.'); }
         },
         pewterPokeMart: function () {
             closeModal(document.getElementById('pewtercityModal'));

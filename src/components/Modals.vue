@@ -29,6 +29,7 @@
   <viridiancityPokeMartModal />
   <viridiancityPokeCenterModal />
   <viridianGymModal />
+  <kantoViridianForestModal />
   <pewterCityModal />
   <pewtercityPokeMartModal />
   <pewtercityPokeCenterModal />
@@ -75,7 +76,8 @@
   <cinnabarLabModal />
   <cinnabarislandPokeMartModal />
   <kantoRoute1Modal />
-  <kantoRoute2Modal />
+  <kantoRoute2TopModal />
+  <kantoRoute2BottomModal />
   <kantoRoute3Modal />
   <kantoRoute4Modal />
   <kantoRoute5Modal />
@@ -133,6 +135,7 @@ import viridianCityModal from './modals/kanto/towns/viridianCity/viridianCityMod
 import viridiancityPokeMartModal from './modals/kanto/towns/viridianCity/viridianPokeMartModal';
 import viridiancityPokeCenterModal from './modals/kanto/towns/viridianCity/viridianPokeCenterModal';
 import viridianGymModal from './modals/kanto/towns/viridianCity/viridianGymModal';
+import kantoViridianForestModal from './modals/kanto/dungeons/kantoViridianForestModal';
 import pewterCityModal from './modals/kanto/towns/pewterCity/pewterCityModal';
 import pewtercityPokeMartModal from './modals/kanto/towns/pewterCity/pewterPokeMartModal';
 import pewtercityPokeCenterModal from './modals/kanto/towns/pewterCity/pewterPokeCenterModal';
@@ -178,7 +181,8 @@ import cinnabarGymModal from './modals/kanto/towns/cinnabarIsland/cinnabarGymMod
 import cinnabarLabModal from './modals/kanto/towns/cinnabarIsland/cinnabarLabModal';
 import cinnabarislandPokeMartModal from './modals/kanto/towns/cinnabarIsland/cinnabarPokeMartModal';
 import kantoRoute1Modal from './modals/kanto/routes/kantoRoute1Modal';
-import kantoRoute2Modal from './modals/kanto/routes/kantoRoute2Modal';
+import kantoRoute2BottomModal from './modals/kanto/routes/kantoRoute2BottomModal';
+import kantoRoute2TopModal from './modals/kanto/routes/kantoRoute2TopModal';
 import kantoRoute3Modal from './modals/kanto/routes/kantoRoute3Modal';
 import kantoRoute4Modal from './modals/kanto/routes/kantoRoute4Modal';
 import kantoRoute5Modal from './modals/kanto/routes/kantoRoute5Modal';
@@ -236,6 +240,7 @@ export default {
         viridiancityPokeMartModal,
         viridiancityPokeCenterModal,
         viridianGymModal,
+        kantoViridianForestModal,
         pewterCityModal,
         pewtercityPokeMartModal,
         pewtercityPokeCenterModal,
@@ -281,7 +286,8 @@ export default {
         cinnabarLabModal,
         cinnabarislandPokeMartModal,
         kantoRoute1Modal,
-        kantoRoute2Modal,
+        kantoRoute2BottomModal,
+        kantoRoute2TopModal,
         kantoRoute3Modal,
         kantoRoute4Modal,
         kantoRoute5Modal,
