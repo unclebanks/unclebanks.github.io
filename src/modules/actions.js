@@ -985,35 +985,43 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (player.events.oakParcelReceived) {
                 openModal(document.getElementById('kantoroute1Modal'));
                 closeModal(document.getElementById('pallettownnooakModal'));
+                this.changeRoute('kroute1');
             } else {
                 openModal(document.getElementById('kantoroute1Modal'));
                 closeModal(document.getElementById('pallettownModal'));
+                this.changeRoute('kroute1');
             }
         },
         route1ToPallet: function () {
             if (player.events.oakParcelReceived) {
                 openModal(document.getElementById('pallettownnooakModal'));
                 closeModal(document.getElementById('kantoroute1Modal'));
+                this.changeRoute('palletTown');
             } else {
                 openModal(document.getElementById('pallettownModal'));
                 closeModal(document.getElementById('kantoroute1Modal'));
+                this.changeRoute('palletTown');
             }
         },
         route1ToViridian: function () {
             openModal(document.getElementById('viridiancityModal'));
             closeModal(document.getElementById('kantoroute1Modal'));
+            this.changeRoute('viridianCity');
         },
         route22ToViridian: function () {
             openModal(document.getElementById('viridiancityModal'));
             closeModal(document.getElementById('kantoroute22Modal'));
+            this.changeRoute('viridianCity');
         },
         viridianToRoute22: function () {
             openModal(document.getElementById('kantoroute22Modal'));
             closeModal(document.getElementById('viridiancityModal'));
+            this.changeRoute('kroute22');
         },
         viridianToRoute1: function () {
             openModal(document.getElementById('kantoroute1Modal'));
             closeModal(document.getElementById('viridiancityModal'));
+            this.changeRoute('kroute1');
         },
         blueRoute22: function () {
             alert('Needs battle here');

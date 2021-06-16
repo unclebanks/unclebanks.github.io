@@ -75,8 +75,31 @@
   <cinnabarLabModal />
   <cinnabarislandPokeMartModal />
   <kantoRoute1Modal />
+  <kantoRoute2Modal />
+  <kantoRoute3Modal />
+  <kantoRoute4Modal />
+  <kantoRoute5Modal />
+  <kantoRoute6Modal />
+  <kantoRoute7Modal />
+  <kantoRoute8Modal />
+  <kantoRoute9Modal />
+  <kantoRoute10Modal />
+  <kantoRoute11Modal />
+  <kantoRoute12Modal />
+  <kantoRoute13Modal />
+  <kantoRoute14Modal />
+  <kantoRoute15Modal />
+  <kantoRoute16Modal />
+  <kantoRoute17Modal />
+  <kantoRoute18Modal />
+  <kantoRoute19Modal />
+  <kantoRoute20Modal />
+  <kantoRoute21Modal />
   <kantoRoute22Modal />
   <kantoRoute22NoBlueModal />
+  <kantoRoute23Modal />
+  <kantoRoute24Modal />
+  <kantoRoute25Modal />
 </template>
 
 <script>
@@ -155,8 +178,31 @@ import cinnabarGymModal from './modals/kanto/towns/cinnabarIsland/cinnabarGymMod
 import cinnabarLabModal from './modals/kanto/towns/cinnabarIsland/cinnabarLabModal';
 import cinnabarislandPokeMartModal from './modals/kanto/towns/cinnabarIsland/cinnabarPokeMartModal';
 import kantoRoute1Modal from './modals/kanto/routes/kantoRoute1Modal';
+import kantoRoute2Modal from './modals/kanto/routes/kantoRoute2Modal';
+import kantoRoute3Modal from './modals/kanto/routes/kantoRoute3Modal';
+import kantoRoute4Modal from './modals/kanto/routes/kantoRoute4Modal';
+import kantoRoute5Modal from './modals/kanto/routes/kantoRoute5Modal';
+import kantoRoute6Modal from './modals/kanto/routes/kantoRoute6Modal';
+import kantoRoute7Modal from './modals/kanto/routes/kantoRoute7Modal';
+import kantoRoute8Modal from './modals/kanto/routes/kantoRoute8Modal';
+import kantoRoute9Modal from './modals/kanto/routes/kantoRoute9Modal';
+import kantoRoute10Modal from './modals/kanto/routes/kantoRoute10Modal';
+import kantoRoute11Modal from './modals/kanto/routes/kantoRoute11Modal';
+import kantoRoute12Modal from './modals/kanto/routes/kantoRoute12Modal';
+import kantoRoute13Modal from './modals/kanto/routes/kantoRoute13Modal';
+import kantoRoute14Modal from './modals/kanto/routes/kantoRoute14Modal';
+import kantoRoute15Modal from './modals/kanto/routes/kantoRoute15Modal';
+import kantoRoute16Modal from './modals/kanto/routes/kantoRoute16Modal';
+import kantoRoute17Modal from './modals/kanto/routes/kantoRoute17Modal';
+import kantoRoute18Modal from './modals/kanto/routes/kantoRoute18Modal';
+import kantoRoute19Modal from './modals/kanto/routes/kantoRoute19Modal';
+import kantoRoute20Modal from './modals/kanto/routes/kantoRoute20Modal';
+import kantoRoute21Modal from './modals/kanto/routes/kantoRoute21Modal';
 import kantoRoute22Modal from './modals/kanto/routes/kantoRoute22Modal';
 import kantoRoute22NoBlueModal from './modals/kanto/routes/kantoRoute22NoBlueModal';
+import kantoRoute23Modal from './modals/kanto/routes/kantoRoute23Modal';
+import kantoRoute24Modal from './modals/kanto/routes/kantoRoute24Modal';
+import kantoRoute25Modal from './modals/kanto/routes/kantoRoute25Modal';
 
 export default {
     components: {
@@ -235,8 +281,31 @@ export default {
         cinnabarLabModal,
         cinnabarislandPokeMartModal,
         kantoRoute1Modal,
+        kantoRoute2Modal,
+        kantoRoute3Modal,
+        kantoRoute4Modal,
+        kantoRoute5Modal,
+        kantoRoute6Modal,
+        kantoRoute7Modal,
+        kantoRoute8Modal,
+        kantoRoute9Modal,
+        kantoRoute10Modal,
+        kantoRoute11Modal,
+        kantoRoute12Modal,
+        kantoRoute13Modal,
+        kantoRoute14Modal,
+        kantoRoute15Modal,
+        kantoRoute16Modal,
+        kantoRoute17Modal,
+        kantoRoute18Modal,
+        kantoRoute19Modal,
+        kantoRoute20Modal,
+        kantoRoute21Modal,
         kantoRoute22Modal,
         kantoRoute22NoBlueModal,
+        kantoRoute23Modal,
+        kantoRoute24Modal,
+        kantoRoute25Modal,
     },
 
     props: {
