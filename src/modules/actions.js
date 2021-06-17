@@ -1150,6 +1150,17 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('pewtercityModal'));
             openModal(document.getElementById('pewtergymModal'));
         },
+        exitPewterGym: function () {
+            closeModal(document.getElementById('pewtergymModal'));
+            openModal(document.getElementById('pewtercityModal'));
+        },
+        pewterGymRef: function () {
+            if (!player.badges['Boulder Badge']) {
+                alert('Brock is a master of ROCK type Pokemon. It would be a good idea to use WATER, GRASS, or FIGHTING types against him. Once you win, stop by the museum.');
+            } else {
+                alert('Did you stop by the museum? If so, how did you like your surprise?');
+            }
+        },
         pewterMuseum: function () {
             closeModal(document.getElementById('pewtercityModal'));
             openModal(document.getElementById('pewtermuseumModal'));
@@ -1414,7 +1425,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         gymLeaderBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
-            closeModal(document.getElementById('gymModal'));
+            const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
+            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymLeader && routeData.gymLeader.poke.length > 0 && (!routeData.gymLeader.req || player.wins[routeData.gymLeader.req])) {
                 combatLoop.gymLeader = { name: routeData.gymLeader.name, badge: routeData.gymLeader.badge, win: routeData.gymLeader.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymLeader.poke });
@@ -1426,7 +1438,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         gymTrainer1Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
-            closeModal(document.getElementById('gymModal'));
+            const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
+            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymTrainer1.req && !player.wins[routeData.gymTrainer1.req]) {
                 alert('Defeat more GYM LEADERS and try again');
             } else if (routeData.gymTrainer1 && routeData.gymTrainer1.poke.length > 0) {
@@ -1438,7 +1451,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         gymTrainer2Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
-            closeModal(document.getElementById('gymModal'));
+            const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
+            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymTrainer2 && routeData.gymTrainer2.poke.length > 0 && player.wins[routeData.gymTrainer2.req]) {
                 combatLoop.gymLeader = { name: routeData.gymTrainer2.name, win: routeData.gymTrainer2.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer2.poke });
@@ -1450,7 +1464,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         gymTrainer3Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
-            closeModal(document.getElementById('gymModal'));
+            const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
+            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymTrainer3 && routeData.gymTrainer3.poke.length > 0 && player.wins[routeData.gymTrainer3.req]) {
                 combatLoop.gymLeader = { name: routeData.gymTrainer3.name, win: routeData.gymTrainer3.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer3.poke });

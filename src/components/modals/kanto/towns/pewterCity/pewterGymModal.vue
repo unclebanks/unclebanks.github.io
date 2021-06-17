@@ -4,24 +4,35 @@
     title="Pewter Gym"
   >
     <template #body>
-      <div
+      <img
         id="pewterGymModalBox"
+        usemap="#pewterGymMap"
       >
-        <button
-          id="gymTrainer1"
+
+      <map
+        name="pewterGymMap"
+      >
+        <area
+          shape="rect"
+          coords="92,248,123,292"
           onclick="userInteractions.gymTrainer1Battle()"
-          class="button"
         >
-          Jr. Trainer
-        </button><br>
-        <button
-          id="gymLeader"
+        <area
+          shape="rect"
+          coords="182,150,218,197"
           onclick="userInteractions.gymLeaderBattle()"
-          class="button"
         >
-          Brock
-        </button><br>
-      </div>
+        <area
+          shape="rect"
+          coords="213,371,248,417"
+          onclick="userInteractions.pewterGymRef()"
+        >
+        <area
+          shape="rect"
+          coords="166,450,233,512"
+          onclick="userInteractions.exitPewterGym()"
+        >
+      </map>
     </template>
   </CardModal>
 </template>
