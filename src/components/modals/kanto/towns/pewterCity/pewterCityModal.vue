@@ -40,7 +40,7 @@
         <area
           shape="rect"
           coords="320,158,384,191"
-          onclick="userInteractions.pewterToRoute3()"
+          onclick="userInteractions.pewterToRoute3West()"
         >
       </map>
     </template>

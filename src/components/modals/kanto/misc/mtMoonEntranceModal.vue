@@ -1,21 +1,21 @@
 <template>
   <CardModal
-    name="kantoroute3"
-    title="Route 3"
+    name="mtmoonentrance"
+    title="Mt. Moon Entrance"
   >
     <template #body>
       <img
-        id="kantoRoute3ModalBox"
-        usemap="#kantoRoute3Map"
+        id="mtMoonEntranceModalBox"
+        usemap="#mtMoonEntranceMap"
       >
 
       <map
-        name="kantoRoute3Map"
+        name="mtMoonEntranceMap"
       >
         <area
           shape="rect"
-          coords="0,0,20,20"
-          onclick="userInteractions.test()"
+          coords="126,268,259,320"
+          onclick="userInteractions.mtMoonEntranceToRoute3East()"
         >
       </map>
     </template>

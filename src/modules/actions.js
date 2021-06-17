@@ -1141,12 +1141,32 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('pewtercityModal'));
             this.changeRoute('kroute2');
         },
-        pewterToRoute3: function () {
+        pewterToRoute3West: function () {
             if (player.badges['Boulder Badge'] === true) {
-                openModal(document.getElementById('kantoroute3Modal'));
+                openModal(document.getElementById('kantoroute3westModal'));
                 closeModal(document.getElementById('pewtercityModal'));
                 this.changeRoute('kroute3');
             } else { alert('Defeat Brock before moving on.'); }
+        },
+        route3WestToPewter: function () {
+            openModal(document.getElementById('pewtercityModal'));
+            closeModal(document.getElementById('kantoroute3westModal'));
+        },
+        route3WestToRoute3East: function () {
+            openModal(document.getElementById('kantoroute3eastModal'));
+            closeModal(document.getElementById('kantoroute3westModal'));
+        },
+        route3EastToRoute3West: function () {
+            openModal(document.getElementById('kantoroute3westModal'));
+            closeModal(document.getElementById('kantoroute3eastModal'));
+        },
+        route3EastToMtMoonEntrance: function () {
+            openModal(document.getElementById('mtmoonentranceModal'));
+            closeModal(document.getElementById('kantoroute3eastModal'));
+        },
+        mtMoonEntranceToRoute3East: function () {
+            openModal(document.getElementById('kantoroute3eastModal'));
+            closeModal(document.getElementById('mtmoonentranceModal'));
         },
         pewterPokeMart: function () {
             closeModal(document.getElementById('pewtercityModal'));
