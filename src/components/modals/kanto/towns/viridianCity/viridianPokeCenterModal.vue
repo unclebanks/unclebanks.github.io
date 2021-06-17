@@ -37,6 +37,11 @@
           coords="215,265,266,297"
           onclick="userInteractions.viridianPokeCenterExit()"
         >
+        <area
+          shape="rect"
+          coords="352,13,386,80"
+          onclick="userInteractions.playerComputer()"
+        >
       </map>
     </template>
   </CardModal>

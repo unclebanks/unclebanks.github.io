@@ -686,6 +686,16 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.updateVitaminModal();
             }
         },
+        playerComputer: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
+            closeModal(document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokecenterModal`));
+            openModal(document.getElementById('playercomputerModal'));
+        },
+        closePlayerComputer: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
+            openModal(document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokecenterModal`));
+            closeModal(document.getElementById('playercomputerModal'));
+        },
         checkGymLeaderBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (!player.wins[routeData.gymLeader.win]) {

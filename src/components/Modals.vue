@@ -102,6 +102,7 @@
   <kantoRoute23Modal />
   <kantoRoute24Modal />
   <kantoRoute25Modal />
+  <playerComputerModal />
 </template>
 
 <script>
@@ -207,6 +208,7 @@ import kantoRoute22NoBlueModal from './modals/kanto/routes/kantoRoute22NoBlueMod
 import kantoRoute23Modal from './modals/kanto/routes/kantoRoute23Modal';
 import kantoRoute24Modal from './modals/kanto/routes/kantoRoute24Modal';
 import kantoRoute25Modal from './modals/kanto/routes/kantoRoute25Modal';
+import playerComputerModal from './modals/kanto/misc/playerComputerModal';
 
 export default {
     components: {
@@ -312,6 +314,7 @@ export default {
         kantoRoute23Modal,
         kantoRoute24Modal,
         kantoRoute25Modal,
+        playerComputerModal,
     },
 
     props: {
