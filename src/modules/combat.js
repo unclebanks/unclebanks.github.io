@@ -4,6 +4,7 @@ import { RNG, flash, $ } from './utilities';
 import { POKEDEXFLAGS, PokemonTypes } from './data';
 import ROUTES from './routes';
 import { renderView } from './display';
+import { openModal, closeModal } from './modalEvents';
 import Poke from './poke';
 import POKEDEX from './db';
 import actions from '../store/actions';
@@ -142,7 +143,6 @@ export default (player, enemy) => {
             }
             player.statistics.beaten++;
             Combat.attemptCatch();
-            Combat.findPokeballs(enemy.activePoke().level());
             const foundPokeCoins = Math.floor(Combat.enemyActivePoke.level() * 4) - 5;
             player.addPokeCoins(foundPokeCoins);
 
@@ -272,8 +272,12 @@ export default (player, enemy) => {
                     Combat.pause();
                 }
                 flash($('#gameContainer'));
-                if (ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn) {
+                const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+                const routeModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].modal;
+                if (routeData.respawn) {
+                    closeModal(document.getElementById(`${routeModal.replace(/ /g, '').toLowerCase()}Modal`));
                     userInteractions.changeRoute(ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn, true);
+                    openModal(document.getElementById(`${player.settings.currentRouteId.replace(/ /g, '').toLowerCase()}Modal`));
                 }
             }
         },
@@ -322,21 +326,6 @@ export default (player, enemy) => {
                             notify(`You did not catch ${enemy.activePoke().pokeName()}`);
                         }
                     }
-                }
-            }
-        },
-        findPokeballs: function (pokeLevel) {
-            const ballsAmount = Math.floor(Math.random() * (pokeLevel / 2)) + 1;
-            const ballWeights = {
-                'ultraball': 10,
-                'greatball': 20,
-                'pokeball': 100,
-            };
-            const rng = Math.floor(Math.random() * (2000 - (pokeLevel * 4)));
-            for (const ballName in ballWeights) {
-                if (rng < ballWeights[ballName]) {
-                    player.addBalls(ballName, ballsAmount);
-                    dom.renderBalls();
                 }
             }
         },

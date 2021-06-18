@@ -686,6 +686,16 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.updateVitaminModal();
             }
         },
+        playerComputer: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
+            closeModal(document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokecenterModal`));
+            openModal(document.getElementById('playercomputerModal'));
+        },
+        closePlayerComputer: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
+            openModal(document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokecenterModal`));
+            closeModal(document.getElementById('playercomputerModal'));
+        },
         checkGymLeaderBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (!player.wins[routeData.gymLeader.win]) {
@@ -985,35 +995,86 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (player.events.oakParcelReceived) {
                 openModal(document.getElementById('kantoroute1Modal'));
                 closeModal(document.getElementById('pallettownnooakModal'));
+                this.changeRoute('kroute1');
             } else {
                 openModal(document.getElementById('kantoroute1Modal'));
                 closeModal(document.getElementById('pallettownModal'));
+                this.changeRoute('kroute1');
             }
         },
         route1ToPallet: function () {
             if (player.events.oakParcelReceived) {
                 openModal(document.getElementById('pallettownnooakModal'));
                 closeModal(document.getElementById('kantoroute1Modal'));
+                this.changeRoute('palletTown');
             } else {
                 openModal(document.getElementById('pallettownModal'));
                 closeModal(document.getElementById('kantoroute1Modal'));
+                this.changeRoute('palletTown');
             }
         },
         route1ToViridian: function () {
             openModal(document.getElementById('viridiancityModal'));
             closeModal(document.getElementById('kantoroute1Modal'));
+            this.changeRoute('viridianCity');
         },
         route22ToViridian: function () {
             openModal(document.getElementById('viridiancityModal'));
             closeModal(document.getElementById('kantoroute22Modal'));
+            this.changeRoute('viridianCity');
+        },
+        route2BottomToViridian: function () {
+            openModal(document.getElementById('viridiancityModal'));
+            closeModal(document.getElementById('kantoroute2bottomModal'));
+            this.changeRoute('viridianCity');
+        },
+        route2BottomToRoute2Top: function () {
+            openModal(document.getElementById('kantoroute2topModal'));
+            closeModal(document.getElementById('kantoroute2bottomModal'));
+        },
+        route2BottomToKantoViridianForest: function () {
+            openModal(document.getElementById('kantoviridianforestModal'));
+            closeModal(document.getElementById('kantoroute2bottomModal'));
+            this.changeRoute('viridianForest');
+        },
+        route2TopToPewter: function () {
+            openModal(document.getElementById('pewtercityModal'));
+            closeModal(document.getElementById('kantoroute2topModal'));
+            this.changeRoute('pewterCity');
+        },
+        route2TopToRoute2Bottom: function () {
+            openModal(document.getElementById('kantoroute2bottomModal'));
+            closeModal(document.getElementById('kantoroute2topModal'));
+        },
+        route2TopToKantoViridianForest: function () {
+            openModal(document.getElementById('kantoviridianforestModal'));
+            closeModal(document.getElementById('kantoroute2topModal'));
+            this.changeRoute('viridianForest');
         },
         viridianToRoute22: function () {
             openModal(document.getElementById('kantoroute22Modal'));
             closeModal(document.getElementById('viridiancityModal'));
+            this.changeRoute('kroute22');
         },
         viridianToRoute1: function () {
             openModal(document.getElementById('kantoroute1Modal'));
             closeModal(document.getElementById('viridiancityModal'));
+            this.changeRoute('kroute1');
+        },
+        viridianToRoute2Bottom: function () {
+            openModal(document.getElementById('kantoroute2bottomModal'));
+            closeModal(document.getElementById('viridiancityModal'));
+            this.changeRoute('kroute2');
+        },
+        kantoViridianForestToRoute2Bottom: function () {
+            openModal(document.getElementById('kantoroute2bottomModal'));
+            closeModal(document.getElementById('kantoviridianforestModal'));
+            this.changeRoute('kroute2');
+        },
+        kantoViridianForestToRoute2Top: function () {
+            openModal(document.getElementById('kantoroute2topModal'));
+            closeModal(document.getElementById('kantoviridianforestModal'));
+            this.changeRoute('kroute2');
         },
         blueRoute22: function () {
             alert('Needs battle here');
@@ -1075,6 +1136,79 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 openModal(document.getElementById('viridiangymModal'));
             }
         },
+        pewterToRoute2Top: function () {
+            openModal(document.getElementById('kantoroute2topModal'));
+            closeModal(document.getElementById('pewtercityModal'));
+            this.changeRoute('kroute2');
+        },
+        pewterToRoute3West: function () {
+            if (player.badges['Boulder Badge'] === true) {
+                openModal(document.getElementById('kantoroute3westModal'));
+                closeModal(document.getElementById('pewtercityModal'));
+                this.changeRoute('kroute3');
+            } else { alert('Defeat Brock before moving on.'); }
+        },
+        route3WestToPewter: function () {
+            openModal(document.getElementById('pewtercityModal'));
+            closeModal(document.getElementById('kantoroute3westModal'));
+        },
+        route3WestToRoute3East: function () {
+            openModal(document.getElementById('kantoroute3eastModal'));
+            closeModal(document.getElementById('kantoroute3westModal'));
+        },
+        route3EastToRoute3West: function () {
+            openModal(document.getElementById('kantoroute3westModal'));
+            closeModal(document.getElementById('kantoroute3eastModal'));
+        },
+        route3EastToMtMoonEntrance: function () {
+            openModal(document.getElementById('mtmoonentranceModal'));
+            closeModal(document.getElementById('kantoroute3eastModal'));
+        },
+        mtMoonEntranceToRoute3East: function () {
+            this.changeRoute('kroute3');
+            openModal(document.getElementById('kantoroute3eastModal'));
+            closeModal(document.getElementById('mtmoonentranceModal'));
+        },
+        mtMoonEntranceToMtMoonFirstFloor: function () {
+            this.changeRoute('mtMoon');
+            openModal(document.getElementById('mtmoonfirstfloorModal'));
+            closeModal(document.getElementById('mtmoonentranceModal'));
+        },
+        mtMoonFirstFloorToMtMoonEntrance: function () {
+            openModal(document.getElementById('mtmoonentranceModal'));
+            closeModal(document.getElementById('mtmoonfirstfloorModal'));
+        },
+        mtMoonFirstFloorToMtMoonSecondFloor: function () {
+            openModal(document.getElementById('mtmoonsecondfloorModal'));
+            closeModal(document.getElementById('mtmoonfirstfloorModal'));
+        },
+        mtMoonSecondFloorToMtMoonFirstFloor: function () {
+            openModal(document.getElementById('mtmoonfirstfloorModal'));
+            closeModal(document.getElementById('mtmoonsecondfloorModal'));
+        },
+        mtMoonSecondFloorToRoute4West: function () {
+            openModal(document.getElementById('kantoroute4westModal'));
+            closeModal(document.getElementById('mtmoonsecondfloorModal'));
+            this.changeRoute('kroute4');
+        },
+        route4WestToRoute4East: function () {
+            openModal(document.getElementById('kantoroute4eastModal'));
+            closeModal(document.getElementById('kantoroute4westModal'));
+        },
+        route4EastToRoute4West: function () {
+            openModal(document.getElementById('kantoroute4westModal'));
+            closeModal(document.getElementById('kantoroute4eastModal'));
+        },
+        route4WestToMtMoonFirstFloor: function () {
+            this.changeRoute('mtMoon');
+            openModal(document.getElementById('mtmoonfirstfloorModal'));
+            closeModal(document.getElementById('kantoroute4westModal'));
+        },
+        route4EastToCeruleanCity: function () {
+            this.changeRoute('ceruleanCity');
+            openModal(document.getElementById('ceruleancityModal'));
+            closeModal(document.getElementById('kantoroute4eastModal'));
+        },
         pewterPokeMart: function () {
             closeModal(document.getElementById('pewtercityModal'));
             openModal(document.getElementById('pewtercitypokemartModal'));
@@ -1086,6 +1220,17 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         pewterGym: function () {
             closeModal(document.getElementById('pewtercityModal'));
             openModal(document.getElementById('pewtergymModal'));
+        },
+        exitPewterGym: function () {
+            closeModal(document.getElementById('pewtergymModal'));
+            openModal(document.getElementById('pewtercityModal'));
+        },
+        pewterGymRef: function () {
+            if (!player.badges['Boulder Badge']) {
+                alert('Brock is a master of ROCK type Pokemon. It would be a good idea to use WATER, GRASS, or FIGHTING types against him. Once you win, stop by the museum.');
+            } else {
+                alert('Did you stop by the museum? If so, how did you like your surprise?');
+            }
         },
         pewterMuseum: function () {
             closeModal(document.getElementById('pewtercityModal'));
@@ -1351,7 +1496,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         gymLeaderBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
-            closeModal(document.getElementById('gymModal'));
+            const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
+            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymLeader && routeData.gymLeader.poke.length > 0 && (!routeData.gymLeader.req || player.wins[routeData.gymLeader.req])) {
                 combatLoop.gymLeader = { name: routeData.gymLeader.name, badge: routeData.gymLeader.badge, win: routeData.gymLeader.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymLeader.poke });
@@ -1363,7 +1509,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         gymTrainer1Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
-            closeModal(document.getElementById('gymModal'));
+            const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
+            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymTrainer1.req && !player.wins[routeData.gymTrainer1.req]) {
                 alert('Defeat more GYM LEADERS and try again');
             } else if (routeData.gymTrainer1 && routeData.gymTrainer1.poke.length > 0) {
@@ -1375,7 +1522,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         gymTrainer2Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
-            closeModal(document.getElementById('gymModal'));
+            const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
+            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymTrainer2 && routeData.gymTrainer2.poke.length > 0 && player.wins[routeData.gymTrainer2.req]) {
                 combatLoop.gymLeader = { name: routeData.gymTrainer2.name, win: routeData.gymTrainer2.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer2.poke });
@@ -1387,7 +1535,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         gymTrainer3Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
-            closeModal(document.getElementById('gymModal'));
+            const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
+            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymTrainer3 && routeData.gymTrainer3.poke.length > 0 && player.wins[routeData.gymTrainer3.req]) {
                 combatLoop.gymLeader = { name: routeData.gymTrainer3.name, win: routeData.gymTrainer3.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer3.poke });

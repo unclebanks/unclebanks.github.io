@@ -617,7 +617,8 @@ progress.expBar {
 #pewterCityModalBox {
     background-image: url('../assets/backgrounds/kanto/pewterCity/pewterCity.png');
     background-size: cover;
-    height: 481px;
+    height: 320px;
+    width: 384px;
 }
 
 #pewterCityModalBox .button {
@@ -1013,6 +1014,71 @@ progress.expBar {
     background-size: contain;
     height: 384px;
     width: 640px;
+}
+#kantoRoute2BottomModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute2Bottom.png');
+    background-size: contain;
+    height: 566px;
+    width: 384px;
+}
+#kantoRoute2TopModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute2Top.png');
+    background-size: contain;
+    height: 679px;
+    width: 384px;
+}
+#kantoRoute3WestModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute3West.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 593px;
+    height: 320px;
+}
+#kantoRoute3EastModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute3East.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 680px;
+    height: 320px;
+}
+#kantoRoute4WestModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute4West.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 580px;
+    height: 320px;
+}
+#kantoRoute4EastModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute4East.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 680px;
+    height: 320px;
+}
+#mtMoonEntranceModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoMtMoonEntrance.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 414px;
+    height: 320px;
+}
+#mtMoonFirstFloorModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/mtMoon/mtMoonFirstFloor.png');
+    background-size: cover;
+    width: 768px;
+    height: 640px;
+}
+#mtMoonSecondFloorModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/mtMoon/mtMoonSecondFloor.png');
+    background-size: cover;
+    width: 768px;
+    height: 640px;
+}
+#kantoViridianForestModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/viridianForest/viridianForest.png');
+    background-size: contain;
+    height: 552px;
+    width: 432px;
 }
 
 .townBuilding {
