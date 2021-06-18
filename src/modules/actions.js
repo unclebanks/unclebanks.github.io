@@ -1165,8 +1165,49 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('kantoroute3eastModal'));
         },
         mtMoonEntranceToRoute3East: function () {
+            this.changeRoute('kroute3');
             openModal(document.getElementById('kantoroute3eastModal'));
             closeModal(document.getElementById('mtmoonentranceModal'));
+        },
+        mtMoonEntranceToMtMoonFirstFloor: function () {
+            this.changeRoute('mtMoon');
+            openModal(document.getElementById('mtmoonfirstfloorModal'));
+            closeModal(document.getElementById('mtmoonentranceModal'));
+        },
+        mtMoonFirstFloorToMtMoonEntrance: function () {
+            openModal(document.getElementById('mtmoonentranceModal'));
+            closeModal(document.getElementById('mtmoonfirstfloorModal'));
+        },
+        mtMoonFirstFloorToMtMoonSecondFloor: function () {
+            openModal(document.getElementById('mtmoonsecondfloorModal'));
+            closeModal(document.getElementById('mtmoonfirstfloorModal'));
+        },
+        mtMoonSecondFloorToMtMoonFirstFloor: function () {
+            openModal(document.getElementById('mtmoonfirstfloorModal'));
+            closeModal(document.getElementById('mtmoonsecondfloorModal'));
+        },
+        mtMoonSecondFloorToRoute4West: function () {
+            openModal(document.getElementById('kantoroute4westModal'));
+            closeModal(document.getElementById('mtmoonsecondfloorModal'));
+            this.changeRoute('kroute4');
+        },
+        route4WestToRoute4East: function () {
+            openModal(document.getElementById('kantoroute4eastModal'));
+            closeModal(document.getElementById('kantoroute4westModal'));
+        },
+        route4EastToRoute4West: function () {
+            openModal(document.getElementById('kantoroute4westModal'));
+            closeModal(document.getElementById('kantoroute4eastModal'));
+        },
+        route4WestToMtMoonFirstFloor: function () {
+            this.changeRoute('mtMoon');
+            openModal(document.getElementById('mtmoonfirstfloorModal'));
+            closeModal(document.getElementById('kantoroute4westModal'));
+        },
+        route4EastToCeruleanCity: function () {
+            this.changeRoute('ceruleanCity');
+            openModal(document.getElementById('ceruleancityModal'));
+            closeModal(document.getElementById('kantoroute4eastModal'));
         },
         pewterPokeMart: function () {
             closeModal(document.getElementById('pewtercityModal'));

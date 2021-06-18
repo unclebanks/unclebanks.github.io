@@ -36,6 +36,8 @@
   <pewterGymModal />
   <pewterMuseumModal />
   <mtMoonEntranceModal />
+  <mtMoonFirstFloorModal />
+  <mtMoonSecondFloorModal />
   <ceruleanCityModal />
   <ceruleancityPokeMartModal />
   <ceruleancityPokeCenterModal />
@@ -81,7 +83,8 @@
   <kantoRoute2BottomModal />
   <kantoRoute3WestModal />
   <kantoRoute3EastModal />
-  <kantoRoute4Modal />
+  <kantoRoute4WestModal />
+  <kantoRoute4EastModal />
   <kantoRoute5Modal />
   <kantoRoute6Modal />
   <kantoRoute7Modal />
@@ -145,6 +148,8 @@ import pewtercityPokeCenterModal from './modals/kanto/towns/pewterCity/pewterPok
 import pewterGymModal from './modals/kanto/towns/pewterCity/pewterGymModal';
 import pewterMuseumModal from './modals/kanto/towns/pewterCity/pewterMuseumModal';
 import mtMoonEntranceModal from './modals/kanto/misc/mtMoonEntranceModal';
+import mtMoonFirstFloorModal from './modals/kanto/dungeons/mtMoon/mtMoonFirstFloorModal';
+import mtMoonSecondFloorModal from './modals/kanto/dungeons/mtMoon/mtMoonSecondFloorModal';
 import ceruleanCityModal from './modals/kanto/towns/ceruleanCity/ceruleanCityModal';
 import ceruleancityPokeMartModal from './modals/kanto/towns/ceruleanCity/ceruleanPokeMartModal';
 import ceruleancityPokeCenterModal from './modals/kanto/towns/ceruleanCity/ceruleanPokeCenterModal';
@@ -189,7 +194,8 @@ import kantoRoute2BottomModal from './modals/kanto/routes/kantoRoute2BottomModal
 import kantoRoute2TopModal from './modals/kanto/routes/kantoRoute2TopModal';
 import kantoRoute3WestModal from './modals/kanto/routes/kantoRoute3WestModal';
 import kantoRoute3EastModal from './modals/kanto/routes/kantoRoute3EastModal';
-import kantoRoute4Modal from './modals/kanto/routes/kantoRoute4Modal';
+import kantoRoute4WestModal from './modals/kanto/routes/kantoRoute4WestModal';
+import kantoRoute4EastModal from './modals/kanto/routes/kantoRoute4EastModal';
 import kantoRoute5Modal from './modals/kanto/routes/kantoRoute5Modal';
 import kantoRoute6Modal from './modals/kanto/routes/kantoRoute6Modal';
 import kantoRoute7Modal from './modals/kanto/routes/kantoRoute7Modal';
@@ -253,6 +259,8 @@ export default {
         pewterGymModal,
         pewterMuseumModal,
         mtMoonEntranceModal,
+        mtMoonFirstFloorModal,
+        mtMoonSecondFloorModal,
         ceruleanCityModal,
         ceruleancityPokeMartModal,
         ceruleancityPokeCenterModal,
@@ -297,7 +305,8 @@ export default {
         kantoRoute2TopModal,
         kantoRoute3WestModal,
         kantoRoute3EastModal,
-        kantoRoute4Modal,
+        kantoRoute4WestModal,
+        kantoRoute4EastModal,
         kantoRoute5Modal,
         kantoRoute6Modal,
         kantoRoute7Modal,

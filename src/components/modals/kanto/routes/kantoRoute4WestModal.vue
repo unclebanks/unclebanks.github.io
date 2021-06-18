@@ -1,26 +1,26 @@
 <template>
   <CardModal
-    name="mtmoonentrance"
-    title="Mt. Moon Entrance"
+    name="kantoroute4west"
+    title="Route 4"
   >
     <template #body>
       <img
-        id="mtMoonEntranceModalBox"
-        usemap="#mtMoonEntranceMap"
+        id="kantoRoute4WestModalBox"
+        usemap="#kantoRoute4WestMap"
       >
 
       <map
-        name="mtMoonEntranceMap"
+        name="kantoRoute4WestMap"
       >
         <area
           shape="rect"
-          coords="126,268,259,320"
-          onclick="userInteractions.mtMoonEntranceToRoute3East()"
+          coords="0,0,115,95"
+          onclick="userInteractions.route4WestToMtMoonFirstFloor()"
         >
         <area
           shape="rect"
-          coords="259,19,354,95"
-          onclick="userInteractions.mtMoonEntranceToMtMoonFirstFloor()"
+          coords="485,179,580,223"
+          onclick="userInteractions.route4WestToRoute4East()"
         >
       </map>
     </template>

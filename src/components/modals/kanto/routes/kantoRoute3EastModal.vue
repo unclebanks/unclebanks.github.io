@@ -1,7 +1,7 @@
 <template>
   <CardModal
     name="kantoroute3east"
-    title="Route 3 East"
+    title="Route 3"
   >
     <template #body>
       <img
