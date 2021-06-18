@@ -4,6 +4,7 @@ import { RNG, flash, $ } from './utilities';
 import { POKEDEXFLAGS, PokemonTypes } from './data';
 import ROUTES from './routes';
 import { renderView } from './display';
+import { openModal, closeModal } from './modalEvents';
 import Poke from './poke';
 import POKEDEX from './db';
 import actions from '../store/actions';
@@ -271,8 +272,12 @@ export default (player, enemy) => {
                     Combat.pause();
                 }
                 flash($('#gameContainer'));
-                if (ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn) {
+                const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+                const routeModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].modal;
+                if (routeData.respawn) {
+                    closeModal(document.getElementById(`${routeModal.replace(/ /g, '').toLowerCase()}Modal`));
                     userInteractions.changeRoute(ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn, true);
+                    openModal(document.getElementById(`${player.settings.currentRouteId.replace(/ /g, '').toLowerCase()}Modal`));
                 }
             }
         },

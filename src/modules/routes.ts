@@ -167,6 +167,7 @@ interface Route {
     // this should be a town name, but we don't know them all until later
     // may want to define all town names before this for stronger typing
     respawn: string,
+    modal?: string,
     _unlock?: UnlockData,
     _special?: SpecialPokemon[],
 
@@ -304,6 +305,7 @@ const ROUTES: Routes = {
         kroute22: {
             name: 'Route 22',
             pokes: ['Rattata', 'Nidoran F', 'Nidoran M', 'Mankey', 'Spearow'],
+            modal: 'kantoRoute22',
             minLevel: 99,
             maxLevel: 100,
             respawn: 'viridianCity',
