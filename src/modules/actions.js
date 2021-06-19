@@ -569,6 +569,14 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         viewBag: function () {
             openModal(document.getElementById('bagModal'));
         },
+        viewMap: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.modal) {
+                openModal(document.getElementById(`${routeData.modal.replace(/ /g, '').toLowerCase()}Modal`));
+            } else {
+                openModal(document.getElementById(`${player.settings.currentRouteId.replace(/ /g, '').toLowerCase()}Modal`));
+            }
+        },
         viewTown: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
             if (routeData === 'Pallet Town' && !player.events.oakParcelReceived) {
@@ -1199,9 +1207,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('kantoroute4westModal'));
             closeModal(document.getElementById('kantoroute4eastModal'));
         },
-        route4WestToMtMoonFirstFloor: function () {
+        route4WestToMtMoonSecondFloor: function () {
             this.changeRoute('mtMoon');
-            openModal(document.getElementById('mtmoonfirstfloorModal'));
+            openModal(document.getElementById('mtmoonsecondfloorModal'));
             closeModal(document.getElementById('kantoroute4westModal'));
         },
         route4EastToCeruleanCity: function () {

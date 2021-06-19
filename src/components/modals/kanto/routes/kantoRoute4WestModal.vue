@@ -15,7 +15,7 @@
         <area
           shape="rect"
           coords="0,0,115,95"
-          onclick="userInteractions.route4WestToMtMoonFirstFloor()"
+          onclick="userInteractions.route4WestToMtMoonSecondFloor()"
         >
         <area
           shape="rect"

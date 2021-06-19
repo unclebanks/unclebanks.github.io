@@ -13,6 +13,13 @@
       </p>
       <p>
         <button
+          onclick="userInteractions.viewPokeDex()"
+        >
+          Pokedex
+        </button>
+      </p>
+      <p>
+        <button
           onclick="userInteractions.viewBag()"
         >
           Bag
@@ -20,9 +27,9 @@
       </p>
       <p>
         <button
-          onclick="userInteractions.viewPokeDex()"
+          onclick="userInteractions.viewMap()"
         >
-          Pokedex
+          Map
         </button>
       </p>
       <input
