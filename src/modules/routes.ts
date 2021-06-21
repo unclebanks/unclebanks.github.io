@@ -321,7 +321,7 @@ const ROUTES: Routes = {
         },
         viridianForest: {
             name: 'Virdian Forest',
-            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Pidgeotto', 'Pikachu'],
+            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Pidgeotto', 'Pikachu', 'Oddish'],
             minLevel: 3,
             maxLevel: 6,
             modal: 'kantoViridianForest',
@@ -981,6 +981,7 @@ const ROUTES: Routes = {
             pokes: ['Zubat', 'Golbat', 'Psyduck', 'Golduck', 'Slowpoke', 'Slowbro', 'Seel', 'Dewgong', 'Shellder', 'Krabby', 'Kingler', 'Horsea', 'Seadra', 'Staryu', 'Jynx', 'Articuno'],
             minLevel: 9,
             maxLevel: 50,
+            modal: 'seafoamIslandsEntrance',
             respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {

@@ -1475,6 +1475,66 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('No one is home');
             }
         },
+        route20EastToSeafoamIslandsEntrance: function () {
+            this.changeRoute('seafoamIsland');
+            openModal(document.getElementById('seafoamislandsentranceModal'));
+            closeModal(document.getElementById('kantoroute20eastModal'));
+        },
+        seafoamIslandsEntranceToRoute20East: function () {
+            this.changeRoute('kroute20');
+            openModal(document.getElementById('kantoroute20eastModal'));
+            closeModal(document.getElementById('seafoamislandsentranceModal'));
+        },
+        route20WestToSeafoamIslandsEntrance: function () {
+            this.changeRoute('seafoamIsland');
+            openModal(document.getElementById('seafoamislandsentranceModal'));
+            closeModal(document.getElementById('kantoroute20westModal'));
+        },
+        seafoamIslandsEntranceToRoute20West: function () {
+            this.changeRoute('kroute20');
+            openModal(document.getElementById('kantoroute20westModal'));
+            closeModal(document.getElementById('seafoamislandsentranceModal'));
+        },
+        seafoamIslandsEntranceToSeafoamIslandsFirstFloor: function () {
+            openModal(document.getElementById('seafoamislandsfirstfloorModal'));
+            closeModal(document.getElementById('seafoamislandsentranceModal'));
+        },
+        seafoamIslandsFirstFloorToSeafoamIslandsEntrance: function () {
+            openModal(document.getElementById('seafoamislandsentranceModal'));
+            closeModal(document.getElementById('seafoamislandsfirstfloorModal'));
+        },
+        seafoamIslandsFirstFloorToSeafoamIslandsSecondFloor: function () {
+            openModal(document.getElementById('seafoamislandssecondfloorModal'));
+            closeModal(document.getElementById('seafoamislandsfirstfloorModal'));
+        },
+        seafoamIslandsSecondFloorToSeafoamIslandsFirstFloor: function () {
+            openModal(document.getElementById('seafoamislandsfirstfloorModal'));
+            closeModal(document.getElementById('seafoamislandssecondfloorModal'));
+        },
+        seafoamIslandsSecondFloorToSeafoamIslandsThirdFloor: function () {
+            openModal(document.getElementById('seafoamislandsthirdfloorModal'));
+            closeModal(document.getElementById('seafoamislandssecondfloorModal'));
+        },
+        seafoamIslandsThirdFloorToSeafoamIslandsSecondFloor: function () {
+            openModal(document.getElementById('seafoamislandssecondfloorModal'));
+            closeModal(document.getElementById('seafoamislandsthirdfloorModal'));
+        },
+        seafoamIslandsThirdFloorToSeafoamIslandsFourthFloor: function () {
+            openModal(document.getElementById('seafoamislandsfourthfloorModal'));
+            closeModal(document.getElementById('seafoamislandsthirdfloorModal'));
+        },
+        seafoamIslandsFourthFloorToSeafoamIslandsThirdFloor: function () {
+            openModal(document.getElementById('seafoamislandsthirdfloorModal'));
+            closeModal(document.getElementById('seafoamislandsfourthfloorModal'));
+        },
+        seafoamIslandsFourthFloorToSeafoamIslandsFifthFloor: function () {
+            openModal(document.getElementById('seafoamislandsfifthfloorModal'));
+            closeModal(document.getElementById('seafoamislandsfourthfloorModal'));
+        },
+        seafoamIslandsFifthFloorToSeafoamIslandsFourthFloor: function () {
+            openModal(document.getElementById('seafoamislandsfourthfloorModal'));
+            closeModal(document.getElementById('seafoamislandsfifthfloorModal'));
+        },
         abundantOldManEvent: function () {
             if (!player.events.abundantShrineEvent && player.hasPokemon('Thundurus') && player.hasPokemon('Landorus') && player.hasPokemon('Tornadus')) {
                 alert('Amazing that you\'ve tamed the Forces of Nature. Take this item to take them to the next level');
