@@ -228,6 +228,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         moveToRoster: function (pokemonIndex) {
             appModel.$store.commit('pokemon/withdraw', pokemonIndex);
         },
+        moveToPokeFarm: function (pokemonIndex) {
+            appModel.$store.commit('pokemon/depositPokeFarm', pokemonIndex);
+        },
+        removeFromPokeFarm: function (pokemonIndex) {
+            appModel.$store.commit('pokemon/withdrawPokeFarm', pokemonIndex);
+        },
         openPokeDex: function () {
             openModal($('#pokedexModal'));
         },
