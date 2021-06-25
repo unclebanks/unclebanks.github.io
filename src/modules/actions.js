@@ -228,6 +228,70 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         moveToRoster: function (pokemonIndex) {
             appModel.$store.commit('pokemon/withdraw', pokemonIndex);
         },
+        moveToPokeFarm: function (pokemonIndex) {
+            if (!appModel.$store.state.pokemon.pokeFarm[1]) {
+                appModel.$store.commit('pokemon/depositPokeFarm', pokemonIndex);
+            } else { alert('You can only send two Pokemon to the PokeRanch right now.'); }
+        },
+        withdrawFromPokeFarm: function (pokemonIndex) {
+            appModel.$store.commit('pokemon/withdrawPokeFarm', pokemonIndex);
+        },
+        renderPokeRanchContainer: function () {
+            const poke1Box = $('#pokemon1Box').querySelector('.pokeBox');
+            const poke1Placement = appModel.$store.state.pokemon.pokeFarm[0];
+            const poke2Placement = appModel.$store.state.pokemon.pokeFarm[1];
+            const poke2Box = $('#pokemon2Box').querySelector('.pokeBox');
+            const pokeStatusAsText1 = (poke1Placement) => {
+                let output = '';
+                output += `Happiness: ${poke1Placement.happiness()}<br>`;
+                output += `\nAttack: ${poke1Placement.avgAttack()}<br>`;
+                output += `\nDefense: ${poke1Placement.avgDefense()}<br>`;
+                return output;
+            };
+            const pokeStatusAsText2 = (poke2Placement) => {
+                let output = '';
+                output += `Happiness: ${poke2Placement.happiness()}<br>`;
+                output += `\nAttack: ${poke2Placement.avgAttack()}<br>`;
+                output += `\nDefense: ${poke2Placement.avgDefense()}<br>`;
+                return output;
+            };
+            const pokemon1Stats = {
+                name: poke1Box.querySelector('.name'),
+                img: poke1Box.querySelector('.img'),
+                hp: poke1Box.querySelector('.hp'),
+                hpBar: poke1Box.querySelector('.hpBar'),
+                expBar: poke1Box.querySelector('.expBar'),
+                status: poke1Box.querySelector('.status'),
+            };
+            const pokemon2Stats = {
+                name: poke2Box.querySelector('.name'),
+                img: poke2Box.querySelector('.img'),
+                hp: poke2Box.querySelector('.hp'),
+                hpBar: poke2Box.querySelector('.hpBar'),
+                expBar: poke2Box.querySelector('.expBar'),
+                status: poke2Box.querySelector('.status'),
+            };
+            if (appModel.$store.state.pokemon.pokeFarm[0]) {
+                dom.setValue(pokemon1Stats.name, `${poke1Placement.pokeName()} (L${poke1Placement.level()}, P${poke1Placement.prestigeLevel})`);
+                dom.setProp(pokemon1Stats.img, 'src', `assets/sprites/normal/front/${poke1Placement.pokeName()}.png`);
+                dom.setValue(pokemon1Stats.hp, poke1Placement.lifeAsText());
+                dom.setProp(pokemon1Stats.hpBar, 'value', poke1Placement.getHp());
+                dom.setProp(pokemon1Stats.hpBar, 'max', poke1Placement.maxHp());
+                dom.setProp(pokemon1Stats.expBar, 'value', Math.floor(poke1Placement.currentExp() - poke1Placement.thisLevelExp()));
+                dom.setProp(pokemon1Stats.expBar, 'max', poke1Placement.nextLevelExp() - poke1Placement.thisLevelExp());
+                dom.setValue(pokemon1Stats.status, pokeStatusAsText1(poke1Placement));
+                if (appModel.$store.state.pokemon.pokeFarm[1]) {
+                    dom.setValue(pokemon2Stats.name, `${poke2Placement.pokeName()} (L${poke2Placement.level()}, P${poke2Placement.prestigeLevel})`);
+                    dom.setProp(pokemon2Stats.img, 'src', `assets/sprites/normal/front/${poke2Placement.pokeName()}.png`);
+                    dom.setValue(pokemon2Stats.hp, poke2Placement.lifeAsText());
+                    dom.setProp(pokemon2Stats.hpBar, 'value', poke2Placement.getHp());
+                    dom.setProp(pokemon2Stats.hpBar, 'max', poke2Placement.maxHp());
+                    dom.setProp(pokemon2Stats.expBar, 'value', Math.floor(poke2Placement.currentExp() - poke2Placement.thisLevelExp()));
+                    dom.setProp(pokemon2Stats.expBar, 'max', poke2Placement.nextLevelExp() - poke2Placement.thisLevelExp());
+                    dom.setValue(pokemon2Stats.status, pokeStatusAsText2(poke2Placement));
+                }
+            }
+        },
         openPokeDex: function () {
             openModal($('#pokedexModal'));
         },
@@ -568,6 +632,25 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         viewBag: function () {
             openModal(document.getElementById('bagModal'));
+        },
+        viewMap: function () {
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
+            if (routeData.modal) {
+                openModal(document.getElementById(`${routeData.modal.replace(/ /g, '').toLowerCase()}Modal`));
+            } else {
+                openModal(document.getElementById(`${player.settings.currentRouteId.replace(/ /g, '').toLowerCase()}Modal`));
+            }
+        },
+        viewRanch: function () {
+            const routeData = player.settings.currentRegionId;
+            if (routeData === 'Kanto') {
+                if (appModel.$store.state.pokemon.pokeFarm[0]) {
+                    openModal(document.getElementById('kantopokeranchModal'));
+                    this.renderPokeRanchContainer();
+                } else { alert('Send some Pokemon to the PokeRanch first.'); }
+            } else {
+                alert('Try Again.');
+            }
         },
         viewTown: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
@@ -1199,9 +1282,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('kantoroute4westModal'));
             closeModal(document.getElementById('kantoroute4eastModal'));
         },
-        route4WestToMtMoonFirstFloor: function () {
+        route4WestToMtMoonSecondFloor: function () {
             this.changeRoute('mtMoon');
-            openModal(document.getElementById('mtmoonfirstfloorModal'));
+            openModal(document.getElementById('mtmoonsecondfloorModal'));
             closeModal(document.getElementById('kantoroute4westModal'));
         },
         route4EastToCeruleanCity: function () {
@@ -1466,6 +1549,66 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else {
                 alert('No one is home');
             }
+        },
+        route20EastToSeafoamIslandsEntrance: function () {
+            this.changeRoute('seafoamIsland');
+            openModal(document.getElementById('seafoamislandsentranceModal'));
+            closeModal(document.getElementById('kantoroute20eastModal'));
+        },
+        seafoamIslandsEntranceToRoute20East: function () {
+            this.changeRoute('kroute20');
+            openModal(document.getElementById('kantoroute20eastModal'));
+            closeModal(document.getElementById('seafoamislandsentranceModal'));
+        },
+        route20WestToSeafoamIslandsEntrance: function () {
+            this.changeRoute('seafoamIsland');
+            openModal(document.getElementById('seafoamislandsentranceModal'));
+            closeModal(document.getElementById('kantoroute20westModal'));
+        },
+        seafoamIslandsEntranceToRoute20West: function () {
+            this.changeRoute('kroute20');
+            openModal(document.getElementById('kantoroute20westModal'));
+            closeModal(document.getElementById('seafoamislandsentranceModal'));
+        },
+        seafoamIslandsEntranceToSeafoamIslandsFirstFloor: function () {
+            openModal(document.getElementById('seafoamislandsfirstfloorModal'));
+            closeModal(document.getElementById('seafoamislandsentranceModal'));
+        },
+        seafoamIslandsFirstFloorToSeafoamIslandsEntrance: function () {
+            openModal(document.getElementById('seafoamislandsentranceModal'));
+            closeModal(document.getElementById('seafoamislandsfirstfloorModal'));
+        },
+        seafoamIslandsFirstFloorToSeafoamIslandsSecondFloor: function () {
+            openModal(document.getElementById('seafoamislandssecondfloorModal'));
+            closeModal(document.getElementById('seafoamislandsfirstfloorModal'));
+        },
+        seafoamIslandsSecondFloorToSeafoamIslandsFirstFloor: function () {
+            openModal(document.getElementById('seafoamislandsfirstfloorModal'));
+            closeModal(document.getElementById('seafoamislandssecondfloorModal'));
+        },
+        seafoamIslandsSecondFloorToSeafoamIslandsThirdFloor: function () {
+            openModal(document.getElementById('seafoamislandsthirdfloorModal'));
+            closeModal(document.getElementById('seafoamislandssecondfloorModal'));
+        },
+        seafoamIslandsThirdFloorToSeafoamIslandsSecondFloor: function () {
+            openModal(document.getElementById('seafoamislandssecondfloorModal'));
+            closeModal(document.getElementById('seafoamislandsthirdfloorModal'));
+        },
+        seafoamIslandsThirdFloorToSeafoamIslandsFourthFloor: function () {
+            openModal(document.getElementById('seafoamislandsfourthfloorModal'));
+            closeModal(document.getElementById('seafoamislandsthirdfloorModal'));
+        },
+        seafoamIslandsFourthFloorToSeafoamIslandsThirdFloor: function () {
+            openModal(document.getElementById('seafoamislandsthirdfloorModal'));
+            closeModal(document.getElementById('seafoamislandsfourthfloorModal'));
+        },
+        seafoamIslandsFourthFloorToSeafoamIslandsFifthFloor: function () {
+            openModal(document.getElementById('seafoamislandsfifthfloorModal'));
+            closeModal(document.getElementById('seafoamislandsfourthfloorModal'));
+        },
+        seafoamIslandsFifthFloorToSeafoamIslandsFourthFloor: function () {
+            openModal(document.getElementById('seafoamislandsfourthfloorModal'));
+            closeModal(document.getElementById('seafoamislandsfifthfloorModal'));
         },
         abundantOldManEvent: function () {
             if (!player.events.abundantShrineEvent && player.hasPokemon('Thundurus') && player.hasPokemon('Landorus') && player.hasPokemon('Tornadus')) {

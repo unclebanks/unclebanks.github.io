@@ -52,6 +52,12 @@
     >
       PC
     </button>
+    <button
+      class="toStorageButton"
+      @click="ui.moveToPokeFarm(index)"
+    >
+      PokeFarm
+    </button>
   </li>
 </template>
 

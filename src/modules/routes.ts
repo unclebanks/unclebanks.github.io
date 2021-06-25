@@ -243,6 +243,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Rattata'],
             minLevel: 2,
             maxLevel: 5,
+            modal: 'kantoRoute1',
             respawn: 'palletTown',
             _special: [
                 { requirement: { type: 'item', item: 'kantoOldRod' }, pokemon: ['Squirtle'] },
@@ -315,13 +316,15 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Rattata', 'Caterpie', 'Weedle', 'Nidoran F', 'Nidoran M'],
             minLevel: 3,
             maxLevel: 5,
+            modal: 'kantoRoute2Bottom',
             respawn: 'viridianCity',
         },
         viridianForest: {
             name: 'Virdian Forest',
-            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Pidgeotto', 'Pikachu'],
+            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Pidgeotto', 'Pikachu', 'Oddish'],
             minLevel: 3,
             maxLevel: 6,
+            modal: 'kantoViridianForest',
             respawn: 'viridianCity',
         },
         pewterCity: {
@@ -360,6 +363,7 @@ const ROUTES: Routes = {
             minLevel: 5,
             maxLevel: 12,
             respawn: 'pewterCity',
+            modal: 'kantoRoute3West',
             _unlock: {
                 badges: {
                     'Boulder Badge': true,
@@ -371,6 +375,7 @@ const ROUTES: Routes = {
             pokes: ['Zubat', 'Paras', 'Geodude', 'Sandshrew'],
             minLevel: 6,
             maxLevel: 12,
+            modal: 'mtMoonFirstFloor',
             respawn: 'pewterCity',
             _unlock: {
                 badges: {
@@ -386,6 +391,7 @@ const ROUTES: Routes = {
             pokes: ['Rattata', 'Spearow', 'Ekans', 'Sandshrew', 'Mankey'],
             minLevel: 6,
             maxLevel: 12,
+            modal: 'kantoRoute4West',
             respawn: 'pewterCity',
             _unlock: {
                 badges: {
@@ -449,6 +455,7 @@ const ROUTES: Routes = {
             pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Pidgeotto', 'Oddish', 'Venonat', 'Abra', 'Bellsprout'],
             minLevel: 7,
             maxLevel: 14,
+            modal: 'kantoRoute24',
             respawn: 'ceruleanCity',
             _unlock: {
                 badges: {
@@ -461,6 +468,7 @@ const ROUTES: Routes = {
             pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Pidgeotto', 'Oddish', 'Venonat', 'Abra', 'Bellsprout'],
             minLevel: 7,
             maxLevel: 14,
+            modal: 'kantoRoute25',
             respawn: 'ceruleanCity',
             _unlock: {
                 badges: {
@@ -486,6 +494,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Jigglypuff', 'Oddish', 'Meowth', 'Mankey', 'Abra', 'Bellsprout'],
             minLevel: 10,
             maxLevel: 16,
+            modal: 'kantoRoute5',
             respawn: 'ceruleanCity',
             _unlock: {
                 badges: {
@@ -498,6 +507,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Jigglypuff', 'Oddish', 'Meowth', 'Mankey', 'Abra', 'Bellsprout'],
             minLevel: 10,
             maxLevel: 16,
+            modal: 'kantoRoute6',
             respawn: 'ceruleanCity',
             _unlock: {
                 badges: {
@@ -578,6 +588,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Spearow', 'Ekans', 'Sandshrew', 'Drowzee'],
             minLevel: 18,
             maxLevel: 25,
+            modal: 'kantoRoute11',
             respawn: 'vermilionCity',
             _unlock: {
                 badges: {
@@ -590,6 +601,7 @@ const ROUTES: Routes = {
             pokes: ['Rattata', 'Raticate', 'Spearow', 'Fearow', 'Ekans', 'Sandshrew', 'Nidoran F', 'Nidorina', 'Nidoran M', 'Nidorino'],
             minLevel: 9,
             maxLevel: 17,
+            modal: 'kantoRoute9',
             respawn: 'ceruleanCity',
             _unlock: {
                 badges: {
@@ -602,6 +614,7 @@ const ROUTES: Routes = {
             pokes: ['Rattata', 'Raticate', 'Spearow', 'Ekans', 'Sandshrew', 'Nidoran F', 'Nidoran M', 'Machop', 'Magnemite', 'Voltorb'],
             minLevel: 11,
             maxLevel: 17,
+            modal: 'kantoRoute10',
             respawn: 'ceruleanCity',
             _unlock: {
                 badges: {
@@ -648,6 +661,7 @@ const ROUTES: Routes = {
             pokes: ['Gastly', 'Haunter', 'Cubone'],
             minLevel: 13,
             maxLevel: 18,
+            modal: 'lavenderPokeTower1',
             respawn: 'lavenderTown',
             _unlock: {
                 badges: {
@@ -660,6 +674,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Ekans', 'Sandshrew', 'Vulpix', 'Jigglypuff', 'Meowth', 'Mankey', 'Growlithe', 'Abra', 'Kadabra'],
             minLevel: 15,
             maxLevel: 20,
+            modal: 'kantoRoute8',
             respawn: 'lavenderTown',
             _unlock: {
                 badges: {
@@ -672,6 +687,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Vulpix', 'Jigglypuff', 'Oddish', 'Meowth', 'Mankey', 'Growlithe', 'Abra', 'Bellsprout'],
             minLevel: 18,
             maxLevel: 22,
+            modal: 'kantoRoute7',
             respawn: 'lavenderTown',
             _unlock: {
                 badges: {
@@ -797,6 +813,7 @@ const ROUTES: Routes = {
             pokes: ['Rattata', 'Raticate', 'Spearow', 'Fearow', 'Doduo', 'Snorlax'],
             minLevel: 18,
             maxLevel: 30,
+            modal: 'kantoRoute16',
             respawn: 'celadonCity',
             _unlock: {
                 badges: {
@@ -809,6 +826,7 @@ const ROUTES: Routes = {
             pokes: ['Raticate', 'Spearow', 'Fearow', 'Ponyta', 'Doduo', 'Dodrio'],
             minLevel: 20,
             maxLevel: 29,
+            modal: 'kantoRoute17',
             respawn: 'celadonCity',
             _unlock: {
                 badges: {
@@ -821,6 +839,7 @@ const ROUTES: Routes = {
             pokes: ['Rattata', 'Raticate', 'Spearow', 'Fearow', 'Doduo'],
             minLevel: 20,
             maxLevel: 29,
+            modal: 'kantoRoute18',
             respawn: 'celadonCity',
             _unlock: {
                 badges: {
@@ -897,6 +916,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Venomoth', 'Bellsprout', 'Weepinbell', 'Ditto'],
             minLevel: 22,
             maxLevel: 30,
+            modal: 'kantoRoute15',
             respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {
@@ -909,6 +929,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Venomoth', 'Bellsprout', 'Weepinbell', 'Ditto'],
             minLevel: 23,
             maxLevel: 30,
+            modal: 'kantoRoute14',
             respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {
@@ -921,6 +942,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Ditto', 'Farfetchd'],
             minLevel: 22,
             maxLevel: 30,
+            modal: 'kantoRoute13',
             respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {
@@ -933,6 +955,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Snorlax', 'Mr. Mime', 'Farfetchd'],
             minLevel: 22,
             maxLevel: 30,
+            modal: 'kantoRoute12',
             respawn: 'lavenderTown',
             _unlock: {
                 badges: {
@@ -945,6 +968,7 @@ const ROUTES: Routes = {
             pokes: ['Tentacool'],
             minLevel: 5,
             maxLevel: 40,
+            modal: 'kantoRoute19',
             respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {
@@ -957,6 +981,7 @@ const ROUTES: Routes = {
             pokes: ['Zubat', 'Golbat', 'Psyduck', 'Golduck', 'Slowpoke', 'Slowbro', 'Seel', 'Dewgong', 'Shellder', 'Krabby', 'Kingler', 'Horsea', 'Seadra', 'Staryu', 'Jynx', 'Articuno'],
             minLevel: 9,
             maxLevel: 50,
+            modal: 'seafoamIslandsEntrance',
             respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {
@@ -969,6 +994,7 @@ const ROUTES: Routes = {
             pokes: ['Tentacool'],
             minLevel: 5,
             maxLevel: 40,
+            modal: 'kantoRoute20',
             respawn: 'fuchsiaCity',
             _unlock: {
                 badges: {
@@ -1064,6 +1090,7 @@ const ROUTES: Routes = {
             pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Raticate', 'Tentacool', 'Tangela'],
             minLevel: 21,
             maxLevel: 32,
+            modal: 'kantoRoute21',
             respawn: 'cinnabarIsland',
             _unlock: {
                 badges: {
@@ -1076,6 +1103,7 @@ const ROUTES: Routes = {
             pokes: ['Spearow', 'Fearow', 'Ekans', 'Arbok', 'Sandshrew', 'Sandslash', 'Nidorina', 'Nidorino', 'Mankey', 'Primeape', 'Ditto'],
             minLevel: 33,
             maxLevel: 43,
+            modal: 'kantoRoute23',
             respawn: 'viridianCity',
             _unlock: {
                 badges: {

@@ -78,6 +78,12 @@
   <cinnabarGymModal />
   <cinnabarLabModal />
   <cinnabarislandPokeMartModal />
+  <seafoamIslandsEntranceModal />
+  <seafoamIslandsFirstFloorModal />
+  <seafoamIslandsSecondFloorModal />
+  <seafoamIslandsThirdFloorModal />
+  <seafoamIslandsFourthFloorModal />
+  <seafoamIslandsFifthFloorModal />
   <kantoRoute1Modal />
   <kantoRoute2TopModal />
   <kantoRoute2BottomModal />
@@ -108,6 +114,7 @@
   <kantoRoute24Modal />
   <kantoRoute25Modal />
   <playerComputerModal />
+  <kantoPokeRanchModal />
 </template>
 
 <script>
@@ -189,6 +196,12 @@ import cinnabarislandPokeCenterModal from './modals/kanto/towns/cinnabarIsland/c
 import cinnabarGymModal from './modals/kanto/towns/cinnabarIsland/cinnabarGymModal';
 import cinnabarLabModal from './modals/kanto/towns/cinnabarIsland/cinnabarLabModal';
 import cinnabarislandPokeMartModal from './modals/kanto/towns/cinnabarIsland/cinnabarPokeMartModal';
+import seafoamIslandsEntranceModal from './modals/kanto/misc/seafoamIslandsEntranceModal';
+import seafoamIslandsFirstFloorModal from './modals/kanto/dungeons/seafoamIslands/seafoamIslandsFirstFloorModal';
+import seafoamIslandsSecondFloorModal from './modals/kanto/dungeons/seafoamIslands/seafoamIslandsSecondFloorModal';
+import seafoamIslandsThirdFloorModal from './modals/kanto/dungeons/seafoamIslands/seafoamIslandsThirdFloorModal';
+import seafoamIslandsFourthFloorModal from './modals/kanto/dungeons/seafoamIslands/seafoamIslandsFourthFloorModal';
+import seafoamIslandsFifthFloorModal from './modals/kanto/dungeons/seafoamIslands/seafoamIslandsFifthFloorModal';
 import kantoRoute1Modal from './modals/kanto/routes/kantoRoute1Modal';
 import kantoRoute2BottomModal from './modals/kanto/routes/kantoRoute2BottomModal';
 import kantoRoute2TopModal from './modals/kanto/routes/kantoRoute2TopModal';
@@ -219,6 +232,7 @@ import kantoRoute23Modal from './modals/kanto/routes/kantoRoute23Modal';
 import kantoRoute24Modal from './modals/kanto/routes/kantoRoute24Modal';
 import kantoRoute25Modal from './modals/kanto/routes/kantoRoute25Modal';
 import playerComputerModal from './modals/kanto/misc/playerComputerModal';
+import kantoPokeRanchModal from './modals/kanto/misc/kantoPokeRanchModal';
 
 export default {
     components: {
@@ -300,6 +314,12 @@ export default {
         cinnabarGymModal,
         cinnabarLabModal,
         cinnabarislandPokeMartModal,
+        seafoamIslandsEntranceModal,
+        seafoamIslandsFirstFloorModal,
+        seafoamIslandsSecondFloorModal,
+        seafoamIslandsThirdFloorModal,
+        seafoamIslandsFourthFloorModal,
+        seafoamIslandsFifthFloorModal,
         kantoRoute1Modal,
         kantoRoute2BottomModal,
         kantoRoute2TopModal,
@@ -330,6 +350,7 @@ export default {
         kantoRoute24Modal,
         kantoRoute25Modal,
         playerComputerModal,
+        kantoPokeRanchModal,
     },
 
     props: {

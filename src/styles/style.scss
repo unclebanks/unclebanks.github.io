@@ -1080,6 +1080,71 @@ progress.expBar {
     height: 552px;
     width: 432px;
 }
+#seafoamIslandsEntranceModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/kantoSeafoamIslandsEntrance.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 478px;
+    height: 320px;
+}
+#seafoamislandsFirstFloorModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsFirstFloor.png');
+    background-size: cover;
+    width: 608px;
+    height: 384px;
+}
+#seafoamislandsSecondFloorModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsSecondFloor.png');
+    background-size: cover;
+    width: 608px;
+    height: 384px;
+}
+#seafoamislandsThirdFloorModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsThirdFloor.png');
+    background-size: cover;
+    width: 608px;
+    height: 384px;
+}
+#seafoamislandsFourthFloorModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsFourthFloor.png');
+    background-size: cover;
+    width: 608px;
+    height: 384px;
+}
+#seafoamislandsFifthFloorModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsFifthFloor.png');
+    background-size: cover;
+    width: 608px;
+    height: 384px;
+}
+
+#kantoPokeRanchContainer {
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 45% 25% 30%;
+    background-color: rgb(58, 58, 58);
+}
+
+#kantoPokeRanchButtons {
+    grid-column: 1;
+    grid-row: 1;
+    align-content: center;
+}
+
+#pokemon1Box {
+    grid-column: 2;
+    grid-row: 1;
+    width: 50%;
+    align-content: center;
+}
+
+#pokemon2Box {
+    grid-column: 3;
+    grid-row: 1;
+    width: 50%;
+    align-content: center;
+}
 
 .townBuilding {
     width: 90%;

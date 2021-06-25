@@ -41,6 +41,7 @@ export default {
         //
         storage: [],
         pinnedStorage: new Set([]),
+        pokeFarm: [],
         storageSortDirection: 'asc',
         storageSortMethod: 'dex',
         //
@@ -49,9 +50,12 @@ export default {
     },
 
     mutations: {
-        load(state, { party, storage, pinnedStorage }) {
+        load(state, {
+            party, storage, pinnedStorage, pokeFarm,
+        }) {
             state.party = party;
             state.storage = storage;
+            state.pokeFarm = pokeFarm;
             state.pinnedStorage = new Set(pinnedStorage);
         },
 
@@ -91,6 +95,28 @@ export default {
             if (state.party.length < 6) {
                 const poke = state.storage[storageIndex];
                 state.storage.splice(storageIndex, 1);
+                state.party.push(poke);
+            } else {
+                // dom.showPopup('You can only have six active pokemon!');
+                notify('You can only have six active pokemon!');
+            }
+        },
+
+        depositPokeFarm(state, partyIndex) {
+            if (state.party.length > 1) {
+                const poke = state.party[partyIndex];
+                state.party.splice(partyIndex, 1);
+                state.pokeFarm.push(poke);
+            } else {
+                // dom.showPopup('You must have at least one active pokemon!');
+                notify('You must have at least one active pokemon!');
+            }
+        },
+
+        withdrawPokeFarm(state, pokeFarmIndex) {
+            if (state.party.length < 6) {
+                const poke = state.pokeFarm[pokeFarmIndex];
+                state.pokeFarm.splice(pokeFarmIndex, 1);
                 state.party.push(poke);
             } else {
                 // dom.showPopup('You can only have six active pokemon!');
@@ -145,6 +171,7 @@ export default {
         healAll(state) {
             state.party.forEach((poke) => poke.heal());
             state.storage.forEach((poke) => poke.heal());
+            state.pokeFarm.forEach((poke) => poke.heal());
             state.lastHeal = Date.now();
         },
     },
@@ -172,7 +199,7 @@ export default {
         },
 
         all(state) {
-            return [...state.party, ...state.storage];
+            return [...state.party, ...state.storage, ...state.pokeFarm];
         },
 
         active(state) {

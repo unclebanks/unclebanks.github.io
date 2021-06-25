@@ -483,6 +483,10 @@ export default (lastSave, appModel) => {
                     'pinnedStorage',
                     JSON.stringify([...appModel.$store.state.pokemon.pinnedStorage]),
                 );
+                localStorage.setItem('totalPokeFarm', appModel.$store.state.pokemon.pokeFarm.length);
+                appModel.$store.state.pokemon.pokeFarm.forEach((poke, index) => {
+                    localStorage.setItem(`pokeFarm${index}`, JSON.stringify(poke.save()));
+                });
                 localStorage.setItem('ballsAmount', JSON.stringify(this.ballsAmount));
                 localStorage.setItem('battleItems', JSON.stringify(this.battleItems));
                 localStorage.setItem('vitamins', JSON.stringify(this.vitamins));
@@ -506,6 +510,7 @@ export default (lastSave, appModel) => {
             const saveData = JSON.stringify({
                 pokes: appModel.$store.state.pokemon.party.map((poke) => poke.save()),
                 storage: appModel.$store.state.pokemon.storage.map((poke) => poke.save()),
+                pokeFarm: appModel.$store.state.pokemon.pokeFarm.map((poke) => poke.save()),
                 pinnedStorage: [...appModel.$store.state.pokemon.pinnedStorage],
                 pokedexData: this.getPokedexData(),
                 statistics: this.statistics,
@@ -533,6 +538,7 @@ export default (lastSave, appModel) => {
             let pokeCount = 0;
             // reset storage array
             const storage = [];
+            const pokeFarm = [];
             Array(Number(localStorage.getItem('totalPokes'))).fill(0).forEach((el, index) => {
                 const loadedPoke = JSON.parse(localStorage.getItem(`poke${index}`));
                 if (loadedPoke) {
@@ -562,8 +568,22 @@ export default (lastSave, appModel) => {
                     storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 }
             });
+            Array(Number(localStorage.getItem('totalPokeFarm'))).fill(0).forEach((el, index) => {
+                const loadedPoke = JSON.parse(localStorage.getItem(`pokeFarm${index}`));
+                if (loadedPoke) {
+                    const pokeName = loadedPoke[0];
+                    const exp = loadedPoke[1];
+                    const shiny = (loadedPoke[2] === true);
+                    const caughtAt = loadedPoke[3];
+                    const prestigeLevel = loadedPoke[4] || 0;
+                    const appliedVitamins = loadedPoke[5];
+                    pokeFarm.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
+                }
+            });
             const pinnedStorage = JSON.parse(localStorage.getItem('pinnedStorage'));
-            appModel.$store.commit('pokemon/load', { party, storage, pinnedStorage });
+            appModel.$store.commit('pokemon/load', {
+                party, storage, pinnedStorage, pokeFarm,
+            });
 
             if (JSON.parse(localStorage.getItem('ballsAmount'))) {
                 this.ballsAmount = JSON.parse(localStorage.getItem('ballsAmount'));
@@ -635,6 +655,7 @@ export default (lastSave, appModel) => {
                 const party = [];
                 let pokeCount = 0;
                 const storage = [];
+                const pokeFarm = [];
                 saveData.pokes.forEach((loadedPoke) => {
                     const pokeName = loadedPoke[0];
                     const exp = loadedPoke[1];
@@ -658,9 +679,20 @@ export default (lastSave, appModel) => {
                     const appliedVitamins = loadedPoke[5];
                     storage.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
                 });
+                saveData.pokeFarm.forEach((loadedPoke) => {
+                    const pokeName = loadedPoke[0];
+                    const exp = loadedPoke[1];
+                    const shiny = (loadedPoke[2] === true);
+                    const caughtAt = loadedPoke[3];
+                    const prestigeLevel = loadedPoke[4] || 0;
+                    const appliedVitamins = loadedPoke[5];
+                    pokeFarm.push(new Poke(pokeByName(pokeName), false, Number(exp), shiny, caughtAt, prestigeLevel, appliedVitamins));
+                });
 
                 const pinnedStorage = saveData.pinnedStorage;
-                appModel.$store.commit('pokemon/load', { party, storage, pinnedStorage });
+                appModel.$store.commit('pokemon/load', {
+                    party, storage, pinnedStorage, pokeFarm,
+                });
 
                 this.ballsAmount = saveData.ballsAmount; // import from old spelling mistake
                 this.currencyAmount = saveData.currencyAmount;
