@@ -132,7 +132,7 @@ export default (player, combatLoop, userInteractions) => {
                     let routeColor; let
                         routeWeight;
                     if (unlocked) {
-                        let isCurrentRoute = (routeId === player.settings.currentRouteId);
+                        const isCurrentRoute = (routeId === player.settings.currentRouteId);
                         routeColor = isCurrentRoute ? COLORS.route.current : COLORS.route.unlocked;
                         routeWeight = isCurrentRoute ? 'bold' : 'normal';
                         if (route.pokes) {
