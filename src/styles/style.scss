@@ -1118,6 +1118,34 @@ progress.expBar {
     height: 384px;
 }
 
+#kantoPokeRanchContainer {
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 45% 25% 30%;
+    background-color: rgb(58, 58, 58);
+}
+
+#kantoPokeRanchButtons {
+    grid-column: 1;
+    grid-row: 1;
+    align-content: center;
+}
+
+#pokemon1Box {
+    grid-column: 2;
+    grid-row: 1;
+    width: 50%;
+    align-content: center;
+}
+
+#pokemon2Box {
+    grid-column: 3;
+    grid-row: 1;
+    width: 50%;
+    align-content: center;
+}
+
 .townBuilding {
     width: 90%;
     float: left;

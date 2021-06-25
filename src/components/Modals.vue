@@ -114,6 +114,7 @@
   <kantoRoute24Modal />
   <kantoRoute25Modal />
   <playerComputerModal />
+  <kantoPokeRanchModal />
 </template>
 
 <script>
@@ -231,6 +232,7 @@ import kantoRoute23Modal from './modals/kanto/routes/kantoRoute23Modal';
 import kantoRoute24Modal from './modals/kanto/routes/kantoRoute24Modal';
 import kantoRoute25Modal from './modals/kanto/routes/kantoRoute25Modal';
 import playerComputerModal from './modals/kanto/misc/playerComputerModal';
+import kantoPokeRanchModal from './modals/kanto/misc/kantoPokeRanchModal';
 
 export default {
     components: {
@@ -348,6 +350,7 @@ export default {
         kantoRoute24Modal,
         kantoRoute25Modal,
         playerComputerModal,
+        kantoPokeRanchModal,
     },
 
     props: {

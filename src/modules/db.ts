@@ -42,6 +42,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '65',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -61,6 +62,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '80',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -80,6 +82,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '100',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -99,6 +102,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '122',
             'sp def': '120',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -118,6 +122,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '50',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -136,6 +141,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '65',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -154,6 +160,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '109',
             'sp def': '85',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Flying',
@@ -173,6 +180,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '85',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Dragon',
@@ -192,6 +200,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '159',
             'sp def': '115',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Flying',
@@ -211,6 +220,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '64',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -229,6 +239,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '80',
             'speed': '58',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -247,6 +258,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '105',
             'speed': '78',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -265,6 +277,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '135',
             'sp def': '115',
             'speed': '78',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -283,6 +296,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '20',
             'sp def': '20',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -301,6 +315,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '25',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -319,6 +334,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '80',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -338,6 +354,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '20',
             'sp def': '20',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -357,6 +374,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '25',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -376,6 +394,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '80',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -395,6 +414,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '15',
             'sp def': '80',
             'speed': '145',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -414,6 +434,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '56',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -433,6 +454,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '71',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -452,6 +474,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '70',
             'speed': '101',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -471,6 +494,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '135',
             'sp def': '80',
             'speed': '121',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -490,6 +514,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '35',
             'speed': '72',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -508,6 +533,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '70',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -526,6 +552,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '35',
             'speed': '72',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Dark',
@@ -545,6 +572,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '80',
             'speed': '77',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Dark',
@@ -564,6 +592,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '31',
             'sp def': '31',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -583,6 +612,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '61',
             'sp def': '61',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -602,6 +632,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '54',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -620,6 +651,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '79',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -638,6 +670,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -656,6 +689,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '80',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -674,6 +708,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '85',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Psychic',
@@ -693,6 +728,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '20',
             'sp def': '30',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -711,6 +747,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '55',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -729,6 +766,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '10',
             'sp def': '35',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Steel',
@@ -748,6 +786,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '65',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Steel',
@@ -767,6 +806,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '41',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -785,6 +825,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '55',
             'speed': '56',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -803,6 +844,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '85',
             'speed': '76',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Ground',
@@ -822,6 +864,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -840,6 +883,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '55',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -858,6 +902,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '75',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Ground',
@@ -877,6 +922,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '65',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -895,6 +941,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '90',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -913,6 +960,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '65',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -931,6 +979,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '81',
             'sp def': '100',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -949,6 +998,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '65',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -967,6 +1017,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '81',
             'sp def': '100',
             'speed': '109',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -985,6 +1036,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '25',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Fairy',
@@ -1004,6 +1056,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '50',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Fairy',
@@ -1023,6 +1076,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '40',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Flying',
@@ -1042,6 +1096,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '75',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Flying',
@@ -1061,6 +1116,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '65',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -1080,6 +1136,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '75',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -1099,6 +1156,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '90',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -1118,6 +1176,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '55',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Grass',
@@ -1137,6 +1196,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '80',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Grass',
@@ -1156,6 +1216,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '55',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -1175,6 +1236,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '75',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -1194,6 +1256,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '45',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -1212,6 +1275,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '70',
             'speed': '120',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -1230,6 +1294,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '45',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Steel',
@@ -1249,6 +1314,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '70',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Steel',
@@ -1268,6 +1334,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -1286,6 +1353,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '65',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -1304,6 +1372,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '40',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -1322,6 +1391,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '65',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -1340,6 +1410,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '50',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -1358,6 +1429,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '80',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -1376,6 +1448,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '45',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -1394,6 +1467,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -1412,6 +1486,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '50',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -1430,6 +1505,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '80',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -1448,6 +1524,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -1466,6 +1543,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -1484,6 +1562,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '90',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Fighting',
@@ -1503,6 +1582,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '55',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -1521,6 +1601,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '70',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -1539,6 +1620,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '135',
             'sp def': '95',
             'speed': '120',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -1557,6 +1639,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '175',
             'sp def': '95',
             'speed': '150',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -1575,6 +1658,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -1593,6 +1677,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '60',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -1611,6 +1696,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '85',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -1629,6 +1715,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '30',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -1648,6 +1735,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '45',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -1667,6 +1755,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '70',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -1686,6 +1775,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '100',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Poison',
@@ -1705,6 +1795,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '120',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Poison',
@@ -1724,6 +1815,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Ground',
@@ -1743,6 +1835,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '45',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Ground',
@@ -1762,6 +1855,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Ground',
@@ -1781,6 +1875,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Electric',
@@ -1800,6 +1895,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '45',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Electric',
@@ -1819,6 +1915,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Electric',
@@ -1838,6 +1935,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '65',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -1856,6 +1954,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '80',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -1874,6 +1973,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Psychic',
@@ -1893,6 +1993,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '80',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Psychic',
@@ -1912,6 +2013,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '80',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Psychic',
@@ -1931,6 +2033,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '55',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Steel',
@@ -1950,6 +2053,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '70',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Steel',
@@ -1969,6 +2073,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '58',
             'sp def': '62',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -1988,6 +2093,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -2007,6 +2113,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -2026,6 +2133,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '70',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2044,6 +2152,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '95',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ice',
@@ -2063,6 +2172,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -2081,6 +2191,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '100',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -2099,6 +2210,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Dark',
@@ -2118,6 +2230,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '100',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Dark',
@@ -2137,6 +2250,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '25',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2155,6 +2269,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '45',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ice',
@@ -2174,6 +2289,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '35',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Poison',
@@ -2193,6 +2309,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '115',
             'sp def': '55',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Poison',
@@ -2212,6 +2329,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '75',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Poison',
@@ -2231,6 +2349,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '170',
             'sp def': '95',
             'speed': '130',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Poison',
@@ -2250,6 +2369,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '45',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Ground',
@@ -2269,6 +2389,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '43',
             'sp def': '90',
             'speed': '42',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -2287,6 +2408,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '73',
             'sp def': '115',
             'speed': '67',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -2305,6 +2427,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '25',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2323,6 +2446,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2341,6 +2465,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '55',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -2359,6 +2484,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '80',
             'speed': '140',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -2377,6 +2503,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '45',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Psychic',
@@ -2396,6 +2523,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '65',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Psychic',
@@ -2415,6 +2543,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '65',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Dragon',
@@ -2434,6 +2563,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -2452,6 +2582,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '80',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -2470,6 +2601,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '80',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Ghost',
@@ -2489,6 +2621,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '110',
             'speed': '87',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -2507,6 +2640,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '110',
             'speed': '76',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -2525,6 +2659,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '75',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -2543,6 +2678,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '45',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -2561,6 +2697,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '70',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -2579,6 +2716,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Rock',
@@ -2598,6 +2736,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '45',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Rock',
@@ -2617,6 +2756,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '105',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -2635,6 +2775,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '40',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -2653,6 +2794,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '80',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -2671,6 +2813,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '100',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -2689,6 +2832,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '25',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2707,6 +2851,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '45',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2725,6 +2870,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '50',
             'speed': '63',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2743,6 +2889,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '80',
             'speed': '68',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2761,6 +2908,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '55',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2779,6 +2927,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '85',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Psychic',
@@ -2798,6 +2947,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '120',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fairy',
@@ -2817,6 +2967,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '80',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -2836,6 +2987,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '115',
             'sp def': '95',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Psychic',
@@ -2855,6 +3007,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '85',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -2873,6 +3026,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '85',
             'speed': '93',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -2891,6 +3045,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '70',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -2909,6 +3064,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '90',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -2928,6 +3084,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '70',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -2946,6 +3103,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '15',
             'sp def': '20',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -2964,6 +3122,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '100',
             'speed': '81',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Flying',
@@ -2983,6 +3142,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '130',
             'speed': '81',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dark',
@@ -3002,6 +3162,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '95',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ice',
@@ -3021,6 +3182,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '48',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -3039,6 +3201,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '65',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -3057,6 +3220,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '95',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -3075,6 +3239,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '95',
             'speed': '130',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -3093,6 +3258,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '110',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -3111,6 +3277,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '75',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -3129,6 +3296,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '55',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Water',
@@ -3148,6 +3316,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '115',
             'sp def': '70',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Water',
@@ -3167,6 +3336,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '45',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Water',
@@ -3186,6 +3356,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '70',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Water',
@@ -3205,6 +3376,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '75',
             'speed': '130',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Flying',
@@ -3224,6 +3396,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '95',
             'speed': '150',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Flying',
@@ -3243,6 +3416,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '110',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -3261,6 +3435,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '125',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Flying',
@@ -3280,6 +3455,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '90',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Flying',
@@ -3299,6 +3475,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '85',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Flying',
@@ -3318,6 +3495,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -3336,6 +3514,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '70',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -3354,6 +3533,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '100',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Flying',
@@ -3373,6 +3553,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '154',
             'sp def': '90',
             'speed': '130',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -3391,6 +3572,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '154',
             'sp def': '100',
             'speed': '130',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fighting',
@@ -3410,6 +3592,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '194',
             'sp def': '120',
             'speed': '140',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -3428,6 +3611,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '100',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -3446,6 +3630,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '49',
             'sp def': '65',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -3464,6 +3649,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '63',
             'sp def': '80',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -3482,6 +3668,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '83',
             'sp def': '100',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -3500,6 +3687,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '50',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -3518,6 +3706,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '65',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -3536,6 +3725,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '109',
             'sp def': '85',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -3554,6 +3744,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '44',
             'sp def': '48',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -3572,6 +3763,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '59',
             'sp def': '63',
             'speed': '58',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -3590,6 +3782,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '79',
             'sp def': '83',
             'speed': '78',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -3608,6 +3801,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '45',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -3626,6 +3820,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '55',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -3644,6 +3839,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '36',
             'sp def': '56',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -3663,6 +3859,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '76',
             'sp def': '96',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -3682,6 +3879,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '80',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -3701,6 +3899,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '110',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -3720,6 +3919,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -3739,6 +3939,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -3758,6 +3959,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '80',
             'speed': '130',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Flying',
@@ -3777,6 +3979,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '56',
             'sp def': '56',
             'speed': '67',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Electric',
@@ -3796,6 +3999,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '76',
             'sp def': '76',
             'speed': '67',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Electric',
@@ -3815,6 +4019,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -3833,6 +4038,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '55',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -3851,6 +4057,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '20',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Fairy',
@@ -3870,6 +4077,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '65',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -3888,6 +4096,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '105',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Fairy',
                 'Flying',
@@ -3907,6 +4116,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '45',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Flying',
@@ -3926,6 +4136,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '70',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Flying',
@@ -3945,6 +4156,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '45',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -3963,6 +4175,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '60',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -3981,6 +4194,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '115',
             'sp def': '90',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -3999,6 +4213,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '165',
             'sp def': '110',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Dragon',
@@ -4018,6 +4233,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '100',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -4036,6 +4252,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '20',
             'sp def': '50',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Fairy',
@@ -4055,6 +4272,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '80',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Fairy',
@@ -4074,6 +4292,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '65',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -4092,6 +4311,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '100',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -4110,6 +4330,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '55',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Flying',
@@ -4129,6 +4350,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '65',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Flying',
@@ -4148,6 +4370,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '95',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Flying',
@@ -4167,6 +4390,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '55',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -4185,6 +4409,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -4203,6 +4428,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '85',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -4221,6 +4447,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '45',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -4240,6 +4467,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '25',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -4259,6 +4487,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '65',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -4278,6 +4507,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '95',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4296,6 +4526,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '130',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -4314,6 +4545,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '42',
             'speed': '91',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Flying',
@@ -4333,6 +4565,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '110',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Psychic',
@@ -4352,6 +4585,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '85',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -4370,6 +4604,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4388,6 +4623,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4406,6 +4642,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4424,6 +4661,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4442,6 +4680,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4460,6 +4699,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4478,6 +4718,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4496,6 +4737,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4514,6 +4756,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4532,6 +4775,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4550,6 +4794,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4568,6 +4813,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4586,6 +4832,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4604,6 +4851,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4622,6 +4870,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4640,6 +4889,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4658,6 +4908,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4676,6 +4927,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4694,6 +4946,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4712,6 +4965,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4730,6 +4984,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4748,6 +5003,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4766,6 +5022,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4784,6 +5041,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4802,6 +5060,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4820,6 +5079,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '48',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4838,6 +5098,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '33',
             'sp def': '58',
             'speed': '33',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -4856,6 +5117,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '65',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Psychic',
@@ -4875,6 +5137,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -4893,6 +5156,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Steel',
@@ -4912,6 +5176,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '65',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -4930,6 +5195,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '65',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Flying',
@@ -4949,6 +5215,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Ground',
@@ -4968,6 +5235,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '95',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Ground',
@@ -4987,6 +5255,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -5005,6 +5274,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -5023,6 +5293,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '55',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Poison',
@@ -5042,6 +5313,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '80',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Steel',
@@ -5061,6 +5333,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '100',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Steel',
@@ -5080,6 +5353,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '10',
             'sp def': '230',
             'speed': '5',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Rock',
@@ -5099,6 +5373,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '95',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Fighting',
@@ -5118,6 +5393,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '105',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Fighting',
@@ -5137,6 +5413,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '75',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Ice',
@@ -5156,6 +5433,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -5174,6 +5452,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '75',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -5192,6 +5471,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '40',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -5210,6 +5490,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '80',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Rock',
@@ -5229,6 +5510,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Ground',
@@ -5248,6 +5530,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Ground',
@@ -5267,6 +5550,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '85',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Rock',
@@ -5286,6 +5570,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '35',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -5304,6 +5589,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '75',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -5322,6 +5608,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '45',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Flying',
@@ -5341,6 +5628,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '140',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Flying',
@@ -5360,6 +5648,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '70',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Flying',
@@ -5379,6 +5668,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '50',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Fire',
@@ -5398,6 +5688,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '80',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Fire',
@@ -5417,6 +5708,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '140',
             'sp def': '90',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Fire',
@@ -5436,6 +5728,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '95',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dragon',
@@ -5455,6 +5748,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -5473,6 +5767,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -5491,6 +5786,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '95',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -5509,6 +5805,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '65',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -5527,6 +5824,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '20',
             'sp def': '45',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -5545,6 +5843,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -5563,6 +5862,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '110',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -5581,6 +5881,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '65',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Psychic',
@@ -5600,6 +5901,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '55',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -5618,6 +5920,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '55',
             'speed': '83',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -5636,6 +5939,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '70',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -5654,6 +5958,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '135',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -5672,6 +5977,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '115',
             'sp def': '100',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -5690,6 +5996,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '75',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -5708,6 +6015,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '115',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -5726,6 +6034,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '50',
             'speed': '41',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Ground',
@@ -5745,6 +6054,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '70',
             'speed': '51',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Ground',
@@ -5764,6 +6074,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '100',
             'speed': '61',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Dark',
@@ -5783,6 +6094,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '120',
             'speed': '71',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Dark',
@@ -5802,6 +6114,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '154',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Flying',
@@ -5821,6 +6134,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '154',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Flying',
@@ -5840,6 +6154,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '100',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Grass',
@@ -5859,6 +6174,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '55',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -5877,6 +6193,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '65',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -5895,6 +6212,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '85',
             'speed': '120',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -5913,6 +6231,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '145',
             'sp def': '85',
             'speed': '145',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Dragon',
@@ -5932,6 +6251,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '50',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -5950,6 +6270,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '60',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Fighting',
@@ -5969,6 +6290,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '70',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Fighting',
@@ -5988,6 +6310,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '80',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Fighting',
@@ -6007,6 +6330,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -6025,6 +6349,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -6044,6 +6369,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '90',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -6063,6 +6389,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '110',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -6082,6 +6409,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -6100,6 +6428,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -6118,6 +6447,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '41',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6136,6 +6466,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '61',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6154,6 +6485,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '20',
             'sp def': '30',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -6172,6 +6504,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '25',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -6190,6 +6523,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '50',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -6209,6 +6543,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '25',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -6227,6 +6562,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '90',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -6246,6 +6582,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Grass',
@@ -6265,6 +6602,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Grass',
@@ -6284,6 +6622,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '100',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Grass',
@@ -6303,6 +6642,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -6321,6 +6661,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '40',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Dark',
@@ -6340,6 +6681,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '60',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Dark',
@@ -6359,6 +6701,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -6378,6 +6721,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '125',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -6397,6 +6741,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '30',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Flying',
@@ -6416,6 +6761,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '70',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Flying',
@@ -6435,6 +6781,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '35',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fairy',
@@ -6454,6 +6801,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '55',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fairy',
@@ -6473,6 +6821,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '115',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fairy',
@@ -6492,6 +6841,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '165',
             'sp def': '135',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fairy',
@@ -6511,6 +6861,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '52',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Water',
@@ -6530,6 +6881,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '82',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -6549,6 +6901,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '60',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -6567,6 +6920,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Fighting',
@@ -6586,6 +6940,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6604,6 +6959,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '55',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6622,6 +6978,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '65',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6640,6 +6997,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Ground',
@@ -6659,6 +7017,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '160',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -6678,6 +7037,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Ghost',
@@ -6697,6 +7057,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '51',
             'sp def': '23',
             'speed': '28',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6715,6 +7076,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '71',
             'sp def': '43',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6733,6 +7095,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '91',
             'sp def': '73',
             'speed': '68',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6751,6 +7114,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '20',
             'sp def': '30',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -6769,6 +7133,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '60',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -6787,6 +7152,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '20',
             'sp def': '40',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Fairy',
@@ -6806,6 +7172,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '90',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -6824,6 +7191,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6842,6 +7210,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '55',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -6860,6 +7229,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '65',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Ghost',
@@ -6879,6 +7249,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '115',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Ghost',
@@ -6898,6 +7269,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '55',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Fairy',
@@ -6917,6 +7289,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '95',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Fairy',
@@ -6936,6 +7309,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Rock',
@@ -6955,6 +7329,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Rock',
@@ -6974,6 +7349,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Rock',
@@ -6993,6 +7369,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '80',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -7011,6 +7388,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '55',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Fighting',
                 'Psychic',
@@ -7030,6 +7408,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '75',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Fighting',
                 'Psychic',
@@ -7049,6 +7428,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '85',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Fighting',
                 'Psychic',
@@ -7068,6 +7448,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '40',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -7086,6 +7467,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '60',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -7104,6 +7486,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '135',
             'sp def': '80',
             'speed': '135',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -7122,6 +7505,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '75',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -7140,6 +7524,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '85',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -7158,6 +7543,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '47',
             'sp def': '75',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -7176,6 +7562,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '73',
             'sp def': '75',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -7194,6 +7581,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '80',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -7213,6 +7601,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '43',
             'sp def': '53',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -7231,6 +7620,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '73',
             'sp def': '83',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -7249,6 +7639,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '20',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dark',
@@ -7268,6 +7659,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '40',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dark',
@@ -7287,6 +7679,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '65',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dark',
@@ -7306,6 +7699,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '35',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -7324,6 +7718,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '45',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -7342,6 +7737,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '45',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Ground',
@@ -7361,6 +7757,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '75',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Ground',
@@ -7380,6 +7777,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '145',
             'sp def': '105',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Ground',
@@ -7399,6 +7797,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '70',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -7417,6 +7816,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '80',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -7435,6 +7835,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '110',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -7453,6 +7854,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -7471,6 +7873,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '45',
             'speed': '10',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -7489,6 +7892,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Dragon',
@@ -7508,6 +7912,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '80',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Dragon',
@@ -7527,6 +7932,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '40',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -7545,6 +7951,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '115',
             'sp def': '60',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Dark',
@@ -7564,6 +7971,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '75',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -7583,6 +7991,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '105',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Flying',
@@ -7602,6 +8011,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '105',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Fairy',
@@ -7621,6 +8031,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -7639,6 +8050,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '60',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -7657,6 +8069,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '85',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Psychic',
@@ -7676,6 +8089,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Psychic',
@@ -7695,6 +8109,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '46',
             'sp def': '41',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -7714,6 +8129,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '76',
             'sp def': '71',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -7733,6 +8149,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '35',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -7751,6 +8168,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '55',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dark',
@@ -7770,6 +8188,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '70',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Psychic',
@@ -7789,6 +8208,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '120',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Psychic',
@@ -7808,6 +8228,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '61',
             'sp def': '87',
             'speed': '23',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Grass',
@@ -7827,6 +8248,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '81',
             'sp def': '107',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Grass',
@@ -7846,6 +8268,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Bug',
@@ -7865,6 +8288,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '80',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Bug',
@@ -7884,6 +8308,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '10',
             'sp def': '55',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -7902,6 +8327,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '125',
             'speed': '81',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -7920,6 +8346,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '70',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -7938,6 +8365,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '120',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -7956,6 +8384,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '63',
             'sp def': '33',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -7974,6 +8403,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '83',
             'sp def': '63',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -7992,6 +8422,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '93',
             'sp def': '83',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -8010,6 +8441,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '90',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -8028,6 +8460,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '130',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -8046,6 +8479,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '87',
             'speed': '51',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Flying',
@@ -8065,6 +8499,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '80',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -8083,6 +8518,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '60',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -8101,6 +8537,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '115',
             'sp def': '60',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -8119,6 +8556,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '23',
             'sp def': '48',
             'speed': '23',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -8137,6 +8575,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -8155,6 +8594,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '80',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -8173,6 +8613,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '80',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -8191,6 +8632,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '50',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Water',
@@ -8210,6 +8652,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '70',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Water',
@@ -8229,6 +8672,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '90',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Water',
@@ -8248,6 +8692,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '74',
             'sp def': '55',
             'speed': '32',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -8266,6 +8711,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '94',
             'sp def': '75',
             'speed': '52',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -8284,6 +8730,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '114',
             'sp def': '75',
             'speed': '52',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -8302,6 +8749,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '65',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Rock',
@@ -8321,6 +8769,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '65',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -8339,6 +8788,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '30',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -8357,6 +8807,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '50',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -8375,6 +8826,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '80',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Flying',
@@ -8394,6 +8846,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '90',
             'speed': '120',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Flying',
@@ -8413,6 +8866,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '60',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Psychic',
@@ -8432,6 +8886,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '80',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Psychic',
@@ -8451,6 +8906,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '90',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Psychic',
@@ -8470,6 +8926,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '110',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Psychic',
@@ -8489,6 +8946,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '100',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -8507,6 +8965,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '200',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -8525,6 +8984,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '150',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -8543,6 +9003,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '130',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Psychic',
@@ -8562,6 +9023,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '140',
             'sp def': '150',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Psychic',
@@ -8581,6 +9043,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '110',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Psychic',
@@ -8600,6 +9063,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '160',
             'sp def': '120',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Psychic',
@@ -8619,6 +9083,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '150',
             'sp def': '140',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -8637,6 +9102,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '180',
             'sp def': '160',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -8655,6 +9121,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '90',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -8673,6 +9140,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '150',
             'sp def': '90',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Ground',
@@ -8692,6 +9160,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '150',
             'sp def': '90',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Flying',
@@ -8711,6 +9180,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '180',
             'sp def': '100',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Flying',
@@ -8730,6 +9200,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '100',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Psychic',
@@ -8749,6 +9220,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '150',
             'sp def': '50',
             'speed': '150',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -8767,6 +9239,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '180',
             'sp def': '20',
             'speed': '150',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -8785,6 +9258,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '160',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -8803,6 +9277,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '90',
             'speed': '180',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -8821,6 +9296,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '55',
             'speed': '31',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -8839,6 +9315,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '36',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -8857,6 +9334,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '85',
             'speed': '56',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Ground',
@@ -8876,6 +9354,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '58',
             'sp def': '44',
             'speed': '61',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -8894,6 +9373,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '78',
             'sp def': '52',
             'speed': '81',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Fighting',
@@ -8913,6 +9393,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '104',
             'sp def': '71',
             'speed': '108',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Fighting',
@@ -8932,6 +9413,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '61',
             'sp def': '56',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -8950,6 +9432,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '81',
             'sp def': '76',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -8968,6 +9451,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '111',
             'sp def': '101',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Steel',
@@ -8987,6 +9471,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -9006,6 +9491,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -9025,6 +9511,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '60',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -9044,6 +9531,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '40',
             'speed': '31',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -9062,6 +9550,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '60',
             'speed': '71',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Water',
@@ -9081,6 +9570,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '41',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -9099,6 +9589,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '51',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -9117,6 +9608,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '34',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -9135,6 +9627,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '49',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -9153,6 +9646,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '79',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -9171,6 +9665,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '70',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -9190,6 +9685,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '105',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -9209,6 +9705,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '58',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -9227,6 +9724,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '50',
             'speed': '58',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -9245,6 +9743,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '42',
             'sp def': '88',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Steel',
@@ -9264,6 +9763,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '47',
             'sp def': '138',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Steel',
@@ -9283,6 +9783,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '29',
             'sp def': '45',
             'speed': '36',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -9301,6 +9802,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '79',
             'sp def': '105',
             'speed': '36',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Grass',
@@ -9320,6 +9822,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '94',
             'sp def': '50',
             'speed': '66',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -9339,6 +9842,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '42',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -9358,6 +9862,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '102',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -9377,6 +9882,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '90',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -9395,6 +9901,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '30',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -9413,6 +9920,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '50',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -9431,6 +9939,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '62',
             'sp def': '53',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -9449,6 +9958,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '87',
             'sp def': '78',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -9467,6 +9977,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '57',
             'sp def': '62',
             'speed': '34',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -9485,6 +9996,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '92',
             'sp def': '82',
             'speed': '39',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -9504,6 +10016,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '66',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -9522,6 +10035,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '44',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Flying',
@@ -9541,6 +10055,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '54',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Flying',
@@ -9560,6 +10075,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '44',
             'sp def': '56',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -9578,6 +10094,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '54',
             'sp def': '96',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -9596,6 +10113,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '54',
             'sp def': '96',
             'speed': '135',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Fighting',
@@ -9615,6 +10133,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '105',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -9633,6 +10152,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '52',
             'speed': '71',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Flying',
@@ -9652,6 +10172,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '42',
             'sp def': '37',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -9670,6 +10191,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '64',
             'sp def': '59',
             'speed': '112',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -9688,6 +10210,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '50',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -9706,6 +10229,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '41',
             'sp def': '41',
             'speed': '74',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Dark',
@@ -9725,6 +10249,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '71',
             'sp def': '61',
             'speed': '84',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Dark',
@@ -9744,6 +10269,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '24',
             'sp def': '86',
             'speed': '23',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Psychic',
@@ -9763,6 +10289,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '79',
             'sp def': '116',
             'speed': '33',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Psychic',
@@ -9782,6 +10309,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '10',
             'sp def': '45',
             'speed': '10',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -9800,6 +10328,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '90',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fairy',
@@ -9819,6 +10348,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '15',
             'sp def': '65',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -9837,6 +10367,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '92',
             'sp def': '42',
             'speed': '91',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -9856,6 +10387,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '92',
             'sp def': '108',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Dark',
@@ -9875,6 +10407,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '45',
             'speed': '42',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ground',
@@ -9894,6 +10427,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '55',
             'speed': '82',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ground',
@@ -9913,6 +10447,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '85',
             'speed': '102',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ground',
@@ -9932,6 +10467,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '95',
             'speed': '92',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ground',
@@ -9951,6 +10487,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '85',
             'speed': '5',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -9969,6 +10506,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '40',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -9987,6 +10525,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '115',
             'sp def': '70',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Fighting',
                 'Steel',
@@ -10006,6 +10545,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '140',
             'sp def': '70',
             'speed': '112',
+            'happiness': '0',
             'types': [
                 'Fighting',
                 'Steel',
@@ -10025,6 +10565,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '38',
             'sp def': '42',
             'speed': '32',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -10043,6 +10584,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '68',
             'sp def': '72',
             'speed': '47',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -10061,6 +10603,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '55',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Bug',
@@ -10080,6 +10623,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '75',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Dark',
@@ -10099,6 +10643,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '61',
             'sp def': '40',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Fighting',
@@ -10118,6 +10663,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '86',
             'sp def': '65',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Fighting',
@@ -10137,6 +10683,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '72',
             'speed': '46',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -10155,6 +10702,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '49',
             'sp def': '61',
             'speed': '66',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -10173,6 +10721,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '69',
             'sp def': '86',
             'speed': '91',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -10191,6 +10740,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '120',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Flying',
@@ -10210,6 +10760,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '62',
             'sp def': '60',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Ice',
@@ -10229,6 +10780,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '92',
             'sp def': '85',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Ice',
@@ -10248,6 +10800,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '132',
             'sp def': '105',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Ice',
@@ -10267,6 +10820,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '85',
             'speed': '125',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Ice',
@@ -10286,6 +10840,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '90',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Steel',
@@ -10305,6 +10860,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '95',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -10323,6 +10879,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '55',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Rock',
@@ -10342,6 +10899,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '50',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -10360,6 +10918,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '85',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -10378,6 +10937,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '95',
             'speed': '83',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -10396,6 +10956,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '115',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Fairy',
                 'Flying',
@@ -10415,6 +10976,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '116',
             'sp def': '56',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -10434,6 +10996,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '65',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -10452,6 +11015,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '95',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -10470,6 +11034,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '75',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Flying',
@@ -10489,6 +11054,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '60',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Ground',
@@ -10508,6 +11074,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '135',
             'sp def': '75',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -10526,6 +11093,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '115',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fighting',
@@ -10545,6 +11113,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '115',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fighting',
@@ -10564,6 +11133,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '150',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Steel',
@@ -10583,6 +11153,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '135',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -10601,6 +11172,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '70',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Ghost',
@@ -10620,6 +11192,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '77',
             'speed': '91',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Ghost',
@@ -10639,6 +11212,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '107',
             'speed': '86',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Fire',
@@ -10658,6 +11232,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '107',
             'speed': '86',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Water',
@@ -10677,6 +11252,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '107',
             'speed': '86',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Ice',
@@ -10696,6 +11272,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '107',
             'speed': '86',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Flying',
@@ -10715,6 +11292,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '107',
             'speed': '86',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Grass',
@@ -10734,6 +11312,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '130',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -10752,6 +11331,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '105',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -10770,6 +11350,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '70',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -10788,6 +11369,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '150',
             'sp def': '100',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Dragon',
@@ -10807,6 +11389,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '150',
             'sp def': '120',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dragon',
@@ -10826,6 +11409,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '106',
             'speed': '77',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Steel',
@@ -10845,6 +11429,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '110',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -10863,6 +11448,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '120',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Dragon',
@@ -10882,6 +11468,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '100',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Dragon',
@@ -10901,6 +11488,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '130',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -10919,6 +11507,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '80',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -10937,6 +11526,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '100',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -10955,6 +11545,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '135',
             'sp def': '90',
             'speed': '125',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -10973,6 +11564,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '100',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -10991,6 +11583,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '75',
             'speed': '127',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Flying',
@@ -11010,6 +11603,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '120',
             'speed': '120',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -11028,6 +11622,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '100',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fire',
@@ -11047,6 +11642,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '55',
             'speed': '63',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -11065,6 +11661,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '75',
             'speed': '83',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -11083,6 +11680,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '95',
             'speed': '113',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -11101,6 +11699,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '45',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -11119,6 +11718,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '55',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Fighting',
@@ -11138,6 +11738,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '65',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Fighting',
@@ -11157,6 +11758,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '63',
             'sp def': '45',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -11175,6 +11777,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '83',
             'sp def': '60',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -11193,6 +11796,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '108',
             'sp def': '70',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -11211,6 +11815,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '39',
             'speed': '42',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -11229,6 +11834,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '69',
             'speed': '77',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -11247,6 +11853,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '45',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -11265,6 +11872,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '65',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -11283,6 +11891,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '90',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -11301,6 +11910,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '37',
             'speed': '66',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -11319,6 +11929,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '88',
             'sp def': '50',
             'speed': '106',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -11337,6 +11948,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '48',
             'speed': '64',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -11355,6 +11967,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '98',
             'sp def': '63',
             'speed': '101',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -11373,6 +11986,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '48',
             'speed': '64',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -11391,6 +12005,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '98',
             'sp def': '63',
             'speed': '101',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -11409,6 +12024,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '48',
             'speed': '64',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -11427,6 +12043,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '98',
             'sp def': '63',
             'speed': '101',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -11445,6 +12062,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '67',
             'sp def': '55',
             'speed': '24',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -11463,6 +12081,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '107',
             'sp def': '95',
             'speed': '29',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -11481,6 +12100,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '36',
             'sp def': '30',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -11500,6 +12120,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '42',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -11519,6 +12140,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '55',
             'speed': '93',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -11538,6 +12160,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '32',
             'speed': '76',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -11556,6 +12179,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '63',
             'speed': '116',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -11574,6 +12198,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '25',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -11592,6 +12217,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '40',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -11610,6 +12236,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '80',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -11628,6 +12255,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '43',
             'speed': '72',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Flying',
@@ -11647,6 +12275,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '77',
             'sp def': '55',
             'speed': '114',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Flying',
@@ -11666,6 +12295,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '45',
             'speed': '68',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -11684,6 +12314,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '65',
             'speed': '88',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Steel',
@@ -11703,6 +12334,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '86',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -11721,6 +12353,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '126',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Fairy',
@@ -11740,6 +12373,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '35',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -11758,6 +12392,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -11776,6 +12411,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -11794,6 +12430,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '40',
             'speed': '64',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -11812,6 +12449,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '55',
             'speed': '69',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -11831,6 +12469,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '75',
             'speed': '74',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ground',
@@ -11850,6 +12489,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '85',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -11868,6 +12508,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '75',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -11886,6 +12527,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '60',
             'speed': '42',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Grass',
@@ -11905,6 +12547,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '80',
             'speed': '42',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Grass',
@@ -11924,6 +12567,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '80',
             'speed': '92',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Grass',
@@ -11943,6 +12587,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '39',
             'speed': '57',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -11962,6 +12607,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '79',
             'speed': '47',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -11981,6 +12627,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '69',
             'speed': '112',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Poison',
@@ -12000,6 +12647,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '37',
             'sp def': '50',
             'speed': '66',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Fairy',
@@ -12019,6 +12667,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '77',
             'sp def': '75',
             'speed': '116',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Fairy',
@@ -12038,6 +12687,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '50',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -12056,6 +12706,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '75',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -12074,6 +12725,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '55',
             'speed': '98',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -12092,6 +12744,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Dark',
@@ -12111,6 +12764,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '45',
             'speed': '74',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Dark',
@@ -12130,6 +12784,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '70',
             'speed': '92',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Dark',
@@ -12149,6 +12804,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '15',
             'sp def': '45',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -12167,6 +12823,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '55',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -12185,6 +12842,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '140',
             'sp def': '105',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Psychic',
@@ -12204,6 +12862,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '106',
             'sp def': '67',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -12222,6 +12881,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Rock',
@@ -12241,6 +12901,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '75',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Rock',
@@ -12260,6 +12921,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '70',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Fighting',
@@ -12279,6 +12941,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '115',
             'speed': '58',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Fighting',
@@ -12298,6 +12961,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '103',
             'sp def': '80',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Flying',
@@ -12317,6 +12981,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -12335,6 +13000,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '105',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -12353,6 +13019,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '45',
             'speed': '22',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Rock',
@@ -12372,6 +13039,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '83',
             'sp def': '65',
             'speed': '32',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Rock',
@@ -12391,6 +13059,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '74',
             'sp def': '45',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Flying',
@@ -12410,6 +13079,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '112',
             'sp def': '65',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Flying',
@@ -12429,6 +13099,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '62',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -12447,6 +13118,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '82',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -12465,6 +13137,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '40',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -12483,6 +13156,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '60',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -12501,6 +13175,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -12519,6 +13194,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '60',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -12537,6 +13213,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -12555,6 +13232,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '85',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -12573,6 +13251,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '110',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -12591,6 +13270,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '50',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -12609,6 +13289,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '60',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -12627,6 +13308,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '85',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -12645,6 +13327,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '44',
             'sp def': '50',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Flying',
@@ -12664,6 +13347,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '87',
             'sp def': '63',
             'speed': '98',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Flying',
@@ -12683,6 +13367,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '60',
             'speed': '44',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -12701,6 +13386,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '75',
             'speed': '59',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -12719,6 +13405,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '95',
             'speed': '79',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -12737,6 +13424,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Grass',
@@ -12756,6 +13444,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Grass',
@@ -12775,6 +13464,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '60',
             'speed': '103',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Flying',
@@ -12794,6 +13484,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '45',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -12812,6 +13503,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '105',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Steel',
@@ -12831,6 +13523,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '55',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -12850,6 +13543,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '80',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Poison',
@@ -12869,6 +13563,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '85',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ghost',
@@ -12888,6 +13583,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '105',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ghost',
@@ -12907,6 +13603,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '45',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -12925,6 +13622,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '57',
             'sp def': '50',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Electric',
@@ -12944,6 +13642,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '97',
             'sp def': '60',
             'speed': '108',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Electric',
@@ -12963,6 +13662,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '24',
             'sp def': '86',
             'speed': '10',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Steel',
@@ -12982,6 +13682,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '54',
             'sp def': '116',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Steel',
@@ -13001,6 +13702,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '60',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -13019,6 +13721,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '85',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -13037,6 +13740,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '85',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -13055,6 +13759,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '40',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -13073,6 +13778,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '70',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -13091,6 +13797,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '80',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -13109,6 +13816,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '55',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -13127,6 +13835,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '95',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -13145,6 +13854,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '55',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Fire',
@@ -13164,6 +13874,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '60',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Fire',
@@ -13183,6 +13894,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '145',
             'sp def': '90',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Fire',
@@ -13202,6 +13914,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '40',
             'speed': '57',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -13220,6 +13933,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '67',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -13238,6 +13952,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -13256,6 +13971,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '40',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -13274,6 +13990,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '80',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -13292,6 +14009,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '135',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -13310,6 +14028,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '65',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -13328,6 +14047,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '60',
             'speed': '145',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -13346,6 +14066,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '81',
             'sp def': '99',
             'speed': '32',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Electric',
@@ -13365,6 +14086,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '50',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -13383,6 +14105,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '60',
             'speed': '105',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -13401,6 +14124,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '90',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -13419,6 +14143,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '50',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Ghost',
@@ -13438,6 +14163,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '80',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Ghost',
@@ -13457,6 +14183,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Steel',
@@ -13476,6 +14203,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Steel',
@@ -13495,6 +14223,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '95',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -13513,6 +14242,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '37',
             'sp def': '50',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -13532,6 +14262,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '57',
             'sp def': '75',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -13551,6 +14282,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '65',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Flying',
@@ -13570,6 +14302,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '95',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Flying',
@@ -13589,6 +14322,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '66',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -13607,6 +14341,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '48',
             'sp def': '48',
             'speed': '109',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Steel',
@@ -13626,6 +14361,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '50',
             'speed': '38',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Dragon',
@@ -13645,6 +14381,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '70',
             'speed': '58',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Dragon',
@@ -13664,6 +14401,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '90',
             'speed': '98',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Dragon',
@@ -13683,6 +14421,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '55',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Fire',
@@ -13702,6 +14441,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '135',
             'sp def': '105',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Fire',
@@ -13721,6 +14461,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '72',
             'speed': '108',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Fighting',
@@ -13740,6 +14481,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '72',
             'sp def': '90',
             'speed': '108',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Fighting',
@@ -13759,6 +14501,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '129',
             'speed': '108',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Fighting',
@@ -13778,6 +14521,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '80',
             'speed': '111',
+            'happiness': '0',
             'types': [
                 'Flying',
             ],
@@ -13796,6 +14540,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '90',
             'speed': '121',
+            'happiness': '0',
             'types': [
                 'Flying',
             ],
@@ -13814,6 +14559,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '80',
             'speed': '111',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Flying',
@@ -13833,6 +14579,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '145',
             'sp def': '80',
             'speed': '101',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Flying',
@@ -13852,6 +14599,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '150',
             'sp def': '120',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Fire',
@@ -13871,6 +14619,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '100',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Electric',
@@ -13890,6 +14639,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '115',
             'sp def': '80',
             'speed': '101',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Flying',
@@ -13909,6 +14659,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '105',
             'sp def': '80',
             'speed': '91',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Flying',
@@ -13928,6 +14679,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '90',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ice',
@@ -13947,6 +14699,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '90',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ice',
@@ -13966,6 +14719,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '170',
             'sp def': '100',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ice',
@@ -13985,6 +14739,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '129',
             'sp def': '90',
             'speed': '108',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Fighting',
@@ -14004,6 +14759,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '129',
             'sp def': '90',
             'speed': '108',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Fighting',
@@ -14023,6 +14779,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '128',
             'sp def': '128',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Psychic',
@@ -14042,6 +14799,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '77',
             'sp def': '77',
             'speed': '128',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Fighting',
@@ -14061,6 +14819,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '95',
             'speed': '99',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Steel',
@@ -14080,6 +14839,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '48',
             'sp def': '45',
             'speed': '38',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -14098,6 +14858,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '56',
             'sp def': '58',
             'speed': '57',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -14116,6 +14877,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '74',
             'sp def': '75',
             'speed': '64',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Fighting',
@@ -14135,6 +14897,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '62',
             'sp def': '60',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -14153,6 +14916,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '70',
             'speed': '73',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -14171,6 +14935,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '114',
             'sp def': '100',
             'speed': '104',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Psychic',
@@ -14190,6 +14955,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '62',
             'sp def': '44',
             'speed': '71',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -14208,6 +14974,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '83',
             'sp def': '56',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -14226,6 +14993,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '103',
             'sp def': '71',
             'speed': '122',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dark',
@@ -14245,6 +15013,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '153',
             'sp def': '71',
             'speed': '132',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dark',
@@ -14264,6 +15033,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '32',
             'sp def': '36',
             'speed': '57',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -14282,6 +15052,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '77',
             'speed': '78',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Ground',
@@ -14301,6 +15072,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '38',
             'speed': '62',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -14320,6 +15092,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '56',
             'sp def': '52',
             'speed': '84',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Flying',
@@ -14339,6 +15112,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '74',
             'sp def': '69',
             'speed': '126',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Flying',
@@ -14358,6 +15132,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '27',
             'sp def': '25',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -14376,6 +15151,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '27',
             'sp def': '30',
             'speed': '29',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -14394,6 +15170,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '50',
             'speed': '89',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Flying',
@@ -14413,6 +15190,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '73',
             'sp def': '54',
             'speed': '72',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Normal',
@@ -14432,6 +15210,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '109',
             'sp def': '66',
             'speed': '106',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Normal',
@@ -14451,6 +15230,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '61',
             'sp def': '79',
             'speed': '42',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -14469,6 +15249,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '98',
             'speed': '52',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -14487,6 +15268,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '112',
             'sp def': '154',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -14505,6 +15287,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '62',
             'sp def': '57',
             'speed': '52',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -14523,6 +15306,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '97',
             'sp def': '81',
             'speed': '68',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -14541,6 +15325,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '46',
             'sp def': '48',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -14559,6 +15344,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '69',
             'sp def': '71',
             'speed': '58',
+            'happiness': '0',
             'types': [
                 'Fighting',
                 'Dark',
@@ -14578,6 +15364,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '90',
             'speed': '102',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -14596,6 +15383,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '63',
             'sp def': '60',
             'speed': '68',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -14614,6 +15402,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '83',
             'sp def': '81',
             'speed': '104',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -14632,6 +15421,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '37',
             'speed': '28',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Ghost',
@@ -14651,6 +15441,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '49',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Ghost',
@@ -14670,6 +15461,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '150',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Ghost',
@@ -14689,6 +15481,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '150',
             'sp def': '50',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Ghost',
@@ -14708,6 +15501,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '63',
             'sp def': '65',
             'speed': '23',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -14726,6 +15520,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '99',
             'sp def': '89',
             'speed': '29',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -14744,6 +15539,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '59',
             'sp def': '57',
             'speed': '49',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -14762,6 +15558,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '75',
             'speed': '72',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -14780,6 +15577,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '37',
             'sp def': '46',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Psychic',
@@ -14799,6 +15597,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '68',
             'sp def': '75',
             'speed': '73',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Psychic',
@@ -14818,6 +15617,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '39',
             'sp def': '56',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Water',
@@ -14837,6 +15637,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '54',
             'sp def': '86',
             'speed': '68',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Water',
@@ -14856,6 +15657,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '60',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Water',
@@ -14875,6 +15677,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '97',
             'sp def': '123',
             'speed': '44',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Dragon',
@@ -14894,6 +15697,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '58',
             'sp def': '63',
             'speed': '44',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -14912,6 +15716,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '120',
             'sp def': '89',
             'speed': '59',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -14930,6 +15735,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '61',
             'sp def': '43',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Normal',
@@ -14949,6 +15755,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '109',
             'sp def': '94',
             'speed': '109',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Normal',
@@ -14968,6 +15775,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '45',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Dragon',
@@ -14987,6 +15795,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '69',
             'sp def': '59',
             'speed': '71',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Dragon',
@@ -15006,6 +15815,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '67',
             'sp def': '63',
             'speed': '46',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Ice',
@@ -15025,6 +15835,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '99',
             'sp def': '92',
             'speed': '58',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Ice',
@@ -15044,6 +15855,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '130',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -15062,6 +15874,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '74',
             'sp def': '63',
             'speed': '118',
+            'happiness': '0',
             'types': [
                 'Fighting',
                 'Flying',
@@ -15081,6 +15894,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '81',
             'sp def': '67',
             'speed': '101',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Fairy',
@@ -15100,6 +15914,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '150',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Fairy',
@@ -15119,6 +15934,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '75',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -15137,6 +15953,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '83',
             'sp def': '113',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -15155,6 +15972,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '110',
             'sp def': '150',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -15173,6 +15991,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '87',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Fairy',
@@ -15192,6 +16011,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '60',
             'speed': '38',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Grass',
@@ -15211,6 +16031,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '82',
             'speed': '56',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Grass',
@@ -15230,6 +16051,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '44',
             'sp def': '55',
             'speed': '51',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Grass',
@@ -15249,6 +16071,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '58',
             'sp def': '75',
             'speed': '84',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Grass',
@@ -15268,6 +16091,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '32',
             'sp def': '35',
             'speed': '28',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -15286,6 +16110,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '44',
             'sp def': '46',
             'speed': '28',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -15304,6 +16129,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '40',
             'speed': '55',
+            'happiness': '0',
             'types': [
                 'Flying',
                 'Dragon',
@@ -15323,6 +16149,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '97',
             'sp def': '80',
             'speed': '123',
+            'happiness': '0',
             'types': [
                 'Flying',
                 'Dragon',
@@ -15342,6 +16169,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '131',
             'sp def': '98',
             'speed': '99',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -15360,6 +16188,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '131',
             'sp def': '98',
             'speed': '99',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Flying',
@@ -15379,6 +16208,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '81',
             'sp def': '95',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ground',
@@ -15398,6 +16228,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '61',
             'sp def': '85',
             'speed': '115',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ground',
@@ -15417,6 +16248,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '91',
             'sp def': '95',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ground',
@@ -15436,6 +16268,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '150',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Fairy',
@@ -15455,6 +16288,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '160',
             'sp def': '110',
             'speed': '110',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Fairy',
@@ -15474,6 +16308,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '150',
             'sp def': '130',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Ghost',
@@ -15493,6 +16328,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '170',
             'sp def': '130',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Dark',
@@ -15512,6 +16348,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '90',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Water',
@@ -15531,6 +16368,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '50',
             'speed': '42',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Flying',
@@ -15550,6 +16388,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '70',
             'speed': '52',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Flying',
@@ -15569,6 +16408,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '100',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Ghost',
@@ -15588,6 +16428,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '40',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -15606,6 +16447,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '50',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -15624,6 +16466,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '90',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Dark',
@@ -15643,6 +16486,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '66',
             'sp def': '56',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -15661,6 +16505,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '91',
             'sp def': '91',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -15679,6 +16524,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '126',
             'sp def': '116',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Fairy',
@@ -15698,6 +16544,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -15717,6 +16564,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -15736,6 +16584,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '75',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Flying',
@@ -15755,6 +16604,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '30',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -15773,6 +16623,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '60',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -15791,6 +16642,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '45',
             'speed': '46',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -15809,6 +16661,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '75',
             'speed': '36',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Electric',
@@ -15828,6 +16681,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '145',
             'sp def': '75',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Electric',
@@ -15847,6 +16701,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '42',
             'sp def': '47',
             'speed': '63',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -15865,6 +16720,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '62',
             'sp def': '67',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Fighting',
                 'Ice',
@@ -15884,6 +16740,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '98',
             'sp def': '70',
             'speed': '93',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Flying',
@@ -15903,6 +16760,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '40',
             'speed': '84',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Fairy',
@@ -15922,6 +16780,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '70',
             'speed': '124',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Fairy',
@@ -15941,6 +16800,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '40',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -15959,6 +16819,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '75',
             'speed': '82',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -15977,6 +16838,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '112',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -15995,6 +16857,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '65',
             'speed': '112',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -16013,6 +16876,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '25',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -16031,6 +16895,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '140',
             'sp def': '135',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -16049,6 +16914,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '43',
             'sp def': '52',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Water',
@@ -16068,6 +16934,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '142',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Water',
@@ -16087,6 +16954,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '55',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -16105,6 +16973,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '85',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -16123,6 +16992,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '72',
             'speed': '27',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Bug',
@@ -16142,6 +17012,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '132',
             'speed': '42',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Bug',
@@ -16161,6 +17032,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '35',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -16179,6 +17051,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '90',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -16197,6 +17070,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '75',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Fairy',
@@ -16216,6 +17090,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '100',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Fairy',
@@ -16235,6 +17110,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '71',
             'sp def': '40',
             'speed': '77',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Fire',
@@ -16254,6 +17130,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '111',
             'sp def': '60',
             'speed': '117',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Fire',
@@ -16273,6 +17150,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '50',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Fighting',
@@ -16292,6 +17170,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '60',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Fighting',
@@ -16311,6 +17190,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '38',
             'speed': '32',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -16329,6 +17209,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '48',
             'speed': '62',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -16347,6 +17228,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '98',
             'speed': '72',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -16365,6 +17247,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '82',
             'sp def': '110',
             'speed': '100',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -16383,6 +17266,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '110',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Psychic',
@@ -16402,6 +17286,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '60',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -16420,6 +17305,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '20',
             'sp def': '30',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Water',
@@ -16439,6 +17325,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '90',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Water',
@@ -16458,6 +17345,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '45',
             'speed': '15',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Ground',
@@ -16477,6 +17365,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '75',
             'speed': '35',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Ground',
@@ -16496,6 +17385,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '30',
             'sp def': '130',
             'speed': '5',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -16514,6 +17404,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '95',
             'speed': '59',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -16532,6 +17423,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '95',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -16550,6 +17442,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '60',
             'speed': '120',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Flying',
@@ -16569,6 +17462,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '75',
             'sp def': '95',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -16587,6 +17481,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '91',
             'sp def': '85',
             'speed': '36',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Dragon',
@@ -16606,6 +17501,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '73',
             'speed': '96',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Steel',
@@ -16625,6 +17521,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '105',
             'speed': '96',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Fairy',
@@ -16644,6 +17541,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '70',
             'speed': '92',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Psychic',
@@ -16663,6 +17561,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '135',
             'sp def': '91',
             'speed': '36',
+            'happiness': '0',
             'types': [
                 'Normal',
                 'Dragon',
@@ -16682,6 +17581,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '86',
             'sp def': '90',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Ghost',
                 'Grass',
@@ -16701,6 +17601,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '45',
             'sp def': '45',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -16719,6 +17620,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '70',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Fighting',
@@ -16738,6 +17640,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '105',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Fighting',
@@ -16757,6 +17660,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '75',
             'speed': '130',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Fairy',
@@ -16776,6 +17680,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '115',
             'speed': '95',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fairy',
@@ -16795,6 +17700,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '95',
             'speed': '75',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Fairy',
@@ -16814,6 +17720,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '130',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Fairy',
@@ -16833,6 +17740,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '29',
             'sp def': '31',
             'speed': '37',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -16851,6 +17759,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '29',
             'sp def': '131',
             'speed': '37',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -16869,6 +17778,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '113',
             'sp def': '89',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Steel',
@@ -16888,6 +17798,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '137',
             'sp def': '107',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Ghost',
@@ -16907,6 +17818,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '131',
             'speed': '103',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Poison',
@@ -16926,6 +17838,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '53',
             'speed': '79',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Fighting',
@@ -16945,6 +17858,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '137',
             'sp def': '37',
             'speed': '151',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Fighting',
@@ -16964,6 +17878,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '173',
             'sp def': '71',
             'speed': '83',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -16982,6 +17897,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '107',
             'sp def': '101',
             'speed': '61',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Flying',
@@ -17001,6 +17917,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '59',
             'sp def': '31',
             'speed': '109',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Steel',
@@ -17020,6 +17937,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '97',
             'sp def': '53',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Dragon',
@@ -17039,6 +17957,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '89',
             'speed': '79',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -17057,6 +17976,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '115',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Fairy',
@@ -17076,6 +17996,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '90',
             'speed': '125',
+            'happiness': '0',
             'types': [
                 'Fighting',
                 'Ghost',
@@ -17095,6 +18016,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '73',
             'sp def': '67',
             'speed': '73',
+            'happiness': '0',
             'types': [
                 'Poison',
             ],
@@ -17113,6 +18035,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '73',
             'speed': '121',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Dragon',
@@ -17132,6 +18055,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '101',
             'speed': '13',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Steel',
@@ -17151,6 +18075,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '151',
             'sp def': '79',
             'speed': '107',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Ghost',
@@ -17170,6 +18095,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '102',
             'sp def': '80',
             'speed': '143',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -17188,6 +18114,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '35',
             'speed': '34',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -17206,6 +18133,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '65',
             'speed': '34',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -17224,6 +18152,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -17242,6 +18171,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '60',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -17260,6 +18190,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -17278,6 +18209,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '69',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -17296,6 +18228,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '60',
             'speed': '94',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -17314,6 +18247,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '75',
             'speed': '119',
+            'happiness': '0',
             'types': [
                 'Fire',
             ],
@@ -17332,6 +18266,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '70',
             'sp def': '40',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -17350,6 +18285,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '55',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -17368,6 +18304,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '125',
             'sp def': '65',
             'speed': '120',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -17386,6 +18323,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '35',
             'speed': '25',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -17404,6 +18342,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '75',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -17422,6 +18361,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '33',
             'sp def': '35',
             'speed': '57',
+            'happiness': '0',
             'types': [
                 'Flying',
             ],
@@ -17440,6 +18380,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '43',
             'sp def': '55',
             'speed': '77',
+            'happiness': '0',
             'types': [
                 'Flying',
             ],
@@ -17458,6 +18399,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '85',
             'speed': '67',
+            'happiness': '0',
             'types': [
                 'Flying',
                 'Steel',
@@ -17477,6 +18419,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '25',
             'sp def': '45',
             'speed': '45',
+            'happiness': '0',
             'types': [
                 'Bug',
             ],
@@ -17495,6 +18438,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '50',
             'sp def': '90',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Psychic',
@@ -17514,6 +18458,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '120',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Psychic',
@@ -17533,6 +18478,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '47',
             'sp def': '52',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -17551,6 +18497,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '87',
             'sp def': '92',
             'speed': '90',
+            'happiness': '0',
             'types': [
                 'Dark',
             ],
@@ -17569,6 +18516,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '60',
             'speed': '10',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -17587,6 +18535,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '120',
             'speed': '60',
+            'happiness': '0',
             'types': [
                 'Grass',
             ],
@@ -17605,6 +18554,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '45',
             'speed': '48',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -17623,6 +18573,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '90',
             'speed': '88',
+            'happiness': '0',
             'types': [
                 'Normal',
             ],
@@ -17641,6 +18592,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '38',
             'sp def': '38',
             'speed': '44',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -17659,6 +18611,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '48',
             'sp def': '68',
             'speed': '74',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Rock',
@@ -17678,6 +18631,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '26',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -17696,6 +18650,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '60',
             'speed': '121',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -17714,6 +18669,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '50',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -17732,6 +18688,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '50',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Fire',
@@ -17751,6 +18708,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '90',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Rock',
                 'Fire',
@@ -17770,6 +18728,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '20',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Dragon',
@@ -17789,6 +18748,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '95',
             'sp def': '60',
             'speed': '70',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Dragon',
@@ -17808,6 +18768,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '100',
             'sp def': '80',
             'speed': '30',
+            'happiness': '0',
             'types': [
                 'Grass',
                 'Dragon',
@@ -17827,6 +18788,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '35',
             'sp def': '50',
             'speed': '46',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -17845,6 +18807,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '65',
             'sp def': '70',
             'speed': '71',
+            'happiness': '0',
             'types': [
                 'Ground',
             ],
@@ -17863,6 +18826,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '85',
             'sp def': '95',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Flying',
                 'Water',
@@ -17882,6 +18846,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '30',
             'speed': '66',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -17900,6 +18865,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '50',
             'speed': '136',
+            'happiness': '0',
             'types': [
                 'Water',
             ],
@@ -17918,6 +18884,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '54',
             'sp def': '30',
             'speed': '40',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Poison',
@@ -17937,6 +18904,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '29',
             'sp def': '31',
             'speed': '37',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Poison',
@@ -17956,6 +18924,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '29',
             'sp def': '131',
             'speed': '37',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Bug',
@@ -17975,6 +18944,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '113',
             'sp def': '89',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Fire',
                 'Bug',
@@ -17994,6 +18964,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '137',
             'sp def': '107',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -18012,6 +18983,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '131',
             'speed': '103',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -18030,6 +19002,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '53',
             'speed': '79',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -18048,6 +19021,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '137',
             'sp def': '37',
             'speed': '151',
+            'happiness': '0',
             'types': [
                 'Bug',
                 'Fighting',
@@ -18067,6 +19041,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '173',
             'sp def': '71',
             'speed': '83',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -18085,6 +19060,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '107',
             'sp def': '101',
             'speed': '61',
+            'happiness': '0',
             'types': [
                 'Psychic',
             ],
@@ -18103,6 +19079,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '59',
             'sp def': '31',
             'speed': '109',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Fairy',
@@ -18122,6 +19099,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '97',
             'sp def': '53',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Fairy',
@@ -18141,6 +19119,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '89',
             'speed': '79',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Fairy',
@@ -18160,6 +19139,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '115',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Fairy',
@@ -18179,6 +19159,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '90',
             'speed': '125',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Normal',
@@ -18198,6 +19179,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '73',
             'sp def': '67',
             'speed': '73',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -18216,6 +19198,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '73',
             'speed': '121',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],
@@ -18234,6 +19217,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '73',
             'speed': '121',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -18252,6 +19236,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '151',
             'sp def': '79',
             'speed': '107',
+            'happiness': '0',
             'types': [
                 'Ground',
                 'Ghost',
@@ -18271,6 +19256,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '102',
             'sp def': '80',
             'speed': '143',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -18289,6 +19275,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '35',
             'speed': '34',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -18307,6 +19294,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '65',
             'speed': '34',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -18325,6 +19313,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '40',
             'sp def': '40',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -18343,6 +19332,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '60',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Bug',
@@ -18362,6 +19352,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Ice',
                 'Bug',
@@ -18381,6 +19372,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '29',
             'sp def': '131',
             'speed': '37',
+            'happiness': '0',
             'types': [
                 'Rock',
             ],
@@ -18399,6 +19391,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '113',
             'sp def': '89',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -18417,6 +19410,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '137',
             'sp def': '107',
             'speed': '97',
+            'happiness': '0',
             'types': [
                 'Psychic',
                 'Normal',
@@ -18436,6 +19430,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '131',
             'speed': '103',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Dark',
@@ -18455,6 +19450,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '53',
             'sp def': '53',
             'speed': '79',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -18473,6 +19469,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '137',
             'sp def': '37',
             'speed': '151',
+            'happiness': '0',
             'types': [
                 'Steel',
             ],
@@ -18491,6 +19488,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '173',
             'sp def': '71',
             'speed': '83',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Dragon',
@@ -18510,6 +19508,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '107',
             'sp def': '101',
             'speed': '61',
+            'happiness': '0',
             'types': [
                 'Electric',
                 'Ice',
@@ -18529,6 +19528,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '59',
             'sp def': '31',
             'speed': '109',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Dragon',
@@ -18548,6 +19548,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '97',
             'sp def': '53',
             'speed': '43',
+            'happiness': '0',
             'types': [
                 'Water',
                 'Ice',
@@ -18567,6 +19568,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '89',
             'speed': '79',
+            'happiness': '0',
             'types': [
                 'Steel',
                 'Dragon',
@@ -18586,6 +19588,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '130',
             'sp def': '115',
             'speed': '65',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ghost',
@@ -18605,6 +19608,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '90',
             'sp def': '90',
             'speed': '125',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ghost',
@@ -18624,6 +19628,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '73',
             'sp def': '67',
             'speed': '73',
+            'happiness': '0',
             'types': [
                 'Dragon',
                 'Ghost',
@@ -18643,6 +19648,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '127',
             'sp def': '73',
             'speed': '121',
+            'happiness': '0',
             'types': [
                 'Fairy',
             ],
@@ -18661,6 +19667,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '151',
             'sp def': '79',
             'speed': '107',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -18679,6 +19686,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '35',
             'speed': '34',
+            'happiness': '0',
             'types': [
                 'Poison',
                 'Dragon',
@@ -18698,6 +19706,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '80',
             'sp def': '65',
             'speed': '34',
+            'happiness': '0',
             'types': [
                 'Fighting',
             ],
@@ -18716,6 +19725,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Dark',
                 'Grass',
@@ -18735,6 +19745,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Electric',
             ],
@@ -18753,6 +19764,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '55',
             'sp def': '60',
             'speed': '80',
+            'happiness': '0',
             'types': [
                 'Dragon',
             ],
@@ -18771,6 +19783,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Ice',
             ],
@@ -18789,6 +19802,7 @@ const POKEDEX = createPokemonArray(
             'sp atk': '60',
             'sp def': '70',
             'speed': '85',
+            'happiness': '0',
             'types': [
                 'Ghost',
             ],

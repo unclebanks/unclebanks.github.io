@@ -32,6 +32,13 @@
           Map
         </button>
       </p>
+      <p>
+        <button
+          onclick="userInteractions.viewRanch()"
+        >
+          PokeRanch
+        </button>
+      </p>
       <input
         id="enableDelete"
         v-model="manageTeam"

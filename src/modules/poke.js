@@ -145,6 +145,7 @@ Poke.prototype.spAttack = function () { return this.statValue('sp atk'); };
 Poke.prototype.spDefense = function () { return this.statValue('sp def'); };
 Poke.prototype.speed = function () { return this.statValue('speed'); };
 Poke.prototype.avgDefense = function () { return (this.defense() + this.spDefense()) / 2; };
+Poke.prototype.happiness = function () { return this.statValue('happiness'); };
 
 Poke.prototype.pokeName = function () {
     return this.poke.name;
