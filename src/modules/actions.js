@@ -534,6 +534,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else if (secretCode === 'Bulbasaur' && !player.secretCodes.bulbasaur) {
                 player.addPoke(new Poke(pokeByName('Bulbasaur'), 5));
                 player.secretCodes.bulbasaur = true;
+            } else if (secretCode === 'MaimahsPo' && !player.secretCodes.bulbasaur) {
+                player.addPoke(new Poke(pokeByName('Pancham'), 5));
+                player.secretCodes.maimahspo = true;
             } else {
                 alert('Code Invalid or Already Claimed');
             }
