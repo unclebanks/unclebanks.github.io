@@ -132,9 +132,10 @@ export default (player, combatLoop, userInteractions) => {
                     let routeColor; let
                         routeWeight;
                     if (unlocked) {
-                        routeColor = (routeId === player.settings.currentRouteId) ? COLORS.route.current : COLORS.route.unlocked;
-                        routeWeight = (routeId === player.settings.currentRouteId) ? 'bold' : 'normal';
-                        if (routeColor !== COLORS.route.current && route.pokes) { // don't overwrite this color, might confuse the user
+                        const isCurrentRoute = (routeId === player.settings.currentRouteId);
+                        routeColor = isCurrentRoute ? COLORS.route.current : COLORS.route.unlocked;
+                        routeWeight = isCurrentRoute ? 'bold' : 'normal';
+                        if (route.pokes) {
                             let status = 2; // 2 for shiny caught, 1 for regular caught, 0 for missing
                             let encounters = route.pokes || [];
                             if (route._special) {
@@ -153,9 +154,9 @@ export default (player, combatLoop, userInteractions) => {
                                 }
                             }
                             if (status === 2) {
-                                routeColor = COLORS.route.caughtAllShinies;
+                                routeColor = isCurrentRoute ? COLORS.route.currentCaughtAllShinies : COLORS.route.caughtAllShinies;
                             } else if (status === 1) {
-                                routeColor = COLORS.route.caughtAll;
+                                routeColor = isCurrentRoute ? COLORS.route.currentCaughtAll : COLORS.route.caughtAll;
                             }
                         }
                     } else {

@@ -169,7 +169,7 @@ Poke.prototype.giveExp = function (amount) {
     this.exp += amount;
 };
 Poke.prototype.currentExp = function () { return this.exp; };
-Poke.prototype.nextLevelExp = function () { return this.expTable[this.currentLevel()]; };
+Poke.prototype.nextLevelExp = function () { return this.expTable[this.currentLevel()] || (this.currentExp() + 1); };
 Poke.prototype.thisLevelExp = function () { return this.expTable[this.currentLevel() - 1] || 10; };
 Poke.prototype.level = function () { return this.currentLevel(); };
 Poke.prototype.prestigeLevel = function () { return this.prestigeLevel; };
