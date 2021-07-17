@@ -7,38 +7,39 @@
       <div
         id="ceruleanCityModalBox"
       >
-        <button
-          onclick="userInteractions.nuggetBridgeEvent()"
-          class="button"
+        <area
+        shape= "rect"
+        coords= "259,9,306,58"
+          oneclick="userInteractions.nuggetBridgeEvent()"
+         
         >
-          Nugget Bridge
-        </button><br>
-        <button
+
+        <area 
+        shape= "rect"
+        coords= "337,97,417,144"
           onclick="userInteractions.checkStory()"
-          class="button"
-        >
-          Burgled House
-        </button><br>
-        <button
+         > 
+        
+        <area
+          shape= "rect"
+          coords= "241,88,303,140"
           onclick="userInteractions.ceruleanPokeCenter()"
-          class="button"
+          
         >
-          Pokemon Center
-        </button><br>
-        <button
+        
+        <area 
+        shape= "rect"
+        coords="321,304,374,348"
           onclick="userInteractions.ceruleanPokeMart()"
-          class="button"
+          
         >
-          PokeMart
-        </button><br>
-        <button
-          id="pokemart"
-          onclick="userInteractions.ceruleanGym()"
-          class="button"
+      
         >
-          Cerulean Gym
-        </button><br>
-      </div>
+        <area
+        shape= "rect"
+        coords= "335,203,421,262"
+        onclick= "userInteractions.CeruleanGym">
+</map>
     </template>
   </CardModal>
 </template>
