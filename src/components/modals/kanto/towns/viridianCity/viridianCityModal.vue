@@ -14,37 +14,37 @@
       >
         <area
           shape="rect"
-          coords="81,54,159,126"
+          coords="275,77,297,96"
           onclick="userInteractions.viridianDrunkard()"
         >
         <area
           shape="rect"
-          coords="284,267,344,320"
+          coords="320,301,387,359"
           onclick="userInteractions.viridianPokeCenter()"
         >
         <area
           shape="rect"
-          coords="402,191,450,237"
+          coords="452,214,510,270"
           onclick="userInteractions.viridianPokeMart()"
         >
         <area
           shape="rect"
-          coords="390,71,463,124"
+          coords="440,78,521,147"
           onclick="userInteractions.viridianGym()"
         >
         <area
           shape="rect"
-          coords="0,188,70,238"
+          coords="0,208,117,267"
           onclick="userInteractions.viridianToRoute22()"
         >
         <area
           shape="rect"
-          coords="260,412,307,473"
+          coords="293,461,347,533"
           onclick="userInteractions.viridianToRoute1()"
         >
         <area
           shape="rect"
-          coords="223,0,287,24"
+          coords="254,0,321,47"
           onclick="userInteractions.viridianToRoute2Bottom()"
         >
       </map>

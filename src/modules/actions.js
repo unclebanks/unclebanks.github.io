@@ -830,7 +830,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         checkStory: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
             if (routeData.story.name === 'Burgled House') {
-                alert('Good Job');
+                alert('Not implemented yet');
             }
         },
         viridianPokeMartEvent: function () {

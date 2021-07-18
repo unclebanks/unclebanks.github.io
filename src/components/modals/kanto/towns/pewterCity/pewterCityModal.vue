@@ -14,32 +14,32 @@
       >
         <area
           shape="rect"
-          coords="97,4,183,64"
+          coords="159,5,375,108"
           onclick="userInteractions.pewterMuseum()"
         >
         <area
           shape="rect"
-          coords="119,173,161,209"
+          coords="199,286,269,349"
           onclick="userInteractions.pewterPokeCenter()"
         >
         <area
           shape="rect"
-          coords="207,120,241,153"
+          coords="344,200,403,256"
           onclick="userInteractions.pewterPokeMart()"
         >
         <area
           shape="rect"
-          coords="95,96,151,136"
+          coords="158,157,256,230"
           onclick="userInteractions.pewterGym()"
         >
         <area
           shape="rect"
-          coords="159,287,194,320"
+          coords="264,471,323,533"
           onclick="userInteractions.pewterToRoute2Top()"
         >
         <area
           shape="rect"
-          coords="320,158,384,191"
+          coords="535,266,640,319"
           onclick="userInteractions.pewterToRoute3West()"
         >
       </map>
