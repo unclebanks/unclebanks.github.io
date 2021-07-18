@@ -14,27 +14,27 @@
       >
         <area
           shape="rect"
-          coords="81,54,159,126"
+          coords="133,93,266,213"
           onclick="userInteractions.redHouse()"
         >
         <area
           shape="rect"
-          coords="224,56,304,128"
+          coords="374,92,506,212"
           onclick="userInteractions.blueHouse()"
         >
         <area
           shape="rect"
-          coords="208,152,320,223"
+          coords="347,253,534,373"
           onclick="userInteractions.oakLab()"
         >
         <area
           shape="rect"
-          coords="161,123,175,145"
+          coords="268,205,294,242"
           onclick="userInteractions.oakLabOak()"
         >
         <area
           shape="rect"
-          coords="189,0,227,37"
+          coords="317,0,377,61"
           onclick="userInteractions.palletToRoute1()"
         >
       </map>
