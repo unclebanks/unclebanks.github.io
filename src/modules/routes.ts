@@ -307,8 +307,8 @@ const ROUTES: Routes = {
             name: 'Route 22',
             pokes: ['Rattata', 'Nidoran F', 'Nidoran M', 'Mankey', 'Spearow'],
             modal: 'kantoRoute22',
-            minLevel: 99,
-            maxLevel: 100,
+            minLevel: 2,
+            maxLevel: 6,
             respawn: 'viridianCity',
         },
         kroute2: {
