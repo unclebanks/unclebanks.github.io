@@ -1062,6 +1062,18 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.events.oakParcelGiven = true;
             } else if (!player.events.oakParcelReceived) {
                 alert('I wonder where my parcel from Viridian City could be. . .');
+            } else if (player.countPokedex(5) > 40 && !player.unlocked.kantoFirstStagePass) {
+                alert('Great job on catching the Kanto region starters. Take this Pass to unlock deeper areas previously inaccessible.');
+                player.unlocked.kantoFirstStagePass = true;
+                dom.renderRouteList();
+            } else if (!player.unlocked.kantoFirstStagePass) {
+                alert('It seems you need to research Pokemon a bit more thoroughly before I can grant you access to other areas.');
+            } else if (player.countPokedex(5) < 80 && !player.unlocked.kantoSecondStagePass) {
+                alert('Keep researching more pokemon to unlock more areas.');
+            } else if (player.countPokedex(5) > 80 && !player.unlocked.kantoSecondStagePass) {
+                alert('You have been an excellent help with my research. Take this Second Stage Pass to explore new areas.');
+                player.unlocked.kantoSecondStagePass = true;
+                dom.renderRouteList();
             } else { alert('There is more stuff to be implemented later on here.'); }
         },
         blueOakLab: function () {
