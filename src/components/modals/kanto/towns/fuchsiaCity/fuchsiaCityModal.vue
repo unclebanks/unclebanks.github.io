@@ -4,35 +4,35 @@
     title="Fuchsia City"
   >
     <template #body>
-      <div
+      <img
         id="fuchsiaCityModalBox"
+        usemap="#fuchsiaCitymap"
       >
-        <button
+
+      <map
+        name="fuchsiaCitymap"
+      >
+        <area
+          shape="rect"
+          coords="293,0,374,81"
           onclick="userInteractions.justTestStuff()"
-          class="button"
         >
-          TEST
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="308,367,375,427"
           onclick="userInteractions.fuchsiaPokeCenter()"
-          class="button"
         >
-          Pokemon Center
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="119,161,175,213"
           onclick="userInteractions.fuchsiaPokeMart()"
-          class="button"
         >
-          PokeMart
-        </button><br>
-        <button
-          id="pokemart"
+        <area
+          shape="rect"
+          coords="80,372,173,442"
           onclick="userInteractions.fuchsiaGym()"
-          class="button"
         >
-          Fuchsia Gym
-        </button><br>
-      </div>
+      </map>
     </template>
   </CardModal>
 </template>
