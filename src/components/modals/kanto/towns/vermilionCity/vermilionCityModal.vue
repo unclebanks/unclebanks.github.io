@@ -4,41 +4,40 @@
     title="Vermilion City"
   >
     <template #body>
-      <div
+      <img
         id="vermilionCityModalBox"
+        usemap="#vermilionCitymap"
       >
-        <button
+
+      <map
+        name="vermilionCitymap"
+      >
+        <area
+          shape="rect"
+          coords="105,47,167,97"
           onclick="userInteractions.vFisherman()"
-          class="button"
         >
-          Fishing Guru
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="294,435,338,533"
           onclick="userInteractions.vermilionSSANNE()"
-          class="button"
         >
-          S.S. ANNE
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="173,34,240,97"
           onclick="userInteractions.vermilionPokeCenter()"
-          class="button"
         >
-          Pokemon Center
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="360,187,414,239"
           onclick="userInteractions.vermilionPokeMart()"
-          class="button"
         >
-          PokeMart
-        </button><br>
-        <button
-          id="pokemart"
+        <area
+          shape="rect"
+          coords="147,278,241,347"
           onclick="userInteractions.vermilionGym()"
-          class="button"
         >
-          Vermilion Gym
-        </button><br>
-      </div>
+      </map>
     </template>
   </CardModal>
 </template>

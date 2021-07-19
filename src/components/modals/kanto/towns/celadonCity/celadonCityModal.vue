@@ -14,27 +14,27 @@
       >
         <area
           shape="rect"
-          coords="368,62,408,96"
+          coords="491,80,545,130"
           onclick="userInteractions.celadonPokeCenter()"
         >
         <area
           shape="rect"
-          coords="72,39,144,122"
+          coords="96,54,190,163"
           onclick="userInteractions.celadonPokeMart()"
         >
         <area
           shape="rect"
-          coords="64,208,128,247"
+          coords="86,277,170,332"
           onclick="userInteractions.celadonGym()"
         >
         <area
           shape="rect"
-          coords="248,139,303,179"
+          coords="330,186,404,242"
           onclick="userInteractions.gameCorner()"
         >
         <area
           shape="rect"
-          coords="304,141,329,169"
+          coords="407,187,442,237"
           onclick="userInteractions.prizeCorner()"
         >
       </map>
