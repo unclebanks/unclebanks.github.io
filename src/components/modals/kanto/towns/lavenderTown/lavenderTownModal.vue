@@ -4,28 +4,30 @@
     title="Lavender Town"
   >
     <template #body>
-      <div
+      <img
         id="lavenderTownModalBox"
+        usemap="#lavenderTownmap"
       >
-        <button
+
+      <map
+        name="lavenderTownmap"
+      >
+        <area
+          shape="rect"
+          coords="402,11,589,187"
           onclick="userInteractions.lavenderPokeTower1()"
-          class="button"
         >
-          Pokemon Tower
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="106,42,238,160"
           onclick="userInteractions.lavenderPokeCenter()"
-          class="button"
         >
-          Pokemon Center
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="480,324,585,427"
           onclick="userInteractions.lavenderPokeMart()"
-          class="button"
         >
-          PokeMart
-        </button><br>
-      </div>
+      </map>
     </template>
   </CardModal>
 </template>

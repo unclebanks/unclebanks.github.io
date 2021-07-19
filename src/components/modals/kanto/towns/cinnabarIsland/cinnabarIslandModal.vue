@@ -4,41 +4,35 @@
     title="Cinnabar Island"
   >
     <template #body>
-      <div
+      <img
         id="cinnabarIslandModalBox"
+        usemap="#cinnabarIslandmap"
       >
-        <button
-          onclick="userInteractions.cinnabarPokeMart()"
-          class="button"
-        >
-          PokeMart
-        </button><br>
-        <button
+
+      <map
+        name="cinnabarIslandmap"
+      >
+        <area
+          shape="rect"
+          coords="129,162,316,278"
           onclick="userInteractions.openCinnabarLab()"
-          class="button"
         >
-          Cinnabar Lab
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="323,200,450,325"
           onclick="userInteractions.cinnabarPokeCenter()"
-          class="button"
         >
-          Pokemon Center
-        </button><br>
-        <button
+        <area
+          shape="rect"
+          coords="459,218,558,318"
           onclick="userInteractions.cinnabarPokeMart()"
-          class="button"
         >
-          PokeMart
-        </button><br>
-        <button
-          id="pokemart"
+        <area
+          shape="rect"
+          coords="455,2,612,126"
           onclick="userInteractions.cinnabarGym()"
-          class="button"
         >
-          Cinnabar Gym
-        </button><br>
-      </div>
+      </map>
     </template>
   </CardModal>
 </template>
