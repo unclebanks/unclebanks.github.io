@@ -25,6 +25,12 @@
         >
           Lower Right Hall
         </button><br>
+        <button
+          onclick="userInteractions.vermilionGetCut()"
+          class="button"
+        >
+          GET CUT
+        </button><br>
       </div>
     </template>
   </CardModal>

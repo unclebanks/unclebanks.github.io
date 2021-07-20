@@ -273,9 +273,7 @@ export default (player, enemy) => {
                 }
                 flash($('#gameContainer'));
                 const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-                const routeModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].modal;
                 if (routeData.respawn) {
-                    closeModal(document.getElementById(`${routeModal.replace(/ /g, '').toLowerCase()}Modal`));
                     userInteractions.changeRoute(ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].respawn, true);
                     openModal(document.getElementById(`${player.settings.currentRouteId.replace(/ /g, '').toLowerCase()}Modal`));
                 }
