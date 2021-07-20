@@ -953,7 +953,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         oakLab: function () {
-            if (player.events.oakParcelReceived === true) {
+            if (player.events.oakParcelReceived) {
                 openModal(document.getElementById('oaklabModal'));
                 closeModal(document.getElementById('pallettownnooakModal'));
             } else {
