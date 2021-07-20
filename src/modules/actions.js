@@ -1127,8 +1127,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             this.changeRoute('viridianCity');
         },
         route2BottomToRoute2Top: function () {
-            openModal(document.getElementById('kantoroute2topModal'));
-            closeModal(document.getElementById('kantoroute2bottomModal'));
+            if (player.events.kantoCut) {
+                openModal(document.getElementById('kantoroute2topModal'));
+                closeModal(document.getElementById('kantoroute2bottomModal'));
+            } else { alert('There is a small tree in the way. It can be removed by using CUT.'); }
         },
         route2BottomToKantoViridianForest: function () {
             openModal(document.getElementById('kantoviridianforestModal'));
@@ -1391,8 +1393,16 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('vermilioncityssanne1Modal'));
         },
         vermilionGym: function () {
-            closeModal(document.getElementById('vermilioncityModal'));
-            openModal(document.getElementById('vermiliongymModal'));
+            if (player.events.kantoCut) {
+                closeModal(document.getElementById('vermilioncityModal'));
+                openModal(document.getElementById('vermiliongymModal'));
+            } else { alert('There is a small tree blocking the way. It can be removed by using CUT'); }
+        },
+        vermilionGetCut: function () {
+            if (!player.events.kantoCut) {
+                alert('This is a temporary way to gain CUT until the CUT Master is implemented.');
+                player.events.kantoCut = true;
+            } else { alert('If you are still seeing this the dev team is being lazy :/'); }
         },
         celadonPokeMart: function () {
             closeModal(document.getElementById('celadoncityModal'));
@@ -1510,12 +1520,15 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         billEvent: function () {
             if (!player.events.billPressTheButton) {
-                alert('Hey kid! I am not a POKEMON, my name is Bill and I am a little stuck. Could you help me out? Press that button over there once I am in the machine. Thanks in advance.');
+                alert('Hey kid! I am not a POKEMON, my name is Bill and I am a little stuck. Could you help me out? Press the button on that computer over there. Once you do I will go into the machine. Thanks in advance.');
                 player.events.billPressTheButton = true;
             } else if (player.events.billPressTheButton && !player.events.billConverted) {
                 alert('Can you hurry up please?');
+            } else if (player.events.billConverted && !player.events.ssAnneTicket) {
+                alert('Thanks for helping me out. You would not believe how many people left me in that state. As a reward for being an awesome person, please accept this ticket to the S.S. Anne. I was invitied but it is not really my style.');
+                player.events.ssAnneTicket = true;
             } else {
-                alert('Pretty dope huh?');
+                alert('Have you been to see the S.S. Anne? If you have, check back with me after a later update as there is still more planned.');
             }
         },
         billsComputerKanto: function () {
