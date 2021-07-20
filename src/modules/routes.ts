@@ -246,8 +246,7 @@ const ROUTES: Routes = {
             modal: 'kantoRoute1',
             respawn: 'palletTown',
             _special: [
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate'] },
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Raticate'] },
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot'] },
             ],
         },
@@ -313,13 +312,9 @@ const ROUTES: Routes = {
             maxLevel: 6,
             respawn: 'viridianCity',
             _special: [
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Nidorina'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Nidorino'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Nidoking'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Nidoqueen'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Fearow'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Primeape'] },
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Nidorina', 'Nidorino', 'Raticate'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Fearow', 'Primeape'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Nidoking', 'Nidoqueen'] },
             ],
         },
         kroute2: {
@@ -330,16 +325,9 @@ const ROUTES: Routes = {
             modal: 'kantoRoute2Bottom',
             respawn: 'viridianCity',
             _special: [
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Nidorina'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Nidorino'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Kakuna'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Metapod'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Nidoking'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Nidoqueen'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Butterfree'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Beedrill'] },
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Nidorina', 'Nidorino', 'Raticate', 'Kakuna', 'Metapod', 'Pidgeotto'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Butterfree', 'Beedrill', 'Pidgeot'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Nidoking', 'Nidoqueen'] },
             ],
         },
         viridianForest: {
@@ -350,15 +338,10 @@ const ROUTES: Routes = {
             modal: 'kantoViridianForest',
             respawn: 'viridianCity',
             _special: [
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Gloom'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Kakuna'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Metapod'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raichu'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Vileplume'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Butterfree'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Beedrill'] },
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Gloom', 'Pidgeotto', 'Kakuna', 'Metapod'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot', 'Butterfree', 'Beedrill'] },
+                { requirement: { type: 'evoStone', evoStone: 'thunderStone' }, pokemon: ['Raichu'] },
+                { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Vileplume'] },
             ],
         },
         pewterCity: {
@@ -404,12 +387,9 @@ const ROUTES: Routes = {
                 },
             },
             _special: [
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto'] },
-                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Sandslash'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Fearow'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Wigglytuff'] },
-                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Primeape'] },
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate', 'Pidgeotto', 'Sandslash'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Fearow', 'Primeape'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Wigglytuff'] },
             ],
         },
         mtMoon: {
@@ -425,7 +405,9 @@ const ROUTES: Routes = {
                 },
             },
             _special: [
-                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Clefairy'] },
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Clefairy', 'Graveler'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Golbat', 'Parasect', 'Golem', 'Sandslash'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Clefable'] },
             ],
         },
         kroute4: {
@@ -440,6 +422,10 @@ const ROUTES: Routes = {
                     'Boulder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Fearow', 'Raticate'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Arbok', 'Sandslash', 'Primeape'] },
+            ],
         },
         ceruleanCity: {
             name: 'Cerulean City',
@@ -494,7 +480,7 @@ const ROUTES: Routes = {
         },
         kroute24: {
             name: 'Route 24',
-            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Pidgeotto', 'Oddish', 'Venonat', 'Abra', 'Bellsprout'],
+            pokes: ['Caterpie', 'Weedle', 'Pidgey', 'Oddish', 'Venonat', 'Abra', 'Bellsprout'],
             minLevel: 7,
             maxLevel: 14,
             modal: 'kantoRoute24',
@@ -504,10 +490,15 @@ const ROUTES: Routes = {
                     'Boulder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Kakuna', 'Metapod', 'Pidgeotto', 'Gloom', 'Kadabra', 'Weepinbell'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Beedrill', 'Butterfree', 'Pidgeot', 'Alakazam', 'Victreebel', 'Venomoth'] },
+                { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Vileplume'] },
+            ],
         },
         kroute25: {
             name: 'Route 25',
-            pokes: ['Caterpie', 'Metapod', 'Weedle', 'Kakuna', 'Pidgey', 'Pidgeotto', 'Oddish', 'Venonat', 'Abra', 'Bellsprout'],
+            pokes: ['Caterpie', 'Weedle', 'Pidgey', 'Oddish', 'Venonat', 'Abra', 'Bellsprout'],
             minLevel: 7,
             maxLevel: 14,
             modal: 'kantoRoute25',
@@ -517,6 +508,11 @@ const ROUTES: Routes = {
                     'Boulder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Kakuna', 'Metapod', 'Pidgeotto', 'Gloom', 'Kadabra', 'Weepinbell'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Beedrill', 'Butterfree', 'Pidgeot', 'Alakazam', 'Victreebel', 'Venomoth'] },
+                { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Vileplume'] },
+            ],
         },
         seasideCottage: {
             name: 'Seaside Cottage',
@@ -533,7 +529,7 @@ const ROUTES: Routes = {
         },
         kroute5: {
             name: 'Route 5',
-            pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Jigglypuff', 'Oddish', 'Meowth', 'Mankey', 'Abra', 'Bellsprout'],
+            pokes: ['Pidgey', 'Rattata', 'Jigglypuff', 'Oddish', 'Meowth', 'Mankey', 'Abra', 'Bellsprout'],
             minLevel: 10,
             maxLevel: 16,
             modal: 'kantoRoute5',
@@ -543,10 +539,15 @@ const ROUTES: Routes = {
                     'Cascade Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Gloom', 'Kadabra', 'Weepinbell', 'Persian'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot', 'Alakazam', 'Victreebel', 'Venomoth', 'Primeape'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Wigglytuff'] },
+            ],
         },
         kroute6: {
             name: 'Route 6',
-            pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Jigglypuff', 'Oddish', 'Meowth', 'Mankey', 'Abra', 'Bellsprout'],
+            pokes: ['Pidgey', 'Rattata', 'Jigglypuff', 'Oddish', 'Meowth', 'Mankey', 'Abra', 'Bellsprout'],
             minLevel: 10,
             maxLevel: 16,
             modal: 'kantoRoute6',
@@ -556,6 +557,11 @@ const ROUTES: Routes = {
                     'Cascade Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Gloom', 'Kadabra', 'Weepinbell', 'Persian'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot', 'Alakazam', 'Victreebel', 'Venomoth', 'Primeape'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Wigglytuff'] },
+            ],
         },
         vermilionCity: {
             name: 'Vermilion City',
@@ -627,7 +633,7 @@ const ROUTES: Routes = {
         },
         kroute11: {
             name: 'Route 11',
-            pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Spearow', 'Ekans', 'Sandshrew', 'Drowzee'],
+            pokes: ['Pidgey', 'Rattata', 'Spearow', 'Ekans', 'Sandshrew', 'Drowzee'],
             minLevel: 18,
             maxLevel: 25,
             modal: 'kantoRoute11',
@@ -637,10 +643,14 @@ const ROUTES: Routes = {
                     'Cascade Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Raticate', 'Fearow', 'Arbok'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot', 'Sandslash', 'Hypno'] },
+            ],
         },
         kroute9: {
             name: 'Route 9',
-            pokes: ['Rattata', 'Raticate', 'Spearow', 'Fearow', 'Ekans', 'Sandshrew', 'Nidoran F', 'Nidorina', 'Nidoran M', 'Nidorino'],
+            pokes: ['Rattata', 'Spearow', 'Ekans', 'Sandshrew', 'Nidoran F', 'Nidoran M'],
             minLevel: 9,
             maxLevel: 17,
             modal: 'kantoRoute9',
@@ -650,10 +660,15 @@ const ROUTES: Routes = {
                     'Thunder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate', 'Fearow', 'Arbok', 'Nidorina', 'Nidorino'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Sandslash', 'Hypno'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Nidoqueen', 'Nidoking'] },
+            ],
         },
         kroute10: {
             name: 'Route 10',
-            pokes: ['Rattata', 'Raticate', 'Spearow', 'Ekans', 'Sandshrew', 'Nidoran F', 'Nidoran M', 'Machop', 'Magnemite', 'Voltorb'],
+            pokes: ['Rattata', 'Spearow', 'Ekans', 'Sandshrew', 'Nidoran F', 'Nidoran M', 'Machop', 'Magnemite', 'Voltorb'],
             minLevel: 11,
             maxLevel: 17,
             modal: 'kantoRoute10',
@@ -663,6 +678,11 @@ const ROUTES: Routes = {
                     'Thunder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate', 'Fearow', 'Arbok', 'Nidorina', 'Nidorino', 'Machoke'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Sandslash', 'Machamp', 'Magneton', 'Electrode'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Nidoqueen', 'Nidoking'] },
+            ],
         },
         rockTunnel: {
             name: 'Rock Tunnel',
@@ -675,10 +695,14 @@ const ROUTES: Routes = {
                     'Thunder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Machoke', 'Graveler', 'Golbat'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Machamp', 'Golem'] },
+            ],
         },
         powerPlant: {
             name: 'Power Plant',
-            pokes: ['Pikachu', 'Raichu', 'Magnemite', 'Magneton', 'Grimer', 'Muk', 'Voltorb', 'Electrode', 'Electabuzz', 'Zapdos'],
+            pokes: ['Pikachu', 'Magnemite', 'Grimer', 'Voltorb', 'Zapdos'],
             minLevel: 20,
             maxLevel: 50,
             respawn: 'lavenderTown',
@@ -687,6 +711,11 @@ const ROUTES: Routes = {
                     'Soul Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Magneton', 'Muk', 'Electrode'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Electabuzz'] },
+                { requirement: { type: 'evoStone', evoStone: 'thunderStone' }, pokemon: ['Raichu'] },
+            ],
         },
         lavenderTown: {
             name: 'Lavender Town',
@@ -700,7 +729,7 @@ const ROUTES: Routes = {
         },
         pokemonTower: {
             name: 'Pokemon Tower',
-            pokes: ['Gastly', 'Haunter', 'Cubone'],
+            pokes: ['Gastly', 'Cubone'],
             minLevel: 13,
             maxLevel: 18,
             modal: 'lavenderPokeTower1',
@@ -710,10 +739,14 @@ const ROUTES: Routes = {
                     'Thunder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Haunter'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Marowak', 'Gengar'] },
+            ],
         },
         kroute8: {
             name: 'Route 8',
-            pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Ekans', 'Sandshrew', 'Vulpix', 'Jigglypuff', 'Meowth', 'Mankey', 'Growlithe', 'Abra', 'Kadabra'],
+            pokes: ['Pidgey', 'Rattata', 'Ekans', 'Sandshrew', 'Vulpix', 'Jigglypuff', 'Meowth', 'Mankey', 'Growlithe', 'Abra'],
             minLevel: 15,
             maxLevel: 20,
             modal: 'kantoRoute8',
@@ -723,10 +756,16 @@ const ROUTES: Routes = {
                     'Thunder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Raticate', 'Arbok', 'Kadabra'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Sandslash', 'Persian', 'Primeape', 'Alakazam'] },
+                { requirement: { type: 'evoStone', evoStone: 'fireStone' }, pokemon: ['Ninetales', 'Arcanine'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Wigglytuff'] },
+            ],
         },
         kroute7: {
             name: 'Route 7',
-            pokes: ['Pidgey', 'Pidgeotto', 'Rattata', 'Vulpix', 'Jigglypuff', 'Oddish', 'Meowth', 'Mankey', 'Growlithe', 'Abra', 'Bellsprout'],
+            pokes: ['Pidgey', 'Rattata', 'Vulpix', 'Jigglypuff', 'Oddish', 'Meowth', 'Mankey', 'Growlithe', 'Abra', 'Bellsprout'],
             minLevel: 18,
             maxLevel: 22,
             modal: 'kantoRoute7',
@@ -736,6 +775,13 @@ const ROUTES: Routes = {
                     'Thunder Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Raticate', 'Arbok', 'Kadabra', 'Gloom', 'Weepinbell'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Sandslash', 'Persian', 'Primeape', 'Alakazam', 'Victreebel'] },
+                { requirement: { type: 'evoStone', evoStone: 'fireStone' }, pokemon: ['Ninetales', 'Arcanine'] },
+                { requirement: { type: 'evoStone', evoStone: 'moonStone' }, pokemon: ['Wigglytuff'] },
+                { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Vileplume'] },
+            ],
         },
         celadonCity: {
             name: 'Celadon City',
@@ -852,7 +898,7 @@ const ROUTES: Routes = {
         },
         kroute16: {
             name: 'Route 16',
-            pokes: ['Rattata', 'Raticate', 'Spearow', 'Fearow', 'Doduo', 'Snorlax'],
+            pokes: ['Rattata', 'Spearow', 'Doduo'],
             minLevel: 18,
             maxLevel: 30,
             modal: 'kantoRoute16',
@@ -862,10 +908,14 @@ const ROUTES: Routes = {
                     'Rainbow Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate', 'Fearow'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Dodrio', 'Snorlax'] },
+            ],
         },
         kroute17: {
             name: 'Route 17',
-            pokes: ['Raticate', 'Spearow', 'Fearow', 'Ponyta', 'Doduo', 'Dodrio'],
+            pokes: ['Rattata', 'Spearow', 'Ponyta', 'Doduo'],
             minLevel: 20,
             maxLevel: 29,
             modal: 'kantoRoute17',
@@ -875,10 +925,15 @@ const ROUTES: Routes = {
                     'Rainbow Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate', 'Fearow', 'Electrode'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Dodrio'] },
+                { requirement: { type: 'evoStone', evoStone: 'fireStone' }, pokemon: ['Rapidash'] },
+            ],
         },
         kroute18: {
             name: 'Route 18',
-            pokes: ['Rattata', 'Raticate', 'Spearow', 'Fearow', 'Doduo'],
+            pokes: ['Rattata', 'Spearow', 'Doduo'],
             minLevel: 20,
             maxLevel: 29,
             modal: 'kantoRoute18',
@@ -888,6 +943,10 @@ const ROUTES: Routes = {
                     'Rainbow Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate', 'Fearow'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Dodrio'] },
+            ],
         },
         fuchsiaCity: {
             name: 'Fuchsia City',
@@ -955,7 +1014,7 @@ const ROUTES: Routes = {
         },
         kroute15: {
             name: 'Route 15',
-            pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Venomoth', 'Bellsprout', 'Weepinbell', 'Ditto'],
+            pokes: ['Pidgey', 'Oddish', 'Venonat', 'Bellsprout'],
             minLevel: 22,
             maxLevel: 30,
             modal: 'kantoRoute15',
@@ -965,10 +1024,15 @@ const ROUTES: Routes = {
                     'Soul Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Gloom', 'Weepinbell'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot', 'Venomoth', 'Ditto', 'Victreebel'] },
+                { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Vileplume'] },
+            ],
         },
         kroute14: {
             name: 'Route 14',
-            pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Venomoth', 'Bellsprout', 'Weepinbell', 'Ditto'],
+            pokes: ['Pidgey', 'Oddish', 'Venonat', 'Bellsprout'],
             minLevel: 23,
             maxLevel: 30,
             modal: 'kantoRoute14',
@@ -978,10 +1042,15 @@ const ROUTES: Routes = {
                     'Soul Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Gloom', 'Weepinbell'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot', 'Venomoth', 'Ditto', 'Victreebel'] },
+                { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Vileplume'] },
+            ],
         },
         kroute13: {
             name: 'Route 13',
-            pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Ditto', 'Farfetchd'],
+            pokes: ['Pidgey', 'Oddish', 'Venonat', 'Bellsprout'],
             minLevel: 22,
             maxLevel: 30,
             modal: 'kantoRoute13',
@@ -991,10 +1060,15 @@ const ROUTES: Routes = {
                     'Soul Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Gloom', 'Weepinbell', 'Farfetchd'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot', 'Venomoth', 'Ditto', 'Victreebel'] },
+                { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Vileplume'] },
+            ],
         },
         kroute12: {
             name: 'Route 12',
-            pokes: ['Pidgey', 'Pidgeotto', 'Oddish', 'Gloom', 'Venonat', 'Bellsprout', 'Weepinbell', 'Snorlax', 'Mr. Mime', 'Farfetchd'],
+            pokes: ['Pidgey', 'Oddish', 'Venonat', 'Bellsprout'],
             minLevel: 22,
             maxLevel: 30,
             modal: 'kantoRoute12',
@@ -1004,6 +1078,11 @@ const ROUTES: Routes = {
                     'Soul Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Pidgeotto', 'Gloom', 'Weepinbell', 'Farfetchd', 'Snorlax'] },
+                { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot', 'Venomoth', 'Ditto', 'Victreebel', 'Mr. Mime'] },
+                { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Vileplume'] },
+            ],
         },
         kroute19: {
             name: 'Route 19',
@@ -1017,6 +1096,9 @@ const ROUTES: Routes = {
                     'Soul Badge': true,
                 },
             },
+            _special: [
+                { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Tentacruel'] },
+            ],
         },
         seafoamIsland: {
             name: 'Seafoam Island',
