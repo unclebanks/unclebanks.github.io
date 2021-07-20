@@ -1389,8 +1389,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('vermilioncitypokecenterModal'));
         },
         vermilionSSANNE: function () {
-            closeModal(document.getElementById('vermilioncityModal'));
-            openModal(document.getElementById('vermilioncityssanne1Modal'));
+            if (player.events.ssAnneTicket) {
+                closeModal(document.getElementById('vermilioncityModal'));
+                openModal(document.getElementById('vermilioncityssanne1Modal'));
+            } else { alert('Sorry, but you do need a ticket to board.'); }
         },
         vermilionGym: function () {
             if (player.events.kantoCut) {
