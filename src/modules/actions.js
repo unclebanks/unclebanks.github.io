@@ -3,7 +3,7 @@ import ROUTES from './routes';
 // eslint-disable-next-line object-curly-newline
 import { $, camelCaseToString, isEmpty, pokeById, pokeByIndex, pokeByName } from './utilities';
 import ACHIEVEMENTS from './achievements';
-import { POKEDEXFLAGS, VITAMINS } from './data';
+import { POKEDEXFLAGS, VITAMINS, kantoTrainers } from './data';
 import { openModal, closeModal } from './modalEvents';
 import Poke from './poke';
 import POKEDEX from './db';
@@ -1081,12 +1081,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 alert('My grandpa Prof. Oak should be somewhere around Pallet Town waiting for his parcel to arrive.');
             } else if (player.events.oakParcelReceived && !player.events.oakParcelGiven) {
                 alert('You should go talk to my grandpa. He has something important to tell us and I am tired of waiting.');
-            } else if (player.events.oakParcelGiven && player.events.Squirtle === true) {
-                alert('There will be a trainer battle implemented here later on based on your choosing Squirtle');
-            } else if (player.events.oakParcelGiven && player.events.Charmander === true) {
-                alert('There will be a trainer battle implemented here later onbased on your choosing Charmander');
-            } else if (player.events.oakParcelGiven && player.events.Bulbasaur === true) {
-                alert('There will be a trainer battle implemented here later onbased on your choosing Bulbasaur');
+            } else if (player.events.oakParcelGiven) {
+                if (!player.events.garyPallet1) {
+                    alert('Hey, let\'s try out our new POKEMON?');
+                    closeModal($('#oaklabModal'));
+                    this.garyPallet1Battle();
+                } else { alert('I hate to admit it but that was a pretty good battle.'); }
             }
         },
         palletToRoute1: function () {
@@ -1730,6 +1730,42 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 combatLoop.unpause();
                 combatLoop.refresh();
             }
+        },
+        garyPallet1Battle: function () {
+            const gary = kantoTrainers.palletTown.trainers.gary1;
+            if (player.events.Squirtle) {
+                combatLoop.npc = {
+                    name: gary.Squirtle.name,
+                    event: gary.Squirtle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...gary.Squirtle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else if (player.events.Charmander === true) {
+                combatLoop.npc = {
+                    name: gary.Charmander.name,
+                    event: gary.Charmander.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...gary.Charmander.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else if (player.events.Bulbasaur === true) {
+                combatLoop.npc = {
+                    name: gary.Bulbasaur.name,
+                    event: gary.Bulbasaur.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...gary.Bulbasaur.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else if (player.events.Pikachu === true) {
+                combatLoop.npc = {
+                    name: gary.Pikachu.name,
+                    event: gary.Pikachu.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...gary.Pikachu.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('I hate to admit it but that was a pretty good battle.'); }
         },
         megaBeedrillQuest: function () {
             if ((player.typeStats.bugBeaten + player.typeStats.poisonBeaten >= 500) && (!player.events.megaBeedrillQuest)) {
