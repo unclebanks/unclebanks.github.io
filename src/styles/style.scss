@@ -13,12 +13,36 @@ html, body {
     background-color: rgb(58, 58, 58);
 }
 
+*::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgb(58, 58, 58);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+*::-webkit-scrollbar {
+	width: 6px;
+	height: 4px;
+	background-color: transparent;
+    border-radius: inherit;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: white;
+}
+
 .subtitle {
     color: white;
 }
 
 #gameContainer > div {
-    border: 1px solid black;
+    border: 6px solid black;
+    border-radius: 30px;
 }
 
 #gameContainer > div > div {
@@ -37,7 +61,7 @@ ul {
 #listBox {
     grid-column: 1;
     grid-row: 1 / 3;
-    max-height: 600px;
+    max-height: 70vh;
     overflow: auto;
     float: left;
     text-align: left;
@@ -58,11 +82,69 @@ ul {
 #routesBox {
     grid-column: 4;
     grid-row: 1 / 4;
-    max-height: 750px;
+    max-height: 100vh;
     overflow: auto;
     float: left;
     text-align: left;
 }
+#menu {
+    max-height: 100vh;
+    width: 200px;
+    position: fixed;
+    z-index: 20000;
+    top: 0;
+    right: -250px;
+    overflow-x: hidden;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    transition: 0.5s;
+    background: inherit;
+    background-color: skyblue;
+    border-radius: 0 0 20px 0;
+
+    a {
+      text-decoration: none;
+    }
+
+    span {
+        font-size: xx-large;
+        text-align: justify;
+    }
+
+    #closeMenu {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      color: white;
+    }
+  }
+
+  #openMenu {
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    background-color: grey;
+    padding: 2px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  @media screen and (max-height: 450px) {
+    #menu {
+      padding-top: 15px;
+    }
+
+    #menu a {
+      font-size: 18px;
+    }
+  }
 
 .roamerIcon {
     margin-left: 3px;
@@ -152,12 +234,42 @@ ul {
     grid-row-end: 4;
     padding: 5px;
     font-size: medium;
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    background-color: rgb(58, 58, 58);
+}
+#regionSelect {
+    grid-row: 2;
 }
 
-#invBox p {
-    margin: 5px;
+#playerItems {
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-template-rows: 20% 40% 40%;
+    grid-row: 1;
+    background-color: rgb(58, 58, 58);
 }
-
+#playerPokeBalls {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-row: 2;
+    background-color: rgb(58, 58, 58);
+}
+#playerPokeBalls img {
+    height: 40%;
+    width: 50%;
+}
+#playerCurrencyAmounts {
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-row: 3;
+    background-color: rgb(58, 58, 58);
+}
+#playerCurrencyAmounts img {
+    height: 40%;
+    width: 50%;
+}
 #pokeCoinsPic {
     padding-left: 20px;
 }
@@ -417,7 +529,26 @@ progress.expBar {
 #saveLoadButtons {
     margin-bottom: 7px;
 }
-
+.pokeballImage {
+    background-image: url('../assets/images/pokeballs/pokeball.png');
+    min-width: 20px;
+    min-height: 20px;
+}
+.greatballImage {
+    background-image: url('../assets/images/pokeballs/greatball.png');
+    min-width: 20px;
+    min-height: 20px;
+}
+.ultraballImage {
+    background-image: url('../assets/images/pokeballs/ultraball.png');
+    min-width: 20px;
+    min-height: 20px;
+}
+.masterballImage {
+    background-image: url('../assets/images/pokeballs/masterball.png');
+    min-width: 20px;
+    min-height: 20px;
+}
 #boulderBadge {
     background-image: url('../assets/images/badges/Boulder\ Badge.png');
     margin-top: 7px;

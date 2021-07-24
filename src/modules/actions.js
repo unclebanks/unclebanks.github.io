@@ -336,6 +336,16 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             document.execCommand('copy');
             window.getSelection().removeAllRanges();
         },
+        openMenu: function () {
+            document.getElementById('menu').style.right = '0px';
+            document.getElementById('openMenu').style.display = 'none';
+            document.getElementById('closeMenu').style.display = 'block';
+        },
+        closeMenu: function () {
+            document.getElementById('menu').style.right = '-250px';
+            document.getElementById('closeMenu').style.display = 'none';
+            document.getElementById('openMenu').style.display = 'block';
+        },
         changeSpriteChoice: function () {
             if (document.getElementById('spriteChoiceFront').checked) {
                 player.settings.spriteChoice = 'front';
