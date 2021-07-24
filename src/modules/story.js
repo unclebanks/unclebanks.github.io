@@ -20,11 +20,17 @@ export default (player, enemy, combatLoop, Poke) => {
             firstPoke: function () {
                 const title = 'NoNamePokemonGame';
                 let storyHTML = '<p>Hello there! Welcome to the world of NoNamePokemonGame</p>';
-                storyHTML += '<p>My name is OAK! People call me the POKEMON PROF!</p>';
-                storyHTML += '<p>This world is inhabited by creatures called POKEMON!</p>';
-                storyHTML += '<p>For some people POKEMON are pets. Others use them for fights.</p>';
-                storyHTML += '<p>Myself... I study POKEMON as a profession and would like to as you for help.</p>';
-                storyHTML += '<p>Your very own POKEMON adventure is about to unfold. Please select one of these POKEMON to begin your journey.</p>';
+                storyHTML += '<p>This game is a bit different than traditional POKEMON games.</p>';
+                storyHTML += '<p>NNPG encompasses two forms of gameplay, Idle and Engaged.</p>';
+                storyHTML += '<p>The only requirements to progress are the GYM badges.</p>';
+                storyHTML += '<p>For people that prefer Idle gameplay</p>';
+                storyHTML += '<p>, click on the routes lists and disregard the modals aside from GYM battles.</p>';
+                storyHTML += '<p>For people that like Engaged gameplay, there are various things to keep in mind.</p>';
+                storyHTML += '<p>The most important of these is to click whatever is possible.</p>';
+                storyHTML += '<p>Keep in mind that both the order that things are clicked in as well as what has been previously clicked are taken into account.</p>';
+                storyHTML += '<p>Throughout the engaged aspect of the gameplay there will be various side battles and quests accessible through the maps.</p>';
+                storyHTML += '<p>I hope that you enjoy playing NoNamePokemonGame, if you would like to join the community our discord is located at https://discord.gg/9WbZkm7yKx.</p>';
+                storyHTML += '<p>For now, click a POKEMON below to get started.</p>';
                 storyHTML += `<p><img src="${Story.helpers.getPokeImg(1)}" onclick="story.helpers.selectFirstPoke(1)">`;
                 storyHTML += `<img src="${Story.helpers.getPokeImg(5)}" onclick="story.helpers.selectFirstPoke(5)">`;
                 storyHTML += `<img src="${Story.helpers.getPokeImg(10)}" onclick="story.helpers.selectFirstPoke(10)">`;
