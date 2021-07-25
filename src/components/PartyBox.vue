@@ -13,30 +13,9 @@
       </p>
       <p>
         <button
-          onclick="userInteractions.viewPokeDex()"
-        >
-          Pokedex
-        </button>
-      </p>
-      <p>
-        <button
-          onclick="userInteractions.viewBag()"
-        >
-          Bag
-        </button>
-      </p>
-      <p>
-        <button
           onclick="userInteractions.viewMap()"
         >
           Map
-        </button>
-      </p>
-      <p>
-        <button
-          onclick="userInteractions.viewRanch()"
-        >
-          PokeRanch
         </button>
       </p>
       <input

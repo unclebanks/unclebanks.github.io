@@ -38,6 +38,44 @@ export const BALLRNG: Record<string, number> = {
     masterball: 100,
 };
 
+export const kantoTrainers = {
+    palletTown: {
+        trainers: {
+            gary1: {
+                Squirtle: {
+                    name: 'Gary',
+                    poke: [
+                        ['Bulbasaur', 5],
+                    ],
+                    win: 'garyPallet1',
+                },
+                Charmander: {
+                    name: 'Gary',
+                    poke: [
+                        ['Squirtle', 5],
+                    ],
+                    win: 'garyPallet1',
+                },
+                Bulbasaur: {
+                    name: 'Gary',
+                    poke: [
+                        ['Charmander', 5],
+                    ],
+                    win: 'garyPallet1',
+                },
+                Pikachu: {
+                    name: 'Gary',
+                    poke: [
+                        ['Eevee', 5],
+                    ],
+                    win: 'garyPallet1',
+                },
+
+            },
+        },
+    },
+};
+
 export const PokemonTypes = [
     'Normal',
     'Fighting',

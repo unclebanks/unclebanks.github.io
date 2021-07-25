@@ -1,5 +1,38 @@
 <template>
   <div id="routesBox">
     <ul id="routeList" />
+    <a
+      id="openMenu"
+      onclick="userInteractions.openMenu()"
+    >MENU</a>
+    <div
+      id="menu"
+      class="px-2"
+    >
+      <a
+        id="closeMenu"
+        onclick="userInteractions.closeMenu()"
+      >&times;</a>
+      <span>Menu</span><br>
+      <hr>
+      <button
+        class="button"
+        onclick="userInteractions.viewPokeDex()"
+      >
+        Pokedex
+      </button>
+      <button
+        class="button"
+        onclick="userInteractions.viewSettings()"
+      >
+        Settings
+      </button><br>
+      <button
+        class="button"
+        onclick="userInteractions.viewBag()"
+      >
+        Bag
+      </button>
+    </div>
   </div>
 </template>
