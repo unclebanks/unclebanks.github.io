@@ -1073,7 +1073,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else if (!player.events.oakParcelReceived) {
                 alert('I wonder where my parcel from Viridian City could be. . .');
             } else if (player.countPokedex(5) > 40 && !player.unlocked.kantoFirstStagePass) {
-                alert('Great job on catching the Kanto region starters. Take this Pass to unlock deeper areas previously inaccessible.');
+                alert('Great job on registering 40 POKEDEX entries. Take this Pass to unlock deeper areas previously inaccessible.');
                 player.unlocked.kantoFirstStagePass = true;
                 dom.renderRouteList();
             } else if (!player.unlocked.kantoFirstStagePass) {

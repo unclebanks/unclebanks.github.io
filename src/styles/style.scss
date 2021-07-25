@@ -61,7 +61,7 @@ ul {
 #listBox {
     grid-column: 1;
     grid-row: 1 / 3;
-    max-height: 70vh;
+    max-height: 75vh;
     overflow: auto;
     float: left;
     text-align: left;
@@ -236,7 +236,7 @@ ul {
     font-size: medium;
     font-family: 'Lato', sans-serif;
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 60% 40%;
     background-color: rgb(58, 58, 58);
 }
 #regionSelect {
@@ -257,7 +257,7 @@ ul {
     background-color: rgb(58, 58, 58);
 }
 #playerPokeBalls img {
-    height: 40%;
+    height: 50%;
     width: 50%;
 }
 #playerCurrencyAmounts {
@@ -267,8 +267,8 @@ ul {
     background-color: rgb(58, 58, 58);
 }
 #playerCurrencyAmounts img {
-    height: 40%;
-    width: 50%;
+    height: 50%;
+    width: 45%;
 }
 #pokeCoinsPic {
     padding-left: 20px;
