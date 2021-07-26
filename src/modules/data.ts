@@ -74,6 +74,21 @@ export const kantoTrainers = {
             },
         },
     },
+    kantoViridianForest: {
+        trainers: {
+            rick1: {
+                firstBattle: {
+                    name: 'Bug Trainer Rick',
+                    poke: [
+                        ['Mewtwo', 6],
+                        ['Weedle', 6],
+                    ],
+                    win: 'bugTrainerRick1',
+                },
+
+            },
+        },
+    },
 };
 
 export const PokemonTypes = [

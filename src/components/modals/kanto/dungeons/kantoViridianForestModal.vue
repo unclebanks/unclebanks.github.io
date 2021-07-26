@@ -14,13 +14,18 @@
       >
         <area
           shape="rect"
-          coords="193,492,280,552"
+          coords="286,726,416,818"
           onclick="userInteractions.kantoViridianForestToRoute2Bottom()"
         >
         <area
           shape="rect"
-          coords="0,0,86,96"
+          coords="0,0,128,149"
           onclick="userInteractions.kantoViridianForestToRoute2Top()"
+        >
+        <area
+          shape="rect"
+          coords="541,509,593,570"
+          onclick="userInteractions.kantoViridianForestTrainer1()"
         >
       </map>
     </template>

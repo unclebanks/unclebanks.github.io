@@ -1246,6 +1246,21 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 openModal(document.getElementById('viridiangymModal'));
             }
         },
+        kantoViridianForestTrainer1: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.rick1;
+            combatLoop.stop();
+            alert('You\'re a POKEMON TRAINER right? So am I, Let\'s battle!');
+            closeModal(document.getElementById('kantoviridianforestModal'));
+            if (!player.events.bugTrainerRick1) {
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('I hate to admit it but that was a pretty good battle.'); }
+        },
         pewterToRoute2Top: function () {
             openModal(document.getElementById('kantoroute2topModal'));
             closeModal(document.getElementById('pewtercityModal'));

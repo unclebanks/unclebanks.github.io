@@ -14,12 +14,12 @@
       >
         <area
           shape="rect"
-          coords="191,580,227,640"
+          coords="320,935,377,1067"
           onclick="userInteractions.route1ToPallet()"
         >
         <area
           shape="rect"
-          coords="161,0,225,27"
+          coords="269,0,374,83"
           onclick="userInteractions.route1ToViridian()"
         >
       </map>

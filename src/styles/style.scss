@@ -1128,8 +1128,9 @@ progress.expBar {
 #kantoRoute1ModalBox {
     background-image: url('../assets/backgrounds/kanto/routes/kantoRoute1.png');
     background-size: contain;
-    height: 640px;
-    width: 384px;
+    background-repeat: no-repeat;
+    height: 1067px;
+    width: 640px;
 }
 #kantoRoute22ModalBox {
     background-image: url('../assets/backgrounds/kanto/routes/kantoRoute22.png');
@@ -1147,12 +1148,14 @@ progress.expBar {
 #kantoRoute2BottomModalBox {
     background-image: url('../assets/backgrounds/kanto/routes/kantoRoute2Bottom.png');
     background-size: contain;
-    height: 566px;
-    width: 384px;
+    background-repeat: no-repeat;
+    height: 943px;
+    width: 640px;
 }
 #kantoRoute2TopModalBox {
     background-image: url('../assets/backgrounds/kanto/routes/kantoRoute2Top.png');
     background-size: contain;
+    background-repeat: no-repeat;
     height: 679px;
     width: 384px;
 }
@@ -1205,9 +1208,10 @@ progress.expBar {
 }
 #kantoViridianForestModalBox {
     background-image: url('../assets/backgrounds/kanto/dungeons/viridianForest/viridianForest.png');
-    background-size: contain;
-    height: 552px;
-    width: 432px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 818px;
+    width: 640px;
 }
 #seafoamIslandsEntranceModalBox {
     background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/kantoSeafoamIslandsEntrance.png');

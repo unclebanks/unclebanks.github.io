@@ -196,7 +196,7 @@ export default (player, enemy) => {
                         }
                     }
                     Combat.npc = null;
-                    Combat.pause();
+                    Combat.init();
                     return false;
                 }
             }

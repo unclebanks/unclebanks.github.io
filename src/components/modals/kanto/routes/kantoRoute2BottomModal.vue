@@ -14,17 +14,17 @@
       >
         <area
           shape="rect"
-          coords="111,516,195,566"
+          coords="187,814,323,943"
           onclick="userInteractions.route2BottomToViridian()"
         >
         <area
           shape="rect"
-          coords="257,0,352,43"
+          coords="426,0,590,90"
           onclick="userInteractions.route2BottomToRoute2Top()"
         >
         <area
           shape="rect"
-          coords="32,7,158,119"
+          coords="52,8,266,217"
           onclick="userInteractions.route2BottomToKantoViridianForest()"
         >
       </map>
