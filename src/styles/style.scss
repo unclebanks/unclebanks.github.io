@@ -770,10 +770,6 @@ progress.expBar {
     width: 400px;
 }
 
-#pewterGymModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
 #pewterPokeCenterModalBox {
     background-image: url('../assets/backgrounds/kanto/pewterCity/pewterPokeCenter.png');
     background-size: cover;
@@ -798,6 +794,14 @@ progress.expBar {
     background-image: url('../assets/backgrounds/kanto/ceruleanCity/ceruleanCity.png');
     background-size: cover;
     height: 533px;
+    width: 640px;
+}
+
+#ceruleanGymModalBox {
+    background-image: url('../assets/backgrounds/kanto/ceruleanCity/ceruleanGym.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 753px;
     width: 640px;
 }
 
@@ -1056,6 +1060,46 @@ progress.expBar {
     background-image: url('../assets/backgrounds/kanto/fuchsiaCity/fuchsiaCity.png');
     background-size: cover;
     height: 533px;
+    width: 640px;
+}
+
+#kantoSafariZoneEntranceModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneEntrance.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 576px;
+    width: 576px;
+}
+
+#kantoSafariZoneFirstMapModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneFirstMap.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 452px;
+    width: 640px;
+}
+
+#kantoSafariZoneLeftModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneLeft.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 640px;
+}
+
+#kantoSafariZoneRightModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneRight.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 415px;
+    width: 640px;
+}
+
+#kantoSafariZoneTopModalBox {
+    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneTop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 449px;
     width: 640px;
 }
 

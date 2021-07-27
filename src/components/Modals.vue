@@ -64,6 +64,11 @@
   <celadoncityPokeMartModal />
   <celadoncityPokeCenterModal />
   <celadonGymModal />
+  <safariZoneEntranceModal />
+  <safariZoneFirstMapModal />
+  <safariZoneLeftModal />
+  <safariZoneRightModal />
+  <safariZoneTopModal />
   <fuchsiaCityModal />
   <fuchsiacityPokeMartModal />
   <fuchsiacityPokeCenterModal />
@@ -183,6 +188,11 @@ import celadonCityModal from './modals/kanto/towns/celadonCity/celadonCityModal'
 import celadoncityPokeMartModal from './modals/kanto/towns/celadonCity/celadonPokeMartModal';
 import celadoncityPokeCenterModal from './modals/kanto/towns/celadonCity/celadonPokeCenterModal';
 import celadonGymModal from './modals/kanto/towns/celadonCity/celadonGymModal';
+import safariZoneEntranceModal from './modals/kanto/dungeons/safariZone/safariZoneEntranceModal';
+import safariZoneFirstMapModal from './modals/kanto/dungeons/safariZone/safariZoneFirstMapModal';
+import safariZoneLeftModal from './modals/kanto/dungeons/safariZone/safariZoneLeftModal';
+import safariZoneRightModal from './modals/kanto/dungeons/safariZone/safariZoneRightModal';
+import safariZoneTopModal from './modals/kanto/dungeons/safariZone/safariZoneTopModal';
 import fuchsiaCityModal from './modals/kanto/towns/fuchsiaCity/fuchsiaCityModal';
 import fuchsiacityPokeMartModal from './modals/kanto/towns/fuchsiaCity/fuchsiaPokeMartModal';
 import fuchsiacityPokeCenterModal from './modals/kanto/towns/fuchsiaCity/fuchsiaPokeCenterModal';
@@ -301,6 +311,11 @@ export default {
         celadoncityPokeMartModal,
         celadoncityPokeCenterModal,
         celadonGymModal,
+        safariZoneEntranceModal,
+        safariZoneFirstMapModal,
+        safariZoneLeftModal,
+        safariZoneRightModal,
+        safariZoneTopModal,
         fuchsiaCityModal,
         fuchsiacityPokeMartModal,
         fuchsiacityPokeCenterModal,

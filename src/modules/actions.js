@@ -1099,6 +1099,24 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 } else { alert('I hate to admit it but that was a pretty good battle.'); }
             }
         },
+        palletChubbyNPC: function () {
+            alert('Technology is incredible! You can now store and recall items and POKéMON as data via PC');
+        },
+        palletFemaleNPC: function () {
+            if (player.events.palletFemaleNPC1 === true) {
+                if (player.events.palletFemaleNPC2 === true) {
+                    alert('I\'m raising POKéMON, too. When they get strong, they can protect me.');
+                    player.events.palletFemaleNPC2 = false;
+                    player.events.palletFemaleNPC1 = false;
+                } else {
+                    alert('Signs are useful, aren\'t they?');
+                    player.events.palletFemaleNPC2 = true;
+                }
+            } else {
+                alert('Look, look! I copied what it said on one of those TRAINER TIPS signs! It said the menu button contains many different things.');
+                player.events.palletFemaleNPC1 = true;
+            }
+        },
         palletToRoute1: function () {
             if (player.events.oakParcelReceived) {
                 openModal(document.getElementById('kantoroute1Modal'));
@@ -1393,6 +1411,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('ceruleancityModal'));
             openModal(document.getElementById('ceruleangymModal'));
         },
+        exitCeruleanGym: function () {
+            closeModal(document.getElementById('ceruleangymModal'));
+            openModal(document.getElementById('ceruleancityModal'));
+        },
         billsHouse: function () {
             if (!player.events.billPressTheButton) {
                 closeModal(document.getElementById('seasidecottageModal'));
@@ -1442,6 +1464,62 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         celadonGym: function () {
             closeModal(document.getElementById('celadoncityModal'));
             openModal(document.getElementById('celadongymModal'));
+        },
+        fuchsiaToSafariEntrance: function () {
+            closeModal(document.getElementById('fuchsiacityModal'));
+            openModal(document.getElementById('kantosafarizoneentranceModal'));
+        },
+        safariEntranceToFuchsia: function () {
+            closeModal(document.getElementById('kantosafarizoneentranceModal'));
+            openModal(document.getElementById('fuchsiacityModal'));
+        },
+        safariEntranceToFirstMap: function () {
+            closeModal(document.getElementById('kantosafarizoneentranceModal'));
+            openModal(document.getElementById('kantosafarizonefirstmapModal'));
+        },
+        firstMapToSafariEntrance: function () {
+            closeModal(document.getElementById('kantosafarizonefirstmapModal'));
+            openModal(document.getElementById('kantosafarizoneentranceModal'));
+        },
+        firstMapToSafariTop: function () {
+            closeModal(document.getElementById('kantosafarizonefirstmapModal'));
+            openModal(document.getElementById('kantosafarizonetopModal'));
+        },
+        safariTopToFirstMap: function () {
+            closeModal(document.getElementById('kantosafarizonetopModal'));
+            openModal(document.getElementById('kantosafarizonefirstmapModal'));
+        },
+        safariTopToLeft: function () {
+            closeModal(document.getElementById('kantosafarizonetopModal'));
+            openModal(document.getElementById('kantosafarizoneleftModal'));
+        },
+        safariTopToRight: function () {
+            closeModal(document.getElementById('kantosafarizonetopModal'));
+            openModal(document.getElementById('kantosafarizonerightModal'));
+        },
+        firstMapToSafariLeft: function () {
+            closeModal(document.getElementById('kantosafarizonefirstmapModal'));
+            openModal(document.getElementById('kantosafarizoneleftModal'));
+        },
+        safariLeftToFirstMap: function () {
+            closeModal(document.getElementById('kantosafarizoneleftModal'));
+            openModal(document.getElementById('kantosafarizonefirstmapModal'));
+        },
+        safariLeftToTop: function () {
+            closeModal(document.getElementById('kantosafarizoneleftModal'));
+            openModal(document.getElementById('kantosafarizonetopModal'));
+        },
+        firstMapToSafariRight: function () {
+            closeModal(document.getElementById('kantosafarizonefirstmapModal'));
+            openModal(document.getElementById('kantosafarizonerightModal'));
+        },
+        safariRightToFirstMap: function () {
+            closeModal(document.getElementById('kantosafarizonerightModal'));
+            openModal(document.getElementById('kantosafarizonefirstmapModal'));
+        },
+        safariRightToTop: function () {
+            closeModal(document.getElementById('kantosafarizonerightModal'));
+            openModal(document.getElementById('kantosafarizonetopModal'));
         },
         fuchsiaPokeMart: function () {
             closeModal(document.getElementById('fuchsiacityModal'));

@@ -4,31 +4,40 @@
     title="Cerulean Gym"
   >
     <template #body>
-      <div
+      <img
         id="ceruleanGymModalBox"
+        usemap="#ceruleanGymMap"
       >
-        <button
-          id="gymTrainer1"
+
+      <map
+        name="ceruleanGymMap"
+      >
+        <area
+          shape="rect"
+          coords="375,443,420,493"
           onclick="userInteractions.gymTrainer1Battle()"
-          class="button"
         >
-          Swimmer
-        </button><br>
-        <button
-          id="gymTrainer2"
+        <area
+          shape="rect"
+          coords="146,247,192,311"
           onclick="userInteractions.gymTrainer2Battle()"
-          class="button"
         >
-          Jr. Trainer
-        </button><br>
-        <button
-          id="gymLeader"
+        <area
+          shape="rect"
+          coords="294,208,347,287"
           onclick="userInteractions.gymLeaderBattle()"
-          class="button"
         >
-          Misty
-        </button><br>
-      </div>
+        <area
+          shape="rect"
+          coords="261,581,304,645"
+          onclick="userInteractions.ceruleanGymRef()"
+        >
+        <area
+          shape="rect"
+          coords="287,680,367,753"
+          onclick="userInteractions.exitCeruleanGym()"
+        >
+      </map>
     </template>
   </CardModal>
 </template>
