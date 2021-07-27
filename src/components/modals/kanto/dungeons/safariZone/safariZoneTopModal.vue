@@ -14,8 +14,23 @@
       >
         <area
           shape="rect"
-          coords="0,0,0,0"
-          onclick="userInteractions.safariEntranceToFirstMap()"
+          coords="322,378,373,449"
+          onclick="userInteractions.safariTopToFirstMap()"
+        >
+        <area
+          shape="rect"
+          coords="103,381,260,449"
+          onclick="userInteractions.safariTopToLeft()"
+        >
+        <area
+          shape="rect"
+          coords="538,338,640,383"
+          onclick="userInteractions.safariTopToRight()"
+        >
+        <area
+          shape="rect"
+          coords="471,61,530,114"
+          onclick="userInteractions.safariTopHouse()"
         >
       </map>
     </template>

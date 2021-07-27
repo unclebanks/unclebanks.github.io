@@ -1225,7 +1225,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             alert('I need a purpose');
         },
         viridianNurseJoy: function () {
-            alert('I need a purpose');
+            alert('Thank you for visiting the Viridian City Pokemon Center. I\'ll heal your Pokemon in one moment.');
+            dom.renderHeal();
         },
         viridianDrunkard: function () {
             if (!player.events.oakParcelReceived) {
@@ -1473,13 +1474,21 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('kantosafarizoneentranceModal'));
             openModal(document.getElementById('fuchsiacityModal'));
         },
+        safariZoneLeftClerk: function () {
+            alert('Now that the Safari Zone is free my job is to mainly wait until everyone has left and clean up.');
+        },
+        safariZoneRightClerk: function () {
+            alert('Enjoy your time in the Safari Zone, make sure to search high and low.');
+        },
         safariEntranceToFirstMap: function () {
             closeModal(document.getElementById('kantosafarizoneentranceModal'));
             openModal(document.getElementById('kantosafarizonefirstmapModal'));
+            this.changeRoute('safariZone');
         },
         firstMapToSafariEntrance: function () {
             closeModal(document.getElementById('kantosafarizonefirstmapModal'));
             openModal(document.getElementById('kantosafarizoneentranceModal'));
+            this.changeRoute('fuchsiaCity');
         },
         firstMapToSafariTop: function () {
             closeModal(document.getElementById('kantosafarizonefirstmapModal'));
@@ -1508,6 +1517,22 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         safariLeftToTop: function () {
             closeModal(document.getElementById('kantosafarizoneleftModal'));
             openModal(document.getElementById('kantosafarizonetopModal'));
+        },
+        kantoSafariPrizeHouse: function () {
+            closeModal(document.getElementById('kantosafarizoneleftModal'));
+            openModal(document.getElementById('kantosafariprizehouseModal'));
+        },
+        kantoSafariPrizeHouseToLeft: function () {
+            closeModal(document.getElementById('kantosafariprizehouseModal'));
+            openModal(document.getElementById('kantosafarizoneleftModal'));
+        },
+        kantoSafariLeftHouse: function () {
+            closeModal(document.getElementById('kantosafarizoneleftModal'));
+            openModal(document.getElementById('kantosafarilefthouseModal'));
+        },
+        kantoSafariLeftHouseToLeftMap: function () {
+            closeModal(document.getElementById('kantosafarilefthouseModal'));
+            openModal(document.getElementById('kantosafarizoneleftModal'));
         },
         firstMapToSafariRight: function () {
             closeModal(document.getElementById('kantosafarizonefirstmapModal'));

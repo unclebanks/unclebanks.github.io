@@ -30,7 +30,7 @@
         <area
           shape="rect"
           coords="234,458,350,576"
-          onclick="userInteractions.safariZoneToFuchsia()"
+          onclick="userInteractions.safariEntranceToFuchsia()"
         >
       </map>
     </template>
