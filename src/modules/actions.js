@@ -1268,9 +1268,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         kantoViridianForestTrainer1: function () {
             const t1 = kantoTrainers.kantoViridianForest.trainers.rick1;
             combatLoop.stop();
-            alert('You\'re a POKEMON TRAINER right? So am I, Let\'s battle!');
-            closeModal(document.getElementById('kantoviridianforestModal'));
             if (!player.events.bugTrainerRick1) {
+                alert('You\'re a POKEMON TRAINER right? So am I, Let\'s battle!');
+                closeModal(document.getElementById('kantoviridianforestModal'));
                 combatLoop.npc = {
                     name: t1.firstBattle.name,
                     event: t1.firstBattle.win,
@@ -1279,6 +1279,66 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 combatLoop.unpause();
                 combatLoop.refresh();
             } else { alert('I hate to admit it but that was a pretty good battle.'); }
+        },
+        kantoViridianForestTrainer2: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.doug1;
+            combatLoop.stop();
+            if (!player.events.bugTrainerDoug1) {
+                alert('Yo! You can\'t jam out if you\'re a POKéMON TRAINER!');
+                closeModal(document.getElementById('kantoviridianforestModal'));
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('Huh? I ran out of POKéMON!'); }
+        },
+        kantoViridianForestTrainer3: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.anthony1;
+            combatLoop.stop();
+            if (!player.events.bugTrainerAnthony1) {
+                alert('I might be little, but I won\'t like it if you go easy on me!');
+                closeModal(document.getElementById('kantoviridianforestModal'));
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('Oh, boo. Nothing went right.'); }
+        },
+        kantoViridianForestTrainer4: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.charlie1;
+            combatLoop.stop();
+            if (!player.events.bugTrainerCharlie1) {
+                alert('BUG POKéMON evolve quickly. They\'re a lot of fun!');
+                closeModal(document.getElementById('kantoviridianforestModal'));
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('Did you know that POKéMON evolve?'); }
+        },
+        kantoViridianForestTrainer5: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.sammy1;
+            combatLoop.stop();
+            if (!player.events.bugTrainerSammy1) {
+                alert('Sometimes, you can find stuff on the ground. I\'m looking for the stuff I dropped. Can you help me?');
+                closeModal(document.getElementById('kantoviridianforestModal'));
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('I give! You\'re good at this.'); }
         },
         pewterToRoute2Top: function () {
             openModal(document.getElementById('kantoroute2topModal'));

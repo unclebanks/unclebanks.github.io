@@ -195,6 +195,7 @@ export default (player, enemy) => {
                             dom.renderRouteList();
                         }
                     }
+                    notify('Congratulations! You\'ve won the trainer battle!');
                     Combat.npc = null;
                     Combat.init();
                     return false;
