@@ -15,7 +15,7 @@
         <area
           shape="rect"
           coords="293,0,374,81"
-          onclick="userInteractions.justTestStuff()"
+          onclick="userInteractions.fuchsiaToSafariEntrance()"
         >
         <area
           shape="rect"

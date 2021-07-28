@@ -168,6 +168,7 @@ interface Route {
     // may want to define all town names before this for stronger typing
     respawn: string,
     modal?: string,
+    npc?: NPC,
     _unlock?: UnlockData,
     _special?: SpecialPokemon[],
 
@@ -337,6 +338,14 @@ const ROUTES: Routes = {
             maxLevel: 6,
             modal: 'kantoViridianForest',
             respawn: 'viridianCity',
+            npc: {
+                name: 'Bug Catcher Rick',
+                event: 'kvForestTrainer1',
+                poke: [
+                    ['Caterpie', 6],
+                    ['Weedle', 6],
+                ],
+            },
             _special: [
                 { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Gloom', 'Pidgeotto', 'Kakuna', 'Metapod'] },
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Pidgeot', 'Butterfree', 'Beedrill'] },

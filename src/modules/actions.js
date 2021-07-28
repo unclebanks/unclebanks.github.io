@@ -963,7 +963,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
         },
         oakLab: function () {
-            if (player.events.oakParcelReceived) {
+            if (player.events.oakParcelReceived === true) {
                 openModal(document.getElementById('oaklabModal'));
                 closeModal(document.getElementById('pallettownnooakModal'));
             } else {
@@ -1099,6 +1099,24 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 } else { alert('I hate to admit it but that was a pretty good battle.'); }
             }
         },
+        palletChubbyNPC: function () {
+            alert('Technology is incredible! You can now store and recall items and POKéMON as data via PC');
+        },
+        palletFemaleNPC: function () {
+            if (player.events.palletFemaleNPC1 === true) {
+                if (player.events.palletFemaleNPC2 === true) {
+                    alert('I\'m raising POKéMON, too. When they get strong, they can protect me.');
+                    player.events.palletFemaleNPC2 = false;
+                    player.events.palletFemaleNPC1 = false;
+                } else {
+                    alert('Signs are useful, aren\'t they?');
+                    player.events.palletFemaleNPC2 = true;
+                }
+            } else {
+                alert('Look, look! I copied what it said on one of those TRAINER TIPS signs! It said the menu button contains many different things.');
+                player.events.palletFemaleNPC1 = true;
+            }
+        },
         palletToRoute1: function () {
             if (player.events.oakParcelReceived) {
                 openModal(document.getElementById('kantoroute1Modal'));
@@ -1207,7 +1225,8 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             alert('I need a purpose');
         },
         viridianNurseJoy: function () {
-            alert('I need a purpose');
+            alert('Thank you for visiting the Viridian City Pokemon Center. I\'ll heal your Pokemon in one moment.');
+            dom.renderHeal();
         },
         viridianDrunkard: function () {
             if (!player.events.oakParcelReceived) {
@@ -1245,6 +1264,81 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 closeModal(document.getElementById('viridiancityModal'));
                 openModal(document.getElementById('viridiangymModal'));
             }
+        },
+        kantoViridianForestTrainer1: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.rick1;
+            combatLoop.stop();
+            if (!player.events.bugTrainerRick1) {
+                alert('You\'re a POKEMON TRAINER right? So am I, Let\'s battle!');
+                closeModal(document.getElementById('kantoviridianforestModal'));
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('I hate to admit it but that was a pretty good battle.'); }
+        },
+        kantoViridianForestTrainer2: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.doug1;
+            combatLoop.stop();
+            if (!player.events.bugTrainerDoug1) {
+                alert('Yo! You can\'t jam out if you\'re a POKéMON TRAINER!');
+                closeModal(document.getElementById('kantoviridianforestModal'));
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('Huh? I ran out of POKéMON!'); }
+        },
+        kantoViridianForestTrainer3: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.anthony1;
+            combatLoop.stop();
+            if (!player.events.bugTrainerAnthony1) {
+                alert('I might be little, but I won\'t like it if you go easy on me!');
+                closeModal(document.getElementById('kantoviridianforestModal'));
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('Oh, boo. Nothing went right.'); }
+        },
+        kantoViridianForestTrainer4: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.charlie1;
+            combatLoop.stop();
+            if (!player.events.bugTrainerCharlie1) {
+                alert('BUG POKéMON evolve quickly. They\'re a lot of fun!');
+                closeModal(document.getElementById('kantoviridianforestModal'));
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('Did you know that POKéMON evolve?'); }
+        },
+        kantoViridianForestTrainer5: function () {
+            const t1 = kantoTrainers.kantoViridianForest.trainers.sammy1;
+            combatLoop.stop();
+            if (!player.events.bugTrainerSammy1) {
+                alert('Sometimes, you can find stuff on the ground. I\'m looking for the stuff I dropped. Can you help me?');
+                closeModal(document.getElementById('kantoviridianforestModal'));
+                combatLoop.npc = {
+                    name: t1.firstBattle.name,
+                    event: t1.firstBattle.win,
+                };
+                combatLoop.npcPoke = Object.values({ ...t1.firstBattle.poke });
+                combatLoop.unpause();
+                combatLoop.refresh();
+            } else { alert('I give! You\'re good at this.'); }
         },
         pewterToRoute2Top: function () {
             openModal(document.getElementById('kantoroute2topModal'));
@@ -1378,6 +1472,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('ceruleancityModal'));
             openModal(document.getElementById('ceruleangymModal'));
         },
+        exitCeruleanGym: function () {
+            closeModal(document.getElementById('ceruleangymModal'));
+            openModal(document.getElementById('ceruleancityModal'));
+        },
         billsHouse: function () {
             if (!player.events.billPressTheButton) {
                 closeModal(document.getElementById('seasidecottageModal'));
@@ -1427,6 +1525,86 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         celadonGym: function () {
             closeModal(document.getElementById('celadoncityModal'));
             openModal(document.getElementById('celadongymModal'));
+        },
+        fuchsiaToSafariEntrance: function () {
+            closeModal(document.getElementById('fuchsiacityModal'));
+            openModal(document.getElementById('kantosafarizoneentranceModal'));
+        },
+        safariEntranceToFuchsia: function () {
+            closeModal(document.getElementById('kantosafarizoneentranceModal'));
+            openModal(document.getElementById('fuchsiacityModal'));
+        },
+        safariZoneLeftClerk: function () {
+            alert('Now that the Safari Zone is free my job is to mainly wait until everyone has left and clean up.');
+        },
+        safariZoneRightClerk: function () {
+            alert('Enjoy your time in the Safari Zone, make sure to search high and low.');
+        },
+        safariEntranceToFirstMap: function () {
+            closeModal(document.getElementById('kantosafarizoneentranceModal'));
+            openModal(document.getElementById('kantosafarizonefirstmapModal'));
+            this.changeRoute('safariZone');
+        },
+        firstMapToSafariEntrance: function () {
+            closeModal(document.getElementById('kantosafarizonefirstmapModal'));
+            openModal(document.getElementById('kantosafarizoneentranceModal'));
+            this.changeRoute('fuchsiaCity');
+        },
+        firstMapToSafariTop: function () {
+            closeModal(document.getElementById('kantosafarizonefirstmapModal'));
+            openModal(document.getElementById('kantosafarizonetopModal'));
+        },
+        safariTopToFirstMap: function () {
+            closeModal(document.getElementById('kantosafarizonetopModal'));
+            openModal(document.getElementById('kantosafarizonefirstmapModal'));
+        },
+        safariTopToLeft: function () {
+            closeModal(document.getElementById('kantosafarizonetopModal'));
+            openModal(document.getElementById('kantosafarizoneleftModal'));
+        },
+        safariTopToRight: function () {
+            closeModal(document.getElementById('kantosafarizonetopModal'));
+            openModal(document.getElementById('kantosafarizonerightModal'));
+        },
+        firstMapToSafariLeft: function () {
+            closeModal(document.getElementById('kantosafarizonefirstmapModal'));
+            openModal(document.getElementById('kantosafarizoneleftModal'));
+        },
+        safariLeftToFirstMap: function () {
+            closeModal(document.getElementById('kantosafarizoneleftModal'));
+            openModal(document.getElementById('kantosafarizonefirstmapModal'));
+        },
+        safariLeftToTop: function () {
+            closeModal(document.getElementById('kantosafarizoneleftModal'));
+            openModal(document.getElementById('kantosafarizonetopModal'));
+        },
+        kantoSafariPrizeHouse: function () {
+            closeModal(document.getElementById('kantosafarizoneleftModal'));
+            openModal(document.getElementById('kantosafariprizehouseModal'));
+        },
+        kantoSafariPrizeHouseToLeft: function () {
+            closeModal(document.getElementById('kantosafariprizehouseModal'));
+            openModal(document.getElementById('kantosafarizoneleftModal'));
+        },
+        kantoSafariLeftHouse: function () {
+            closeModal(document.getElementById('kantosafarizoneleftModal'));
+            openModal(document.getElementById('kantosafarilefthouseModal'));
+        },
+        kantoSafariLeftHouseToLeftMap: function () {
+            closeModal(document.getElementById('kantosafarilefthouseModal'));
+            openModal(document.getElementById('kantosafarizoneleftModal'));
+        },
+        firstMapToSafariRight: function () {
+            closeModal(document.getElementById('kantosafarizonefirstmapModal'));
+            openModal(document.getElementById('kantosafarizonerightModal'));
+        },
+        safariRightToFirstMap: function () {
+            closeModal(document.getElementById('kantosafarizonerightModal'));
+            openModal(document.getElementById('kantosafarizonefirstmapModal'));
+        },
+        safariRightToTop: function () {
+            closeModal(document.getElementById('kantosafarizonerightModal'));
+            openModal(document.getElementById('kantosafarizonetopModal'));
         },
         fuchsiaPokeMart: function () {
             closeModal(document.getElementById('fuchsiacityModal'));

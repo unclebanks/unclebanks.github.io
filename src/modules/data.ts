@@ -74,6 +74,66 @@ export const kantoTrainers = {
             },
         },
     },
+    kantoViridianForest: {
+        trainers: {
+            rick1: {
+                firstBattle: {
+                    name: 'Bug Catcher Rick',
+                    poke: [
+                        ['Caterpie', 6],
+                        ['Weedle', 6],
+                    ],
+                    win: 'bugTrainerRick1',
+                },
+
+            },
+            doug1: {
+                firstBattle: {
+                    name: 'Bug Catcher Doug',
+                    poke: [
+                        ['Weedle', 7],
+                        ['Kakuna', 7],
+                        ['Weedle', 7],
+                    ],
+                    win: 'bugTrainerDoug1',
+                },
+
+            },
+            anthony1: {
+                firstBattle: {
+                    name: 'Bug Catcher Anthony',
+                    poke: [
+                        ['Caterpie', 7],
+                        ['Caterpie', 8],
+                    ],
+                    win: 'bugTrainerAnthony1',
+                },
+
+            },
+            charlie1: {
+                firstBattle: {
+                    name: 'Bug Catcher Charlie',
+                    poke: [
+                        ['Metapod', 7],
+                        ['Caterpie', 7],
+                        ['Metapod', 7],
+                    ],
+                    win: 'bugTrainerCharlie1',
+                },
+
+            },
+            sammy1: {
+                firstBattle: {
+                    name: 'Bug Catcher Sammy',
+                    poke: [
+                        ['Weedle', 9],
+                    ],
+                    win: 'bugTrainerSammy1',
+                },
+
+            },
+        },
+    },
 };
 
 export const PokemonTypes = [

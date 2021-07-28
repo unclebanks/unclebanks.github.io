@@ -32,6 +32,16 @@
           coords="317,0,377,61"
           onclick="userInteractions.palletToRoute1()"
         >
+        <area
+          shape="rect"
+          coords="347,442,376,482"
+          onclick="userInteractions.palletChubbyNPC()"
+        >
+        <area
+          shape="rect"
+          coords="74,254,112,298"
+          onclick="userInteractions.palletFemaleNPC()"
+        >
       </map>
     </template>
   </CardModal>
