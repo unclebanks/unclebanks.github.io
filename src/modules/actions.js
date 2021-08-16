@@ -544,9 +544,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else if (secretCode === 'Bulbasaur' && !player.secretCodes.bulbasaur) {
                 player.addPoke(new Poke(pokeByName('Bulbasaur'), 5));
                 player.secretCodes.bulbasaur = true;
-            } else if (secretCode === 'MaimahsPo' && !player.secretCodes.bulbasaur) {
+            } else if (secretCode === 'MaimahsPo' && !player.secretCodes.maimahspo) {
                 player.addPoke(new Poke(pokeByName('Pancham'), 5));
                 player.secretCodes.maimahspo = true;
+            } else if (secretCode === 'Delphic' && !player.secretCodes.delphic) {
+                player.addPoke(new Poke(pokeByName('Fennekin'), 5));
+                player.secretCodes.delphic = true;
             } else {
                 alert('Code Invalid or Already Claimed');
             }
@@ -808,12 +811,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             }
             if (player.wins[routeData.gymLeader.win] && player.wins[routeData.gymLeader1.win] && player.wins[routeData.gymLeader2.win] && player.wins[routeData.gymLeader3.win]) {
                 this.gymLeader3ABattle();
-            }
-        },
-        checkNPCBattle: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            if (routeData.npc.name === 'Nugget 5') {
-                this.npcBattle();
             }
         },
         checkNPC: function () {
@@ -1476,6 +1473,11 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('ceruleangymModal'));
             openModal(document.getElementById('ceruleancityModal'));
         },
+        ceruleanCityToNuggetBridge: function () {
+            this.changeRoute('ceruleanCity');
+            closeModal(document.getElementById('ceruleancityModal'));
+            openModal(document.getElementById('nuggetBridgeModal'));
+        },
         billsHouse: function () {
             if (!player.events.billPressTheButton) {
                 closeModal(document.getElementById('seasidecottageModal'));
@@ -1692,21 +1694,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         lavenderPokeTowerReceptionist: function () {
             alert('Welcome to the Pokemon Tower. There is nothing here yet but a questline will be implemented shortly');
-        },
-        nuggetBridgeEvent: function () {
-            if (player.events.nugget5 === true && !player.hasPokemon('Charmander')) {
-                alert('I think you would do great in Team Rocket. Here is a Charmander as a bribe.');
-                player.addPoke(new Poke(POKEDEX[4], 25));
-                player.addPokedex('Charmander', POKEDEXFLAGS.ownNormal);
-            }
-            if (!player.events.nugget5) {
-                alert('Defeat the 5 of us in a row to win a special prize!');
-                closeModal(document.getElementById('ceruleancityModal'));
-                this.checkNPCBattle();
-            }
-            if (player.events.nugget5 === true && player.hasPokemon('Charmander')) {
-                alert('You feel like joining us yet?');
-            }
         },
         billEvent: function () {
             if (!player.events.billPressTheButton) {
@@ -1981,7 +1968,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 }
             }
         },
-        // This part ^^^ was not within the actions brackets, also, add poke was not correctly utilized.
         closeStory: function () {
             if (story.canClose) {
                 $('#storyContainer').style.display = 'none';

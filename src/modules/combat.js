@@ -143,7 +143,7 @@ export default (player, enemy) => {
             }
             player.statistics.beaten++;
             Combat.attemptCatch();
-            const foundPokeCoins = Math.floor(Combat.enemyActivePoke.level() * 4) - 5;
+            const foundPokeCoins = Math.floor(Combat.enemyActivePoke.level() * 4);
             player.addPokeCoins(foundPokeCoins);
 
             const beforeExp = player.getPokemon().map((poke) => poke.level());
