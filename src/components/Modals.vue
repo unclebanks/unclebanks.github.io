@@ -120,6 +120,10 @@
   <kantoRoute25Modal />
   <playerComputerModal />
   <kantoPokeRanchModal />
+  <newBarkTownModal />
+  <cherrygroveCityModal />
+  <violetCityModal />
+  <violetGymModal />
 </template>
 
 <script>
@@ -243,6 +247,10 @@ import kantoRoute24Modal from './modals/kanto/routes/kantoRoute24Modal';
 import kantoRoute25Modal from './modals/kanto/routes/kantoRoute25Modal';
 import playerComputerModal from './modals/kanto/misc/playerComputerModal';
 import kantoPokeRanchModal from './modals/kanto/misc/kantoPokeRanchModal';
+import newBarkTownModal from './modals/johto/towns/newBarkTown/newBarkTownModal';
+import cherrygroveCityModal from './modals/johto/towns/cherrygroveCity/cherrygroveCityModal';
+import violetCityModal from './modals/johto/towns/violetCity/violetCityModal';
+import violetGymModal from './modals/johto/towns/violetCity/violetGymModal';
 
 export default {
     components: {
@@ -366,6 +374,10 @@ export default {
         kantoRoute25Modal,
         playerComputerModal,
         kantoPokeRanchModal,
+        newBarkTownModal,
+        cherrygroveCityModal,
+        violetCityModal,
+        violetGymModal,
     },
 
     props: {

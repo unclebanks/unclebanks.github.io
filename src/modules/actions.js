@@ -1845,8 +1845,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         gymLeaderBattle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
             const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
-            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymLeader && routeData.gymLeader.poke.length > 0 && (!routeData.gymLeader.req || player.wins[routeData.gymLeader.req])) {
+                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
+                    closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
+                }
                 combatLoop.gymLeader = { name: routeData.gymLeader.name, badge: routeData.gymLeader.badge, win: routeData.gymLeader.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymLeader.poke });
                 combatLoop.unpause();
@@ -1858,10 +1860,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         gymTrainer1Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
             const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
-            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymTrainer1.req && !player.wins[routeData.gymTrainer1.req]) {
                 alert('Defeat more GYM LEADERS and try again');
             } else if (routeData.gymTrainer1 && routeData.gymTrainer1.poke.length > 0) {
+                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
+                    closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
+                }
                 combatLoop.gymLeader = { name: routeData.gymTrainer1.name, win: routeData.gymTrainer1.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer1.poke });
                 combatLoop.unpause();
@@ -1871,8 +1875,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         gymTrainer2Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
             const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
-            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymTrainer2 && routeData.gymTrainer2.poke.length > 0 && player.wins[routeData.gymTrainer2.req]) {
+                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
+                    closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
+                }
                 combatLoop.gymLeader = { name: routeData.gymTrainer2.name, win: routeData.gymTrainer2.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer2.poke });
                 combatLoop.unpause();
@@ -1884,8 +1890,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         gymTrainer3Battle: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
             const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
-            closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
             if (routeData.gymTrainer3 && routeData.gymTrainer3.poke.length > 0 && player.wins[routeData.gymTrainer3.req]) {
+                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
+                    closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
+                }
                 combatLoop.gymLeader = { name: routeData.gymTrainer3.name, win: routeData.gymTrainer3.win };
                 combatLoop.gymLeaderPoke = Object.values({ ...routeData.gymTrainer3.poke });
                 combatLoop.unpause();
