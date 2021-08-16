@@ -15,7 +15,7 @@
         <area
           shape="rect"
           coords="286,0,339,67"
-          onclick="userInteractions.ceruleanCityToNuggetBridge()"
+          onclick="userInteractions.ceruleanCityToRoute24()"
         >
         <area
           shape="rect"

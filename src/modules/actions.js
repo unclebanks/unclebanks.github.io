@@ -1473,10 +1473,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('ceruleangymModal'));
             openModal(document.getElementById('ceruleancityModal'));
         },
-        ceruleanCityToNuggetBridge: function () {
-            this.changeRoute('ceruleanCity');
+        ceruleanCityToRoute24: function () {
+            this.changeRoute('kroute24');
             closeModal(document.getElementById('ceruleancityModal'));
-            openModal(document.getElementById('nuggetBridgeModal'));
+            openModal(document.getElementById('kantoroute24Modal'));
         },
         billsHouse: function () {
             if (!player.events.billPressTheButton) {
