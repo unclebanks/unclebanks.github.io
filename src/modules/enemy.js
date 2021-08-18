@@ -69,66 +69,7 @@ export default (starter, player, Poke) => {
         } else {
             pokeSpecies = randomArrayElement(pokemonList);
             level = routeData.minLevel + Math.round((Math.random() * (routeData.maxLevel - routeData.minLevel)) * (player.activePoke().prestigeLevel * (player.activePoke().prestigeLevel * player.activePoke().prestigeLevel * 2) + 1));
-            if (level > 100) {
-                level -= 100;
-                prestigeLevel += 1;
-                if (level > 100) {
-                    level -= 100;
-                    prestigeLevel += 1;
-                    if (level <= 0) {
-                        level = 1;
-                    }
-                    if (level > 100) {
-                        level -= 100;
-                        prestigeLevel += 1;
-                        if (level <= 0) {
-                            level = 1;
-                        }
-                    }
-                    if (level > 100) {
-                        level -= 100;
-                        prestigeLevel += 1;
-                        if (level <= 0) {
-                            level = 1;
-                        }
-                    }
-                    if (level > 100) {
-                        level -= 100;
-                        prestigeLevel += 1;
-                        if (level <= 0) {
-                            level = 1;
-                        }
-                    }
-                    if (level > 100) {
-                        level -= 100;
-                        prestigeLevel += 1;
-                        if (level <= 0) {
-                            level = 1;
-                        }
-                    }
-                    if (level > 100) {
-                        level -= 100;
-                        prestigeLevel += 1;
-                        if (level <= 0) {
-                            level = 1;
-                        }
-                    }
-                    if (level > 100) {
-                        level -= 100;
-                        prestigeLevel += 1;
-                        if (level <= 0) {
-                            level = 1;
-                        }
-                    }
-                    if (level > 100) {
-                        level -= 100;
-                        prestigeLevel += 1;
-                        if (level <= 0) {
-                            level = 1;
-                        }
-                    }
-                }
-            }
+            while (level > 100) { level -= 100; prestigeLevel++; }
         }
         const poke = pokeByName(pokeSpecies);
         return generator(poke, level, prestigeLevel);

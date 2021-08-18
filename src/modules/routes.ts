@@ -440,14 +440,6 @@ const ROUTES: Routes = {
             name: 'Cerulean City',
             town: true,
             pokeMart: true,
-            npc: {
-                name: 'Nugget 5',
-                event: 'nugget5',
-                poke: [
-                    ['Staryu', 18],
-                    ['Starmie', 21],
-                ],
-            },
             story: {
                 name: 'Burgled House',
                 event: 'rocketThiefCerulean',

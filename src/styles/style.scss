@@ -234,10 +234,6 @@ ul {
     grid-row-end: 4;
     padding: 5px;
     font-size: medium;
-    font-family: 'Lato', sans-serif;
-    display: grid;
-    grid-template-rows: 60% 40%;
-    background-color: rgb(58, 58, 58);
 }
 #regionSelect {
     grid-row: 2;
@@ -1231,6 +1227,14 @@ progress.expBar {
     width: 680px;
     height: 320px;
 }
+#kantoRoute24ModalBox {
+    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute24.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 680px;
+    height: 1100px;
+}
+// DUNGEONS
 #mtMoonEntranceModalBox {
     background-image: url('../assets/backgrounds/kanto/routes/kantoMtMoonEntrance.png');
     background-size: contain;
