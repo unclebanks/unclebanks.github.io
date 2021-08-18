@@ -124,6 +124,20 @@
   <cherrygroveCityModal />
   <violetCityModal />
   <violetGymModal />
+  <azaleaTownModal />
+  <azaleaGymModal />
+  <goldenrodCityModal />
+  <goldenrodGymModal />
+  <ecruteakCityModal />
+  <ecruteakGymModal />
+  <olivineCityModal />
+  <olivineGymModal />
+  <cianwoodCityModal />
+  <cianwoodGymModal />
+  <mahoganyTownModal />
+  <mahoganyGymModal />
+  <blackthornCityModal />
+  <blackthornGymModal />
 </template>
 
 <script>
@@ -251,6 +265,20 @@ import newBarkTownModal from './modals/johto/towns/newBarkTown/newBarkTownModal'
 import cherrygroveCityModal from './modals/johto/towns/cherrygroveCity/cherrygroveCityModal';
 import violetCityModal from './modals/johto/towns/violetCity/violetCityModal';
 import violetGymModal from './modals/johto/towns/violetCity/violetGymModal';
+import azaleaTownModal from './modals/johto/towns/azaleaTown/azaleaTownModal';
+import azaleaGymModal from './modals/johto/towns/azaleaTown/azaleaGymModal';
+import goldenrodCityModal from './modals/johto/towns/goldenrodCity/goldenrodCityModal';
+import goldenrodGymModal from './modals/johto/towns/goldenrodCity/goldenrodGymModal';
+import ecruteakCityModal from './modals/johto/towns/ecruteakCity/ecruteakCityModal';
+import ecruteakGymModal from './modals/johto/towns/ecruteakCity/ecruteakGymModal';
+import olivineCityModal from './modals/johto/towns/olivineCity/olivineCityModal';
+import olivineGymModal from './modals/johto/towns/olivineCity/olivineGymModal';
+import cianwoodCityModal from './modals/johto/towns/cianwoodCity/cianwoodCityModal';
+import cianwoodGymModal from './modals/johto/towns/cianwoodCity/cianwoodGymModal';
+import mahoganyTownModal from './modals/johto/towns/mahoganyTown/mahoganyTownModal';
+import mahoganyGymModal from './modals/johto/towns/mahoganyTown/mahoganyGymModal';
+import blackthornCityModal from './modals/johto/towns/blackthornCity/blackthornCityModal';
+import blackthornGymModal from './modals/johto/towns/blackthornCity/blackthornGymModal';
 
 export default {
     components: {
@@ -378,6 +406,20 @@ export default {
         cherrygroveCityModal,
         violetCityModal,
         violetGymModal,
+        azaleaTownModal,
+        azaleaGymModal,
+        goldenrodCityModal,
+        goldenrodGymModal,
+        ecruteakCityModal,
+        ecruteakGymModal,
+        olivineCityModal,
+        olivineGymModal,
+        cianwoodCityModal,
+        cianwoodGymModal,
+        mahoganyTownModal,
+        mahoganyGymModal,
+        blackthornCityModal,
+        blackthornGymModal,
     },
 
     props: {
