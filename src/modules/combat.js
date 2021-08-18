@@ -147,7 +147,7 @@ export default (player, enemy) => {
             player.addPokeCoins(foundPokeCoins);
 
             const beforeExp = player.getPokemon().map((poke) => poke.level());
-            const expToGive = (Combat.enemyActivePoke.baseExp() / 16) * 10000;
+            const expToGive = (Combat.enemyActivePoke.baseExp() / 16) + (Combat.enemyActivePoke.level() * 3);
             player.statistics.totalExp += expToGive;
             player.activePoke().giveExp(expToGive);
             player.getPokemon().forEach((poke) => poke.giveExp((Combat.enemyActivePoke.baseExp() / 100) + (Combat.enemyActivePoke.level() / 10)));
