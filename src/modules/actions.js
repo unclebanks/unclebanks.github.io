@@ -1846,7 +1846,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
             const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
             if (routeData.gymLeader && routeData.gymLeader.poke.length > 0 && (!routeData.gymLeader.req || player.wins[routeData.gymLeader.req])) {
-                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
+                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`) && document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
                     closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
                 }
                 combatLoop.gymLeader = { name: routeData.gymLeader.name, badge: routeData.gymLeader.badge, win: routeData.gymLeader.win };
@@ -1863,7 +1863,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             if (routeData.gymTrainer1.req && !player.wins[routeData.gymTrainer1.req]) {
                 alert('Defeat more GYM LEADERS and try again');
             } else if (routeData.gymTrainer1 && routeData.gymTrainer1.poke.length > 0) {
-                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
+                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`) && document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
                     closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
                 }
                 combatLoop.gymLeader = { name: routeData.gymTrainer1.name, win: routeData.gymTrainer1.win };
@@ -1876,7 +1876,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
             const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
             if (routeData.gymTrainer2 && routeData.gymTrainer2.poke.length > 0 && player.wins[routeData.gymTrainer2.req]) {
-                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
+                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`) && document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
                     closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
                 }
                 combatLoop.gymLeader = { name: routeData.gymTrainer2.name, win: routeData.gymTrainer2.win };
@@ -1891,7 +1891,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym;
             const gymModal = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].gym.name;
             if (routeData.gymTrainer3 && routeData.gymTrainer3.poke.length > 0 && player.wins[routeData.gymTrainer3.req]) {
-                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
+                if (document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`) && document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`).classList[1] === 'is-active') {
                     closeModal(document.getElementById(`${gymModal.replace(/ /g, '').toLowerCase()}Modal`));
                 }
                 combatLoop.gymLeader = { name: routeData.gymTrainer3.name, win: routeData.gymTrainer3.win };
