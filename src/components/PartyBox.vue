@@ -18,6 +18,13 @@
           Map
         </button>
       </p>
+      <p>
+        <button
+          onclick="userInteractions.viewShop()"
+        >
+          Shop
+        </button>
+      </p>
       <input
         id="enableDelete"
         v-model="manageTeam"

@@ -718,7 +718,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             town.renderPokeCoinShop(region);
             town.renderBattleCoinShop(region);
             town.renderCatchCoinShop(region);
-            closeModal(document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokemartModal`));
+            if (document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokemartModal`) && document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokemartModal`).classList[1] === 'is-active') {
+                closeModal(document.getElementById(`${routeData.replace(/ /g, '').toLowerCase()}pokemartModal`));
+            }
             openModal(document.getElementById('shopModal'));
         },
         renderGym: function () {

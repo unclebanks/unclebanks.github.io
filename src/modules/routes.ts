@@ -4311,7 +4311,7 @@ const ROUTES: Routes = {
                 ],
             },
         }, */
-    }, /*
+    },
     Unova: {
         _unlock: {
             badges: {
@@ -4328,20 +4328,22 @@ const ROUTES: Routes = {
             town: true,
             prof: {
                 name: 'Prof. Juniper',
-                badge: null,
                 poke: [
                     ['Snivy', 15],
                     ['Tepig', 15],
                     ['Oshawott', 15],
                 ],
             },
-            gymLeader: {
-                name: 'Cheren',
-                badge: 'Basic Badge',
-                poke: [
-                    ['Patrat', 11],
-                    ['Lillipup', 13],
-                ],
+            gym: {
+                name: 'Aspertia Gym',
+                gymLeader: {
+                    name: 'Cheren',
+                    badge: 'Basic Badge',
+                    poke: [
+                        ['Patrat', 12],
+                        ['Lillipup', 14],
+                    ],
+                },
             },
         },
         route105: {
@@ -4372,13 +4374,16 @@ const ROUTES: Routes = {
         virbankCity: {
             name: 'Virbank City',
             town: true,
-            gymLeader: {
-                name: 'Roxie',
-                badge: 'Toxic Badge',
-                poke: [
-                    ['Koffing', 16],
-                    ['Whirlipede', 18],
-                ],
+            gym: {
+                name: 'Virbank Gym',
+                gymLeader: {
+                    name: 'Roxie',
+                    badge: 'Toxic Badge',
+                    poke: [
+                        ['Koffing', 16],
+                        ['Whirlipede', 18],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -4401,14 +4406,17 @@ const ROUTES: Routes = {
         casteliaCity: {
             name: 'Castelia City',
             town: true,
-            gymLeader: {
-                name: 'Burgh',
-                badge: 'Insect Badge',
-                poke: [
-                    ['Swadloon', 22],
-                    ['Dwebble', 22],
-                    ['Leavanny', 24],
-                ],
+            gym: {
+                name: 'Castelia Gym',
+                gymLeader: {
+                    name: 'Burgh',
+                    badge: 'Insect Badge',
+                    poke: [
+                        ['Swadloon', 22],
+                        ['Dwebble', 22],
+                        ['Leavanny', 24],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -4479,14 +4487,17 @@ const ROUTES: Routes = {
         nimbasaCity: {
             name: 'Nimbasa City',
             town: true,
-            gymLeader: {
-                name: 'Elesa',
-                badge: 'Bolt Badge',
-                poke: [
-                    ['Emolga', 28],
-                    ['Flaaffy', 28],
-                    ['Zebstrika', 30],
-                ],
+            gym: {
+                name: 'Nimbasa Gym',
+                gymLeader: {
+                    name: 'Elesa',
+                    badge: 'Bolt Badge',
+                    poke: [
+                        ['Emolga', 28],
+                        ['Flaaffy', 28],
+                        ['Zebstrika', 30],
+                    ],
+                },
             },
         },
         route118: {
@@ -4540,14 +4551,17 @@ const ROUTES: Routes = {
         driftveilCity: {
             name: 'Driftveil City',
             town: true,
-            gymLeader: {
-                name: 'Clay',
-                badge: 'Quake Badge',
-                poke: [
-                    ['Krokorok', 31],
-                    ['Sandslash', 31],
-                    ['Excadrill', 33],
-                ],
+            gym: {
+                name: 'Driftveil Gym',
+                gymLeader: {
+                    name: 'Clay',
+                    badge: 'Quake Badge',
+                    poke: [
+                        ['Krokorok', 31],
+                        ['Sandslash', 31],
+                        ['Excadrill', 33],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -4642,14 +4656,17 @@ const ROUTES: Routes = {
         misaltronCity: {
             name: 'Misaltron City',
             town: true,
-            gymLeader: {
-                name: 'Skyla',
-                badge: 'Jet Badge',
-                poke: [
-                    ['Swoobat', 37],
-                    ['Skarmory', 37],
-                    ['Swanna', 39],
-                ],
+            gym: {
+                name: 'Misaltron Gym',
+                gymLeader: {
+                    name: 'Skyla',
+                    badge: 'Jet Badge',
+                    poke: [
+                        ['Swoobat', 37],
+                        ['Skarmory', 37],
+                        ['Swanna', 39],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -4838,14 +4855,17 @@ const ROUTES: Routes = {
         opelucidCity: {
             name: 'Opelucid City',
             town: true,
-            gymLeader: {
-                name: 'Drayden',
-                badge: 'Legend Badge',
-                poke: [
-                    ['Druddigon', 46],
-                    ['Flygon', 46],
-                    ['Haxorus', 48],
-                ],
+            gym: {
+                name: 'Opelucid Gym',
+                gymLeader: {
+                    name: 'Drayden',
+                    badge: 'Legend Badge',
+                    poke: [
+                        ['Druddigon', 46],
+                        ['Flygon', 46],
+                        ['Haxorus', 48],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -4880,14 +4900,17 @@ const ROUTES: Routes = {
         humilauCity: {
             name: 'Humilau City',
             town: true,
-            gymLeader: {
-                name: 'Marlon',
-                badge: 'Wave Badge',
-                poke: [
-                    ['Carracosta', 49],
-                    ['Wailord', 49],
-                    ['Jellicent', 51],
-                ],
+            gym: {
+                name: 'Humilau Gym',
+                gymLeader: {
+                    name: 'Marlon',
+                    badge: 'Wave Badge',
+                    poke: [
+                        ['Carracosta', 49],
+                        ['Wailord', 49],
+                        ['Jellicent', 51],
+                    ],
+                },
             },
             _unlock: {
                 badges: {
@@ -5313,10 +5336,22 @@ const ROUTES: Routes = {
             maxLevel: 45,
             respawn: 'aspertiaCity',
             unovaSuperRod: 1,
-        },
+        }, /*
         elite4Shauntal: {
             name: 'Elite 4 Shauntal',
             town: true,
+            gym: {
+                name: 'Humilau Gym',
+                gymLeader: {
+                    name: 'Marlon',
+                    badge: 'Wave Badge',
+                    poke: [
+                        ['Carracosta', 49],
+                        ['Wailord', 49],
+                        ['Jellicent', 51],
+                    ],
+                },
+            },
             gymLeader: {
                 name: 'Shauntal',
                 poke: [
@@ -5388,8 +5423,8 @@ const ROUTES: Routes = {
                     ['Haxorus', 89],
                 ],
             },
-        },
-    },
+        }, */
+    }, /*
     Kalos: {
         _global: {
             pokes: [],
@@ -5403,15 +5438,6 @@ const ROUTES: Routes = {
         aquacordeTown: {
             name: 'Aquacorde Town',
             town: true,
-            prof: {
-                name: 'Prof. Sycamore',
-                badge: null,
-                poke: [
-                    ['Chespin', 15],
-                    ['Fennekin', 15],
-                    ['Froakie', 15],
-                ],
-            },
         },
         kalosroute2: {
             name: 'Route 2',
@@ -5437,13 +5463,16 @@ const ROUTES: Routes = {
         santaluneCity: {
             name: 'Santalune City',
             town: true,
-            gymLeader: {
-                name: 'Viola',
-                badge: 'Bug Badge',
-                poke: [
-                    ['Surskit', 10],
-                    ['Vivillon', 12],
-                ],
+            gym: {
+                name: 'Santalune Gym',
+                gymLeader: {
+                    name: 'Viola',
+                    badge: 'Bug Badge',
+                    poke: [
+                        ['Surskit', 10],
+                        ['Vivillon', 12],
+                    ],
+                },
             },
         },
         kalosroute22: {
@@ -5484,15 +5513,6 @@ const ROUTES: Routes = {
         lumioseCity: {
             name: 'Lumiose City',
             town: true,
-            prof: {
-                name: 'Prof. Sycamore',
-                win: 'sycamore1',
-                poke: [
-                    ['Bulbasaur', 10],
-                    ['Charmander', 10],
-                    ['Squirtle', 10],
-                ],
-            },
             gymLeader: {
                 name: 'Clemont',
                 badge: 'Voltage Badge',
@@ -6155,7 +6175,7 @@ const ROUTES: Routes = {
                 ],
             },
         },
-    },
+    }, */
     Alola: {
         _global: {
             pokes: [],
@@ -6165,15 +6185,6 @@ const ROUTES: Routes = {
         ikiTown: {
             name: 'Iki Town',
             town: true,
-            prof: {
-                name: 'Prof. Kukui',
-                badge: null,
-                poke: [
-                    ['Rowlet', 15],
-                    ['Litten', 15],
-                    ['Popplio', 15],
-                ],
-            },
         },
         alola1: {
             name: 'Route 1',
@@ -6373,14 +6384,6 @@ const ROUTES: Routes = {
         poTown: {
             name: 'Po Town',
             town: true,
-            gymLeader: {
-                name: 'Team Skull Grant',
-                badge: null,
-                poke: [
-                    ['Ekans', 37],
-                    ['Salandit', 37],
-                ],
-            },
         },
         alola17: {
             name: 'Route 17',
@@ -6517,7 +6520,7 @@ const ROUTES: Routes = {
             maxLevel: 45,
             respawn: 'ikiTown',
             alolaSuperRod: 1,
-        },
+        }, /*
         elite4Hala: {
             name: 'Elite 4 Hala',
             town: true,
@@ -6588,8 +6591,8 @@ const ROUTES: Routes = {
                     ['Primarina', 68],
                 ],
             },
-        },
-    },  */
+        }, */
+    },
     Fandom: {
         _unlock: {
             badges: {
