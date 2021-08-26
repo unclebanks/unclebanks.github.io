@@ -107,7 +107,7 @@
         id="unovaButton"
         class="button"
         value="Unova"
-        onclick="userInteractions.goToNone()"
+        onclick="userInteractions.goToUnova()"
       >
         UNOVA
       </button>
