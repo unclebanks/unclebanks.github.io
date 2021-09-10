@@ -77,21 +77,21 @@
         id="kantoButton"
         class="button"
         value="Kanto"
-        onclick="userInteractions.goToKanto()"
+        onclick="userInteractions.goToDifferentRegion('Kanto')"
       >
         KANTO
       </button>
       <button
         id="johtoButton"
         class="button"
-        onclick="userInteractions.goToJohto()"
+        onclick="userInteractions.goToDifferentRegion('Johto')"
       >
         JOHTO
       </button>
       <button
         id="hoennButton"
         class="button"
-        onclick="userInteractions.goToHoenn()"
+        onclick="userInteractions.goToDifferentRegion('Hoenn')"
       >
         HOENN
       </button>
@@ -99,7 +99,7 @@
         id="sinnohButton"
         class="button"
         value="Sinnoh"
-        onclick="userInteractions.goToSinnoh()"
+        onclick="userInteractions.goToDifferentRegion('Sinnoh')"
       >
         SINNOH
       </button>
@@ -107,7 +107,7 @@
         id="unovaButton"
         class="button"
         value="Unova"
-        onclick="userInteractions.goToUnova()"
+        onclick="userInteractions.goToDifferentRegion('Unova')"
       >
         UNOVA
       </button>
@@ -139,7 +139,7 @@
         id="fandomButton"
         class="button"
         value="Fandom"
-        onclick="userInteractions.goToFandom()"
+        onclick="userInteractions.goToDifferentRegion('Fandom')"
       >
         FANDOM
       </button><br>
