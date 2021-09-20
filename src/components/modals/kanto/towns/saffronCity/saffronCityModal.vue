@@ -14,20 +14,20 @@
           TEST
         </button><br>
         <button
-          onclick="userInteractions.saffronPokeCenter()"
+          onclick="userInteractions.moveModal('saffroncitypokecenterModal', 'saffroncityModal')"
           class="button"
         >
           Pokemon Center
         </button><br>
         <button
-          onclick="userInteractions.saffronPokeMart()"
+          onclick="userInteractions.moveModal('saffroncitypokemartModal', 'saffroncityModal')"
           class="button"
         >
           PokeMart
         </button><br>
         <button
           id="pokemart"
-          onclick="userInteractions.saffronGym()"
+          onclick="userInteractions.moveModal('saffrongymModal', 'saffroncityModal')"
           class="button"
         >
           Saffron Gym
