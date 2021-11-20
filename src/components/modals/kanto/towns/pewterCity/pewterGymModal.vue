@@ -30,7 +30,7 @@
         <area
           shape="rect"
           coords="166,450,233,512"
-          onclick="userInteractions.exitPewterGym()"
+          onclick="userInteractions.moveModal('pewtercityModal', 'pewtergymModal')"
         >
       </map>
     </template>

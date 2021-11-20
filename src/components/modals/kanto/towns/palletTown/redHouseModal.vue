@@ -25,7 +25,7 @@
         <area
           shape="rect"
           coords="316,32,416,114"
-          onclick="userInteractions.redRoom()"
+          onclick="userInteractions.moveModal('redroomModal', 'redhouseModal')"
         >
         <area
           shape="rect"

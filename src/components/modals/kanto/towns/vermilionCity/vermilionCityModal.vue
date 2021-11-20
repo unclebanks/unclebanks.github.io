@@ -25,12 +25,12 @@
         <area
           shape="rect"
           coords="173,34,240,97"
-          onclick="userInteractions.vermilionPokeCenter()"
+          onclick="userInteractions.moveModal('vermilioncitypokecenterModal', 'vermilioncityModal')"
         >
         <area
           shape="rect"
           coords="360,187,414,239"
-          onclick="userInteractions.vermilionPokeMart()"
+          onclick="userInteractions.moveModal('vermilioncitypokemartModal', 'vermilioncityModal')"
         >
         <area
           shape="rect"

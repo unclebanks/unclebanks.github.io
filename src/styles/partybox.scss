@@ -1,0 +1,11 @@
+#partyBox {
+    grid-column: 2 / 4;
+    grid-row: 3;
+    overflow: auto;
+    float: left;
+    text-align: left;
+
+    li, p {
+        display: inline-block;
+    }
+}

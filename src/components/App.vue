@@ -2,7 +2,7 @@
   <div id="gameContainer">
     <PokemonList :ui="ui" />
     <RoutesBox />
-    <Inventory />
+    <Regions />
     <EnemyBox />
     <PlayerBox />
     <NavBox />
@@ -19,7 +19,7 @@
 
 import PokemonList from './PokemonList/PokemonList.vue';
 import RoutesBox from './RoutesBox.vue';
-import Inventory from './Inventory.vue';
+import Regions from './Regions.vue';
 import EnemyBox from './EnemyBox.vue';
 import PlayerBox from './PlayerBox.vue';
 import NavBox from './NavBox.vue';
@@ -34,7 +34,7 @@ export default {
     components: {
         PokemonList,
         RoutesBox,
-        Inventory,
+        Regions,
         EnemyBox,
         PlayerBox,
         NavBox,

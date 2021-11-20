@@ -49,121 +49,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             player.setActive(newActiveIndex);
             renderView(dom, enemy, player);
         },
-        goToKanto: function () {
-            if (player.regionUnlocked('Kanto')) {
-                player.settings.currentRegionId = 'Kanto';
-                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
-                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
-                } else {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
-                }
-            } else {
-                notify('You have not unlocked this region yet');
-            }
-        },
-        goToJohto: function () {
-            if (player.regionUnlocked('Johto')) {
-                player.settings.currentRegionId = 'Johto';
-                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
-                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
-                } else {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
-                }
-            } else {
-                notify('You have not unlocked this region yet');
-            }
-        },
-        goToHoenn: function () {
-            if (player.regionUnlocked('Hoenn')) {
-                player.settings.currentRegionId = 'Hoenn';
-                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
-                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
-                } else {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
-                }
-            } else {
-                notify('You have not unlocked this region yet');
-            }
-        },
-        goToSinnoh: function () {
-            if (player.regionUnlocked('Sinnoh')) {
-                player.settings.currentRegionId = 'Sinnoh';
-                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
-                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
-                } else {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
-                }
-            } else {
-                notify('You have not unlocked this region yet');
-            }
-        },
-        goToUnova: function () {
-            if (player.regionUnlocked('Unova')) {
-                player.settings.currentRegionId = 'Unova';
-                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
-                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
-                } else {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
-                }
-            } else {
-                notify('You have not unlocked this region yet');
-            }
-        },
-        goToKalos: function () {
-            if (player.regionUnlocked('Kalos')) {
-                player.settings.currentRegionId = 'Kalos';
-                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
-                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
-                } else {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
-                }
-            } else {
-                notify('You have not unlocked this region yet');
-            }
-        },
-        goToAlola: function () {
-            if (player.regionUnlocked('Alola')) {
-                player.settings.currentRegionId = 'Alola';
-                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
-                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
-                } else {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
-                }
-            } else {
-                notify('You have not unlocked this region yet');
-            }
-        },
-        goToGalar: function () {
-            if (player.regionUnlocked('Galar')) {
-                player.settings.currentRegionId = 'Galar';
-                if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
-                } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[1]);
-                } else {
-                    this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[2]);
-                }
-            } else {
-                notify('You have not unlocked this region yet');
-            }
-        },
-        goToFandom: function () {
-            if (player.regionUnlocked('Fandom')) {
-                player.settings.currentRegionId = 'Fandom';
+        goToDifferentRegion: function (region) {
+            if (player.regionUnlocked(region)) {
+                player.settings.currentRegionId = region;
                 if (Object.keys(ROUTES[player.settings.currentRegionId])[0].charAt(0) !== '_') {
                     this.changeRoute(Object.keys(ROUTES[player.settings.currentRegionId])[0]);
                 } else if (Object.keys(ROUTES[player.settings.currentRegionId])[1].charAt(0) !== '_') {
@@ -961,6 +849,15 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 this.renderGameTokens();
             }
         },
+        moveModal: function (modalToOpen, modalToClose) {
+            closeModal(document.getElementById(modalToClose));
+            openModal(document.getElementById(modalToOpen));
+        },
+        moveModalMoveRoute: function (modalToOpen, modalToClose, newRoute) {
+            closeModal(document.getElementById(modalToClose));
+            openModal(document.getElementById(modalToOpen));
+            this.changeRoute(newRoute);
+        },
         oakLab: function () {
             if (player.events.oakParcelReceived === true) {
                 openModal(document.getElementById('oaklabModal'));
@@ -996,10 +893,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         redTV: function () {
             alert('Two kids are walking along some railroad tracks.');
-        },
-        redRoom: function () {
-            closeModal(document.getElementById('redhouseModal'));
-            openModal(document.getElementById('redroomModal'));
         },
         redRoomDown: function () {
             closeModal(document.getElementById('redroomModal'));
@@ -1178,21 +1071,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             closeModal(document.getElementById('kantoroute2topModal'));
             this.changeRoute('viridianForest');
         },
-        viridianToRoute22: function () {
-            openModal(document.getElementById('kantoroute22Modal'));
-            closeModal(document.getElementById('viridiancityModal'));
-            this.changeRoute('kroute22');
-        },
-        viridianToRoute1: function () {
-            openModal(document.getElementById('kantoroute1Modal'));
-            closeModal(document.getElementById('viridiancityModal'));
-            this.changeRoute('kroute1');
-        },
-        viridianToRoute2Bottom: function () {
-            openModal(document.getElementById('kantoroute2bottomModal'));
-            closeModal(document.getElementById('viridiancityModal'));
-            this.changeRoute('kroute2');
-        },
         kantoViridianForestToRoute2Bottom: function () {
             openModal(document.getElementById('kantoroute2bottomModal'));
             closeModal(document.getElementById('kantoviridianforestModal'));
@@ -1205,14 +1083,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         blueRoute22: function () {
             alert('Needs battle here');
-        },
-        viridianPokeCenter: function () {
-            closeModal(document.getElementById('viridiancityModal'));
-            openModal(document.getElementById('viridiancitypokecenterModal'));
-        },
-        viridianPokeCenterExit: function () {
-            openModal(document.getElementById('viridiancityModal'));
-            closeModal(document.getElementById('viridiancitypokecenterModal'));
         },
         viridianPokeCenterOldGuy: function () {
             alert('I need a purpose');
@@ -1241,14 +1111,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else if (player.events.viridianDrunkard1) {
                 alert('Thanks for taking the time to talk to me. Many other NPCs will offer you rewards or quests but be careful, sometimes the order you talk to us matters and you might miss some stuff.');
             }
-        },
-        viridianPokeMart: function () {
-            closeModal(document.getElementById('viridiancityModal'));
-            openModal(document.getElementById('viridiancitypokemartModal'));
-        },
-        viridianPokeMartExit: function () {
-            openModal(document.getElementById('viridiancityModal'));
-            closeModal(document.getElementById('viridiancitypokemartModal'));
         },
         viridianPokeMartHat: function () {
             alert('I need a purpose');
@@ -1339,11 +1201,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 combatLoop.refresh();
             } else { alert('I give! You\'re good at this.'); }
         },
-        pewterToRoute2Top: function () {
-            openModal(document.getElementById('kantoroute2topModal'));
-            closeModal(document.getElementById('pewtercityModal'));
-            this.changeRoute('kroute2');
-        },
         pewterToRoute3West: function () {
             if (player.badges['Boulder Badge'] === true) {
                 openModal(document.getElementById('kantoroute3westModal'));
@@ -1412,32 +1269,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             openModal(document.getElementById('ceruleancityModal'));
             closeModal(document.getElementById('kantoroute4eastModal'));
         },
-        pewterPokeMart: function () {
-            closeModal(document.getElementById('pewtercityModal'));
-            openModal(document.getElementById('pewtercitypokemartModal'));
-        },
-        pewterPokeCenter: function () {
-            closeModal(document.getElementById('pewtercityModal'));
-            openModal(document.getElementById('pewtercitypokecenterModal'));
-        },
-        pewterGym: function () {
-            closeModal(document.getElementById('pewtercityModal'));
-            openModal(document.getElementById('pewtergymModal'));
-        },
-        exitPewterGym: function () {
-            closeModal(document.getElementById('pewtergymModal'));
-            openModal(document.getElementById('pewtercityModal'));
-        },
         pewterGymRef: function () {
             if (!player.badges['Boulder Badge']) {
                 alert('Brock is a master of ROCK type Pokemon. It would be a good idea to use WATER, GRASS, or FIGHTING types against him. Once you win, stop by the museum.');
             } else {
                 alert('Did you stop by the museum? If so, how did you like your surprise?');
             }
-        },
-        pewterMuseum: function () {
-            closeModal(document.getElementById('pewtercityModal'));
-            openModal(document.getElementById('pewtermuseumModal'));
         },
         kantoTest: function () {
             closeModal(document.getElementById('pallettownModal'));
@@ -1459,26 +1296,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 player.events.pewterMuseum1 = true;
             }
         },
-        ceruleanPokeMart: function () {
-            closeModal(document.getElementById('ceruleancityModal'));
-            openModal(document.getElementById('ceruleancitypokemartModal'));
-        },
-        ceruleanPokeCenter: function () {
-            closeModal(document.getElementById('ceruleancityModal'));
-            openModal(document.getElementById('ceruleancitypokecenterModal'));
-        },
-        ceruleanGym: function () {
-            closeModal(document.getElementById('ceruleancityModal'));
-            openModal(document.getElementById('ceruleangymModal'));
-        },
         exitCeruleanGym: function () {
             closeModal(document.getElementById('ceruleangymModal'));
             openModal(document.getElementById('ceruleancityModal'));
-        },
-        ceruleanCityToRoute24: function () {
-            this.changeRoute('kroute24');
-            closeModal(document.getElementById('ceruleancityModal'));
-            openModal(document.getElementById('kantoroute24Modal'));
         },
         billsHouse: function () {
             if (!player.events.billPressTheButton) {
@@ -1491,14 +1311,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         billsBackyard: function () {
             alert('The gate is locked. . . For now.');
-        },
-        vermilionPokeMart: function () {
-            closeModal(document.getElementById('vermilioncityModal'));
-            openModal(document.getElementById('vermilioncitypokemartModal'));
-        },
-        vermilionPokeCenter: function () {
-            closeModal(document.getElementById('vermilioncityModal'));
-            openModal(document.getElementById('vermilioncitypokecenterModal'));
         },
         vermilionSSANNE: function () {
             if (player.events.ssAnneTicket) {
@@ -1621,18 +1433,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         fuchsiaGym: function () {
             closeModal(document.getElementById('fuchsiacityModal'));
             openModal(document.getElementById('fuchsiagymModal'));
-        },
-        saffronPokeMart: function () {
-            closeModal(document.getElementById('saffroncityModal'));
-            openModal(document.getElementById('saffroncitypokemartModal'));
-        },
-        saffronPokeCenter: function () {
-            closeModal(document.getElementById('saffroncityModal'));
-            openModal(document.getElementById('saffroncitypokecenterModal'));
-        },
-        saffronGym: function () {
-            closeModal(document.getElementById('saffroncityModal'));
-            openModal(document.getElementById('saffrongymModal'));
         },
         lavenderPokeMart: function () {
             closeModal(document.getElementById('lavendertownModal'));

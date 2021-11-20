@@ -15,27 +15,27 @@
         <area
           shape="rect"
           coords="159,5,375,108"
-          onclick="userInteractions.pewterMuseum()"
+          onclick="userInteractions.moveModal('pewtermuseumModal', 'pewtercityModal')"
         >
         <area
           shape="rect"
           coords="199,286,269,349"
-          onclick="userInteractions.pewterPokeCenter()"
+          onclick="userInteractions.moveModal('pewtercitypokecenterModal', 'pewtercityModal')"
         >
         <area
           shape="rect"
           coords="344,200,403,256"
-          onclick="userInteractions.pewterPokeMart()"
+          onclick="userInteractions.moveModal('pewtercitypokemartModal', 'pewtercityModal')"
         >
         <area
           shape="rect"
           coords="158,157,256,230"
-          onclick="userInteractions.pewterGym()"
+          onclick="userInteractions.moveModal('pewtergymModal', 'pewtercityModal')"
         >
         <area
           shape="rect"
           coords="264,471,323,533"
-          onclick="userInteractions.pewterToRoute2Top()"
+          onclick="userInteractions.moveModalMoveRoute('kantoroute2topModal', 'pewtercityModal', 'kroute2')"
         >
         <area
           shape="rect"

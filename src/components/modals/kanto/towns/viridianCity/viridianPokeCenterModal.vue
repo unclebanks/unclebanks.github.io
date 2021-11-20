@@ -35,7 +35,7 @@
         <area
           shape="rect"
           coords="215,265,266,297"
-          onclick="userInteractions.viridianPokeCenterExit()"
+          onclick="userInteractions.moveModal('viridiancityModal', 'viridiancitypokecenterModal')"
         >
         <area
           shape="rect"

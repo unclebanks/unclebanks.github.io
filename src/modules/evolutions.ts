@@ -5,7 +5,7 @@ interface LevelEvolution {
     level: number;
 }
 
-interface regionEvolution {
+interface RegionEvolution {
     type: 'region';
     region: string;
 }
@@ -25,1379 +25,526 @@ interface TimeEvolution {
     time: [number, number];
 }
 
-type BasicEvolutionType = LevelEvolution | MegaEvolution | StoneEvolution | TimeEvolution | regionEvolution;
+type BasicEvolutionType = LevelEvolution | MegaEvolution | StoneEvolution | TimeEvolution | RegionEvolution;
 
 interface MultiEvolution {
     type: 'multi';
     requires: BasicEvolutionType[];
 }
 
-type EvolutionType = BasicEvolutionType | MultiEvolution;
+type AnyEvoType = BasicEvolutionType | MultiEvolution;
 
-interface Evolution {
+interface Evolution<EvoType> {
     to: PokemonNameType;
-    requires: EvolutionType;
+    requires: EvoType;
 }
 
-const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution[]>> = {
-    'Bulbasaur': [
-        { 'to': 'Ivysaur', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Ivysaur': [
-        { 'to': 'Venusaur', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Venusaur': [
-        { 'to': 'M-Venusaur', 'requires': { 'type': 'megaStone', 'megaStone': 'venusaurite' } },
-    ],
-    'Charmander': [
-        { 'to': 'Charmeleon', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Charmeleon': [
-        { 'to': 'Charizard', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
+// Helper functions for evo requirements
+const levelReq = (
+    level: number,
+): LevelEvolution => ({ type: 'level', level: level });
+
+const stoneReq = (
+    stone: string,
+): StoneEvolution => ({ type: 'stone', stone: stone });
+
+const megaReq = (
+    megaStone: string,
+): MegaEvolution => ({ type: 'megaStone', megaStone: megaStone });
+
+const regionReq = (
+    region: string,
+): RegionEvolution => ({ type: 'region', region: region });
+
+const timeReq = (
+    startHour: number,
+    endHour: number,
+): TimeEvolution => ({ type: 'time', time: [startHour, endHour] });
+
+const multiReq = (
+    ...reqs: BasicEvolutionType[]
+): MultiEvolution => ({ type: 'multi', requires: reqs });
+
+// Helper functions for creating evolution definitions
+const mkEvo = <T extends AnyEvoType>(
+    toPoke: PokemonNameType,
+    req: T,
+): Evolution<T> => ({ to: toPoke, requires: req });
+
+const levelEvo = (
+    toPoke: PokemonNameType,
+    atLevel: number,
+) => mkEvo(toPoke, levelReq(atLevel));
+
+const stoneEvo = (
+    toPoke: PokemonNameType,
+    stone: string,
+) => mkEvo(toPoke, stoneReq(stone));
+
+const megaEvo = (
+    toPoke: PokemonNameType,
+    megastone: string,
+) => mkEvo(toPoke, megaReq(megastone));
+
+// All evolution data
+const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution<AnyEvoType>[]>> = {
+    'Bulbasaur': [levelEvo('Ivysaur', 16)],
+    'Ivysaur': [levelEvo('Venusaur', 32)],
+    'Venusaur': [megaEvo('M-Venusaur', 'venusaurite')],
+    'Charmander': [levelEvo('Charmeleon', 16)],
+    'Charmeleon': [levelEvo('Charizard', 36)],
     'Charizard': [
-        { 'to': 'M-Charizard X', 'requires': { 'type': 'megaStone', 'megaStone': 'charizarditeX' } },
-        { 'to': 'M-Charizard Y', 'requires': { 'type': 'megaStone', 'megaStone': 'charizarditeY' } },
+        megaEvo('M-Charizard X', 'charizarditeX'),
+        megaEvo('M-Charizard Y', 'charizarditeY'),
     ],
-    'Squirtle': [
-        { 'to': 'Wartortle', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Wartortle': [
-        { 'to': 'Blastoise', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Blastoise': [
-        { 'to': 'M-Blastoise', 'requires': { 'type': 'megaStone', 'megaStone': 'blastoisinite' } },
-    ],
-    'Caterpie': [
-        { 'to': 'Metapod', 'requires': { 'type': 'level', 'level': 7 } },
-    ],
-    'Metapod': [
-        { 'to': 'Butterfree', 'requires': { 'type': 'level', 'level': 10 } },
-    ],
-    'Weedle': [
-        { 'to': 'Kakuna', 'requires': { 'type': 'level', 'level': 7 } },
-    ],
-    'Kakuna': [
-        { 'to': 'Beedrill', 'requires': { 'type': 'level', 'level': 10 } },
-    ],
-    'Pidgey': [
-        { 'to': 'Pidgeotto', 'requires': { 'type': 'level', 'level': 18 } },
-    ],
-    'Pidgeotto': [
-        { 'to': 'Pidgeot', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Pidgeot': [
-        { 'to': 'M-Pidgeot', 'requires': { 'type': 'megaStone', 'megaStone': 'pidgeotite' } },
-    ],
-    'Rattata': [
-        { 'to': 'Raticate', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Alolan Rattata': [
-        { 'to': 'Alolan Raticate', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Spearow': [
-        { 'to': 'Fearow', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Ekans': [
-        { 'to': 'Arbok', 'requires': { 'type': 'level', 'level': 22 } },
-    ],
-    'Pichu': [
-        { 'to': 'Pikachu', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
+    'Squirtle': [levelEvo('Wartortle', 16)],
+    'Wartortle': [levelEvo('Blastoise', 36)],
+    'Blastoise': [megaEvo('M-Blastoise', 'blastoisinite')],
+    'Caterpie': [levelEvo('Metapod', 7)],
+    'Metapod': [levelEvo('Butterfree', 10)],
+    'Weedle': [levelEvo('Kakuna', 7)],
+    'Kakuna': [levelEvo('Beedrill', 10)],
+    'Pidgey': [levelEvo('Pidgeotto', 18)],
+    'Pidgeotto': [levelEvo('Pidgeot', 36)],
+    'Pidgeot': [megaEvo('M-Pidgeot', 'pidgeotite')],
+    'Rattata': [levelEvo('Raticate', 20)],
+    'Alolan Rattata': [levelEvo('Alolan Raticate', 20)],
+    'Spearow': [levelEvo('Fearow', 20)],
+    'Ekans': [levelEvo('Arbok', 22)],
+    'Pichu': [stoneEvo('Pikachu', 'sootheBell')],
     'Pikachu': [
-        { 'to': 'Raichu', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
-        {
-            'to': 'Alolan Raichu',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'stone', 'stone': 'thunderStone' },
-                    { 'type': 'region', 'region': 'Alola' },
-                ],
-            },
-        },
+        stoneEvo('Raichu', 'thunderStone'),
+        mkEvo('Alolan Raichu', multiReq(stoneReq('thunderStone'), regionReq('Alola'))),
     ],
-    'Sandshrew': [
-        { 'to': 'Sandslash', 'requires': { 'type': 'level', 'level': 22 } },
-    ],
-    'Alolan Sandshrew': [
-        { 'to': 'Alolan Sandslash', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
-    ],
-    'Nidoran F': [
-        { 'to': 'Nidorina', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Nidorina': [
-        { 'to': 'Nidoqueen', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
-    ],
-    'Nidoran M': [
-        { 'to': 'Nidorino', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Nidorino': [
-        { 'to': 'Nidoking', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
-    ],
-    'Cleffa': [
-        { 'to': 'Clefairy', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Clefairy': [
-        { 'to': 'Clefable', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
-    ],
-    'Vulpix': [
-        { 'to': 'Ninetales', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
-    ],
-    'Alolan Vulpix': [
-        { 'to': 'Alolan Ninetales', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
-    ],
-    'Igglybuff': [
-        { 'to': 'Jigglypuff', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Jigglypuff': [
-        { 'to': 'Wigglytuff', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
-    ],
-    'Zubat': [
-        { 'to': 'Golbat', 'requires': { 'type': 'level', 'level': 22 } },
-    ],
-    'Golbat': [
-        { 'to': 'Crobat', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Oddish': [
-        { 'to': 'Gloom', 'requires': { 'type': 'level', 'level': 21 } },
-    ],
+    'Sandshrew': [levelEvo('Sandslash', 22)],
+    'Alolan Sandshrew': [stoneEvo('Alolan Sandslash', 'iceStone')],
+    'Nidoran F': [levelEvo('Nidorina', 16)],
+    'Nidorina': [stoneEvo('Nidoqueen', 'moonStone')],
+    'Nidoran M': [levelEvo('Nidorino', 16)],
+    'Nidorino': [stoneEvo('Nidoking', 'moonStone')],
+    'Cleffa': [stoneEvo('Clefairy', 'sootheBell')],
+    'Clefairy': [stoneEvo('Clefable', 'moonStone')],
+    'Vulpix': [stoneEvo('Ninetales', 'fireStone')],
+    'Alolan Vulpix': [stoneEvo('Alolan Ninetales', 'iceStone')],
+    'Igglybuff': [stoneEvo('Jigglypuff', 'sootheBell')],
+    'Jigglypuff': [stoneEvo('Wigglytuff', 'moonStone')],
+    'Zubat': [levelEvo('Golbat', 22)],
+    'Golbat': [stoneEvo('Crobat', 'sootheBell')],
+    'Oddish': [levelEvo('Gloom', 21)],
     'Gloom': [
-        { 'to': 'Vileplume', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-        { 'to': 'Bellossom', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
+        stoneEvo('Vileplume', 'leafStone'),
+        stoneEvo('Bellossom', 'sunStone'),
     ],
-    'Paras': [
-        { 'to': 'Parasect', 'requires': { 'type': 'level', 'level': 24 } },
-    ],
-    'Venonat': [
-        { 'to': 'Venomoth', 'requires': { 'type': 'level', 'level': 31 } },
-    ],
-    'Diglett': [
-        { 'to': 'Dugtrio', 'requires': { 'type': 'level', 'level': 26 } },
-    ],
-    'Alolan Diglett': [
-        { 'to': 'Alolan Dugtrio', 'requires': { 'type': 'level', 'level': 26 } },
-    ],
-    'Meowth': [
-        { 'to': 'Persian', 'requires': { 'type': 'level', 'level': 28 } },
-    ],
-    'Alolan Meowth': [
-        { 'to': 'Alolan Persian', 'requires': { 'type': 'level', 'level': 28 } },
-    ],
-    'Psyduck': [
-        { 'to': 'Golduck', 'requires': { 'type': 'level', 'level': 33 } },
-    ],
-    'Mankey': [
-        { 'to': 'Primeape', 'requires': { 'type': 'level', 'level': 28 } },
-    ],
-    'Growlithe': [
-        { 'to': 'Arcanine', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
-    ],
-    'Poliwag': [
-        { 'to': 'Poliwhirl', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
+    'Paras': [levelEvo('Parasect', 24)],
+    'Venonat': [levelEvo('Venomoth', 31)],
+    'Diglett': [levelEvo('Dugtrio', 26)],
+    'Alolan Diglett': [levelEvo('Alolan Dugtrio', 26)],
+    'Meowth': [levelEvo('Persian', 28)],
+    'Alolan Meowth': [levelEvo('Alolan Persian', 28)],
+    'Psyduck': [levelEvo('Golduck', 33)],
+    'Mankey': [levelEvo('Primeape', 28)],
+    'Growlithe': [stoneEvo('Arcanine', 'fireStone')],
+    'Poliwag': [levelEvo('Poliwhirl', 25)],
     'Poliwhirl': [
-        { 'to': 'Poliwrath', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
-        { 'to': 'Politoed', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
+        stoneEvo('Poliwrath', 'waterStone'),
+        stoneEvo('Politoed', 'sunStone'),
     ],
-    'Abra': [
-        { 'to': 'Kadabra', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Alakazam': [
-        { 'to': 'M-Alakazam', 'requires': { 'type': 'megaStone', 'megaStone': 'alakazite' } },
-    ],
-    'Kangaskhan': [
-        { 'to': 'M-Kangaskhan', 'requires': { 'type': 'megaStone', 'megaStone': 'kangaskhanite' } },
-    ],
-    'Pinsir': [
-        { 'to': 'M-Pinsir', 'requires': { 'type': 'megaStone', 'megaStone': 'pinsirite' } },
-    ],
-    'Machop': [
-        { 'to': 'Machoke', 'requires': { 'type': 'level', 'level': 28 } },
-    ],
-    'Bellsprout': [
-        { 'to': 'Weepinbell', 'requires': { 'type': 'level', 'level': 21 } },
-    ],
-    'Weepinbell': [
-        { 'to': 'Victreebel', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-    ],
-    'Tentacool': [
-        { 'to': 'Tentacruel', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Geodude': [
-        { 'to': 'Graveler', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Alolan Geodude': [
-        { 'to': 'Alolan Graveler', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Alolan Graveler': [
-        { 'to': 'Alolan Golem', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Ponyta': [
-        { 'to': 'Rapidash', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Slowpoke': [
-        { 'to': 'Slowbro', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
+    'Abra': [levelEvo('Kadabra', 16)],
+    'Alakazam': [megaEvo('M-Alakazam', 'alakazite')],
+    'Kangaskhan': [megaEvo('M-Kangaskhan', 'kangaskhanite')],
+    'Pinsir': [megaEvo('M-Pinsir', 'pinsirite')],
+    'Machop': [levelEvo('Machoke', 28)],
+    'Bellsprout': [levelEvo('Weepinbell', 21)],
+    'Weepinbell': [stoneEvo('Victreebel', 'leafStone')],
+    'Tentacool': [levelEvo('Tentacruel', 30)],
+    'Geodude': [levelEvo('Graveler', 25)],
+    'Alolan Geodude': [levelEvo('Alolan Graveler', 25)],
+    'Alolan Graveler': [levelEvo('Alolan Golem', 40)],
+    'Ponyta': [levelEvo('Rapidash', 40)],
+    'Slowpoke': [levelEvo('Slowbro', 37)],
     'Slowbro': [
-        { 'to': 'M-Slowbro', 'requires': { 'type': 'megaStone', 'megaStone': 'slowbronite' } },
-        { 'to': 'Slowking', 'requires': { 'type': 'stone', 'stone': 'kingsRock' } },
+        megaEvo('M-Slowbro', 'slowbronite'),
+        stoneEvo('Slowking', 'kingsRock'),
     ],
-    'Magnemite': [
-        { 'to': 'Magneton', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Doduo': [
-        { 'to': 'Dodrio', 'requires': { 'type': 'level', 'level': 31 } },
-    ],
-    'Seel': [
-        { 'to': 'Dewgong', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Grimer': [
-        { 'to': 'Muk', 'requires': { 'type': 'level', 'level': 38 } },
-    ],
-    'Alolan Grimer': [
-        { 'to': 'Alolan Muk', 'requires': { 'type': 'level', 'level': 38 } },
-    ],
-    'Shellder': [
-        { 'to': 'Cloyster', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
-    ],
-    'Gastly': [
-        { 'to': 'Haunter', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Gengar': [
-        { 'to': 'M-Gengar', 'requires': { 'type': 'megaStone', 'megaStone': 'gengarite' } },
-    ],
-    'Drowzee': [
-        { 'to': 'Hypno', 'requires': { 'type': 'level', 'level': 26 } },
-    ],
-    'Krabby': [
-        { 'to': 'Kingler', 'requires': { 'type': 'level', 'level': 28 } },
-    ],
-    'Voltorb': [
-        { 'to': 'Electrode', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
+    'Magnemite': [levelEvo('Magneton', 30)],
+    'Doduo': [levelEvo('Dodrio', 31)],
+    'Seel': [levelEvo('Dewgong', 34)],
+    'Grimer': [levelEvo('Muk', 38)],
+    'Alolan Grimer': [levelEvo('Alolan Muk', 38)],
+    'Shellder': [stoneEvo('Cloyster', 'waterStone')],
+    'Gastly': [levelEvo('Haunter', 25)],
+    'Gengar': [megaEvo('M-Gengar', 'gengarite')],
+    'Drowzee': [levelEvo('Hypno', 26)],
+    'Krabby': [levelEvo('Kingler', 28)],
+    'Voltorb': [levelEvo('Electrode', 30)],
     'Exeggcute': [
-        { 'to': 'Exeggutor', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-        {
-            'to': 'Alolan Exeggutor',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'stone', 'stone': 'leafStone' },
-                    { 'type': 'region', 'region': 'Alola' },
-                ],
-            },
-        },
+        stoneEvo('Exeggutor', 'leafStone'),
+        mkEvo('Alolan Exeggutor', multiReq(stoneReq('leafStone'), regionReq('Alola'))),
     ],
     'Cubone': [
-        { 'to': 'Marowak', 'requires': { 'type': 'level', 'level': 28 } },
-        {
-            'to': 'Alolan Marowak',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'level', 'level': 28 },
-                    { 'type': 'region', 'region': 'Alola' },
-                ],
-            },
-        },
+        levelEvo('Marowak', 28),
+        mkEvo('Alolan Marowak', multiReq(levelReq(28), regionReq('Alola'))),
     ],
-    'Koffing': [
-        { 'to': 'Weezing', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Rhyhorn': [
-        { 'to': 'Rhydon', 'requires': { 'type': 'level', 'level': 42 } },
-    ],
-    'Horsea': [
-        { 'to': 'Seadra', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Seadra': [
-        { 'to': 'Kingdra', 'requires': { 'type': 'stone', 'stone': 'dragonScale' } },
-    ],
-    'Goldeen': [
-        { 'to': 'Seaking', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Staryu': [
-        { 'to': 'Starmie', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
-    ],
-    'Magikarp': [
-        { 'to': 'Gyarados', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Gyarados': [
-        { 'to': 'M-Gyarados', 'requires': { 'type': 'megaStone', 'megaStone': 'gyaradosite' } },
-    ],
-    'Aerodactyl': [
-        { 'to': 'M-Aerodactyl', 'requires': { 'type': 'megaStone', 'megaStone': 'aerodactylite' } },
-    ],
+    'Koffing': [levelEvo('Weezing', 35)],
+    'Rhyhorn': [levelEvo('Rhydon', 42)],
+    'Horsea': [levelEvo('Seadra', 32)],
+    'Seadra': [stoneEvo('Kingdra', 'dragonScale')],
+    'Goldeen': [levelEvo('Seaking', 32)],
+    'Staryu': [stoneEvo('Starmie', 'waterStone')],
+    'Magikarp': [levelEvo('Gyarados', 20)],
+    'Gyarados': [megaEvo('M-Gyarados', 'gyaradosite')],
+    'Aerodactyl': [megaEvo('M-Aerodactyl', 'aerodactylite')],
     'Eevee': [
-        { 'to': 'Flareon', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
-        {
-            'to': 'Espeon',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'level', 'level': 30 },
-                    { 'type': 'time', 'time': [6, 18] },
-                ],
-            },
-        },
-        {
-            'to': 'Umbreon',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'level', 'level': 30 },
-                    { 'type': 'time', 'time': [18, 6] },
-                ],
-            },
-        },
-        { 'to': 'Jolteon', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
-        { 'to': 'Vaporeon', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
-        { 'to': 'Leafeon', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-        { 'to': 'Glaceon', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
+        stoneEvo('Flareon', 'fireStone'),
+        mkEvo('Espeon', multiReq(levelReq(30), timeReq(6, 18))),
+        mkEvo('Umbreon', multiReq(levelReq(30), timeReq(18, 6))),
+        stoneEvo('Jolteon', 'thunderStone'),
+        stoneEvo('Vaporeon', 'waterStone'),
+        stoneEvo('Leafeon', 'leafStone'),
+        stoneEvo('Glaceon', 'iceStone'),
     ],
-    'Omanyte': [
-        { 'to': 'Omastar', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Kabuto': [
-        { 'to': 'Kabutops', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Dratini': [
-        { 'to': 'Dragonair', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Dragonair': [
-        { 'to': 'Dragonite', 'requires': { 'type': 'level', 'level': 55 } },
-    ],
+    'Omanyte': [levelEvo('Omastar', 40)],
+    'Kabuto': [levelEvo('Kabutops', 40)],
+    'Dratini': [levelEvo('Dragonair', 30)],
+    'Dragonair': [levelEvo('Dragonite', 55)],
     'Mewtwo': [
-        { 'to': 'M-Mewtwo X', 'requires': { 'type': 'megaStone', 'megaStone': 'mewtwoniteX' } },
-        { 'to': 'M-Mewtwo Y', 'requires': { 'type': 'megaStone', 'megaStone': 'mewtwoniteY' } },
-    ],
-    'Chikorita': [
-        { 'to': 'Bayleef', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Bayleef': [
-        { 'to': 'Meganium', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Cyndaquil': [
-        { 'to': 'Quilava', 'requires': { 'type': 'level', 'level': 14 } },
-    ],
-    'Quilava': [
-        { 'to': 'Typhlosion', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Totodile': [
-        { 'to': 'Croconaw', 'requires': { 'type': 'level', 'level': 18 } },
-    ],
-    'Croconaw': [
-        { 'to': 'Feraligatr', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Sentret': [
-        { 'to': 'Furret', 'requires': { 'type': 'level', 'level': 15 } },
-    ],
-    'Hoothoot': [
-        { 'to': 'Noctowl', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Ledyba': [
-        { 'to': 'Ledian', 'requires': { 'type': 'level', 'level': 18 } },
-    ],
-    'Spinarak': [
-        { 'to': 'Ariados', 'requires': { 'type': 'level', 'level': 22 } },
-    ],
-    'Chinchou': [
-        { 'to': 'Lanturn', 'requires': { 'type': 'level', 'level': 27 } },
-    ],
-    'Togepi': [
-        { 'to': 'Togetic', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Togetic': [
-        { 'to': 'Togekiss', 'requires': { 'type': 'stone', 'stone': 'shinyStone' } },
-    ],
-    'Natu': [
-        { 'to': 'Xatu', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Mareep': [
-        { 'to': 'Flaaffy', 'requires': { 'type': 'level', 'level': 15 } },
-    ],
-    'Flaaffy': [
-        { 'to': 'Ampharos', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Ampharos': [
-        { 'to': 'M-Ampharos', 'requires': { 'type': 'megaStone', 'megaStone': 'ampharosite' } },
-    ],
-    'Azurill': [
-        { 'to': 'Marill', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Marill': [
-        { 'to': 'Azumarill', 'requires': { 'type': 'level', 'level': 18 } },
-    ],
-    'Hoppip': [
-        { 'to': 'Skiploom', 'requires': { 'type': 'level', 'level': 18 } },
-    ],
-    'Skiploom': [
-        { 'to': 'Jumpluff', 'requires': { 'type': 'level', 'level': 27 } },
-    ],
-    'Bonsly': [
-        { 'to': 'Sudowoodo', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Porygon': [
-        { 'to': 'Porygon2', 'requires': { 'type': 'stone', 'stone': 'upGrade' } },
-    ],
-    'Scyther': [
-        { 'to': 'Scizor', 'requires': { 'type': 'stone', 'stone': 'metalCoat' } },
-    ],
-    'Heracross': [
-        { 'to': 'M-Heracross', 'requires': { 'type': 'megaStone', 'megaStone': 'heracronite' } },
-    ],
-    'Scizor': [
-        { 'to': 'M-Scizor', 'requires': { 'type': 'megaStone', 'megaStone': 'scizorite' } },
-    ],
-    'Sunkern': [
-        { 'to': 'Sunflora', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
-    ],
-    'Wooper': [
-        { 'to': 'Quagsire', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Pineco': [
-        { 'to': 'Forretress', 'requires': { 'type': 'level', 'level': 31 } },
-    ],
-    'Onix': [
-        { 'to': 'Steelix', 'requires': { 'type': 'stone', 'stone': 'metalCoat' } },
-    ],
-    'Steelix': [
-        { 'to': 'M-Steelix', 'requires': { 'type': 'megaStone', 'megaStone': 'steelixite' } },
-    ],
-    'Snubbull': [
-        { 'to': 'Granbull', 'requires': { 'type': 'level', 'level': 23 } },
-    ],
-    'Teddiursa': [
-        { 'to': 'Ursaring', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Slugma': [
-        { 'to': 'Magcargo', 'requires': { 'type': 'level', 'level': 38 } },
-    ],
-    'Swinub': [
-        { 'to': 'Piloswine', 'requires': { 'type': 'level', 'level': 33 } },
-    ],
-    'Remoraid': [
-        { 'to': 'Octillery', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Houndour': [
-        { 'to': 'Houndoom', 'requires': { 'type': 'level', 'level': 24 } },
-    ],
-    'Houndoom': [
-        { 'to': 'M-Houndoom', 'requires': { 'type': 'megaStone', 'megaStone': 'houndoominite' } },
-    ],
-    'Phanpy': [
-        { 'to': 'Donphan', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Tyrogue': [
-        { 'to': 'Hitmontop', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Larvitar': [
-        { 'to': 'Pupitar', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Pupitar': [
-        { 'to': 'Tyranitar', 'requires': { 'type': 'level', 'level': 55 } },
-    ],
-    'Tyranitar': [
-        { 'to': 'M-Tyranitar', 'requires': { 'type': 'megaStone', 'megaStone': 'tyranitarite' } },
-    ],
-    'Landorus': [
-        { 'to': 'Landorus-T', 'requires': { 'type': 'stone', 'stone': 'revealGlass' } },
-    ],
-    'Tornadus': [
-        { 'to': 'Tornadus-T', 'requires': { 'type': 'stone', 'stone': 'revealGlass' } },
-    ],
-    'Thundurus': [
-        { 'to': 'Thundurus-T', 'requires': { 'type': 'stone', 'stone': 'revealGlass' } },
-    ],
-    'Treecko': [
-        { 'to': 'Grovyle', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Grovyle': [
-        { 'to': 'Sceptile', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Sceptile': [
-        { 'to': 'M-Sceptile', 'requires': { 'type': 'megaStone', 'megaStone': 'sceptilite' } },
-    ],
-    'Torchic': [
-        { 'to': 'Combusken', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Combusken': [
-        { 'to': 'Blaziken', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Blaziken': [
-        { 'to': 'M-Blaziken', 'requires': { 'type': 'megaStone', 'megaStone': 'blazikenite' } },
-    ],
-    'Mudkip': [
-        { 'to': 'Marshtomp', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Marshtomp': [
-        { 'to': 'Swampert', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Swampert': [
-        { 'to': 'M-Swampert', 'requires': { 'type': 'megaStone', 'megaStone': 'swampertite' } },
-    ],
-    'Poochyena': [
-        { 'to': 'Mightyena', 'requires': { 'type': 'level', 'level': 18 } },
-    ],
-    'Zigzagoon': [
-        { 'to': 'Linoone', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Wurmple': [
-        { 'to': 'Silcoon', 'requires': { 'type': 'level', 'level': 7 } },
-    ],
-    'Silcoon': [
-        { 'to': 'Beautifly', 'requires': { 'type': 'level', 'level': 10 } },
-    ],
-    'Lotad': [
-        { 'to': 'Lombre', 'requires': { 'type': 'level', 'level': 14 } },
-    ],
-    'Lombre': [
-        { 'to': 'Ludicolo', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
-    ],
-    'Seedot': [
-        { 'to': 'Nuzleaf', 'requires': { 'type': 'level', 'level': 14 } },
-    ],
-    'Nuzleaf': [
-        { 'to': 'Shiftry', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-    ],
-    'Taillow': [
-        { 'to': 'Swellow', 'requires': { 'type': 'level', 'level': 22 } },
-    ],
-    'Wingull': [
-        { 'to': 'Pelipper', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Ralts': [
-        { 'to': 'Kirlia', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
+        megaEvo('M-Mewtwo X', 'mewtwoniteX'),
+        megaEvo('M-Mewtwo Y', 'mewtwoniteY'),
+    ],
+    'Chikorita': [levelEvo('Bayleef', 16)],
+    'Bayleef': [levelEvo('Meganium', 32)],
+    'Cyndaquil': [levelEvo('Quilava', 14)],
+    'Quilava': [levelEvo('Typhlosion', 36)],
+    'Totodile': [levelEvo('Croconaw', 18)],
+    'Croconaw': [levelEvo('Feraligatr', 30)],
+    'Sentret': [levelEvo('Furret', 15)],
+    'Hoothoot': [levelEvo('Noctowl', 20)],
+    'Ledyba': [levelEvo('Ledian', 18)],
+    'Spinarak': [levelEvo('Ariados', 22)],
+    'Chinchou': [levelEvo('Lanturn', 27)],
+    'Togepi': [stoneEvo('Togetic', 'sootheBell')],
+    'Togetic': [stoneEvo('Togekiss', 'shinyStone')],
+    'Natu': [levelEvo('Xatu', 25)],
+    'Mareep': [levelEvo('Flaaffy', 15)],
+    'Flaaffy': [levelEvo('Ampharos', 30)],
+    'Ampharos': [megaEvo('M-Ampharos', 'ampharosite')],
+    'Azurill': [stoneEvo('Marill', 'sootheBell')],
+    'Marill': [levelEvo('Azumarill', 18)],
+    'Hoppip': [levelEvo('Skiploom', 18)],
+    'Skiploom': [levelEvo('Jumpluff', 27)],
+    'Bonsly': [stoneEvo('Sudowoodo', 'sootheBell')],
+    'Porygon': [stoneEvo('Porygon2', 'upGrade')],
+    'Scyther': [stoneEvo('Scizor', 'metalCoat')],
+    'Heracross': [megaEvo('M-Heracross', 'heracronite')],
+    'Scizor': [megaEvo('M-Scizor', 'scizorite')],
+    'Sunkern': [stoneEvo('Sunflora', 'sunStone')],
+    'Wooper': [levelEvo('Quagsire', 20)],
+    'Pineco': [levelEvo('Forretress', 31)],
+    'Onix': [stoneEvo('Steelix', 'metalCoat')],
+    'Steelix': [megaEvo('M-Steelix', 'steelixite')],
+    'Snubbull': [levelEvo('Granbull', 23)],
+    'Teddiursa': [levelEvo('Ursaring', 30)],
+    'Slugma': [levelEvo('Magcargo', 38)],
+    'Swinub': [levelEvo('Piloswine', 33)],
+    'Remoraid': [levelEvo('Octillery', 25)],
+    'Houndour': [levelEvo('Houndoom', 24)],
+    'Houndoom': [megaEvo('M-Houndoom', 'houndoominite')],
+    'Phanpy': [levelEvo('Donphan', 25)],
+    'Tyrogue': [levelEvo('Hitmontop', 20)],
+    'Larvitar': [levelEvo('Pupitar', 30)],
+    'Pupitar': [levelEvo('Tyranitar', 55)],
+    'Tyranitar': [megaEvo('M-Tyranitar', 'tyranitarite')],
+    'Landorus': [stoneEvo('Landorus-T', 'revealGlass')],
+    'Tornadus': [stoneEvo('Tornadus-T', 'revealGlass')],
+    'Thundurus': [stoneEvo('Thundurus-T', 'revealGlass')],
+    'Treecko': [levelEvo('Grovyle', 16)],
+    'Grovyle': [levelEvo('Sceptile', 36)],
+    'Sceptile': [megaEvo('M-Sceptile', 'sceptilite')],
+    'Torchic': [levelEvo('Combusken', 16)],
+    'Combusken': [levelEvo('Blaziken', 36)],
+    'Blaziken': [megaEvo('M-Blaziken', 'blazikenite')],
+    'Mudkip': [levelEvo('Marshtomp', 16)],
+    'Marshtomp': [levelEvo('Swampert', 36)],
+    'Swampert': [megaEvo('M-Swampert', 'swampertite')],
+    'Poochyena': [levelEvo('Mightyena', 18)],
+    'Zigzagoon': [levelEvo('Linoone', 20)],
+    'Wurmple': [levelEvo('Silcoon', 7)],
+    'Silcoon': [levelEvo('Beautifly', 10)],
+    'Lotad': [levelEvo('Lombre', 14)],
+    'Lombre': [stoneEvo('Ludicolo', 'waterStone')],
+    'Seedot': [levelEvo('Nuzleaf', 14)],
+    'Nuzleaf': [stoneEvo('Shiftry', 'leafStone')],
+    'Taillow': [levelEvo('Swellow', 22)],
+    'Wingull': [levelEvo('Pelipper', 25)],
+    'Ralts': [levelEvo('Kirlia', 20)],
     'Kirlia': [
-        { 'to': 'Gardevoir', 'requires': { 'type': 'level', 'level': 30 } },
-        { 'to': 'Gallade', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Gardevoir': [
-        { 'to': 'M-Gardevoir', 'requires': { 'type': 'megaStone', 'megaStone': 'gardevoirite' } },
-    ],
-    'Gallade': [
-        { 'to': 'M-Gallade', 'requires': { 'type': 'megaStone', 'megaStone': 'galladite' } },
-    ],
-    'Sableye': [
-        { 'to': 'M-Sableye', 'requires': { 'type': 'megaStone', 'megaStone': 'sablenite' } },
-    ],
-    'Mawile': [
-        { 'to': 'M-Mawile', 'requires': { 'type': 'megaStone', 'megaStone': 'mawilite' } },
-    ],
-    'Surskit': [
-        { 'to': 'Masquerain', 'requires': { 'type': 'level', 'level': 22 } },
-    ],
-    'Shroomish': [
-        { 'to': 'Breloom', 'requires': { 'type': 'level', 'level': 23 } },
-    ],
-    'Slakoth': [
-        { 'to': 'Vigoroth', 'requires': { 'type': 'level', 'level': 18 } },
-    ],
-    'Vigoroth': [
-        { 'to': 'Slaking', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Nincada': [
-        { 'to': 'Ninjask', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Whismur': [
-        { 'to': 'Loudred', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Loudred': [
-        { 'to': 'Exploud', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Makuhita': [
-        { 'to': 'Hariyama', 'requires': { 'type': 'level', 'level': 24 } },
-    ],
-    'Nosepass': [
-        { 'to': 'Probopass', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Skitty': [
-        { 'to': 'Delcatty', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
-    ],
-    'Aron': [
-        { 'to': 'Lairon', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Lairon': [
-        { 'to': 'Aggron', 'requires': { 'type': 'level', 'level': 42 } },
-    ],
-    'Aggron': [
-        { 'to': 'M-Aggron', 'requires': { 'type': 'megaStone', 'megaStone': 'aggronite' } },
-    ],
-    'Meditite': [
-        { 'to': 'Medicham', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Medicham': [
-        { 'to': 'M-Medicham', 'requires': { 'type': 'megaStone', 'megaStone': 'medichamite' } },
-    ],
-    'Electrike': [
-        { 'to': 'Manectric', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Manectric': [
-        { 'to': 'M-Manectric', 'requires': { 'type': 'megaStone', 'megaStone': 'manectite' } },
-    ],
-    'Budew': [
-        { 'to': 'Roselia', 'requires': { 'type': 'level', 'level': 12 } },
-    ],
-    'Roselia': [
-        { 'to': 'Roserade', 'requires': { 'type': 'level', 'level': 27 } },
-    ],
-    'Gulpin': [
-        { 'to': 'Swalot', 'requires': { 'type': 'level', 'level': 26 } },
-    ],
-    'Carvanha': [
-        { 'to': 'Sharpedo', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Sharpedo': [
-        { 'to': 'M-Sharpedo', 'requires': { 'type': 'megaStone', 'megaStone': 'sharpedonite' } },
-    ],
-    'Wailmer': [
-        { 'to': 'Wailord', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Numel': [
-        { 'to': 'Camerupt', 'requires': { 'type': 'level', 'level': 33 } },
-    ],
-    'Camerupt': [
-        { 'to': 'M-Camerupt', 'requires': { 'type': 'megaStone', 'megaStone': 'cameruptite' } },
-    ],
-    'Spoink': [
-        { 'to': 'Grumpig', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Trapinch': [
-        { 'to': 'Vibrava', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Vibrava': [
-        { 'to': 'Flygon', 'requires': { 'type': 'level', 'level': 45 } },
-    ],
-    'Cacnea': [
-        { 'to': 'Cacturne', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Swablu': [
-        { 'to': 'Altaria', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Altaria': [
-        { 'to': 'M-Altaria', 'requires': { 'type': 'megaStone', 'megaStone': 'altarianite' } },
-    ],
-    'Barboach': [
-        { 'to': 'Whiscash', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Corphish': [
-        { 'to': 'Crawdaunt', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Baltoy': [
-        { 'to': 'Claydol', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Lileep': [
-        { 'to': 'Cradily', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Anorith': [
-        { 'to': 'Armaldo', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Feebas': [
-        { 'to': 'Milotic', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Shuppet': [
-        { 'to': 'Banette', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Banette': [
-        { 'to': 'M-Banette', 'requires': { 'type': 'megaStone', 'megaStone': 'banettite' } },
-    ],
-    'Absol': [
-        { 'to': 'M-Absol', 'requires': { 'type': 'megaStone', 'megaStone': 'absolite' } },
-    ],
-    'Duskull': [
-        { 'to': 'Dusclops', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Dusclops': [
-        { 'to': 'Dusknoir', 'requires': { 'type': 'level', 'level': 50 } },
-    ],
-    'Chingling': [
-        { 'to': 'Chimecho', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Snorunt': [
-        { 'to': 'Glalie', 'requires': { 'type': 'level', 'level': 42 } },
-    ],
-    'Glalie': [
-        { 'to': 'M-Glalie', 'requires': { 'type': 'megaStone', 'megaStone': 'glalitite' } },
-    ],
-    'Spheal': [
-        { 'to': 'Sealeo', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Sealeo': [
-        { 'to': 'Walrein', 'requires': { 'type': 'level', 'level': 44 } },
-    ],
-    'Clamperl': [
-        { 'to': 'Gorebyss', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Bagon': [
-        { 'to': 'Shelgon', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Shelgon': [
-        { 'to': 'Salamence', 'requires': { 'type': 'level', 'level': 50 } },
-    ],
-    'Salamence': [
-        { 'to': 'M-Salamence', 'requires': { 'type': 'megaStone', 'megaStone': 'salamencite' } },
-    ],
-    'Beldum': [
-        { 'to': 'Metang', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Metang': [
-        { 'to': 'Metagross', 'requires': { 'type': 'level', 'level': 45 } },
-    ],
-    'Metagross': [
-        { 'to': 'M-Metagross', 'requires': { 'type': 'megaStone', 'megaStone': 'metagrossite' } },
-    ],
-    'Latias': [
-        { 'to': 'M-Latias', 'requires': { 'type': 'megaStone', 'megaStone': 'latiasite' } },
-    ],
-    'Latios': [
-        { 'to': 'M-Latios', 'requires': { 'type': 'megaStone', 'megaStone': 'latiosite' } },
-    ],
-    'Rayquaza': [
-        { 'to': 'M-Rayquaza', 'requires': { 'type': 'megaStone', 'megaStone': 'rayquazite' } },
-    ],
-    'Lopunny': [
-        { 'to': 'M-Lopunny', 'requires': { 'type': 'megaStone', 'megaStone': 'lopunnite' } },
-    ],
-    'Gible': [
-        { 'to': 'Gabite', 'requires': { 'type': 'level', 'level': 24 } },
-    ],
-    'Gabite': [
-        { 'to': 'Garchomp', 'requires': { 'type': 'level', 'level': 48 } },
-    ],
-    'Garchomp': [
-        { 'to': 'M-Garchomp', 'requires': { 'type': 'megaStone', 'megaStone': 'garchompite' } },
-    ],
-    'Lucario': [
-        { 'to': 'M-Lucario', 'requires': { 'type': 'megaStone', 'megaStone': 'lucarionite' } },
-    ],
-    'Abomasnow': [
-        { 'to': 'M-Abomasnow', 'requires': { 'type': 'megaStone', 'megaStone': 'abomasite' } },
-    ],
-    'Snivy': [
-        { 'to': 'Servine', 'requires': { 'type': 'level', 'level': 17 } },
-    ],
-    'Servine': [
-        { 'to': 'Serperior', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Tepig': [
-        { 'to': 'Pignite', 'requires': { 'type': 'level', 'level': 17 } },
-    ],
-    'Pignite': [
-        { 'to': 'Emboar', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Oshawott': [
-        { 'to': 'Dewott', 'requires': { 'type': 'level', 'level': 17 } },
-    ],
-    'Dewott': [
-        { 'to': 'Samurott', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Patrat': [
-        { 'to': 'Watchog', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Purrloin': [
-        { 'to': 'Liepard', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Pidove': [
-        { 'to': 'Tranquill', 'requires': { 'type': 'level', 'level': 21 } },
-    ],
-    'Tranquill': [
-        { 'to': 'Unfezant', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Sewaddle': [
-        { 'to': 'Swadloon', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Swadloon': [
-        { 'to': 'Leavanny', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Lillipup': [
-        { 'to': 'Herdier', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Herdier': [
-        { 'to': 'Stoutland', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Pansage': [
-        { 'to': 'Simisage', 'requires': { 'type': 'stone', 'stone': 'leafStone' } },
-    ],
-    'Pansear': [
-        { 'to': 'Simisear', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
-    ],
-    'Panpour': [
-        { 'to': 'Simipour', 'requires': { 'type': 'stone', 'stone': 'waterStone' } },
-    ],
-    'Woobat': [
-        { 'to': 'Swoobat', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Venipede': [
-        { 'to': 'Whirlipede', 'requires': { 'type': 'level', 'level': 22 } },
-    ],
-    'Whirlipede': [
-        { 'to': 'Scolipede', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Roggenrola': [
-        { 'to': 'Boldore', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Boldore': [
-        { 'to': 'Gigalith', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Timburr': [
-        { 'to': 'Gurdurr', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Gurdurr': [
-        { 'to': 'Conkeldurr', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Drilbur': [
-        { 'to': 'Excadrill', 'requires': { 'type': 'level', 'level': 31 } },
-    ],
-    'Cottonee': [
-        { 'to': 'Whimsicott', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
-    ],
-    'Petilil': [
-        { 'to': 'Lilligant', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
-    ],
-    'Munna': [
-        { 'to': 'Musharna', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
-    ],
-    'Sandile': [
-        { 'to': 'Krokorok', 'requires': { 'type': 'level', 'level': 29 } },
-    ],
-    'Krokorok': [
-        { 'to': 'Krookodile', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Darumaka': [
-        { 'to': 'Darmanitan', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Trubbish': [
-        { 'to': 'Garbodor', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Minccino': [
-        { 'to': 'Cinccino', 'requires': { 'type': 'stone', 'stone': 'shinyStone' } },
-    ],
-    'Rufflet': [
-        { 'to': 'Braviary', 'requires': { 'type': 'level', 'level': 54 } },
-    ],
-    'Vullaby': [
-        { 'to': 'Mandibuzz', 'requires': { 'type': 'level', 'level': 54 } },
-    ],
-    'Dwebble': [
-        { 'to': 'Crustle', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Scraggy': [
-        { 'to': 'Scrafty', 'requires': { 'type': 'level', 'level': 39 } },
-    ],
-    'Yamask': [
-        { 'to': 'Cofagrigus', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Tirtouga': [
-        { 'to': 'Carracosta', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Archen': [
-        { 'to': 'Archeops', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Klink': [
-        { 'to': 'Klang', 'requires': { 'type': 'level', 'level': 38 } },
-    ],
-    'Klang': [
-        { 'to': 'Klinklang', 'requires': { 'type': 'level', 'level': 49 } },
-    ],
-    'Gothita': [
-        { 'to': 'Gothorita', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Gothorita': [
-        { 'to': 'Gothitelle', 'requires': { 'type': 'level', 'level': 41 } },
-    ],
-    'Solosis': [
-        { 'to': 'Duosion', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Duosion': [
-        { 'to': 'Reuniclus', 'requires': { 'type': 'level', 'level': 41 } },
-    ],
-    'Blitzle': [
-        { 'to': 'Zebstrika', 'requires': { 'type': 'level', 'level': 27 } },
-    ],
-    'Zorua': [
-        { 'to': 'Zoroark', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Ducklett': [
-        { 'to': 'Swanna', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Karrablast': [
-        { 'to': 'Escavalier', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Shelmet': [
-        { 'to': 'Accelgor', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Deerling': [
-        { 'to': 'Sawsbuck', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Foongus': [
-        { 'to': 'Amoonguss', 'requires': { 'type': 'level', 'level': 39 } },
-    ],
-    'Larvesta': [
-        { 'to': 'Volcarona', 'requires': { 'type': 'level', 'level': 59 } },
-    ],
-    'Joltik': [
-        { 'to': 'Galvantula', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Ferroseed': [
-        { 'to': 'Ferrothorn', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Tynamo': [
-        { 'to': 'Eelektrik', 'requires': { 'type': 'level', 'level': 39 } },
-    ],
-    'Axew': [
-        { 'to': 'Fraxure', 'requires': { 'type': 'level', 'level': 38 } },
-    ],
-    'Fraxure': [
-        { 'to': 'Haxorus', 'requires': { 'type': 'level', 'level': 48 } },
-    ],
-    'Eelektrik': [
-        { 'to': 'Eelektross', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
-    ],
-    'Frillish': [
-        { 'to': 'Jellicent', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Elgyem': [
-        { 'to': 'Beheeyem', 'requires': { 'type': 'level', 'level': 42 } },
-    ],
-    'Litwick': [
-        { 'to': 'Lampent', 'requires': { 'type': 'level', 'level': 41 } },
-    ],
-    'Lampent': [
-        { 'to': 'Chandelure', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
-    ],
-    'Cubchoo': [
-        { 'to': 'Beartic', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Mienfoo': [
-        { 'to': 'Mienshao', 'requires': { 'type': 'level', 'level': 50 } },
-    ],
-    'Pawniard': [
-        { 'to': 'Bisharp', 'requires': { 'type': 'level', 'level': 52 } },
-    ],
-    'Tympole': [
-        { 'to': 'Palpitoad', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Palpitoad': [
-        { 'to': 'Seismitoad', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Vanillite': [
-        { 'to': 'Vanillish', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Vanillish': [
-        { 'to': 'Vanilluxe', 'requires': { 'type': 'level', 'level': 47 } },
-    ],
-    'Golett': [
-        { 'to': 'Golurk', 'requires': { 'type': 'level', 'level': 43 } },
-    ],
-    'Deino': [
-        { 'to': 'Zweilous', 'requires': { 'type': 'level', 'level': 50 } },
-    ],
-    'Zweilous': [
-        { 'to': 'Hydreigon', 'requires': { 'type': 'level', 'level': 64 } },
-    ],
-    'Audino': [
-        { 'to': 'M-Audino', 'requires': { 'type': 'megaStone', 'megaStone': 'audinite' } },
-    ],
-    'Diancie': [
-        { 'to': 'M-Diancie', 'requires': { 'type': 'megaStone', 'megaStone': 'diancite' } },
-    ],
-    'Froakie': [
-        { 'to': 'Frogadier', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Frogadier': [
-        { 'to': 'Greninja', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Fennekin': [
-        { 'to': 'Braixen', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Braixen': [
-        { 'to': 'Delphox', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Chespin': [
-        { 'to': 'Quilladin', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Quilladin': [
-        { 'to': 'Chesnaught', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Fletchling': [
-        { 'to': 'Fletchinder', 'requires': { 'type': 'level', 'level': 17 } },
-    ],
-    'Fletchinder': [
-        { 'to': 'Talonflame', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Scatterbug': [
-        { 'to': 'Spewpa', 'requires': { 'type': 'level', 'level': 9 } },
-    ],
-    'Spewpa': [
-        { 'to': 'Vivillon', 'requires': { 'type': 'level', 'level': 12 } },
-    ],
-    'Bunnelby': [
-        { 'to': 'Diggersby', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Litleo': [
-        { 'to': 'Pyroar', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Skiddo': [
-        { 'to': 'Gogoat', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Flabebe': [
-        { 'to': 'Floette', 'requires': { 'type': 'level', 'level': 19 } },
-    ],
-    'Floette': [
-        { 'to': 'Florges', 'requires': { 'type': 'stone', 'stone': 'shinyStone' } },
-    ],
-    'Pancham': [
-        { 'to': 'Pangoro', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Espurr': [
-        { 'to': 'Meowstic', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
-    'Honedge': [
-        { 'to': 'Doublade', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Doublade': [
-        { 'to': 'Aegislash', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
-    ],
-    'Spritzee': [
-        { 'to': 'Aromatisse', 'requires': { 'type': 'stone', 'stone': 'sachet' } },
-    ],
-    'Swirlix': [
-        { 'to': 'Slurpuff', 'requires': { 'type': 'stone', 'stone': 'whippedDream' } },
-    ],
-    'Inkay': [
-        { 'to': 'Malamar', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Binacle': [
-        { 'to': 'Barbaracle', 'requires': { 'type': 'level', 'level': 39 } },
-    ],
-    'Skrelp': [
-        { 'to': 'Dragalge', 'requires': { 'type': 'level', 'level': 48 } },
-    ],
-    'Clauncher': [
-        { 'to': 'Clawitzer', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Tyrunt': [
-        { 'to': 'Tyrantrum', 'requires': { 'type': 'level', 'level': 39 } },
-    ],
-    'Amaura': [
-        { 'to': 'Aurorus', 'requires': { 'type': 'level', 'level': 39 } },
-    ],
-    'Helioptile': [
-        { 'to': 'Heliolisk', 'requires': { 'type': 'stone', 'stone': 'sunStone' } },
-    ],
-    'Goomy': [
-        { 'to': 'Sliggoo', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Sliggoo': [
-        { 'to': 'Goodra', 'requires': { 'type': 'level', 'level': 50 } },
-    ],
-    'Phantump': [
-        { 'to': 'Trevenant', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Pumpkaboo': [
-        { 'to': 'Gourgeist', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Bergmite': [
-        { 'to': 'Avalugg', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Noibat': [
-        { 'to': 'Noivern', 'requires': { 'type': 'level', 'level': 48 } },
-    ],
-    'Popplio': [
-        { 'to': 'Brionne', 'requires': { 'type': 'level', 'level': 17 } },
-    ],
-    'Brionne': [
-        { 'to': 'Primarina', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Litten': [
-        { 'to': 'Torracat', 'requires': { 'type': 'level', 'level': 17 } },
-    ],
-    'Torracat': [
-        { 'to': 'Incineroar', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Rowlet': [
-        { 'to': 'Dartrix', 'requires': { 'type': 'level', 'level': 17 } },
-    ],
-    'Dartrix': [
-        { 'to': 'Decidueye', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Turtwig': [
-        { 'to': 'Grotle', 'requires': { 'type': 'level', 'level': 18 } },
-    ],
-    'Grotle': [
-        { 'to': 'Torterra', 'requires': { 'type': 'level', 'level': 32 } },
-    ],
-    'Chimchar': [
-        { 'to': 'Monferno', 'requires': { 'type': 'level', 'level': 14 } },
-    ],
-    'Monferno': [
-        { 'to': 'Infernape', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Piplup': [
-        { 'to': 'Prinplup', 'requires': { 'type': 'level', 'level': 16 } },
-    ],
-    'Prinplup': [
-        { 'to': 'Empoleon', 'requires': { 'type': 'level', 'level': 36 } },
-    ],
-    'Starly': [
-        { 'to': 'Staravia', 'requires': { 'type': 'level', 'level': 14 } },
-    ],
-    'Staravia': [
-        { 'to': 'Staraptor', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Bidoof': [
-        { 'to': 'Bibarel', 'requires': { 'type': 'level', 'level': 15 } },
-    ],
-    'Kricketot': [
-        { 'to': 'Kricketune', 'requires': { 'type': 'level', 'level': 10 } },
-    ],
-    'Shinx': [
-        { 'to': 'Luxio', 'requires': { 'type': 'level', 'level': 15 } },
-    ],
-    'Luxio': [
-        { 'to': 'Luxray', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Cranidos': [
-        { 'to': 'Rampardos', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Shieldon': [
-        { 'to': 'Bastiodon', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Burmy': [
-        { 'to': 'Wormadam', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Wormadam': [
-        { 'to': 'Mothim', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Combee': [
-        { 'to': 'Vespiquen', 'requires': { 'type': 'level', 'level': 21 } },
-    ],
-    'Cherubi': [
-        { 'to': 'Cherrim', 'requires': { 'type': 'level', 'level': 21 } },
-    ],
-    'Buizel': [
-        { 'to': 'Floatzel', 'requires': { 'type': 'level', 'level': 26 } },
-    ],
-    'Aipom': [
-        { 'to': 'Ambipom', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Drifloon': [
-        { 'to': 'Drifblim', 'requires': { 'type': 'level', 'level': 28 } },
-    ],
-    'Buneary': [
-        { 'to': 'Lopunny', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Misdreavus': [
-        { 'to': 'Mismagius', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
-    ],
-    'Murkrow': [
-        { 'to': 'Honchkrow', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
-    ],
-    'Glameow': [
-        { 'to': 'Purugly', 'requires': { 'type': 'level', 'level': 38 } },
-    ],
-    'Stunky': [
-        { 'to': 'Skuntank', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Bronzor': [
-        { 'to': 'Bronzong', 'requires': { 'type': 'level', 'level': 33 } },
-    ],
-    'Mime Jr.': [
-        { 'to': 'Mr. Mime', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Happiny': [
-        { 'to': 'Chansey', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Chansey': [
-        { 'to': 'Blissey', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Munchlax': [
-        { 'to': 'Snorlax', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Riolu': [
-        {
-            'to': 'Lucario',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'stone', 'stone': 'sootheBell' },
-                    { 'type': 'time', 'time': [6, 18] },
-                ],
-            },
-        },
-    ],
-    'Hippopotas': [
-        { 'to': 'Hippowdon', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Skorupi': [
-        { 'to': 'Drapion', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Croagunk': [
-        { 'to': 'Toxicroak', 'requires': { 'type': 'level', 'level': 37 } },
-    ],
-    'Finneon': [
-        { 'to': 'Lumineon', 'requires': { 'type': 'level', 'level': 31 } },
-    ],
-    'Mantyke': [
-        { 'to': 'Mantine', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Snover': [
-        { 'to': 'Abomasnow', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Sneasel': [
-        { 'to': 'Weavile', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
-    ],
-    'Magneton': [
-        { 'to': 'Magnezone', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
-    ],
-    'Lickitung': [
-        { 'to': 'Lickilicky', 'requires': { 'type': 'stone', 'stone': 'moonStone' } },
-    ],
-    'Rhydon': [
-        { 'to': 'Rhyperior', 'requires': { 'type': 'stone', 'stone': 'Protector' } },
-    ],
-    'Tangela': [
-        { 'to': 'Tangrowth', 'requires': { 'type': 'level', 'level': 90 } },
-    ],
-    'Electabuzz': [
-        { 'to': 'Electivire', 'requires': { 'type': 'stone', 'stone': 'thunderStone' } },
-    ],
-    'Magmar': [
-        { 'to': 'Magmortar', 'requires': { 'type': 'stone', 'stone': 'fireStone' } },
-    ],
-    'Yanma': [
-        { 'to': 'Yanmega', 'requires': { 'type': 'level', 'level': 50 } },
-    ],
-    'Gligar': [
-        { 'to': 'Gliscor', 'requires': { 'type': 'stone', 'stone': 'duskStone' } },
-    ],
-    'Piloswine': [
-        { 'to': 'Mamoswine', 'requires': { 'type': 'stone', 'stone': 'iceStone' } },
-    ],
-    'Porygon2': [
-        { 'to': 'Porygon-Z', 'requires': { 'type': 'level', 'level': 90 } },
-    ],
-    'Pikipek': [
-        { 'to': 'Trumbeak', 'requires': { 'type': 'level', 'level': 14 } },
-    ],
-    'Trumbeak': [
-        { 'to': 'Toucannon', 'requires': { 'type': 'level', 'level': 28 } },
-    ],
-    'Yungoos': [
-        { 'to': 'Gumshoos', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Grubbin': [
-        { 'to': 'Charjabug', 'requires': { 'type': 'level', 'level': 20 } },
-    ],
-    'Charjabug': [
-        { 'to': 'Vikavolt', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
+        levelEvo('Gardevoir', 30),
+        levelEvo('Gallade', 30),
+    ],
+    'Gardevoir': [megaEvo('M-Gardevoir', 'gardevoirite')],
+    'Gallade': [megaEvo('M-Gallade', 'galladite')],
+    'Sableye': [megaEvo('M-Sableye', 'sablenite')],
+    'Mawile': [megaEvo('M-Mawile', 'mawilite')],
+    'Surskit': [levelEvo('Masquerain', 22)],
+    'Shroomish': [levelEvo('Breloom', 23)],
+    'Slakoth': [levelEvo('Vigoroth', 18)],
+    'Vigoroth': [levelEvo('Slaking', 36)],
+    'Nincada': [levelEvo('Ninjask', 20)],
+    'Whismur': [levelEvo('Loudred', 20)],
+    'Loudred': [levelEvo('Exploud', 40)],
+    'Makuhita': [levelEvo('Hariyama', 24)],
+    'Nosepass': [levelEvo('Probopass', 35)],
+    'Skitty': [stoneEvo('Delcatty', 'moonStone')],
+    'Aron': [levelEvo('Lairon', 32)],
+    'Lairon': [levelEvo('Aggron', 42)],
+    'Aggron': [megaEvo('M-Aggron', 'aggronite')],
+    'Meditite': [levelEvo('Medicham', 37)],
+    'Medicham': [megaEvo('M-Medicham', 'medichamite')],
+    'Electrike': [levelEvo('Manectric', 37)],
+    'Manectric': [megaEvo('M-Manectric', 'manectite')],
+    'Budew': [levelEvo('Roselia', 12)],
+    'Roselia': [levelEvo('Roserade', 27)],
+    'Gulpin': [levelEvo('Swalot', 26)],
+    'Carvanha': [levelEvo('Sharpedo', 30)],
+    'Sharpedo': [megaEvo('M-Sharpedo', 'sharpedonite')],
+    'Wailmer': [levelEvo('Wailord', 40)],
+    'Numel': [levelEvo('Camerupt', 33)],
+    'Camerupt': [megaEvo('M-Camerupt', 'cameruptite')],
+    'Spoink': [levelEvo('Grumpig', 32)],
+    'Trapinch': [levelEvo('Vibrava', 35)],
+    'Vibrava': [levelEvo('Flygon', 45)],
+    'Cacnea': [levelEvo('Cacturne', 32)],
+    'Swablu': [levelEvo('Altaria', 35)],
+    'Altaria': [megaEvo('M-Altaria', 'altarianite')],
+    'Barboach': [levelEvo('Whiscash', 30)],
+    'Corphish': [levelEvo('Crawdaunt', 30)],
+    'Baltoy': [levelEvo('Claydol', 36)],
+    'Lileep': [levelEvo('Cradily', 40)],
+    'Anorith': [levelEvo('Armaldo', 40)],
+    'Feebas': [levelEvo('Milotic', 40)],
+    'Shuppet': [levelEvo('Banette', 37)],
+    'Banette': [megaEvo('M-Banette', 'banettite')],
+    'Absol': [megaEvo('M-Absol', 'absolite')],
+    'Duskull': [levelEvo('Dusclops', 37)],
+    'Dusclops': [levelEvo('Dusknoir', 50)],
+    'Chingling': [levelEvo('Chimecho', 20)],
+    'Snorunt': [levelEvo('Glalie', 42)],
+    'Glalie': [megaEvo('M-Glalie', 'glalitite')],
+    'Spheal': [levelEvo('Sealeo', 32)],
+    'Sealeo': [levelEvo('Walrein', 44)],
+    'Clamperl': [levelEvo('Gorebyss', 30)],
+    'Bagon': [levelEvo('Shelgon', 30)],
+    'Shelgon': [levelEvo('Salamence', 50)],
+    'Salamence': [megaEvo('M-Salamence', 'salamencite')],
+    'Beldum': [levelEvo('Metang', 20)],
+    'Metang': [levelEvo('Metagross', 45)],
+    'Metagross': [megaEvo('M-Metagross', 'metagrossite')],
+    'Latias': [megaEvo('M-Latias', 'latiasite')],
+    'Latios': [megaEvo('M-Latios', 'latiosite')],
+    'Rayquaza': [megaEvo('M-Rayquaza', 'rayquazite')],
+    'Lopunny': [megaEvo('M-Lopunny', 'lopunnite')],
+    'Gible': [levelEvo('Gabite', 24)],
+    'Gabite': [levelEvo('Garchomp', 48)],
+    'Garchomp': [megaEvo('M-Garchomp', 'garchompite')],
+    'Lucario': [megaEvo('M-Lucario', 'lucarionite')],
+    'Abomasnow': [megaEvo('M-Abomasnow', 'abomasite')],
+    'Snivy': [levelEvo('Servine', 17)],
+    'Servine': [levelEvo('Serperior', 36)],
+    'Tepig': [levelEvo('Pignite', 17)],
+    'Pignite': [levelEvo('Emboar', 36)],
+    'Oshawott': [levelEvo('Dewott', 17)],
+    'Dewott': [levelEvo('Samurott', 36)],
+    'Patrat': [levelEvo('Watchog', 20)],
+    'Purrloin': [levelEvo('Liepard', 20)],
+    'Pidove': [levelEvo('Tranquill', 21)],
+    'Tranquill': [levelEvo('Unfezant', 32)],
+    'Sewaddle': [levelEvo('Swadloon', 20)],
+    'Swadloon': [stoneEvo('Leavanny', 'sootheBell')],
+    'Lillipup': [levelEvo('Herdier', 16)],
+    'Herdier': [levelEvo('Stoutland', 32)],
+    'Pansage': [stoneEvo('Simisage', 'leafStone')],
+    'Pansear': [stoneEvo('Simisear', 'fireStone')],
+    'Panpour': [stoneEvo('Simipour', 'waterStone')],
+    'Woobat': [stoneEvo('Swoobat', 'sootheBell')],
+    'Venipede': [levelEvo('Whirlipede', 22)],
+    'Whirlipede': [levelEvo('Scolipede', 30)],
+    'Roggenrola': [levelEvo('Boldore', 25)],
+    'Boldore': [levelEvo('Gigalith', 40)],
+    'Timburr': [levelEvo('Gurdurr', 25)],
+    'Gurdurr': [levelEvo('Conkeldurr', 40)],
+    'Drilbur': [levelEvo('Excadrill', 31)],
+    'Cottonee': [stoneEvo('Whimsicott', 'sunStone')],
+    'Petilil': [stoneEvo('Lilligant', 'sunStone')],
+    'Munna': [stoneEvo('Musharna', 'moonStone')],
+    'Sandile': [levelEvo('Krokorok', 29)],
+    'Krokorok': [levelEvo('Krookodile', 40)],
+    'Darumaka': [levelEvo('Darmanitan', 35)],
+    'Trubbish': [levelEvo('Garbodor', 36)],
+    'Minccino': [stoneEvo('Cinccino', 'shinyStone')],
+    'Rufflet': [levelEvo('Braviary', 54)],
+    'Vullaby': [levelEvo('Mandibuzz', 54)],
+    'Dwebble': [levelEvo('Crustle', 34)],
+    'Scraggy': [levelEvo('Scrafty', 39)],
+    'Yamask': [levelEvo('Cofagrigus', 34)],
+    'Tirtouga': [levelEvo('Carracosta', 37)],
+    'Archen': [levelEvo('Archeops', 37)],
+    'Klink': [levelEvo('Klang', 38)],
+    'Klang': [levelEvo('Klinklang', 49)],
+    'Gothita': [levelEvo('Gothorita', 32)],
+    'Gothorita': [levelEvo('Gothitelle', 41)],
+    'Solosis': [levelEvo('Duosion', 32)],
+    'Duosion': [levelEvo('Reuniclus', 41)],
+    'Blitzle': [levelEvo('Zebstrika', 27)],
+    'Zorua': [levelEvo('Zoroark', 30)],
+    'Ducklett': [levelEvo('Swanna', 35)],
+    'Karrablast': [levelEvo('Escavalier', 40)],
+    'Shelmet': [levelEvo('Accelgor', 40)],
+    'Deerling': [levelEvo('Sawsbuck', 34)],
+    'Foongus': [levelEvo('Amoonguss', 39)],
+    'Larvesta': [levelEvo('Volcarona', 59)],
+    'Joltik': [levelEvo('Galvantula', 36)],
+    'Ferroseed': [levelEvo('Ferrothorn', 40)],
+    'Tynamo': [levelEvo('Eelektrik', 39)],
+    'Axew': [levelEvo('Fraxure', 38)],
+    'Fraxure': [levelEvo('Haxorus', 48)],
+    'Eelektrik': [stoneEvo('Eelektross', 'thunderStone')],
+    'Frillish': [levelEvo('Jellicent', 40)],
+    'Elgyem': [levelEvo('Beheeyem', 42)],
+    'Litwick': [levelEvo('Lampent', 41)],
+    'Lampent': [stoneEvo('Chandelure', 'duskStone')],
+    'Cubchoo': [levelEvo('Beartic', 37)],
+    'Mienfoo': [levelEvo('Mienshao', 50)],
+    'Pawniard': [levelEvo('Bisharp', 52)],
+    'Tympole': [levelEvo('Palpitoad', 25)],
+    'Palpitoad': [levelEvo('Seismitoad', 36)],
+    'Vanillite': [levelEvo('Vanillish', 35)],
+    'Vanillish': [levelEvo('Vanilluxe', 47)],
+    'Golett': [levelEvo('Golurk', 43)],
+    'Deino': [levelEvo('Zweilous', 50)],
+    'Zweilous': [levelEvo('Hydreigon', 64)],
+    'Audino': [megaEvo('M-Audino', 'audinite')],
+    'Diancie': [megaEvo('M-Diancie', 'diancite')],
+    'Froakie': [levelEvo('Frogadier', 16)],
+    'Frogadier': [levelEvo('Greninja', 36)],
+    'Fennekin': [levelEvo('Braixen', 16)],
+    'Braixen': [levelEvo('Delphox', 36)],
+    'Chespin': [levelEvo('Quilladin', 16)],
+    'Quilladin': [levelEvo('Chesnaught', 36)],
+    'Fletchling': [levelEvo('Fletchinder', 17)],
+    'Fletchinder': [levelEvo('Talonflame', 35)],
+    'Scatterbug': [levelEvo('Spewpa', 9)],
+    'Spewpa': [levelEvo('Vivillon', 12)],
+    'Bunnelby': [levelEvo('Diggersby', 20)],
+    'Litleo': [levelEvo('Pyroar', 35)],
+    'Skiddo': [levelEvo('Gogoat', 32)],
+    'Flabebe': [levelEvo('Floette', 19)],
+    'Floette': [stoneEvo('Florges', 'shinyStone')],
+    'Pancham': [levelEvo('Pangoro', 32)],
+    'Espurr': [levelEvo('Meowstic', 25)],
+    'Honedge': [levelEvo('Doublade', 35)],
+    'Doublade': [stoneEvo('Aegislash', 'duskStone')],
+    'Spritzee': [stoneEvo('Aromatisse', 'sachet')],
+    'Swirlix': [stoneEvo('Slurpuff', 'whippedDream')],
+    'Inkay': [levelEvo('Malamar', 30)],
+    'Binacle': [levelEvo('Barbaracle', 39)],
+    'Skrelp': [levelEvo('Dragalge', 48)],
+    'Clauncher': [levelEvo('Clawitzer', 37)],
+    'Tyrunt': [levelEvo('Tyrantrum', 39)],
+    'Amaura': [levelEvo('Aurorus', 39)],
+    'Helioptile': [stoneEvo('Heliolisk', 'sunStone')],
+    'Goomy': [levelEvo('Sliggoo', 40)],
+    'Sliggoo': [levelEvo('Goodra', 50)],
+    'Phantump': [levelEvo('Trevenant', 40)],
+    'Pumpkaboo': [levelEvo('Gourgeist', 40)],
+    'Bergmite': [levelEvo('Avalugg', 37)],
+    'Noibat': [levelEvo('Noivern', 48)],
+    'Popplio': [levelEvo('Brionne', 17)],
+    'Brionne': [levelEvo('Primarina', 34)],
+    'Litten': [levelEvo('Torracat', 17)],
+    'Torracat': [levelEvo('Incineroar', 34)],
+    'Rowlet': [levelEvo('Dartrix', 17)],
+    'Dartrix': [levelEvo('Decidueye', 34)],
+    'Turtwig': [levelEvo('Grotle', 18)],
+    'Grotle': [levelEvo('Torterra', 32)],
+    'Chimchar': [levelEvo('Monferno', 14)],
+    'Monferno': [levelEvo('Infernape', 36)],
+    'Piplup': [levelEvo('Prinplup', 16)],
+    'Prinplup': [levelEvo('Empoleon', 36)],
+    'Starly': [levelEvo('Staravia', 14)],
+    'Staravia': [levelEvo('Staraptor', 34)],
+    'Bidoof': [levelEvo('Bibarel', 15)],
+    'Kricketot': [levelEvo('Kricketune', 10)],
+    'Shinx': [levelEvo('Luxio', 15)],
+    'Luxio': [levelEvo('Luxray', 30)],
+    'Cranidos': [levelEvo('Rampardos', 30)],
+    'Shieldon': [levelEvo('Bastiodon', 30)],
+    'Burmy': [levelEvo('Wormadam', 20)],
+    'Wormadam': [levelEvo('Mothim', 20)],
+    'Combee': [levelEvo('Vespiquen', 21)],
+    'Cherubi': [levelEvo('Cherrim', 21)],
+    'Buizel': [levelEvo('Floatzel', 26)],
+    'Aipom': [levelEvo('Ambipom', 30)],
+    'Drifloon': [levelEvo('Drifblim', 28)],
+    'Buneary': [stoneEvo('Lopunny', 'sootheBell')],
+    'Misdreavus': [stoneEvo('Mismagius', 'duskStone')],
+    'Murkrow': [stoneEvo('Honchkrow', 'duskStone')],
+    'Glameow': [levelEvo('Purugly', 38)],
+    'Stunky': [levelEvo('Skuntank', 34)],
+    'Bronzor': [levelEvo('Bronzong', 33)],
+    'Mime Jr.': [stoneEvo('Mr. Mime', 'sootheBell')],
+    'Happiny': [stoneEvo('Chansey', 'sootheBell')],
+    'Chansey': [stoneEvo('Blissey', 'sootheBell')],
+    'Munchlax': [stoneEvo('Snorlax', 'sootheBell')],
+    'Riolu': [mkEvo('Lucario', multiReq(stoneReq('sootheBell'), timeReq(6, 18)))],
+    'Hippopotas': [levelEvo('Hippowdon', 34)],
+    'Skorupi': [levelEvo('Drapion', 40)],
+    'Croagunk': [levelEvo('Toxicroak', 37)],
+    'Finneon': [levelEvo('Lumineon', 31)],
+    'Mantyke': [stoneEvo('Mantine', 'sootheBell')],
+    'Snover': [levelEvo('Abomasnow', 40)],
+    'Sneasel': [stoneEvo('Weavile', 'duskStone')],
+    'Magneton': [stoneEvo('Magnezone', 'thunderStone')],
+    'Lickitung': [stoneEvo('Lickilicky', 'moonStone')],
+    'Rhydon': [stoneEvo('Rhyperior', 'Protector')],
+    'Tangela': [levelEvo('Tangrowth', 90)],
+    'Electabuzz': [stoneEvo('Electivire', 'thunderStone')],
+    'Magmar': [stoneEvo('Magmortar', 'fireStone')],
+    'Yanma': [levelEvo('Yanmega', 50)],
+    'Gligar': [stoneEvo('Gliscor', 'duskStone')],
+    'Piloswine': [stoneEvo('Mamoswine', 'iceStone')],
+    'Porygon2': [levelEvo('Porygon-Z', 90)],
+    'Pikipek': [levelEvo('Trumbeak', 14)],
+    'Trumbeak': [levelEvo('Toucannon', 28)],
+    'Yungoos': [levelEvo('Gumshoos', 20)],
+    'Grubbin': [levelEvo('Charjabug', 20)],
+    'Charjabug': [levelEvo('Vikavolt', 40)],
     'Crabrawler': [
         { 'to': 'Crabominable', 'requires': { 'type': 'region', 'region': 'Alola' } },
     ],
-    'Cutiefly': [
-        { 'to': 'Ribombee', 'requires': { 'type': 'level', 'level': 25 } },
-    ],
+    'Cutiefly': [levelEvo('Ribombee', 25)],
     'Rockruff': [
-        {
-            'to': 'Lycanroc',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'level', 'level': 25 },
-                    { 'type': 'time', 'time': [6, 18] },
-                ],
-            },
-        },
-        {
-            'to': 'Lycanroc-M',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'level', 'level': 25 },
-                    { 'type': 'time', 'time': [18, 6] },
-                ],
-            },
-        },
-        {
-            'to': 'Lycanroc-D',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'level', 'level': 25 },
-                    { 'type': 'region', 'region': 'Alola' },
-                ],
-            },
-        },
+        mkEvo('Lycanroc', multiReq(levelReq(25), timeReq(6, 18))),
+        mkEvo('Lycanroc-M', multiReq(levelReq(25), timeReq(18, 6))),
+        mkEvo('Lycanroc-D', multiReq(levelReq(25), regionReq('Alola'))),
     ],
-    'Mareanie': [
-        { 'to': 'Toxapex', 'requires': { 'type': 'level', 'level': 38 } },
-    ],
-    'Mudbray': [
-        { 'to': 'Mudsdale', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Dewpider': [
-        { 'to': 'Araquanid', 'requires': { 'type': 'level', 'level': 22 } },
-    ],
-    'Fomantis': [
-        { 'to': 'Lurantis', 'requires': { 'type': 'level', 'level': 34 } },
-    ],
-    'Morelull': [
-        { 'to': 'Shiinotic', 'requires': { 'type': 'level', 'level': 24 } },
-    ],
-    'Salandit': [
-        { 'to': 'Salazzle', 'requires': { 'type': 'level', 'level': 33 } },
-    ],
-    'Stufful': [
-        { 'to': 'Bewear', 'requires': { 'type': 'level', 'level': 27 } },
-    ],
-    'Bounsweet': [
-        { 'to': 'Steenee', 'requires': { 'type': 'level', 'level': 18 } },
-    ],
-    'Steenee': [
-        { 'to': 'Tsareena', 'requires': { 'type': 'level', 'level': 40 } },
-    ],
-    'Wimpod': [
-        { 'to': 'Golisopod', 'requires': { 'type': 'level', 'level': 30 } },
-    ],
-    'Sandygast': [
-        { 'to': 'Palossand', 'requires': { 'type': 'level', 'level': 42 } },
-    ],
-    'Jangmo-o': [
-        { 'to': 'Hakamo-o', 'requires': { 'type': 'level', 'level': 35 } },
-    ],
-    'Hakamo-o': [
-        { 'to': 'Kommo-o', 'requires': { 'type': 'level', 'level': 45 } },
-    ],
-    'Type: Null': [
-        { 'to': 'Silvally', 'requires': { 'type': 'stone', 'stone': 'sootheBell' } },
-    ],
-    'Cosmog': [
-        { 'to': 'Cosmoem', 'requires': { 'type': 'level', 'level': 43 } },
-    ],
+    'Mareanie': [levelEvo('Toxapex', 38)],
+    'Mudbray': [levelEvo('Mudsdale', 30)],
+    'Dewpider': [levelEvo('Araquanid', 22)],
+    'Fomantis': [levelEvo('Lurantis', 34)],
+    'Morelull': [levelEvo('Shiinotic', 24)],
+    'Salandit': [levelEvo('Salazzle', 33)],
+    'Stufful': [levelEvo('Bewear', 27)],
+    'Bounsweet': [levelEvo('Steenee', 18)],
+    'Steenee': [levelEvo('Tsareena', 40)],
+    'Wimpod': [levelEvo('Golisopod', 30)],
+    'Sandygast': [levelEvo('Palossand', 42)],
+    'Jangmo-o': [levelEvo('Hakamo-o', 35)],
+    'Hakamo-o': [levelEvo('Kommo-o', 45)],
+    'Type: Null': [stoneEvo('Silvally', 'sootheBell')],
+    'Cosmog': [levelEvo('Cosmoem', 43)],
     'Cosmoem': [
-        {
-            'to': 'Solgaleo',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'level', 'level': 53 },
-                    { 'type': 'time', 'time': [6, 18] },
-                ],
-            },
-        },
-        {
-            'to': 'Lunala',
-            'requires': {
-                'type': 'multi',
-                'requires': [
-                    { 'type': 'level', 'level': 53 },
-                    { 'type': 'time', 'time': [18, 6] },
-                ],
-            },
-        },
+        mkEvo('Solgaleo', multiReq(levelReq(53), timeReq(6, 18))),
+        mkEvo('Lunala', multiReq(levelReq(53), timeReq(18, 6))),
     ],
 };
 

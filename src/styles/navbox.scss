@@ -1,0 +1,13 @@
+#navBox {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#playerBallsContainer {
+    grid-column: 1;
+}
+#playerCurrencyContainer {
+    grid-column: 2;
+}

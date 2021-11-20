@@ -4346,7 +4346,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route105: {
+        uroute19: {
             name: 'Route 19',
             pokes: ['Patrat', 'Purrloin'],
             minLevel: 2,
@@ -4357,14 +4357,14 @@ const ROUTES: Routes = {
             name: 'Floccesy Town',
             town: true,
         },
-        route106: {
+        uroute20: {
             name: 'Route 20',
             pokes: ['Pidove', 'Sunkern', 'Patrat', 'Purrloin', 'Sewaddle', 'Snivy', 'Oshawott', 'Tepig'],
             minLevel: 2,
             maxLevel: 4,
             respawn: 'floccesyTown',
         },
-        special103: {
+        floccesyRanch: {
             name: 'Floccesy Ranch',
             pokes: ['Azurill', 'Mareep', 'Psyduck', 'Riolu', 'Lillipup', 'Pidove', 'Patrat'],
             minLevel: 4,
@@ -4391,7 +4391,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special104: {
+        virbankComplex: {
             name: 'Virbank Complex',
             pokes: ['Magby', 'Magnemite', 'Growlithe', 'Elekid', 'Koffing', 'Patrat', 'Pidove'],
             minLevel: 10,
@@ -4424,7 +4424,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special105: {
+        casteliaWild: {
             name: 'Castelia City',
             pokes: ['Cottonee', 'Pidove', 'Petilil', 'Skitty', 'Rattata', 'Buneary', 'Eevee'],
             minLevel: 15,
@@ -4436,7 +4436,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special106: {
+        casteliaSewers: {
             name: 'Castelia Sewers',
             pokes: ['Rattata', 'Zubat', 'Grimer'],
             minLevel: 14,
@@ -4448,7 +4448,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route107: {
+        uroute4: {
             name: 'Route 4',
             pokes: ['Sandile', 'Darumaka', 'Trubbish', 'Scraggy', 'Minccino'],
             minLevel: 14,
@@ -4460,7 +4460,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special107: {
+        desertResort: {
             name: 'Desert Resort',
             pokes: ['Sandile', 'Darumaka', 'Maractus', 'Sigilyph', 'Dwebble', 'Sandshrew', 'Trapinch'],
             minLevel: 18,
@@ -4472,7 +4472,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special108: {
+        relicCastle: {
             name: 'Relic Castle',
             pokes: ['Sandile', 'Yamask', 'Sandshrew'],
             minLevel: 18,
@@ -4500,7 +4500,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route118: {
+        uroute16: {
             name: 'Route 16',
             pokes: ['Gothita', 'Minccino', 'Trubbish', 'Liepard', 'Solosis'],
             minLevel: 21,
@@ -4512,7 +4512,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special125: {
+        lostlornForest: {
             name: 'Lostlorn Forest',
             pokes: ['Cottonee', 'Swadloon', 'Venipede', 'Petilil', 'Roselia', 'Combee', 'Heracross', 'Pinsir'],
             minLevel: 21,
@@ -4524,7 +4524,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route108: {
+        uroute5: {
             name: 'Route 5',
             pokes: ['Gothita', 'Minccino', 'Trubbish', 'Liepard', 'Solosis', 'Blitzle'],
             minLevel: 21,
@@ -4536,7 +4536,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special109: {
+        driftveilDrawbridge: {
             name: 'Driftveil Drawbridge',
             pokes: ['Ducklett'],
             minLevel: 22,
@@ -4569,7 +4569,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special134: {
+        illusion: {
             name: 'Just an Illusion',
             pokes: ['Zorua'],
             minLevel: 25,
@@ -4581,7 +4581,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special143: {
+        relicPassage: {
             name: 'Relic Passage',
             pokes: ['Boldore', 'Woobat', 'Gurdurr', 'Raticate', 'Onix', 'Drilbur', 'Roggenrola', 'Timburr', 'Rattata'],
             minLevel: 16,
@@ -4593,7 +4593,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special144: {
+        unovaRelicCastle: {
             name: 'Relic Castle',
             pokes: ['Yamask', 'Sandile', 'Sandslash', 'Krokorok', 'Baltoy'],
             minLevel: 27,
@@ -4605,7 +4605,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special135: {
+        relicCastleEnd: {
             name: 'Relic Castle (Maze End)',
             pokes: ['Larvesta', 'Volcarona'],
             minLevel: 65,
@@ -4617,7 +4617,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route109: {
+        uroute6: {
             name: 'Route 6',
             pokes: ['Deerling', 'Karrablast', 'Tranquill', 'Foongus', 'Swadloon', 'Shelmet', 'Marill', 'Vanillite'],
             minLevel: 23,
@@ -4629,7 +4629,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special110: {
+        mistraltonCave: {
             name: 'Mistralton Cave',
             pokes: ['Aron', 'Boldore', 'Woobat', 'Axew'],
             minLevel: 27,
@@ -4641,7 +4641,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special111: {
+        chargestoneCave: {
             name: 'Chargestone Cave',
             pokes: ['Joltik', 'Klink', 'Ferroseed', 'Nosepass', 'Boldore', 'Tynamo', 'Drilbur'],
             minLevel: 24,
@@ -4674,7 +4674,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route110: {
+        uroute7: {
             name: 'Route 7',
             pokes: ['Cubchoo', 'Deerling', 'Zebstrika', 'Watchog', 'Tranquill', 'Foongus', 'Zangoose', 'Seviper'],
             minLevel: 30,
@@ -4686,7 +4686,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special115: {
+        celestialTower: {
             name: 'Celestial Tower',
             pokes: ['Golbat', 'Litwick', 'Elgyem'],
             minLevel: 30,
@@ -4698,7 +4698,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special116: {
+        twistMountain: {
             name: 'Twist Mountain',
             pokes: ['Onix', 'Boldore', 'Gurdurr', 'Heatmor', 'Durant', 'Woobat', 'Beartic', 'Cryogonal', 'Excadrill', 'Steelix'],
             minLevel: 54,
@@ -4714,7 +4714,7 @@ const ROUTES: Routes = {
             name: 'Lentimas Town',
             town: true,
         },
-        special113: {
+        strangeHouse: {
             name: 'Strange House',
             pokes: ['Gothita', 'Gothorita', 'Solosis', 'Duosion', 'Litwick', 'Raticate', 'Golbat', 'Banette'],
             minLevel: 31,
@@ -4726,7 +4726,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special112: {
+        reversalMountain: {
             name: 'Reversal Mountain',
             pokes: ['Skorupi', 'Spoink', 'Drifblim', 'Trapinch', 'Grumpig', 'Skarmory', 'Numel', 'Camerupt', 'Woobat', 'Boldore'],
             minLevel: 32,
@@ -4747,7 +4747,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special123: {
+        undellaWild: {
             name: 'Undella Town',
             pokes: ['Frillish', 'Basculin', 'Staryu'],
             minLevel: 25,
@@ -4759,7 +4759,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special126: {
+        undellaBay: {
             name: 'Undella Bay',
             pokes: ['Mantyke', 'Remoraid', 'Spheal', 'Frillish'],
             minLevel: 25,
@@ -4771,7 +4771,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route115: {
+        uroute13: {
             name: 'Route 13',
             pokes: ['Tangela', 'Pelipper', 'Drifblim', 'Absol', 'Lunatone', 'Solrock', 'Frillish', 'Staryu', 'Basculin'],
             minLevel: 34,
@@ -4783,7 +4783,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special122: {
+        giantChasm: {
             name: 'Giant Chasm',
             pokes: ['Tangela', 'Pelipper', 'Clefairy', 'Lunatone', 'Solrock', 'Delibird', 'Piloswine', 'Seel', 'Sneasel', 'Ditto', 'Metang', 'Vanillish', 'Excadrill', 'Basculin'],
             minLevel: 35,
@@ -4795,7 +4795,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special140: {
+        giantChasmDeepCave: {
             name: 'Giant Chasm (Deep Cave)',
             pokes: ['Kyurem'],
             minLevel: 70,
@@ -4816,7 +4816,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route114: {
+        uroute12: {
             name: 'Route 12',
             pokes: ['Roselia', 'Combee', 'Heracross', 'Pinsir', 'Tranquill', 'Sewaddle'],
             minLevel: 39,
@@ -4828,7 +4828,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special121: {
+        villageBridge: {
             name: 'Village Bridge',
             pokes: ['Golduck', 'Marill', 'Zangoose', 'Seviper', 'Basculin'],
             minLevel: 36,
@@ -4840,7 +4840,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route113: {
+        uroute11: {
             name: 'Route 11',
             pokes: ['Golduck', 'Gligar', 'Marill', 'Zangoose', 'Seviper', 'Karrablast', 'Shelmet', 'Amoonguss', 'Basculin', 'Buizel'],
             minLevel: 25,
@@ -4873,7 +4873,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route112: {
+        uroute9: {
             name: 'Route 9',
             pokes: ['Gothorita', 'Minccino', 'Garbodor', 'Pawniard', 'Liepard', 'Duosion', 'Muk'],
             minLevel: 37,
@@ -4885,7 +4885,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special145: {
+        humilauWild: {
             name: 'Humilau City',
             pokes: ['Frillish', 'Staryu', 'Basculin'],
             minLevel: 30,
@@ -4918,7 +4918,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route120: {
+        uroute22: {
             name: 'Route 22',
             pokes: ['Mienfoo', 'Amoonguss', 'Golduck', 'Marill', 'Pelipper', 'Lunatone', 'Solrock', 'Delibird', 'Basculin'],
             minLevel: 15,
@@ -4930,7 +4930,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route119: {
+        uroute21: {
             name: 'Route 21',
             pokes: ['Mantyke', 'Remoraid', 'Frillish'],
             minLevel: 30,
@@ -4942,7 +4942,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special127: {
+        seasideCave: {
             name: 'Seaside Cave',
             pokes: ['Woobat', 'Boldore', 'Tynamo', 'Seel', 'Golduck', 'Frillish'],
             minLevel: 34,
@@ -4954,7 +4954,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route121: {
+        uroute23: {
             name: 'Route 23',
             pokes: ['Bouffalant', 'Sawk', 'Mienfoo', 'Amoonguss', 'Vullaby', 'Rufflet', 'Throh', 'Gligar', 'Golduck', 'Basculin', 'Buizel'],
             minLevel: 47,
@@ -4966,7 +4966,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special120: {
+        unovaVictoryRoad: {
             name: 'Victory Road',
             pokes: ['Golurk', 'Banette', 'Basculin', 'Marill', 'Cottonee', 'Petilil', 'Tranquill', 'Roselia', 'Altaria', 'Buizel', 'Boldore', 'Onix', 'Druddigon', 'Zweilous', 'Gurdurr', 'Throh', 'Excadrill', 'Deino'],
             minLevel: 35,
@@ -4978,7 +4978,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special146: {
+        clayTunnel: {
             name: 'Clay Tunnel',
             pokes: ['Boldore', 'Durant', 'Nosepass', 'Lairon', 'Woobat', 'Onix', 'Excadrill', 'Steelix', 'Basculin'],
             minLevel: 54,
@@ -4990,7 +4990,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route116: {
+        uroute14: {
             name: 'Route 14',
             pokes: ['Golduck', 'Swablu', 'Mienfoo', 'Drifblim', 'Absol', 'Altaria', 'Basculin', 'Buizel'],
             minLevel: 34,
@@ -5002,7 +5002,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special124: {
+        abundantShrine: {
             name: 'Abundant Shrine',
             town: true,
             npc: {
@@ -5010,7 +5010,7 @@ const ROUTES: Routes = {
                 event: 'abundantOldMan',
             },
         },
-        route117: {
+        uroute15: {
             name: 'Route 15',
             pokes: ['Sandslash', 'Gligar', 'Pupitar', 'Scrafty', 'Throh', 'Sawk'],
             minLevel: 54,
@@ -5022,7 +5022,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special160: {
+        marvelousBridge: {
             name: 'Marvelous Bridge',
             pokes: ['Swanna', 'Cresselia'],
             minLevel: 54,
@@ -5034,7 +5034,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special139: {
+        nCastle: {
             name: 'Castle of N',
             pokes: ['Reshiram', 'Zekrom'],
             minLevel: 70,
@@ -5046,7 +5046,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route111: {
+        uroute8: {
             name: 'Route 8',
             pokes: ['Palpitoad', 'Shelmet', 'Stunfisk', 'Karrablast', 'Croagunk'],
             minLevel: 54,
@@ -5058,7 +5058,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special119: {
+        moorOfIcirrus: {
             name: 'Moor of Icirrus',
             pokes: ['Palpitoad', 'Shelmet', 'Stunfisk', 'Karrablast', 'Croagunk'],
             minLevel: 54,
@@ -5079,7 +5079,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special117: {
+        icirrusWild: {
             name: 'Icirrus City',
             pokes: ['Palpitoad', 'Shelmet', 'Stunfisk', 'Karrablast', 'Croagunk'],
             minLevel: 54,
@@ -5091,7 +5091,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special118: {
+        dragonsprialTower: {
             name: 'Dragonspiral Tower',
             pokes: ['Sawsbuck', 'Vanillish', 'Mienshao', 'Beartic', 'Druddigon', 'Golurk', 'Tranquill', 'Basculin'],
             minLevel: 55,
@@ -5103,7 +5103,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special150: {
+        pinwheelForest: {
             name: 'Pinwheel Forest',
             pokes: ['Gurdurr', 'Palpitoad', 'Throh', 'Sawk', 'Yanma', 'Toxicroak', 'Basculin', 'Marill', 'Cottonee', 'Swadloon', 'Petilil', 'Whirlipede', 'Pansage', 'Pansear', 'Panpour', 'Vigoroth'],
             minLevel: 54,
@@ -5124,7 +5124,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special128: {
+        nacreneWild: {
             name: 'Nacrene City',
             pokes: ['Tirtouga', 'Archen'],
             minLevel: 25,
@@ -5136,7 +5136,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route122: {
+        uroute3: {
             name: 'Route 3',
             pokes: ['Tranquill', 'Watchog', 'Zebstrika', 'Yanma', 'Herdier', 'Purrloin', 'Basculin', 'Corphish'],
             minLevel: 47,
@@ -5148,7 +5148,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special129: {
+        wellspringCave: {
             name: 'Wellspring Cave',
             pokes: ['Boldore', 'Woobat', 'Basculin'],
             minLevel: 55,
@@ -5169,7 +5169,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special114: {
+        naturePreserve: {
             name: 'Nature Preserve',
             pokes: ['Nuzleaf', 'Altaria', 'Golduck', 'Noctowl', 'Girafarig', 'Kecleon', 'Fraxure', 'Basculin', 'Buizel'],
             minLevel: 40,
@@ -5181,7 +5181,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special130: {
+        dreamyard: {
             name: 'Dreamyard',
             pokes: ['Watchog', 'Liepard', 'Munna', 'Raticate', 'Jigglypuff', 'Golbat'],
             minLevel: 56,
@@ -5193,7 +5193,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route123: {
+        uroute2: {
             name: 'Route 2',
             pokes: ['Watchog', 'Herdier', 'Liepard', 'Jigglypuff', 'Lickitung'],
             minLevel: 56,
@@ -5214,7 +5214,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route124: {
+        uroute1: {
             name: 'Route 1',
             pokes: ['Herdier', 'Watchog', 'Jigglypuff'],
             minLevel: 56,
@@ -5226,7 +5226,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route125: {
+        uroute17: {
             name: 'Route 17',
             pokes: ['Frillish'],
             minLevel: 45,
@@ -5238,7 +5238,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        route126: {
+        uroute18: {
             name: 'Route 18',
             pokes: ['Scrafty', 'Crustle', 'Sawk', 'Throh', 'Tropius', 'Carnivine', 'Watchog'],
             minLevel: 57,
@@ -5250,7 +5250,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special131: {
+        p2Lab: {
             name: 'P2 Laboratory',
             pokes: ['Watchog', 'Herdier', 'Klang', 'Scrafty', 'Magneton', 'Weezing'],
             minLevel: 56,
@@ -5262,14 +5262,14 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special132: {
+        shakingSpots: {
             name: 'Shaking Spots',
             pokes: ['Audino', 'Drilbur', 'Emolga'],
             minLevel: 10,
             maxLevel: 20,
             respawn: 'aspertiaCity',
         },
-        special136: {
+        libertyGarden: {
             name: 'Liberty Garden',
             pokes: ['Victini'],
             minLevel: 15,
@@ -5281,7 +5281,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special137: {
+        pledgeGrove: {
             name: 'Pledge Grove',
             pokes: ['Keldeo', 'Cobalion', 'Terrakion', 'Virizion'],
             minLevel: 50,
@@ -5293,7 +5293,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special138: {
+        weatherGuys: {
             name: 'Weather Guys',
             pokes: ['Tornadus', 'Thundurus', 'Landorus'],
             minLevel: 70,
@@ -5305,7 +5305,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special141: {
+        sereneGrace: {
             name: 'Serene Grace',
             pokes: ['Meloetta'],
             minLevel: 50,
@@ -5317,7 +5317,7 @@ const ROUTES: Routes = {
                 },
             },
         },
-        special142: {
+        genesect: {
             name: 'Not Kabutops',
             pokes: ['Genesect'],
             minLevel: 15,
