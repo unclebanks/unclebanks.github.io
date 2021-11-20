@@ -6,13 +6,14 @@
       <p>
         <button
           id="heal"
-          class="partyButton"
+          class="button"
         >
           Heal
         </button>
       </p>
       <p>
         <button
+          class="button"
           onclick="userInteractions.viewMap()"
         >
           Map
@@ -20,9 +21,34 @@
       </p>
       <p>
         <button
+          class="button"
           onclick="userInteractions.viewShop()"
         >
           Shop
+        </button>
+      </p>
+      <p>
+        <button
+          class="button"
+          onclick="userInteractions.viewPokeDex()"
+        >
+          Pokedex
+        </button>
+      </p>
+      <p>
+        <button
+          class="button"
+          onclick="userInteractions.viewSettings()"
+        >
+          Settings
+        </button>
+      </p>
+      <p>
+        <button
+          class="button"
+          onclick="userInteractions.viewBag()"
+        >
+          Bag
         </button>
       </p>
       <input
