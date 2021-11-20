@@ -60,23 +60,11 @@ ul {
 
 #listBox {
     grid-column: 1;
-    grid-row: 1 / 3;
-    max-height: 75vh;
+    grid-row: 1 / 4;
+    max-height: 100vh;
     overflow: auto;
     float: left;
     text-align: left;
-}
-
-#partyBox {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    overflow: auto;
-    float: left;
-    text-align: left;
-
-    li, p {
-        display: inline-block;
-    }
 }
 
 #routesBox {
@@ -228,17 +216,6 @@ ul {
     margin: 0;
 }
 
-#invBox {
-    grid-column: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    padding: 5px;
-    font-size: medium;
-}
-#regionSelect {
-    grid-row: 2;
-}
-
 #playerItems {
     font-family: 'Lato', sans-serif;
     display: grid;
@@ -286,11 +263,6 @@ ul {
     align-content: center;
 }
 #townBox {
-    text-align: center;
-}
-#navBox {
-    grid-column: 2;
-    grid-row: 2;
     text-align: center;
 }
 #prizeCorner {

@@ -1,0 +1,9 @@
+#regionSelect {
+    grid-column: 3;
+    grid-row: 2;
+    padding: 5px;
+    font-size: medium;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    text-align: center;
+}
