@@ -39,76 +39,6 @@ interface SpecialPokemon {
     pokemon: PokemonNameType[],
   }
 
-interface GymTrainer1 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    win?: string,
-    reward?: string,
-    event?: string,
-    req?: string,
-}
-
-interface GymTrainer2 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-}
-
-interface GymTrainer3 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-}
-
-interface EliteFour1 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    win?: string,
-    reward?: string,
-    event?: string,
-    megaStone?: string,
-    megaStones?: string[],
-}
-
-interface EliteFour2 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-    megaStone?: string,
-    megaStones?: string[],
-}
-
-interface EliteFour3 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-    megaStone?: string,
-    megaStones?: string[],
-}
-
-interface EliteFour4 {
-    name: string,
-    poke: Array<[PokemonNameType, number]>,
-    req?: string,
-    win?: string,
-    reward?: string,
-    event?: string,
-    megaStone?: string,
-    megaStones?: string[],
-}
-
 interface EliteFourChampion {
     name: string,
     poke: Array<[PokemonNameType, number]>,
@@ -123,13 +53,13 @@ interface EliteFourChampion {
 interface Gym {
     name: string,
     gymLeader?: GymLeader,
-    gymTrainer1?: GymTrainer1,
-    gymTrainer2?: GymTrainer2,
-    gymTrainer3?: GymTrainer3,
-    eliteFour1?: EliteFour1,
-    eliteFour2?: EliteFour2,
-    eliteFour3?: EliteFour3,
-    eliteFour4?: EliteFour4,
+    gymTrainer1?: GymLeader,
+    gymTrainer2?: GymLeader,
+    gymTrainer3?: GymLeader,
+    eliteFour1?: EliteFourChampion,
+    eliteFour2?: EliteFourChampion,
+    eliteFour3?: EliteFourChampion,
+    eliteFour4?: EliteFourChampion,
     eliteFourChampion?: EliteFourChampion,
 }
 

@@ -20,8 +20,7 @@ export default (player, enemy, combatLoop, Poke) => {
             firstPoke: function () {
                 const title = 'NoNamePokemonGame';
                 let storyHTML = '<p>Hello there! Welcome to the world of NoNamePokemonGame</p>';
-                storyHTML += '<p>This game is a bit different than traditional POKEMON games.</p>';
-                storyHTML += '<p>NNPG encompasses two forms of gameplay, Idle and Engaged.</p>';
+                storyHTML += '<p>This game is still in development and far from complete.</p>';
                 storyHTML += '<p>The only requirements to progress are the GYM badges.</p>';
                 storyHTML += '<p>If you would like to join the community our discord is located at https://discord.gg/9WbZkm7yKx.</p>';
                 storyHTML += '<p>For now, click a POKEMON below to get started.</p>';

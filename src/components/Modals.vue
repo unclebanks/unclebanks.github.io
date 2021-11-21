@@ -20,6 +20,7 @@
   <TownModal />
   <OakLabModal :ui="ui" />
   <OakLabNoOakModal :ui="ui" />
+  <PokeGearModal :ui="ui" />
   <palletTownModal />
   <palletTownNoOakModal />
   <redHouseModal />
@@ -89,35 +90,6 @@
   <seafoamIslandsThirdFloorModal />
   <seafoamIslandsFourthFloorModal />
   <seafoamIslandsFifthFloorModal />
-  <kantoRoute1Modal />
-  <kantoRoute2TopModal />
-  <kantoRoute2BottomModal />
-  <kantoRoute3WestModal />
-  <kantoRoute3EastModal />
-  <kantoRoute4WestModal />
-  <kantoRoute4EastModal />
-  <kantoRoute5Modal />
-  <kantoRoute6Modal />
-  <kantoRoute7Modal />
-  <kantoRoute8Modal />
-  <kantoRoute9Modal />
-  <kantoRoute10Modal />
-  <kantoRoute11Modal />
-  <kantoRoute12Modal />
-  <kantoRoute13Modal />
-  <kantoRoute14Modal />
-  <kantoRoute15Modal />
-  <kantoRoute16Modal />
-  <kantoRoute17Modal />
-  <kantoRoute18Modal />
-  <kantoRoute19Modal />
-  <kantoRoute20Modal />
-  <kantoRoute21Modal />
-  <kantoRoute22Modal />
-  <kantoRoute22NoBlueModal />
-  <kantoRoute23Modal />
-  <kantoRoute24Modal />
-  <kantoRoute25Modal />
   <playerComputerModal />
   <kantoPokeRanchModal />
   <newBarkTownModal />
@@ -160,6 +132,7 @@ import PrizeCornerModal from './modals/PrizeCornerModal.vue';
 import BagModal from './modals/BagModal.vue';
 import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
+import PokeGearModal from './modals/PokeGearModal.vue';
 import OakLabModal from './modals/kanto/towns/palletTown/OakLabModal';
 import OakLabNoOakModal from './modals/kanto/towns/palletTown/OakLabNoOakModal';
 import palletTownModal from './modals/kanto/towns/palletTown/palletTownModal';
@@ -230,35 +203,6 @@ import seafoamIslandsSecondFloorModal from './modals/kanto/dungeons/seafoamIslan
 import seafoamIslandsThirdFloorModal from './modals/kanto/dungeons/seafoamIslands/seafoamIslandsThirdFloorModal';
 import seafoamIslandsFourthFloorModal from './modals/kanto/dungeons/seafoamIslands/seafoamIslandsFourthFloorModal';
 import seafoamIslandsFifthFloorModal from './modals/kanto/dungeons/seafoamIslands/seafoamIslandsFifthFloorModal';
-import kantoRoute1Modal from './modals/kanto/routes/kantoRoute1Modal';
-import kantoRoute2BottomModal from './modals/kanto/routes/kantoRoute2BottomModal';
-import kantoRoute2TopModal from './modals/kanto/routes/kantoRoute2TopModal';
-import kantoRoute3WestModal from './modals/kanto/routes/kantoRoute3WestModal';
-import kantoRoute3EastModal from './modals/kanto/routes/kantoRoute3EastModal';
-import kantoRoute4WestModal from './modals/kanto/routes/kantoRoute4WestModal';
-import kantoRoute4EastModal from './modals/kanto/routes/kantoRoute4EastModal';
-import kantoRoute5Modal from './modals/kanto/routes/kantoRoute5Modal';
-import kantoRoute6Modal from './modals/kanto/routes/kantoRoute6Modal';
-import kantoRoute7Modal from './modals/kanto/routes/kantoRoute7Modal';
-import kantoRoute8Modal from './modals/kanto/routes/kantoRoute8Modal';
-import kantoRoute9Modal from './modals/kanto/routes/kantoRoute9Modal';
-import kantoRoute10Modal from './modals/kanto/routes/kantoRoute10Modal';
-import kantoRoute11Modal from './modals/kanto/routes/kantoRoute11Modal';
-import kantoRoute12Modal from './modals/kanto/routes/kantoRoute12Modal';
-import kantoRoute13Modal from './modals/kanto/routes/kantoRoute13Modal';
-import kantoRoute14Modal from './modals/kanto/routes/kantoRoute14Modal';
-import kantoRoute15Modal from './modals/kanto/routes/kantoRoute15Modal';
-import kantoRoute16Modal from './modals/kanto/routes/kantoRoute16Modal';
-import kantoRoute17Modal from './modals/kanto/routes/kantoRoute17Modal';
-import kantoRoute18Modal from './modals/kanto/routes/kantoRoute18Modal';
-import kantoRoute19Modal from './modals/kanto/routes/kantoRoute19Modal';
-import kantoRoute20Modal from './modals/kanto/routes/kantoRoute20Modal';
-import kantoRoute21Modal from './modals/kanto/routes/kantoRoute21Modal';
-import kantoRoute22Modal from './modals/kanto/routes/kantoRoute22Modal';
-import kantoRoute22NoBlueModal from './modals/kanto/routes/kantoRoute22NoBlueModal';
-import kantoRoute23Modal from './modals/kanto/routes/kantoRoute23Modal';
-import kantoRoute24Modal from './modals/kanto/routes/kantoRoute24Modal';
-import kantoRoute25Modal from './modals/kanto/routes/kantoRoute25Modal';
 import playerComputerModal from './modals/kanto/misc/playerComputerModal';
 import kantoPokeRanchModal from './modals/kanto/misc/kantoPokeRanchModal';
 import newBarkTownModal from './modals/johto/towns/newBarkTown/newBarkTownModal';
@@ -301,6 +245,7 @@ export default {
         BagModal,
         GymModal,
         TownModal,
+        PokeGearModal,
         OakLabModal,
         OakLabNoOakModal,
         palletTownModal,
@@ -371,35 +316,6 @@ export default {
         seafoamIslandsThirdFloorModal,
         seafoamIslandsFourthFloorModal,
         seafoamIslandsFifthFloorModal,
-        kantoRoute1Modal,
-        kantoRoute2BottomModal,
-        kantoRoute2TopModal,
-        kantoRoute3WestModal,
-        kantoRoute3EastModal,
-        kantoRoute4WestModal,
-        kantoRoute4EastModal,
-        kantoRoute5Modal,
-        kantoRoute6Modal,
-        kantoRoute7Modal,
-        kantoRoute8Modal,
-        kantoRoute9Modal,
-        kantoRoute10Modal,
-        kantoRoute11Modal,
-        kantoRoute12Modal,
-        kantoRoute13Modal,
-        kantoRoute14Modal,
-        kantoRoute15Modal,
-        kantoRoute16Modal,
-        kantoRoute17Modal,
-        kantoRoute18Modal,
-        kantoRoute19Modal,
-        kantoRoute20Modal,
-        kantoRoute21Modal,
-        kantoRoute22Modal,
-        kantoRoute22NoBlueModal,
-        kantoRoute23Modal,
-        kantoRoute24Modal,
-        kantoRoute25Modal,
         playerComputerModal,
         kantoPokeRanchModal,
         newBarkTownModal,
