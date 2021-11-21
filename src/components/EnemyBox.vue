@@ -24,6 +24,25 @@
     <div
       id="townBox"
       style="display:none;"
-    />
+    >
+      <button
+        class="button"
+        onclick="userInteractions.checkProf()"
+      >
+        Prof.
+      </button>
+      <button
+        class="button"
+        onclick="userInteractions.viewShop()"
+      >
+        Shop
+      </button>
+      <button
+        class="button"
+        onclick="userInteractions.checkQuests()"
+      >
+        Quests
+      </button>
+    </div>
   </div>
 </template>

@@ -492,12 +492,19 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 openModal(document.getElementById('oaklabModal'));
             } else { alert('Not implemented yet'); }
         },
+        checkProf: function() {
+            alert('this is still a work in progress. Check back after a few updates.');
+        },
+        checkQuests: function() {
+            alert('this is still a work in progress. check back after a few updates.');
+        },
         renderTown: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
             const townBox = document.getElementById('enemyBox');
             if (routeData === 'Pallet Town') {
-                townBox.style.backgroundImage = "url('../assets/backgrounds/kanto/palletTown/oakLab/oakLabKanto.png')";
-                townBox.style.backgroundSize = 'contain';
+                townBox.style.backgroundImage = "url('../assets/backgrounds/kanto/palletTown/oakLab/oaksLab.png')";
+                townBox.style.backgroundSize = 'cover';
+                townBox.style.backgroundRepeat = 'no-repeat';
             }
         },
         removeTown: function () {
