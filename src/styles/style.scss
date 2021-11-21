@@ -2,11 +2,18 @@
 
 html, body {
     background-color: rgb(0, 0, 0);
+    min-width: 100vw;
+    min-height: 100vh;
   }
-
+#app {
+    min-height: 100vh;
+    min-width: 100vw;
+}
 #gameContainer {
     font-family: 'Lato', sans-serif;
     color: rgb(255, 255, 255);
+    min-height: 100vh;
+    min-width: 100vw;
     display: grid;
     grid-template-columns: minmax(210px, 18%) 30% 30% 22%;
     grid-template-rows: 45% 25% 30%;

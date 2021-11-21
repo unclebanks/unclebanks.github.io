@@ -16,13 +16,9 @@
   <GameCornerModal :ui="ui" />
   <PrizeCornerModal :ui="ui" />
   <BagModal :ui="ui" />
-  <GymModal :ui="ui" />
   <TownModal />
   <OakLabModal :ui="ui" />
-  <OakLabNoOakModal :ui="ui" />
   <PokeGearModal :ui="ui" />
-  <palletTownModal />
-  <palletTownNoOakModal />
 </template>
 
 <script>
@@ -43,13 +39,9 @@ import BrockModal from './modals/BrockModal.vue';
 import GameCornerModal from './modals/GameCornerModal.vue';
 import PrizeCornerModal from './modals/PrizeCornerModal.vue';
 import BagModal from './modals/BagModal.vue';
-import GymModal from './modals/GymModal';
 import TownModal from './modals/TownModal';
 import PokeGearModal from './modals/PokeGearModal.vue';
 import OakLabModal from './modals/kanto/towns/palletTown/OakLabModal';
-import OakLabNoOakModal from './modals/kanto/towns/palletTown/OakLabNoOakModal';
-import palletTownModal from './modals/kanto/towns/palletTown/palletTownModal';
-import palletTownNoOakModal from './modals/kanto/towns/palletTown/palletTownNoOakModal';
 
 export default {
     components: {
@@ -70,13 +62,9 @@ export default {
         GameCornerModal,
         PrizeCornerModal,
         BagModal,
-        GymModal,
         TownModal,
         PokeGearModal,
         OakLabModal,
-        OakLabNoOakModal,
-        palletTownModal,
-        palletTownNoOakModal,
     },
 
     props: {

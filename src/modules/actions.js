@@ -36,8 +36,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             player.settings.currentRouteId = newRouteId;
             if (ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].town) {
                 combatLoop.pause();
+                this.renderTown();
             } else {
                 combatLoop.unpause();
+                this.removeTown();
             }
             renderView(dom, enemy, player);
             player.savePokes();
@@ -486,26 +488,22 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         viewTown: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
-            if (routeData === 'Pallet Town' && !player.events.oakParcelReceived) {
-                openModal(document.getElementById('pallettownModal'));
-            } else if (routeData === 'Pallet Town') {
-                openModal(document.getElementById('pallettownnooakModal'));
+            if (routeData === 'Pallet Town') {
+                openModal(document.getElementById('oaklabModal'));
             } else { alert('Not implemented yet'); }
         },
         renderTown: function () {
-            const pokeMart = $('#pokeMartButton');
-            const npc = $('#npcButton');
-            const prof = $('#profButton');
-            const story = $('#storyButton');
-            const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-            pokeMart.style.display = (route.pokeMart) ? '' : 'none';
-            pokeMart.innerHTML = (route.pokeMart) ? 'PokeMart' : '';
-            npc.style.display = (route.npc) ? '' : 'none';
-            npc.innerHTML = (route.npc) ? route.npc.name : '';
-            story.style.display = (route.story) ? '' : 'none';
-            story.innerHTML = (route.story) ? route.story.name : '';
-            prof.style.display = (route.prof) ? '' : 'none';
-            prof.innerHTML = (route.prof) ? route.prof.name : '';
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
+            const townBox = document.getElementById('enemyBox');
+            if (routeData === 'Pallet Town') {
+                townBox.style.backgroundImage = "url('../assets/backgrounds/kanto/palletTown/oakLab/oakLabKanto.png')";
+                townBox.style.backgroundSize = 'contain';
+            }
+        },
+        removeTown: function () {
+            const townBox = document.getElementById('enemyBox');
+            townBox.style.backgroundImage = '';
+            townBox.style.backgroundSize = '';
         },
         viewShop: function () {
             // closeModal(document.getElementById('townModal'));

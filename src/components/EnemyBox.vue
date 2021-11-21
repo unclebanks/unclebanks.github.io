@@ -24,20 +24,6 @@
     <div
       id="townBox"
       style="display:none;"
-    >
-      <button
-        onclick="userInteractions.viewTown()"
-        class="button"
-      >
-        TOWN
-      </button><br>
-      <button
-        id="gymButton"
-        onclick="userInteractions.viewGym()"
-        class="button"
-      >
-        PROFESSOR BATTLE
-      </button>
-    </div>
+    />
   </div>
 </template>
