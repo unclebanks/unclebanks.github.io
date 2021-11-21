@@ -26,17 +26,22 @@
       style="display:none;"
     >
       <button
-        onclick="userInteractions.viewTown()"
         class="button"
+        onclick="userInteractions.checkProf()"
       >
-        TOWN
-      </button><br>
+        Prof.
+      </button>
       <button
-        id="gymButton"
-        onclick="userInteractions.viewGym()"
         class="button"
+        onclick="userInteractions.viewShop()"
       >
-        PROFESSOR BATTLE
+        Shop
+      </button>
+      <button
+        class="button"
+        onclick="userInteractions.checkQuests()"
+      >
+        Quests
       </button>
     </div>
   </div>

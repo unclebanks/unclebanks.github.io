@@ -6,30 +6,12 @@
       <p>
         <button
           id="heal"
-          class="button"
         >
           Heal
         </button>
       </p>
       <p>
         <button
-          class="button"
-          onclick="userInteractions.viewMap()"
-        >
-          Map
-        </button>
-      </p>
-      <p>
-        <button
-          class="button"
-          onclick="userInteractions.viewShop()"
-        >
-          Shop
-        </button>
-      </p>
-      <p>
-        <button
-          class="button"
           onclick="userInteractions.viewPokeDex()"
         >
           Pokedex
@@ -37,7 +19,20 @@
       </p>
       <p>
         <button
-          class="button"
+          onclick="userInteractions.viewPokeGear()"
+        >
+          PokeGear
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="userInteractions.viewShop()"
+        >
+          Shop
+        </button>
+      </p>
+      <p>
+        <button
           onclick="userInteractions.viewSettings()"
         >
           Settings
@@ -45,7 +40,6 @@
       </p>
       <p>
         <button
-          class="button"
           onclick="userInteractions.viewBag()"
         >
           Bag

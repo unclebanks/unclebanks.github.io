@@ -34,14 +34,10 @@ export default (player, combatLoop, userInteractions) => {
         renderPokeOnContainer: function (id, poke, face) {
             const container = $(`#${id}Box`).querySelector('.pokeBox');
             const townBox = $('#townBox');
-            const gymButton = $('#gymButton');
             if (!poke) {
                 container.style.display = 'none';
                 if (id == 'enemy') {
                     townBox.style.display = 'block';
-                    const route = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId];
-                    gymButton.style.display = (route.gym) ? '' : 'none';
-                    gymButton.innerHTML = (route.gym) ? route.gym.name : '';
                 }
                 return null;
             }

@@ -1,0 +1,34 @@
+#playerBox {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    width: 50%;
+    align-content: center;
+}
+#playerActivePokemon {
+    min-height: 100%;
+    min-width: 100%;
+    display: grid;
+    grid-template-rows: 10% 40% 25% 25%;
+}
+.pokeBox {
+    position: relative;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    float: center;
+}
+.pokeBox .img.attacked-right{
+    margin-left: 30px;
+}
+.pokeBox .img.attacked-left{
+    margin-right: 30px;
+}
+.pokeBox .img {
+    transition: margin 0.08s ease-out;
+    margin-left: 0;
+    margin-right: 0;
+}
+.pokeBox .name {
+    font-size: 18px;
+    font-weight: 500;
+}

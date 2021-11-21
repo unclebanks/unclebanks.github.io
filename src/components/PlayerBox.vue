@@ -1,6 +1,9 @@
 <template>
   <div id="playerBox">
-    <div class="pokeBox">
+    <div
+      id="playerActivePokemon"
+      class="pokeBox"
+    >
       <span class="name" /><br>
       <img
         id="playerImg"
