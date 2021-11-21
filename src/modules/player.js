@@ -115,7 +115,7 @@ export default (lastSave, appModel) => {
         },
         settings: {
             currentRegionId: 'Kanto',
-            currentRouteId: 'kroute1',
+            currentRouteId: 'kViridianForest',
             listView: 'pokeDex',
             autoSort: true,
             dexView: 'all',
