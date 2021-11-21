@@ -2,17 +2,23 @@
 
 html, body {
     background-color: rgb(0, 0, 0);
+    min-width: 100vw;
+    min-height: 100vh;
   }
-
+#app {
+    min-height: 100vh;
+    min-width: 100vw;
+}
 #gameContainer {
     font-family: 'Lato', sans-serif;
     color: rgb(255, 255, 255);
+    min-height: 100vh;
+    min-width: 100vw;
     display: grid;
     grid-template-columns: minmax(210px, 18%) 30% 30% 22%;
     grid-template-rows: 45% 25% 30%;
     background-color: rgb(58, 58, 58);
 }
-
 *::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -21,30 +27,25 @@ html, body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 *::-webkit-scrollbar {
 	width: 6px;
 	height: 4px;
 	background-color: transparent;
     border-radius: inherit;
 }
-
 *::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: white;
 }
-
 .subtitle {
     color: white;
 }
-
 #gameContainer > div {
     border: 6px solid black;
     border-radius: 30px;
 }
-
 #gameContainer > div > div {
     border: none !important;
 }
@@ -57,7 +58,6 @@ ul {
     list-style: none;
     padding-left: 0;
 }
-
 #listBox {
     grid-column: 1;
     grid-row: 1 / 4;
@@ -66,7 +66,6 @@ ul {
     float: left;
     text-align: left;
 }
-
 #routesBox {
     grid-column: 4;
     grid-row: 1 / 4;
@@ -139,24 +138,20 @@ ul {
     height: 16px;
     width: auto;
 }
-
 #listBox ul {
     padding-left: 15px;
     font-size: larger;
 }
-
 #pokedexBox select {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     width: 95%;
 }
-
 .listPoke p {
     margin: 0 0 0 10px;
     padding: 0;
 }
-
 .pokeUpButton,
 .pokeDownButton,
 .pokeFirstButton,
@@ -165,14 +160,12 @@ ul {
 .pokePrestigeButton {
     display: none;
 }
-
 #rosterBox ul li:first-child .pokeUpButton,
 #rosterBox ul li:last-child .pokeDownButton,
 #storageBox ul li:first-child .pokeUpButton,
 #storageBox ul li:last-child .pokeDownButton {
     display: none;
 }
-
 .manageTeamEnabled .pokeUpButton,
 .manageTeamEnabled .pokeDownButton,
 .manageTeamEnabled .pokeFirstButton,
@@ -183,7 +176,6 @@ ul {
     padding-left: 3px;
     padding-right: 3px;
 }
-
 .activeNormal {
     color: rgb(83, 255, 83);
 }
@@ -193,7 +185,6 @@ ul {
 .dead {
     color: red;
 }
-
 .activeShiny, .inactiveShiny {
     font-weight: bold;
 }
@@ -203,19 +194,15 @@ ul {
 .inactiveShiny {
     color: $inactive-shiny;
 }
-
-
 #viewSelectBox {
     grid-column: 2;
     grid-row: 2;
     width: 50%;
     text-align: center;
 }
-
 #viewSelectBox p {
     margin: 0;
 }
-
 #playerItems {
     font-family: 'Lato', sans-serif;
     display: grid;
@@ -246,7 +233,6 @@ ul {
 #pokeCoinsPic {
     padding-left: 20px;
 }
-
 #enemyBox {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -255,15 +241,11 @@ ul {
     float: right;
     grid-row: 1;
 }
-
-#playerBox {
-    grid-column: 2 / 4;
-    grid-row: 1;
-    width: 50%;
-    align-content: center;
-}
 #townBox {
     text-align: center;
+}
+#townBox .button {
+    background-color: gray;
 }
 #prizeCorner {
     margin-left: 50%;
@@ -284,29 +266,6 @@ ul {
     border-color: black;
     background-color: transparent;
     color: black;
-}
-
-.pokeBox {
-    position: relative;
-    line-height: 25px;
-    font-size: 12px;
-    text-align: center;
-    float: center;
-}
-.pokeBox .img.attacked-right{
-    margin-left: 30px;
-}
-.pokeBox .img.attacked-left{
-    margin-right: 30px;
-}
-.pokeBox .img {
-    transition: margin 0.08s ease-out;
-    margin-left: 0;
-    margin-right: 0;
-}
-.pokeBox .name {
-    font-size: 18px;
-    font-weight: 500;
 }
 /* progressbar reset*/
 progress,          /* All HTML5 progress enabled browsers */
@@ -358,7 +317,6 @@ progress::-webkit-progress-value {
 progress[aria-valuenow]:before  {
     background: rgb(15, 238, 141);
 }
-
 progress {
     width: 70px;
     height: 5px;
@@ -369,11 +327,9 @@ progress {
 progress.expBar {
     width: 120px;
 }
-
 #version {
     position: absolute;
 }
-
 #modalPopup {
     z-index: 2;
     display: none;
@@ -390,7 +346,6 @@ progress.expBar {
     width: 300px;
     height: 50px;
 }
-
 .modal-card-head {
     background-color: grey;
     color: white;
@@ -403,13 +358,11 @@ progress.expBar {
     background-color: grey;
     color: white;
 }
-
 #popupText {
     vertical-align: middle;
     margin: auto;
     font-weight: bold;
 }
-
 .modalContainer {
     position: fixed;
     top: 0;
@@ -418,7 +371,6 @@ progress.expBar {
     right: 0;
     z-index: 2;
 }
-
 .modalDialog {
     display: flex;
     flex-direction: column;
@@ -433,23 +385,19 @@ progress.expBar {
     border-radius: 5px;
     overflow: auto;
 }
-
 .modalTitle {
     flex: 0 0 auto;
     margin: 0;
     padding: 0 0 10px;
 }
-
 .modalDialog h4 {
     flex: 0 0 auto;
     margin: 0;
 }
-
 #settingsDialog > div > p {
     padding:0;
     margin:5px 10px;
 }
-
 #inventoryDialog {
   .vitaminItem > img {
     height: auto;
@@ -471,7 +419,6 @@ progress.expBar {
     }
   }
 }
-
 #vitaminDialog {
   .vitaminModalPokemon {
     * {
@@ -479,21 +426,17 @@ progress.expBar {
     }
   }
 }
-
 #forceSave {
     color:red;
     display:none;
 }
-
 #copySaveText {
     float: right;
     margin-top: 2px;
 }
-
 #saveText {
     flex: 1 1 auto;
 }
-
 #saveLoadButtons {
     margin-bottom: 7px;
 }
@@ -628,677 +571,18 @@ progress.expBar {
     min-width: fit-content;
     min-height: fit-content;
 }
-// Towns
-#palletTownModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/palletTown.png');
-    background-size: cover;
-    height: 533px;
-    width: 640px;
-}
-
-#palletTownNoOakModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/palletTownNoOak.png');
-    background-size: cover;
-    height: 533px;
-    width: 640px;
-}
-
-#redHouseModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/redHouse/redHouse.png');
-    background-size: cover;
-    width: 416px;
-    height: 320px;
-}
-
-#redRoomModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/redHouse/redRoom.png');
-    background-size: contain;
-    width: 384px;
-    height: 288px;
-}
-
-#blueHouseModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/blueHouse/blueHouse.png');
-    background-size: cover;
-    width: 416px;
-    height: 320px;
-}
-
 #oaklabModalBox {
     background-image: url('../assets/backgrounds/kanto/palletTown/oakLab/oakLabKanto.png');
     background-size: contain;
     height: 448px;
     width: 416px;
 }
-
 #oaklabNoOakModalBox {
     background-image: url('../assets/backgrounds/kanto/palletTown/oakLab/oakLabNoOak.png');
     background-size: contain;
     height: 448px;
     width: 416px;
 }
-
-#viridianCityModalBox {
-    background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCity.png');
-    background-size: cover;
-    height: 533px;
-    width: 640px;
-}
-
-#viridianPokeMartModalBox {
-    background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityPokeMart.png');
-    background-size: cover;
-    width: 352px;
-    height: 288px;
-}
-
-#viridianPokeMartModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#viridianPokeCenterModalBox {
-    background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityPokemonCenter.png');
-    background-size: cover;
-    width: 480px;
-    height: 320px;
-}
-
-#viridianGymModalBox {
-    background-image: url('../assets/backgrounds/kanto/viridianCity/viridianCityGym.png');
-    background-size: cover;
-    height: 460px;
-}
-
-#viridianGymModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#pewterCityModalBox {
-    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterCity.png');
-    background-size: cover;
-    width: 640px;
-    height: 533px;
-}
-
-#pewterMuseumModalBox {
-    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterMuseum.png');
-    background-size: cover;
-    height: 200px;
-}
-
-#pewterMuseumModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#pewterGymModalBox {
-    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterGym.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 512px;
-    width: 400px;
-}
-
-#pewterPokeCenterModalBox {
-    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterPokeCenter.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#pewterPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#pewterPokeMartModalBox {
-    background-image: url('../assets/backgrounds/kanto/pewterCity/pewterPokeMart.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#pewterPokeMartModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#ceruleanCityModalBox {
-    background-image: url('../assets/backgrounds/kanto/ceruleanCity/ceruleanCity.png');
-    background-size: cover;
-    height: 533px;
-    width: 640px;
-}
-
-#ceruleanGymModalBox {
-    background-image: url('../assets/backgrounds/kanto/ceruleanCity/ceruleanGym.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 753px;
-    width: 640px;
-}
-
-#ceruleanPokeCenterModalBox {
-    background-image: url('../assets/backgrounds/kanto/ceruleanCity/ceruleanPokeCenter.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#ceruleanPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#ceruleanPokeMartModalBox {
-    background-image: url('../assets/backgrounds/kanto/ceruleanCity/ceruleanPokeMart.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#ceruleanPokeMartModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#seasideBillHouseBeforeConvertModalBox {
-    background-image: url('../assets/backgrounds/kanto/ceruleanCity/seasideCottageBeforeConvert.png');
-    background-size: cover;
-    width: 480px;
-    height: 352px;
-}
-
-#seasideBillHouseBeforeConvertModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#seasideBillHouseAfterConvertModalBox {
-    background-image: url('../assets/backgrounds/kanto/ceruleanCity/seasideCottageAfterConvert.png');
-    background-size: cover;
-    width: 480px;
-    height: 352px;
-}
-
-#seasideBillHouseAfterConvertModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#vermilionCityModalBox {
-    background-image: url('../assets/backgrounds/kanto/vermilionCity/vermilionCity.png');
-    background-size: cover;
-    height: 533px;
-    width: 640px;
-}
-
-#vermilionCityModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#vermilionPokeCenterModalBox {
-    background-image: url('../assets/backgrounds/kanto/vermilionCity/vermilionPokeCenter.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#vermilionPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#vermilionPokeMartModalBox {
-    background-image: url('../assets/backgrounds/kanto/vermilionCity/vermilionPokeMart.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#vermilionPokeMartModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#vermilionSSANNE1ModalBox {
-    background-image: url('../assets/backgrounds/kanto/vermilionCity/kantoSSAnne.png');
-    background-size: cover;
-    height: 336px;
-    width: 496px;
-}
-
-#vermilionSSANNE1ModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderTownModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/lavenderTown.png');
-    background-size: cover;
-    height: 533px;
-    width: 640px;
-}
-
-#lavenderTownModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderPokeCenterModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/lavenderPokeCenter.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#lavenderPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderPokeMartModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/lavenderPokeMart.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#lavenderPokeMartModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderPokeTower1ModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/kantoPokemonTower.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#lavenderPokeTower1ModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderPokeTower2ModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/kantoPokemonTowerF2.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#lavenderPokeTower2ModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderPokeTower3ModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/kantoPokemonTowerF3.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#lavenderPokeTower3ModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderPokeTower4ModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/kantoPokemonTowerF4.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#lavenderPokeTower4ModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderPokeTower5ModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/kantoPokemonTowerF5.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#lavenderPokeTower5ModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderPokeTower6ModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/kantoPokemonTowerF6.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#lavenderPokeTower6ModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#lavenderPokeTower7ModalBox {
-    background-image: url('../assets/backgrounds/kanto/lavenderTown/kantoPokemonTowerF7.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#lavenderPokeTower7ModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#celadonCityModalBox {
-    background-image: url('../assets/backgrounds/kanto/celadonCity/celadonCity.png');
-    background-size: cover;
-    height: 427px;
-    width: 640px;
-}
-
-#celadonCityModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#gameCornerBuilding {
-    background-image: url('../assets/backgrounds/kanto/celadonCity/celadonGameCorner.png');
-    background-size: cover;
-    height: 481px;
-}
-
-#gameCornerBuilding .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#gameCornerBuilding .span {
-    color: black;
-}
-
-#celadonPokeCenterModalBox {
-    background-image: url('../assets/backgrounds/kanto/celadonCity/celadonPokeCenter.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#celadonPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#saffronCityModalBox {
-    background-image: url('../assets/backgrounds/kanto/saffronCity/saffronCity.png');
-    background-size: cover;
-    height: 533px;
-    width: 640px;
-}
-
-#saffronCityModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#saffronPokeCenterModalBox {
-    background-image: url('../assets/backgrounds/kanto/saffronCity/saffronPokeCenter.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#saffronPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#saffronPokeMartModalBox {
-    background-image: url('../assets/backgrounds/kanto/saffronCity/saffronPokeMart.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#saffronPokeMartModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#fuchsiaCityModalBox {
-    background-image: url('../assets/backgrounds/kanto/fuchsiaCity/fuchsiaCity.png');
-    background-size: cover;
-    height: 533px;
-    width: 640px;
-}
-
-#kantoSafariZoneEntranceModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneEntrance.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 576px;
-    width: 576px;
-}
-
-#kantoSafariZoneFirstMapModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneFirstMap.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 452px;
-    width: 640px;
-}
-
-#kantoSafariZoneLeftModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneLeft.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 480px;
-    width: 640px;
-}
-
-#kantoSafariZoneRightModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneRight.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 415px;
-    width: 640px;
-}
-
-#kantoSafariZoneTopModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/safariZone/kantoSafariZoneTop.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 449px;
-    width: 640px;
-}
-
-#fuchsiaCityModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#fuchsiaPokeCenterModalBox {
-    background-image: url('../assets/backgrounds/kanto/fuchsiaCity/fuchsiaPokeCenter.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#fuchsiaPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#fuchsiaPokeMartModalBox {
-    background-image: url('../assets/backgrounds/kanto/fuchsiaCity/fuchsiaPokeMart.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#fuchsiaPokeMartModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#cinnabarIslandModalBox {
-    background-image: url('../assets/backgrounds/kanto/cinnabarIsland/kantoCinnabarIsland.png');
-    background-size: cover;
-    width: 640px;
-    height: 533px;
-}
-
-#cinnabarIslandModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#cinnabarLabModalBox {
-    background-image: url('../assets/backgrounds/kanto/cinnabarIsland/cinnabarLab.png');
-    background-size: cover;
-    height: 481px;
-}
-
-#cinnabarLabModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#cinnabarPokeCenterModalBox {
-    background-image: url('../assets/backgrounds/kanto/cinnabarIsland/cinnabarPokeCenter.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#cinnabarPokeCenterModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-
-#cinnabarPokeMartModalBox {
-    background-image: url('../assets/backgrounds/kanto/cinnabarIsland/cinnabarPokeMart.png');
-    background-size: cover;
-    height: 480px;
-}
-
-#cinnabarPokeMartModalBox .button {
-    background-color: rgb(58, 58, 58);
-}
-// Routes
-
-#kantoRoute1ModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 1067px;
-    width: 640px;
-}
-#kantoRoute22ModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute22.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 640px;
-    height: 384px;
-}
-#kantoRoute22NoBlueModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute22NoBlue.png');
-    background-size: contain;
-    height: 384px;
-    width: 640px;
-}
-#kantoRoute2BottomModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute2Bottom.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 943px;
-    width: 640px;
-}
-#kantoRoute2TopModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute2Top.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 679px;
-    width: 384px;
-}
-#kantoRoute3WestModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute3West.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 593px;
-    height: 320px;
-}
-#kantoRoute3EastModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute3East.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 680px;
-    height: 320px;
-}
-#kantoRoute4WestModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute4West.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 580px;
-    height: 320px;
-}
-#kantoRoute4EastModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute4East.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 680px;
-    height: 320px;
-}
-#kantoRoute24ModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoRoute24.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 680px;
-    height: 1100px;
-}
-// DUNGEONS
-#mtMoonEntranceModalBox {
-    background-image: url('../assets/backgrounds/kanto/routes/kantoMtMoonEntrance.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 414px;
-    height: 320px;
-}
-#mtMoonFirstFloorModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/mtMoon/mtMoonFirstFloor.png');
-    background-size: cover;
-    width: 768px;
-    height: 640px;
-}
-#mtMoonSecondFloorModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/mtMoon/mtMoonSecondFloor.png');
-    background-size: cover;
-    width: 768px;
-    height: 640px;
-}
-#kantoViridianForestModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/viridianForest/viridianForest.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 818px;
-    width: 640px;
-}
-#seafoamIslandsEntranceModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/kantoSeafoamIslandsEntrance.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 478px;
-    height: 320px;
-}
-#seafoamislandsFirstFloorModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsFirstFloor.png');
-    background-size: cover;
-    width: 608px;
-    height: 384px;
-}
-#seafoamislandsSecondFloorModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsSecondFloor.png');
-    background-size: cover;
-    width: 608px;
-    height: 384px;
-}
-#seafoamislandsThirdFloorModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsThirdFloor.png');
-    background-size: cover;
-    width: 608px;
-    height: 384px;
-}
-#seafoamislandsFourthFloorModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsFourthFloor.png');
-    background-size: cover;
-    width: 608px;
-    height: 384px;
-}
-#seafoamislandsFifthFloorModalBox {
-    background-image: url('../assets/backgrounds/kanto/dungeons/seafoamIslands/seafoamIslandsFifthFloor.png');
-    background-size: cover;
-    width: 608px;
-    height: 384px;
-}
-
-#kantoPokeRanchContainer {
-    font-family: 'Lato', sans-serif;
-    display: grid;
-    grid-template-columns: 30% 30% 40%;
-    grid-template-rows: 45% 25% 30%;
-    background-color: rgb(58, 58, 58);
-}
-
-#kantoPokeRanchButtons {
-    grid-column: 1;
-    grid-row: 1;
-    align-content: center;
-}
-
-#pokemon1Box {
-    grid-column: 2;
-    grid-row: 1;
-    width: 50%;
-    align-content: center;
-}
-
-#pokemon2Box {
-    grid-column: 3;
-    grid-row: 1;
-    width: 50%;
-    align-content: center;
-}
-
 .townBuilding {
     width: 90%;
     float: left;
@@ -1313,12 +597,10 @@ progress.expBar {
 ul#shopItems li {
     margin-top: 2px;
 }
-
 .ballIcon {
     height: auto;
     width: 14px;
 }
-
 .coinIcon {
     height: auto;
     width: 16px;
