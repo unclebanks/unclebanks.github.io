@@ -97,15 +97,9 @@ if (player.settings.spriteChoice === 'front') {
 } else {
     (document.getElementById('spriteChoiceBack') as HTMLInputElement).checked = true;
 }
-
-dom.bindEvents();
-dom.renderBalls();
-dom.renderCurrency();
-
 renderView(dom, enemy, player);
-dom.renderRoutesBox();
-dom.renderRegionSelect();
-dom.renderPokeSort();
+
+dom.renderInitial();
 
 combatLoop.init();
 

@@ -179,6 +179,7 @@ const ROUTES: Routes = {
             _special: [
                 { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Ivysaur', 'Kakuna', 'Metapod', 'Pidgeotto', 'Gloom', 'Weepinbell'] },
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Venusaur', 'Beedrill', 'Butterfree', 'Pidgeot'] },
+                { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Venusaur', 'Beedrill', 'Butterfree', 'Pidgeot'] },
             ],
         },
         kMtMoon: {
@@ -191,6 +192,11 @@ const ROUTES: Routes = {
                 { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Nidorina', 'Nidorino', 'Golbat', 'Graveler'] },
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Sandslash', 'Parasect', 'Persian', 'Eevee'] },
             ],
+            _unlock: {
+                badges: {
+                    'Boulder Badge': true,
+                },
+            },
         },
         kRockTunnel: {
             name: 'Rock Tunnel',
@@ -202,6 +208,11 @@ const ROUTES: Routes = {
                 { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Charmeleon', 'Golbat', 'Kadabra', 'Graveler'] },
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Charizard', 'Primeape', 'Hypno', 'Marowak', 'Snorlax'] },
             ],
+            _unlock: {
+                badges: {
+                    'Boulder Badge': true,
+                },
+            },
         },
         kDiglettsCave: {
             name: 'Diglett\'s Cave',
@@ -212,6 +223,11 @@ const ROUTES: Routes = {
             _special: [
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Dugtrio'] },
             ],
+            _unlock: {
+                badges: {
+                    'Cascade Badge': true,
+                },
+            },
         },
         kSafariZone: {
             name: 'Safari Zone',
@@ -223,6 +239,11 @@ const ROUTES: Routes = {
                 { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Kakuna', 'Metapod', 'Nidorino', 'Nidorina', 'Doduo', 'Tangela', 'Tauros'] },
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Butterfree', 'Beedrill', 'Nidoqueen', 'Nidoking', 'Rhydon', 'Chansey', 'Kangaskhan', 'Scyther', 'Pinsir'] },
             ],
+            _unlock: {
+                badges: {
+                    'Rainbow Badge': true,
+                },
+            },
         },
         kPowerPLant: {
             name: 'Power Plant',
@@ -235,6 +256,11 @@ const ROUTES: Routes = {
                 { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Electabuzz', 'Raichu'] },
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Magneton', 'Muk', 'Electrode', 'Porygon', 'Zapdos'] },
             ],
+            _unlock: {
+                badges: {
+                    'Soul Badge': true,
+                },
+            },
         },
         kSeafoamIslands: {
             name: 'Seafoam Islands',
@@ -246,6 +272,11 @@ const ROUTES: Routes = {
                 { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Wartortle', 'Jynx', 'Kingler', 'Seadra', 'Starmie'] },
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Blastoise', 'Golduck', 'Slowbro', 'Dewgong', 'Cloyster', 'Lapras', 'Articuno'] },
             ],
+            _unlock: {
+                badges: {
+                    'Marsh Badge': true,
+                },
+            },
         },
         kPokemonMansion: {
             name: 'Pokemon Mansion',
@@ -257,6 +288,11 @@ const ROUTES: Routes = {
                 { requirement: { type: 'item', item: 'kantoFirstStagePass' }, pokemon: ['Raticate', 'Arbok', 'Persian', 'Haunter'] },
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Ninetales', 'Arcanine', 'Gengar', 'Weezing', 'Magmar', 'Ditto'] },
             ],
+            _unlock: {
+                badges: {
+                    'Marsh Badge': true,
+                },
+            },
         },
         kVictoryRoad: {
             name: 'Victory Road',
@@ -264,6 +300,11 @@ const ROUTES: Routes = {
             minLevel: 50,
             maxLevel: 60,
             respawn: 'palletTown',
+            _unlock: {
+                badges: {
+                    'Volcano Badge': true,
+                },
+            },
         },
         kCeruleanCave: {
             name: 'Cerulean Cave',
@@ -271,6 +312,11 @@ const ROUTES: Routes = {
             minLevel: 60,
             maxLevel: 70,
             respawn: 'palletTown',
+            _unlock: {
+                badges: {
+                    'Earth Badge': true,
+                },
+            },
         },
         kOldRod: {
             name: 'Kanto Old Rod',

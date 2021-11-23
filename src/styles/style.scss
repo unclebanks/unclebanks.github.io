@@ -11,13 +11,11 @@ html, body {
 }
 #gameContainer {
     font-family: 'Lato', sans-serif;
-    color: rgb(255, 255, 255);
     min-height: 100vh;
     min-width: 100vw;
     display: grid;
     grid-template-columns: minmax(210px, 18%) 30% 30% 22%;
     grid-template-rows: 45% 25% 30%;
-    background-color: rgb(58, 58, 58);
 }
 *::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -39,9 +37,6 @@ html, body {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: white;
 }
-.subtitle {
-    color: white;
-}
 #gameContainer > div {
     border: 6px solid black;
     border-radius: 30px;
@@ -51,21 +46,19 @@ html, body {
 }
 .button, button {
     background-color: transparent;
-    border-color: white;
-    color: white;
 }
 ul {
     list-style: none;
     padding-left: 0;
 }
-#listBox {
-    grid-column: 1;
-    grid-row: 1 / 4;
-    max-height: 100vh;
-    overflow: auto;
-    float: left;
-    text-align: left;
-}
+// #listBox {
+//     grid-column: 1;
+//     grid-row: 1 / 4;
+//     max-height: 100vh;
+//     overflow: auto;
+//     float: left;
+//     text-align: left;
+// }
 #routesBox {
     grid-column: 4;
     grid-row: 1 / 4;
@@ -74,65 +67,6 @@ ul {
     float: left;
     text-align: left;
 }
-#menu {
-    max-height: 100vh;
-    width: 200px;
-    position: fixed;
-    z-index: 20000;
-    top: 0;
-    right: -250px;
-    overflow-x: hidden;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    transition: 0.5s;
-    background: inherit;
-    background-color: skyblue;
-    border-radius: 0 0 20px 0;
-
-    a {
-      text-decoration: none;
-    }
-
-    span {
-        font-size: xx-large;
-        text-align: justify;
-    }
-
-    #closeMenu {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-      color: white;
-    }
-  }
-
-  #openMenu {
-    text-decoration: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 10000;
-    background-color: grey;
-    padding: 2px;
-    margin: 4px 2px;
-    border-radius: 12px;
-    color: white;
-    font-size: 28px;
-    text-align: center;
-  }
-
-  @media screen and (max-height: 450px) {
-    #menu {
-      padding-top: 15px;
-    }
-
-    #menu a {
-      font-size: 18px;
-    }
-  }
-
 .roamerIcon {
     margin-left: 3px;
     height: 16px;
@@ -194,45 +128,6 @@ ul {
 .inactiveShiny {
     color: $inactive-shiny;
 }
-#viewSelectBox {
-    grid-column: 2;
-    grid-row: 2;
-    width: 50%;
-    text-align: center;
-}
-#viewSelectBox p {
-    margin: 0;
-}
-#playerItems {
-    font-family: 'Lato', sans-serif;
-    display: grid;
-    grid-template-rows: 20% 40% 40%;
-    grid-row: 1;
-    background-color: rgb(58, 58, 58);
-}
-#playerPokeBalls {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-row: 2;
-    background-color: rgb(58, 58, 58);
-}
-#playerPokeBalls img {
-    height: 50%;
-    width: 50%;
-}
-#playerCurrencyAmounts {
-    display: grid;
-    grid-template-columns: 33% 33% 34%;
-    grid-row: 3;
-    background-color: rgb(58, 58, 58);
-}
-#playerCurrencyAmounts img {
-    height: 50%;
-    width: 45%;
-}
-#pokeCoinsPic {
-    padding-left: 20px;
-}
 #enemyBox {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -250,22 +145,6 @@ ul {
 #prizeCorner {
     margin-left: 50%;
     margin-top: auto;
-}
-#viewSelectBox .button, #townBox button {
-    margin-top: 7px;
-    align-items: center;
-    border-color: white;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    color: white;
-}
-#regionBox partyButton {
-    width: auto;
-    height: fit-content;
-    border-color: black;
-    background-color: transparent;
-    color: black;
 }
 /* progressbar reset*/
 progress,          /* All HTML5 progress enabled browsers */
@@ -345,18 +224,6 @@ progress.expBar {
     overflow: auto;
     width: 300px;
     height: 50px;
-}
-.modal-card-head {
-    background-color: grey;
-    color: white;
-}
-.modal-card-body {
-    background-color: rgb(58, 58, 58);
-    color: white;
-}
-.modal-card-foot {
-    background-color: grey;
-    color: white;
 }
 #popupText {
     vertical-align: middle;
