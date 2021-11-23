@@ -101,6 +101,7 @@ interface Route {
     npc?: NPC,
     _unlock?: UnlockData,
     _special?: SpecialPokemon[],
+    background?: string,
 
     // Need to do something about these, can probably be made into
     // an unlock condition and become part of UnlockData.
@@ -181,6 +182,7 @@ const ROUTES: Routes = {
                 { requirement: { type: 'item', item: 'kantoSecondStagePass' }, pokemon: ['Venusaur', 'Beedrill', 'Butterfree', 'Pidgeot'] },
                 { requirement: { type: 'evoStone', evoStone: 'leafStone' }, pokemon: ['Venusaur', 'Beedrill', 'Butterfree', 'Pidgeot'] },
             ],
+            background: 'kantoViridianForest',
         },
         kMtMoon: {
             name: 'Mt. Moon',
@@ -197,6 +199,7 @@ const ROUTES: Routes = {
                     'Boulder Badge': true,
                 },
             },
+            background: 'kantoMtMoon',
         },
         kRockTunnel: {
             name: 'Rock Tunnel',
@@ -213,6 +216,7 @@ const ROUTES: Routes = {
                     'Boulder Badge': true,
                 },
             },
+            background: 'kantoRockTunnel',
         },
         kDiglettsCave: {
             name: 'Diglett\'s Cave',
@@ -228,6 +232,7 @@ const ROUTES: Routes = {
                     'Cascade Badge': true,
                 },
             },
+            background: 'kantoDigCave',
         },
         kSafariZone: {
             name: 'Safari Zone',
@@ -244,6 +249,7 @@ const ROUTES: Routes = {
                     'Rainbow Badge': true,
                 },
             },
+            background: 'kantoSafariZone',
         },
         kPowerPLant: {
             name: 'Power Plant',
@@ -261,6 +267,7 @@ const ROUTES: Routes = {
                     'Soul Badge': true,
                 },
             },
+            background: 'kantoPowerPlant',
         },
         kSeafoamIslands: {
             name: 'Seafoam Islands',
@@ -277,6 +284,7 @@ const ROUTES: Routes = {
                     'Marsh Badge': true,
                 },
             },
+            background: 'kantoSeafoamIsle',
         },
         kPokemonMansion: {
             name: 'Pokemon Mansion',
@@ -293,6 +301,7 @@ const ROUTES: Routes = {
                     'Marsh Badge': true,
                 },
             },
+            background: 'kantoPokemonMansion',
         },
         kVictoryRoad: {
             name: 'Victory Road',
@@ -317,6 +326,7 @@ const ROUTES: Routes = {
                     'Earth Badge': true,
                 },
             },
+            background: 'kantoCeruleanCave',
         },
         kOldRod: {
             name: 'Kanto Old Rod',
@@ -325,6 +335,7 @@ const ROUTES: Routes = {
             maxLevel: 5,
             respawn: 'palletTown',
             kantoOldRod: 1,
+            background: 'kantoFishing',
         },
         kGoodRod: {
             name: 'Kanto Good Rod',
@@ -333,6 +344,7 @@ const ROUTES: Routes = {
             maxLevel: 15,
             respawn: 'palletTown',
             kantoGoodRod: 1,
+            background: 'kantoFishing',
         },
         kSuperRod: {
             name: 'Kanto Super Rod',
@@ -341,6 +353,7 @@ const ROUTES: Routes = {
             maxLevel: 40,
             respawn: 'palletTown',
             kantoSuperRod: 1,
+            background: 'kantoFishing',
         },
     },
     Johto: {

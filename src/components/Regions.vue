@@ -15,6 +15,7 @@
       >
         Map
       </button>
+      <hr style="margin-top: 1%; margin-bottom: 1%; background-color: black">
     </div>
     <div id="regionSelectorBottomButtons">
       <div id="bagButtons">

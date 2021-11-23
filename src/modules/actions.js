@@ -40,12 +40,24 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else {
                 combatLoop.unpause();
                 this.removeTown();
+                this.setBackground();
             }
             renderView(dom, enemy, player);
             player.savePokes();
             dom.renderRouteList();
 
             return true;
+        },
+        setBackground: function () {
+            const routeBackground = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].background;
+            const playerBackground = document.getElementById('playerActivePokemon').style;
+            const enemyBackground = document.getElementById('enemyBox').style;
+            playerBackground.backgroundImage = `url(./assets/backgrounds/kanto/${routeBackground}.png)`;
+            playerBackground.backgroundSize = 'cover';
+            playerBackground.backgroundRepeat = 'no-repeat';
+            enemyBackground.backgroundImage = `url(./assets/backgrounds/kanto/${routeBackground}.png)`;
+            enemyBackground.backgroundSize = 'cover';
+            enemyBackground.backgroundRepeat = 'no-repeat';
         },
         changePokemon: function (newActiveIndex) {
             player.setActive(newActiveIndex);
@@ -549,10 +561,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         renderTown: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
             const townBox = document.getElementById('enemyBox');
+            const playerBox = document.getElementById('playerActivePokemon');
             if (routeData === 'Pallet Town') {
                 townBox.style.backgroundImage = "url('../assets/backgrounds/kanto/palletTown/oakLab/oaksLab.png')";
                 townBox.style.backgroundSize = 'cover';
                 townBox.style.backgroundRepeat = 'no-repeat';
+                playerBox.style.background = '';
             }
         },
         removeTown: function () {
