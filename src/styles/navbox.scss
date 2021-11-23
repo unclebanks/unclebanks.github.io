@@ -4,6 +4,8 @@
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border: 6px solid black;
+    border-radius: 30px;
 }
 #playerBallsContainer {
     grid-column: 1;

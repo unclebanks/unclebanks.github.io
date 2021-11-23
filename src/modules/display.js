@@ -74,6 +74,14 @@ export default (player, combatLoop, userInteractions) => {
                 i++;
             }
         },
+        hideAll: function (parentElement) {
+            const parentOfChild = document.getElementById(parentElement);
+            let i = 0;
+            while (parentOfChild.children.length > i) {
+                parentOfChild.children[i].style.display = 'none';
+                i++;
+            }
+        },
         setValue: function (domElement, newValue, append) {
             if (append === undefined) { append = false; }
             if (append) {

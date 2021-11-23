@@ -3,12 +3,15 @@
     grid-row: 1;
     width: 50%;
     align-content: center;
+    border: 6px solid black;
+    border-radius: 30px;
 }
 #playerActivePokemon {
     min-height: 100%;
     min-width: 100%;
     display: grid;
     grid-template-rows: 10% 40% 25% 25%;
+    border-radius: 30px;
 }
 .pokeBox {
     position: relative;

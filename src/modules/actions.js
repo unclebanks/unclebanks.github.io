@@ -40,12 +40,24 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else {
                 combatLoop.unpause();
                 this.removeTown();
+                this.setBackground();
             }
             renderView(dom, enemy, player);
             player.savePokes();
             dom.renderRouteList();
 
             return true;
+        },
+        setBackground: function () {
+            const routeBackground = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].background;
+            const playerBackground = document.getElementById('playerActivePokemon').style;
+            const enemyBackground = document.getElementById('enemyBox').style;
+            playerBackground.backgroundImage = `url(./assets/backgrounds/kanto/${routeBackground}.png)`;
+            playerBackground.backgroundSize = 'cover';
+            playerBackground.backgroundRepeat = 'no-repeat';
+            enemyBackground.backgroundImage = `url(./assets/backgrounds/kanto/${routeBackground}.png)`;
+            enemyBackground.backgroundSize = 'cover';
+            enemyBackground.backgroundRepeat = 'no-repeat';
         },
         changePokemon: function (newActiveIndex) {
             player.setActive(newActiveIndex);
@@ -75,6 +87,19 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             const newTheme = document.getElementById('themes').value;
             player.settings.theme = newTheme;
             dom.renderTheme(newTheme);
+        },
+        regionBoxSelector: function (pageTo) {
+            const pageToOpen = document.getElementById(pageTo);
+            switch (pageTo) {
+            case 'bagButtons': dom.hideAll('regionSelectorBottomButtons');
+                pageToOpen.style.display = 'block';
+                break;
+            case 'regionButtons': dom.hideAll('regionSelectorBottomButtons');
+                pageToOpen.style.display = 'block';
+                break;
+            default: alert('test');
+                break;
+            }
         },
         enablePokeListAutoSort: function () {
             player.settings.autoSort = $('#autoSort').checked;
@@ -523,7 +548,16 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 if (caughtMons > 15) {
                     if (shouldBattle === true) {
                         alert('You have made it to the first battle.');
-                        player.badges['Boulder Badge'] = true;
+                        player.badges['Cascade Badge'] = true;
+                        dom.renderRouteList();
+                        // this.profOakBattle();
+                    } else { notify('I will be here any time you would like to take the exam.'); }
+                } else { notify('Catch more and come back'); }
+            } else if (playerFlags.cascadeBadge === true && !playerFlags.thunderBadge) {
+                if (caughtMons > 25) {
+                    if (shouldBattle === true) {
+                        alert('You have made it to the first battle.');
+                        player.badges['Thunder Badge'] = true;
                         dom.renderRouteList();
                         // this.profOakBattle();
                     } else { notify('I will be here any time you would like to take the exam.'); }
@@ -536,10 +570,12 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         renderTown: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
             const townBox = document.getElementById('enemyBox');
+            const playerBox = document.getElementById('playerActivePokemon');
             if (routeData === 'Pallet Town') {
                 townBox.style.backgroundImage = "url('../assets/backgrounds/kanto/palletTown/oakLab/oaksLab.png')";
                 townBox.style.backgroundSize = 'cover';
                 townBox.style.backgroundRepeat = 'no-repeat';
+                playerBox.style.background = '';
             }
         },
         removeTown: function () {
