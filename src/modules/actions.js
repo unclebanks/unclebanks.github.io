@@ -493,7 +493,37 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             } else { alert('Not implemented yet'); }
         },
         checkProf: function () {
-            alert('this is still a work in progress. Check back after a few updates.');
+            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
+            switch (routeData) {
+            case 'Pallet Town': this.palletProf();
+                break;
+            default: alert('Error somewhere');
+            }
+        },
+        palletProf: function () {
+            const playerFlags = player.events;
+            const caughtMons = player.countPokedex(5);
+            if (!playerFlags.boulderBadge) {
+                if (caughtMons > 5) {
+                    const shouldBattle = window.confirm(`You seem to have caught ${caughtMons} POKEMON. Would you like to battle to unlock the next area?`);
+                    if (shouldBattle === true) {
+                        alert('You have made it to the first battle.');
+                        player.badges['Boulder Badge'] = true;
+                        playerFlags.boulderBadge = true;
+                        dom.renderRouteList();
+                        // this.profOakBattle();
+                    } else { notify('I will be here any time you would like to take the exam.'); }
+                } else { notify('Come see me again after you have obtained at least 5 different POKEMON.'); }
+            } else if (playerFlags.boulderBadge === true && !playerFlags.cascadeBadge) {
+                if (caughtMons > 15) {
+                    if (shouldBattle === true) {
+                        alert('You have made it to the first battle.');
+                        player.badges['Boulder Badge'] = true;
+                        dom.renderRouteList();
+                        // this.profOakBattle();
+                    } else { notify('I will be here any time you would like to take the exam.'); }
+                } else { notify('Catch more and come back'); }
+            }
         },
         checkQuests: function () {
             alert('this is still a work in progress. check back after a few updates.');
@@ -545,6 +575,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         viewGym: function () {
             this.renderGym();
             openModal(document.getElementById('gymModal'));
+        },
+        openPC: function () {
+            openModal(document.getElementById('pokemonstorageModal'));
         },
         openVitaminModal: function (vitamin) {
             if (!VITAMINS[vitamin]) {

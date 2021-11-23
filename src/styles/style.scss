@@ -58,14 +58,14 @@ ul {
     list-style: none;
     padding-left: 0;
 }
-#listBox {
-    grid-column: 1;
-    grid-row: 1 / 4;
-    max-height: 100vh;
-    overflow: auto;
-    float: left;
-    text-align: left;
-}
+// #listBox {
+//     grid-column: 1;
+//     grid-row: 1 / 4;
+//     max-height: 100vh;
+//     overflow: auto;
+//     float: left;
+//     text-align: left;
+// }
 #routesBox {
     grid-column: 4;
     grid-row: 1 / 4;
