@@ -76,6 +76,19 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             player.settings.theme = newTheme;
             dom.renderTheme(newTheme);
         },
+        regionBoxSelector: function (pageTo) {
+            const pageToOpen = document.getElementById(pageTo);
+            switch (pageTo) {
+            case 'bagButtons': dom.hideAll('regionSelectorBottomButtons');
+                pageToOpen.style.display = 'block';
+                break;
+            case 'regionButtons': dom.hideAll('regionSelectorBottomButtons');
+                pageToOpen.style.display = 'block';
+                break;
+            default: alert('test');
+                break;
+            }
+        },
         enablePokeListAutoSort: function () {
             player.settings.autoSort = $('#autoSort').checked;
             // hide or show sort dropdowns
