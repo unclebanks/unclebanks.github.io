@@ -39,12 +39,6 @@
       </button>
       <button
         class="button"
-        onclick="userInteractions.checkQuests()"
-      >
-        Quests
-      </button>
-      <button
-        class="button"
         onclick="userInteractions.openPC()"
       >
         PC

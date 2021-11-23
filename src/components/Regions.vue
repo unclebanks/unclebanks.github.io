@@ -1,77 +1,133 @@
 <template>
   <div id="regionSelect">
-    <span>Region Select</span>
-    <div id="regionButtons">
+    <div
+      id="regionSelectorButtons"
+    >
       <button
-        id="kantoButton"
         class="button"
-        value="Kanto"
-        onclick="userInteractions.goToDifferentRegion('Kanto')"
+        onclick="userInteractions.regionBoxSelector('bagButtons')"
       >
-        KANTO
+        Bag
       </button>
       <button
-        id="johtoButton"
         class="button"
-        onclick="userInteractions.goToDifferentRegion('Johto')"
+        onclick="userInteractions.regionBoxSelector('regionButtons')"
       >
-        JOHTO
+        Map
       </button>
-      <button
-        id="hoennButton"
-        class="button"
-        onclick="userInteractions.goToDifferentRegion('Hoenn')"
+      <hr style="margin-top: 1%; margin-bottom: 1%; background-color: black">
+    </div>
+    <div id="regionSelectorBottomButtons">
+      <div id="bagButtons">
+        <button
+          onclick="userInteractions.viewPokeDex()"
+          class="button"
+        >
+          POKEDEX
+        </button>
+        <button
+          id="badgesButton"
+          onclick="userInteractions.viewBadgeCase()"
+          class="button"
+        >
+          BADGES
+        </button>
+        <button
+          id="evoStonesButton"
+          onclick="userInteractions.viewEvoStones()"
+          class="button"
+        >
+          EVO STONES
+        </button>
+        <button
+          id="keyItemsButton"
+          onclick="userInteractions.viewKeyItems()"
+          class="button"
+        >
+          KEY ITEMS
+        </button>
+        <button
+          class="button"
+          onclick="userInteractions.viewSettings()"
+        >
+          SETTINGS
+        </button>
+      </div>
+      <div
+        id="regionButtons"
+        style="display: none"
       >
-        HOENN
-      </button>
-      <button
-        id="sinnohButton"
-        class="button"
-        value="Sinnoh"
-        onclick="userInteractions.goToDifferentRegion('Sinnoh')"
-      >
-        SINNOH
-      </button>
-      <button
-        id="unovaButton"
-        class="button"
-        value="Unova"
-        onclick="userInteractions.goToDifferentRegion('Unova')"
-      >
-        UNOVA
-      </button>
-      <button
-        id="kalosButton"
-        class="button"
-        value="Kalos"
-        onclick="userInteractions.goToNone()"
-      >
-        KALOS
-      </button>
-      <button
-        id="alolaButton"
-        class="button"
-        value="Alola"
-        onclick="userInteractions.goToNone()"
-      >
-        ALOLA
-      </button>
-      <button
-        id="galarButton"
-        class="button"
-        value="Galar"
-        onclick="userInteractions.goToNone()"
-      >
-        GALAR
-      </button>
-      <button
-        id="fandomButton"
-        class="button"
-        value="Fandom"
-        onclick="userInteractions.goToDifferentRegion('Fandom')"
-      >
-        FANDOM
-      </button><br>
+        <button
+          id="kantoButton"
+          class="button"
+          value="Kanto"
+          onclick="userInteractions.goToDifferentRegion('Kanto')"
+        >
+          KANTO
+        </button>
+        <button
+          id="johtoButton"
+          class="button"
+          onclick="userInteractions.goToDifferentRegion('Johto')"
+        >
+          JOHTO
+        </button>
+        <button
+          id="hoennButton"
+          class="button"
+          onclick="userInteractions.goToDifferentRegion('Hoenn')"
+        >
+          HOENN
+        </button>
+        <button
+          id="sinnohButton"
+          class="button"
+          value="Sinnoh"
+          onclick="userInteractions.goToDifferentRegion('Sinnoh')"
+        >
+          SINNOH
+        </button>
+        <button
+          id="unovaButton"
+          class="button"
+          value="Unova"
+          onclick="userInteractions.goToDifferentRegion('Unova')"
+        >
+          UNOVA
+        </button>
+        <button
+          id="kalosButton"
+          class="button"
+          value="Kalos"
+          onclick="userInteractions.goToNone()"
+        >
+          KALOS
+        </button>
+        <button
+          id="alolaButton"
+          class="button"
+          value="Alola"
+          onclick="userInteractions.goToNone()"
+        >
+          ALOLA
+        </button>
+        <button
+          id="galarButton"
+          class="button"
+          value="Galar"
+          onclick="userInteractions.goToNone()"
+        >
+          GALAR
+        </button>
+        <button
+          id="fandomButton"
+          class="button"
+          value="Fandom"
+          onclick="userInteractions.goToDifferentRegion('Fandom')"
+        >
+          FANDOM
+        </button><br>
+      </div>
     </div>
   </div>
 </template>

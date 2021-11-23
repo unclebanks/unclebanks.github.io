@@ -37,13 +37,6 @@ html, body {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: white;
 }
-#gameContainer > div {
-    border: 6px solid black;
-    border-radius: 30px;
-}
-#gameContainer > div > div {
-    border: none !important;
-}
 .button, button {
     background-color: transparent;
 }
@@ -59,14 +52,6 @@ ul {
 //     float: left;
 //     text-align: left;
 // }
-#routesBox {
-    grid-column: 4;
-    grid-row: 1 / 4;
-    max-height: 100vh;
-    overflow: auto;
-    float: left;
-    text-align: left;
-}
 .roamerIcon {
     margin-left: 3px;
     height: 16px;
@@ -127,14 +112,6 @@ ul {
 }
 .inactiveShiny {
     color: $inactive-shiny;
-}
-#enemyBox {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    width: 50%;
-    margin-left: 50%;
-    float: right;
-    grid-row: 1;
 }
 #townBox {
     text-align: center;
@@ -332,21 +309,6 @@ progress.expBar {
     margin-top: 7px;
     min-width: fit-content;
     min-height: fit-content;
-}
-#brockImage {
-    background-image: url('../assets/images/gymLeaders/Brock2.png');
-    height: 370px;
-    width: 150px;
-}
-#brockMon1 {
-    background-image: url('../assets/sprites/normal/front/Geodude.png');
-    height: 96px;
-    width: 96px;
-}
-#brockMon2 {
-    background-image: url('../assets/sprites/normal/front/Onix.png');
-    height: 96px;
-    width: 96px;
 }
 #cascadeBadge {
     background-image: url('../assets/images/badges/Cascade\ Badge.png');

@@ -10,41 +10,6 @@
           Heal
         </button>
       </p>
-      <p>
-        <button
-          onclick="userInteractions.viewPokeDex()"
-        >
-          Pokedex
-        </button>
-      </p>
-      <p>
-        <button
-          onclick="userInteractions.viewPokeGear()"
-        >
-          PokeGear
-        </button>
-      </p>
-      <p>
-        <button
-          onclick="userInteractions.viewShop()"
-        >
-          Shop
-        </button>
-      </p>
-      <p>
-        <button
-          onclick="userInteractions.viewSettings()"
-        >
-          Settings
-        </button>
-      </p>
-      <p>
-        <button
-          onclick="userInteractions.viewBag()"
-        >
-          Bag
-        </button>
-      </p>
       <input
         id="enableDelete"
         v-model="manageTeam"

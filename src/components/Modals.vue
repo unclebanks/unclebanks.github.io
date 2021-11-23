@@ -15,7 +15,6 @@
   <BrockModal :ui="ui" />
   <GameCornerModal :ui="ui" />
   <PrizeCornerModal :ui="ui" />
-  <BagModal :ui="ui" />
   <TownModal />
   <OakLabModal :ui="ui" />
   <PokeGearModal :ui="ui" />
@@ -39,7 +38,6 @@ import BadgeCaseModal from './modals/BadgeCaseModal.vue';
 import BrockModal from './modals/BrockModal.vue';
 import GameCornerModal from './modals/GameCornerModal.vue';
 import PrizeCornerModal from './modals/PrizeCornerModal.vue';
-import BagModal from './modals/BagModal.vue';
 import TownModal from './modals/TownModal';
 import PokeGearModal from './modals/PokeGearModal.vue';
 import OakLabModal from './modals/kanto/towns/palletTown/OakLabModal';
@@ -63,7 +61,6 @@ export default {
         BrockModal,
         GameCornerModal,
         PrizeCornerModal,
-        BagModal,
         TownModal,
         PokeGearModal,
         OakLabModal,
