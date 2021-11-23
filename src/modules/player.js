@@ -117,6 +117,7 @@ export default (lastSave, appModel) => {
             currentRegionId: 'Kanto',
             currentRouteId: 'kViridianForest',
             listView: 'pokeDex',
+            theme: 'dark',
             autoSort: true,
             dexView: 'all',
             dexVersion: 194, // check if users dex is out of date

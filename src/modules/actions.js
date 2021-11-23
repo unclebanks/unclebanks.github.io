@@ -71,6 +71,11 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         justTestStuff: function () {
             alert('Nothing is here yet.');
         },
+        changeTheme: function () {
+            const newTheme = document.getElementById('themes').value;
+            player.settings.theme = newTheme;
+            dom.renderTheme(newTheme);
+        },
         enablePokeListAutoSort: function () {
             player.settings.autoSort = $('#autoSort').checked;
             // hide or show sort dropdowns
