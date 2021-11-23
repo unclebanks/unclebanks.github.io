@@ -548,7 +548,16 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 if (caughtMons > 15) {
                     if (shouldBattle === true) {
                         alert('You have made it to the first battle.');
-                        player.badges['Boulder Badge'] = true;
+                        player.badges['Cascade Badge'] = true;
+                        dom.renderRouteList();
+                        // this.profOakBattle();
+                    } else { notify('I will be here any time you would like to take the exam.'); }
+                } else { notify('Catch more and come back'); }
+            } else if (playerFlags.cascadeBadge === true && !playerFlags.thunderBadge) {
+                if (caughtMons > 25) {
+                    if (shouldBattle === true) {
+                        alert('You have made it to the first battle.');
+                        player.badges['Thunder Badge'] = true;
                         dom.renderRouteList();
                         // this.profOakBattle();
                     } else { notify('I will be here any time you would like to take the exam.'); }
