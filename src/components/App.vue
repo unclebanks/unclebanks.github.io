@@ -1,6 +1,5 @@
 <template>
   <div id="gameContainer">
-    <PokemonList :ui="ui" />
     <RoutesBox />
     <Regions />
     <EnemyBox />
@@ -17,7 +16,6 @@
 
 <script>
 
-import PokemonList from './PokemonList/PokemonList.vue';
 import RoutesBox from './RoutesBox.vue';
 import Regions from './Regions.vue';
 import EnemyBox from './EnemyBox.vue';
@@ -32,7 +30,6 @@ import { dummy } from '../modules/actions';
 
 export default {
     components: {
-        PokemonList,
         RoutesBox,
         Regions,
         EnemyBox,

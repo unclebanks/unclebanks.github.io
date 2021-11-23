@@ -43,6 +43,12 @@
       >
         Quests
       </button>
+      <button
+        class="button"
+        onclick="userInteractions.openPC()"
+      >
+        PC
+      </button>
     </div>
   </div>
 </template>

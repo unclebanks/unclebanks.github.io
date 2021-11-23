@@ -12,6 +12,68 @@ export const renderView = (dom, enemy, player, purge = true) => {
 export default (player, combatLoop, userInteractions) => {
     const Display = {
         healElement: $('#heal'),
+        renderInitial: function () {
+            this.bindEvents();
+            this.renderBalls();
+            this.renderCurrency();
+            this.renderRoutesBox();
+            this.renderRegionSelect();
+            this.renderPokeSort();
+            this.renderSavedTheme();
+        },
+        renderSavedTheme: function () {
+            const savedTheme = player.settings.theme;
+            this.renderTheme(savedTheme);
+        },
+        renderTheme: function (theme) {
+            switch (theme) {
+            case 'light': this.fulfillRenderTheme('rgb(255, 255, 255)', 'rgb(0, 0, 0)', 'black');
+                break;
+            case 'dark': this.fulfillRenderTheme('rgb(58, 58, 58)', 'rgb(255, 255, 255)', 'white');
+                break;
+            default: alert('Error');
+            }
+        },
+        fulfillRenderTheme: function (gCBGColor, gCTextColor, subsColor) {
+            const gameContainer = document.getElementById('gameContainer').style;
+            const subs = document.getElementsByClassName('subtitle');
+            const buttonClass = document.getElementsByClassName('button');
+            const buttonTag = document.getElementsByTagName('button');
+            const modalHead = document.getElementsByClassName('modal-card-head');
+            const modalBody = document.getElementsByClassName('modal-card-body');
+            const modalFoot = document.getElementsByClassName('modal-card-foot');
+            gameContainer.backgroundColor = gCBGColor;
+            gameContainer.color = gCTextColor;
+            this.loopColorChange(subs, subsColor);
+            this.loopButtonChange(buttonClass, subsColor);
+            this.loopButtonChange(buttonTag, subsColor);
+            this.loopBackgroundChange(modalHead, gCBGColor, gCTextColor);
+            this.loopBackgroundChange(modalBody, gCBGColor, gCTextColor);
+            this.loopBackgroundChange(modalFoot, gCBGColor, gCTextColor);
+        },
+        loopColorChange: function (whatToLoop, newColor) {
+            let i = 0;
+            while (whatToLoop.length > i) {
+                whatToLoop[i].style.color = newColor;
+                i++;
+            }
+        },
+        loopBackgroundChange: function (whatToLoop, newColor, gCTextColor) {
+            let i = 0;
+            while (whatToLoop.length > i) {
+                whatToLoop[i].style.backgroundColor = newColor;
+                whatToLoop[i].style.color = gCTextColor;
+                i++;
+            }
+        },
+        loopButtonChange: function (whatToLoop, newColor) {
+            let i = 0;
+            while (whatToLoop.length > i) {
+                whatToLoop[i].style.color = newColor;
+                whatToLoop[i].style.borderColor = newColor;
+                i++;
+            }
+        },
         setValue: function (domElement, newValue, append) {
             if (append === undefined) { append = false; }
             if (append) {

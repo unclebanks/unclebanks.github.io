@@ -19,6 +19,7 @@
   <TownModal />
   <OakLabModal :ui="ui" />
   <PokeGearModal :ui="ui" />
+  <PokemonList :ui="ui" />
 </template>
 
 <script>
@@ -42,6 +43,7 @@ import BagModal from './modals/BagModal.vue';
 import TownModal from './modals/TownModal';
 import PokeGearModal from './modals/PokeGearModal.vue';
 import OakLabModal from './modals/kanto/towns/palletTown/OakLabModal';
+import PokemonList from './PokemonList/PokemonList.vue';
 
 export default {
     components: {
@@ -65,6 +67,7 @@ export default {
         TownModal,
         PokeGearModal,
         OakLabModal,
+        PokemonList,
     },
 
     props: {

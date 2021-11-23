@@ -28,6 +28,26 @@
         </span>
       </p>
 
+      <h3 class="subtitle">
+        Theme
+      </h3>
+
+      <p>
+        <label for="themes">Select a theme: </label>
+        <select
+          id="themes"
+          name="themes"
+          @change="ui.changeTheme()"
+        >
+          <option value="dark">
+            Dark
+          </option>
+          <option value="light">
+            Light
+          </option>
+        </select>
+      </p>
+
       <hr>
       <h3 class="subtitle">
         Notifications
