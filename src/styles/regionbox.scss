@@ -1,5 +1,14 @@
+@media screen and (max-width:600px) {
+    #regionSelect {
+        grid-column: 2;
+    }
+}
+@media screen and (min-width:600px) {
+    #regionSelect {
+        grid-column: 3;
+    }
+}
 #regionSelect {
-    grid-column: 3;
     grid-row: 2;
     padding: 5px;
     font-size: medium;
@@ -8,4 +17,8 @@
     text-align: center;
     border: 6px solid black;
     border-radius: 30px;
+}
+#regionSelectorBottomButtons {
+    overflow: auto;
+    max-height: 100%;
 }

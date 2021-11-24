@@ -50,14 +50,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         setBackground: function () {
             const routeBackground = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].background;
-            const playerBackground = document.getElementById('playerActivePokemon').style;
-            const enemyBackground = document.getElementById('enemyBox').style;
+            const playerBackground = document.getElementById('playerBox').style;
             playerBackground.backgroundImage = `url(./assets/backgrounds/kanto/${routeBackground}.png)`;
             playerBackground.backgroundSize = 'cover';
             playerBackground.backgroundRepeat = 'no-repeat';
-            enemyBackground.backgroundImage = `url(./assets/backgrounds/kanto/${routeBackground}.png)`;
-            enemyBackground.backgroundSize = 'cover';
-            enemyBackground.backgroundRepeat = 'no-repeat';
         },
         changePokemon: function (newActiveIndex) {
             player.setActive(newActiveIndex);
@@ -95,6 +91,9 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 pageToOpen.style.display = 'block';
                 break;
             case 'regionButtons': dom.hideAll('regionSelectorBottomButtons');
+                pageToOpen.style.display = 'block';
+                break;
+            case 'routesBox': dom.hideAll('regionSelectorBottomButtons');
                 pageToOpen.style.display = 'block';
                 break;
             default: alert('test');
@@ -546,8 +545,10 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 } else { notify('Come see me again after you have obtained at least 5 different POKEMON.'); }
             } else if (playerFlags.boulderBadge === true && !playerFlags.cascadeBadge) {
                 if (caughtMons > 15) {
-                    if (shouldBattle === true) {
-                        alert('You have made it to the first battle.');
+                    const shouldBattleCascade = window.confirm(`You seem to have caught ${caughtMons} POKEMON. Would you like to battle to unlock the next area?`);
+                    if (shouldBattleCascade === true) {
+                        alert('You have made it to the second battle.');
+                        playerFlags.cascadeBadge = true;
                         player.badges['Cascade Badge'] = true;
                         dom.renderRouteList();
                         // this.profOakBattle();
@@ -555,9 +556,11 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 } else { notify('Catch more and come back'); }
             } else if (playerFlags.cascadeBadge === true && !playerFlags.thunderBadge) {
                 if (caughtMons > 25) {
-                    if (shouldBattle === true) {
-                        alert('You have made it to the first battle.');
+                    const shouldBattleThunder = window.confirm(`You seem to have caught ${caughtMons} POKEMON. Would you like to battle to unlock the next area?`);
+                    if (shouldBattleThunder === true) {
+                        alert('You have made it to the s battle.');
                         player.badges['Thunder Badge'] = true;
+                        playerFlags.thunderBadge = true;
                         dom.renderRouteList();
                         // this.profOakBattle();
                     } else { notify('I will be here any time you would like to take the exam.'); }
@@ -570,7 +573,7 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         renderTown: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
             const townBox = document.getElementById('enemyBox');
-            const playerBox = document.getElementById('playerActivePokemon');
+            const playerBox = document.getElementById('playerBox');
             if (routeData === 'Pallet Town') {
                 townBox.style.backgroundImage = "url('../assets/backgrounds/kanto/palletTown/oakLab/oaksLab.png')";
                 townBox.style.backgroundSize = 'cover';

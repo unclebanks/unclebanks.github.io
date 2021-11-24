@@ -16,8 +16,8 @@ export default (player, combatLoop, userInteractions) => {
             this.bindEvents();
             this.renderBalls();
             this.renderCurrency();
-            this.renderRoutesBox();
             this.renderRegionSelect();
+            this.renderRouteList();
             this.renderPokeSort();
             this.renderSavedTheme();
         },
@@ -236,9 +236,6 @@ export default (player, combatLoop, userInteractions) => {
                     this.setValue(listElement, routeHTML, true);
                 }
             });
-        },
-        renderRoutesBox: function () {
-            this.renderRouteList();
         },
         checkConfirmed: function (id) {
             return $(id).checked;

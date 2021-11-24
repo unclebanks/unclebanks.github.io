@@ -15,6 +15,12 @@
       >
         Map
       </button>
+      <button
+        class="button"
+        onclick="userInteractions.regionBoxSelector('routesBox')"
+      >
+        Routes
+      </button>
       <hr style="margin-top: 1%; margin-bottom: 1%; background-color: black">
     </div>
     <div id="regionSelectorBottomButtons">
@@ -127,6 +133,12 @@
         >
           FANDOM
         </button><br>
+      </div>
+      <div
+        id="routesBox"
+        style="display:none"
+      >
+        <ul id="routeList" />
       </div>
     </div>
   </div>

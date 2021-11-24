@@ -9,12 +9,22 @@ html, body {
     min-height: 100vh;
     min-width: 100vw;
 }
+@media screen and (max-width:600px) {
+    #gameContainer {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media screen and (min-width:600px) {
+    #gameContainer {
+        grid-template-columns: 18% 30% 30% 22%;
+    }
+}
 #gameContainer {
     font-family: 'Lato', sans-serif;
     min-height: 100vh;
+    max-height: 100vh;
     min-width: 100vw;
     display: grid;
-    grid-template-columns: minmax(210px, 18%) 30% 30% 22%;
     grid-template-rows: 45% 25% 30%;
 }
 *::-webkit-scrollbar-track {

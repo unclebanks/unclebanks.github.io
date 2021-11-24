@@ -1,5 +1,14 @@
+@media screen and (max-width:600px) {
+    #partyBox {
+        grid-column: 1 / 3;
+    }
+}
+@media screen and (min-width:600px) {
+    #partyBox {
+        grid-column: 2 / 4;
+    }
+}
 #partyBox {
-    grid-column: 2 / 4;
     grid-row: 3;
     overflow: auto;
     float: left;
