@@ -1,9 +1,9 @@
-@media screen and (max-width:600px) {
+@media screen and (max-width:650px) {
     #navBox {
         grid-column: 1;
     }
 }
-@media screen and (min-width:600px) {
+@media screen and (min-width:768px) {
     #navBox {
         grid-column: 2;
     }
