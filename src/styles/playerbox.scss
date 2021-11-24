@@ -1,20 +1,16 @@
-@media screen and (max-width:650px) {
-    #playerBox {
-        grid-column: 1 / 3;
-    }
-}
-@media screen and (min-width:768px) {
-    #playerBox {
-        grid-column: 2 / 4;
-    }
-}
 #playerBox {
     grid-row: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column: 2 / 4;
     align-content: center;
     border: 6px solid black;
     border-radius: 30px;
+}
+@media screen and (max-width:1000px) {
+    #playerBox {
+        grid-column: 1 / 3;
+    }
 }
 #playerActivePokemon {
     min-height: 100%;

@@ -1,20 +1,16 @@
-@media screen and (max-width:650px) {
-    #navBox {
-        grid-column: 1;
-    }
-}
-@media screen and (min-width:768px) {
-    #navBox {
-        grid-column: 2;
-    }
-}
 #navBox {
     grid-row: 2;
+    grid-column: 2;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 6px solid black;
     border-radius: 30px;
+}
+@media only screen and (max-width:1000px) {
+    #navBox {
+        grid-column: 1;
+    }
 }
 #playerBallsContainer {
     grid-column: 1;
