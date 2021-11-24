@@ -213,7 +213,7 @@ const ROUTES: Routes = {
             ],
             _unlock: {
                 badges: {
-                    'Boulder Badge': true,
+                    'Cascade Badge': true,
                 },
             },
             background: 'kantoRockTunnel',
@@ -229,7 +229,7 @@ const ROUTES: Routes = {
             ],
             _unlock: {
                 badges: {
-                    'Cascade Badge': true,
+                    'Thunder Badge': true,
                 },
             },
             background: 'kantoDigCave',

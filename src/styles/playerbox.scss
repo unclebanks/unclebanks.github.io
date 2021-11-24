@@ -1,14 +1,14 @@
 #playerBox {
     grid-column: 2 / 4;
     grid-row: 1;
-    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-content: center;
     border: 6px solid black;
     border-radius: 30px;
 }
 #playerActivePokemon {
     min-height: 100%;
-    min-width: 100%;
     display: grid;
     grid-template-rows: 10% 40% 25% 25%;
     border-radius: 30px;

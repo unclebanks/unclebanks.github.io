@@ -12,6 +12,7 @@ html, body {
 #gameContainer {
     font-family: 'Lato', sans-serif;
     min-height: 100vh;
+    max-height: 100vh;
     min-width: 100vw;
     display: grid;
     grid-template-columns: minmax(210px, 18%) 30% 30% 22%;

@@ -1,8 +1,6 @@
 <template>
   <div id="gameContainer">
-    <RoutesBox />
     <Regions />
-    <EnemyBox />
     <PlayerBox />
     <NavBox />
     <PartyBox
@@ -16,9 +14,7 @@
 
 <script>
 
-import RoutesBox from './RoutesBox.vue';
 import Regions from './Regions.vue';
-import EnemyBox from './EnemyBox.vue';
 import PlayerBox from './PlayerBox.vue';
 import NavBox from './NavBox.vue';
 import PartyBox from './PartyBox.vue';
@@ -30,9 +26,7 @@ import { dummy } from '../modules/actions';
 
 export default {
     components: {
-        RoutesBox,
         Regions,
-        EnemyBox,
         PlayerBox,
         NavBox,
         PartyBox,
