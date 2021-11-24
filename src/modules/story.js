@@ -42,7 +42,6 @@ export default (player, enemy, combatLoop, Poke) => {
                 player.events[starterPoke.pokeName()] = true;
                 combatLoop.unpause();
                 renderView(dom, enemy, player);
-                dom.renderRoutesBox();
                 closeModal($('#storyModal'));
             },
         },
