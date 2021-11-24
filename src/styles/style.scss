@@ -9,12 +9,12 @@ html, body {
     min-height: 100vh;
     min-width: 100vw;
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:650px) {
     #gameContainer {
         grid-template-columns: 50% 50%;
     }
 }
-@media screen and (min-width:600px) {
+@media screen and (min-width:768px) {
     #gameContainer {
         grid-template-columns: 18% 30% 30% 22%;
     }
