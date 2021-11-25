@@ -8,8 +8,12 @@ export const pokeImage = function (
     type,
     side,
     name,
+    themeChoice,
+    currentRegion,
 ) {
-    return `assets/sprites/${type}/${side}/${name.replace(/[:?]/g, '')}.png`;
+    if (themeChoice === 'classic' && currentRegion === 'Kanto') {
+        return `assets/sprites/${type}/classic/${side}/${name.replace(/[:?]/g, '')}.png`;
+    } else { return `assets/sprites/${type}/${side}/${name.replace(/[:?]/g, '')}.png`; }
 };
 
 const Poke = function (pokeModel, initialLevel, initialExp, shiny, caughtAt, prestigeLevel = 0, appliedVitamins = {}) {
@@ -150,12 +154,12 @@ Poke.prototype.happiness = function () { return this.statValue('happiness'); };
 Poke.prototype.pokeName = function () {
     return this.poke.name;
 };
-Poke.prototype.image = function () {
+Poke.prototype.image = function (themeChoice, currentRegion) {
     const imageType = (this.isShiny ? 'shiny' : 'normal');
     return {
-        front: pokeImage(imageType, 'front', this.pokeName()),
-        back: pokeImage(imageType, 'back', this.pokeName()),
-        party: pokeImage(imageType, 'party', this.pokeName()),
+        front: pokeImage(imageType, 'front', this.pokeName(), themeChoice, currentRegion),
+        back: pokeImage(imageType, 'back', this.pokeName(), themeChoice, currentRegion),
+        party: pokeImage(imageType, 'party', this.pokeName(), themeChoice, currentRegion),
     };
 };
 Poke.prototype.shiny = function () {
