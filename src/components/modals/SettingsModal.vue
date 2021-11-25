@@ -45,6 +45,9 @@
           <option value="light">
             Light
           </option>
+          <option value="classic">
+            Classic
+          </option>
         </select>
       </p>
 

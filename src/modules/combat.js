@@ -90,8 +90,8 @@ export default (player, enemy) => {
                     if (who === 'player') {
                     // TODO add some flair
                     }
-                    dom.renderPokeOnContainer('enemy', enemy.activePoke());
-                    dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back');
+                    dom.renderPokeOnContainer('enemy', enemy.activePoke(), 'front', player.settings.theme || 'dark', player.settings.currentRegionId);
+                    dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back', player.settings.theme || 'dark', player.settings.currentRegionId);
                 }
                 if (who === 'player') {
                     dom.attackAnimation('playerImg', 'right');
@@ -112,7 +112,7 @@ export default (player, enemy) => {
                 } else {
                     Combat.playerFaint();
                 }
-                dom.renderPokeOnContainer('enemy', enemy.activePoke());
+                dom.renderPokeOnContainer('enemy', enemy.activePoke(), 'front', player.settings.theme || 'dark', player.settings.currentRegionId);
             }
         },
         clickDamage: function () {
@@ -120,14 +120,14 @@ export default (player, enemy) => {
             if (enemy.activePoke().alive()) {
                 const damageMultiplier = player.activePoke().avgAttack() + player.activePoke().level();
                 const damage = enemy.activePoke().takeDamage(damageMultiplier);
-                dom.renderPokeOnContainer('enemy', enemy.activePoke());
+                dom.renderPokeOnContainer('enemy', enemy.activePoke(), 'front', player.settings.theme || 'dark', player.settings.currentRegionId);
             }
             if (!enemy.activePoke().alive()) {
                 window.clearTimeout(Combat.playerTimerId);
                 window.clearTimeout(Combat.enemyTimerId);
                 Combat.enemyFaint();
             }
-            dom.renderPokeOnContainer('enemy', enemy.activePoke());
+            dom.renderPokeOnContainer('enemy', enemy.activePoke(), 'front', player.settings.theme || 'dark', player.settings.currentRegionId);
         },
         enemyFaint: function () {
             if (enemy.activePoke().shiny()) {
@@ -234,7 +234,7 @@ export default (player, enemy) => {
             Combat.newEnemy();
             Combat.enemyTimer();
             Combat.playerTimer();
-            dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back');
+            dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back', player.settings.theme || 'dark', player.settings.currentRegionId);
         },
         newEnemy: function () {
             if (Combat.prof) {
