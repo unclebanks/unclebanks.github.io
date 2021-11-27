@@ -173,6 +173,7 @@ const EVOLUTIONS: Partial<Record<PokemonNameType, Evolution<AnyEvoType>[]>> = {
     'Alolan Grimer': [levelEvo('Alolan Muk', 38)],
     'Shellder': [stoneEvo('Cloyster', 'waterStone')],
     'Gastly': [levelEvo('Haunter', 25)],
+    'Haunter': [levelEvo('Gengar', 40)],
     'Gengar': [megaEvo('M-Gengar', 'gengarite')],
     'Drowzee': [levelEvo('Hypno', 26)],
     'Krabby': [levelEvo('Kingler', 28)],

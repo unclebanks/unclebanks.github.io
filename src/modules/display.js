@@ -5,8 +5,8 @@ import { COLORS } from './data';
 import Poke from './poke';
 
 export const renderView = (dom, enemy, player, purge = true) => {
-    dom.renderPokeOnContainer('enemy', enemy.activePoke());
-    dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back');
+    dom.renderPokeOnContainer('enemy', enemy.activePoke(), 'front', player.settings.theme || 'dark', player.settings.currentRegionId);
+    dom.renderPokeOnContainer('player', player.activePoke(), player.settings.spriteChoice || 'back', player.settings.theme || 'dark', player.settings.currentRegionId);
 };
 
 export default (player, combatLoop, userInteractions) => {
@@ -30,6 +30,8 @@ export default (player, combatLoop, userInteractions) => {
             case 'light': this.fulfillRenderTheme('rgb(255, 255, 255)', 'rgb(0, 0, 0)', 'black');
                 break;
             case 'dark': this.fulfillRenderTheme('rgb(58, 58, 58)', 'rgb(255, 255, 255)', 'white');
+                break;
+            case 'classic': this.fulfillRenderTheme('rgb(255, 255, 255)', 'rgb(0, 0, 0)', 'black');
                 break;
             default: alert('Error');
             }
@@ -101,7 +103,7 @@ export default (player, combatLoop, userInteractions) => {
                 domElement[attribute] = newValue;
             }
         },
-        renderPokeOnContainer: function (id, poke, face) {
+        renderPokeOnContainer: function (id, poke, face, themeChoice, currentRegion) {
             const container = $(`#${id}Box`).querySelector('.pokeBox');
             const townBox = $('#townBox');
             if (!poke) {
@@ -131,7 +133,7 @@ export default (player, combatLoop, userInteractions) => {
                 status: container.querySelector('.status'),
             };
             this.setValue(domElements.name, `${poke.pokeName()} (L${poke.level()}, P${poke.prestigeLevel})`);
-            this.setProp(domElements.img, 'src', poke.image()[face]);
+            this.setProp(domElements.img, 'src', poke.image(themeChoice, currentRegion)[face]);
             this.setValue(domElements.hp, poke.lifeAsText());
             this.setProp(domElements.hpBar, 'value', poke.getHp());
             this.setProp(domElements.hpBar, 'max', poke.maxHp());

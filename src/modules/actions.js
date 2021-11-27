@@ -515,12 +515,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
                 openModal(document.getElementById(`${player.settings.currentRouteId.replace(/ /g, '').toLowerCase()}Modal`));
             }
         },
-        viewTown: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
-            if (routeData === 'Pallet Town') {
-                openModal(document.getElementById('oaklabModal'));
-            } else { alert('Not implemented yet'); }
-        },
         checkProf: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
             switch (routeData) {
@@ -572,19 +566,17 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         renderTown: function () {
             const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
-            const townBox = document.getElementById('enemyBox');
             const playerBox = document.getElementById('playerBox');
             if (routeData === 'Pallet Town') {
-                townBox.style.backgroundImage = "url('../assets/backgrounds/kanto/palletTown/oakLab/oaksLab.png')";
-                townBox.style.backgroundSize = 'cover';
-                townBox.style.backgroundRepeat = 'no-repeat';
-                playerBox.style.background = '';
+                playerBox.style.backgroundImage = "url('../assets/backgrounds/kanto/palletTown/oakLab/oaksLab.png')";
+                playerBox.style.backgroundSize = 'cover';
+                playerBox.style.backgroundRepeat = 'no-repeat';
             }
         },
         removeTown: function () {
-            const townBox = document.getElementById('enemyBox');
-            townBox.style.backgroundImage = '';
-            townBox.style.backgroundSize = '';
+            const playerBox = document.getElementById('playerBox');
+            playerBox.style.backgroundImage = '';
+            playerBox.style.backgroundSize = '';
         },
         viewShop: function () {
             // closeModal(document.getElementById('townModal'));
