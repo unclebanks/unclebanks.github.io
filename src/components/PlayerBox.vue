@@ -24,7 +24,6 @@
         max="100"
       />
       <br>
-      <span class="status" />
     </div>
     <div id="enemyBox">
       <div
@@ -46,7 +45,6 @@
           max="100"
         />
         <br>
-        <span class="status" />
       </div>
       <div
         id="townBox"

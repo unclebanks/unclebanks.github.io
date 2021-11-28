@@ -15,7 +15,7 @@ html, body {
     max-height: 100vh;
     min-width: 100vw;
     display: grid;
-    grid-template-columns: 18% 30% 30% 22%;
+    grid-template-columns: 30% 20% 20% 30%;
     grid-template-rows: 45% 25% 30%;
 }
 @media only screen and (max-width:1000px) {
@@ -405,18 +405,6 @@ progress.expBar {
     margin-top: 7px;
     min-width: fit-content;
     min-height: fit-content;
-}
-#oaklabModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/oakLab/oakLabKanto.png');
-    background-size: contain;
-    height: 448px;
-    width: 416px;
-}
-#oaklabNoOakModalBox {
-    background-image: url('../assets/backgrounds/kanto/palletTown/oakLab/oakLabNoOak.png');
-    background-size: contain;
-    height: 448px;
-    width: 416px;
 }
 .townBuilding {
     width: 90%;

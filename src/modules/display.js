@@ -130,7 +130,6 @@ export default (player, combatLoop, userInteractions) => {
                 hp: container.querySelector('.hp'),
                 hpBar: container.querySelector('.hpBar'),
                 expBar: container.querySelector('.expBar'),
-                status: container.querySelector('.status'),
             };
             this.setValue(domElements.name, `${poke.pokeName()} (L${poke.level()}, P${poke.prestigeLevel})`);
             this.setProp(domElements.img, 'src', poke.image(themeChoice, currentRegion)[face]);
@@ -141,7 +140,6 @@ export default (player, combatLoop, userInteractions) => {
                 this.setProp(domElements.expBar, 'value', Math.floor(poke.currentExp() - poke.thisLevelExp()));
                 this.setProp(domElements.expBar, 'max', poke.nextLevelExp() - poke.thisLevelExp());
             }
-            this.setValue(domElements.status, pokeStatusAsText(poke));
         },
         renderHeal: function (timeToHeal, enemy) {
             if (timeToHeal <= 0) {

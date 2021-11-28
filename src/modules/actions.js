@@ -36,24 +36,14 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
             player.settings.currentRouteId = newRouteId;
             if (ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].town) {
                 combatLoop.pause();
-                this.renderTown();
             } else {
                 combatLoop.unpause();
-                this.removeTown();
-                this.setBackground();
             }
             renderView(dom, enemy, player);
             player.savePokes();
             dom.renderRouteList();
 
             return true;
-        },
-        setBackground: function () {
-            const routeBackground = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].background;
-            const playerBackground = document.getElementById('playerBox').style;
-            playerBackground.backgroundImage = `url(./assets/backgrounds/kanto/${routeBackground}.png)`;
-            playerBackground.backgroundSize = 'cover';
-            playerBackground.backgroundRepeat = 'no-repeat';
         },
         changePokemon: function (newActiveIndex) {
             player.setActive(newActiveIndex);
@@ -563,20 +553,6 @@ export default (player, combatLoop, enemy, town, story, appModel) => {
         },
         checkQuests: function () {
             alert('this is still a work in progress. check back after a few updates.');
-        },
-        renderTown: function () {
-            const routeData = ROUTES[player.settings.currentRegionId][player.settings.currentRouteId].name;
-            const playerBox = document.getElementById('playerBox');
-            if (routeData === 'Pallet Town') {
-                playerBox.style.backgroundImage = "url('../assets/backgrounds/kanto/palletTown/oakLab/oaksLab.png')";
-                playerBox.style.backgroundSize = 'cover';
-                playerBox.style.backgroundRepeat = 'no-repeat';
-            }
-        },
-        removeTown: function () {
-            const playerBox = document.getElementById('playerBox');
-            playerBox.style.backgroundImage = '';
-            playerBox.style.backgroundSize = '';
         },
         viewShop: function () {
             // closeModal(document.getElementById('townModal'));
