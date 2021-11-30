@@ -115,6 +115,7 @@ export default (player, combatLoop, userInteractions) => {
             }
             container.style.display = 'block';
             if (id == 'enemy') townBox.style.display = 'none';
+            document.getElementById('playerModalCurrentRoute').innerHTML = player.settings.currentRouteId;
 
             face = face || 'front';
             const pokeStatusAsText = (poke) => {

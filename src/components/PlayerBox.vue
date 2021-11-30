@@ -1,5 +1,6 @@
 <template>
   <div id="playerBox">
+    <span id="playerModalCurrentRoute">Current Route</span>
     <div
       id="playerActivePokemon"
       class="pokeBox"
