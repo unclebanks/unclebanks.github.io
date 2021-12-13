@@ -7,7 +7,7 @@
         href="#"
         @click="ui.changePokemon(index)"
       ><img :src="poke.image().party"></a>
-    </p>
+    </p><br/>
     <a
       href="#"
       class="pokeListName"
@@ -52,7 +52,7 @@
     >
       PC
     </button>
-  </li>
+  </li><br/>
 </template>
 
 <script>
