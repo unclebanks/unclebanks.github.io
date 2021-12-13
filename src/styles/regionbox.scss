@@ -1,11 +1,11 @@
 
 #regionSelect {
-    grid-row: 3;
-    grid-column: 4;
+    grid-row: 1 / 4;
+    grid-column: 1;
     padding: 5px;
     font-size: medium;
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr 9fr;
     text-align: center;
     border: 6px solid black;
     border-radius: 30px;
