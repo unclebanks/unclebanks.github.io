@@ -7,6 +7,7 @@
       :ui="ui"
       :player="player"
     />
+    <PokeBallBox />
   </div>
 
   <Modals :ui="ui" />
@@ -19,6 +20,7 @@ import PlayerBox from './PlayerBox.vue';
 import NavBox from './NavBox.vue';
 import PartyBox from './PartyBox.vue';
 import Modals from './Modals.vue';
+import PokeBallBox from './PokeBallBox.vue';
 
 // Fake userInteractions object that does nothing
 // to be replaced on game start when a real one is created.
@@ -31,6 +33,7 @@ export default {
         NavBox,
         PartyBox,
         Modals,
+        PokeBallBox,
     },
 
     data() {

@@ -15,7 +15,7 @@ html, body {
     max-height: 100vh;
     min-width: 100vw;
     display: grid;
-    grid-template-columns: 18% 30% 30% 22%;
+    grid-template-columns: 20% 5% 25% 25% 5% 20%;
     grid-template-rows: 45% 25% 30%;
 }
 @media only screen and (max-width:1000px) {
@@ -431,12 +431,4 @@ progress.expBar {
 }
 ul#shopItems li {
     margin-top: 2px;
-}
-.ballIcon {
-    height: auto;
-    width: 14px;
-}
-.coinIcon {
-    height: auto;
-    width: 16px;
 }
